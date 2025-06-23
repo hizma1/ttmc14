@@ -14,7 +14,17 @@
   - type: CMAutomatedVendor
     sections:
     - name: Rifles
-      entries: []
+      entries:
+      - id: MCWeaponRifleAR12
+      - id: MCMagazineRifleAR12
+      - id: MCWeaponRifleAR18
+      - id: MCMagazineRifleAR18
+      - id: MCWeaponRifleAR21
+      - id: MCMagazineRifleAR21
+      - id: MCWeaponRifleAR11
+      - id: MCMagazineRifleAR11
+      - id: MCWeaponShotgunLeicesterRepeater
+      - id: MCBoxGovernmentRounds
     - name: Energy Weapons
       entries: []
     - name: SMGs
