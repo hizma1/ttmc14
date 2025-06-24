@@ -43,19 +43,19 @@
     selected: MCXenoWeedsNode
     weeds:
       MCXenoWeedsNode:
-        name: Default
+        name: Default (75)
         cost: 75
         sprite:
           sprite: _MC/Interface/Xeno/weed_icons.rsi
           state: default
       MCXenoWeedsNodeSticky:
-        name: Sticky
+        name: Sticky (150)
         cost: 150
         sprite:
           sprite: _MC/Interface/Xeno/weed_icons.rsi
           state: sticky
       MCXenoWeedsNodeResting:
-        name: Resting
+        name: Resting (225)
         cost: 225
         sprite:
           sprite: _MC/Interface/Xeno/weed_icons.rsi
