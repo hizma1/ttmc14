@@ -112,9 +112,9 @@ public sealed class XenoVisualizerSystem : VisualizerSystem<XenoComponent>
 
                 if (AppearanceSystem.TryGetData(entity, XenoVisualLayers.Base, out XenoRestState resting, appearance) &&
                     resting == XenoRestState.Resting &&
-                    rsi.TryGetState("sleeping", out _))
+                    rsi.TryGetState("resting", out _)) // marine-corps-fix
                 {
-                    sprite.LayerSetState(layer, "sleeping");
+                    sprite.LayerSetState(layer, "resting"); // marine-corps-fix
                     break;
                 }
 

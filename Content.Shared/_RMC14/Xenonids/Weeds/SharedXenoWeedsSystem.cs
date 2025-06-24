@@ -214,6 +214,7 @@ public abstract class SharedXenoWeedsSystem : EntitySystem
         var friendlyWeeds = false;
         var entriesResin = 0;
         var entriesWeeds = 0;
+        EntityUid? weedsSourceEntity = null; // marine-corps-feature
 
         _intersecting.Clear();
         _physics.GetContactingEntities((ent, physicsComponent), _intersecting);
@@ -260,6 +261,7 @@ public abstract class SharedXenoWeedsSystem : EntitySystem
                 continue;
 
             anyWeeds = true;
+            weedsSourceEntity ??= contacting;
 
             if (isXeno && hive != null && _hive.IsMember(contacting, hive.Hive))
             {
@@ -278,12 +280,22 @@ public abstract class SharedXenoWeedsSystem : EntitySystem
             }
         }
 
-        if (!anyWeeds &&
-            Transform(ent).Anchored &&
-            _rmcMap.HasAnchoredEntityEnumerator<XenoWeedsComponent>(ent.Owner.ToCoordinates()))
+        // marine-corps-feature-start
+        if (!anyWeeds && Transform(ent).Anchored)
         {
-            anyWeeds = true;
+            var anchoredEnum = _rmcMap.GetAnchoredEntitiesEnumerator(ent);
+            while (anchoredEnum.MoveNext(out var anchored))
+            {
+                if (!_weedsQuery.HasComp(anchored))
+                    continue;
+
+                anyWeeds = true;
+                weedsSourceEntity ??= anchored;
+                break;
+            }
         }
+        // marine-corps-feature-ends
+
         //Resin + Weed Speedups stack, but resin + weed slowdowns do not
         var finalSpeed = 1.0f;
         if (entriesWeeds > 0)
@@ -306,6 +318,8 @@ public abstract class SharedXenoWeedsSystem : EntitySystem
         ent.Comp.OnFriendlyWeeds = friendlyWeeds;
         ent.Comp.OnXenoSlowResin = anySlowResin;
         ent.Comp.OnXenoFastResin = anyFastResin;
+        ent.Comp.LastWeedsEntity = weedsSourceEntity; // marine-corps-feature
+
         Dirty(ent);
     }
 

@@ -1,0 +1,230 @@
+- type: entity
+  id: MCXenoWeedsBase
+  name: weeds
+  description: Weird black weeds...
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        layer:
+        - SlipLayer
+        mask:
+        - ItemMask
+        density: 1000
+        hard: false
+  - type: XenoWeeds
+    speedMultiplierXeno: 1
+    speedMultiplierOutsider: 1
+    speedMultiplierOutsiderArmor: 1
+    range: 3
+    spawns: MCXenoWeeds
+    level: 1
+  - type: Clickable
+  - type: XenoWeedsSpreading
+    spreadDelay: 1
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/base.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+  - type: IconSmooth
+    key: cm_xeno_weeds
+    base: weed_dir
+    mode: CardinalFlags
+    additionalKeys:
+    - cm_xeno_weeds_walls
+  - type: IconSmoothRandom
+    overrides:
+    - weed_dir0
+    - weed_dir15
+  - type: RandomSprite
+    available:
+    - 0:
+        weed0: ""
+    - 0:
+        weed1: ""
+    - 0:
+        weed2: ""
+    - 0:
+        weed3: ""
+    - 0:
+        weed4: ""
+    - 0:
+        weed5: ""
+    - 0:
+        weed6: ""
+    - 0:
+        weed7: ""
+    - 0:
+        weed8: ""
+    - 0:
+        weed9: ""
+    - 0:
+        weed10: ""
+    - 0:
+        weed11: ""
+    - 0:
+        weed12: ""
+    - 0:
+        weed13: ""
+    - 0:
+        weed14: ""
+    - 0:
+        weed15: ""
+  - type: XenoFriendly
+  - type: Damageable
+    damageContainer: StructuralXeno
+    damageModifierSet: Weed
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: ImmuneToUnarmed
+  - type: CMIconSmooth
+    smooth: true
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: XenoResinBreak
+  - type: ExplosionRandomResistance
+    min: 0.06
+    max: 0.3
+  - type: DeletedByWeedKiller
+  - type: RMCDeleteAnchoredOnInit
+    enabled: false
+    whitelist:
+      tags:
+      - XenoWeedTile
+  - type: Tag
+    tags:
+    - XenoWeedTile
+#  - type: FootstepModifier
+#    footstepSoundCollection:
+#      collection: FootstepWater
+#      params:
+#        volume: 8
+
+- type: entity
+  parent: MCXenoWeedsBase
+  id: MCXenoWeedsNodeBase
+  name: weed node
+  description: A weird, pulsating node
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/base.rsi
+    drawdepth: FloorTiles
+    layers:
+    - state: weed0
+    - state: weednode
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 11
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: RMCDeleteAnchoredOnInit
+    enabled: true
+    whitelist:
+      tags:
+      - XenoWeedNode
+      - XenoWeedTile
+  - type: QueenEyeVision
+  - type: Damageable
+    damage:
+      groups:
+        Brute: 6
+  - type: XenoWeeds
+    range: 3
+    spawns: MCXenoWeeds
+    healOnStopSpreading:
+      groups:
+        Brute: -6
+  - type: Tag
+    tags:
+    - XenoWeedNode
+
+- type: entity
+  parent: MCXenoWeedsBase
+  id: MCXenoWeeds
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/base.rsi
+  - type: XenoWeeds
+    spawns: MCXenoWeeds
+
+- type: entity
+  parent: MCXenoWeedsNodeBase
+  id: MCXenoWeedsNode
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/base.rsi
+  - type: XenoWeeds
+    spawns: MCXenoWeeds
+
+- type: entity
+  parent: MCXenoWeedsBase
+  id: MCXenoWeedsSticky
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/blue.rsi
+  - type: XenoWeeds
+    spawns: MCXenoWeedsSticky
+    speedMultiplierXeno: 1.667
+    speedMultiplierOutsider: 0.333
+    speedMultiplierOutsiderArmor: 0.333
+
+- type: entity
+  parent: MCXenoWeedsNodeBase
+  id: MCXenoWeedsNodeSticky
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/blue.rsi
+  - type: XenoWeeds
+    spawns: MCXenoWeedsSticky
+    speedMultiplierXeno: 1.667
+    speedMultiplierOutsider: 0.333
+    speedMultiplierOutsiderArmor: 0.333
+
+- type: entity
+  parent: MCXenoWeedsBase
+  id: MCXenoWeedsResting
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/green.rsi
+  - type: XenoWeeds
+    spawns: MCXenoWeedsResting
+  - type: MCXenoWeedsRegeneration
+    healthModifier: 1.2
+    plasmaModifier: 1.2
+
+- type: entity
+  parent: MCXenoWeedsNodeBase
+  id: MCXenoWeedsNodeResting
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/Weeds/green.rsi
+  - type: XenoWeeds
+    spawns: MCXenoWeedsResting
+  - type: MCXenoWeedsRegeneration
+    healthModifier: 1.2
+    plasmaModifier: 1.2
+

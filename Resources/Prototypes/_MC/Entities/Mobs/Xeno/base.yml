@@ -1,0 +1,62 @@
+- type: entity
+  id: MCXenoBase
+  abstract: true
+  components:
+  - type: MCXenoDamageVisuals
+  - type: UserInterface
+    interfaces:
+      # MC
+      enum.MCXenoPlantingWeedsUI.Key:
+        type: MCXenoChooseWeedsBui
+      # RMC
+      enum.XenoEvolutionUIKey.Key:
+        type: XenoEvolutionBui
+      enum.XenoDevolveUIKey.Key:
+        type: XenoDevolveBui
+      enum.XenoWatchUIKey.Key:
+        type: XenoWatchBui
+      enum.XenoChooseStructureUI.Key:
+        type: XenoChooseStructureBui
+      enum.XenoPheromonesUI.Key:
+        type: XenoPheromonesBui
+      enum.XenoOrderConstructionUI.Key:
+        type: XenoOrderConstructionBui
+      enum.XenoFruitChooseUI.Key:
+        type: XenoFruitChooseBui
+      enum.XenoWordQueenUI.Key:
+        type: XenoWordQueenBui
+      enum.TacticalMapUserUi.Key:
+        type: TacticalMapUserBui
+      enum.XenoReserveParasiteChangeUI.Key:
+        type: ReserveParasitesBoundUserInterface
+      enum.XenoParasiteGhostUI.Key:
+        type: XenoParasiteGhostBui
+        requireInputValidation: false
+      enum.DialogUiKey.Key:
+        type: DialogBui
+
+- type: entity
+  id: MCXenoPlantingWeeds
+  abstract: true
+  components:
+  - type: MCXenoPlantingWeeds
+    selected: MCXenoWeedsNode
+    weeds:
+      MCXenoWeedsNode:
+        name: Default
+        cost: 75
+        sprite:
+          sprite: _MC/Interface/Xeno/weed_icons.rsi
+          state: default
+      MCXenoWeedsNodeSticky:
+        name: Sticky
+        cost: 150
+        sprite:
+          sprite: _MC/Interface/Xeno/weed_icons.rsi
+          state: sticky
+      MCXenoWeedsNodeResting:
+        name: Resting
+        cost: 225
+        sprite:
+          sprite: _MC/Interface/Xeno/weed_icons.rsi
+          state: resting

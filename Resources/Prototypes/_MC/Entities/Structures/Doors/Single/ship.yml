@@ -1,6 +1,8 @@
 # Ship
 - type: entity
-  parent: CMAirlockPrep
+  parent:
+  - CMAirlockPrep
+  - MCDoorBase
   id: MCSingleDoorPreparationGlass
   suffix: Preparation, Glass
 

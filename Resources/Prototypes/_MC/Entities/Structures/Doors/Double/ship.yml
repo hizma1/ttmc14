@@ -1,22 +1,30 @@
 # Ship
 - type: entity
-  parent: CMDoubleDoorAlmayerGlass
+  parent:
+  - CMDoubleDoorAlmayerGlass
+  - MCDoorBase
   id: CMDoubleDoorShipGlass
   suffix: Ship, Glass
 
 - type: entity
-  parent: CMDoubleDoorAlmayerSolid
+  parent:
+  - CMDoubleDoorAlmayerSolid
+  - MCDoorBase
   id: MCDoubleDoorShipSolid
   suffix: Ship, Solid
 
 - type: entity
-  parent: CMDoubleDoorPreparations
+  parent:
+  - CMDoubleDoorPreparations
+  - MCDoorBase
   id: MCDoubleDoorPreparationGlass
   suffix: Preparation, Glass
 
 # Bridge
 - type: entity
-  parent: CMDoubleDoorCommandGlass
+  parent:
+  - CMDoubleDoorCommandGlass
+  - MCDoorBase
   id: MCDoubleDoorBridgeGlassLocked
   suffix: Bridge, Glass, Locked
   components:
@@ -24,7 +32,9 @@
     access: [[ "MCAccessBridge" ]]
 
 - type: entity
-  parent: CMDoubleDoorCommandSolid
+  parent:
+  - CMDoubleDoorCommandSolid
+  - MCDoorBase
   id: MCDoubleDoorBridgeSolidLocked
   suffix: Bridge, Solid, Locked
   components:
@@ -33,7 +43,9 @@
 
 # Cargo
 - type: entity
-  parent: CMDoubleDoorPreparations
+  parent:
+  - CMDoubleDoorPreparations
+  - MCDoorBase
   id: MCDoubleDoorRequisitionsGlassLocked
   suffix: Requisitions, Glass, Locked
   components:
@@ -44,12 +56,16 @@
 
 # Medical
 - type: entity
-  parent: CMDoubleDoorMedicalGlass
+  parent:
+  - CMDoubleDoorMedicalGlass
+  - MCDoorBase
   id: MCDoubleDoorMedicalGlass
   suffix: Medical, Glass
 
 - type: entity
-  parent: CMDoubleDoorMedicalGlass
+  parent:
+  - CMDoubleDoorMedicalGlass
+  - MCDoorBase
   id: MCDoubleDoorResearchGlassLocked
   suffix: Research, Glass, Locked
   components:
@@ -57,7 +73,9 @@
     access: [[ "MCAccessResearch" ]]
 
 - type: entity
-  parent: CMDoubleDoorMedicalSolid
+  parent:
+  - CMDoubleDoorMedicalSolid
+  - MCDoorBase
   id: MCDoubleDoorResearchSolidLocked
   suffix: Research, Solid, Locked
   components:
@@ -66,7 +84,9 @@
 
 # Security
 - type: entity
-  parent: CMDoubleDoorSecuritySolid
+  parent:
+  - CMDoubleDoorSecuritySolid
+  - MCDoorBase
   id: MCDoubleSecuritySolidLocked
   suffix: Security, Solid, Locked
   components:
@@ -74,7 +94,9 @@
     access: [[ "MCAccessLogistics" ], [ "MCAccessCargo" ]]
 
 - type: entity
-  parent: CMDoubleDoorSecurityGlass
+  parent:
+  - CMDoubleDoorSecurityGlass
+  - MCDoorBase
   id: MCDoubleSecurityGlassLocked
   suffix: Security, Glass, Locked
   components:

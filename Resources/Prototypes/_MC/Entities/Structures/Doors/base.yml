@@ -1,0 +1,11 @@
+- type: entity
+  id: MCDoorBase
+  abstract: true
+  components:
+  - type: StationAiWhitelist
+  - type: UserInterface
+    interfaces:
+      enum.AiUi.Key:
+        type: StationAiBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
