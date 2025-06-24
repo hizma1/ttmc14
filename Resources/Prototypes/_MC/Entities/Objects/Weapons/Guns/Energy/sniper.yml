@@ -1,0 +1,37 @@
+- type: entity
+  parent:
+  - MCWeaponEnergyBase
+  - RMCBaseWeaponMagazineVisuals
+  id: MCWeaponEnergySniper
+  name: Terra Experimental laser sniper (TE-S)
+  description: The T-ES, a Terra Experimental standard issue laser sniper rifle, it has an integrated charge selector for normal and heat settings. Uses standard Terra Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Energy/sniper.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Energy/sniper.rsi
+  - type: Gun
+    shotsPerBurst: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/Laser/sniper.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - SemiAuto
+    scatterWielded: 10
+    scatterUnwielded: -4
+    baseFireRate: 1.25 # 1 / 0.8
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.2
+    accuracyMultiplierUnwielded: 0.5
+  - type: RMCWeaponDamageFalloff
+    falloffMultiplier: 0.5
+  - type: WieldDelay
+    baseDelay: 0.9

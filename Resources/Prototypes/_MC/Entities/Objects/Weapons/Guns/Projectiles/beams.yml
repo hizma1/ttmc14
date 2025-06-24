@@ -1,0 +1,75 @@
+
+- type: hitscan
+  id: MCProjectileBeamBase
+  damage:
+    types:
+      Heat: 20
+  muzzleFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/base.rsi
+    state: muzzle_beam
+  travelFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/base.rsi
+    state: beam
+  impactFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/base.rsi
+    state: impact_beam
+
+- type: hitscan
+  id: MCProjectileBeamOvercharge
+  damage:
+    types:
+      Heat: 40
+  muzzleFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/overcharge.rsi
+    state: muzzle_beam
+  travelFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/overcharge.rsi
+    state: beam
+  impactFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/overcharge.rsi
+    state: impact_beam
+
+- type: hitscan
+  id: MCProjectileBeamWeakening
+  damage:
+    types:
+      Heat: 30
+  muzzleFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/weakening.rsi
+    state: muzzle_beam
+  travelFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/weakening.rsi
+    state: beam
+  impactFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/weakening.rsi
+    state: impact_beam
+
+- type: hitscan
+  id: MCProjectileBeamMicrowave
+  damage:
+    types:
+      Heat: 20
+  muzzleFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/microwave.rsi
+    state: muzzle_beam
+  travelFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/microwave.rsi
+    state: beam
+  impactFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/microwave.rsi
+    state: impact_beam
+
+- type: hitscan
+  id: MCProjectileBeamBlast
+  damage:
+    types:
+      Heat: 35
+  muzzleFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/blast.rsi
+    state: muzzle_beam
+  travelFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/blast.rsi
+    state: beam
+  impactFlash:
+    sprite: _MC/Objects/Weapons/Guns/Projectiles/Beams/blast.rsi
+    state: impact_beam

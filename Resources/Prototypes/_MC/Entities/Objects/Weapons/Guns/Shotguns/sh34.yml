@@ -17,6 +17,7 @@
     shotsPerBurst: 1
   - type: Appearance
   - type: ShootUseDelay
+  - type: GunRequiresWield
   - type: RMCSelectiveFire
     recoilWielded: 1
     recoilUnwielded: 4

@@ -11,7 +11,8 @@ namespace Content.Shared.PowerCell;
 [RegisterComponent]
 public sealed partial class PowerCellComponent : Component
 {
-    public const int PowerCellVisualsLevels = 2;
+    [DataField]
+    public int PowerCellVisualsLevels = 2; // marine-corps-fix
 }
 
 [Serializable, NetSerializable]

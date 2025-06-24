@@ -26,7 +26,15 @@
       - id: MCWeaponShotgunLeicesterRepeater
       - id: MCBoxGovernmentRounds
     - name: Energy Weapons
-      entries: []
+      entries:
+      - id: MCMagazineBatteryTerra
+      # TE powerpack
+      # TE powerbackpack
+      - id: MCWeaponEnergyRifle
+      - id: MCWeaponEnergySniper
+      - id: MCWeaponEnergyCarbine
+      - id: MCWeaponEnergyPistol
+      - id: MCWeaponEnergyMachineGun
     - name: SMGs
       entries: []
     - name: Marksman
@@ -49,14 +57,67 @@
     - name: Sidearm
       entries: []
     - name: Grenades
-      entries: []
+      entries:
+      - id: CMGrenadeHighExplosive
+        amount: 200
+      - id: CMGrenadeFragOld
+        amount: 30
+      # M40 adhesive charge grenade
+      # M45 Trailblazer grenade
+      - id: RMCGrenadeIncendiary
+        amount: 50
+      - id: CMGrenadeSmoke
+        amount: 25
+      # M40-2 SCDP smoke grenade
+      # M40-AG smoke grenade
+      # M45 Cloaker grenade
+      # mirage grenade
+      # M80 lasburster grenade
+      # M25 HEFA grenade
+      - id: CMPackFlare
+        amount: 200
+      - id: RMCPackFlareCAS
+        amount: 30
     - name: Specialized
       entries: []
     - name: Heavy Weapons
       entries: []
     - name: Attachments
-      entries: []
+      entries:
+      - id: RMCM5Bayonet
+      - id: RMCAttachmentRecoilCompensator
+      - id: RMCAttachmentExtendedBarrel
+      - id: RMCAttachmentSuppressor
+      - id: RMCAttachmentBarrelCharger
+      # pistol lace
+      - id: RMCAttachmentRailFlashlight
+      # underbarreled flashlight
+      - id: RMCAttachmentMagneticHarness
+      - id: RMCAttachmentS5RedDotSight
+      # tactical sensor
+      # T-47 rail scope
+      # mini rail scope
+      - id: RMCAttachmentAngledGrip
+      - id: RMCAttachmentVerticalGrip
+      - id: RMCAttachmentBipod
+      - id: RMCAttachmentGyroscopicStabilizer
+      - id: RMCAttachmentLaserSight
+      - id: RMCAttachmentBurstFireAssembly
+      # masterkey shotgun
+      - id: RMCAttachmentMK1GrenadeLauncher
+      - id: RMCAttachmentMiniFlamethrower
+      # mini incinerator tank
+      # mini pepperball gun
+      # mall pepperball canister (SAN balls)
+      # T-76 magnum stock
+      # standard flamer nozzle
     - name: Boxes
       entries: []
     - name: Utility
-      entries: []
+      entries:
+      - id: RMCFlashlight
+      - id: CMEntrenchingTool
+      - id: CMFireExtinguisher
+      - id: CMFireExtinguisherPortable
+      - id: RMCBinocularsCiv
+      - id: CMHandLabeler

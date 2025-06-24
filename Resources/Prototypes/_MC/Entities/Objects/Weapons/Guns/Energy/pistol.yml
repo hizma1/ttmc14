@@ -1,0 +1,37 @@
+- type: entity
+  parent:
+  - MCWeaponEnergyBase
+  - RMCBaseWeaponMagazineVisuals
+  id: MCWeaponEnergyPistol
+  name: Terra Experimental laser pistol (TE-P)
+  description: The TE-P is a lightweight pistol with utility oriented alternative fire modes. The TE-P has a standard fire mode similar in performance to the P-14, a disabler fire mode for non-lethal takedowns, and a heat fire mode for setting targets on fire.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Energy/rifle.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Energy/rifle.rsi
+  - type: Gun
+    shotsPerBurst: 1
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/Laser/pistol.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    scatterWielded: 4
+    scatterUnwielded: 2
+    baseFireRate: 6.667 # 1 / 0.15
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1
+    accuracyMultiplierUnwielded: 0.9
+  - type: RMCWeaponDamageFalloff
+    falloffMultiplier: 0.2
+  - type: WieldDelay
+    baseDelay: 0.4
