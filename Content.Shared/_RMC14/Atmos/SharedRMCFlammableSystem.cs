@@ -1,4 +1,5 @@
-﻿using Content.Shared._RMC14.Armor;
+﻿using Content.Shared._MC.Xeno.ResinJelly;
+using Content.Shared._RMC14.Armor;
 using Content.Shared._RMC14.Chemistry;
 using Content.Shared._RMC14.Emote;
 using Content.Shared._RMC14.Explosion;
@@ -683,7 +684,7 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
         if (!Ignite(flammableEnt, ent.Comp.Intensity, ent.Comp.Duration, ent.Comp.MaxStacks))
             return;
 
-        if (!wasOnFire && IsOnFire(flammableEnt) && !HasComp<RMCImmuneToFireTileDamageComponent>(ent))
+        if (!wasOnFire && IsOnFire(flammableEnt) && !HasComp<RMCImmuneToFireTileDamageComponent>(ent) && !HasComp<MCXenoResinJellyFireproofComponent>(ent)) // marine-corps-fix
             _damageable.TryChangeDamage(flammableEnt, flammableEnt.Comp.Damage * ent.Comp.Intensity, true);
     }
 
@@ -787,7 +788,7 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
                     if (stepping.Distance >= 1)
                     {
                         stepping.Distance = 0;
-                        if(!HasComp<RMCImmuneToFireTileDamageComponent>(uid))
+                        if(!HasComp<RMCImmuneToFireTileDamageComponent>(uid) && !HasComp<MCXenoResinJellyFireproofComponent>(uid)) // marine-corps-fix
                             _damageable.TryChangeDamage(uid, tile * ignite.Intensity);
                     }
                 }

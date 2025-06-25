@@ -88,7 +88,6 @@ public sealed class MCXenoResinJellySystem : EntitySystem
         _emote.TryEmoteWithChat(target, entity.Comp.Emote);
 
         EnsureComp<MCXenoResinJellyFireproofComponent>(target);
-        EnsureComp<RMCImmuneToFireTileDamageComponent>(target);
 
         if (_net.IsClient)
             return;
@@ -97,7 +96,6 @@ public sealed class MCXenoResinJellySystem : EntitySystem
             () =>
             {
                 RemCompDeferred<MCXenoResinJellyFireproofComponent>(target);
-                RemCompDeferred<RMCImmuneToFireTileDamageComponent>(target);
             }
         );
 

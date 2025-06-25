@@ -3,6 +3,7 @@ using Content.Server.Atmos.Components;
 using Content.Server.Damage.Components;
 using Content.Server.Stunnable;
 using Content.Server.Temperature.Systems;
+using Content.Shared._MC.Xeno.ResinJelly;
 using Content.Shared._RMC14.Atmos;
 using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Projectile.Spit;
@@ -508,7 +509,8 @@ namespace Content.Server.Atmos.EntitySystems
                     if (_steppingOnFireQuery.HasComp(uid))
                         damage *= 2;
 
-                    _damageableSystem.TryChangeDamage(uid, damage, true, false);
+                    if (!HasComp<MCXenoResinJellyFireproofComponent>(uid)) // marine-corps-fix
+                        _damageableSystem.TryChangeDamage(uid, damage, true, false);
 
                     AdjustFireStacks(uid, flammable.Resisting ? flammable.ResistStacks : -0.25f, flammable, flammable.OnFire);
                 }
