@@ -74,11 +74,12 @@
       state: drone
   - type: XenoConstruction
     buildDelay: 2
-    canOrderConstruction:
-    - HiveCoreXenoConstructionNode
-    - HiveEggMorpherXenoConstructionNode
-    - HiveClusterXenoConstructionNode
-    - HiveRecoveryNodeXenoConstructionNode
+    canBuild:
+    - WallXenoResin
+    - WallXenoMembrane
+    - DoorXenoResin
+    - XenoStickyResin
+    - XenoFastResin
   - type: XenoEvolution
     canEvolveWithoutGranter: true
     max: 200
@@ -103,7 +104,11 @@
     - ActionXenoRest
     - ActionXenoWatch
     - ActionXenoAcidWeak
+    - ActionXenoPheromones
     - ActionXenoDevolve
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
+    - ActionXenoTransferPlasma
     # MC
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds

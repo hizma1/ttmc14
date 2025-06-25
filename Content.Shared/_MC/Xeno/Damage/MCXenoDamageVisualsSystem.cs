@@ -29,8 +29,8 @@ public sealed class MCXenoDamageVisualsSystem: EntitySystem
         var damage = args.Damageable.TotalDamage.Double();
         var max = threshold.Value.Double();
         var level = damage > threshold
-            ? ent.Comp.States + 1
-            : ContentHelpers.RoundToEqualLevels(damage, max, ent.Comp.States + 1);
+            ? ent.Comp.States
+            : ContentHelpers.RoundToEqualLevels(damage, max, ent.Comp.States);
         _appearance.SetData(ent, RMCDamageVisuals.State, level);
     }
 }
