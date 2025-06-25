@@ -60,3 +60,9 @@
         sprite:
           sprite: _MC/Interface/Xeno/weed_icons.rsi
           state: resting
+
+- type: entity
+  id: MCXenoCreateResinJelly
+  abstract: true
+  components:
+  - type: MCXenoCreateResinJelly

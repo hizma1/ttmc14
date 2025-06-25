@@ -27,3 +27,18 @@
     event: !type:MCXenoPlaceWeedsActionEvent
     useDelay: 0.1
 
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoCreateResinJelly
+  name: Create Resin Jelly (100)
+  description: Places Resin Jelly in your active hand, which can be used on yourself or other xeno castes for a 30-second protection from fire.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Objects/Xeno/resin_jelly.rsi
+      state: icon
+    event: !type:MCXenoCreateResinJellyActionEvent
+    useDelay: 20
+  - type: XenoActionPlasma
+    cost: 100

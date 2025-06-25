@@ -43,6 +43,6 @@ public sealed class MCXenoDamageVisualsSystem : VisualizerSystem<MCXenoDamageVis
             return;
         }
 
-        sprite.LayerSetState(layer, $"wounded_alive_{state}");
+        sprite.LayerSetState(layer, $"wounded_{state}");
     }
 }

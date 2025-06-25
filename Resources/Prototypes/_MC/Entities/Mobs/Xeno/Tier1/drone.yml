@@ -3,6 +3,7 @@
   # MC
   - MCXenoBase
   - MCXenoPlantingWeeds
+  - MCXenoCreateResinJelly
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -57,6 +58,7 @@
       - XenoParasite
       - XenoEgg
       - XenoFruit
+      - MCXenoResinJelly
   - type: TunnelRenamer
   - type: EggPlantTime
     plantTime: 2.5
@@ -105,6 +107,7 @@
     # MC
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
+    - MCActionXenoCreateResinJelly
   - type: XenoEvolution
   - type: XenoAcid
   - type: AcidTrap
