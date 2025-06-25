@@ -1,0 +1,18 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: MCClothingHands
+  abstract: true
+  components:
+  - type: Sprite
+    state: icon
+  - type: CMArmor
+    melee: 25
+    bullet: 15
+    laser: 10
+    energy: 15
+    explosionArmor: 15
+    bio: 5
+    fire: 15
+    acid: 15
+  - type: Insulated
+    coefficient: 0.6

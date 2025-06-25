@@ -11,7 +11,7 @@
   - RMCXenoCommendationReceiver
   - RMCXenoMobCollision
   id: MCXenoDroneBase
-  name: drone
+  name: Drone
   description: An alien drone.
   abstract: true
   components:

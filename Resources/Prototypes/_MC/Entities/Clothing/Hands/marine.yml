@@ -1,0 +1,45 @@
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsMarineCombat
+  name: Marine combat gloves
+  description: "Standard issue marine tactical gloves. It reads: 'knit by Marine Widows Association'."
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/marine.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/marine.rsi
+
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsMarineCombatBlack
+  name: Black marine combat gloves
+  description: "Standard issue marine tactical gloves but black! It reads: 'knit by Marine Widows Association'."
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/marine_black.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/marine_black.rsi
+
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsMarineCombatFingerless
+  name: Fingerless marine combat gloves
+  description: "Standard issue marine tactical gloves but fingerless! It reads: 'knit by Marine Widows Association'."
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/marine_fingerless.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/marine_fingerless.rsi
+
+- type: entity
+  parent: MCClothingHands
+  id: RMCHandsMarineInsulated
+  name: Insulated marine combat gloves
+  description: Insulated marine tactical gloves that protect against electrical shocks.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/marine_insulated.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/marine_insulated.rsi
+  - type: Insulated
+    coefficient: 0

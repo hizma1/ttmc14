@@ -1,0 +1,43 @@
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsICC
+  name: ICC gloves
+  description: Tough looking working gloves.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/icc.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/icc.rsi
+
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsICCInsulated
+  name: ICC insulated gloves
+  description: Tough looking working gloves. These ones appear to have insulation to protect from electric shock.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/icc.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/icc.rsi
+  - type: Insulated
+    coefficient: 0
+
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsICCGuard
+  name: ICCGF gloves
+  description: Tough looking tactical gloves.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/icc_guard.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/icc_guard.rsi
+  - type: CMArmor
+    melee: 30
+    bullet: 20
+    laser: 15
+    energy: 20
+    explosionArmor: 15
+    bio: 5
+    fire: 15
+    acid: 15

@@ -1,0 +1,54 @@
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsSOM
+  name: SOM gloves
+  description: Gloves with origins dating back to the old mining colonies, they look pretty tough.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/som.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/som.rsi
+
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsSOMInsulated
+  name: Insulated SOM gloves
+  description: Gloves with origins dating back to the old mining colonies. These ones appear to have an electrically insulating layer built into them.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/som.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/som.rsi
+  - type: Insulated
+    coefficient: 0
+
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsSOMVeteran
+  name: SOM veteran gloves
+  description: Gloves with origins dating back to the old mining colonies. These ones seem tougher than normal.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/som_veteran.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/som_veteran.rsi
+  - type: CMArmor
+    melee: 30
+    bullet: 20
+    laser: 15
+    energy: 20
+    explosionArmor: 15
+    bio: 5
+    fire: 15
+    acid: 15
+
+- type: entity
+  parent: MCClothingHands
+  id: MCClothingHandsSOMOfficer
+  name: SOM officer gloves
+  description: Black gloves commonly worn by SOM officers.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/som_officer.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/som_officer.rsi
