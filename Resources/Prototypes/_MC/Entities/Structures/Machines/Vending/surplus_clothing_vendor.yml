@@ -12,3 +12,27 @@
     - state: surplus_clothes
       map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
   - type: CMAutomatedVendor
+    sections:
+    - name: Pouches
+      entries:
+      # sidearm pouch
+      - id: MCPouchMagazineLarge
+      - id: MCPouchPistolMagazineLarge
+      - id: MCPouchShotgunShell
+      # flare pouch
+      - id: MCPouchGrenade
+      - id: MCPouchExplosive
+      - id: MCPouchMedkit
+      - id: MCPouchMedicalInjector
+      # pressurized reagent pouch
+      # bktt reagent pouch
+      # medical lolipop pouch
+      # berry bar pouch
+      - id: MCPouchConstruction
+      - id: MCPouchElectronics
+      - id: MCPouchTools
+      - id: MCPouchFieldUtility
+      # general pouch
+      # TE powerpack
+      # medium general pouch
+      # protein pack pouch

@@ -1,0 +1,18 @@
+- type: entity
+  parent: MCPouchStorage
+  id: MCPouchShotgunShell
+  name: shotgun shell pouch
+  description: A pouch specialized for holding shotgun ammo.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/shotshells.rsi
+    state: open
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,7,1 # 4 slots
+    whitelist:
+      tags:
+      - RMCHandful
+      - MCMagazineHandful
+  - type: FixedItemSizeStorage

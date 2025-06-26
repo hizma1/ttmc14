@@ -1,0 +1,68 @@
+- type: entity
+  parent:
+  - MCPouchStorage
+  - MCPouchVisualizerOpen
+  id: MCPouchMagazineSmall
+  name: small magazine pouch
+  description: This pouch can contain three ammo magazines.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/small_ammo_mag.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,1 # 2 slots
+    whitelist:
+      tags:
+      - RMCHandful
+      - MCMagazineRifle
+      - MCMagazineShotgun
+      - MCBatteryTerra
+      - MCMagazineHandful
+  - type: FixedItemSizeStorage
+
+- type: entity
+  parent:
+  - MCPouchStorage
+  - MCPouchVisualizerOpen
+  id: MCPouchMagazine
+  name: magazine pouch
+  description: This pouch can contain two ammo magazines.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/medium_ammo_mag.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,1 # 2 slots
+    whitelist:
+      tags:
+      - RMCHandful
+      - MCMagazineRifle
+      - MCMagazineShotgun
+      - MCBatteryTerra
+      - MCMagazineHandful
+  - type: FixedItemSizeStorage
+
+- type: entity
+  parent:
+  - MCPouchStorage
+  - MCPouchVisualizerOpen
+  id: MCPouchMagazineLarge
+  name: large magazine pouch
+  description: This pouch can contain three ammo magazines.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/large_ammo_mag.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,5,1 # 3 slots
+    whitelist:
+      tags:
+      - RMCHandful
+      - MCMagazineRifle
+      - MCMagazineShotgun
+      - MCBatteryTerra
+      - MCMagazineHandful
+  - type: FixedItemSizeStorage
