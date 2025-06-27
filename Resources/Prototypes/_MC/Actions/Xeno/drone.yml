@@ -42,3 +42,21 @@
     useDelay: 20
   - type: XenoActionPlasma
     cost: 100
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoAcidicSalve
+  name: Acidic Salve (150)
+  description: Allows you to spend 150 plasma on healing a xeno for 50 HP + (Recovery Pheremone Level * the Xeno's max health * 0.01) along with healing (total heal amount/10) sunder.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/drone.rsi
+      state: heal_xeno
+    event: !type:MCXenoAcidicSlaveActionEvent
+    range: 1.5
+    useDelay: 5
+    deselectOnMiss: false
+  - type: XenoActionPlasma
+    cost: 150
