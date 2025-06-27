@@ -4,6 +4,7 @@
   - MCXenoBase
   - MCXenoPlantingWeeds
   - MCXenoCreateResinJelly
+  - MCXenoAcidicSalve
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -33,7 +34,7 @@
         Brute: 22.5
   - type: Xeno
     role: MCXenoDrone
-    hudOffset: 0,0.15
+    hudOffset: 0, 0.15
     tier: 1
     bypassTierCount: true
     unlockAt: 60 # 1 minute
@@ -113,6 +114,7 @@
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoCreateResinJelly
+    - MCActionXenoAcidicSalve
   - type: XenoEvolution
   - type: XenoAcid
   - type: AcidTrap

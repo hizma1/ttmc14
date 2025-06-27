@@ -66,3 +66,10 @@
   abstract: true
   components:
   - type: MCXenoCreateResinJelly
+
+
+- type: entity
+  id: MCXenoAcidicSalve
+  abstract: true
+  components:
+  - type: MCXenoAcidicSalve
