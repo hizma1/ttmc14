@@ -1,0 +1,63 @@
+- type: entity
+  parent: Clothing
+  id: MCPouchBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Pouches/small_drop.rsi
+  - type: Appearance
+  - type: Item
+    size: Large
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - pocket
+  - type: Tag
+    tags:
+    - MCPouch
+  - type: ExplosionResistance
+    damageCoefficient: 0
+    worn: false
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: StoreAfterFailedInteract
+
+- type: entity
+  parent:
+  - MCPouchBase
+  - BaseStorageItem
+  id: MCPouchStorage
+  abstract: true
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,1,1 # 1 slot
+    blacklist:
+      tags:
+      - MCPouch
+      - ThrowingKnife
+  - type: RMCStorageEjectHand
+
+- type: entity
+  parent:
+  - MCPouchBase
+  - BaseStorageItem
+  id: MCPouchVisualizerOpen
+  abstract: true
+  components:
+  - type: Sprite
+    state: base
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True:
+            state: open
+          False:
+            state: base
+
+- type: Tag
+  id: MCPouch

@@ -1,0 +1,46 @@
+- type: entity
+  parent:
+  - MCPouchStorage
+  - MCPouchVisualizerOpen
+  id: MCPouchGrenade
+  name: grenade pouch
+  description: It can contain grenades.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/grenade.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,11,1 # 6 slots
+    whitelist:
+      tags:
+      - Grenade
+  - type: FixedItemSizeStorage
+
+- type: entity
+  parent: MCPouchGrenade
+  id: MCPouchGrenadeFill
+  suffix: Fill
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMGrenadeHighExplosive
+      amount: 4
+
+- type: entity
+  parent:
+  - MCPouchStorage
+  id: MCPouchGrenadeSOM
+  name: grenade pouch
+  description: It can contain grenades. This one looks to be made out of traditional SOM leather.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/grenade_som.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,11,1 # 6 slots
+    whitelist:
+      tags:
+      - Grenade
+  - type: FixedItemSizeStorage

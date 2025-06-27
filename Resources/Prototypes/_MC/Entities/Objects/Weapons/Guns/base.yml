@@ -1,0 +1,8 @@
+- type: Tag
+  id: MCMagazineRifle
+
+- type: Tag
+  id: MCMagazineShotgun
+
+- type: Tag
+  id: MCMagazineHandful

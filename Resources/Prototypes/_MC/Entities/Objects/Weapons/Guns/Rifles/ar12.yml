@@ -112,6 +112,7 @@
   - type: Tag
     tags:
     - CMMagazineRifle
+    - MCMagazineRifle
     - MCMagazineRifleAR12
   - type: BallisticAmmoProvider
     mayTransfer: True
@@ -138,6 +139,7 @@
   - type: Tag
     tags:
     - CMMagazineRifle
+    - MCMagazineRifle
     - MCMagazineRifleAR12AP
   - type: BallisticAmmoProvider
     mayTransfer: True
