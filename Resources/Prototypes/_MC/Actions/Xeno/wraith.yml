@@ -1,0 +1,18 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoRewind
+  name: Time Shift (150)
+  description: Save the location and status of the target. When the time is up, the target location and status are restored
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/wraith.rsi
+      state: rewind
+    event: !type:MCXenoRewindActionEvent
+    range: 5
+    useDelay: 30
+    deselectOnMiss: false
+    checkCanAccess: false
+  - type: XenoActionPlasma
+    cost: 100
