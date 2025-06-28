@@ -9,6 +9,7 @@
     - Dead
   - type: NightVision
     overlay: false
+    drawFov: false
   - type: MCXenoDamageVisuals
   - type: CombatMode
     canDisarm: false
