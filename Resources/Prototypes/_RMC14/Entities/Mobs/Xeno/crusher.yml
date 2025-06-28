@@ -11,6 +11,7 @@
   name: Crusher
   description: A huge alien with an enormous armored crest.
   components:
+  - type: XenoHidden
   - type: GuideHelp
     guides:
     - RMCGuideRoleCrusher

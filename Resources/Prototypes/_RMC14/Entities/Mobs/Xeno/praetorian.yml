@@ -11,6 +11,7 @@
   name: Praetorian
   description: A huge, looming beast of an alien.
   components:
+  - type: XenoHidden
   - type: GhostRole
     name: cm-job-name-xeno-praetorian
   - type: Sprite

@@ -1,0 +1,56 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoHunter
+  name: Hunter
+  description: A fast, powerful front line combatant.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/hunter.rsi
+    offset: 0.25, 0.25
+  - type: FixedIdentity
+    name: mc-job-name-xeno-hunter
+  - type: GhostRole
+    name: mc-job-name-xeno-hunter
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      310: Critical
+      410: Dead
+  - type: XenoPlasma
+    plasma: 200
+    maxPlasma: 200
+    plasmaRegenOnWeeds: 20
+  - type: Xeno
+    tier: 2
+    role: MCXenoHunter
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1,0.1
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoWarlock
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoRunner
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 25
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.846
+    baseSprintSpeed: 6.25
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: hivelord

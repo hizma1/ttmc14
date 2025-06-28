@@ -1,0 +1,12 @@
+- type: job
+  parent: MCJob
+  id: MCJobXeno
+  abstract: true
+  description: null
+  joinNotifyCrew: false
+  icon: CMJobIconEmpty
+  supervisors: cm-job-supervisors-queen
+  accessGroups:
+  - CMAccessXeno
+  hasIcon: false
+  hidden: true

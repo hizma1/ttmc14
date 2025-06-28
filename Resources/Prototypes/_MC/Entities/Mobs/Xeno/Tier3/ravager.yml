@@ -1,0 +1,53 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoRavager
+  name: Ravager
+  description: A brutal, devastating front-line attacker.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/ravager.rsi
+  - type: FixedIdentity
+    name: mc-job-name-xeno-ravager
+  - type: GhostRole
+    name: mc-job-name-xeno-ravager
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Critical
+      500: Dead
+  - type: XenoPlasma
+    plasma: 800
+    maxPlasma: 800
+    plasmaRegenOnWeeds: 15
+  - type: Xeno
+    tier: 3
+    role: MCXenoRavager
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1,0.1
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoWraith
+    - MCXenoHunter
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 25
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.333
+    baseSprintSpeed: 5
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: hivelord

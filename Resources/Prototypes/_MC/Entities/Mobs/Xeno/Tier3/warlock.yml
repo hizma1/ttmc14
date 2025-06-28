@@ -1,0 +1,54 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoWarlock
+  name: Warlock
+  description: A powerful psychic xeno. The Warlock devastates enemies of the hive with its psychic might, but it's physically very frail.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/warlock.rsi
+    offset: 0, 0.2
+  - type: FixedIdentity
+    name: mc-job-name-xeno-warlock
+  - type: GhostRole
+    name: mc-job-name-xeno-warlock
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      325: Critical
+      425: Dead
+  - type: XenoPlasma
+    plasma: 1700
+    maxPlasma: 1700
+    plasmaRegenOnWeeds: 60
+  - type: Xeno
+    tier: 3
+    role: MCXenoWarlock
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1,0.1
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoWraith
+    - MCXenoWarrior
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 18
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.857
+    baseSprintSpeed: 4
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: hivelord

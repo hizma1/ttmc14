@@ -39,7 +39,7 @@
       sprite: _MC/Objects/Xeno/resin_jelly.rsi
       state: icon
     event: !type:MCXenoCreateResinJellyActionEvent
-    useDelay: 20
+    useDelay: 45
   - type: XenoActionPlasma
     cost: 100
 

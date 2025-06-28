@@ -5,6 +5,7 @@
   id: CMXenoParasite
   name: Parasite
   components:
+  - type: XenoHidden
   - type: GuideHelp
     guides:
     - RMCGuideRoleParasite

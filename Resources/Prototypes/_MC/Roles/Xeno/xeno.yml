@@ -1,0 +1,214 @@
+# Tier 0
+- type: job
+  parent: MCJobXeno
+  id: MCXenoLarva
+  name: mc-job-name-xeno-larva
+  playTimeTracker: MCXenoLarva
+
+- type: playTimeTracker
+  id: MCXenoLarva
+  isXeno: true
+
+# Tier 1
+
+# Defender
+- type: job
+  parent: MCJobXeno
+  id: MCXenoDefender
+  name: mc-job-name-xeno-defender
+  playTimeTracker: MCXenoDefender
+
+- type: playTimeTracker
+  id: MCXenoDefender
+  isXeno: true
+
+# Drone
+- type: job
+  parent: MCJobXeno
+  id: MCXenoDrone
+  name: mc-job-name-xeno-drone
+  playTimeTracker: MCXenoDrone
+
+- type: playTimeTracker
+  id: MCXenoDrone
+  isXeno: true
+
+# Runner
+- type: job
+  parent: MCJobXeno
+  id: MCXenoRunner
+  name: mc-job-name-xeno-runner
+  playTimeTracker: MCXenoRunner
+
+- type: playTimeTracker
+  id: MCXenoRunner
+  isXeno: true
+
+# Sentinel
+- type: job
+  parent: MCJobXeno
+  id: MCXenoSentinel
+  name: mc-job-name-xeno-sentinel
+  playTimeTracker: MCXenoSentinel
+
+- type: playTimeTracker
+  id: MCXenoSentinel
+  isXeno: true
+
+# Tier 2
+
+# Bull
+- type: job
+  parent: MCJobXeno
+  id: MCXenoBull
+  name: mc-job-name-xeno-bull
+  playTimeTracker: MCXenoBull
+
+- type: playTimeTracker
+  id: MCXenoBull
+  isXeno: true
+
+# Carrier
+- type: job
+  parent: MCJobXeno
+  id: MCXenoCarrier
+  name: mc-job-name-xeno-carrier
+  playTimeTracker: MCXenoCarrier
+
+- type: playTimeTracker
+  id: MCXenoCarrier
+  isXeno: true
+
+# Hivelord
+- type: job
+  parent: MCJobXeno
+  id: MCXenoHivelord
+  name: mc-job-name-xeno-hivelord
+  playTimeTracker: MCXenoHivelord
+
+- type: playTimeTracker
+  id: MCXenoHivelord
+  isXeno: true
+
+# Hunter
+- type: job
+  parent: MCJobXeno
+  id: MCXenoHunter
+  name: mc-job-name-xeno-hunter
+  playTimeTracker: MCXenoHunter
+
+- type: playTimeTracker
+  id: MCXenoHunter
+  isXeno: true
+
+# Spitter
+- type: job
+  parent: MCJobXeno
+  id: MCXenoSpitter
+  name: mc-job-name-xeno-spitter
+  playTimeTracker: MCXenoSpitter
+
+- type: playTimeTracker
+  id: MCXenoSpitter
+  isXeno: true
+
+# Warrior
+- type: job
+  parent: MCJobXeno
+  id: MCXenoWarrior
+  name: mc-job-name-xeno-warrior
+  playTimeTracker: MCXenoWarrior
+
+- type: playTimeTracker
+  id: MCXenoWarrior
+  isXeno: true
+
+# Wraith
+- type: job
+  parent: MCJobXeno
+  id: MCXenoWraith
+  name: mc-job-name-xeno-wraith
+  playTimeTracker: MCXenoWraith
+
+- type: playTimeTracker
+  id: MCXenoWraith
+  isXeno: true
+
+# Tier 3
+
+# Boiler
+- type: job
+  parent: MCJobXeno
+  id: MCXenoBoiler
+  name: mc-job-name-xeno-boiler
+  playTimeTracker: MCXenoBoiler
+
+- type: playTimeTracker
+  id: MCXenoBoiler
+  isXeno: true
+
+# Crusher
+- type: job
+  parent: MCJobXeno
+  id: MCXenoCrusher
+  name: mc-job-name-xeno-crusher
+  playTimeTracker: MCXenoCrusher
+
+- type: playTimeTracker
+  id: MCXenoCrusher
+  isXeno: true
+
+# Defiler
+- type: job
+  parent: MCJobXeno
+  id: MCXenoDefiler
+  name: mc-job-name-xeno-defiler
+  playTimeTracker: MCXenoDefiler
+
+- type: playTimeTracker
+  id: MCXenoDefiler
+  isXeno: true
+
+# Gorger
+- type: job
+  parent: MCJobXeno
+  id: MCXenoGorger
+  name: mc-job-name-xeno-gorger
+  playTimeTracker: MCXenoGorger
+
+- type: playTimeTracker
+  id: MCXenoGorger
+  isXeno: true
+
+# Praetorian
+- type: job
+  parent: MCJobXeno
+  id: MCXenoPraetorian
+  name: mc-job-name-xeno-praetorian
+  playTimeTracker: MCXenoPraetorian
+
+- type: playTimeTracker
+  id: MCXenoPraetorian
+  isXeno: true
+
+# Ravager
+- type: job
+  parent: MCJobXeno
+  id: MCXenoRavager
+  name: mc-job-name-xeno-ravager
+  playTimeTracker: MCXenoRavager
+
+- type: playTimeTracker
+  id: MCXenoRavager
+  isXeno: true
+
+# Warlock
+- type: job
+  parent: MCJobXeno
+  id: MCXenoWarlock
+  name: mc-job-name-xeno-warlock
+  playTimeTracker: MCXenoWarlock
+
+- type: playTimeTracker
+  id: MCXenoWarlock
+  isXeno: true

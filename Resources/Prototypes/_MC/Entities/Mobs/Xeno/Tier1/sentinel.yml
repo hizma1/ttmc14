@@ -1,0 +1,56 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoSentinel
+  name: Sentinel
+  description: A weak ranged combat alien.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/sentinel.rsi
+    offset: 0, 0.2
+  - type: FixedIdentity
+    name: mc-job-name-xeno-sentinel
+  - type: GhostRole
+    name: mc-job-name-xeno-sentinel
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      370: Critical
+      470: Dead
+  - type: XenoPlasma
+    plasma: 600
+    maxPlasma: 600
+    plasmaRegenOnWeeds: 20
+  - type: Xeno
+    tier: 1
+    role: MCXenoSentinel
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1,0.1
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoSpitter
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoLarva
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 18
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.225
+    baseSprintSpeed: 4.761
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: hivelord

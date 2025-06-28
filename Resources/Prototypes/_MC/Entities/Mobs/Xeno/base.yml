@@ -2,6 +2,11 @@
   id: MCXenoBase
   abstract: true
   components:
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
   - type: MCXenoDamageVisuals
   - type: UserInterface
     interfaces:
@@ -73,3 +78,20 @@
   abstract: true
   components:
   - type: MCXenoAcidicSalve
+
+- type: entity
+  id: MCXenoPickupOne
+  abstract: true
+  components:
+  - type: WhitelistPickup
+    whitelist:
+      components:
+      - XenoParasite
+      - XenoEgg
+      - XenoFruit
+  - type: MultiHandedHolder
+    items:
+    - hands: 2
+      whitelist:
+        components:
+        - XenoEgg
