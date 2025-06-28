@@ -3,6 +3,7 @@
   # MC
   - MCXenoBase
   - MCXenoRewind
+  - MCXenoBlink
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -38,6 +39,7 @@
     - ActionXenoDevolve
     # MC
     - MCActionXenoRewind
+    - MCActionXenoBlink
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:
