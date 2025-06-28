@@ -34,7 +34,7 @@
         Brute: 22.5
   - type: Xeno
     role: MCXenoDrone
-    hudOffset: 0, 0.15
+    hudOffset: 0,0.15
     tier: 1
     bypassTierCount: true
     unlockAt: 60 # 1 minute
@@ -102,7 +102,7 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/drone.rsi
-    offset: 0, 0.2
+    offset: 0,0.2
   - type: Xeno
     actionIds:
     # RMC

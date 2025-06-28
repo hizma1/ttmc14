@@ -16,7 +16,7 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/defiler.rsi
-    offset: 0, 0.2
+    offset: 0,0.2
   - type: GhostRole
     name: mc-job-name-xeno-defiller
   - type: FixedIdentity

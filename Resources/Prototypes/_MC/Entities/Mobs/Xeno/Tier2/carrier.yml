@@ -78,7 +78,7 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/carrier.rsi
-    offset: 0, 0.25
+    offset: 0,0.25
     layers:
     - map: [ "enum.XenoVisualLayers.Base" ]
       state: alive

@@ -14,7 +14,7 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/warlock.rsi
-    offset: 0, 0.2
+    offset: 0,0.2
   - type: FixedIdentity
     name: mc-job-name-xeno-warlock
   - type: GhostRole
