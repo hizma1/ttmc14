@@ -2,6 +2,7 @@
   parent:
   # MC
   - MCXenoBase
+  - MCXenoGrappleToss
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -36,6 +37,7 @@
     - ActionXenoRest
     - ActionXenoDevolve
     # MC
+    - MCActionXenoGrappleToss
     hudOffset: -0.15,0.25
   - type: XenoEvolution
     evolvesTo:

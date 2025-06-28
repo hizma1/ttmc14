@@ -133,3 +133,9 @@
       icon:
         sprite: _MC/Effects/portals.rsi
         state: blue
+
+- type: entity
+  id: MCXenoGrappleToss
+  abstract: true
+  components:
+  - type: MCXenoGrappleToss
