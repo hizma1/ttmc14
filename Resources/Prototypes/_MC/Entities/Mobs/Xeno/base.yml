@@ -3,6 +3,12 @@
   abstract: true
   components:
   - type: MCXenoDamageVisuals
+  - type: CombatMode
+    canDisarm: false
+  - type: MeleeWeapon
+    autoAttack: true
+    widePrimary: true
+    altDisarm: false
   - type: UserInterface
     interfaces:
       # MC
