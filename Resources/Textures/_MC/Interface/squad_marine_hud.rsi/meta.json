@@ -3,13 +3,10 @@
     "license": "CC-BY-SA-3.0",
     "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/7e8aea5e32b79c2213a0702c45f711d22150c01d",
     "size": {
-        "x": 16,
-        "y": 16
+        "x": 32,
+        "y": 32
     },
     "states": [
-        {
-            "name": "background"
-        },
         {
             "name": "corpsman"
         },
