@@ -49,5 +49,5 @@
     baseSprintSpeed: 3.225
   - type: TacticalMapIcon
     icon:
-      sprite: _RMC14/Interface/map_blips.rsi
-      state: warrior
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: boiler

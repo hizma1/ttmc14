@@ -63,7 +63,7 @@
     size: Big
   - type: TacticalMapIcon
     icon:
-      sprite: _RMC14/Interface/map_blips.rsi
+      sprite: _MC/Interface/Xeno/icons.rsi
       state: carrier
   - type: XenoInhands
     prefix: carrier
