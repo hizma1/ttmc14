@@ -2,6 +2,7 @@
   parent:
   # MC
   - MCXenoBase
+  - MCXenoRewind
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -36,6 +37,7 @@
     - ActionXenoRest
     - ActionXenoDevolve
     # MC
+    - MCActionXenoRewind
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:
