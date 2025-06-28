@@ -54,5 +54,5 @@
     baseSprintSpeed: 5.263
   - type: TacticalMapIcon
     icon:
-      sprite: _RMC14/Interface/map_blips.rsi
-      state: hivelord
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: wraith
