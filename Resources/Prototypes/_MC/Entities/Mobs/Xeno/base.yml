@@ -109,3 +109,9 @@
   abstract: true
   components:
   - type: MCXenoRewind
+
+- type: entity
+  id: MCXenoBlink
+  abstract: true
+  components:
+  - type: MCXenoBlink
