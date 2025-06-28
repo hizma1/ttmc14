@@ -1,0 +1,36 @@
+- type: entity
+  id: MCXenoPortal
+  abstract: true
+  components:
+  - type: Transform
+    anchored: True
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _MC/Effects/portals.rsi
+  - type: Fixtures
+    fixtures:
+      portalFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        hard: false
+  - type: MCXenoPortal
+
+- type: entity
+  parent: MCXenoPortal
+  id: MCXenoPortalBlue
+  components:
+  - type: Sprite
+    state: blue
+
+- type: entity
+  parent: MCXenoPortal
+  id: MCXenoPortalOrange
+  components:
+  - type: Sprite
+    state: orange

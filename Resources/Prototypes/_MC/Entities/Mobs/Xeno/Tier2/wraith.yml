@@ -4,6 +4,7 @@
   - MCXenoBase
   - MCXenoRewind
   - MCXenoBlink
+  - MCXenoPortalPlacer
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -16,7 +17,7 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/wraith.rsi
-    offset: 0, 0.35
+    offset: 0,0.35
   - type: FixedIdentity
     name: mc-job-name-xeno-wraith
   - type: GhostRole
@@ -40,6 +41,7 @@
     # MC
     - MCActionXenoRewind
     - MCActionXenoBlink
+    - MCActionXenoPortalPlacer
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:

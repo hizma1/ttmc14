@@ -19,6 +19,8 @@
   - type: UserInterface
     interfaces:
       # MC
+      enum.MCXenoPortalPlacerUI.Key:
+        type: MCXenoChoosePortalBui
       enum.MCXenoPlantingWeedsUI.Key:
         type: MCXenoChooseWeedsBui
       # RMC
@@ -80,7 +82,6 @@
   components:
   - type: MCXenoCreateResinJelly
 
-
 - type: entity
   id: MCXenoAcidicSalve
   abstract: true
@@ -115,3 +116,19 @@
   abstract: true
   components:
   - type: MCXenoBlink
+
+- type: entity
+  id: MCXenoPortalPlacer
+  abstract: true
+  components:
+  - type: MCXenoPortalPlacer
+    portalFirst:
+      id: MCXenoPortalOrange
+      icon:
+        sprite: _MC/Effects/portals.rsi
+        state: orange
+    portalSecond:
+      id: MCXenoPortalBlue
+      icon:
+        sprite: _MC/Effects/portals.rsi
+        state: blue

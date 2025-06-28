@@ -35,3 +35,20 @@
     checkCanAccess: false
   - type: XenoActionPlasma
     cost: 30
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoPortalPlacer
+  name: Portal (Portal)
+  description: Place a portal on your location. You and other, whether it be marine or xenomorph, can travel from portal to portal.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/wraith.rsi
+      state: portal
+    event: !type:MCXenoPortalPlacerActionEvent
+    useDelay: 7
+    deselectOnMiss: false
+  - type: XenoActionPlasma
+    cost: 100

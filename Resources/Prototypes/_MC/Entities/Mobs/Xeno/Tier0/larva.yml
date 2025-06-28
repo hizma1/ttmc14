@@ -69,7 +69,7 @@
     tags:
     - RMCXenoLarva
   - type: RMCBuckleOffset
-    offset: 0, 0
+    offset: 0,0
   - type: XenoRankNames
     rankNames:
       0: rmc-xeno-young-larva
