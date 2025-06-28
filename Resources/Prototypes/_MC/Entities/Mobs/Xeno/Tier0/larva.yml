@@ -2,17 +2,13 @@
   parent:
   - CMXenoUndeveloped
   - CMXenoFlammable
-  id: CMXenoLarva
+  id: MCXenoLarva
   name: Larva
   components:
-  - type: XenoHidden
-  - type: GuideHelp
-    guides:
-    - RMCGuideRoleDrone
   - type: GhostRole
     name: cm-job-name-xeno-larva
   - type: Sprite
-    sprite: _RMC14/Mobs/Xenonids/Larva/larva.rsi
+    sprite: _MC/Mobs/Xenos/larva.rsi
   - type: MobState
     allowedStates:
     - Alive
@@ -21,8 +17,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      35: Critical
-      70: Dead
+      50: Critical
+      100: Dead
   - type: Xeno
     role: CMXenoLarva
     actionIds:
@@ -40,15 +36,6 @@
     plasma: 10
     maxPlasma: 10
     plasmaRegenOnWeeds: 0.1
-  - type: XenoEvolution
-    canEvolveWithoutGranter: true
-    requiresGranter: false
-    max: 60
-    evolvesTo:
-    - CMXenoDrone
-    - CMXenoDefender
-    - CMXenoSentinel
-    - CMXenoRunner
   - type: XenoHide
   - type: Fixtures
     fixtures:
@@ -67,7 +54,7 @@
   - type: IgnoreBlockPullingDead
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.7
-    baseSprintSpeed: 6.7
+    baseSprintSpeed: 7.142
   - type: RestrictEvolveOffWeeds
   - type: Speech
     speechSounds: XenonidLarva
@@ -92,15 +79,10 @@
       5: rmc-xeno-elder-larva
   - type: FixedIdentity
     name: cm-job-name-xeno-larva
-
-# For surgeries/failed incubations
-- type: entity
-  id: RMCXenoEmbryo
-  parent: BaseItem
-  name: alien embryo
-  description: All slimy and yucky.
-  components:
-    - type: Sprite
-      sprite: _RMC14/Mobs/Xenonids/Larva/larva.rsi
-      noRot: true
-      state: embryo
+  - type: XenoEvolution
+    canEvolveWithoutGranter: true
+    requiresGranter: false
+    max: 60
+    evolvesTo:
+    - MCXenoDrone
+    - MCXenoDefender

@@ -11,6 +11,7 @@
   name: Defender
   description: An alien with an armored crest.
   components:
+  - type: XenoHidden
   - type: GhostRole
     name: cm-job-name-xeno-defender
   - type: Sprite

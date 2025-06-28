@@ -1,0 +1,89 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  - MCXenoPlantingWeeds
+  - MCXenoCreateResinJelly
+  - MCXenoPickupOne
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoHivelord
+  name: Hivelord
+  description: A builder of really big hives.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/hivelord.rsi
+    offset: 0, 0.35
+  - type: GhostRole
+    name: mc-job-name-xeno-hivelord
+  - type: FixedIdentity
+    name: mc-job-name-xeno-hivelord
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      410: Critical
+      510: Dead
+  - type: XenoPlasma
+    plasma: 2400
+    maxPlasma: 2400
+    plasmaRegenOnWeeds: 80
+    plasmaTransferDelay: 0.5
+  - type: Xeno
+    tier: 2
+    role: MCXenoHivelord
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoAcidWeak
+    - ActionXenoPheromones
+    - ActionXenoDevolve
+    - ActionXenoChooseStructure
+    - ActionXenoSecreteStructure
+    - ActionXenoTransferPlasmaHivelord
+    - ActionXenoDigTunnel
+    - ActionXenoResinWalker
+    # MC
+    - MCActionXenoSelectWeeds
+    - MCActionXenoPlantWeeds
+    - MCActionXenoCreateResinJellyHivelord
+    hudOffset: -0.1,0.1
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoDefiler
+    - MCXenoGorger
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoDrone
+  - type: XenoAcid
+  - type: XenoPheromones
+    pheromonesMultiplier: 3
+    pheroSuffix: strong
+  - type: XenoResinWalker
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 20
+  - type: TunnelRenamer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.66
+    baseSprintSpeed: 3.225
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: hivelord
+  - type: XenoInhands
+    prefix: hivelord
+  - type: XenoConstruction
+    buildDelay: 1
+    canBuild:
+    - WallXenoResinThick
+    - WallXenoMembraneThick
+    - DoorXenoResinThick
+    - XenoStickyResin
+    - XenoFastResin
+    canUpgrade: true
+  - type: AcidTrap

@@ -1,0 +1,53 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoBoiler
+  name: Boiler
+  description: Gross!
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/boiler.rsi
+    offset: 0, 0.35
+  - type: GhostRole
+    name: mc-job-name-xeno-boiler
+  - type: FixedIdentity
+    name: mc-job-name-xeno-boiler
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      380: Critical
+      480: Dead
+  - type: XenoPlasma
+    plasma: 1000
+    maxPlasma: 1000
+    plasmaRegenOnWeeds: 50
+  - type: Xeno
+    tier: 3
+    role: MCXenoBoiler
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.15,0.25
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoSpitter
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 20
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.439
+    baseSprintSpeed: 3.225
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: warrior

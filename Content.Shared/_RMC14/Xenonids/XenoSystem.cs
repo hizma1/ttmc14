@@ -518,7 +518,7 @@ public sealed partial class XenoSystem : EntitySystem
             if (!_xenoPlasmaQuery.TryComp(uid, out var plasma))
                 continue;
 
-            var plasmaRestored = plasma.PlasmaRegenOnWeeds * plasma.MaxPlasma / 100;
+            var plasmaRestored = plasma.PlasmaRegenOnWeeds;
 
             if (resting)
             {

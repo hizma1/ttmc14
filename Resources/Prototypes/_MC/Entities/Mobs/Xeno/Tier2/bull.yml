@@ -1,0 +1,56 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoBull
+  name: Bull
+  description: A well defended hit-and-runner.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/bull.rsi
+    offset: 0, 0.35
+  - type: GhostRole
+    name: mc-job-name-xeno-bull
+  - type: FixedIdentity
+    name: mc-job-name-xeno-bull
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      450: Critical
+      550: Dead
+  - type: XenoPlasma
+    plasma: 340
+    maxPlasma: 340
+    plasmaRegenOnWeeds: 24
+  - type: Xeno
+    tier: 2
+    role: MCXenoBull
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.15,0.25
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoCrusher
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoRunner
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 24
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.125
+    baseSprintSpeed: 4.545
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: warrior

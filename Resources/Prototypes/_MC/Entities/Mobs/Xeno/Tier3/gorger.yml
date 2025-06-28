@@ -1,0 +1,50 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoGorger
+  name: Gorger
+  description: A frightening looking, bulky alien creature that drips with a familiar red fluid.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/gorger.rsi
+    offset: 0, 0.2
+  - type: FixedIdentity
+    name: mc-job-name-xeno-gorger
+  - type: GhostRole
+    name: mc-job-name-xeno-gorger
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      700: Critical
+      800: Dead
+  - type: Xeno
+    tier: 3
+    role: MCXenoGorger
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1,0.1
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoHivelord
+    - MCXenoWarrior
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 26
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.631
+    baseSprintSpeed: 3.571
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: hivelord

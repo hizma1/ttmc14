@@ -1,0 +1,9 @@
+- type: job
+  parent: MCJobXeno
+  id: MCXenoDrone
+  name: mc-job-name-xeno-drone
+  playTimeTracker: MCXenoDrone
+
+- type: playTimeTracker
+  id: MCXenoDrone
+  isXeno: true

@@ -1,0 +1,95 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoDefender
+  name: Defender
+  description: An alien with an armored crest.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/defender.rsi
+    offset: 0, 0.2
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      420: Critical
+      520: Dead
+  - type: Xeno
+    tier: 1
+    role: MCXenoDefender
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoTailSlam
+    - ActionXenoToggleCrest
+    - ActionXenoHeadbutt
+    - ActionXenoTailSweep
+    - ActionXenoFortify
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1, 0.2
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoLarva
+    canBeDevolvedByOther: false
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoWarrior
+  - type: XenoPlasma
+    plasma: 200
+    maxPlasma: 200
+    plasmaRegenOnWeeds: 20
+  - type: XenoCrest
+  - type: XenoHeadbutt
+    damage:
+      types:
+        Blunt: 30
+    crestedDamageReduction:
+      types:
+        Blunt: -10
+  - type: XenoAnimateMovement
+  - type: XenoFortify
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 22
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 185
+        mask:
+        - MobMask
+        - BarbedBarricade
+        layer:
+        - MobLayer
+      fix2:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 185
+        layer:
+        - BulletImpassable
+  - type: TacticalMapIcon
+    icon:
+      sprite: _RMC14/Interface/map_blips.rsi
+      state: defender
+  - type: FixedIdentity
+    name: mc-job-name-xeno-defender
+  - type: XenoTailSweep
+    damage:
+      types:
+        Slash: 30
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.857
+    baseSprintSpeed: 4

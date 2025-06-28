@@ -10,6 +10,7 @@
   name: Burrower
   description: A beefy alien with sharp claws.
   components:
+  - type: XenoHidden
   - type: GuideHelp
     guides:
     - RMCGuideRoleBurrower

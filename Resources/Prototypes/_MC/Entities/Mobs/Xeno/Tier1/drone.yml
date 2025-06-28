@@ -26,8 +26,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      380: Critical
-      480: Dead
+      300: Critical
+      400: Dead
   - type: MeleeWeapon
     damage:
       groups:
@@ -41,7 +41,7 @@
   - type: XenoLight
   - type: XenoDevolve
     devolvesTo:
-    - CMXenoLarva
+    - MCXenoLarva
     canBeDevolvedByOther: false
   - type: XenoPheromones
     pheromonesMultiplier: 2
@@ -92,6 +92,9 @@
     value: 0.1
   - type: FixedIdentity
     name: cm-job-name-xeno-drone
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.7
+    baseSprintSpeed: 5.26
 
 - type: entity
   parent: MCXenoDroneBase
@@ -99,6 +102,7 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/drone.rsi
+    offset: 0, 0.2
   - type: Xeno
     actionIds:
     # RMC
@@ -116,6 +120,13 @@
     - MCActionXenoCreateResinJelly
     - MCActionXenoAcidicSalve
   - type: XenoEvolution
+    evolvesTo:
+    - MCXenoHivelord
+    - MCXenoCarrier
+  - type: XenoPlasma
+    plasma: 1000
+    maxPlasma: 1000
+    plasmaRegenOnWeeds: 50
   - type: XenoAcid
   - type: AcidTrap
     trapLevel: 1
