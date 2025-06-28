@@ -5,7 +5,7 @@ on:
   pull_request_target:
     types: [opened,closed,synchronize]
     paths:
-      - '**CP14**'
+      - '**MC**'
 
 permissions:
   actions: write
