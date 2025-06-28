@@ -20,7 +20,7 @@
       50: Critical
       100: Dead
   - type: Xeno
-    role: CMXenoLarva
+    role: MCXenoLarva
     actionIds:
     - ActionXenoRest
     - ActionXenoWatch
