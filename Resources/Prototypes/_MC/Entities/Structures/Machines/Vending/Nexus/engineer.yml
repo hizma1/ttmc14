@@ -13,4 +13,92 @@
       map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
   - type: CMAutomatedVendor
     jobs: [ MCSquadEngineer ]
-    sections: []
+    sections:
+    - name: Essentials
+      choices:
+        MCEssentials: 1
+      entries:
+      - id: MCVendorBundleEssentialEngineer
+    - name: Materials
+      entries:
+      - id: CMSheetMetal10
+        name: Metal x10
+        points: 2
+        recommended: true
+      - id: CMSheetPlasteel10
+        name: Plasteel x10
+        points: 4
+        recommended: true
+      - id: CMSandbagEmpty25
+        name: sandbags x25
+        points: 5
+        recommended: true
+      # TL-182 deployable shield
+      # Deployable floodlight
+      # Pack of Razorburn grenades
+      # Razorburn canister
+      # Razorburn grenade
+    - name: Tools
+      entries:
+      # Plasma cutter
+      # High-capacity industrial blowtorch
+      # Hand-held cell charger
+      # Large recharger powercell
+      # Recharger powercell
+      - id: RMCPowerCellHigh
+        points: 1
+      - id: RMCWeldingGoggles
+        points: 2
+      - id: RMCVisorWelding
+        points: 2
+    - name: Explosives
+      entries:
+      # EX-62 Genghis incendiary charge
+      # Detonation pack
+      - id: RMCExplosivePlastic
+        points: 2
+      # Large M20 mine box
+      # M20 mine box
+      # M21 APRDS "Minelayer"
+    - name: Other
+      entries:
+      # ST-580 point defense sentry kit
+      - id: RMCTesla
+        points: 30
+      # Iguana Unmanned Vehicle
+      # Skink Unmanned Vehicle
+      # Build-A-Sentry Attachment
+      # Flamethrower tank
+      # Supply beacon
+    - name: Mining
+      entries: []
+    - name: Artillery
+      entries:
+      - id: RMCRangefinder
+        points: 10
+      # AI remote targeting module
+      - id: RMCMortarShellHE
+        points: 2
+      - id: RMCMortarShellIncendiary
+        points: 2
+      # Tanglefoot Mortar shell
+      # Smoke Mortar shell
+      - id: RMCMortarShellFlare
+        points: 1
+
+# Bundles
+- type: entity
+  id: MCVendorBundleEssentialEngineer
+  name: Essential Engineer Set
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Head/Armor/Modular/MarkTwo/Eod/drab.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - RMCExplosivePlastic
+    - RMCPowerCellHigh
+    - CMAPCElectronics
+    - CMLightReplacer
+    # Razorburn grenade
