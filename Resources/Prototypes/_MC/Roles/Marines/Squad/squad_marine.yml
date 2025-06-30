@@ -9,6 +9,7 @@
   icon: MCMarine
   joinNotifyCrew: false
   supervisors: mc-job-supervisors-sl
+  accessGroups: [ MCSquadMarine ]
   ranks:
     MCPrivate: []
     MCPrivateFirstClass:

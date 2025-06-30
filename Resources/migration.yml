@@ -8,6 +8,9 @@
 # WallSolid: Window
 # Table: null
 
+# 30-06-2025
+MCMachineVendingAutomatedClosetRack: MCMachineVendingAutomatedClosetRackMarine
+
 # 2025-06-13
 MCImproperQuickEquipVendor: MCMachineVendingQuickEquipVendor
 MCAutomatedLoadoutVendor: MCMachineVendingAutomatedLoadoutVendor

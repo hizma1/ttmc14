@@ -9,6 +9,7 @@
   icon: MCSquadLeader
   joinNotifyCrew: false
   supervisors: mc-job-supervisors-co
+  accessGroups: [ MCSquadLeader ]
   ranks:
     MCSergeantFirstClass: []
     MCGunnerySergeant:

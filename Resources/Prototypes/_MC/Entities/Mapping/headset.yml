@@ -1,0 +1,47 @@
+﻿- type: entity
+  id: MCVendorHeadsetSquad
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: MCVendorMapToSquad
+    map:
+      SquadAlpha: MCHeadsetAlpha
+      SquadBravo: MCHeadsetBravo
+      SquadCharlie: MCHeadsetCharlie
+      SquadDelta: MCHeadsetDelta
+
+- type: entity
+  id: MCVendorHeadsetSquadLeader
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: MCVendorMapToSquad
+    map:
+      SquadAlpha: MCHeadsetAlphaLeader
+      SquadBravo: MCHeadsetBravoLeader
+      SquadCharlie: MCHeadsetCharlieLeader
+      SquadDelta: MCHeadsetDeltaLeader
+
+- type: entity
+  id: MCVendorHeadsetSquadEngineer
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: MCVendorMapToSquad
+    map:
+      SquadAlpha: MCHeadsetAlphaEngineer
+      SquadBravo: MCHeadsetBravoEngineer
+      SquadCharlie: MCHeadsetCharlieEngineer
+      SquadDelta: MCHeadsetDeltaEngineer
+
+- type: entity
+  id: MCVendorHeadsetSquadMedic
+  categories:
+  - HideSpawnMenu
+  components:
+  - type: MCVendorMapToSquad
+    map:
+      SquadAlpha: MCHeadsetAlphaMedic
+      SquadBravo: MCHeadsetBravoMedic
+      SquadCharlie: MCHeadsetCharlieMedic
+      SquadDelta: MCHeadsetDeltaMedic
