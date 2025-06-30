@@ -1,6 +1,6 @@
 - type: entity
-  parent: MCMachineVendingAutomatedClosetRack
-  id: MCMachineVendingAutomatedClosetRackSmartgunner
+  parent: MCMachineVendingGhmme
+  id: MCMachineVendingGhmmeSmartgunner
   name: GHMME Automated Smartgunner Closet
   description: An automated closet hooked up to a colossal storage unit of standard-issue uniform and armor.
   components:

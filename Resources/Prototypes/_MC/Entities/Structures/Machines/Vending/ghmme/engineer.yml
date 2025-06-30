@@ -1,6 +1,6 @@
 - type: entity
-  parent: MCMachineVendingAutomatedClosetRack
-  id: MCMachineVendingAutomatedClosetRackEngineer
+  parent: MCMachineVendingGhmme
+  id: MCMachineVendingGhmmeEngineer
   name: GHMME Automated Engineer Closet
   description: An automated closet hooked up to a colossal storage unit of standard-issue uniform and armor.
   components:

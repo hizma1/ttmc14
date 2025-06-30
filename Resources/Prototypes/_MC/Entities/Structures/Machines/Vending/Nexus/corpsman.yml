@@ -1,0 +1,16 @@
+- type: entity
+  parent: ColMarTechBase
+  id: MCMachineVendingNexusMedical
+  name: NEXUS automated medical equipment rack
+  description: An automated equipment rack hooked up to a colossal storage of medical goods.
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Machines/vending.rsi
+    layers:
+    - state: medic-off
+      map: [ "enum.VendingMachineVisualLayers.Base" ]
+    - state: medic-deny
+      map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
+  - type: CMAutomatedVendor
+    jobs: [ MCSquadCorpsman ]
+    sections: []

@@ -1,6 +1,6 @@
 - type: entity
-  parent: MCMachineVendingAutomatedClosetRack
-  id: MCMachineVendingAutomatedClosetRackLeader
+  parent: MCMachineVendingGhmme
+  id: MCMachineVendingGhmmeLeader
   name: GHMME Automated Leader Closet
   description: An automated closet hooked up to a colossal storage unit of standard-issue uniform and armor.
   components:
