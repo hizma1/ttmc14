@@ -1,0 +1,12 @@
+- type: department
+  parent: MCDepartment
+  id: MCMedical
+  name: department-Medical
+  description: mc-department-Medical-description
+  color: "#008160"
+  roles:
+  - MCCMO
+  - MCDoctor
+  - MCResearcher
+  departmentRadio: MarineMedical
+  headOfDepartment: MCCMO

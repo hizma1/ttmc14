@@ -1,0 +1,7 @@
+
+- type: accessGroup
+  id: MCPilotOfficer
+  tags:
+  - MCAccessBridge
+  - MCAccessDropship
+  - MCAccessPilot

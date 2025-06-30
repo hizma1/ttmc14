@@ -7,14 +7,14 @@
 
 - type: jobIcon
   parent: CMJobIconBase
-  id: MCFieldCommander
+  id: MCFC
   icon:
     sprite: _MC/Interface/job_icons.rsi
     state: fieldcommander
 
 - type: jobIcon
   parent: CMJobIconBase
-  id: MCStaffOfficer
+  id: MCSO
   icon:
     sprite: _MC/Interface/job_icons.rsi
     state: staffofficer

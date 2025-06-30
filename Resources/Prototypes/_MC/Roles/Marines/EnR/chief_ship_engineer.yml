@@ -47,7 +47,7 @@
 - type: startingGear
   id: MCCSE
   equipment:
-    id: MCDogtagCSE
+    id: MCIdCardCSE
 
 - type: entity
   parent: MCSpawnPointJob

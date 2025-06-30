@@ -1,0 +1,23 @@
+- type: entity
+  parent: MCIdCard
+  id: MCIdCardCMO
+  name: Chief Medical Officer's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCCSE
+
+- type: entity
+  parent: MCIdCard
+  id: MCIdCardDoctor
+  name: Medical Doctor's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCRO
+
+- type: entity
+  parent: MCIdCard
+  id: MCIdCardResearcher
+  name: Researcher's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCST

@@ -1,0 +1,72 @@
+- type: job
+  parent: MCJobSquad
+  id: MCFC
+  name: mc-job-name-fc
+  description: mc-job-description-fc
+  playTimeTracker: MCFC
+  startingGear: MCFC
+  dummyStartingGear: MCFC
+  icon: MCFC
+  joinNotifyCrew: false
+  supervisors: mc-job-supervisors-sl
+  accessGroups: [ MCFC ]
+  ranks:
+    MCLieutenant: []
+    MCMajor:
+    - !type:RoleTimeRequirement
+      role: MCFC
+      time: 1500 # 25 hours
+    MCLieutenantColonel:
+    - !type:RoleTimeRequirement
+      role: MCFC
+      time: 6000 # 100 hours
+    MCColonel:
+    - !type:RoleTimeRequirement
+      role: MCFC
+      time: 18000 # 300 hours
+    MCGeneral:
+    - !type:RoleTimeRequirement
+      role: MCFC
+      time: 60000 # 1000 hours
+  roleWeight: 1
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      skills:
+        RMCSkillMedical: 2
+        RMCSkillSurgery: 1
+        RMCSkillEngineer: 3
+        RMCSkillConstruction: 2
+        RMCSkillPolice: 2
+        RMCSkillPowerLoader: 2
+        RMCSkillLeadership: 4
+        RMCSkillCQC: 1
+        RMCSkillSmartGun: -4
+        # RMCSkillMelee: 0
+        RMCSkillFirearms: 1
+    - type: JobPrefix
+      prefix: mc-job-prefix-fc
+    - type: TacticalMapIcon
+      icon:
+        sprite: _MC/Interface/job_icons.rsi
+        state: fieldcommander
+
+- type: playTimeTracker
+  id: MCFC
+  isHumanoid: true
+
+- type: startingGear
+  id: MCFC
+  equipment:
+    id: MCDogtagFC
+
+- type: entity
+  parent: MCSpawnPointJob
+  id: MCSpawnPointFC
+  name: field commander spawn point
+  components:
+  - type: SpawnPoint
+    job_id: MCFC
+  - type: Sprite
+    state: medic_spawn

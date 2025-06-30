@@ -38,7 +38,7 @@
       skills:
         RMCSkillEngineer: 3
         RMCSkillConstruction: 3
-        RMCSkillVehicles: 1
+        RMCSkillPowerLoader: 1
         RMCSkillLeadership: 1
         RMCSkillSmartGun: -4
         RMCSkillFirearms: 1
