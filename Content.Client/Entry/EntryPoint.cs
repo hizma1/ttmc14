@@ -1,3 +1,4 @@
+using Content.Client._MC;
 using Content.Client._RMC14.Explosion;
 using Content.Client._RMC14.Xenonids.Screech;
 using Content.Client.Administration.Managers;
@@ -96,6 +97,7 @@ namespace Content.Client.Entry
             _componentFactory.RegisterClass<SharedGravityGeneratorComponent>();
             _componentFactory.RegisterClass<SharedAmeControllerComponent>();
             // Do not add to the above, they are legacy
+            _componentFactory.RegisterIgnore(MCIgnoredComponents.Value); // marine-corps-changes
 
             _prototypeManager.RegisterIgnore("utilityQuery");
             _prototypeManager.RegisterIgnore("utilityCurvePreset");
