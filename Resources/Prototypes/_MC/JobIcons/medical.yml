@@ -7,7 +7,7 @@
 
 - type: jobIcon
   parent: CMJobIconBase
-  id: MCMedicalDoctor
+  id: MCDoctor
   icon:
     sprite: _MC/Interface/job_icons.rsi
     state: medical

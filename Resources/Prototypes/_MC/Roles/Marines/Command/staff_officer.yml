@@ -1,0 +1,70 @@
+- type: job
+  parent: MCJobSquad
+  id: MCSO
+  name: mc-job-name-so
+  description: mc-job-description-so
+  playTimeTracker: MCSO
+  startingGear: MCSO
+  dummyStartingGear: MCSO
+  icon: MCSO
+  joinNotifyCrew: false
+  supervisors: mc-job-supervisors-sl
+  accessGroups: [ MCSO ]
+  ranks:
+    MCEnsign: []
+    MCLieutenantJuniorGrade:
+    - !type:RoleTimeRequirement
+      role: MCSO
+      time: 600 # 10 hours
+    MCLieutenant:
+    - !type:RoleTimeRequirement
+      role: MCSO
+      time: 1500 # 25 hours
+    MCLieutenantCommander:
+    - !type:RoleTimeRequirement
+      role: MCSO
+      time: 6000 # 100 hours
+    MCCommander:
+    - !type:RoleTimeRequirement
+      role: MCSO
+      time: 18000 # 300 hours
+  roleWeight: 1
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      skills:
+        RMCSkillMedical: 2
+        RMCSkillSurgery: 1
+        RMCSkillEngineer: 3
+        RMCSkillConstruction: 2
+        RMCSkillPolice: 2
+        RMCSkillPowerLoader: 2
+        RMCSkillLeadership: 3
+        RMCSkillSmartGun: -4
+        RMCSkillFirearms: 1
+    - type: JobPrefix
+      prefix: mc-job-prefix-so
+    - type: TacticalMapIcon
+      icon:
+        sprite: _MC/Interface/job_icons.rsi
+        state: staffofficer
+
+- type: playTimeTracker
+  id: MCSO
+  isHumanoid: true
+
+- type: startingGear
+  id: MCSO
+  equipment:
+    id: MCIdCardSO
+
+- type: entity
+  parent: MCSpawnPointJob
+  id: MCSpawnPointSO
+  name: staff officer spawn point
+  components:
+  - type: SpawnPoint
+    job_id: MCSO
+  - type: Sprite
+    state: medic_spawn

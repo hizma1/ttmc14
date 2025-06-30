@@ -1,0 +1,13 @@
+- type: department
+  parent: MCDepartment
+  id: MCCommand
+  name: department-Command
+  description: mc-department-Command-description
+  color: "#334E6D"
+  roles:
+  - MCCaptain
+  - MCFC
+  - MCSO
+  - MCPilotOfficer
+  departmentRadio: MarineCommand
+  headOfDepartment: MCCaptain

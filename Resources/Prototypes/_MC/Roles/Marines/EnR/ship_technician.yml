@@ -51,7 +51,7 @@
 - type: startingGear
   id: MCST
   equipment:
-    id: MCDogtagST
+    id: MCIdCardST
 
 - type: entity
   parent: MCSpawnPointJob

@@ -1,0 +1,67 @@
+- type: job
+  parent: MCJobSquad
+  id: MCPilotOfficer
+  name: mc-job-name-pilot-officer
+  description: mc-job-description-pilot-officer
+  playTimeTracker: MCPilotOfficer
+  startingGear: MCPilotOfficer
+  dummyStartingGear: MCPilotOfficer
+  icon: MCPilotOfficer
+  joinNotifyCrew: false
+  supervisors: mc-job-supervisors-sl
+  accessGroups: [ MCPilotOfficer ]
+  ranks:
+    MCEnsign: []
+    MCLieutenantJuniorGrade:
+    - !type:RoleTimeRequirement
+      role: MCPilotOfficer
+      time: 600 # 10 hours
+    MCLieutenant:
+    - !type:RoleTimeRequirement
+      role: MCPilotOfficer
+      time: 1500 # 25 hours
+    MCLieutenantCommander:
+    - !type:RoleTimeRequirement
+      role: MCPilotOfficer
+      time: 6000 # 100 hours
+    MCCommander:
+    - !type:RoleTimeRequirement
+      role: MCPilotOfficer
+      time: 18000 # 300 hours
+  roleWeight: 1
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      skills:
+        RMCSkillPilot: 1
+        RMCSkillPolice: 2
+        RMCSkillPowerLoader: 3
+        RMCSkillLeadership: 2
+        RMCSkillCQC: 1
+        RMCSkillSmartGun: -4
+    - type: JobPrefix
+      prefix: mc-job-prefix-pilot-officer
+    - type: TacticalMapIcon
+      icon:
+        sprite: _MC/Interface/job_icons.rsi
+        state: pilot
+
+- type: playTimeTracker
+  id: MCPilotOfficer
+  isHumanoid: true
+
+- type: startingGear
+  id: MCPilotOfficer
+  equipment:
+    id: MCIdCardPilotOfficer
+
+- type: entity
+  parent: MCSpawnPointJob
+  id: MCSpawnPointPilotOfficer
+  name: pilot officer spawn point
+  components:
+  - type: SpawnPoint
+    job_id: MCPilotOfficer
+  - type: Sprite
+    state: medic_spawn

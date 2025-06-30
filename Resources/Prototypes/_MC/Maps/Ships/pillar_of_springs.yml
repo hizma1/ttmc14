@@ -14,13 +14,21 @@
         mapNameTemplate: TGV Pillar of Spring
       - type: StationJobs
         availableJobs:
+          # Command
+          MCCaptain: [ 1, 1 ]
+          MCFC: [ 1, 1 ]
+          MCSO: [ 4, 4 ]
+          # Medical
+          MCCMO: [ 1, 1 ]
+          MCDoctor: [ 6, 6 ]
+          MCResearcher: [ 2, 2 ]
           # EnR
-          MCCSE: [ -1, -1 ]
-          MCRO: [ -1, -1 ]
-          MCST: [ -1, -1 ]
+          MCCSE: [ 1, 1 ]
+          MCRO: [ 1, 1 ]
+          MCST: [ 1, 1 ]
           # Squad
-          MCSquadLeader: [ -1, -1 ]
-          MCSquadSmartgunner: [ -1, -1 ]
-          MCSquadEngineer: [ -1, -1 ]
-          MCSquadCorpsman: [ -1, -1 ]
+          MCSquadLeader: [ 4, 4 ]
+          MCSquadSmartgunner: [ 4, 4 ]
+          MCSquadEngineer: [ 8, 8 ]
+          MCSquadCorpsman: [ 8, 8 ]
           MCSquadMarine: [ -1, -1 ]

@@ -51,7 +51,7 @@
 - type: startingGear
   id: MCRO
   equipment:
-    id: MCDogtagRO
+    id: MCIdCardRO
 
 - type: entity
   parent: MCSpawnPointJob
