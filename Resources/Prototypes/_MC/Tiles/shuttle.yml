@@ -1,0 +1,228 @@
+﻿- type: tile
+  parent: CMTileBase
+  id: MCShuttle
+  name: tiles-cm-floor
+  abstract: true
+  canPlaceTunnel: false
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark1
+  name: rasputin 1
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin1.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark2
+  name: rasputin 2
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin2.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark3
+  name: rasputin 3
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin3.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark4
+  name: rasputin 4
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin4.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark5
+  name: rasputin 5
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin5.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark6
+  name: rasputin 6
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin6.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark7
+  name: rasputin 7
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin7.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputinDark8
+  name: rasputin 8
+  sprite: /Textures/_MC/Tiles/Shuttle/dark/rasputin8.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin0
+  name: rasputin 0
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin0.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin1
+  name: rasputin 1
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin1.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin2
+  name: rasputin 2
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin2.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin3
+  name: rasputin 3
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin3.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin4
+  name: rasputin 4
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin4.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin5
+  name: rasputin 5
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin5.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin6
+  name: rasputin 6
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin6.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin7
+  name: rasputin 7
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin7.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin8
+  name: rasputin 8
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin8.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin9
+  name: rasputin 9
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin9.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin10
+  name: rasputin 10
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin10.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin11
+  name: rasputin 11
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin11.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin12
+  name: rasputin 12
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin12.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin13
+  name: rasputin 13
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin13.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin14
+  name: rasputin 14
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin14.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin15
+  name: rasputin 15
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin15.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin16
+  name: rasputin 16
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin16.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin17
+  name: rasputin 17
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin17.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin18
+  name: rasputin 18
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin18.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin19
+  name: rasputin 19
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin19.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin20
+  name: rasputin 20
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin20.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin21
+  name: rasputin 21
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin21.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin22
+  name: rasputin 22
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin22.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin23
+  name: rasputin 23
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin23.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin24
+  name: rasputin 24
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin24.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin25
+  name: rasputin 25
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin25.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin26
+  name: rasputin 26
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin26.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin27
+  name: rasputin 27
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin27.png
+
+- type: tile
+  parent: MCShuttle
+  id: MCShuttleRasputin28
+  name: rasputin 28
+  sprite: /Textures/_MC/Tiles/Shuttle/rasputin28.png

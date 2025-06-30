@@ -1,0 +1,21 @@
+- type: entity
+  parent: MarkerBase
+  id: MCSpawnGridAlamo
+  name: alamo spawner
+  components:
+  - type: MCGridLoader
+    map: /Maps/_MC/alamo.yml
+  - type: Sprite
+    sprite: Markers/cross.rsi
+    state: pink
+
+- type: entity
+  parent: MarkerBase
+  id: MCSpawnGridDebugAlamo
+  name: debug alamo spawner
+  components:
+  - type: MCGridLoader
+    map: /Maps/_RMC14/Shuttles/debug_alamo.yml
+  - type: Sprite
+    sprite: Markers/cross.rsi
+    state: pink
