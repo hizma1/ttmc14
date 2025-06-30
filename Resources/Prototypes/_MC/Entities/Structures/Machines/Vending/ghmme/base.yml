@@ -48,7 +48,6 @@
     - JumpsuitMarine
     - CMBootsBlackFilled
 
-
 - type: entity
   id: MCVendorBundleStandardKitLeader
   name: Standard Kit

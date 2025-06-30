@@ -3,6 +3,8 @@
   id: MCHeadsetMarine
   components:
   - type: GrantSquadLeaderTracker
+  - type: Sprite
+    sprite: _MC/Clothing/radio.rsi
 
 # Alpha
 - type: entity
@@ -12,7 +14,6 @@
   description: This is used by Alpha squad members.
   components:
   - type: Sprite
-    sprite: _MC/Clothing/radio.rsi
     state: marine_alpha
   - type: ContainerFill
     containers:

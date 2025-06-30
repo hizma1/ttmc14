@@ -3,7 +3,7 @@
   categories:
   - HideSpawnMenu
   components:
-  - type: MCVendorMapToSquad
+  - type: CMVendorMapToSquad
     map:
       SquadAlpha: MCHeadsetAlpha
       SquadBravo: MCHeadsetBravo
@@ -15,7 +15,7 @@
   categories:
   - HideSpawnMenu
   components:
-  - type: MCVendorMapToSquad
+  - type: CMVendorMapToSquad
     map:
       SquadAlpha: MCHeadsetAlphaLeader
       SquadBravo: MCHeadsetBravoLeader
@@ -27,7 +27,7 @@
   categories:
   - HideSpawnMenu
   components:
-  - type: MCVendorMapToSquad
+  - type: CMVendorMapToSquad
     map:
       SquadAlpha: MCHeadsetAlphaEngineer
       SquadBravo: MCHeadsetBravoEngineer
@@ -39,7 +39,7 @@
   categories:
   - HideSpawnMenu
   components:
-  - type: MCVendorMapToSquad
+  - type: CMVendorMapToSquad
     map:
       SquadAlpha: MCHeadsetAlphaMedic
       SquadBravo: MCHeadsetBravoMedic
