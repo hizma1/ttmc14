@@ -85,8 +85,8 @@
   - type: Sprite
     sprite: _RMC14/Structures/Machines/computer.rsi
     state: overwatch
-    overrideDir: West
-    enableOverrideDir: true
+    overrideDir: South
+    enableOverrideDir: false
   - type: InteractionOutline
   - type: ActivatableUI
     key: enum.OverwatchConsoleUI.Key

@@ -9,6 +9,7 @@
   icon: MCCorpsman
   joinNotifyCrew: false
   supervisors: mc-job-supervisors-sl
+  accessGroups: [ MCSquadCorpsman ]
   ranks:
     MCLanceCorporal: []
     MCCorporal:

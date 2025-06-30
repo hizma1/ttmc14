@@ -9,6 +9,7 @@
   icon: MCEngineer
   joinNotifyCrew: false
   supervisors: mc-job-supervisors-sl
+  accessGroups: [ MCSquadEngineering ]
   ranks:
     MCLanceCorporal: []
     MCCorporal:
