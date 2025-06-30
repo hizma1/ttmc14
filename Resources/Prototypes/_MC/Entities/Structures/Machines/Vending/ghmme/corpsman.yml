@@ -1,6 +1,6 @@
 - type: entity
-  parent: MCMachineVendingAutomatedClosetRack
-  id: MCMachineVendingAutomatedClosetRackCorpsman
+  parent: MCMachineVendingGhmme
+  id: MCMachineVendingGhmmeCorpsman
   name: GHMME Automated Corpsman Closet
   description: An automated closet hooked up to a colossal storage unit of standard-issue uniform and armor.
   components:
