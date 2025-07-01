@@ -58,6 +58,7 @@
   id: MCSquadEngineer
   equipment:
     id: MCDogtagSquadEngineer
+    back: MCSatchelMarineStandard
 
 - type: entity
   parent: MCSpawnPointJob
