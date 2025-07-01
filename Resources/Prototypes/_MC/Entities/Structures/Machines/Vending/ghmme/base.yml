@@ -14,29 +14,103 @@
       map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
 
 # Bundles
+
+# Standard Kit
 - type: entity
   id: MCVendorBundleStandardKit
   name: Standard Kit
-  description: Contains a marine jumpsuit, a M10 helmet, a headset, combat gloves and combat boots.
-  categories:
-  - HideSpawnMenu
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Clothing/headsets.rsi
-    state: generic_headset
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
   - type: CMVendorBundle
     bundle:
     - MCVendorHeadsetSquad
     - MCClothingHandsMarineCombat
-    - JumpsuitMarine
-    - CMBootsBlackFilled
+    - MCJumpsuitMarineSquad
+    - MCBootsBlackFilled
 
 - type: entity
   id: MCVendorBundleStandardKitSmartgunner
   name: Standard Kit
-  description: Contains a marine jumpsuit, a M10 helmet, a headset, combat gloves and combat boots.
-  categories:
-  - HideSpawnMenu
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - MCVendorHeadsetSquad
+    - MCClothingHandsMarineCombat
+    - MCJumpsuitMarineSquad
+    - MCBootsBlackFilled
+
+- type: entity
+  id: MCVendorBundleStandardKitLeader
+  name: Standard Kit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - MCVendorHeadsetSquadLeader
+    - MCClothingHandsMarineCombat
+    - MCJumpsuitMarineSquad
+    - MCBootsBlackFilled
+
+- type: entity
+  id: MCVendorBundleStandardKitEngineer
+  name: Standard Kit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - MCVendorHeadsetSquadEngineer
+    - MCClothingHandsMarineCombat
+    - MCJumpsuitMarineSquadEngineer
+    - MCBootsBlackFilled
+
+- type: entity
+  id: MCVendorBundleStandardKitCorpsman
+  name: Standard Kit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - MCVendorHeadsetSquadMedic
+    - MCClothingHandsMarineCombat
+    - MCJumpsuitMarineSquadMedic
+    - MCBootsBlackFilled
+
+# Essential Jaeger Kit
+- type: entity
+  id: MCVendorBundleEssentialJaegerKit
+  name: Essential Jaeger Kit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - MCVendorHeadsetSquad
+    - MCClothingHandsMarineCombat
+    - MCJumpsuitMarineJaeger
+    - MCBootsBlackFilled
+
+- type: entity
+  id: MCVendorBundleEssentialJaegerKitSmartgunner
+  name: Essential Jaeger Kit
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Clothing/headsets.rsi
@@ -45,59 +119,53 @@
     bundle:
     - MCVendorHeadsetSquad
     - MCClothingHandsMarineCombat
-    - JumpsuitMarine
-    - CMBootsBlackFilled
+    - MCJumpsuitMarineJaeger
+    - MCBootsBlackFilled
 
 - type: entity
-  id: MCVendorBundleStandardKitLeader
-  name: Standard Kit
-  description: Contains a marine jumpsuit, a M10 helmet, a headset, combat gloves and combat boots.
-  categories:
-  - HideSpawnMenu
+  id: MCVendorBundleEssentialJaegerKitLeader
+  name: Essential Jaeger Kit
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Clothing/headsets.rsi
-    state: generic_headset
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
   - type: CMVendorBundle
     bundle:
     - MCVendorHeadsetSquadLeader
     - MCClothingHandsMarineCombat
-    - JumpsuitMarine
-    - CMBootsBlackFilled
+    - MCJumpsuitMarineJaeger
+    - MCBootsBlackFilled
 
 - type: entity
-  id: MCVendorBundleStandardKitEngineer
-  name: Standard Kit
-  description: Contains a marine jumpsuit, a M10 helmet, a headset, combat gloves and combat boots.
-  categories:
-  - HideSpawnMenu
+  id: MCVendorBundleEssentialJaegerKitEngineer
+  name: Essential Jaeger Kit
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Clothing/headsets.rsi
-    state: generic_headset
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
   - type: CMVendorBundle
     bundle:
     - MCVendorHeadsetSquadEngineer
     - MCClothingHandsMarineCombat
-    - JumpsuitMarine
-    - CMBootsBlackFilled
+    - MCJumpsuitMarineJaeger
+    - MCBootsBlackFilled
 
 - type: entity
-  id: MCVendorBundleStandardKitCorpsman
-  name: Standard Kit
-  description: Contains a marine jumpsuit, a M10 helmet, a headset, combat gloves and combat boots.
-  categories:
-  - HideSpawnMenu
+  id: MCVendorBundleEssentialJaegerKitCorpsman
+  name: Essential Jaeger Kit
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Clothing/headsets.rsi
-    state: generic_headset
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
   - type: CMVendorBundle
     bundle:
     - MCVendorHeadsetSquadMedic
     - MCClothingHandsMarineCombat
-    - JumpsuitMarine
-    - CMBootsBlackFilled
+    - MCJumpsuitMarineJaeger
+    - MCBootsBlackFilled
 
 # Bundles armor
 - type: entity

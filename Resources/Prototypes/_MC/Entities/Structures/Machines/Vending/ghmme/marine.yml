@@ -12,6 +12,7 @@
         MCStandardEquipment: 1
       entries:
       - id: MCVendorBundleStandardKit
+      - id: MCVendorBundleEssentialJaegerKit
     - name: Hats
       choices:
         MCHats: 1

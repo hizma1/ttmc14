@@ -57,6 +57,7 @@
   id: MCSquadCorpsman
   equipment:
     id: MCDogtagSquadCorpsman
+    back: MCSatchelMarineStandard
 
 - type: entity
   parent: MCSpawnPointJob
