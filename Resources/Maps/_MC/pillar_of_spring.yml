@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.2
   forkId: ""
   forkVersion: ""
-  time: 07/01/2025 23:23:50
-  entityCount: 4571
+  time: 07/01/2025 23:34:27
+  entityCount: 4591
 maps:
 - 1
 grids:
@@ -32176,7 +32176,7 @@ entities:
       pos: -4.5,24.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -14963.548
+      secondsUntilStateChange: -15008.327
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -35705,6 +35705,108 @@ entities:
     components:
     - type: Transform
       pos: -9.5,22.5
+      parent: 1
+- proto: SpawnPointLatejoin
+  entities:
+  - uid: 2083
+    components:
+    - type: Transform
+      pos: 33.5,-20.5
+      parent: 1
+  - uid: 2084
+    components:
+    - type: Transform
+      pos: 33.5,-21.5
+      parent: 1
+  - uid: 2088
+    components:
+    - type: Transform
+      pos: 34.5,-20.5
+      parent: 1
+  - uid: 2089
+    components:
+    - type: Transform
+      pos: 34.5,-21.5
+      parent: 1
+  - uid: 2090
+    components:
+    - type: Transform
+      pos: 35.5,-20.5
+      parent: 1
+  - uid: 2091
+    components:
+    - type: Transform
+      pos: 35.5,-21.5
+      parent: 1
+  - uid: 2092
+    components:
+    - type: Transform
+      pos: 36.5,-20.5
+      parent: 1
+  - uid: 2093
+    components:
+    - type: Transform
+      pos: 36.5,-21.5
+      parent: 1
+  - uid: 2094
+    components:
+    - type: Transform
+      pos: 37.5,-20.5
+      parent: 1
+  - uid: 2095
+    components:
+    - type: Transform
+      pos: 37.5,-21.5
+      parent: 1
+  - uid: 2096
+    components:
+    - type: Transform
+      pos: 33.5,-15.5
+      parent: 1
+  - uid: 2097
+    components:
+    - type: Transform
+      pos: 33.5,-16.5
+      parent: 1
+  - uid: 2098
+    components:
+    - type: Transform
+      pos: 34.5,-15.5
+      parent: 1
+  - uid: 2099
+    components:
+    - type: Transform
+      pos: 34.5,-16.5
+      parent: 1
+  - uid: 2100
+    components:
+    - type: Transform
+      pos: 35.5,-15.5
+      parent: 1
+  - uid: 2101
+    components:
+    - type: Transform
+      pos: 35.5,-16.5
+      parent: 1
+  - uid: 2102
+    components:
+    - type: Transform
+      pos: 36.5,-15.5
+      parent: 1
+  - uid: 2103
+    components:
+    - type: Transform
+      pos: 36.5,-16.5
+      parent: 1
+  - uid: 2104
+    components:
+    - type: Transform
+      pos: 37.5,-15.5
+      parent: 1
+  - uid: 2105
+    components:
+    - type: Transform
+      pos: 37.5,-16.5
       parent: 1
 - proto: StairDark
   entities:
