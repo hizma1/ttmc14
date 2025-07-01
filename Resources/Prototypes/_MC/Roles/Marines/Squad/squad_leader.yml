@@ -66,3 +66,47 @@
     job_id: MCSquadLeader
   - type: Sprite
     state: leader_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadLeader
+  id: MCSpawnPointSquadLeaderAlpha
+  suffix: Alpha
+  components:
+  - type: SquadSpawner
+    squad: SquadAlpha
+    role: MCSquadLeader
+  - type: Sprite
+    state: leader_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadLeader
+  id: MCSpawnPointSquadLeaderBravo
+  suffix: Bravo
+  components:
+  - type: SquadSpawner
+    squad: SquadBravo
+    role: MCSquadLeader
+  - type: Sprite
+    state: leader_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadLeader
+  id: MCSpawnPointSquadLeaderCharlie
+  suffix: Charlie
+  components:
+  - type: SquadSpawner
+    squad: SquadCharlie
+    role: MCSquadLeader
+  - type: Sprite
+    state: leader_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadLeader
+  id: MCSpawnPointSquadLeaderDelta
+  suffix: Delta
+  components:
+  - type: SquadSpawner
+    squad: SquadDelta
+    role: MCSquadLeader
+  - type: Sprite
+    state: leader_spawn

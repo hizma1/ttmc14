@@ -63,3 +63,47 @@
     job_id: MCSquadMarine
   - type: Sprite
     state: marine_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadMarine
+  id: MCSpawnPointSquadMarineAlpha
+  suffix: Alpha
+  components:
+  - type: SquadSpawner
+    squad: SquadAlpha
+    role: MCSquadMarine
+  - type: Sprite
+    state: marine_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadMarine
+  id: MCSpawnPointSquadMarineBravo
+  suffix: Bravo
+  components:
+  - type: SquadSpawner
+    squad: SquadBravo
+    role: MCSquadMarine
+  - type: Sprite
+    state: marine_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadMarine
+  id: MCSpawnPointSquadMarineCharlie
+  suffix: Charlie
+  components:
+  - type: SquadSpawner
+    squad: SquadCharlie
+    role: MCSquadMarine
+  - type: Sprite
+    state: marine_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadMarine
+  id: MCSpawnPointSquadMarineDelta
+  suffix: Delta
+  components:
+  - type: SquadSpawner
+    squad: SquadDelta
+    role: MCSquadMarine
+  - type: Sprite
+    state: marine_spawn

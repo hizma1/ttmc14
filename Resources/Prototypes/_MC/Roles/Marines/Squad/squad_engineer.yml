@@ -69,3 +69,47 @@
     job_id: MCSquadEngineer
   - type: Sprite
     state: engi_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadEngineer
+  id: MCSpawnPointSquadEngineerAlpha
+  suffix: Alpha
+  components:
+  - type: SquadSpawner
+    squad: SquadAlpha
+    role: MCSquadEngineer
+  - type: Sprite
+    state: engi_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadEngineer
+  id: MCSpawnPointSquadEngineerBravo
+  suffix: Bravo
+  components:
+  - type: SquadSpawner
+    squad: SquadBravo
+    role: MCSquadEngineer
+  - type: Sprite
+    state: engi_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadEngineer
+  id: MCSpawnPointSquadEngineerCharlie
+  suffix: Charlie
+  components:
+  - type: SquadSpawner
+    squad: SquadCharlie
+    role: MCSquadEngineer
+  - type: Sprite
+    state: engi_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadEngineer
+  id: MCSpawnPointSquadEngineerDelta
+  suffix: Delta
+  components:
+  - type: SquadSpawner
+    squad: SquadDelta
+    role: MCSquadEngineer
+  - type: Sprite
+    state: engi_spawn

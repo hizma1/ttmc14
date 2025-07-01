@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.2
   forkId: ""
   forkVersion: ""
-  time: 06/30/2025 09:52:29
-  entityCount: 4458
+  time: 07/01/2025 23:23:50
+  entityCount: 4571
 maps:
 - 1
 grids:
@@ -213,7 +213,7 @@ entities:
           version: 6
         0,-1:
           ind: 0,-1
-          tiles: AQAAAAAAAQAAAAAAAQAAAAAABwAAAAAAAQAAAAAABwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAIgAAAAAAIQAAAAAAhAAAAAAAhAAAAAAAhAAAAAAABwAAAAAAhAAAAAAABwAAAAAAhAAAAAAAhAAAAAAAhAAAAAAAhAAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAABwAAAAAAAQAAAAAABwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAABwAAAAAABwAAAAAABwAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAHgAAAAAAIQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAIgAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAHgAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAABwAAAAAABwAAAAAABwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAA
+          tiles: AQAAAAAAAQAAAAAAAQAAAAAABwAAAAAAAQAAAAAABwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAIgAAAAAAIQAAAAAAhAAAAAAAhAAAAAAAhAAAAAAABwAAAAAAhAAAAAAABwAAAAAAhAAAAAAAhAAAAAAAhAAAAAAAhAAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAABwAAAAAAAQAAAAAABwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAABwAAAAAABwAAAAAABwAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAHgAAAAAAIQAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAIgAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAhAAAAAAAhAAAAAAAhAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAHwAAAAAAIQAAAAAAHgAAAAAAHwAAAAAAAQAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAgAAAAAAHwAAAAAAAwAAAAAAHwAAAAAAHwAAAAAAHwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAABwAAAAAABwAAAAAABwAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAgAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAhAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAA
           version: 6
         1,0:
           ind: 1,0
@@ -9626,6 +9626,18 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -21.5,-18.5
       parent: 1
+- proto: CMASRSConsole
+  entities:
+  - uid: 2075
+    components:
+    - type: Transform
+      pos: 10.5,7.5
+      parent: 1
+  - uid: 2076
+    components:
+    - type: Transform
+      pos: 5.5,3.5
+      parent: 1
 - proto: CMBarricadeMetal
   entities:
   - uid: 1864
@@ -11735,6 +11747,23 @@ entities:
     components:
     - type: Transform
       pos: 26.5,-22.5
+      parent: 1
+  - uid: 1941
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 20.5,38.5
+      parent: 1
+  - uid: 1942
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 23.5,39.5
+      parent: 1
+  - uid: 1943
+    components:
+    - type: Transform
+      pos: 22.5,41.5
       parent: 1
   - uid: 2046
     components:
@@ -29730,6 +29759,13 @@ entities:
     - type: Transform
       pos: -30.5,18.5
       parent: 1
+- proto: FoodSnackPopcorn
+  entities:
+  - uid: 1951
+    components:
+    - type: Transform
+      pos: -12.5,25.5
+      parent: 1
 - proto: GasPipeBend
   entities:
   - uid: 4921
@@ -30263,6 +30299,16 @@ entities:
       parent: 1
 - proto: MCBedBunk
   entities:
+  - uid: 1939
+    components:
+    - type: Transform
+      pos: 24.5,33.5
+      parent: 1
+  - uid: 1940
+    components:
+    - type: Transform
+      pos: 24.5,31.5
+      parent: 1
   - uid: 5032
     components:
     - type: Transform
@@ -32130,7 +32176,7 @@ entities:
       pos: -4.5,24.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -13842.706
+      secondsUntilStateChange: -14963.548
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -32156,12 +32202,91 @@ entities:
     - type: Transform
       pos: -9.5,41.5
       parent: 1
+- proto: MCSpawnPointAssaultCrewman
+  entities:
+  - uid: 1938
+    components:
+    - type: Transform
+      pos: 24.5,33.5
+      parent: 1
+- proto: MCSpawnPointCaptain
+  entities:
+  - uid: 1946
+    components:
+    - type: Transform
+      pos: -24.5,-14.5
+      parent: 1
+- proto: MCSpawnPointCMO
+  entities:
+  - uid: 1927
+    components:
+    - type: Transform
+      pos: -27.5,9.5
+      parent: 1
+  - uid: 1928
+    components:
+    - type: Transform
+      pos: -22.5,10.5
+      parent: 1
 - proto: MCSpawnPointCSE
   entities:
   - uid: 1690
     components:
     - type: Transform
       pos: -8.5,-44.5
+      parent: 1
+- proto: MCSpawnPointDoctor
+  entities:
+  - uid: 1932
+    components:
+    - type: Transform
+      pos: -20.5,12.5
+      parent: 1
+  - uid: 1933
+    components:
+    - type: Transform
+      pos: -13.5,14.5
+      parent: 1
+  - uid: 1934
+    components:
+    - type: Transform
+      pos: -7.5,24.5
+      parent: 1
+  - uid: 1935
+    components:
+    - type: Transform
+      pos: -13.5,22.5
+      parent: 1
+- proto: MCSpawnPointFC
+  entities:
+  - uid: 1924
+    components:
+    - type: Transform
+      pos: 24.5,15.5
+      parent: 1
+- proto: MCSpawnPointPilotOfficer
+  entities:
+  - uid: 1936
+    components:
+    - type: Transform
+      pos: 24.5,39.5
+      parent: 1
+- proto: MCSpawnPointResearcher
+  entities:
+  - uid: 1929
+    components:
+    - type: Transform
+      pos: -34.5,11.5
+      parent: 1
+  - uid: 1930
+    components:
+    - type: Transform
+      pos: -31.5,15.5
+      parent: 1
+  - uid: 1931
+    components:
+    - type: Transform
+      pos: -31.5,17.5
       parent: 1
 - proto: MCSpawnPointRO
   entities:
@@ -32170,132 +32295,559 @@ entities:
     - type: Transform
       pos: 4.5,4.5
       parent: 1
-- proto: MCSpawnPointSquadCorpsman
+- proto: MCSpawnPointSO
   entities:
-  - uid: 4962
+  - uid: 1925
     components:
     - type: Transform
-      pos: 34.5,-4.5
+      pos: -1.5,-20.5
       parent: 1
-  - uid: 4963
+  - uid: 1926
     components:
     - type: Transform
-      pos: 34.5,-2.5
+      pos: 3.5,-20.5
       parent: 1
-  - uid: 4964
+  - uid: 1944
     components:
     - type: Transform
-      pos: 35.5,-2.5
+      pos: -19.5,-22.5
       parent: 1
-- proto: MCSpawnPointSquadEngineer
-  entities:
-  - uid: 4965
+  - uid: 1945
     components:
     - type: Transform
-      pos: 34.5,-9.5
+      pos: -15.5,-22.5
       parent: 1
-  - uid: 4966
+  - uid: 1947
     components:
     - type: Transform
-      pos: 34.5,-7.5
+      pos: -21.5,4.5
       parent: 1
-- proto: MCSpawnPointSquadLeader
-  entities:
-  - uid: 4967
+  - uid: 1949
     components:
     - type: Transform
-      pos: 35.5,-9.5
+      pos: -18.5,4.5
       parent: 1
-- proto: MCSpawnPointSquadMarine
+- proto: MCSpawnPointSquadCorpsmanAlpha
   entities:
   - uid: 2
     components:
     - type: Transform
-      pos: 34.5,0.5
+      pos: 34.5,-2.5
       parent: 1
-  - uid: 4945
+  - uid: 1163
     components:
     - type: Transform
-      pos: 35.5,0.5
+      pos: 34.5,-4.5
       parent: 1
-  - uid: 4946
+  - uid: 1715
     components:
     - type: Transform
-      pos: 36.5,0.5
+      pos: 35.5,-2.5
       parent: 1
-  - uid: 4947
+- proto: MCSpawnPointSquadCorpsmanBravo
+  entities:
+  - uid: 1754
+    components:
+    - type: Transform
+      pos: 34.5,-2.5
+      parent: 1
+  - uid: 1755
+    components:
+    - type: Transform
+      pos: 35.5,-2.5
+      parent: 1
+  - uid: 1756
+    components:
+    - type: Transform
+      pos: 34.5,-4.5
+      parent: 1
+- proto: MCSpawnPointSquadCorpsmanCharlie
+  entities:
+  - uid: 1757
+    components:
+    - type: Transform
+      pos: 34.5,-2.5
+      parent: 1
+  - uid: 1839
+    components:
+    - type: Transform
+      pos: 35.5,-2.5
+      parent: 1
+  - uid: 1840
+    components:
+    - type: Transform
+      pos: 34.5,-4.5
+      parent: 1
+- proto: MCSpawnPointSquadCorpsmanDelta
+  entities:
+  - uid: 1841
+    components:
+    - type: Transform
+      pos: 34.5,-2.5
+      parent: 1
+  - uid: 1842
+    components:
+    - type: Transform
+      pos: 35.5,-2.5
+      parent: 1
+  - uid: 1843
+    components:
+    - type: Transform
+      pos: 34.5,-4.5
+      parent: 1
+- proto: MCSpawnPointSquadEngineerAlpha
+  entities:
+  - uid: 1716
+    components:
+    - type: Transform
+      pos: 34.5,-9.5
+      parent: 1
+  - uid: 1717
+    components:
+    - type: Transform
+      pos: 34.5,-7.5
+      parent: 1
+- proto: MCSpawnPointSquadEngineerBravo
+  entities:
+  - uid: 1748
+    components:
+    - type: Transform
+      pos: 34.5,-7.5
+      parent: 1
+  - uid: 1749
+    components:
+    - type: Transform
+      pos: 34.5,-9.5
+      parent: 1
+- proto: MCSpawnPointSquadEngineerCharlie
+  entities:
+  - uid: 1750
+    components:
+    - type: Transform
+      pos: 34.5,-7.5
+      parent: 1
+  - uid: 1751
+    components:
+    - type: Transform
+      pos: 34.5,-9.5
+      parent: 1
+- proto: MCSpawnPointSquadEngineerDelta
+  entities:
+  - uid: 1752
+    components:
+    - type: Transform
+      pos: 34.5,-7.5
+      parent: 1
+  - uid: 1753
+    components:
+    - type: Transform
+      pos: 34.5,-9.5
+      parent: 1
+- proto: MCSpawnPointSquadLeaderAlpha
+  entities:
+  - uid: 1718
+    components:
+    - type: Transform
+      pos: 35.5,-9.5
+      parent: 1
+- proto: MCSpawnPointSquadLeaderBravo
+  entities:
+  - uid: 1739
+    components:
+    - type: Transform
+      pos: 35.5,-9.5
+      parent: 1
+- proto: MCSpawnPointSquadLeaderCharlie
+  entities:
+  - uid: 1740
+    components:
+    - type: Transform
+      pos: 35.5,-9.5
+      parent: 1
+- proto: MCSpawnPointSquadLeaderDelta
+  entities:
+  - uid: 1741
+    components:
+    - type: Transform
+      pos: 35.5,-9.5
+      parent: 1
+- proto: MCSpawnPointSquadMarineAlpha
+  entities:
+  - uid: 1719
     components:
     - type: Transform
       pos: 37.5,0.5
       parent: 1
-  - uid: 4948
+  - uid: 1720
     components:
     - type: Transform
-      pos: 36.5,-2.5
+      pos: 36.5,0.5
       parent: 1
-  - uid: 4949
+  - uid: 1721
+    components:
+    - type: Transform
+      pos: 35.5,0.5
+      parent: 1
+  - uid: 1722
+    components:
+    - type: Transform
+      pos: 34.5,0.5
+      parent: 1
+  - uid: 1723
     components:
     - type: Transform
       pos: 37.5,-2.5
       parent: 1
-  - uid: 4950
+  - uid: 1724
     components:
     - type: Transform
-      pos: 35.5,-4.5
+      pos: 36.5,-2.5
       parent: 1
-  - uid: 4951
-    components:
-    - type: Transform
-      pos: 36.5,-4.5
-      parent: 1
-  - uid: 4952
-    components:
-    - type: Transform
-      pos: 37.5,-4.5
-      parent: 1
-  - uid: 4953
-    components:
-    - type: Transform
-      pos: 35.5,-7.5
-      parent: 1
-  - uid: 4954
-    components:
-    - type: Transform
-      pos: 36.5,-7.5
-      parent: 1
-  - uid: 4955
+  - uid: 1725
     components:
     - type: Transform
       pos: 37.5,-7.5
       parent: 1
-  - uid: 4956
+  - uid: 1726
     components:
     - type: Transform
-      pos: 36.5,-9.5
+      pos: 36.5,-7.5
       parent: 1
-  - uid: 4957
+  - uid: 1727
+    components:
+    - type: Transform
+      pos: 35.5,-7.5
+      parent: 1
+  - uid: 1728
+    components:
+    - type: Transform
+      pos: 37.5,-4.5
+      parent: 1
+  - uid: 1729
+    components:
+    - type: Transform
+      pos: 36.5,-4.5
+      parent: 1
+  - uid: 1730
+    components:
+    - type: Transform
+      pos: 35.5,-4.5
+      parent: 1
+  - uid: 1731
     components:
     - type: Transform
       pos: 37.5,-9.5
       parent: 1
-  - uid: 4958
+  - uid: 1732
     components:
     - type: Transform
-      pos: 36.5,-12.5
+      pos: 36.5,-9.5
       parent: 1
-  - uid: 4959
+  - uid: 1733
     components:
     - type: Transform
       pos: 37.5,-12.5
       parent: 1
-- proto: MCSpawnPointSquadSmartgunner
+  - uid: 1734
+    components:
+    - type: Transform
+      pos: 36.5,-12.5
+      parent: 1
+- proto: MCSpawnPointSquadMarineBravo
   entities:
-  - uid: 4960
+  - uid: 1844
+    components:
+    - type: Transform
+      pos: 34.5,0.5
+      parent: 1
+  - uid: 1845
+    components:
+    - type: Transform
+      pos: 35.5,0.5
+      parent: 1
+  - uid: 1846
+    components:
+    - type: Transform
+      pos: 36.5,0.5
+      parent: 1
+  - uid: 1847
+    components:
+    - type: Transform
+      pos: 37.5,0.5
+      parent: 1
+  - uid: 1887
+    components:
+    - type: Transform
+      pos: 36.5,-2.5
+      parent: 1
+  - uid: 1888
+    components:
+    - type: Transform
+      pos: 37.5,-2.5
+      parent: 1
+  - uid: 1894
+    components:
+    - type: Transform
+      pos: 35.5,-4.5
+      parent: 1
+  - uid: 1895
+    components:
+    - type: Transform
+      pos: 36.5,-4.5
+      parent: 1
+  - uid: 1896
+    components:
+    - type: Transform
+      pos: 37.5,-4.5
+      parent: 1
+  - uid: 1897
+    components:
+    - type: Transform
+      pos: 35.5,-7.5
+      parent: 1
+  - uid: 1898
+    components:
+    - type: Transform
+      pos: 36.5,-7.5
+      parent: 1
+  - uid: 1899
+    components:
+    - type: Transform
+      pos: 37.5,-7.5
+      parent: 1
+  - uid: 1912
+    components:
+    - type: Transform
+      pos: 37.5,-9.5
+      parent: 1
+  - uid: 1913
+    components:
+    - type: Transform
+      pos: 36.5,-9.5
+      parent: 1
+  - uid: 1914
+    components:
+    - type: Transform
+      pos: 36.5,-12.5
+      parent: 1
+  - uid: 1915
+    components:
+    - type: Transform
+      pos: 37.5,-12.5
+      parent: 1
+- proto: MCSpawnPointSquadMarineCharlie
+  entities:
+  - uid: 1848
+    components:
+    - type: Transform
+      pos: 34.5,0.5
+      parent: 1
+  - uid: 1880
+    components:
+    - type: Transform
+      pos: 35.5,0.5
+      parent: 1
+  - uid: 1881
+    components:
+    - type: Transform
+      pos: 36.5,0.5
+      parent: 1
+  - uid: 1882
+    components:
+    - type: Transform
+      pos: 37.5,0.5
+      parent: 1
+  - uid: 1889
+    components:
+    - type: Transform
+      pos: 36.5,-2.5
+      parent: 1
+  - uid: 1890
+    components:
+    - type: Transform
+      pos: 36.5,-2.5
+      parent: 1
+  - uid: 1891
+    components:
+    - type: Transform
+      pos: 37.5,-2.5
+      parent: 1
+  - uid: 1900
+    components:
+    - type: Transform
+      pos: 35.5,-4.5
+      parent: 1
+  - uid: 1901
+    components:
+    - type: Transform
+      pos: 36.5,-4.5
+      parent: 1
+  - uid: 1902
+    components:
+    - type: Transform
+      pos: 37.5,-4.5
+      parent: 1
+  - uid: 1903
+    components:
+    - type: Transform
+      pos: 35.5,-7.5
+      parent: 1
+  - uid: 1904
+    components:
+    - type: Transform
+      pos: 36.5,-7.5
+      parent: 1
+  - uid: 1905
+    components:
+    - type: Transform
+      pos: 37.5,-7.5
+      parent: 1
+  - uid: 1916
+    components:
+    - type: Transform
+      pos: 36.5,-9.5
+      parent: 1
+  - uid: 1917
+    components:
+    - type: Transform
+      pos: 37.5,-9.5
+      parent: 1
+  - uid: 1918
+    components:
+    - type: Transform
+      pos: 36.5,-12.5
+      parent: 1
+  - uid: 1919
+    components:
+    - type: Transform
+      pos: 37.5,-12.5
+      parent: 1
+- proto: MCSpawnPointSquadMarineDelta
+  entities:
+  - uid: 1883
+    components:
+    - type: Transform
+      pos: 34.5,0.5
+      parent: 1
+  - uid: 1884
+    components:
+    - type: Transform
+      pos: 35.5,0.5
+      parent: 1
+  - uid: 1885
+    components:
+    - type: Transform
+      pos: 36.5,0.5
+      parent: 1
+  - uid: 1886
+    components:
+    - type: Transform
+      pos: 37.5,0.5
+      parent: 1
+  - uid: 1892
+    components:
+    - type: Transform
+      pos: 36.5,-2.5
+      parent: 1
+  - uid: 1893
+    components:
+    - type: Transform
+      pos: 37.5,-2.5
+      parent: 1
+  - uid: 1906
+    components:
+    - type: Transform
+      pos: 35.5,-4.5
+      parent: 1
+  - uid: 1907
+    components:
+    - type: Transform
+      pos: 36.5,-4.5
+      parent: 1
+  - uid: 1908
+    components:
+    - type: Transform
+      pos: 37.5,-4.5
+      parent: 1
+  - uid: 1909
+    components:
+    - type: Transform
+      pos: 35.5,-7.5
+      parent: 1
+  - uid: 1910
+    components:
+    - type: Transform
+      pos: 36.5,-7.5
+      parent: 1
+  - uid: 1911
+    components:
+    - type: Transform
+      pos: 37.5,-7.5
+      parent: 1
+  - uid: 1920
+    components:
+    - type: Transform
+      pos: 36.5,-9.5
+      parent: 1
+  - uid: 1921
+    components:
+    - type: Transform
+      pos: 37.5,-9.5
+      parent: 1
+  - uid: 1922
+    components:
+    - type: Transform
+      pos: 36.5,-12.5
+      parent: 1
+  - uid: 1923
+    components:
+    - type: Transform
+      pos: 37.5,-12.5
+      parent: 1
+- proto: MCSpawnPointSquadSmartgunnerAlpha
+  entities:
+  - uid: 1735
+    components:
+    - type: Transform
+      pos: 35.5,-12.5
+      parent: 1
+  - uid: 1736
     components:
     - type: Transform
       pos: 34.5,-12.5
       parent: 1
-  - uid: 4961
+- proto: MCSpawnPointSquadSmartgunnerBravo
+  entities:
+  - uid: 1742
+    components:
+    - type: Transform
+      pos: 34.5,-12.5
+      parent: 1
+  - uid: 1743
+    components:
+    - type: Transform
+      pos: 35.5,-12.5
+      parent: 1
+- proto: MCSpawnPointSquadSmartgunnerCharlie
+  entities:
+  - uid: 1744
+    components:
+    - type: Transform
+      pos: 34.5,-12.5
+      parent: 1
+  - uid: 1745
+    components:
+    - type: Transform
+      pos: 35.5,-12.5
+      parent: 1
+- proto: MCSpawnPointSquadSmartgunnerDelta
+  entities:
+  - uid: 1746
+    components:
+    - type: Transform
+      pos: 34.5,-12.5
+      parent: 1
+  - uid: 1747
     components:
     - type: Transform
       pos: 35.5,-12.5
@@ -32316,6 +32868,13 @@ entities:
     components:
     - type: Transform
       pos: -7.5,-44.5
+      parent: 1
+- proto: MCSpawnPointTransportOfficer
+  entities:
+  - uid: 1937
+    components:
+    - type: Transform
+      pos: 21.5,38.5
       parent: 1
 - proto: MCWeaponRifleAR18
   entities:
@@ -32562,6 +33121,28 @@ entities:
     components:
     - type: Transform
       pos: -16.5,36.5
+      parent: 1
+- proto: RMCCrateLarge
+  entities:
+  - uid: 1952
+    components:
+    - type: Transform
+      pos: -17.5,43.5
+      parent: 1
+  - uid: 1953
+    components:
+    - type: Transform
+      pos: -17.5,42.5
+      parent: 1
+  - uid: 2071
+    components:
+    - type: Transform
+      pos: -17.5,41.5
+      parent: 1
+  - uid: 2073
+    components:
+    - type: Transform
+      pos: -1.5,33.5
       parent: 1
 - proto: RMCDropshipAttachmentAmmoGAU
   entities:
@@ -33061,20 +33642,23 @@ entities:
       parent: 1
 - proto: RMCMechPowerLoader
   entities:
-  - uid: 1163
+  - uid: 1737
     components:
     - type: Transform
-      pos: 11.425497,19.13546
+      rot: 3.141592653589793 rad
+      pos: -4.5,-11.5
       parent: 1
-  - uid: 3013
+  - uid: 1738
     components:
     - type: Transform
-      pos: -4.5,-10.5
+      rot: 3.141592653589793 rad
+      pos: 11.5,18.5
       parent: 1
-  - uid: 3051
+  - uid: 2082
     components:
     - type: Transform
-      pos: 3.5,9.5
+      rot: 3.141592653589793 rad
+      pos: 3.5,8.5
       parent: 1
 - proto: RMCMirror
   entities:
@@ -33605,6 +34189,33 @@ entities:
     - type: Transform
       pos: 8.5,3.5
       parent: 1
+- proto: RMCShutterAlmayer
+  entities:
+  - uid: 2077
+    components:
+    - type: Transform
+      pos: 5.5,19.5
+      parent: 1
+  - uid: 2078
+    components:
+    - type: Transform
+      pos: 6.5,19.5
+      parent: 1
+  - uid: 2079
+    components:
+    - type: Transform
+      pos: 7.5,19.5
+      parent: 1
+  - uid: 2080
+    components:
+    - type: Transform
+      pos: 8.5,19.5
+      parent: 1
+  - uid: 2081
+    components:
+    - type: Transform
+      pos: 9.5,19.5
+      parent: 1
 - proto: RMCSmallFloodlight
   entities:
   - uid: 2060
@@ -33864,6 +34475,20 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -22.5,2.5
+      parent: 1
+- proto: RMCSupplyDropConsole
+  entities:
+  - uid: 2072
+    components:
+    - type: Transform
+      pos: 4.5,18.5
+      parent: 1
+- proto: RMCSupplyDropPadEcho
+  entities:
+  - uid: 2074
+    components:
+    - type: Transform
+      pos: 5.5,18.5
       parent: 1
 - proto: RMCSurgicalTray
   entities:
@@ -34776,6 +35401,11 @@ entities:
       fixtures: {}
 - proto: RMCTacticalMapTable
   entities:
+  - uid: 1950
+    components:
+    - type: Transform
+      pos: -12.5,26.5
+      parent: 1
   - uid: 4997
     components:
     - type: Transform

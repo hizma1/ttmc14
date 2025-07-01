@@ -66,3 +66,47 @@
     job_id: MCSquadSmartgunner
   - type: Sprite
     state: smartgunner_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadSmartgunner
+  id: MCSpawnPointSquadSmartgunnerAlpha
+  suffix: Alpha
+  components:
+  - type: SquadSpawner
+    squad: SquadAlpha
+    role: MCSquadSmartgunner
+  - type: Sprite
+    state: smartgunner_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadSmartgunner
+  id: MCSpawnPointSquadSmartgunnerBravo
+  suffix: Bravo
+  components:
+  - type: SquadSpawner
+    squad: SquadBravo
+    role: MCSquadSmartgunner
+  - type: Sprite
+    state: smartgunner_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadSmartgunner
+  id: MCSpawnPointSquadSmartgunnerCharlie
+  suffix: Charlie
+  components:
+  - type: SquadSpawner
+    squad: SquadCharlie
+    role: MCSquadSmartgunner
+  - type: Sprite
+    state: smartgunner_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadSmartgunner
+  id: MCSpawnPointSquadSmartgunnerDelta
+  suffix: Delta
+  components:
+  - type: SquadSpawner
+    squad: SquadDelta
+    role: MCSquadSmartgunner
+  - type: Sprite
+    state: smartgunner_spawn

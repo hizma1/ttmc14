@@ -68,3 +68,47 @@
     job_id: MCSquadCorpsman
   - type: Sprite
     state: medic_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadCorpsman
+  id: MCSpawnPointSquadCorpsmanAlpha
+  suffix: Alpha
+  components:
+  - type: SquadSpawner
+    squad: SquadAlpha
+    role: MCSquadCorpsman
+  - type: Sprite
+    state: medic_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadCorpsman
+  id: MCSpawnPointSquadCorpsmanBravo
+  suffix: Bravo
+  components:
+  - type: SquadSpawner
+    squad: SquadBravo
+    role: MCSquadCorpsman
+  - type: Sprite
+    state: medic_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadCorpsman
+  id: MCSpawnPointSquadCorpsmanCharlie
+  suffix: Charlie
+  components:
+  - type: SquadSpawner
+    squad: SquadCharlie
+    role: MCSquadCorpsman
+  - type: Sprite
+    state: medic_spawn
+
+- type: entity
+  parent: MCSpawnPointSquadCorpsman
+  id: MCSpawnPointSquadCorpsmanDelta
+  suffix: Delta
+  components:
+  - type: SquadSpawner
+    squad: SquadDelta
+    role: MCSquadCorpsman
+  - type: Sprite
+    state: medic_spawn

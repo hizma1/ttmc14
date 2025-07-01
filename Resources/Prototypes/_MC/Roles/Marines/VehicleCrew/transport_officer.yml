@@ -60,7 +60,7 @@
 - type: entity
   parent: MCSpawnPointJob
   id: MCSpawnPointTransportOfficer
-  name: assault crewman spawn point
+  name: transport officer spawn point
   components:
   - type: SpawnPoint
     job_id: MCTransportOfficer
