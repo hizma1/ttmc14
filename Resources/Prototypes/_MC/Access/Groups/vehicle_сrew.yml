@@ -5,6 +5,8 @@
   - MCAccessBridge
   - MCAccessDropship
   - MCAccessPilot
+  - CMAccessDropship
+  - CMAccessPilot
 
 - type: accessGroup
   id: MCAssaultCrewman
@@ -21,3 +23,5 @@
   - MCAccessPilot
   - MCAccessDropship
   - MCAccessTadpole
+  - CMAccessDropship
+  - CMAccessPilot
