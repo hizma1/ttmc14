@@ -8,7 +8,7 @@
   dummyStartingGear: MCResearcher
   icon: MCResearcher
   joinNotifyCrew: false
-  supervisors: mc-job-supervisors-sl
+  supervisors: mc-job-supervisors-captain
   accessGroups: [ MCResearcher ]
   ranks:
     MCResearchAssistant: []

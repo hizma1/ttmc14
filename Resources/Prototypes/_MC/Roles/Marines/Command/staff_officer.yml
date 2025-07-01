@@ -8,7 +8,7 @@
   dummyStartingGear: MCSO
   icon: MCSO
   joinNotifyCrew: false
-  supervisors: mc-job-supervisors-sl
+  supervisors: mc-job-supervisors-captain
   accessGroups: [ MCSO ]
   ranks:
     MCEnsign: []

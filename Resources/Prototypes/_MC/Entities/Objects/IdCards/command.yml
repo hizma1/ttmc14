@@ -29,3 +29,19 @@
   components:
   - type: PresetIdCard
     job: MCPilotOfficer
+
+- type: entity
+  parent: MCDogtag
+  id: MCDogtagAssaultCrewman
+  name: Assault Crewman's dogtags
+  components:
+  - type: PresetIdCard
+    job: MCAssaultCrewman
+
+- type: entity
+  parent: MCSilverIdCard
+  id: MCIdCardTransportOfficer
+  name: Transport Officer's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCTransportOfficer

@@ -9,5 +9,7 @@
   - MCFC
   - MCSO
   - MCPilotOfficer
+  - MCAssaultCrewman
+  - MCTransportOfficer
   departmentRadio: MarineCommand
   headOfDepartment: MCCaptain

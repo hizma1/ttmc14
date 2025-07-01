@@ -1,0 +1,67 @@
+- type: job
+  parent: MCJobSquad
+  id: MCAssaultCrewman
+  name: mc-job-name-assault-crewman
+  description: mc-job-description-assault-crewman
+  playTimeTracker: MCAssaultCrewman
+  startingGear: MCAssaultCrewman
+  dummyStartingGear: MCAssaultCrewman
+  icon: MCAssaultCrewman
+  joinNotifyCrew: false
+  supervisors: mc-job-supervisors-fc
+  accessGroups: [ MCAssaultCrewman ]
+  ranks:
+    MCLanceCorporal: []
+    MCCorporal:
+    - !type:RoleTimeRequirement
+      role: MCAssaultCrewman
+      time: 1500 # 25 hours
+    MCSergeant:
+    - !type:RoleTimeRequirement
+      role: MCAssaultCrewman
+      time: 6000 # 100 hours
+    MCStaffSergeant:
+    - !type:RoleTimeRequirement
+      role: MCAssaultCrewman
+      time: 18000 # 300 hours
+    MCSergeantMajor:
+    - !type:RoleTimeRequirement
+      role: MCAssaultCrewman
+      time: 60000 # 1000 hours
+  roleWeight: 1
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      skills:
+        RMCSkillEngineer: 2
+        RMCSkillConstruction: 2
+        RMCSkillPilot: 1
+        RMCSkillPowerLoader: 3
+        RMCSkillSmartGun: -4
+        RMCSkillFirearms: 1
+    - type: JobPrefix
+      prefix: mc-job-prefix-assault-crewman
+    - type: TacticalMapIcon
+      icon:
+        sprite: _MC/Interface/job_icons.rsi
+        state: pilot
+
+- type: playTimeTracker
+  id: MCAssaultCrewman
+  isHumanoid: true
+
+- type: startingGear
+  id: MCAssaultCrewman
+  equipment:
+    id: MCDogtagAssaultCrewman
+
+- type: entity
+  parent: MCSpawnPointJob
+  id: MCSpawnPointAssaultCrewman
+  name: assault crewman spawn point
+  components:
+  - type: SpawnPoint
+    job_id: MCAssaultCrewman
+  - type: Sprite
+    state: medic_spawn

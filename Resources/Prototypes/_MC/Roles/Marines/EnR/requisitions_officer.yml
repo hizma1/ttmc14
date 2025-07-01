@@ -8,7 +8,7 @@
   dummyStartingGear: MCRO
   icon: MCRO
   joinNotifyCrew: false
-  supervisors: mc-job-supervisors-aso
+  supervisors: mc-job-supervisors-cse
   ranks:
     MCChiefPettyOfficer: []
     MCWarrantOfficer:

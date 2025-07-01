@@ -5,3 +5,19 @@
   - MCAccessBridge
   - MCAccessDropship
   - MCAccessPilot
+
+- type: accessGroup
+  id: MCAssaultCrewman
+  tags:
+  - MCAccessPreparation
+  - MCAccessArmored
+  - MCAccessWO
+  # TODO: 100
+
+- type: accessGroup
+  id: MCTransportOfficer
+  tags:
+  - MCAccessBridge
+  - MCAccessPilot
+  - MCAccessDropship
+  - MCAccessTadpole

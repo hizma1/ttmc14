@@ -8,7 +8,7 @@
   dummyStartingGear: MCST
   icon: MCST
   joinNotifyCrew: false
-  supervisors: mc-job-supervisors-aso
+  supervisors: mc-job-supervisors-cse
   ranks:
     MCPettyOfficerThirdClass: []
     MCPettyOfficerSecondClass:
