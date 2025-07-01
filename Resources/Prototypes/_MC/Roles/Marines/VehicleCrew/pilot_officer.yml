@@ -8,7 +8,7 @@
   dummyStartingGear: MCPilotOfficer
   icon: MCPilotOfficer
   joinNotifyCrew: false
-  supervisors: mc-job-supervisors-sl
+  supervisors: mc-job-supervisors-fc
   accessGroups: [ MCPilotOfficer ]
   ranks:
     MCEnsign: []
@@ -45,7 +45,7 @@
     - type: TacticalMapIcon
       icon:
         sprite: _MC/Interface/job_icons.rsi
-        state: pilot
+        state: assault_crew
 
 - type: playTimeTracker
   id: MCPilotOfficer

@@ -8,7 +8,7 @@
   dummyStartingGear: MCFC
   icon: MCFC
   joinNotifyCrew: false
-  supervisors: mc-job-supervisors-sl
+  supervisors: mc-job-supervisors-captain
   accessGroups: [ MCFC ]
   ranks:
     MCLieutenant: []

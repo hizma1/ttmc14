@@ -8,7 +8,7 @@
   dummyStartingGear: MCDoctor
   icon: MCDoctor
   joinNotifyCrew: false
-  supervisors: mc-job-supervisors-sl
+  supervisors: mc-job-supervisors-cmo
   accessGroups: [ MCDoctor ]
   ranks:
     MCMedicalStudent: []

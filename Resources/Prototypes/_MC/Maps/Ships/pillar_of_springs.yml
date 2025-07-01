@@ -18,6 +18,9 @@
           MCCaptain: [ 1, 1 ]
           MCFC: [ 1, 1 ]
           MCSO: [ 4, 4 ]
+          MCPilotOfficer: [ 1, 1 ]
+          MCAssaultCrewman: [ 2, 2 ]
+          MCTransportOfficer: [ 1, 1 ]
           # Medical
           MCCMO: [ 1, 1 ]
           MCDoctor: [ 6, 6 ]
