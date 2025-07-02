@@ -212,3 +212,16 @@
 - type: playTimeTracker
   id: MCXenoWarlock
   isXeno: true
+
+# Tier 4
+
+# Queen
+- type: job
+  parent: MCJobXeno
+  id: MCXenoQueen
+  name: mc-job-name-xeno-queen
+  playTimeTracker: MCXenoQueen
+
+- type: playTimeTracker
+  id: MCXenoQueen
+  isXeno: true

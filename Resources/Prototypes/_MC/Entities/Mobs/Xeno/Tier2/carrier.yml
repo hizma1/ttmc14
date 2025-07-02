@@ -4,6 +4,7 @@
   - MCXenoBase
   - MCXenoPlantingWeeds
   - MCXenoCreateResinJelly
+  - MCXenoLayEgg
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -121,6 +122,7 @@
     # MC
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
+    - MCActionXenoLayEgg
   - type: XenoParasiteThrower
   - type: XenoEvolution
     evolvesTo:

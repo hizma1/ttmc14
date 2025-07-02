@@ -11,12 +11,12 @@
   - RMCXenoSpeechSounds
   - RMCXenoCommendationReceiver
   - RMCXenoMobCollision
-  id: MCXenoDefiler
-  name: Defiler
-  description: A frightening looking, bulky xeno that drips with suspect green fluids.
+  id: MCXenoQueen
+  name: Queen
+  description: The biggest and baddest xeno. The Queen controls the hive.
   components:
   - type: Sprite
-    sprite: _MC/Mobs/Xenos/defiler.rsi
+    sprite: _MC/Mobs/Xenos/queen.rsi
     offset: 0,0.2
   - type: GhostRole
     name: mc-job-name-xeno-defiller
@@ -25,43 +25,38 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      400: Critical
-      500: Dead
+      600: Critical
+      700: Dead
   - type: XenoPlasma
-    plasma: 575
-    maxPlasma: 575
-    plasmaRegenOnWeeds: 35
+    plasma: 1200
+    maxPlasma: 1200
+    plasmaRegenOnWeeds: 90
   - type: Xeno
-    tier: 3
-    role: MCXenoDefiler
+    tier: 4
+    role: MCXenoQueen
     actionIds:
     # RMC
     - ActionXenoRest
     - ActionXenoPheromones
-    - ActionXenoDevolve
     # MC
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoLayEgg
     hudOffset: -0.1,0.1
-  - type: XenoDevolve
-    devolvesTo:
-    - MCXenoCarrier
-    - MCXenoHivelord
   - type: MovementSpeedModifier
-    baseWalkSpeed: 3.333
-    baseSprintSpeed: 5
+    baseWalkSpeed: 2.702
+    baseSprintSpeed: 3.703
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 26
+        Brute: 28
   - type: XenoPheromones
-    pheromonesMultiplier: 2.6
-    pheroSuffix: hivelord
+    pheromonesMultiplier: 5
+    pheroSuffix: queen
   - type: TunnelRenamer
   - type: TacticalMapIcon
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
-      state: defiler
+      state: queen
   - type: XenoInhands
-    prefix: hivelord
+    prefix: queen
