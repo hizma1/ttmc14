@@ -33,7 +33,7 @@
 
 - type: entity
   parent: MCClothingHands
-  id: RMCHandsMarineInsulated
+  id: MCHandsMarineInsulated
   name: Insulated marine combat gloves
   description: Insulated marine tactical gloves that protect against electrical shocks.
   components:

@@ -60,6 +60,9 @@
   id: MCCaptain
   equipment:
     id: MCIdCardCaptain
+    shoes: MCBootsBlackFilled
+    jumpsuit: MCJumpsuitMarineCaptain
+    ears: MCHeadsetCommand
 
 - type: entity
   parent: MCSpawnPointJob

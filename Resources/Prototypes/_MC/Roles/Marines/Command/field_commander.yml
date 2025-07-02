@@ -60,6 +60,10 @@
   id: MCFC
   equipment:
     id: MCDogtagFC
+    shoes: MCBootsBlackFilled
+    jumpsuit: MCJumpsuitMarineFieldCommander
+    back: MCSatchelMarineStandard
+    ears: MCHeadsetCommand
 
 - type: entity
   parent: MCSpawnPointJob

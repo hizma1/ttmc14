@@ -58,6 +58,11 @@
   id: MCSO
   equipment:
     id: MCIdCardSO
+    shoes: MCBootsBlackFilled
+    jumpsuit: MCJumpsuitMarineStaffOfficer
+    back: MCSatchelMarineStandard
+    ears: MCHeadsetCommand
+    pocket1: RMCRangefinder
 
 - type: entity
   parent: MCSpawnPointJob

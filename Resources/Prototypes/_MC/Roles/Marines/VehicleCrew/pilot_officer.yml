@@ -55,6 +55,12 @@
   id: MCPilotOfficer
   equipment:
     id: MCIdCardPilotOfficer
+    shoes: MCBootsBlackFilled
+    jumpsuit: MCJumpsuitMarinePilot
+    outerClothing: MCArmorPas50
+    back: MCSatchelMarineStandard
+    gloves: MCHandsMarineInsulated
+    ears: MCHeadsetCommand
 
 - type: entity
   parent: MCSpawnPointJob
