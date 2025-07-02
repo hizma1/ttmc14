@@ -1,8 +1,8 @@
 - type: job
   parent: MCJobSquad
   id: MCTransportOfficer
-  name: mc-job-name-assault-crewman
-  description: mc-job-description-assault-crewman
+  name: mc-job-name-transport-officer
+  description: mc-job-description-atransport-officer
   playTimeTracker: MCTransportOfficer
   startingGear: MCTransportOfficer
   dummyStartingGear: MCTransportOfficer
@@ -42,7 +42,7 @@
         RMCSkillSmartGun: -4
         RMCSkillFirearms: 1
     - type: JobPrefix
-      prefix: mc-job-prefix-assault-crewman
+      prefix: mc-job-prefix-transport-officer
     - type: TacticalMapIcon
       icon:
         sprite: _MC/Interface/job_icons.rsi
