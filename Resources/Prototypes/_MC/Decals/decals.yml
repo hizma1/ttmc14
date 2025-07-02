@@ -1,0 +1,89 @@
+- type: decal
+  parent: CMDecalBase
+  id: MCDecal
+  tags: [ station ]
+  abstract: true
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextTank
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: tank
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextSynth
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: synth
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextFiringRange
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: firingrange
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextFcdr
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: fcdr
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextEngineer
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: engineer
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextMarine
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: marine
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextMech
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: mech
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextMedical
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: medical
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextRobot
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: robot
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextLeader
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: leader
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalTextSmartgunner
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: smartgunner
+
+- type: decal
+  parent: MCDecal
+  id: MCDecalWarningBoxSmall
+  sprite:
+    sprite: _MC/Decals/decals.rsi
+    state: warningboxsmall

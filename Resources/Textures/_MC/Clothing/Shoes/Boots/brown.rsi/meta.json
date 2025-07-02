@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/63b8a30b5abd025abbfd76914a014c6167b5b1d9, https://github.com/tgstation/TerraGov-Marine-Corps/commit/63b8a30b5abd025abbfd76914a014c6167b5b1d9",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-FEET",
+      "directions": 4
+    },
+    {
+      "name": "filled"
+    }
+  ]
+}

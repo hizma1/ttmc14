@@ -98,6 +98,7 @@
   - type: Tag
     tags:
     - CMMagazineRifle
+    - MCMagazineRifle
     - MCMagazineRifleAR21
   - type: BallisticAmmoProvider
     mayTransfer: True

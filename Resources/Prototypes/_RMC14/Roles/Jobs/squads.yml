@@ -4,8 +4,8 @@
   components:
   - type: SquadTeam
     background:
-      sprite: _RMC14/Interface/cm_job_icons.rsi
-      state: hudsquad
+      sprite: _MC/Interface/squad_marine_icons.rsi
+      state: background
     maxRoles:
       CMSquadLeader: 1
       CMFireteamLeader: 2

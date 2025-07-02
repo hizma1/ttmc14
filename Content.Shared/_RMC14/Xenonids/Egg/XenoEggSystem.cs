@@ -296,8 +296,8 @@ public sealed class XenoEggSystem : EntitySystem
             return;
 
         //Eggsac code
-        if (!hiveweeds)
-            EggsacSustain(args.User, egg);
+        //if (!hiveweeds)
+        //    EggsacSustain(args.User, egg);
 
         // Hand code is god-awful and its reach distance is inconsistent with args.CanReach
         // so we need to set the position ourselves.
@@ -535,7 +535,7 @@ public sealed class XenoEggSystem : EntitySystem
         return true;
     }
 
-    private void SetEggState(Entity<XenoEggComponent> egg, XenoEggState state)
+    public void SetEggState(Entity<XenoEggComponent> egg, XenoEggState state)
     {
         egg.Comp.State = state;
         Dirty(egg);
@@ -931,7 +931,7 @@ public sealed class XenoEggSystem : EntitySystem
                     continue;
                 }
 
-                if (_weeds.IsOnHiveWeeds((gridId, grid), uid.ToCoordinates()))
+                if (_weeds.IsOnHiveWeeds((gridId, grid), uid.ToCoordinates()) || true)
                 {
                     if (HasComp<XenoFragileEggComponent>(uid))
                     {

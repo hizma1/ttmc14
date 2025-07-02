@@ -1,0 +1,7 @@
+- type: entity
+  parent: CMBed
+  id: MCBedBunk
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/bed.rsi
+    state: bunk

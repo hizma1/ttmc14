@@ -5,6 +5,7 @@
   id: CMXenoLarva
   name: Larva
   components:
+  - type: XenoHidden
   - type: GuideHelp
     guides:
     - RMCGuideRoleDrone

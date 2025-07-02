@@ -10,6 +10,7 @@
   name: Spitter
   description: A gross, oozing alien of some kind.
   components:
+  - type: XenoHidden
   - type: GuideHelp
     guides:
     - RMCGuideRoleSpitter

@@ -1,0 +1,66 @@
+- type: job
+  parent: MCJobSquad
+  id: MCResearcher
+  name: mc-job-name-researcher
+  description: mc-job-description-researcher
+  playTimeTracker: MCResearcher
+  startingGear: MCResearcher
+  dummyStartingGear: MCResearcher
+  icon: MCResearcher
+  joinNotifyCrew: false
+  supervisors: mc-job-supervisors-captain
+  accessGroups: [ MCResearcher ]
+  ranks:
+    MCResearchAssistant: []
+    MCResearcher:
+    - !type:RoleTimeRequirement
+      role: MCResearcher
+      time: 1500 # 25 hours
+    MCLecturer:
+    - !type:RoleTimeRequirement
+      role: MCResearcher
+      time: 1500 # 25 hours
+    MCAssociateProfessor:
+    - !type:RoleTimeRequirement
+      role: MCResearcher
+      time: 6000 # 100 hours
+    MCProfessor:
+    - !type:RoleTimeRequirement
+      role: MCResearcher
+      time: 18000 # 300 hours
+  roleWeight: 1
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      skills:
+        RMCSkillMedical: 4
+        RMCSkillSurgery: 3
+        RMCSkillCQC: -1
+        RMCSkillSmartGun: -4
+        # RMCSkillMelee: -1
+    - type: JobPrefix
+      prefix: mc-job-prefix-researcher
+    - type: TacticalMapIcon
+      icon:
+        sprite: _MC/Interface/job_icons.rsi
+        state: researcher
+
+- type: playTimeTracker
+  id: MCResearcher
+  isHumanoid: true
+
+- type: startingGear
+  id: MCResearcher
+  equipment:
+    id: MCIdCardResearcher
+
+- type: entity
+  parent: MCSpawnPointJob
+  id: MCSpawnPointResearcher
+  name: researcher spawn point
+  components:
+  - type: SpawnPoint
+    job_id: MCResearcher
+  - type: Sprite
+    state: medic_spawn

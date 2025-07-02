@@ -2,10 +2,26 @@
   id: MCXenoBase
   abstract: true
   components:
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: NightVision
+    overlay: false
+    drawFov: false
   - type: MCXenoDamageVisuals
+  - type: CombatMode
+    canDisarm: false
+  - type: MeleeWeapon
+    autoAttack: true
+    widePrimary: true
+    altDisarm: false
   - type: UserInterface
     interfaces:
       # MC
+      enum.MCXenoPortalPlacerUI.Key:
+        type: MCXenoChoosePortalBui
       enum.MCXenoPlantingWeedsUI.Key:
         type: MCXenoChooseWeedsBui
       # RMC
@@ -66,3 +82,66 @@
   abstract: true
   components:
   - type: MCXenoCreateResinJelly
+
+- type: entity
+  id: MCXenoAcidicSalve
+  abstract: true
+  components:
+  - type: MCXenoAcidicSalve
+
+- type: entity
+  id: MCXenoPickupOne
+  abstract: true
+  components:
+  - type: WhitelistPickup
+    whitelist:
+      components:
+      - XenoParasite
+      - XenoEgg
+      - XenoFruit
+  - type: MultiHandedHolder
+    items:
+    - hands: 2
+      whitelist:
+        components:
+        - XenoEgg
+
+- type: entity
+  id: MCXenoRewind
+  abstract: true
+  components:
+  - type: MCXenoRewind
+
+- type: entity
+  id: MCXenoBlink
+  abstract: true
+  components:
+  - type: MCXenoBlink
+
+- type: entity
+  id: MCXenoPortalPlacer
+  abstract: true
+  components:
+  - type: MCXenoPortalPlacer
+    portalFirst:
+      id: MCXenoPortalOrange
+      icon:
+        sprite: _MC/Effects/portals.rsi
+        state: orange
+    portalSecond:
+      id: MCXenoPortalBlue
+      icon:
+        sprite: _MC/Effects/portals.rsi
+        state: blue
+
+- type: entity
+  id: MCXenoGrappleToss
+  abstract: true
+  components:
+  - type: MCXenoGrappleToss
+
+- type: entity
+  id: MCXenoLayEgg
+  abstract: true
+  components:
+  - type: MCXenoLayEgg

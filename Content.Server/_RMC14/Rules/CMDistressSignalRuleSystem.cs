@@ -755,6 +755,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 return;
 
             // don't open shitcode inside
+            /*
             spawnedDropships = true;
             var dropshipMap = _mapManager.CreateMap();
             var dropshipPoints = EntityQueryEnumerator<DropshipDestinationComponent, TransformComponent>();
@@ -794,6 +795,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                     break;
                 }
             }
+            */
 
             var marineFactions = EntityQueryEnumerator<MarineIFFComponent>();
             while (marineFactions.MoveNext(out var iffId, out _))

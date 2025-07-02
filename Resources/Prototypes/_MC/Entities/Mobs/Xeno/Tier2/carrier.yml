@@ -1,0 +1,129 @@
+﻿- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  - MCXenoPlantingWeeds
+  - MCXenoCreateResinJelly
+  - MCXenoLayEgg
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoCarrierBase
+  name: Carrier
+  description: A strange-looking alien creature. It carries a number of scuttling jointed crablike creatures.
+  abstract: true
+  components:
+  - type: GhostRole
+    name: cm-job-name-xeno-carrier
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      425: Critical
+      525: Dead
+  - type: Xeno
+    role: CMXenoCarrier
+    tier: 2
+    hudOffset: 0,0.19
+    unlockAt: 300 # 5 minutes
+  - type: XenoHeavy
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoDrone
+  - type: XenoPheromones
+    pheromonesMultiplier: 2.5
+    pheroSuffix: hivelord
+  - type: XenoPlasma
+    plasma: 1000
+    maxPlasma: 1000
+    plasmaRegenOnWeeds: 50
+  - type: CMArmor
+    explosionArmor: 20
+  - type: XenoDevour
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 22
+  - type: TunnelRenamer
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 3.571
+  - type: EggPlantTime
+    plantTime: 1
+  - type: WhitelistPickup
+    whitelist:
+      components:
+      - XenoParasite
+      - XenoEgg
+      - XenoFruit
+  - type: XenoEggRetriever
+  - type: XenoNurturing
+  - type: RMCSize
+    size: Big
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: carrier
+  - type: XenoInhands
+    prefix: carrier
+  - type: IntelRecoverCorpseObjectiveOnDeath
+    value: 0.2
+  - type: FixedIdentity
+    name: cm-job-name-xeno-carrier
+
+- type: entity
+  parent: MCXenoCarrierBase
+  id: MCXenoCarrier
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/carrier.rsi
+    offset: 0,0.25
+    layers:
+    - map: [ "enum.XenoVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.RMCDamageVisualLayers.Base" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.RightArm" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.Head" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.LeftArm" ]
+      visible: false
+    - map: [ "enum.ParasiteOverlayLayers.Back" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Left" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Right" ]
+      visible: false
+    - map: [ "focused" ]
+      sprite: _RMC14/Interface/xeno_hud.rsi
+      state: hudeye
+      visible: false
+    - map: [ "targetedDirection" ]
+      sprite: _RMC14/Effects/targeted.rsi
+      state: sniper_lockon_direction
+      visible: false
+    - map: [ "targetedDirectionIntense" ]
+      sprite: _RMC14/Effects/targeted.rsi
+      state: sniper_lockon_intense_direction
+      visible: false
+  - type: Xeno
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoPheromones
+    - ActionXenoDevolve
+    - ActionXenoResinHole
+    - ActionXenoThrowParasite
+    - ActionXenoRetrieveEgg
+    - ActionXenoParasiteReserve
+    # MC
+    - MCActionXenoSelectWeeds
+    - MCActionXenoPlantWeeds
+    - MCActionXenoLayEgg
+  - type: XenoParasiteThrower
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoDefiler

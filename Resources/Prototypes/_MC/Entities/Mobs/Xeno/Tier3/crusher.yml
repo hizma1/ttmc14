@@ -1,0 +1,54 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoCrusher
+  name: Crusher
+  description: A huge tanky xenomorph.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/crusher.rsi
+    offset: 0,0.35
+  - type: GhostRole
+    name: mc-job-name-xeno-crusher
+  - type: FixedIdentity
+    name: mc-job-name-xeno-crusher
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      445: Critical
+      545: Dead
+  - type: XenoPlasma
+    plasma: 520
+    maxPlasma: 520
+    plasmaRegenOnWeeds: 40
+  - type: Xeno
+    tier: 3
+    role: MCXenoCrusher
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.15,0.25
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoBull
+    - MCXenoWarrior
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 25
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.564
+    baseSprintSpeed: 3.448
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: crusher

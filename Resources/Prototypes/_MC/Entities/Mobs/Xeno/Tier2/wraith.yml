@@ -1,0 +1,64 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  - MCXenoRewind
+  - MCXenoBlink
+  - MCXenoPortalPlacer
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoWraith
+  name: Wraith
+  description: A strange xeno that utilizes its psychic powers to move out of phase with reality.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/wraith.rsi
+    offset: 0,0.35
+  - type: FixedIdentity
+    name: mc-job-name-xeno-wraith
+  - type: GhostRole
+    name: mc-job-name-xeno-wraith
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      340: Critical
+      440: Dead
+  - type: XenoPlasma
+    plasma: 400
+    maxPlasma: 400
+    plasmaRegenOnWeeds: 35
+  - type: Xeno
+    tier: 2
+    role: MCXenoWraith
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    - MCActionXenoRewind
+    - MCActionXenoBlink
+    - MCActionXenoPortalPlacer
+    hudOffset: -0.1,0.1
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoRavager
+    - MCXenoDefiler
+    - MCXenoWarlock
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoRunner
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 24
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.448
+    baseSprintSpeed: 5.263
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: wraith

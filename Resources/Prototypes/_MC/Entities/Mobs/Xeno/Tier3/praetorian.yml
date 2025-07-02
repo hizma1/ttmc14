@@ -1,0 +1,53 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoPraetorian
+  name: Praetorian
+  description: A giant ranged monster. It looks pretty strong.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/praetorian.rsi
+    offset: 0,0.2
+  - type: GhostRole
+    name: mc-job-name-xeno-praetorian
+  - type: FixedIdentity
+    name: mc-job-name-xeno-praetorian
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      390: Critical
+      490: Dead
+  - type: XenoPlasma
+    plasma: 1000
+    maxPlasma: 1000
+    plasmaRegenOnWeeds: 100
+  - type: Xeno
+    tier: 3
+    role: MCXenoPraetorian
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.15,0.25
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoSpitter
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 23
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.857
+    baseSprintSpeed: 4
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: praetorian

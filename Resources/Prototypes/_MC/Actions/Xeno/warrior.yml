@@ -1,0 +1,17 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoGrappleToss
+  name: Grapple Toss (30)
+  description: Throw a creature you're grappling on selected tile, up to 5 tiles away. Big targets (i.e. T3's) have their range reduced by 1.
+  components:
+  - type: WorldTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/warrior.rsi
+      state: grapple_toss
+    event: !type:MCXenoGrappleTossActionEvent
+    range: 0
+    useDelay: 20
+    checkCanAccess: false
+  - type: XenoActionPlasma
+    cost: 20

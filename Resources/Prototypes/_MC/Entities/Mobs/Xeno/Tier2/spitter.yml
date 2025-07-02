@@ -1,0 +1,57 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoSpitter
+  name: Spitter
+  description: Gotta dodge!
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/spitter.rsi
+    offset: 0,0.35
+  - type: FixedIdentity
+    name: mc-job-name-xeno-spitter
+  - type: GhostRole
+    name: mc-job-name-xeno-spitter
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      360: Critical
+      460: Dead
+  - type: XenoPlasma
+    plasma: 925
+    maxPlasma: 925
+    plasmaRegenOnWeeds: 40
+  - type: Xeno
+    tier: 2
+    role: MCXenoSpitter
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1,0.1
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoPraetorian
+    - MCXenoBoiler
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoSentinel
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 20
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.941
+    baseSprintSpeed: 4.166
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: spitter

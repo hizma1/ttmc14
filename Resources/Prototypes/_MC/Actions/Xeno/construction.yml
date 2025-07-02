@@ -1,0 +1,15 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoLayEgg
+  name: Lay Egg (200)
+  description: Create an egg that will grow a larval hugger after a short delay. Empty eggs can have huggers inserted into them.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/construction.rsi
+      state: lay_egg
+    event: !type:MCXenoLayEggActionEvent
+    useDelay: 12
+  - type: XenoActionPlasma
+    cost: 200

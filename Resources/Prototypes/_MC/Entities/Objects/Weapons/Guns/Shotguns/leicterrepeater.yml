@@ -143,6 +143,7 @@
     - RMCHandful
     - Cartridge
     - MCCartridgeGovernmentRounds
+    - MCMagazineHandful
 
 - type: stack
   id: MCCartridgeGovernmentRounds

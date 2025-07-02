@@ -1,0 +1,16 @@
+- type: tile
+  parent: CMTileBase
+  id: MCMainShip
+  name: tiles-cm-floor
+  abstract: true
+  canPlaceTunnel: true
+
+- type: tile
+  parent: MCMainShip
+  id: MCMainShipDefault
+  sprite: /Textures/_MC/Tiles/MainShip/default.png
+
+- type: tile
+  parent: MCMainShip
+  id: MCMainShipPlatingCatwalk
+  sprite: /Textures/_MC/Tiles/MainShip/plating_catwalk.png
