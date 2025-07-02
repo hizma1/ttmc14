@@ -1,0 +1,147 @@
+- type: entity
+  parent: RMCBaseWeaponLMG
+  name: MG-42 Kauser light machine gun
+  id: MCWeaponMG42
+  description: The Kauser MG-42 is the TGMC's current standard non-IFF-capable LMG. It's known for its ability to lay down heavy fire support very well. It is generally used when someone wants to hold a position or provide fire support. It uses 10x24mm ammunition.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+      state: mg42
+      offset: -0.6, 0
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+  - type: Tag
+    tags:
+    - MCWeaponMG42
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Gun
+    shotsPerBurst: 5
+    selectedMode: FullAuto
+    availableModes:
+    - Burst
+    - FullAuto
+    soundGunshot:
+      path: #!!!!
+      params:
+        volume: -4
+    soundEmpty:
+      path: #!!!
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - Burst
+    - FullAuto
+    recoilWielded: 1.1
+    recoilUnwielded: 0.5
+    scatterWielded: 2
+    baseFireRate: 5
+    burstScatterMult: 3
+    modifiers:
+      Burst:
+        fireDelay: 4
+        maxScatterModifier: 10
+        unwieldedScatterMultiplier: 0
+        shotsToMaxScatter: 6
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: # !!!
+        insertSound: # !!!
+        ejectSound: # !!!
+        priority: 2
+        whitelist:
+          tags:
+          - # !!!
+  - type: GunDamageModifier
+    multiplier: 1
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-underbarrel:
+        startingAttachable: RMCAttachmentBipod
+        whitelist:
+          tags:
+          - RMCAttachmentBipod
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-underbarrel: 0.618, -0.263
+  - type: Wieldable
+  - type: GunRequiresWield
+
+
+- type: entity
+  parent: RMCMagazineLMGBase
+  id: RMCMagazineLMGM60
+  name: "M60 Ammo Box (7.62x51 NATO)"
+  components:
+  - type: Tag
+    tags:
+    - RMCMagazineLMG
+    - RMCMagazineLMGM60
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - RMCCartridgeLMGM60
+    proto: RMCCartridgeLMGM60
+    capacity: 100
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m60.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: entity
+  parent: RMCCartridgeRifleAR10
+  id: RMCCartridgeLMGM60
+  name: cartridge (7.62x51)
+  description: A 7.62x51 NATO cartridge
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - RMCCartridgeLMGM60
+  - type: CartridgeAmmo
+    proto: RMCBulletLMGM60
+
+- type: entity
+  parent: RMCBaseBullet
+  id: RMCBulletLMGM60
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 45
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 22
+      falloff: 9999
+      ignoreModifiers: true
+  - type: CMArmorPiercing
+    amount: 30
+  - type: RMCProjectileAccuracy
+    accuracy: 95
+    thresholds:
+    - range: 12
+      falloff: 10
+
+- type: Tag
+  id: RMCWeaponLMGM60
+
+- type: Tag
+  id: RMCMagazineLMGM60
+
+- type: Tag
+  id: RMCCartridgeLMGM60
