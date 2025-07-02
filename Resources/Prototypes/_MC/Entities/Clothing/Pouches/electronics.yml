@@ -1,0 +1,23 @@
+- type: entity
+  parent:
+  - MCPouchStorage
+  - MCPouchVisualizerOpen
+  id: MCPouchElectronics
+  name: electronics pouch
+  description: It is designed to hold most electronics, power cells and circuitboards.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/electronics.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,11,1 # 6 slots
+    whitelist:
+      tags:
+      - RMCCircuitboard
+      - PowerCell
+      components:
+      - ComputerBoard
+      - MachineBoard
+      - SmartGunBattery
+  - type: FixedItemSizeStorage

@@ -1,0 +1,24 @@
+- type: accessGroup
+  id: MCCMO
+  tags:
+  - MCAccessMedbay
+  - MCAccessCMO
+  - MCAccessBridge
+  - MCAccessDropship
+  - MCAccessResearch
+  - MCAccessChemistry
+
+- type: accessGroup
+  id: MCDoctor
+  tags:
+  - MCAccessMedbay
+  - MCAccessChemistry
+
+- type: accessGroup
+  id: MCResearcher
+  tags:
+  - MCAccessChemistry
+  - MCAccessMedbay
+  - MCAccessResearch
+  - MCAccessEngineering
+  # TODO: 102

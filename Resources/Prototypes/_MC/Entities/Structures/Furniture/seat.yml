@@ -1,0 +1,71 @@
+- type: entity
+  parent: CMSeatBase
+  id: MCSeatVehicle
+  name: Common seat
+  description: Holds you in place during high altitude drops.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/seats.rsi
+    state: vehicle
+
+- type: entity
+  parent: CMSeatBase
+  id: MCSeatVehicleAlpha
+  name: Alpha Squad Leader's Chair
+  description: A chair specially reserved for the Alpha Squad Leader.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/seats.rsi
+    state: vehicle_alpha
+
+- type: entity
+  parent: CMSeatBase
+  id: MCSeatVehicleBravo
+  name: Bravo Squad Leader's Chair
+  description: A chair specially reserved for the Bravo Squad Leader.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/seats.rsi
+    state: vehicle_bravo
+
+- type: entity
+  parent: CMSeatBase
+  id: MCSeatVehicleCharlie
+  name: Charlie Squad Leader's Chair
+  description: A chair specially reserved for the Charlie Squad Leader.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/seats.rsi
+    state: vehicle_charlie
+
+- type: entity
+  parent: CMSeatBase
+  id: MCSeatVehicleDelta
+  name: Delta Squad Leader's Chair
+  description: A chair specially reserved for the Delta Squad Leader.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/seats.rsi
+    state: vehicle_delta
+
+- type: entity
+  parent: CMSeatBase
+  id: MCSeatVehicleFC
+  name: Field Commander's Chair
+  description: A chair specially reserved for the Field Commander.
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/seats.rsi
+    state: vehicle_fc

@@ -9,6 +9,7 @@
   name: Queen
   description: A huge, looming alien creature. The biggest and the baddest.
   components:
+  - type: XenoHidden
   - type: GuideHelp
     guides:
     - RMCGuideRoleQueen

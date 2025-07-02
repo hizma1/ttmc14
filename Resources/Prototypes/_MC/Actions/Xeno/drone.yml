@@ -1,0 +1,62 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoSelectWeeds
+  name: Select Weeds
+  description: Choose a weeds to plant with the 'Plant Weeds' ability.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/weed_icons.rsi
+      state: default
+    event: !type:MCXenoChooseWeedsActionEvent
+    useDelay: 0.1
+  - type: MCXenoChooseWeedsAction
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoPlantWeeds
+  name: Plant Weeds
+  description: Plants a resin weed node, which will start growing resin weeds in a 3-tile radius that allows xenomorphs to heal and restore plasma while on top of the tile.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: plant_weeds
+    event: !type:MCXenoPlaceWeedsActionEvent
+    useDelay: 0.1
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoCreateResinJelly
+  name: Create Resin Jelly (100)
+  description: Places Resin Jelly in your active hand, which can be used on yourself or other xeno castes for a 30-second protection from fire.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Objects/Xeno/resin_jelly.rsi
+      state: icon
+    event: !type:MCXenoCreateResinJellyActionEvent
+    useDelay: 45
+  - type: XenoActionPlasma
+    cost: 100
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoAcidicSalve
+  name: Acidic Salve (150)
+  description: Allows you to spend 150 plasma on healing a xeno for 50 HP + (Recovery Pheremone Level * the Xeno's max health * 0.01) along with healing (total heal amount/10) sunder.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/drone.rsi
+      state: heal_xeno
+    event: !type:MCXenoAcidicSlaveActionEvent
+    range: 1.5
+    useDelay: 5
+    deselectOnMiss: false
+  - type: XenoActionPlasma
+    cost: 150

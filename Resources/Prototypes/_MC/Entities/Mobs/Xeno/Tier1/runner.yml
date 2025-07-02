@@ -1,0 +1,57 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoRunner
+  name: Runner
+  description: A fast, four-legged terror. Weak in sustained combat.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/runner.rsi
+    offset: 0,0.75
+  - type: FixedIdentity
+    name: mc-job-name-xeno-runner
+  - type: GhostRole
+    name: mc-job-name-xeno-runner
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Critical
+      400: Dead
+  - type: XenoPlasma
+    plasma: 200
+    maxPlasma: 200
+    plasmaRegenOnWeeds: 11
+  - type: Xeno
+    tier: 1
+    role: MCXenoWraith
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    hudOffset: -0.1,0.1
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoWraith
+    - MCXenoHunter
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoLarva
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 23
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.846
+    baseSprintSpeed: 6.25
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: runner

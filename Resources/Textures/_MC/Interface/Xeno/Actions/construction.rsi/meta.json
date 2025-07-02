@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/59aec54cde85e2f20173a55d9a39606b43bf6fe8",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "resin_door"
+    },
+    {
+      "name": "thick_resin_door"
+    },
+    {
+      "name": "resin_membrane"
+    },
+    {
+      "name": "resin_wall"
+    },
+    {
+      "name": "bulletproof_resin_wall"
+    },
+    {
+      "name": "fireproof_resin_wall"
+    },
+    {
+      "name": "hardy_resin_wall"
+    },
+    {
+      "name": "sticky_resin"
+    },
+    {
+      "name": "resting_weed_sac",
+      "delays": [
+        [
+          0.6,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "sticky_weed_sac",
+      "delays": [
+        [
+          0.6,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "weed_sac",
+      "delays": [
+        [
+          0.6,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "place_trap"
+    },
+    {
+      "name": "lay_egg"
+    },
+    {
+      "name": "night_shade",
+      "delays": [
+        [
+          0.8,
+          0.4,
+          0.4,
+          0.4,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "power_fruit",
+      "delays": [
+        [
+          1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "hard_fruit",
+      "delays": [
+        [
+          1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "life_fruit",
+      "delays": [
+        [
+          1,
+          0.4,
+          0.2,
+          0.1,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "resin_jelly"
+    },
+    {
+      "name": "resin_jelly_pod"
+    },
+    {
+      "name": "recovery_pylon"
+    }
+  ]
+}

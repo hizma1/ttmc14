@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/47a34ca650587db32846f87a622016590fe0b3d4",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "rewind"
+    },
+    {
+      "name": "blink"
+    },
+    {
+      "name": "Recall"
+    },
+    {
+      "name": "time_stop"
+    },
+    {
+      "name": "portal"
+    }
+  ]
+}

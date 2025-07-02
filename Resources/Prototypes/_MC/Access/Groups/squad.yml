@@ -1,0 +1,35 @@
+- type: accessGroup
+  id: MCSquadLeader
+  tags:
+  - MCAccessDropship
+  - MCAccessTadpole
+  - MCAccessPreparation
+  - MCAccessMarineSquadLeader
+
+- type: accessGroup
+  id: MCSquadSmartgunner
+  tags:
+  - MCAccessPreparation
+  - MCAccessMarineSquadSmartPreparation
+
+- type: accessGroup
+  id: MCSquadEngineering
+  tags:
+  - MCAccessRemoteBuild
+  - MCAccessEngineeringPreparation
+  - MCAccessEngineering
+  - MCAccessPreparation
+  # TODO: 102
+
+- type: accessGroup
+  id: MCSquadCorpsman
+  tags:
+  - MCAccessChemistry
+  - MCAccessMedicalPreparation
+  - MCAccessMedbay
+  - MCAccessPreparation
+
+- type: accessGroup
+  id: MCSquadMarine
+  tags:
+  - MCAccessPreparation

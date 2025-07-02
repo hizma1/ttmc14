@@ -1,0 +1,82 @@
+- type: accessGroup
+  id: MCCaptain
+  tags:
+  - MCAccessCapitan
+  - MCAccessLogistics
+  - MCAccessBrig
+  - MCAccessArmory
+  - MCAccessCMO
+  - MCAccessCE
+  - MCAccessEngineering
+  - MCAccessMedbay
+  - MCAccessPreparation
+  - MCAccessMedicalPreparation
+  - MCAccessEngineeringPreparation
+  - MCAccessMarineSquadLeader
+  - MCAccessResearch
+  - MCAccessMarineSquadSmartPreparation
+  - MCAccessCommander
+  - MCAccessBridge
+  - MCAccessChemistry
+  - MCAccessCargo
+  - MCAccessDropship
+  - MCAccessPilot
+  - MCAccessWO
+  - MCAccessRO
+  - MCAccessMech
+  - MCAccessTadpole
+  - MCAccessArmored
+  - MCAccessRemoteBuild
+  - MCAccessMarineSquadAlpha
+  - MCAccessMarineSquadBravo
+  - MCAccessMarineSquadCharlie
+  - MCAccessMarineSquadDelta
+  # TODO: 103, 101, 102, 100
+
+- type: accessGroup
+  id: MCFC
+  tags:
+  - MCAccessCapitan
+  - MCAccessLogistics
+  - MCAccessBrig
+  - MCAccessArmory
+  - MCAccessCMO
+  - MCAccessCE
+  - MCAccessEngineering
+  - MCAccessMedbay
+  - MCAccessPreparation
+  - MCAccessMedicalPreparation
+  - MCAccessEngineeringPreparation
+  - MCAccessMarineSquadLeader
+  - MCAccessResearch
+  - MCAccessMarineSquadSmartPreparation
+  - MCAccessCommander
+  - MCAccessBridge
+  - MCAccessChemistry
+  - MCAccessCargo
+  - MCAccessDropship
+  - MCAccessPilot
+  - MCAccessWO
+  - MCAccessRO
+  - MCAccessMech
+  - MCAccessTadpole
+  - MCAccessArmored
+  - MCAccessRemoteBuild
+  - MCAccessMarineSquadAlpha
+  - MCAccessMarineSquadBravo
+  - MCAccessMarineSquadCharlie
+  - MCAccessMarineSquadDelta
+  # TODO: 103, 101, 102, 100
+
+- type: accessGroup
+  id: MCSO
+  tags:
+  - MCAccessLogistics
+  - MCAccessBrig
+  - MCAccessBridge
+  - MCAccessCargo
+  - MCAccessDropship
+  - MCAccessMarineSquadAlpha
+  - MCAccessMarineSquadBravo
+  - MCAccessMarineSquadCharlie
+  - MCAccessMarineSquadDelta

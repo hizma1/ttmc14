@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/a036d859deed46253cc81173fde7284d615675d7",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "vehicle"
+    },
+    {
+      "name": "vehicle_buckled"
+    },
+    {
+      "name": "vehicle_broken"
+    },
+    {
+      "name": "vehicle_alpha"
+    },
+    {
+      "name": "vehicle_charlie"
+    },
+    {
+      "name": "vehicle_delta"
+    },
+    {
+      "name": "vehicle_fc"
+    },
+    {
+      "name": "vehicle_alpha_buckled"
+    },
+    {
+      "name": "vehicle_bravo_buckled"
+    },
+    {
+      "name": "vehicle_chair_charlie_buckled"
+    },
+    {
+      "name": "vehicle_delta_buckled"
+    },
+    {
+      "name": "vehicle_fc_buckled"
+    },
+    {
+      "name": "vehicle_alpha_broken"
+    },
+    {
+      "name": "vehicle_bravo_broken"
+    },
+    {
+      "name": "vehicle_charlie_broken"
+    },
+    {
+      "name": "vehicle_delta_broken"
+    },
+    {
+      "name": "vehicle_fc_broken"
+    },
+    {
+      "name": "ob",
+      "directions": 4
+    },
+    {
+      "name": "vehicle_bravo"
+    }
+  ]
+}

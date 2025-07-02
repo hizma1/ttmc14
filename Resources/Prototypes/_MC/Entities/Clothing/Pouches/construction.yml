@@ -1,0 +1,35 @@
+- type: entity
+  parent:
+  - MCPouchStorage
+  - MCPouchVisualizerOpen
+  id: MCPouchConstruction
+  name: construction pouch
+  description: It's designed to hold construction materials - glass/metal sheets, metal rods, barbed wire, cable coil, and empty sandbags. It also has a hook for an entrenching tool.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Pouches/construction.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,7,1 # 4 slots
+    whitelist:
+      tags:
+      - Sheet
+      - RodMetal1
+      - CableCoil
+      components:
+      - BarbedWire
+      - EntrenchingTool
+      - EmptySandbag
+  - type: FixedItemSizeStorage
+
+- type: entity
+  parent: MCPouchConstruction
+  id: MCPouchConstructionFill
+  suffix: Fill
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMSandbagEmpty25
+    - id: BarbedWire10 # TODO 5
+    - id: CMEntrenchingTool

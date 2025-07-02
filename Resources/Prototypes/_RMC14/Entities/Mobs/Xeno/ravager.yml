@@ -11,6 +11,7 @@
   description: A huge, nasty red alien with enormous scythed claws.
   abstract: true
   components:
+  - type: XenoHidden
   - type: GuideHelp
     guides:
     - RMCGuideRoleRavager

@@ -1,0 +1,31 @@
+- type: entity
+  parent: CMBootsBlack
+  id: MCBootsBlack
+  name: marine combat boots
+  description: Standard issue combat boots for combat scenarios or combat situations. All combat, all the time.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+
+- type: entity
+  parent: [ RMCItemSlotM5Bayonet, CMBootsBlack ]
+  id: MCBootsBlackFilled
+  suffix: Filled
+
+# Brown Boots
+- type: entity
+  parent: CMBootsBlack
+  id: MCBootsBrown
+  description: Standard issue combat boots for combat scenarios or combat situations. All combat, all the time. These are brown.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+
+- type: entity
+  parent: [ RMCItemSlotM5Bayonet, CMBootsBrown ]
+  id: MCBootsBrownFilled
+  suffix: Filled

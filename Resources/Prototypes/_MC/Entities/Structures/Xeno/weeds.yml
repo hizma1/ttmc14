@@ -25,7 +25,7 @@
         density: 1000
         hard: false
   - type: XenoWeeds
-    speedMultiplierXeno: 1
+    speedMultiplierXeno: 1.667
     speedMultiplierOutsider: 1
     speedMultiplierOutsiderArmor: 1
     range: 3
@@ -188,7 +188,6 @@
     sprite: _MC/Structures/Xeno/Weeds/blue.rsi
   - type: XenoWeeds
     spawns: MCXenoWeedsSticky
-    speedMultiplierXeno: 1.667
     speedMultiplierOutsider: 0.333
     speedMultiplierOutsiderArmor: 0.333
 
@@ -200,7 +199,6 @@
     sprite: _MC/Structures/Xeno/Weeds/blue.rsi
   - type: XenoWeeds
     spawns: MCXenoWeedsSticky
-    speedMultiplierXeno: 1.667
     speedMultiplierOutsider: 0.333
     speedMultiplierOutsiderArmor: 0.333
 

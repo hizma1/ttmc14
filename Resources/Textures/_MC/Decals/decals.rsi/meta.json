@@ -1,0 +1,1216 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "delivery"
+    },
+    {
+      "name": "bot"
+    },
+    {
+      "name": "loadingarea",
+      "directions": 4
+    },
+    {
+      "name": "sandyfloor"
+    },
+    {
+      "name": "sandyplating"
+    },
+    {
+      "name": "ashyfloor"
+    },
+    {
+      "name": "ashyplating"
+    },
+    {
+      "name": "warn_end",
+      "directions": 4
+    },
+    {
+      "name": "warn_box"
+    },
+    {
+      "name": "ast_warn",
+      "directions": 8
+    },
+    {
+      "name": "ast_warn_corner",
+      "directions": 4
+    },
+    {
+      "name": "ast_warn_end",
+      "directions": 4
+    },
+    {
+      "name": "ast_warn_box"
+    },
+    {
+      "name": "ast_warn_full"
+    },
+    {
+      "name": "plaque"
+    },
+    {
+      "name": "SBC1"
+    },
+    {
+      "name": "SBC2"
+    },
+    {
+      "name": "SBC3"
+    },
+    {
+      "name": "SBC4"
+    },
+    {
+      "name": "SBC5"
+    },
+    {
+      "name": "SBC6"
+    },
+    {
+      "name": "SBC7"
+    },
+    {
+      "name": "SBC8"
+    },
+    {
+      "name": "SBC9"
+    },
+    {
+      "name": "SBC10"
+    },
+    {
+      "name": "delivery_red"
+    },
+    {
+      "name": "bot_red"
+    },
+    {
+      "name": "loadingarea_red",
+      "directions": 4
+    },
+    {
+      "name": "delivery_white"
+    },
+    {
+      "name": "bot_white"
+    },
+    {
+      "name": "loadingarea_white",
+      "directions": 4
+    },
+    {
+      "name": "caution",
+      "directions": 4
+    },
+    {
+      "name": "caution_red",
+      "directions": 4
+    },
+    {
+      "name": "caution_white",
+      "directions": 4
+    },
+    {
+      "name": "stand_clear",
+      "directions": 4
+    },
+    {
+      "name": "stand_clear_red",
+      "directions": 4
+    },
+    {
+      "name": "stand_clear_white",
+      "directions": 4
+    },
+    {
+      "name": "warn_end_white",
+      "directions": 4
+    },
+    {
+      "name": "warn_box_white"
+    },
+    {
+      "name": "warn_full_white"
+    },
+    {
+      "name": "arrows",
+      "directions": 4
+    },
+    {
+      "name": "arrows_red",
+      "directions": 4
+    },
+    {
+      "name": "arrows_white",
+      "directions": 4
+    },
+    {
+      "name": "box_white"
+    },
+    {
+      "name": "box_corners_white",
+      "directions": 4
+    },
+    {
+      "name": "warn_end_red",
+      "directions": 4
+    },
+    {
+      "name": "warn_box_red"
+    },
+    {
+      "name": "warn_full_red"
+    },
+    {
+      "name": "box_red"
+    },
+    {
+      "name": "box_corners_red",
+      "directions": 4
+    },
+    {
+      "name": "box"
+    },
+    {
+      "name": "box_corners",
+      "directions": 4
+    },
+    {
+      "name": "bot_right"
+    },
+    {
+      "name": "bot_left"
+    },
+    {
+      "name": "bot_right_white"
+    },
+    {
+      "name": "bot_left_white"
+    },
+    {
+      "name": "bot_right_red"
+    },
+    {
+      "name": "bot_left_red"
+    },
+    {
+      "name": "tile_corner",
+      "directions": 4
+    },
+    {
+      "name": "tile_opposing_corners",
+      "directions": 4
+    },
+    {
+      "name": "tile_half",
+      "directions": 4
+    },
+    {
+      "name": "tile_half_contrasted",
+      "directions": 4
+    },
+    {
+      "name": "tile_anticorner",
+      "directions": 4
+    },
+    {
+      "name": "tile_anticorner_contrasted",
+      "directions": 4
+    },
+    {
+      "name": "tile_fourcorners"
+    },
+    {
+      "name": "tile_full"
+    },
+    {
+      "name": "diagonal_centre"
+    },
+    {
+      "name": "diagonal_edge"
+    },
+    {
+      "name": "RAVEN1",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN2",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN3",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN4",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN5",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN6",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN7",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN8",
+      "directions": 4
+    },
+    {
+      "name": "RAVEN9",
+      "directions": 4
+    },
+    {
+      "name": "trimline",
+      "directions": 8
+    },
+    {
+      "name": "trimline_mid",
+      "directions": 4
+    },
+    {
+      "name": "trimline_corner",
+      "directions": 4
+    },
+    {
+      "name": "trimline_end",
+      "directions": 4
+    },
+    {
+      "name": "trimline_box"
+    },
+    {
+      "name": "trimline_fill",
+      "directions": 8
+    },
+    {
+      "name": "trimline_mid_fill",
+      "directions": 4
+    },
+    {
+      "name": "trimline_corner_fill",
+      "directions": 4
+    },
+    {
+      "name": "trimline_end_fill",
+      "directions": 4
+    },
+    {
+      "name": "trimline_box_fill"
+    },
+    {
+      "name": "trimline_arrow_cw",
+      "directions": 8
+    },
+    {
+      "name": "trimline_arrow_ccw",
+      "directions": 8
+    },
+    {
+      "name": "trimline_arrow_cw_fill",
+      "directions": 8
+    },
+    {
+      "name": "trimline_arrow_ccw_fill",
+      "directions": 8
+    },
+    {
+      "name": "trimline_warn",
+      "directions": 8
+    },
+    {
+      "name": "trimline_warn_fill",
+      "directions": 8
+    },
+    {
+      "name": "trimline_shrink_cw",
+      "directions": 4
+    },
+    {
+      "name": "trimline_shrink_ccw",
+      "directions": 4
+    },
+    {
+      "name": "dirt_side",
+      "directions": 8
+    },
+    {
+      "name": "survival",
+      "directions": 4
+    },
+    {
+      "name": "mining"
+    },
+    {
+      "name": "siding_line",
+      "directions": 8
+    },
+    {
+      "name": "siding_corner",
+      "directions": 4
+    },
+    {
+      "name": "siding_end",
+      "directions": 4
+    },
+    {
+      "name": "siding_wood_line",
+      "directions": 8
+    },
+    {
+      "name": "siding_wood_corner",
+      "directions": 4
+    },
+    {
+      "name": "siding_wood_end",
+      "directions": 4
+    },
+    {
+      "name": "siding_thinplating_line",
+      "directions": 8
+    },
+    {
+      "name": "siding_thinplating_end",
+      "directions": 4
+    },
+    {
+      "name": "siding_thinplating_corner",
+      "directions": 4
+    },
+    {
+      "name": "siding_wideplating_line",
+      "directions": 8
+    },
+    {
+      "name": "siding_wideplating_end",
+      "directions": 4
+    },
+    {
+      "name": "siding_wideplating_corner",
+      "directions": 4
+    },
+    {
+      "name": "siding_thinplating_new_line",
+      "directions": 8
+    },
+    {
+      "name": "siding_thinplating_new_end",
+      "directions": 4
+    },
+    {
+      "name": "siding_thinplating_new_corner",
+      "directions": 4
+    },
+    {
+      "name": "siding_wideplating_new_line",
+      "directions": 8
+    },
+    {
+      "name": "siding_wideplating_new_end",
+      "directions": 4
+    },
+    {
+      "name": "siding_wideplating_new_corner",
+      "directions": 4
+    },
+    {
+      "name": "synd1,1",
+      "directions": 4
+    },
+    {
+      "name": "synd1,2",
+      "directions": 4
+    },
+    {
+      "name": "synd1,3",
+      "directions": 4
+    },
+    {
+      "name": "synd2,1",
+      "directions": 4
+    },
+    {
+      "name": "synd2,2",
+      "directions": 4
+    },
+    {
+      "name": "synd2,3",
+      "directions": 4
+    },
+    {
+      "name": "synd3,1",
+      "directions": 4
+    },
+    {
+      "name": "synd3,2",
+      "directions": 4
+    },
+    {
+      "name": "synd3,3",
+      "directions": 4
+    },
+    {
+      "name": "board_1",
+      "directions": 4
+    },
+    {
+      "name": "board_2",
+      "directions": 4
+    },
+    {
+      "name": "board_3",
+      "directions": 4
+    },
+    {
+      "name": "board_4",
+      "directions": 4
+    },
+    {
+      "name": "board_5",
+      "directions": 4
+    },
+    {
+      "name": "board_6",
+      "directions": 4
+    },
+    {
+      "name": "board_7",
+      "directions": 4
+    },
+    {
+      "name": "board_8",
+      "directions": 4
+    },
+    {
+      "name": "board_a",
+      "directions": 4
+    },
+    {
+      "name": "board_b",
+      "directions": 4
+    },
+    {
+      "name": "board_c",
+      "directions": 4
+    },
+    {
+      "name": "board_d",
+      "directions": 4
+    },
+    {
+      "name": "board_e",
+      "directions": 4
+    },
+    {
+      "name": "board_f",
+      "directions": 4
+    },
+    {
+      "name": "board_g",
+      "directions": 4
+    },
+    {
+      "name": "board_h",
+      "directions": 4
+    },
+    {
+      "name": "trimline_tram",
+      "directions": 4
+    },
+    {
+      "name": "pinkdecal",
+      "directions": 4
+    },
+    {
+      "name": "blackdecal",
+      "directions": 4
+    },
+    {
+      "name": "bluedecal",
+      "directions": 4
+    },
+    {
+      "name": "yellowdecal",
+      "directions": 4
+    },
+    {
+      "name": "redecal",
+      "directions": 4
+    },
+    {
+      "name": "whitedecal",
+      "directions": 4
+    },
+    {
+      "name": "graydecal",
+      "directions": 4
+    },
+    {
+      "name": "greendecal",
+      "directions": 4
+    },
+    {
+      "name": "grid"
+    },
+    {
+      "name": "browndecal",
+      "directions": 4
+    },
+    {
+      "name": "corsattile",
+      "directions": 4
+    },
+    {
+      "name": "corsatlinecorner",
+      "directions": 4
+    },
+    {
+      "name": "corsatlinesemi",
+      "directions": 4
+    },
+    {
+      "name": "stripe_box_thick"
+    },
+    {
+      "name": "stripe_line_thick",
+      "directions": 4
+    },
+    {
+      "name": "stripe_box_semi",
+      "directions": 4
+    },
+    {
+      "name": "stripe_box_threeside",
+      "directions": 4
+    },
+    {
+      "name": "stripe_thick_center",
+      "directions": 4
+    },
+    {
+      "name": "SE-out"
+    },
+    {
+      "name": "S"
+    },
+    {
+      "name": "SW-out"
+    },
+    {
+      "name": "E"
+    },
+    {
+      "name": "W"
+    },
+    {
+      "name": "NE-out"
+    },
+    {
+      "name": "N"
+    },
+    {
+      "name": "NW-out"
+    },
+    {
+      "name": "alphadrop"
+    },
+    {
+      "name": "bravodrop"
+    },
+    {
+      "name": "deltadrop"
+    },
+    {
+      "name": "charliedrop"
+    },
+    {
+      "name": "thin",
+      "directions": 8
+    },
+    {
+      "name": "thick",
+      "directions": 8
+    },
+    {
+      "name": "cornerthick",
+      "directions": 4
+    },
+    {
+      "name": "warningarrow",
+      "directions": 4
+    },
+    {
+      "name": "warningboxsmall",
+      "directions": 4
+    },
+    {
+      "name": "warningbox"
+    },
+    {
+      "name": "warningboxempty"
+    },
+    {
+      "name": "leader"
+    },
+    {
+      "name": "synth"
+    },
+    {
+      "name": "fcdr"
+    },
+    {
+      "name": "firingrange"
+    },
+    {
+      "name": "smartgunner"
+    },
+    {
+      "name": "engineer"
+    },
+    {
+      "name": "mech",
+      "directions": 4
+    },
+    {
+      "name": "medical",
+      "directions": 4
+    },
+    {
+      "name": "robot",
+      "directions": 4
+    },
+    {
+      "name": "marine",
+      "directions": 4
+    },
+    {
+      "name": "tank",
+      "directions": 4
+    },
+    {
+      "name": "sigma"
+    },
+    {
+      "name": "smallstripe",
+      "directions": 4
+    },
+    {
+      "name": "smallstripevert",
+      "directions": 4
+    },
+    {
+      "name": "gamma"
+    },
+    {
+      "name": "theta"
+    },
+    {
+      "name": "omega"
+    },
+    {
+      "name": "stripe_square"
+    },
+    {
+      "name": "stripe_square_border"
+    },
+    {
+      "name": "stripe_square_tile"
+    },
+    {
+      "name": "stripe_square_tile_border"
+    },
+    {
+      "name": "wood_siding",
+      "directions": 8
+    },
+    {
+      "name": "wood_siding1"
+    },
+    {
+      "name": "wood_siding2"
+    },
+    {
+      "name": "wood_siding3"
+    },
+    {
+      "name": "wood_siding4"
+    },
+    {
+      "name": "wood_siding5"
+    },
+    {
+      "name": "wood_siding6"
+    },
+    {
+      "name": "wood_sidingalt",
+      "directions": 8
+    },
+    {
+      "name": "wood_siding7"
+    },
+    {
+      "name": "wood_siding8"
+    },
+    {
+      "name": "wood_siding9"
+    },
+    {
+      "name": "wood_siding10"
+    },
+    {
+      "name": "wood_siding11"
+    },
+    {
+      "name": "wood_siding12"
+    },
+    {
+      "name": "wood_siding13"
+    },
+    {
+      "name": "wood_siding14"
+    },
+    {
+      "name": "wood_siding15"
+    },
+    {
+      "name": "siding",
+      "directions": 8
+    },
+    {
+      "name": "siding1"
+    },
+    {
+      "name": "siding2"
+    },
+    {
+      "name": "siding4"
+    },
+    {
+      "name": "siding8"
+    },
+    {
+      "name": "siding6"
+    },
+    {
+      "name": "siding5"
+    },
+    {
+      "name": "siding10"
+    },
+    {
+      "name": "siding9"
+    },
+    {
+      "name": "siding7"
+    },
+    {
+      "name": "siding11"
+    },
+    {
+      "name": "siding13"
+    },
+    {
+      "name": "siding14"
+    },
+    {
+      "name": "siding15"
+    },
+    {
+      "name": "grayfloorlarge"
+    },
+    {
+      "name": "floor_large"
+    },
+    {
+      "name": "corsatlinesemitwo",
+      "directions": 4
+    },
+    {
+      "name": "corsattiletwo",
+      "directions": 4
+    },
+    {
+      "name": "corsatlinecornertwo",
+      "directions": 4
+    },
+    {
+      "name": "warning_line",
+      "directions": 8
+    },
+    {
+      "name": "warning_corner",
+      "directions": 4
+    },
+    {
+      "name": "warning_full"
+    },
+    {
+      "name": "warning_line_white",
+      "directions": 8
+    },
+    {
+      "name": "warning_linecorner_white",
+      "directions": 4
+    },
+    {
+      "name": "warning_line_red",
+      "directions": 8
+    },
+    {
+      "name": "warning_linecorner_red",
+      "directions": 4
+    },
+    {
+      "name": "techfloor_edges",
+      "directions": 8
+    },
+    {
+      "name": "techfloor_corners",
+      "directions": 4
+    },
+    {
+      "name": "techfloororange_edges",
+      "directions": 8
+    },
+    {
+      "name": "techfloororange_corners",
+      "directions": 4
+    },
+    {
+      "name": "bordercolorhalf",
+      "directions": 4
+    },
+    {
+      "name": "bordercolormonofull"
+    },
+    {
+      "name": "borderfloor_black",
+      "directions": 8
+    },
+    {
+      "name": "borderfloorcorner_black",
+      "directions": 4
+    },
+    {
+      "name": "borderfloorcorner2_black",
+      "directions": 8
+    },
+    {
+      "name": "borderfloorfull_black"
+    },
+    {
+      "name": "borderfloorcee_black",
+      "directions": 4
+    },
+    {
+      "name": "corner_techfloor_gray",
+      "directions": 8
+    },
+    {
+      "name": "corner_techfloor_gray_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "corner_techfloor_gray_full",
+      "directions": 4
+    },
+    {
+      "name": "corner_techfloor_grid",
+      "directions": 8
+    },
+    {
+      "name": "corner_techfloor_grid_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "corner_techfloor_grid_full",
+      "directions": 4
+    },
+    {
+      "name": "danger",
+      "directions": 8
+    },
+    {
+      "name": "dangercorner",
+      "directions": 4
+    },
+    {
+      "name": "dangerfull"
+    },
+    {
+      "name": "dangercee",
+      "directions": 4
+    },
+    {
+      "name": "steel_grid",
+      "directions": 8
+    },
+    {
+      "name": "steel_grid_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "steel_grid_full",
+      "directions": 4
+    },
+    {
+      "name": "borderfloor",
+      "directions": 8
+    },
+    {
+      "name": "borderfloorcorner",
+      "directions": 4
+    },
+    {
+      "name": "borderfloorcorner2",
+      "directions": 8
+    },
+    {
+      "name": "borderfloorfull"
+    },
+    {
+      "name": "borderfloorcee",
+      "directions": 4
+    },
+    {
+      "name": "alt_loadingarea",
+      "directions": 4
+    },
+    {
+      "name": "alt_delivery"
+    },
+    {
+      "name": "overstripe",
+      "directions": 4
+    },
+    {
+      "name": "stripe",
+      "directions": 8
+    },
+    {
+      "name": "overstripecorner",
+      "directions": 4
+    },
+    {
+      "name": "stripecorner",
+      "directions": 4
+    },
+    {
+      "name": "overstripefull"
+    },
+    {
+      "name": "stripefull"
+    },
+    {
+      "name": "overstripecee",
+      "directions": 4
+    },
+    {
+      "name": "stripecee",
+      "directions": 4
+    },
+    {
+      "name": "stripefulltile"
+    },
+    {
+      "name": "edge",
+      "directions": 8
+    },
+    {
+      "name": "edge_corner",
+      "directions": 4
+    },
+    {
+      "name": "techfloor_hole_left",
+      "directions": 4
+    },
+    {
+      "name": "techfloor_hole_right",
+      "directions": 4
+    },
+    {
+      "name": "corner_oldtile",
+      "directions": 8
+    },
+    {
+      "name": "corner_oldtile_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "corner_oldtile_full",
+      "directions": 4
+    },
+    {
+      "name": "corner_kafel",
+      "directions": 8
+    },
+    {
+      "name": "corner_kafel_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "corner_kafel_full",
+      "directions": 4
+    },
+    {
+      "name": "corner_white",
+      "directions": 8
+    },
+    {
+      "name": "corner_white_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "corner_white_full",
+      "directions": 4
+    },
+    {
+      "name": "wide_corner",
+      "directions": 8
+    },
+    {
+      "name": "wide_corner_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "wide_corner_full",
+      "directions": 8
+    },
+    {
+      "name": "corner_light",
+      "directions": 8
+    },
+    {
+      "name": "corner_light_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "corner_light_full",
+      "directions": 4
+    },
+    {
+      "name": "wide_corner_light",
+      "directions": 8
+    },
+    {
+      "name": "wide_corner_diagonal_light",
+      "directions": 4
+    },
+    {
+      "name": "wide_corner_full_light",
+      "directions": 8
+    },
+    {
+      "name": "full_corner",
+      "directions": 8
+    },
+    {
+      "name": "full_corner_diagonal",
+      "directions": 4
+    },
+    {
+      "name": "full_corner_full",
+      "directions": 8
+    },
+    {
+      "name": "outline"
+    },
+    {
+      "name": "spline_fancy",
+      "directions": 8
+    },
+    {
+      "name": "spline_fancy_corner",
+      "directions": 4
+    },
+    {
+      "name": "spline_fancy_cee",
+      "directions": 4
+    },
+    {
+      "name": "spline_fancy_full"
+    },
+    {
+      "name": "loadingarea_alt",
+      "directions": 4
+    },
+    {
+      "name": "delivery_alt"
+    },
+    {
+      "name": "cargo"
+    },
+    {
+      "name": "cargo_arrow",
+      "directions": 4
+    },
+    {
+      "name": "test_floor5"
+    },
+    {
+      "name": "logo_central",
+      "directions": 4
+    },
+    {
+      "name": "logo_directional_south",
+      "directions": 8
+    },
+    {
+      "name": "logo_directional_north",
+      "directions": 8
+    },
+    {
+      "name": "logo_directional_east",
+      "directions": 8
+    },
+    {
+      "name": "logo_directional_west",
+      "directions": 8
+    },
+    {
+      "name": "spline_plain",
+      "directions": 8
+    },
+    {
+      "name": "spline_plain_cee",
+      "directions": 4
+    },
+    {
+      "name": "spline_plain_full"
+    },
+    {
+      "name": "spline_plain_corner",
+      "directions": 4
+    },
+    {
+      "name": "coag_decal",
+      "directions": 4
+    },
+    {
+      "name": "coag_decal_corner",
+      "directions": 4
+    },
+    {
+      "name": "coag_decal_no_rust",
+      "directions": 4
+    },
+    {
+      "name": "coag_decal_corner_no_rust",
+      "directions": 4
+    }
+  ]
+}

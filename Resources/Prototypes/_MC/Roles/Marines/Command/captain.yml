@@ -1,0 +1,75 @@
+- type: job
+  parent: MCJobSquad
+  id: MCCaptain
+  name: mc-job-name-captain
+  description: mc-job-description-captain
+  playTimeTracker: MCCaptain
+  startingGear: MCCaptain
+  dummyStartingGear: MCCaptain
+  icon: MCCaptain
+  joinNotifyCrew: false
+  supervisors: mc-job-supervisors-sl
+  accessGroups: [ MCCaptain ]
+  ranks:
+    MCCaptain: []
+    MCCommodore:
+    - !type:RoleTimeRequirement
+      role: MCCaptain
+      time: 600 # 10 hours
+    MCRearAdmiral:
+    - !type:RoleTimeRequirement
+      role: MCCaptain
+      time: 1500 # 25 hours
+    MCViceAdmiral:
+    - !type:RoleTimeRequirement
+      role: MCCaptain
+      time: 6000 # 100 hours
+    MCAdmiral:
+    - !type:RoleTimeRequirement
+      role: MCCaptain
+      time: 18000 # 300 hours
+  roleWeight: 1
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      skills:
+        RMCSkillMedical: 3
+        RMCSkillSurgery: 1
+        RMCSkillEngineer: 3
+        RMCSkillConstruction: 3
+        RMCSkillPolice: 2
+        RMCSkillPowerLoader: 4
+        RMCSkillLeadership: 4
+        RMCSkillCQC: 0
+        RMCSkillSmartGun: 0
+        # RMCSkillMelee: 0
+        RMCSkillFirearms: 2
+    - type: JobPrefix
+      prefix: mc-job-prefix-captain
+    - type: TacticalMapIcon
+      icon:
+        sprite: _MC/Interface/job_icons.rsi
+        state: captain
+
+- type: playTimeTracker
+  id: MCCaptain
+  isHumanoid: true
+
+- type: startingGear
+  id: MCCaptain
+  equipment:
+    id: MCIdCardCaptain
+    shoes: MCBootsBlackFilled
+    jumpsuit: MCJumpsuitMarineCaptain
+    ears: MCHeadsetCommand
+
+- type: entity
+  parent: MCSpawnPointJob
+  id: MCSpawnPointCaptain
+  name: captain spawn point
+  components:
+  - type: SpawnPoint
+    job_id: MCCaptain
+  - type: Sprite
+    state: medic_spawn

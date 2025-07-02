@@ -1,0 +1,47 @@
+- type: entity
+  parent: MCGoldenIdCard
+  id: MCIdCardCaptain
+  name: Captain's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCCaptain
+
+- type: entity
+  parent: MCDogtag
+  id: MCDogtagFC
+  name: Field Commander's dogtags
+  components:
+  - type: PresetIdCard
+    job: MCFC
+
+- type: entity
+  parent: MCSilverIdCard
+  id: MCIdCardSO
+  name: Staff Officer's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCSO
+
+- type: entity
+  parent: MCSilverIdCard
+  id: MCIdCardPilotOfficer
+  name: Pilot Officer's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCPilotOfficer
+
+- type: entity
+  parent: MCDogtag
+  id: MCDogtagAssaultCrewman
+  name: Assault Crewman's dogtags
+  components:
+  - type: PresetIdCard
+    job: MCAssaultCrewman
+
+- type: entity
+  parent: MCSilverIdCard
+  id: MCIdCardTransportOfficer
+  name: Transport Officer's ID Card
+  components:
+  - type: PresetIdCard
+    job: MCTransportOfficer

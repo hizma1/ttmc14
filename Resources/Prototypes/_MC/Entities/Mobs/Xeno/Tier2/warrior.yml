@@ -1,0 +1,60 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  - MCXenoGrappleToss
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoWarrior
+  name: Warrior
+  description: A powerful front line combatant.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/warrior.rsi
+    offset: 0,0.35
+  - type: GhostRole
+    name: mc-job-name-xeno-warrior
+  - type: FixedIdentity
+    name: mc-job-name-xeno-warrior
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Critical
+      600: Dead
+  - type: XenoPlasma
+    plasma: 150
+    maxPlasma: 150
+    plasmaRegenOnWeeds: 15
+  - type: Xeno
+    tier: 2
+    role: MCXenoWarrior
+    actionIds:
+    # RMC
+    - ActionXenoRest
+    - ActionXenoDevolve
+    # MC
+    - MCActionXenoGrappleToss
+    hudOffset: -0.15,0.25
+  - type: XenoEvolution
+    evolvesTo:
+    - MCXenoBull
+    - MCXenoGorger
+    - MCXenoWarlock
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoDefender
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 25
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.777
+    baseSprintSpeed: 3.846
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: warrior
