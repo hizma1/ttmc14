@@ -1,72 +1,60 @@
 - type: entity
   parent: RMCBaseWeaponLMG
-  name: MG-42 Kauser light machine gun
-  id: MCWeaponMG42
-  description: The Kauser MG-42 is the TGMC's current standard non-IFF-capable LMG. It's known for its ability to lay down heavy fire support very well. It is generally used when someone wants to hold a position or provide fire support. It uses 10x24mm ammunition.
+  name: MG-60 Raummetall general purpose machine gun
+  id: MCWeaponMG60
+  description: The Raummetall MG-60 general purpose machinegun is the TGMC's current standard GPMG. Though usually seen mounted on vehicles, it is sometimes used by infantry to hold chokepoints or suppress enemies, or in rare cases for marching fire. It uses 10x26mm boxes.
   components:
   - type: Sprite
-    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg60.rsi
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]
     - state: mag-0
       map: [ "enum.GunVisualLayers.Mag" ]
     - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
-      state: mg42
+      state: mg60
       offset: -0.6, 0
   - type: Clothing
-    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg60.rsi
   - type: Tag
     tags:
-    - MCWeaponMG42
+    - MCWeaponMG60
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
   - type: Gun
-    shotsPerBurst: 5
+    shotsPerBurst: 1
     selectedMode: FullAuto
     availableModes:
-    - Burst
     - FullAuto
     soundGunshot:
-      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_mg42.ogg
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_mg60.ogg
       params:
         volume: -4
     soundEmpty:
       path: /Audio/_MC/Weapons/Guns/Empty/m41a_empty.ogg
   - type: RMCSelectiveFire
     baseFireModes:
-    - Burst
     - FullAuto
-    recoilWielded: 1.1
-    recoilUnwielded: 4
-    scatterWielded: 2
-    scatterUnwielded: 25
-    baseFireRate: 5
-    burstScatterMult: 3
-    modifiers:
-      Burst:
-        fireDelay: 4
-        maxScatterModifier: 10
-        unwieldedScatterMultiplier: 0
-        shotsToMaxScatter: 6
-  - type: RMCWeaponAccuracy
-    accuracyMultiplier: 1.1
-    accuracyMultiplierUnwielded: 0.6
+    recoilWielded: 0.85
+    recoilUnwielded: 0.4
+    scatterWielded: 7
+    scatterUnielded: 25
+    baseFireRate: 6.7
   - type: WieldDelay
-    baseDelay: 1.2
+    baseDelay: 1.7
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MCMagazineMG42
+        startingItem: MCMagazineMG60
         insertSound: /Audio/_MC/Weapons/Guns/Reload/t42_reload.ogg
         ejectSound: /Audio/_MC/Weapons/Guns/Reload/t42_unload.ogg
         priority: 2
         whitelist:
           tags:
-          - MCMagazineMG42
+          - MCMagazineMG60
   - type: GunDamageModifier
     multiplier: 1
   - type: AttachableHolder
@@ -77,28 +65,20 @@
           - RMCAttachmentExtendedBarrel
           - RMCAttachmentSuppressor
           - RMCM5Bayonet
-          - RMCAttachmentRecoilCompensator
           - RMCAttachmentBarrelCharger
       rmc-aslot-rail:
         whitelist:
           tags:
           - RMCAttachmentMagneticHarness
           - RMCAttachmentRailFlashlight
-          - RMCAttachmentS6ReflexSight
           - RMCAttachmentS42xTelescopicMiniscope
           # - TODO: T47 Scope
+          # - TODO: Tactical Sensor
       rmc-aslot-underbarrel:
         whitelist:
           tags:
           - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
           - RMCAttachmentBipod
-          - RMCAttachmentAngledGrip
-          - RMCAttachmentFlamer
-          - RMCAttachmentU7UnderbarrelShotgun
-          - RMCAttachmentU1GrenadeLauncher
-          # - TODO: Mini Pepperball Gun
-          # - TODO: PP-7 Plasma Pistol
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.7, -0.0225
@@ -108,22 +88,22 @@
 
 - type: entity
   parent: RMCMagazineLMGBase
-  id: MCMagazineMG42
-  name: MG-42 drum magazine (10x24mm)
+  id: MCMagazineMG60
+  name: MG-60 GPMG box magazine (10x26mm)
   components:
   - type: Tag
     tags:
     - RMCMagazineLMG
-    - MCMagazineMG42
+    - MCMagazineMG60
   - type: BallisticAmmoProvider
     mayTransfer: True
     whitelist:
       tags:
-      - MCCartridgeRifleAR12
-    proto: MCCartridgeRifleAR12
-    capacity: 120
+      - MCCartridgeMG60
+    proto: MCCartridgeMG60
+    capacity: 200
   - type: Sprite
-    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/mg42.rsi
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/mg60.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -131,8 +111,46 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Appearance
 
-- type: Tag
-  id: MCWeaponMG42
+- type: entity
+  parent: CMBaseCartridgeRifle
+  id: MCCartridgeMG60
+  name: патрон (10x26мм)
+  description: патрон 10x26мм
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MCCartridgeMG60
+  - type: CartridgeAmmo
+    proto: MCBulletMG60
+
+- type: entity
+  parent: RMCBaseBullet
+  id: MCBulletMG60
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+  - type: CMArmorPiercing
+    amount: 10
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 24
+      falloff: 9999
+      ignoreModifiers: true
+  - type: RMCProjectileAccuracy
+    accuracy: 105
+    thresholds:
+    - range: 16
+      falloff: 10
 
 - type: Tag
-  id: MCMagazineMG42
+  id: MCWeaponMG60
+
+- type: Tag
+  id: MCMagazineMG60
+
+- type: Tag
+  id: MCCartridgeMG60
