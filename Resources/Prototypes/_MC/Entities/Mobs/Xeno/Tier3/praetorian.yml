@@ -2,6 +2,7 @@
   parent:
   # MC
   - MCXenoBase
+  - MCXenoSpiting
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -37,6 +38,7 @@
     - ActionXenoDevolve
     - ActionXenoPheromones
     # MC
+    - MCActionXenoToggleXenoSpitPraetorian
     hudOffset: -0.15,0.25
   - type: XenoDevolve
     devolvesTo:

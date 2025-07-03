@@ -2,6 +2,7 @@
   parent:
   # MC
   - MCXenoBase
+  - MCXenoSpiting
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -64,8 +65,3 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: sentinel
-  - type: MCXenoSpitToggle
-    projectileId: MCXenoProjectileToxicSpit
-    plasmaCost: 30
-    delay: 1
-    speed: 30

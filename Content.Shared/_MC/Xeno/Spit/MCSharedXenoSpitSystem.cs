@@ -1,4 +1,6 @@
-﻿using Content.Shared._RMC14.Xenonids;
+﻿using Content.Shared._MC.Xeno.Projectiles;
+using Content.Shared._RMC14.Weapons.Ranged;
+using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Hive;
 using Content.Shared._RMC14.Xenonids.Plasma;
 using Content.Shared._RMC14.Xenonids.Projectile;
@@ -11,6 +13,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Spawners;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._MC.Xeno.Spit;
@@ -107,6 +110,13 @@ public abstract class MCSharedXenoSpitSystem : EntitySystem
             var targeted = EnsureComp<TargetedProjectileComponent>(instance);
             targeted.Target = targetUid.Value;
             Dirty(instance, targeted);
+        }
+
+        if (HasComp<MCXenoProjectileTargetingTurfComponent>(instance))
+        {
+            var timedDespawn = EnsureComp<TimedDespawnComponent>(instance);
+            timedDespawn.Lifetime = (coordinates.Position - transform.Coordinates.Position).Length() / xenoSpitComponent.Speed;
+            Dirty(instance, timedDespawn);
         }
     }
 }

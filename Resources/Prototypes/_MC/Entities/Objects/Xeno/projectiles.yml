@@ -39,3 +39,27 @@
     deleteOnFriendlyXeno: true
   - type: ProjectileMaxRange
     max: 8
+
+- type: entity
+  parent: [ XenoBaseProjectile ]
+  id: MCXenoProjectileToxinHeavy
+  name: neurotoxic splash
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Xeno/projectiles.rsi
+    layers:
+    - state: neurotoxin
+      shader: unshaded
+  - type: Projectile
+    impactEffect: null
+    damage:
+      types:
+        Heat: 40
+  - type: XenoProjectile
+    deleteOnFriendlyXeno: false
+  - type: ProjectileMaxRange
+    max: 8
+  - type: SpawnOnTerminate
+    spawn: MCSmokeNeurotoxinSmall
+  - type: MCXenoProjectileTargetingTurf

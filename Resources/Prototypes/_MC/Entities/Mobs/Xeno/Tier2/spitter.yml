@@ -2,6 +2,7 @@
   parent:
   # MC
   - MCXenoBase
+  - MCXenoSpiting
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -66,8 +67,3 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: spitter
-  - type: MCXenoSpitToggle
-    projectileId: MCXenoProjectileMedium
-    plasmaCost: 50
-    delay: 1.1
-    speed: 30

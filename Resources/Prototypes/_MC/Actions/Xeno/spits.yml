@@ -10,6 +10,10 @@
       sprite: _MC/Interface/Xeno/Actions/spits.rsi
       state: shift_spit_xeno_toxic
     event: !type:MCXenoSpitToggleActionEvent
+      projectileId: MCXenoProjectileToxicSpit
+      plasmaCost: 30
+      delay: 1
+      speed: 30
     useDelay: 0.1
 
 - type: entity
@@ -24,4 +28,26 @@
       sprite: _MC/Interface/Xeno/Actions/spits.rsi
       state: shift_spit_xeno_acid
     event: !type:MCXenoSpitToggleActionEvent
+      projectileId: MCXenoProjectileMedium
+      plasmaCost: 50
+      delay: 1.1
+      speed: 30
+    useDelay: 0.1
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoToggleXenoSpitPraetorian
+  name: Xeno Spit
+  description: Spit neurotoxin or acid at your target up to 7 tiles away.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/spits.rsi
+      state: shift_spit_neurotoxin
+    event: !type:MCXenoSpitToggleActionEvent
+      projectileId: MCXenoProjectileToxinHeavy
+      plasmaCost: 100
+      delay:  1
+      speed: 30
     useDelay: 0.1

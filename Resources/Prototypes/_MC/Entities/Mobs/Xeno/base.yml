@@ -184,3 +184,10 @@
   abstract: true
   components:
   - type: XenoHide
+
+- type: entity
+  id: MCXenoSpiting
+  abstract: true
+  components:
+  - type: MCXenoSpit
+  - type: MCXenoSpitToggle

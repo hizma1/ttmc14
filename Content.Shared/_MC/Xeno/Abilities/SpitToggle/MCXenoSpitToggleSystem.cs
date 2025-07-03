@@ -17,21 +17,45 @@ public sealed class MCXenoSpitToggleSystem : EntitySystem
 
     private void OnAction(Entity<MCXenoSpitToggleComponent> entity, ref MCXenoSpitToggleActionEvent args)
     {
+        if (!TryComp<MCXenoSpitComponent>(entity, out var xenoSpitComponent))
+            return;
+
         args.Handled = true;
 
-        if (TryComp<MCXenoSpitComponent>(entity, out var xenoSpitComponent) && !xenoSpitComponent.Enabled || !HasComp<MCXenoSpitComponent>(entity))
+        // Disable all other "Xeno Spit" toggle actions for this entity
+        // This affects only visuals and action state, not actual logic
+        foreach (var (actionId, actionComponent) in _actions.GetActions(entity))
+        {
+            if (actionComponent.BaseEvent is not MCXenoSpitToggleActionEvent)
+                continue;
+
+            _actions.SetToggled(actionId, false);
+        }
+
+        if (!xenoSpitComponent.Enabled ||
+            entity.Comp.ActionId is not null &&
+            entity.Comp.ActionId != args.Action)
         {
             _xenoSpit.SetPreset(
                 entity.Owner,
-                entity.Comp.ProjectileId,
-                entity.Comp.PlasmaCost,
-                entity.Comp.Delay,
-                entity.Comp.Speed,
-                entity.Comp.Sound);
+                args.ProjectileId,
+                args.PlasmaCost,
+                args.Delay,
+                args.Speed,
+                args.Sound);
+
+            // Remember the currently active action
+            entity.Comp.ActionId = args.Action;
+            Dirty(entity);
 
             _actions.SetToggled(args.Action, true);
             return;
         }
+
+        // If the spit was already enabled with the same action — toggle it off
+        // Clear the current active action
+        entity.Comp.ActionId = null;
+        Dirty(entity);
 
         _xenoSpit.ResetPreset(entity.Owner);
         _actions.SetToggled(args.Action, false);
