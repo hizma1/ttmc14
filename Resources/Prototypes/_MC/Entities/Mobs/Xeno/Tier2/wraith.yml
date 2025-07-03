@@ -51,6 +51,15 @@
   - type: XenoDevolve
     devolvesTo:
     - MCXenoRunner
+  - type: MCArmor
+    melee: 40
+    bullet: 40
+    laser: 40
+    energy: 40
+    bomb: 0
+    bio: 20
+    fire: 30
+    acid: 20
   - type: MeleeWeapon
     damage:
       groups:

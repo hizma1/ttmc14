@@ -41,12 +41,21 @@
     hudOffset: -0.15,0.25
   - type: XenoEvolution
     evolvesTo:
-    - MCXenoBull
+    - MCXenoCrusher
     - MCXenoGorger
     - MCXenoWarlock
   - type: XenoDevolve
     devolvesTo:
     - MCXenoDefender
+  - type: MCArmor
+    melee: 60
+    bullet: 60
+    laser: 60
+    energy: 60
+    bomb: 30
+    bio: 50
+    fire: 55
+    acid: 50
   - type: MeleeWeapon
     damage:
       groups:

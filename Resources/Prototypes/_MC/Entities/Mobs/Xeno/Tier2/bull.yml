@@ -2,6 +2,7 @@
   parent:
   # MC
   - MCXenoBase
+  - MCXenoCharge
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -36,6 +37,7 @@
     - ActionXenoRest
     - ActionXenoDevolve
     # MC
+    - MCActionXenoToggleChargingBull
     hudOffset: -0.15,0.25
   - type: XenoEvolution
     evolvesTo:
@@ -43,6 +45,15 @@
   - type: XenoDevolve
     devolvesTo:
     - MCXenoRunner
+  - type: MCArmor
+    melee: 50
+    bullet: 55
+    laser: 55
+    energy: 55
+    bomb: 20
+    bio: 35
+    fire: 50
+    acid: 35
   - type: MeleeWeapon
     damage:
       groups:

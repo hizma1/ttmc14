@@ -145,3 +145,35 @@
   abstract: true
   components:
   - type: MCXenoLayEgg
+
+- type: entity
+  id: MCXenoCrestToss
+  abstract: true
+  components:
+  - type: MCXenoCrestToss
+    damage:
+      groups:
+        Brute: 36 # distance * 6 (36)
+    speed: 10
+
+- type: entity
+  id: MCXenoStomp
+  abstract: true
+  components:
+  - type: MCXenoStomp
+    throwSpeed: 2
+    damage:
+      groups:
+        Brute: 60
+
+- type: entity
+  id: MCXenoCharge
+  abstract: true
+  components:
+  - type: MCXenoCharge
+    damage:
+      groups:
+        Brute: 37
+    structureDamage:
+      groups:
+        Brute: 240

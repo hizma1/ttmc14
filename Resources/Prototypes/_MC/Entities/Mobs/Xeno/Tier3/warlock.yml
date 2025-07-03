@@ -41,6 +41,15 @@
     devolvesTo:
     - MCXenoWraith
     - MCXenoWarrior
+  - type: MCArmor
+    melee: 40
+    bullet: 40
+    laser: 40
+    energy: 40
+    bomb: 10
+    bio: 35
+    fire: 35
+    acid: 35
   - type: MeleeWeapon
     damage:
       groups:

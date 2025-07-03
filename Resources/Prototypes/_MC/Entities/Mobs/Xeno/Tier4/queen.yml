@@ -5,6 +5,7 @@
   - MCXenoPlantingWeeds
   - MCXenoPickupOne
   - MCXenoLayEgg
+  - MCXenoCharge
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -42,14 +43,24 @@
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoLayEgg
+    - MCActionXenoToggleChargingQueen
     hudOffset: -0.1,0.1
-  - type: MovementSpeedModifier
-    baseWalkSpeed: 2.702
-    baseSprintSpeed: 3.703
+  - type: MCArmor
+    melee: 65
+    bullet: 65
+    laser: 65
+    energy: 65
+    bomb: 30
+    bio: 60
+    fire: 60
+    acid: 60
   - type: MeleeWeapon
     damage:
       groups:
         Brute: 28
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.702
+    baseSprintSpeed: 3.703
   - type: XenoPheromones
     pheromonesMultiplier: 5
     pheroSuffix: queen

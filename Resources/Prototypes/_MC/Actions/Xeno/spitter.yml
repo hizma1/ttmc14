@@ -1,0 +1,17 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoSprayAcid
+  name: Spray Acid (250)
+  description: Spray a line of dangerous acid at your target.
+  components:
+  - type: WorldTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/boiler.rsi
+      state: spray_acid
+    event: !type:XenoSprayAcidActionEvent
+    useDelay: 30
+    range: 15
+  - type: ActionBlockIfResting
+  - type: XenoActionPlasma
+    cost: 250

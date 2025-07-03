@@ -1,0 +1,13 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoToggleChargingBull
+  name: Toggle Charging
+  description: Toggles the movement-based charge on and off.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/bull.rsi
+      state: bull_ready_charge
+    event: !type:MCXenoChargeActionEvent
+    useDelay: 0.1

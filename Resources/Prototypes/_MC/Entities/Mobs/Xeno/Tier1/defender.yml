@@ -43,6 +43,15 @@
   - type: XenoEvolution
     evolvesTo:
     - MCXenoWarrior
+  - type: MCArmor
+    melee: 45
+    bullet: 45
+    laser: 45
+    energy: 45
+    bomb: 30
+    bio: 30
+    fire: 40
+    acid: 30
   - type: XenoPlasma
     plasma: 200
     maxPlasma: 200

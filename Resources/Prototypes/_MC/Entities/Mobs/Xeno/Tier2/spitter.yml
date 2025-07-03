@@ -36,6 +36,7 @@
     - ActionXenoRest
     - ActionXenoDevolve
     # MC
+    - MCActionXenoSprayAcid
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:
@@ -44,6 +45,15 @@
   - type: XenoDevolve
     devolvesTo:
     - MCXenoSentinel
+  - type: MCArmor
+    melee: 25
+    bullet: 35
+    laser: 35
+    energy: 35
+    bomb: 0
+    bio: 20
+    fire: 35
+    acid: 20
   - type: MeleeWeapon
     damage:
       groups:

@@ -39,7 +39,7 @@
 - type: entity
   parent: ActionXenoBase
   id: MCActionXenoPortalPlacer
-  name: Portal (Portal)
+  name: Portal (100)
   description: Place a portal on your location. You and other, whether it be marine or xenomorph, can travel from portal to portal.
   components:
   - type: InstantAction

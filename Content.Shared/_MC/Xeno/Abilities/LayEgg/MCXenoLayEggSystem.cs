@@ -85,7 +85,7 @@ public sealed class LayEggSystem : EntitySystem
 
             _actions.StartUseDelay(actionId);
         }
-        
+
         _audio.PlayPredicted(entity.Comp.Sound, entity, args.User);
 
         if (_net.IsClient)

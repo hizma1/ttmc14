@@ -1,4 +1,5 @@
 using Content.Client._RMC14.Sprite;
+using Content.Shared._MC.Xeno.Abilities.Charge;
 using Content.Shared._RMC14.Sprite;
 using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Charge;
@@ -118,10 +119,10 @@ public sealed class XenoVisualizerSystem : VisualizerSystem<XenoComponent>
                     break;
                 }
 
-                if (rsi.TryGetState("thrown", out _) &&
+                if (rsi.TryGetState("charging", out _) && // marine-corps-fix
                     IsThrown((entity, leaping, thrown, null)))
                 {
-                    sprite.LayerSetState(layer, "thrown");
+                    sprite.LayerSetState(layer, "charging"); // marine-corps-fix
                     break;
                 }
 
@@ -178,7 +179,7 @@ public sealed class XenoVisualizerSystem : VisualizerSystem<XenoComponent>
         sprite.LayerSetVisible(layer, false);
     }
 
-    private bool IsThrown(Entity<XenoLeapingComponent?, ThrownItemComponent?, ActiveXenoToggleChargingComponent?> xeno)
+    private bool IsThrown(Entity<XenoLeapingComponent?, ThrownItemComponent?, MCXenoChargeActiveComponent?> xeno) // marine-corps-fix
     {
         return xeno.Comp1 != null ||
                xeno.Comp2 != null ||

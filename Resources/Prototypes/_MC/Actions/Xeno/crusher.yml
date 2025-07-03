@@ -1,0 +1,48 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoCrestToss
+  name: Crest Toss (75)
+  description: Fling an adjacent target over and behind you, or away from you while on harm intent. Also works over barricades.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/crusher.rsi
+      state: crest_toss
+    event: !type:MCXenoCrestTossActionEvent
+    range: 1.5
+    useDelay: 12
+    deselectOnMiss: false
+    checkCanAccess: true
+  - type: XenoActionPlasma
+    cost: 75
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoStomp
+  name: Stomp (100)
+  description: Knocks all adjacent targets away and down.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/crusher.rsi
+      state: stomp
+    event: !type:MCXenoStompActionEvent
+    useDelay: 20
+  - type: XenoActionPlasma
+    cost: 100
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoToggleChargingCrusher
+  name: Toggle Charging
+  description: Toggles the movement-based charge on and off.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/crusher.rsi
+      state: ready_charge
+    event: !type:MCXenoChargeActionEvent
+    useDelay: 0.1

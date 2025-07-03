@@ -28,10 +28,18 @@
     tier: 2
     hudOffset: 0,0.19
     unlockAt: 300 # 5 minutes
-  - type: XenoHeavy
   - type: XenoDevolve
     devolvesTo:
     - MCXenoDrone
+  - type: MCArmor
+    melee: 35
+    bullet: 35
+    laser: 35
+    energy: 35
+    bomb: 0
+    bio: 20
+    fire: 30
+    acid: 20
   - type: XenoPheromones
     pheromonesMultiplier: 2.5
     pheroSuffix: hivelord
@@ -39,8 +47,6 @@
     plasma: 1000
     maxPlasma: 1000
     plasmaRegenOnWeeds: 50
-  - type: CMArmor
-    explosionArmor: 20
   - type: XenoDevour
   - type: MeleeWeapon
     damage:
