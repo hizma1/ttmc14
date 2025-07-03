@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "neurotoxin",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "declone"
+    },
+    {
+      "name": "xeno_acid",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "sticky",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "widow_snareball"
+    },
+    {
+      "name": "boiler_gas",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "boiler_gas2",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "facehugger",
+      "directions": 4,
+      "delays": [
+        [
+          1,
+          0.3,
+          1,
+          0.3
+        ],
+        [
+          1,
+          0.3,
+          1,
+          0.3
+        ],
+        [
+          1,
+          0.3,
+          1,
+          0.3
+        ],
+        [
+          1,
+          0.3,
+          1,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "xeno_toxic"
+    }
+  ]
+}

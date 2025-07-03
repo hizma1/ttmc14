@@ -37,6 +37,12 @@ public sealed class MCXenoSpitSystem : MCSharedXenoSpitSystem
         if (_player.LocalEntity is not { } entityUid)
             return;
 
+        if (!XenoSpitQuery.TryComp(entityUid, out var xenoSpitComponent))
+            return;
+
+        if (!xenoSpitComponent.Enabled)
+            return;
+
         if (!_combatMode.IsInCombatMode(entityUid))
             return;
 

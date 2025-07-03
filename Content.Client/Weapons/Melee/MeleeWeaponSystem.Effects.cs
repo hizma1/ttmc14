@@ -23,7 +23,7 @@ public sealed partial class MeleeWeaponSystem
         if (!Timing.IsFirstTimePredicted)
             return;
 
-        var lunge = GetLungeAnimation(localPos);
+        var lunge = GetLungeAnimation(user, localPos);
 
         // Stop any existing lunges on the user.
         _animation.Stop(user, MeleeLungeKey);
@@ -184,9 +184,11 @@ public sealed partial class MeleeWeaponSystem
     /// <summary>
     /// Get the sprite offset animation to use for mob lunges.
     /// </summary>
-    private Animation GetLungeAnimation(Vector2 direction)
+    private Animation GetLungeAnimation(EntityUid user, Vector2 direction)
     {
         const float length = 0.1f;
+
+        var offset = CompOrNull<SpriteComponent>(user)?.Offset ?? Vector2.Zero;
 
         return new Animation
         {
@@ -200,8 +202,8 @@ public sealed partial class MeleeWeaponSystem
                     InterpolationMode = AnimationInterpolationMode.Linear,
                     KeyFrames =
                     {
-                        new AnimationTrackProperty.KeyFrame(direction.Normalized() * 0.15f, 0f),
-                        new AnimationTrackProperty.KeyFrame(Vector2.Zero, length)
+                        new AnimationTrackProperty.KeyFrame(offset + direction.Normalized() * 0.15f, 0f),
+                        new AnimationTrackProperty.KeyFrame(offset, length)
                     }
                 }
             }

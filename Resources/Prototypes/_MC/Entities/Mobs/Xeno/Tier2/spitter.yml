@@ -37,6 +37,7 @@
     - ActionXenoDevolve
     # MC
     - MCActionXenoSprayAcid
+    - MCActionXenoToggleXenoSpit
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:
@@ -65,3 +66,8 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: spitter
+  - type: MCXenoSpitToggle
+    projectileId: MCXenoProjectileMedium
+    plasmaCost: 50
+    delay: 1.1
+    speed: 30

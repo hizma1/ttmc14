@@ -122,11 +122,6 @@ public sealed class MCXenoChargeSystem : EntitySystem
         }
     }
 
-    private void Hit(EntityUid hitTarget)
-    {
-
-    }
-
     private void OnAction(Entity<MCXenoChargeComponent> entity, ref MCXenoChargeActionEvent args)
     {
         if (_timing.ApplyingState)

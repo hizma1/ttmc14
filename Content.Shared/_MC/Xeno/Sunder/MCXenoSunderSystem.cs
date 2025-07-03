@@ -13,7 +13,7 @@ public sealed class MCXenoSunderSystem : EntitySystem
 
     public float GetSunder(Entity<MCXenoSunderComponent?> entity)
     {
-        if (!_sunderQuery.Resolve(entity, ref entity.Comp))
+        if (!_sunderQuery.Resolve(entity, ref entity.Comp, logMissing: false))
             return 1f;
 
         return 1 - entity.Comp.Value * 0.01f;

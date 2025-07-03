@@ -1,0 +1,41 @@
+- type: entity
+  parent: [ XenoBaseProjectile ]
+  id: MCXenoProjectileToxicSpit
+  name: spit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Xeno/projectiles.rsi
+    layers:
+    - state: xeno_toxic
+      shader: unshaded
+  - type: Projectile
+    impactEffect: null
+    damage:
+      types:
+        Heat: 16
+  - type: XenoProjectile
+    deleteOnFriendlyXeno: false
+  - type: ProjectileMaxRange
+    max: 7
+
+- type: entity
+  parent: [ XenoBaseProjectile ]
+  id: MCXenoProjectileMedium
+  name: acid spatter
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Xeno/projectiles.rsi
+    layers:
+    - state: xeno_acid
+      shader: unshaded
+  - type: Projectile
+    impactEffect: null
+    damage:
+      types:
+        Heat: 35
+  - type: XenoProjectile
+    deleteOnFriendlyXeno: true
+  - type: ProjectileMaxRange
+    max: 8

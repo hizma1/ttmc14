@@ -28,6 +28,9 @@ public sealed partial class MeleeWeaponComponent : Component
     [DataField, AutoNetworkedField]
     public bool AltDisarm = true;
 
+    [DataField, AutoNetworkedField]
+    public bool AltHeavy = true;
+
     /// <summary>
     /// Should the melee weapon's damage stats be examinable.
     /// </summary>

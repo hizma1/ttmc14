@@ -45,13 +45,13 @@
       "name": "gib_corpse"
     },
     {
-      "name": "wounded_stunned_1"
+      "name": "wounded_crit_1"
     },
     {
-      "name": "wounded_stunned_2"
+      "name": "wounded_crit_2"
     },
     {
-      "name": "wounded_stunned_3"
+      "name": "wounded_crit_3"
     },
     {
       "name": "wounded_resting_3"

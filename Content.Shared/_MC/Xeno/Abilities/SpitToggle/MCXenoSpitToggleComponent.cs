@@ -3,14 +3,11 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._MC.Xeno.Spit;
+namespace Content.Shared._MC.Xeno.Abilities.SpitToggle;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-public sealed partial class MCXenoSpitComponent : Component
+public sealed partial class MCXenoSpitToggleComponent : Component
 {
-    [DataField, AutoNetworkedField]
-    public bool Enabled;
-
     [DataField, AutoNetworkedField]
     public EntProtoId ProjectileId;
 
@@ -24,8 +21,5 @@ public sealed partial class MCXenoSpitComponent : Component
     public float Speed;
 
     [DataField, AutoNetworkedField]
-    public SoundSpecifier? Sound;
-
-    [ViewVariables, AutoNetworkedField]
-    public TimeSpan NextShot;
+    public SoundSpecifier? Sound  = new SoundCollectionSpecifier("XenoSpitAcid", AudioParams.Default.WithVolume(-10f));
 }

@@ -145,7 +145,9 @@ public sealed partial class MeleeWeaponSystem : SharedMeleeWeaponSystem
                 return;
             }
 
-            ClientHeavyAttack(entity, coordinates, weaponUid, weapon);
+            if (weapon.AltHeavy)
+                ClientHeavyAttack(entity, coordinates, weaponUid, weapon);
+
             return;
         }
 

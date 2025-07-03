@@ -17,6 +17,7 @@
     autoAttack: true
     widePrimary: true
     altDisarm: false
+    altHeavy: false
   - type: UserInterface
     interfaces:
       # MC
@@ -177,3 +178,9 @@
     structureDamage:
       groups:
         Brute: 240
+
+- type: entity
+  id: MCXenoHide
+  abstract: true
+  components:
+  - type: XenoHide

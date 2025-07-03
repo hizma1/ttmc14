@@ -2,6 +2,7 @@
   parent:
   # MC
   - MCXenoBase
+  - MCXenoHide
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -19,6 +20,27 @@
     name: mc-job-name-xeno-runner
   - type: GhostRole
     name: mc-job-name-xeno-runner
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 85
+        mask:
+        - Impassable
+        - HighImpassable
+        - LowImpassable
+        - BarbedBarricade
+        layer:
+        - MobLayer
+      fix2:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 85
+        layer:
+        - BulletImpassable
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -30,11 +52,12 @@
     plasmaRegenOnWeeds: 11
   - type: Xeno
     tier: 1
-    role: MCXenoWraith
+    role: MCXenoRunner
     actionIds:
     # RMC
     - ActionXenoRest
     - ActionXenoDevolve
+    - ActionXenoHide
     # MC
     hudOffset: -0.1,0.1
   - type: XenoEvolution
