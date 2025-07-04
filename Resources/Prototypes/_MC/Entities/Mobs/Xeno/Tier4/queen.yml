@@ -6,6 +6,7 @@
   - MCXenoPickupOne
   - MCXenoLayEgg
   - MCXenoCharge
+  - MCXenoSpiting
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -44,6 +45,7 @@
     - MCActionXenoPlantWeeds
     - MCActionXenoLayEgg
     - MCActionXenoToggleChargingQueen
+    - MCActionXenoToggleXenoSpitStickyResin
     hudOffset: -0.1,0.1
   - type: MCArmor
     melee: 65

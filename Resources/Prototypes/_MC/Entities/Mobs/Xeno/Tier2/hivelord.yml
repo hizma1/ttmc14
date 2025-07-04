@@ -5,6 +5,7 @@
   - MCXenoPlantingWeeds
   - MCXenoCreateResinJelly
   - MCXenoPickupOne
+  - MCXenoSpiting
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -50,6 +51,7 @@
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoCreateResinJellyHivelord
+    - MCActionXenoToggleXenoSpitStickyResin
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:
