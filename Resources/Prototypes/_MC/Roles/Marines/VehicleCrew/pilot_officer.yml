@@ -1,5 +1,5 @@
 - type: job
-  parent: MCJobSquad
+  parent: MCJob
   id: MCPilotOfficer
   name: mc-job-name-pilot-officer
   description: mc-job-description-pilot-officer

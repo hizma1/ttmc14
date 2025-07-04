@@ -1,5 +1,5 @@
 - type: job
-  parent: MCJobSquad
+  parent: MCJob
   id: MCRO
   name: mc-job-name-ro
   description: mc-job-description-ro

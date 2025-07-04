@@ -1,5 +1,5 @@
 - type: job
-  parent: MCJobSquad
+  parent: MCJob
   id: MCResearcher
   name: mc-job-name-researcher
   description: mc-job-description-researcher

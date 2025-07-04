@@ -1,4 +1,10 @@
 - type: job
+  abstract: true
+  id: MCJob
+  isCM: true
+  canBeAntag: false
+
+- type: job
   parent: MCJob
   id: MCJobSquad
   abstract: true

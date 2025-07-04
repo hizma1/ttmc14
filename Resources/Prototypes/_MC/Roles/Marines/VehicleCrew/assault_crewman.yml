@@ -1,5 +1,5 @@
 - type: job
-  parent: MCJobSquad
+  parent: MCJob
   id: MCAssaultCrewman
   name: mc-job-name-assault-crewman
   description: mc-job-description-assault-crewman

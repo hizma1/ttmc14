@@ -1,5 +1,5 @@
 - type: job
-  parent: MCJobSquad
+  parent: MCJob
   id: MCCSE
   name: mc-job-name-cse
   description: mc-job-description-cse
