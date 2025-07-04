@@ -1,0 +1,156 @@
+- type: entity
+  parent: RMCBaseWeaponLMG
+  name: MG-60 Raummetall general purpose machine gun
+  id: MCWeaponMG60
+  description: The Raummetall MG-60 general purpose machinegun is the TGMC's current standard GPMG. Though usually seen mounted on vehicles, it is sometimes used by infantry to hold chokepoints or suppress enemies, or in rare cases for marching fire. It uses 10x26mm boxes.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg60.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+      state: mg60
+      offset: -0.6, 0
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg60.rsi
+  - type: Tag
+    tags:
+    - MCWeaponMG60
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Gun
+    shotsPerBurst: 1
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_mg60.ogg
+      params:
+        volume: -4
+    soundEmpty:
+      path: /Audio/_MC/Weapons/Guns/Empty/m41a_empty.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    recoilWielded: 0.85
+    recoilUnwielded: 0.4
+    scatterWielded: 7
+    scatterUnielded: 25
+    baseFireRate: 6.7
+  - type: WieldDelay
+    baseDelay: 1.7
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MCMagazineMG60
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/t42_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/t42_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazineMG60
+  - type: GunDamageModifier
+    multiplier: 1
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentSuppressor
+          - RMCM5Bayonet
+          - RMCAttachmentBarrelCharger
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS42xTelescopicMiniscope
+          # - TODO: T47 Scope
+          # - TODO: Tactical Sensor
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentLaserSight
+          - RMCAttachmentBipod
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.7, -0.0225
+      rmc-aslot-rail: 0.2, 0.09
+      rmc-aslot-underbarrel: 0.28, -0.31
+  - type: Wieldable
+
+- type: entity
+  parent: RMCMagazineLMGBase
+  id: MCMagazineMG60
+  name: MG-60 GPMG box magazine (10x26mm)
+  components:
+  - type: Tag
+    tags:
+    - RMCMagazineLMG
+    - MCMagazineMG60
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgeMG60
+    proto: MCCartridgeMG60
+    capacity: 200
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/mg60.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: entity
+  parent: CMBaseCartridgeRifle
+  id: MCCartridgeMG60
+  name: патрон (10x26мм)
+  description: патрон 10x26мм
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MCCartridgeMG60
+  - type: CartridgeAmmo
+    proto: MCBulletMG60
+
+- type: entity
+  parent: RMCBaseBullet
+  id: MCBulletMG60
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+  - type: CMArmorPiercing
+    amount: 10
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 24
+      falloff: 9999
+      ignoreModifiers: true
+  - type: RMCProjectileAccuracy
+    accuracy: 105
+    thresholds:
+    - range: 16
+      falloff: 10
+
+- type: Tag
+  id: MCWeaponMG60
+
+- type: Tag
+  id: MCMagazineMG60
+
+- type: Tag
+  id: MCCartridgeMG60

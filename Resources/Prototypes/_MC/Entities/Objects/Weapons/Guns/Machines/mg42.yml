@@ -1,0 +1,138 @@
+- type: entity
+  parent: RMCBaseWeaponLMG
+  name: MG-42 Kauser light machine gun
+  id: MCWeaponMG42
+  description: The Kauser MG-42 is the TGMC's current standard non-IFF-capable LMG. It's known for its ability to lay down heavy fire support very well. It is generally used when someone wants to hold a position or provide fire support. It uses 10x24mm ammunition.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+      state: mg42
+      offset: -0.6, 0
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+  - type: Tag
+    tags:
+    - MCWeaponMG42
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Gun
+    shotsPerBurst: 5
+    selectedMode: FullAuto
+    availableModes:
+    - Burst
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_mg42.ogg
+      params:
+        volume: -4
+    soundEmpty:
+      path: /Audio/_MC/Weapons/Guns/Empty/m41a_empty.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - Burst
+    - FullAuto
+    recoilWielded: 1.1
+    recoilUnwielded: 4
+    scatterWielded: 2
+    scatterUnwielded: 25
+    baseFireRate: 5
+    burstScatterMult: 3
+    modifiers:
+      Burst:
+        fireDelay: 4
+        maxScatterModifier: 10
+        unwieldedScatterMultiplier: 0
+        shotsToMaxScatter: 6
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.1
+    accuracyMultiplierUnwielded: 0.6
+  - type: WieldDelay
+    baseDelay: 1.2
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MCMagazineMG42
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/t42_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/t42_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazineMG42
+  - type: GunDamageModifier
+    multiplier: 1
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentSuppressor
+          - RMCM5Bayonet
+          - RMCAttachmentRecoilCompensator
+          - RMCAttachmentBarrelCharger
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS42xTelescopicMiniscope
+          # - TODO: T47 Scope
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentLaserSight
+          - RMCAttachmentVerticalGrip
+          - RMCAttachmentBipod
+          - RMCAttachmentAngledGrip
+          - RMCAttachmentFlamer
+          - RMCAttachmentU7UnderbarrelShotgun
+          - RMCAttachmentU1GrenadeLauncher
+          # - TODO: Mini Pepperball Gun
+          # - TODO: PP-7 Plasma Pistol
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.7, -0.0225
+      rmc-aslot-rail: 0.2, 0.09
+      rmc-aslot-underbarrel: 0.28, -0.31
+  - type: Wieldable
+
+- type: entity
+  parent: RMCMagazineLMGBase
+  id: MCMagazineMG42
+  name: MG-42 drum magazine (10x24mm)
+  components:
+  - type: Tag
+    tags:
+    - RMCMagazineLMG
+    - MCMagazineMG42
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgeRifleAR12
+    proto: MCCartridgeRifleAR12
+    capacity: 120
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/mg42.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: Tag
+  id: MCWeaponMG42
+
+- type: Tag
+  id: MCMagazineMG42
