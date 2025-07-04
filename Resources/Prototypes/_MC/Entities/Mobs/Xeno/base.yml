@@ -58,6 +58,9 @@
   components:
   - type: MCXenoPlantingWeeds
     selected: MCXenoWeedsNode
+    autoSprite:
+      sprite: _MC/Interface/Xeno/Actions/general.rsi
+      state: repeating
     weeds:
       MCXenoWeedsNode:
         name: Default (75)

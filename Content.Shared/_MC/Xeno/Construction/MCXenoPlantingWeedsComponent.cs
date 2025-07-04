@@ -11,13 +11,22 @@ namespace Content.Shared._MC.Xeno.Construction;
 public sealed partial class MCXenoPlantingWeedsComponent : Component
 {
     [DataField, AutoNetworkedField]
+    public EntityUid? LastdWeedsUid;
+
+    [DataField, AutoNetworkedField]
+    public float AutoWeedingMinDistance = 4;
+
+    [DataField, AutoNetworkedField]
     public EntProtoId? Selected;
 
     [DataField, AutoNetworkedField]
-    public bool AutoPlace;
+    public Dictionary<EntProtoId, WeedEntry> Weeds = new();
 
     [DataField, AutoNetworkedField]
-    public Dictionary<EntProtoId, WeedEntry> Weeds = new();
+    public bool Auto;
+
+    [DataField, AutoNetworkedField]
+    public SpriteSpecifier.Rsi AutoSprite;
 
     [DataDefinition, Serializable, NetSerializable]
     public sealed partial class WeedEntry
@@ -56,5 +65,16 @@ public sealed class MCXenoChooseWeedsBuiMsg : BoundUserInterfaceMessage
     public MCXenoChooseWeedsBuiMsg(EntProtoId id)
     {
         Id = id;
+    }
+}
+
+[Serializable, NetSerializable]
+public sealed class MCXenoChooseAutoWeedsBuiMsg : BoundUserInterfaceMessage
+{
+    public readonly bool Value;
+
+    public MCXenoChooseAutoWeedsBuiMsg(bool value)
+    {
+        Value = value;
     }
 }

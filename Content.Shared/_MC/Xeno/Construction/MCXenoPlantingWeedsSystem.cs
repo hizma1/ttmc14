@@ -1,4 +1,5 @@
-﻿using Content.Shared._RMC14.Xenonids.Hive;
+﻿using System.Numerics;
+using Content.Shared._RMC14.Xenonids.Hive;
 using Content.Shared._RMC14.Xenonids.Plasma;
 using Content.Shared._RMC14.Xenonids.Weeds;
 using Content.Shared.Actions;
@@ -11,6 +12,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Shared._MC.Xeno.Construction;
 
@@ -35,6 +37,7 @@ public sealed class MCXenoPlantingWeedsSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<MCXenoPlantingWeedsComponent, MCXenoChooseWeedsBuiMsg>(OnChooseMessage);
+        SubscribeLocalEvent<MCXenoPlantingWeedsComponent, MCXenoChooseAutoWeedsBuiMsg>(OnChooseAutoMessage);
 
         SubscribeLocalEvent<MCXenoPlantingWeedsComponent, MCXenoPlaceWeedsActionEvent>(OnPlaceEvent);
         SubscribeLocalEvent<MCXenoPlantingWeedsComponent, MCXenoChooseWeedsActionEvent>(OnChooseEvent);
@@ -42,9 +45,73 @@ public sealed class MCXenoPlantingWeedsSystem : EntitySystem
         SubscribeLocalEvent<MCXenoChooseWeedsActionComponent, MCXenoWeedsChosenEvent>(OnActionWeedsChosen);
     }
 
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        if (!_net.IsServer)
+            return;
+
+        var query = EntityQueryEnumerator<MCXenoPlantingWeedsComponent, XenoPlasmaComponent>();
+        while (query.MoveNext(out var entityUid, out var comp, out var plasmaComp))
+        {
+            if (!comp.Auto)
+                continue;
+
+            var coordinates = Transform(entityUid).Coordinates;
+            var originPosition = _transform.GetMapCoordinates(entityUid).Position;
+            var weedsPosition = comp.LastdWeedsUid is null || !Exists(comp.LastdWeedsUid)
+                ? Vector2.Zero
+                : Transform(comp.LastdWeedsUid.Value).Coordinates.Position;
+
+            var distance = (originPosition - weedsPosition).Length();
+            if (distance < comp.AutoWeedingMinDistance)
+                continue;
+
+            if (comp.Selected is not { } weedsSelected)
+                continue;
+
+            var weedData = comp.Weeds[weedsSelected];
+
+            if (!_xenoPlasma.HasPlasma((entityUid, plasmaComp), weedData.Cost))
+                continue;
+
+            if (_transform.GetGrid(coordinates) is not { } gridUid || !TryComp<MapGridComponent>(gridUid, out var gridComp))
+                continue;
+
+            if (_xenoWeeds.IsOnWeeds((gridUid, gridComp), coordinates))
+                continue;
+
+            foreach (var (_, actionComponent) in _actions.GetActions(entityUid))
+            {
+                if (actionComponent.BaseEvent is not MCXenoPlaceWeedsActionEvent)
+                    continue;
+
+                if (_actions.IsCooldownActive(actionComponent))
+                    continue;
+
+                TryPlace((entityUid, comp));
+                break;
+            }
+        }
+    }
+
     private void OnChooseMessage(Entity<MCXenoPlantingWeedsComponent> entity, ref MCXenoChooseWeedsBuiMsg args)
     {
         Select(entity, args.Id);
+        _ui.CloseUi(entity.Owner, MCXenoPlantingWeedsUI.Key, entity);
+    }
+
+    private void OnChooseAutoMessage(Entity<MCXenoPlantingWeedsComponent> entity, ref MCXenoChooseAutoWeedsBuiMsg args)
+    {
+        entity.Comp.Auto = args.Value;
+        Dirty(entity);
+
+        var text = args.Value
+            ? "We will now automatically plant weeds"
+            : "We will no longer automatically plant weeds";
+
+        _popup.PopupClient(text, entity, entity);
         _ui.CloseUi(entity.Owner, MCXenoPlantingWeedsUI.Key, entity);
     }
 
@@ -56,41 +123,49 @@ public sealed class MCXenoPlantingWeedsSystem : EntitySystem
 
     private void OnPlaceEvent(Entity<MCXenoPlantingWeedsComponent> entity, ref MCXenoPlaceWeedsActionEvent args)
     {
+        args.Handled = TryPlace(entity);
+    }
+
+    private bool TryPlace(Entity<MCXenoPlantingWeedsComponent> entity)
+    {
         if (entity.Comp.Selected is not { } weedsSelected)
-            return;
+            return false;
 
         var weedsData = entity.Comp.Weeds[weedsSelected];
 
         var coordinates = _transform.GetMoverCoordinates(entity).SnapToGrid(EntityManager, _map);
         if (_transform.GetGrid(coordinates) is not { } gridUid || !TryComp(gridUid, out MapGridComponent? gridComp))
-            return;
+            return false;
 
         var grid = new Entity<MapGridComponent>(gridUid, gridComp);
         if (_xenoWeeds.IsOnWeeds(grid, coordinates, true))
         {
             _popup.PopupClient(Loc.GetString("cm-xeno-weeds-source-already-here"), entity.Owner, entity.Owner);
-            return;
+            return false;
         }
 
         var tile = _mapSystem.CoordinatesToTile(gridUid, gridComp, coordinates);
         if (!_xenoWeeds.CanSpreadWeedsPopup(grid, tile, entity, weedsData.SemiWeedable, true))
-            return;
+            return false;
 
         if (!_xenoWeeds.CanPlaceWeedsPopup(entity, grid, coordinates, false))
-            return;
+            return false;
 
         if (!_xenoPlasma.TryRemovePlasmaPopup(entity.Owner, weedsData.Cost))
-            return;
+            return false;
 
-        args.Handled = true;
-        if (_net.IsServer)
-        {
-            var weeds = Spawn(weedsSelected, coordinates);
-            _adminLogs.Add(LogType.RMCXenoPlantWeeds, $"Xeno {ToPrettyString(entity):xeno} planted weeds {ToPrettyString(weeds):weeds} at {coordinates}");
-            _xenoHive.SetSameHive(entity.Owner, weeds);
-        }
+        if (_net.IsClient)
+            return true;
 
-        _audio.PlayPredicted(weedsData.PlaceSound, coordinates, entity);
+        var weeds = Spawn(weedsSelected, coordinates);
+        entity.Comp.LastdWeedsUid = weeds;
+        Dirty(entity);
+
+        _adminLogs.Add(LogType.RMCXenoPlantWeeds, $"Xeno {ToPrettyString(entity):xeno} planted weeds {ToPrettyString(weeds):weeds} at {coordinates}");
+        _xenoHive.SetSameHive(entity.Owner, weeds);
+
+        _audio.PlayPvs(weedsData.PlaceSound, entity);
+        return true;
     }
 
     private void OnActionWeedsChosen(Entity<MCXenoChooseWeedsActionComponent> entity, ref MCXenoWeedsChosenEvent args)

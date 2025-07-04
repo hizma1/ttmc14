@@ -47,6 +47,8 @@ public sealed class MCXenoChooseWeedsBui : BoundUserInterface
             {
                 AddButton(id, data, parent);
             }
+
+            AddButtonAuto(component, parent);
         }
 
         var vpSize = _displayManager.ScreenSize;
@@ -78,6 +80,28 @@ public sealed class MCXenoChooseWeedsBui : BoundUserInterface
         };
 
         button.OnButtonDown += _ => SendPredictedMessage(new MCXenoChooseWeedsBuiMsg(id));
+
+        button.AddChild(texture);
+        parent.AddChild(button);
+    }
+
+    private void AddButtonAuto(MCXenoPlantingWeedsComponent component, RadialContainer parent)
+    {
+        var texture = new TextureRect
+        {
+            VerticalAlignment = Control.VAlignment.Center,
+            HorizontalAlignment = Control.HAlignment.Center,
+            Texture = _sprite.Frame0(component.AutoSprite),
+            TextureScale = new Vector2(2f, 2f),
+        };
+
+        var button = new RadialMenuTextureButton
+        {
+            StyleClasses = { "RadialMenuButton" },
+            SetSize = new Vector2(64, 64),
+        };
+
+        button.OnButtonDown += _ => SendPredictedMessage(new MCXenoChooseAutoWeedsBuiMsg(!component.Auto));
 
         button.AddChild(texture);
         parent.AddChild(button);
