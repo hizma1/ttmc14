@@ -51,7 +51,11 @@
       - id: MCMagazineShotgunSH15Flechette
       - id: MCMagazineShotgunSH15Slug
     - name: Machinegun
-      entries: []
+      entries:
+      - id: MCWeaponMachineGunMG42
+      - id: MCMagazineMG42
+      - id: MCWeaponMachineGunMG60
+      - id: MCMagazineMG60
     - name: Melee
       entries: []
     - name: Sidearm
