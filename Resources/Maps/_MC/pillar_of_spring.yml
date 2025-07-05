@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.2
   forkId: ""
   forkVersion: ""
-  time: 07/01/2025 23:34:27
-  entityCount: 4591
+  time: 07/05/2025 06:35:12
+  entityCount: 4677
 maps:
 - 1
 grids:
@@ -30567,6 +30567,440 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,-12.5
       parent: 1
+- proto: MCDroppod
+  entities:
+  - uid: 2146
+    components:
+    - type: Transform
+      pos: 23.5,27.5
+      parent: 1
+  - uid: 2147
+    components:
+    - type: Transform
+      pos: 23.5,26.5
+      parent: 1
+  - uid: 2148
+    components:
+    - type: Transform
+      pos: 23.5,25.5
+      parent: 1
+  - uid: 2149
+    components:
+    - type: Transform
+      pos: 23.5,24.5
+      parent: 1
+  - uid: 2150
+    components:
+    - type: Transform
+      pos: 24.5,27.5
+      parent: 1
+  - uid: 2151
+    components:
+    - type: Transform
+      pos: 24.5,26.5
+      parent: 1
+  - uid: 2152
+    components:
+    - type: Transform
+      pos: 24.5,25.5
+      parent: 1
+  - uid: 2153
+    components:
+    - type: Transform
+      pos: 24.5,24.5
+      parent: 1
+  - uid: 2154
+    components:
+    - type: Transform
+      pos: 26.5,27.5
+      parent: 1
+  - uid: 2155
+    components:
+    - type: Transform
+      pos: 26.5,26.5
+      parent: 1
+  - uid: 2156
+    components:
+    - type: Transform
+      pos: 26.5,25.5
+      parent: 1
+  - uid: 2157
+    components:
+    - type: Transform
+      pos: 26.5,24.5
+      parent: 1
+  - uid: 2158
+    components:
+    - type: Transform
+      pos: 27.5,27.5
+      parent: 1
+  - uid: 2159
+    components:
+    - type: Transform
+      pos: 27.5,26.5
+      parent: 1
+  - uid: 2160
+    components:
+    - type: Transform
+      pos: 27.5,25.5
+      parent: 1
+  - uid: 2161
+    components:
+    - type: Transform
+      pos: 27.5,24.5
+      parent: 1
+  - uid: 2162
+    components:
+    - type: Transform
+      pos: 29.5,27.5
+      parent: 1
+  - uid: 2163
+    components:
+    - type: Transform
+      pos: 29.5,26.5
+      parent: 1
+  - uid: 2164
+    components:
+    - type: Transform
+      pos: 29.5,25.5
+      parent: 1
+  - uid: 2165
+    components:
+    - type: Transform
+      pos: 29.5,24.5
+      parent: 1
+  - uid: 2166
+    components:
+    - type: Transform
+      pos: 23.5,20.5
+      parent: 1
+  - uid: 2167
+    components:
+    - type: Transform
+      pos: 23.5,19.5
+      parent: 1
+  - uid: 2168
+    components:
+    - type: Transform
+      pos: 23.5,18.5
+      parent: 1
+  - uid: 2169
+    components:
+    - type: Transform
+      pos: 23.5,17.5
+      parent: 1
+  - uid: 2170
+    components:
+    - type: Transform
+      pos: 24.5,20.5
+      parent: 1
+  - uid: 2171
+    components:
+    - type: Transform
+      pos: 24.5,19.5
+      parent: 1
+  - uid: 2172
+    components:
+    - type: Transform
+      pos: 24.5,18.5
+      parent: 1
+  - uid: 2173
+    components:
+    - type: Transform
+      pos: 24.5,17.5
+      parent: 1
+  - uid: 2174
+    components:
+    - type: Transform
+      pos: 26.5,20.5
+      parent: 1
+  - uid: 2175
+    components:
+    - type: Transform
+      pos: 26.5,19.5
+      parent: 1
+  - uid: 2176
+    components:
+    - type: Transform
+      pos: 26.5,18.5
+      parent: 1
+  - uid: 2177
+    components:
+    - type: Transform
+      pos: 26.5,17.5
+      parent: 1
+  - uid: 2178
+    components:
+    - type: Transform
+      pos: 27.5,20.5
+      parent: 1
+  - uid: 2179
+    components:
+    - type: Transform
+      pos: 27.5,19.5
+      parent: 1
+  - uid: 2180
+    components:
+    - type: Transform
+      pos: 27.5,18.5
+      parent: 1
+  - uid: 2181
+    components:
+    - type: Transform
+      pos: 27.5,17.5
+      parent: 1
+  - uid: 2182
+    components:
+    - type: Transform
+      pos: 29.5,20.5
+      parent: 1
+  - uid: 2183
+    components:
+    - type: Transform
+      pos: 29.5,19.5
+      parent: 1
+  - uid: 2184
+    components:
+    - type: Transform
+      pos: 29.5,18.5
+      parent: 1
+  - uid: 2185
+    components:
+    - type: Transform
+      pos: 29.5,17.5
+      parent: 1
+  - uid: 2189
+    components:
+    - type: Transform
+      pos: 26.5,22.5
+      parent: 1
+  - uid: 2190
+    components:
+    - type: Transform
+      pos: 27.5,22.5
+      parent: 1
+  - uid: 2191
+    components:
+    - type: Transform
+      pos: 29.5,22.5
+      parent: 1
+- proto: MCDroppodLauncher
+  entities:
+  - uid: 2106
+    components:
+    - type: Transform
+      pos: 23.5,27.5
+      parent: 1
+  - uid: 2107
+    components:
+    - type: Transform
+      pos: 23.5,26.5
+      parent: 1
+  - uid: 2108
+    components:
+    - type: Transform
+      pos: 23.5,25.5
+      parent: 1
+  - uid: 2109
+    components:
+    - type: Transform
+      pos: 23.5,24.5
+      parent: 1
+  - uid: 2110
+    components:
+    - type: Transform
+      pos: 24.5,27.5
+      parent: 1
+  - uid: 2111
+    components:
+    - type: Transform
+      pos: 24.5,26.5
+      parent: 1
+  - uid: 2112
+    components:
+    - type: Transform
+      pos: 24.5,25.5
+      parent: 1
+  - uid: 2113
+    components:
+    - type: Transform
+      pos: 24.5,24.5
+      parent: 1
+  - uid: 2114
+    components:
+    - type: Transform
+      pos: 23.5,20.5
+      parent: 1
+  - uid: 2115
+    components:
+    - type: Transform
+      pos: 23.5,19.5
+      parent: 1
+  - uid: 2116
+    components:
+    - type: Transform
+      pos: 23.5,18.5
+      parent: 1
+  - uid: 2117
+    components:
+    - type: Transform
+      pos: 23.5,17.5
+      parent: 1
+  - uid: 2118
+    components:
+    - type: Transform
+      pos: 24.5,20.5
+      parent: 1
+  - uid: 2119
+    components:
+    - type: Transform
+      pos: 24.5,19.5
+      parent: 1
+  - uid: 2120
+    components:
+    - type: Transform
+      pos: 24.5,18.5
+      parent: 1
+  - uid: 2121
+    components:
+    - type: Transform
+      pos: 24.5,17.5
+      parent: 1
+  - uid: 2122
+    components:
+    - type: Transform
+      pos: 26.5,20.5
+      parent: 1
+  - uid: 2123
+    components:
+    - type: Transform
+      pos: 26.5,19.5
+      parent: 1
+  - uid: 2124
+    components:
+    - type: Transform
+      pos: 26.5,18.5
+      parent: 1
+  - uid: 2125
+    components:
+    - type: Transform
+      pos: 26.5,17.5
+      parent: 1
+  - uid: 2126
+    components:
+    - type: Transform
+      pos: 27.5,20.5
+      parent: 1
+  - uid: 2127
+    components:
+    - type: Transform
+      pos: 27.5,19.5
+      parent: 1
+  - uid: 2128
+    components:
+    - type: Transform
+      pos: 27.5,18.5
+      parent: 1
+  - uid: 2129
+    components:
+    - type: Transform
+      pos: 27.5,17.5
+      parent: 1
+  - uid: 2130
+    components:
+    - type: Transform
+      pos: 29.5,20.5
+      parent: 1
+  - uid: 2131
+    components:
+    - type: Transform
+      pos: 29.5,19.5
+      parent: 1
+  - uid: 2132
+    components:
+    - type: Transform
+      pos: 29.5,18.5
+      parent: 1
+  - uid: 2133
+    components:
+    - type: Transform
+      pos: 29.5,17.5
+      parent: 1
+  - uid: 2134
+    components:
+    - type: Transform
+      pos: 26.5,24.5
+      parent: 1
+  - uid: 2135
+    components:
+    - type: Transform
+      pos: 26.5,25.5
+      parent: 1
+  - uid: 2136
+    components:
+    - type: Transform
+      pos: 26.5,26.5
+      parent: 1
+  - uid: 2137
+    components:
+    - type: Transform
+      pos: 26.5,27.5
+      parent: 1
+  - uid: 2138
+    components:
+    - type: Transform
+      pos: 27.5,24.5
+      parent: 1
+  - uid: 2139
+    components:
+    - type: Transform
+      pos: 27.5,25.5
+      parent: 1
+  - uid: 2140
+    components:
+    - type: Transform
+      pos: 27.5,26.5
+      parent: 1
+  - uid: 2141
+    components:
+    - type: Transform
+      pos: 27.5,27.5
+      parent: 1
+  - uid: 2142
+    components:
+    - type: Transform
+      pos: 29.5,27.5
+      parent: 1
+  - uid: 2143
+    components:
+    - type: Transform
+      pos: 29.5,26.5
+      parent: 1
+  - uid: 2144
+    components:
+    - type: Transform
+      pos: 29.5,25.5
+      parent: 1
+  - uid: 2145
+    components:
+    - type: Transform
+      pos: 29.5,24.5
+      parent: 1
+  - uid: 2186
+    components:
+    - type: Transform
+      pos: 26.5,22.5
+      parent: 1
+  - uid: 2187
+    components:
+    - type: Transform
+      pos: 27.5,22.5
+      parent: 1
+  - uid: 2188
+    components:
+    - type: Transform
+      pos: 29.5,22.5
+      parent: 1
 - proto: MCHolopad
   entities:
   - uid: 1762
@@ -32176,7 +32610,7 @@ entities:
       pos: -4.5,24.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15008.327
+      secondsUntilStateChange: -15111.601
       state: Opening
     - type: DeviceLinkSource
       lastSignals:

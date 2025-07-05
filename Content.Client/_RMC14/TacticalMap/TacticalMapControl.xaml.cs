@@ -34,6 +34,7 @@ public sealed partial class TacticalMapControl : TextureRect
     public bool DrawAreaLabels { get; set; } = true;
     public Color Color;
 
+    public Action<Vector2i>? OnClickedInIndices;
     public Action<Vector2i>? OnBlipClicked;
     public Action<Vector2i, string>? OnBlipRightClicked;
 
@@ -253,7 +254,6 @@ public sealed partial class TacticalMapControl : TextureRect
         if (args.Function == EngineKeyFunctions.UIClick)
         {
             var clickedBlip = GetBlipAtPosition(args.RelativePosition);
-
             if (clickedBlip != null)
             {
                 OnBlipClicked?.Invoke(clickedBlip.Value.Indices);
@@ -268,8 +268,13 @@ public sealed partial class TacticalMapControl : TextureRect
                 _dragging = true;
                 _lastDrag = args.RelativePosition.Floored();
             }
+
+            OnClickedInIndices?.Invoke(PositionToIndices(args.RelativePosition));
+            args.Handle();
+            return;
         }
-        else if (args.Function == EngineKeyFunctions.UIRightClick)
+
+        if (args.Function == EngineKeyFunctions.UIRightClick)
         {
             var clickedBlip = GetBlipAtPosition(args.RelativePosition);
 

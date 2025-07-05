@@ -1,0 +1,80 @@
+- type: entity
+  parent: CMBaseStructure
+  id: MCDroppodBase
+  name: TGMC Zeus orbital drop pod
+  description: A menacing metal hunk of steel that is used by the TGMC for quick tactical redeployment.
+  abstract: true
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Sprite
+    sprite: _MC/Structures/droppod.rsi
+    layers:
+    - map: [ "enum.MCDroppodVisualLayers.Base" ]
+      state: singlepod_green
+    offset: 0,0.285
+    noRot: true
+  - type: Strap
+    position: Stand
+    buckleOffset: 0,0.1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: PowerLoaderGrabbable
+    virtualRight: RMCVirtualDropshipGearRight
+    virtualLeft: RMCVirtualDropshipGearLeft
+  - type: Item
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        density: 100
+        mask:
+        - FullTileMask
+  - type: MCDroppod
+  - type: UserInterface
+    interfaces:
+      enum.MCDroppodUI.Key:
+        type: MCDroppodTargetBui
+
+
+- type: entity
+  parent: MCDroppodBase
+  id: MCDroppod
+
+- type: entity
+  id: MCDroppodLauncher
+  name: Zeus pod launch bay
+  description: A hatch in the ground wih support for a Zeus drop pod launch.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Clickable
+  - type: Sprite
+    sprite: _MC/Structures/droppod.rsi
+    state: launch_bay
+    drawdepth: FloorTiles
+    offset: 0,0.285
+    noRot: false
+  - type: Icon
+    sprite: _MC/Structures/droppod.rsi
+    state: launch_bay
+  - type: Transform
+    anchored: true
+  - type: MCDroppodLauncher
