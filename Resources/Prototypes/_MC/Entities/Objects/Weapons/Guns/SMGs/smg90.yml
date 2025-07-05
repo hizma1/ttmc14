@@ -1,0 +1,154 @@
+- type: entity
+  parent: CMBaseWeaponSMG
+  name: SMG-90 submachinegun
+  id: MCWeaponSMG90
+  description: The SMG-90 is the TerraGov Marine Corps standard issue SMG. Its known for it's compact size and ease of use inside the field. It's usually carried by troops who want a lightweight firearm to rush with. It uses 10x20mm caseless rounds.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/SMGs/smg90.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/SMGs/smg90.rsi
+  - type: Gun
+    shotsPerBurst: 1
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_smg90.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    recoilWielded: 10
+    recoilUnwielded: 3
+    scatterWielded: 1
+    scatterUnwielded: 2
+    baseFireRate: 7
+    modifiers:
+      FullAuto:
+        maxScatterModifier: 4
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 4
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.05
+    accuracyMultiplierUnwielded: 0.9
+  - type: MagazineAmmoProvider
+    autoEject: true
+    soundAutoEject: null
+  - type: WieldDelay
+    baseDelay: 0.5
+  - type: WieldableSpeedModifiers
+    base: 0.8
+    light: 1
+    medium: 1
+    heavy: 1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MCMagazineSMG90
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/smg_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/smg_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazineSMG90
+  - type: AttachableHolder
+    randomAttachmentChance: 0.1
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentRecoilCompensator
+          - RMCAttachmentSuppressor
+          # - TODO: Heavy Barrel
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS42xTelescopicMiniscope
+          - RMCAttachmentRailFlashlight
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentLaserSight
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.8, -0.06
+      rmc-aslot-rail: 0.327, 0.19
+      rmc-aslot-underbarrel: 0.65, -0.34
+  - type: GunDamageModifier
+    multiplier: 1
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: MCMagazineSMG90
+  name: "SMG-90 submachine gun magazine (10x20mm)"
+  description: "A 10x20mm caseless submachine gun magazine."
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineSmg
+    - MCMagazineSMG90
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgeSMG90
+    proto: MCCartridgeSMG90
+    capacity: 80
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/smg90.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+    zeroOnlyOnEmpty: true
+  - type: Appearance
+
+- type: entity
+  parent: CMCartridge10x20mm
+  id: MCCartridgeSMG90
+  name: патрон (10x20mm)
+  description: 10x20mm
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MCCartridgeSMG90
+  - type: CartridgeAmmo
+    proto: MCBulletSMG90
+
+- type: entity
+  parent: Bullet10x20mm
+  id: MCBulletSMG90
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 22
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 8
+      falloff: 5
+  - type: CMArmorPiercing
+    amount: 5
+
+- type: Tag
+  id: MCMagazineSMG90
+
+- type: Tag
+  id: MCCartridgeSMG90

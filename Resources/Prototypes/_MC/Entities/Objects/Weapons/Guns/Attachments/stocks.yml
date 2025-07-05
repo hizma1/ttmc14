@@ -51,5 +51,58 @@
       recoilFlat: 3
       scatterFlat: 2
 
+- type: entity
+  parent: RMCStockAttachmentCollapsibleBase
+  id: MCAttachmentStockMP19
+  name: MP-19 machinepistol stock
+  description: A submachinegun stock distributed in small numbers to TGMC forces. Compatible with the MP-19, this stock reduces recoil and improves accuracy, but at a reduction to handling and agility. Seemingly a bit more effective in a brawl.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+    state: mp19
+  - type: Tag
+    tags:
+    - MCAttachmentStock
+    - MCAttachmentStockMP19
+  - type: AttachableVisuals
+    suffix: ""
+  - type: AttachableToggleable
+    doAfterBreakOnMove: false
+    doAfter: 0.1
+    icon:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+      state: mp19
+    iconActive:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+      state: mp19-on
+    actionName: Toggle the MP-19 stock
+  - type: AttachableWieldDelayMods
+    modifiers:
+    - conditions:
+        activeOnly: true
+      delay: 0.2
+  - type: AttachableWeaponMeleeMods
+    modifiers:
+    - bonusDamage:
+        types:
+          Blunt: 5
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - conditions:
+        wieldedOnly: true
+        activeOnly: true
+      accuracyAddMult: 0.3
+      recoilFlat: -3
+      scatterFlat: -2
+    - conditions:
+        unwieldedOnly: true
+        activeOnly: true
+      accuracyAddMult: -0.15
+      recoilFlat: 3
+      scatterFlat: 2
+
 - type: Tag
   id: MCAttachmentStockSH35
+
+- type: Tag
+  id: MCAttachmentStockMP19
