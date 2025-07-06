@@ -1,0 +1,9 @@
+- type: entity
+  parent: RMCPodDoorButton
+  id: MCButtonDroppodBay
+  name: droppod bay
+  components:
+  - type: RMCDoorButton
+    id: mc_ship_droppod_bay
+  - type: AccessReader
+    access: [ [ "MCAccessLogistics" ], [ "MCAccessBrig" ], [ "MCAccessEngineering" ], [ "MCAccessEngineeringPreparation" ], [ "MCAccessBridge" ], [ "MCAccessDropship" ] ]

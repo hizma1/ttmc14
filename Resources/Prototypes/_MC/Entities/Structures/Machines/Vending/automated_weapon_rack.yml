@@ -36,7 +36,14 @@
       - id: MCWeaponEnergyPistol
       - id: MCWeaponEnergyMachineGun
     - name: SMGs
-      entries: []
+      entries:
+      - id: MCWeaponSMG90
+      - id: MCMagazineSMG90
+      - id: MCWeaponMP19
+      - id: MCMagazineMP19
+      - id: MCWeaponSMG45
+      - id: MCMagazineSMG45
+      - id: MCMagazineSMG45SH
     - name: Marksman
       entries: []
     - name: Shotgun

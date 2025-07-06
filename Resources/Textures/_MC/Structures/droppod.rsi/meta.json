@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 50
+  },
+  "states": [
+    {
+      "name": "singlepod_green"
+    },
+    {
+      "name": "singlepod_green_inactive"
+    },
+    {
+      "name": "singlepod_green_active"
+    },
+    {
+      "name": "singlepod_green_active_emissive"
+    },
+    {
+      "name": "singlepod_green_closing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "singlepod_red"
+    },
+    {
+      "name": "singlepod_red_inactive"
+    },
+    {
+      "name": "singlepod_red_active"
+    },
+    {
+      "name": "singlepod_red_active_emissive"
+    },
+    {
+      "name": "singlepod_red_closing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "launch_bay"
+    },
+    {
+      "name": "supplypod"
+    },
+    {
+      "name": "supplypod_inactive"
+    },
+    {
+      "name": "supplypod_active"
+    },
+    {
+      "name": "supplypod_active_emissive"
+    },
+    {
+      "name": "supplypod_full"
+    },
+    {
+      "name": "supplypod_full_emissive"
+    },
+    {
+      "name": "supplypod_closing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "sentrypod"
+    },
+    {
+      "name": "sentrypod_inactive"
+    },
+    {
+      "name": "sentrypod_active"
+    },
+    {
+      "name": "sentrypod_active_emissive"
+    },
+    {
+      "name": "sentrypod_full"
+    },
+    {
+      "name": "sentrypod_full_emissive"
+    },
+    {
+      "name": "sentrypod_closing",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}
