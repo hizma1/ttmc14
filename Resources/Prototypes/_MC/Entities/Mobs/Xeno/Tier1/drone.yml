@@ -5,6 +5,7 @@
   - MCXenoPlantingWeeds
   - MCXenoCreateResinJelly
   - MCXenoAcidicSalve
+  - MCActionXenoRecycle
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -54,6 +55,7 @@
     acid: 15
   - type: XenoPheromones
     pheromonesMultiplier: 2
+  - type: MCXenoRecycle
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000
@@ -128,6 +130,7 @@
     - MCActionXenoPlantWeeds
     - MCActionXenoCreateResinJelly
     - MCActionXenoAcidicSalve
+    - MCActionXenoRecycle
   - type: XenoEvolution
     evolvesTo:
     - MCXenoHivelord
@@ -137,6 +140,7 @@
     maxPlasma: 1000
     plasmaRegenOnWeeds: 50
   - type: XenoAcid
+  - type: MCXenoRecycle
   - type: AcidTrap
     trapLevel: 1
     cost: 70

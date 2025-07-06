@@ -31,3 +31,16 @@
     deselectOnMiss: false
   - type: XenoActionPlasma
     cost: 150
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoRecycle
+  name: Recycle (750)
+  description: We deconstructthe body of a fellow fallen xenomorph to avoid marines from harvesting our sisters in arms.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/drone.rsi
+      state: recycle
+    event: !type:MCXenoRecycleActionEvent
