@@ -1,4 +1,6 @@
-﻿using Content.Shared._MC.Droppod.Components;
+﻿using System.Numerics;
+using Content.Client._RMC14.TacticalMap;
+using Content.Shared._MC.Droppod.Components;
 using Content.Shared._RMC14.Areas;
 using Content.Shared._RMC14.TacticalMap;
 using JetBrains.Annotations;
@@ -25,8 +27,8 @@ public sealed class MCDroppodTargetBui : BoundUserInterface
         _window = this.CreateWindow<MCDroppodTargetWindow>();
 
         _window.Control.MouseFilter = Control.MouseFilterMode.Stop;
-        _window.Control.OnClickedInIndices = OnClicked;
-        _window.Control.DrawAreaLabels = false;
+        _window.Control.OnClick = OnClicked;
+        _window.Control.CurrentLabelMode = TacticalMapControl.LabelMode.Tactical;
 
         UpdateTacticalMapDisplay();
     }

@@ -1,4 +1,5 @@
-﻿using Content.Shared._MC.Droppod.Components;
+﻿using System.Numerics;
+using Content.Shared._MC.Droppod.Components;
 using Content.Shared._MC.Droppod.Events;
 using Content.Shared._RMC14.Explosion;
 using Content.Shared._RMC14.Rules;
@@ -6,6 +7,7 @@ using Content.Shared.Actions;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Parallax;
 using Content.Shared.Popups;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
@@ -14,6 +16,7 @@ namespace Content.Shared._MC.Droppod;
 
 public abstract class MCSharedDroppodSystem : EntitySystem
 {
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
@@ -134,8 +137,10 @@ public abstract class MCSharedDroppodSystem : EntitySystem
         if (!_map.TryGetMap(mapId, out var mapEntity))
             return;
 
-        var position = _map.ToCoordinates(mapEntity.Value, args.Tile);
+        if (!TryComp<MapGridComponent>(mapEntity, out var gridComponent))
+            return;
 
+        var position = _transform.ToMapCoordinates(new EntityCoordinates(mapEntity.Value, (Vector2) args.Tile * gridComponent.TileSize));
         entity.Comp.Target = new MapCoordinates(position.Position, mapId);
         Dirty(entity);
     }
@@ -166,7 +171,19 @@ public abstract class MCSharedDroppodSystem : EntitySystem
             return;
 
         _explosion.QueueExplosion(target, "RMC", 110, 40, 10, entity);
-        _transform.SetMapCoordinates(entity, target);
+
+        Timer.Spawn(
+            entity.Comp.FallDelay,
+            () =>
+            {
+                _transform.SetMapCoordinates(entity, target);
+
+                entity.Comp.State = MCDroppodState.Landed;
+                Dirty(entity);
+
+                UpdateSprite(entity);
+            }
+        );
     }
 
     private MapId GetTransferMap()

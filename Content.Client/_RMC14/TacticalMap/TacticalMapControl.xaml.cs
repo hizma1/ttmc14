@@ -90,6 +90,7 @@ public sealed partial class TacticalMapControl : TextureRect
     public float LineThickness { get; set; } = 2.0f;
     public bool QueenEyeMode { get; set; }
 
+    public Action<Vector2i>? OnClick;
     public Action<Vector2i>? OnBlipClicked;
     public Action<Vector2i, string>? OnBlipRightClicked;
     public Action? OnUserInteraction;
@@ -620,6 +621,7 @@ public sealed partial class TacticalMapControl : TextureRect
                 return;
 
             HandleDrawingClick(args);
+            HandleClick(args);
         }
         else if (args.Function == EngineKeyFunctions.UIRightClick)
         {
@@ -694,6 +696,13 @@ public sealed partial class TacticalMapControl : TextureRect
             OnUserInteraction?.Invoke();
             args.Handle();
         }
+    }
+
+    private void HandleClick(GUIBoundKeyEventArgs args)
+    {
+        var clickPosition = PositionToIndices(args.RelativePosition);
+        OnClick?.Invoke(clickPosition);
+        args.Handle();
     }
 
     private bool HandleLabelRightClick(GUIBoundKeyEventArgs args)

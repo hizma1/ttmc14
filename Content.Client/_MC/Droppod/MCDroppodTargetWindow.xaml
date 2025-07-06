@@ -1,5 +1,6 @@
 ﻿<DefaultWindow
     xmlns="https://spacestation14.io"
-    xmlns:controls="clr-namespace:Content.Client._RMC14.TacticalMap">
+    xmlns:controls="clr-namespace:Content.Client._RMC14.TacticalMap"
+    SetSize="500 500">
     <controls:TacticalMapControl Name="Control" Access="Public"/>
 </DefaultWindow>

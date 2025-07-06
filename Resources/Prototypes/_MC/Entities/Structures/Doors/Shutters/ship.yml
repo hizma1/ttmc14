@@ -1,0 +1,7 @@
+- type: entity
+  parent: RMCPodDoorAlmayerIndestructible
+  id: MCPodlockShipDroppodBay
+  suffix: Droppod bay
+  components:
+  - type: RMCPodDoor
+    id: mc_ship_droppod_bay
