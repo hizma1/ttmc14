@@ -1,0 +1,12 @@
+ent-MCIdCardCaptain = Captain's ID Card
+    .desc = { ent-MCGoldenIdCard.desc }
+ent-MCDogtagFC = Field Commander's dogtags
+    .desc = { ent-MCDogtag.desc }
+ent-MCIdCardSO = Staff Officer's ID Card
+    .desc = { ent-MCSilverIdCard.desc }
+ent-MCIdCardPilotOfficer = Pilot Officer's ID Card
+    .desc = { ent-MCSilverIdCard.desc }
+ent-MCDogtagAssaultCrewman = Assault Crewman's dogtags
+    .desc = { ent-MCDogtag.desc }
+ent-MCIdCardTransportOfficer = Transport Officer's ID Card
+    .desc = { ent-MCSilverIdCard.desc }

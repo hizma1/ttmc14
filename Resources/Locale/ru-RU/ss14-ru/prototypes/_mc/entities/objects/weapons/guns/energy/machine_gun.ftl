@@ -1,0 +1,2 @@
+ent-MCWeaponEnergyMachineGun = Terra Experimental laser machine gun (TE-M)
+    .desc = A Terra Experimental standard issue machine laser gun, often called as the TE-M by marines. It has a fire switch for normal and efficiency modes. Uses standard Terra Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts.

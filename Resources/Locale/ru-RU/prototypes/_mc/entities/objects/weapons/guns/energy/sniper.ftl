@@ -1,0 +1,2 @@
+ent-MCWeaponEnergySniper = Terra Experimental laser sniper (TE-S)
+    .desc = The T-ES, a Terra Experimental standard issue laser sniper rifle, it has an integrated charge selector for normal and heat settings. Uses standard Terra Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts.

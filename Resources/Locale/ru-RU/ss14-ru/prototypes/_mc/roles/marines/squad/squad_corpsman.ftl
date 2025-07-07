@@ -1,0 +1,14 @@
+ent-MCSpawnPointSquadCorpsman = squad corpsman spawn point
+    .desc = { ent-MCSpawnPointJob.desc }
+ent-MCSpawnPointSquadCorpsmanAlpha = { ent-MCSpawnPointSquadCorpsman }
+    .suffix = Alpha
+    .desc = { ent-MCSpawnPointSquadCorpsman.desc }
+ent-MCSpawnPointSquadCorpsmanBravo = { ent-MCSpawnPointSquadCorpsman }
+    .suffix = Bravo
+    .desc = { ent-MCSpawnPointSquadCorpsman.desc }
+ent-MCSpawnPointSquadCorpsmanCharlie = { ent-MCSpawnPointSquadCorpsman }
+    .suffix = Charlie
+    .desc = { ent-MCSpawnPointSquadCorpsman.desc }
+ent-MCSpawnPointSquadCorpsmanDelta = { ent-MCSpawnPointSquadCorpsman }
+    .suffix = Delta
+    .desc = { ent-MCSpawnPointSquadCorpsman.desc }

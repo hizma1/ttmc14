@@ -1,3 +1,5 @@
+
+
 ent-ClothingOuterVestHazard = светоотражающий жилет
     .desc = Жилет повышенной видимости, используемый в производственных зонах.
 ent-ClothingOuterVest = жилет
