@@ -1,12 +1,10 @@
-using Content.Shared.Interaction;
 using Content.Shared.DoAfter;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
-using Content.Shared.Actions;
 using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Plasma;
 using Robust.Shared.Audio.Systems;
-using Robust.Shared.GameObjects;
+using Robust.Shared.Network;
 
 namespace Content.Shared._MC.Xeno.Abilities.Recycle;
 
@@ -18,6 +16,7 @@ public sealed class MCXenoRecycleSystem : EntitySystem
     [Dependency] private readonly XenoPlasmaSystem _xenoPlasma = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly INetManager _net = default!;
 
     public override void Initialize()
     {
@@ -71,9 +70,11 @@ public sealed class MCXenoRecycleSystem : EntitySystem
             return;
 
         args.Handled = true;
-
-        QueueDel(target);
-        _audio.PlayPvs(xeno.Comp.Sound, xeno);
-        _popup.PopupClient(Loc.GetString("recycle-end"), xeno, xeno, PopupType.MediumCaution);
+        if (_net.IsServer)
+        {
+            QueueDel(target);
+            _audio.PlayPvs(xeno.Comp.Sound, xeno);
+            _popup.PopupClient(Loc.GetString("recycle-end"), xeno, xeno, PopupType.MediumCaution);
+        }
     }
 }
