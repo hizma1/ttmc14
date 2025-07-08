@@ -71,6 +71,8 @@
         Piercing: 70
   - type: CMArmorPiercing
     amount: 20
+  - type: MCXenoSunderDamageOnHit
+    amount: 1.25
   - type: GunStacksProjectile
   - type: RMCProjectileDamageFalloff
     thresholds:

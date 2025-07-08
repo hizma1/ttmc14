@@ -11,6 +11,7 @@
     overlay: false
     drawFov: false
   - type: MCXenoDamageVisuals
+  - type: MCXenoSunder
   - type: CombatMode
     canDisarm: false
   - type: MeleeWeapon

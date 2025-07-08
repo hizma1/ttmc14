@@ -135,6 +135,8 @@
         Piercing: 20
   - type: CMArmorPiercing
     amount: 10
+  - type: MCXenoSunderDamageOnHit
+    amount: 0.5
   - type: RMCProjectileDamageFalloff
     thresholds:
     - range: 24

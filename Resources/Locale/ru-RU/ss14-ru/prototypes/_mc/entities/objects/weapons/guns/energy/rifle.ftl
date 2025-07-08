@@ -1,2 +1,0 @@
-ent-MCWeaponEnergyRifle = Terra Experimental laser rifle (TE-R)
-    .desc = A Terra Experimental laser rifle, abbreviated as the TE-R. It has an integrated charge selector for normal and high settings. Uses standard Terra Experimental (abbreviated as TE) power cells. As with all TE Laser weapons, they use a lightweight alloy combined without the need for bullets any longer decreases their weight and aiming speed quite some vs their ballistic counterparts. Has four firemodes: Standard, Overcharge, Weakening, and Microwave.
