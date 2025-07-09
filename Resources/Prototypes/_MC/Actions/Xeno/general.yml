@@ -1,0 +1,41 @@
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoRest
+  name: Rest
+  description: Lie down to regenerate health more quickly while on weeds.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/general.rsi
+      state: resting
+    event: !type:XenoRestActionEvent
+    useDelay: 1
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoHide
+  name: Hide
+  description: Hide under tables and other objects.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/general.rsi
+      state: xenohide
+    event: !type:XenoHideActionEvent
+    useDelay: 0.5
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoPheromones
+  name: Emit Pheromones (35)
+  description: Gives a buff to nearby xenonids. [color=cyan]Consumes 2.5 plasma per second.[/color]
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Xeno/Actions/general.rsi
+      state: emit_pheromones
+    event: !type:XenoPheromonesActionEvent
+    useDelay: 0.33

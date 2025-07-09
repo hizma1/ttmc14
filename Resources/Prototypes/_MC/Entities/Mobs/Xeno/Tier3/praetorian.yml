@@ -34,9 +34,9 @@
     role: MCXenoPraetorian
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
+    - MCActionXenoPheromones
     - ActionXenoDevolve
-    - ActionXenoPheromones
     # MC
     - MCActionXenoToggleXenoSpitPraetorian
     hudOffset: -0.15,0.25

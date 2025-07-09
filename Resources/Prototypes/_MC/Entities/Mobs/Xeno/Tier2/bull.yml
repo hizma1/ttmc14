@@ -34,7 +34,7 @@
     role: MCXenoBull
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoDevolve
     # MC
     - MCActionXenoToggleChargingBull

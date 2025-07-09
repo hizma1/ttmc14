@@ -6,7 +6,7 @@
   components:
   - type: Sprite
     sprite: _MC/Clothing/OuterClothing/Armor/PAS/pilot_chest.rsi
-  - type: CMArmor
+  - type: MCArmor
     melee: 40
     bullet: 50
     laser: 50
@@ -27,7 +27,7 @@
   components:
   - type: Sprite
     sprite: _MC/Clothing/OuterClothing/Armor/PAS/mech_pilot_suit.rsi
-  - type: CMArmor
+  - type: MCArmor
     melee: 45
     bullet: 55
     laser: 55
@@ -48,7 +48,7 @@
   components:
   - type: Sprite
     sprite: _MC/Clothing/OuterClothing/Armor/PAS/assault_crewman_suit.rsi
-  - type: CMArmor
+  - type: MCArmor
     melee: 45
     bullet: 55
     laser: 55
@@ -69,7 +69,7 @@
   components:
   - type: Sprite
     sprite: _MC/Clothing/OuterClothing/Armor/PAS/transport_crewman_suit.rsi
-  - type: CMArmor
+  - type: MCArmor
     melee: 45
     bullet: 55
     laser: 55

@@ -55,9 +55,9 @@
     role: MCXenoRunner
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoDevolve
-    - ActionXenoHide
+    - MCActionXenoHide
     # MC
     hudOffset: -0.1,0.1
   - type: XenoEvolution

@@ -36,7 +36,7 @@
     role: MCXenoCrusher
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoDevolve
     # MC
     - MCActionXenoCrestToss

@@ -137,7 +137,7 @@
     damage:
       types:
         Piercing: 20
-   - type: CMArmorPiercing
+  - type: CMArmorPiercing
     amount: 5
   - type: MCXenoSunderDamageOnHit
     amount: 0.5

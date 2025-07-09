@@ -115,10 +115,9 @@
   - type: Xeno
     actionIds:
     # RMC
-    - ActionXenoRest
-    - ActionXenoWatch
+    - MCActionXenoRest
+    - MCActionXenoPheromones
     - ActionXenoAcidWeak
-    - ActionXenoPheromones
     - ActionXenoDevolve
     - ActionXenoChooseStructure
     - ActionXenoSecreteStructure

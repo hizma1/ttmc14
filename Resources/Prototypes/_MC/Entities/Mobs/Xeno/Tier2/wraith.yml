@@ -36,7 +36,7 @@
     role: MCXenoWraith
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoDevolve
     # MC
     - MCActionXenoRewind

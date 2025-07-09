@@ -38,8 +38,8 @@
     role: MCXenoQueen
     actionIds:
     # RMC
-    - ActionXenoRest
-    - ActionXenoPheromones
+    - MCActionXenoRest
+    - MCActionXenoPheromones
     # MC
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds

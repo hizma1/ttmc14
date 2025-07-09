@@ -22,9 +22,8 @@
   - type: Xeno
     role: MCXenoLarva
     actionIds:
-    - ActionXenoRest
-    - ActionXenoWatch
-    - ActionXenoHide
+    - MCActionXenoRest
+    - MCActionXenoHide
     hudOffset: -0.1,0.25
     tier: 0
     unlockAt: 0

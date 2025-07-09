@@ -5,7 +5,7 @@
   components:
   - type: Sprite
   - type: Clothing
-  - type: CMArmor
+  - type: MCArmor
     melee: 50
     bullet: 70
     laser: 70

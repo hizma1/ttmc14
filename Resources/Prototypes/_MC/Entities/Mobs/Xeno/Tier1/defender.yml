@@ -25,7 +25,7 @@
     role: MCXenoDefender
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoRegurgitate
     - ActionXenoWatch
     - ActionXenoTailSlam
