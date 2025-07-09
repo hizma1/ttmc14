@@ -1,0 +1,50 @@
+# tags
+- type: Tag
+  id: MCGrenade
+
+# entities
+- type: entity
+  parent: BaseItem
+  id: MCGrenade
+  name: grenade
+  description: Duck and cover.
+  abstract: true
+  components:
+  - type: Explosive
+    explosionType: RMC
+  - type: ExplosionResistance
+    damageCoefficient: 0
+  - type: OnUseTimerTrigger
+    delay: 4
+    beepSound:
+      path: /Audio/_RMC14/Explosion/armbomb.ogg
+      params:
+        volume: -5
+    initialBeepDelay: 0
+    beepInterval: 10
+    doPopup: false
+  - type: IgnorePredictionHide
+  - type: Item
+    size: Small
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - suitStorage
+  - type: ChangeItemSizeOnTimerTrigger
+  - type: CancelUseWithCloak
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hedp.rsi
+    layers:
+    - state: icon
+      map: [ "enum.TriggerVisualLayers.Base" ]
+  - type: Appearance
+  - type: AnimationPlayer
+  - type: GenericVisualizer
+    visuals:
+      enum.Trigger.TriggerVisuals.VisualState:
+        enum.ConstructionVisuals.Layer:
+          Primed: { state: active }
+          Unprimed: { state: icon }
+  - type: Tag
+    tags:
+    - MCGrenade

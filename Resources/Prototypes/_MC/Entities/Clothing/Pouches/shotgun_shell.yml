@@ -13,6 +13,5 @@
     - 0,0,7,1 # 4 slots
     whitelist:
       tags:
-      - RMCHandful
-      - MCMagazineHandful
+      - MCHandful
   - type: FixedItemSizeStorage

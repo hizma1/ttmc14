@@ -14,50 +14,30 @@
     - 0,0,7,1 # 4 slots
     whitelist:
       tags:
-      - Grenade
+      - MCGrenade
       - RMCExplosiveBreachingCharge
   - type: FixedItemSizeStorage
 
 - type: entity
-  parent: MCPouchStorage
+  parent: MCPouchExplosive
   id: MCPouchExplosiveSOM
   name: S26 explosive pouch
   description: A leather pouch for storing grenades, rockets, mine boxes, and other explosives.
   components:
   - type: Sprite
     sprite: _MC/Clothing/Pouches/explosive_som.rsi
-  - type: Storage
-    maxItemSize: Normal
-    grid:
-    - 0,0,7,1 # 4 slots
-    whitelist:
-      tags:
-      - Grenade
-      - RMCExplosiveBreachingCharge
-  - type: FixedItemSizeStorage
 
 - type: entity
-  parent: MCPouchStorage
+  parent: MCPouchExplosive
   id: MCPouchExplosiveICC
   name: S26 explosive pouch
   description: It can contain grenades, plastiques, mine boxes, and other explosives. Clearly made from with a synthetic tan fiber.
   components:
   - type: Sprite
     sprite: _MC/Clothing/Pouches/explosive_icc.rsi
-  - type: Storage
-    maxItemSize: Normal
-    grid:
-    - 0,0,7,1 # 4 slots
-    whitelist:
-      tags:
-      - Grenade
-      - RMCExplosiveBreachingCharge
-  - type: FixedItemSizeStorage
 
 - type: entity
-  parent:
-  - MCPouchStorage
-  - MCPouchVisualizerOpen
+  parent: MCPouchExplosive
   id: MCPouchExplosiveLarge
   name: large explosive pouch
   description: It can carry grenades, plastic explosives, mine boxes, and other explosives.
@@ -65,11 +45,5 @@
   - type: Sprite
     sprite: _MC/Clothing/Pouches/large_explosive.rsi
   - type: Storage
-    maxItemSize: Normal
     grid:
     - 0,0,11,1 # 6 slots
-    whitelist:
-      tags:
-      - Grenade
-      - RMCExplosiveBreachingCharge
-  - type: FixedItemSizeStorage

@@ -69,15 +69,15 @@
       entries: []
     - name: Grenades
       entries:
-      - id: CMGrenadeHighExplosive
+      - id: MCGrenadeHedp
         amount: 200
-      - id: CMGrenadeFragOld
+      - id: MCGrenadeHefaM15
         amount: 30
       # M40 adhesive charge grenade
       # M45 Trailblazer grenade
-      - id: RMCGrenadeIncendiary
+      - id: MCGrenadeHidp
         amount: 50
-      - id: CMGrenadeSmoke
+      - id: MCGrenadeHsdp
         amount: 25
       # M40-2 SCDP smoke grenade
       # M40-AG smoke grenade

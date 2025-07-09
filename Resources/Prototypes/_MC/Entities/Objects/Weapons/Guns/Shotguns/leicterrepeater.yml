@@ -142,10 +142,9 @@
     - GOV8
   - type: Tag
     tags:
-    - RMCHandful
+    - MCHandful
     - Cartridge
     - MCCartridgeGovernmentRounds
-    - MCMagazineHandful
 
 - type: stack
   id: MCCartridgeGovernmentRounds

@@ -8,9 +8,9 @@
     sprite: _MC/Structures/Machines/vending.rsi
     layers:
     - state: surplus_clothes-off
-      map: ["enum.VendingMachineVisualLayers.Base"]
+      map: [ "enum.VendingMachineVisualLayers.Base" ]
     - state: surplus_clothes
-      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
   - type: CMAutomatedVendor
     sections:
     - name: Pouches
@@ -36,3 +36,9 @@
       # TE powerpack
       # medium general pouch
       # protein pack pouch
+    - name: Belts
+      entries:
+      - id: MCClothingBeltMarine
+      - id: MCClothingBeltShotgun
+      - id: MCClothingBeltGrenade
+      - id: MCClothingBeltToolsFill

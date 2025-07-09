@@ -92,7 +92,7 @@
   components:
   - type: Tag
     tags:
-    - CMMagazineSmg
+    - MCMagazineSmg
     - MCMagazineSMG90
   - type: BallisticAmmoProvider
     mayTransfer: True
