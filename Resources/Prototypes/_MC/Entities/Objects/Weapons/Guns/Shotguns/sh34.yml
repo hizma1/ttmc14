@@ -32,12 +32,7 @@
     cycleable: true
     whitelist:
       tags:
-      - RMCShellShotgunBuckshot
-      - RMCShellShotgunSlugs
-      - RMCShellShotgunFlechette
-      - RMCShellShotgunIncendiaryBuckshot
-      - RMCShellShotgunIncendiary
-      - RMCShellShotgunBeanbag
+      - MCShellShotgun
     proto: CMShellShotgunSlugs
     capacity: 2
     soundInsert:

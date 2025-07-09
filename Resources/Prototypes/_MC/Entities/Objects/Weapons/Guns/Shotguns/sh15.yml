@@ -89,7 +89,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - RMCShellShotgunFlechette
+      - MCShellShotgunFlechette
     proto: CMShellShotgunFlechette
   - type: Sprite
     sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/sh15_flechette.rsi
@@ -103,7 +103,7 @@
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-      - RMCShellShotgunSlugs
+      - MCShellShotgunSlugs
     proto: CMShellShotgunSlugs
   - type: Sprite
     sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/sh15_slug.rsi

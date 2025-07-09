@@ -51,9 +51,9 @@
       - id: MCWeaponShotgunSH35
       - id: MCWeaponShotgunSH39
       - id: MCWeaponShotgunSH34
-      - id: RMCBoxShotgunSlugs
-      - id: RMCBoxShotgunBuckshot
-      - id: RMCBoxShotgunFlechette
+      - id: MCBoxShotgunSlugs
+      - id: MCBoxShotgunBuckshot
+      - id: MCBoxShotgunFlechette
       - id: MCWeaponShotgunSH15
       - id: MCMagazineShotgunSH15Flechette
       - id: MCMagazineShotgunSH15Slug

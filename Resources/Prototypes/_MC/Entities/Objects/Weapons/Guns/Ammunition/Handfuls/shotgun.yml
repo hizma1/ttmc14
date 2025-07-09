@@ -1,6 +1,28 @@
+# tags
+- type: Tag
+  id: MCHandful
+
+- type: Tag
+  id: MCShellShotgun
+
+# base
+- type: entity
+  parent: CMBulletBase
+  id: MCBulletShotgun
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/bullet_projectiles.rsi
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: Projectile
+
+# buckshot
 - type: entity
   parent: CMShellShotgunBase
-  id: CMShellShotgunBuckshot
+  id: MCShellShotgunBuckshot
   name: handful of buckshot shells
   components:
   - type: Sprite
@@ -9,10 +31,10 @@
     - state: buckshot_shell_1
       map: [ "base" ]
   - type: CartridgeAmmo
-    proto: CMPelletShotgunBuckshot
+    proto: MCBulletShotgunBuckshot
   - type: Stack
     count: 5
-    stackType: RMCShellShotgunBuckshot
+    stackType: MCShellShotgunBuckshot
     baseLayer: base
     layerStates:
     - buckshot_shell_1
@@ -23,64 +45,70 @@
     - buckshot_shell_5
   - type: Tag
     tags:
-    - RMCHandful
-    - Cartridge
-    - RMCShellShotgun
-    - RMCShellShotgunBuckshot
+    - MCShellShotgunBuckshot
+    - MCShellShotgun
+    - MCHandful
 
 - type: entity
-  parent: CMShellShotgunBuckshot
-  id: CMShellShotgunBuckshot1
+  parent: MCShellShotgunBuckshot
+  id: MCShellShotgunBuckshot1
   suffix: 1
+  components:
+  - type: Stack
+    count: 1
 
 - type: stack
-  id: RMCShellShotgunBuckshot
+  id: MCShellShotgunBuckshot
   name: handful of buckshot shells
-  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: buckshot_shell_1 }
-  spawn: CMShellShotgunBuckshot
+  icon:
+    sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    state: buckshot_shell_1
+  spawn: MCShellShotgunBuckshot
   maxCount: 5
 
+- type: Tag
+  id: MCShellShotgunBuckshot
+
+# buckshot bullet
 - type: entity
-  parent: CMShellShotgunBase
-  id: RMCShellShotgunBreaching
-  name: handful of breaching shells
+  parent: MCBulletShotgun
+  id: MCBulletShotgunBuckshot
+  name: buckshot
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
     layers:
-    - state: breaching_shell_1
-      map: [ "base" ]
-  - type: CartridgeAmmo
-    proto: RMCPelletShotgunBreaching
-  - type: Stack
+    - state: buckshot
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 40
+  - type: CMArmorPiercing
+    amount: 0
+  - type: MCXenoSunderDamageOnHit
+    amount: 0
+  - type: ProjectileSpread
+    proto: MCBulletShotgunBuckshot
     count: 6
-    stackType: RMCShellShotgunBreaching
-    baseLayer: base
-    layerStates:
-    - breaching_shell_1
-    - breaching_shell_1
-    - breaching_shell_2
-    - breaching_shell_3
-    - breaching_shell_4
-    - breaching_shell_5
-    - breaching_shell_6
-  - type: Tag
-    tags:
-    - RMCHandful
-    - Cartridge
-    - RMCShellShotgun
-    - RMCShellShotgunBreaching
+    spread: 15
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 4
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 0
+      falloff: 1
+  - type: RMCProjectileAccuracy
+    thresholds:
+    - range: 4
+      falloff: 10
+  - type: RMCStunOnHit
 
-- type: stack
-  id: RMCShellShotgunBreaching
-  name: handful of breaching shells
-  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: breaching_shell_1 }
-  spawn: RMCShellShotgunBreaching
-  maxCount: 6
-
+# slugs
 - type: entity
   parent: CMShellShotgunBase
-  id: CMShellShotgunSlugs
+  id: MCShellShotgunSlugs
   name: handful of shotgun slugs
   components:
   - type: Sprite
@@ -89,10 +117,10 @@
     - state: slug_shell_1
       map: [ "base" ]
   - type: CartridgeAmmo
-    proto: CMPelletShotgunSlug
+    proto: MCBulletShotgunSlug
   - type: Stack
     count: 5
-    stackType: RMCShellShotgunSlug
+    stackType: MCShellShotgunSlugs
     baseLayer: base
     layerStates:
     - slug_shell_1
@@ -103,95 +131,71 @@
     - slug_shell_5
   - type: Tag
     tags:
-    - RMCHandful
-    - Cartridge
-    - RMCShellShotgun
-    - RMCShellShotgunSlugs
+    - MCShellShotgunSlugs
+    - MCShellShotgun
+    - MCHandful
+
+- type: entity
+  parent: MCShellShotgunSlugs
+  id: MCShellShotgunSlugs1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
 
 - type: stack
-  id: RMCShellShotgunSlug
+  id: MCShellShotgunSlugs
   name: handful of shotgun slugs
-  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: slug_shell_1 }
-  spawn: CMShellShotgunSlugs
+  icon:
+    sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    state: slug_shell_1
+  spawn: MCShellShotgunSlugs
   maxCount: 5
 
+- type: Tag
+  id: MCShellShotgunSlugs
+
+# slug bullet
 - type: entity
-  parent: CMShellShotgunBase
-  id: CMShellShotgunIncendiary
-  name: handful of incendiary slugs
+  parent: MCBulletShotgun
+  id: MCBulletShotgunSlug
+  name: slug
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
     layers:
-    - state: incendiary_slug_1
-      map: [ "base" ]
-  - type: CartridgeAmmo
-    proto: CMPelletShotgunIncendiary
-  - type: Stack
-    count: 5
-    stackType: RMCShellShotgunIncendiary
-    baseLayer: base
-    layerStates:
-    - incendiary_slug_1
-    - incendiary_slug_1
-    - incendiary_slug_2
-    - incendiary_slug_3
-    - incendiary_slug_4
-    - incendiary_slug_5
-  - type: Tag
-    tags:
-    - RMCHandful
-    - Cartridge
-    - RMCShellShotgun
-    - RMCShellShotgunIncendiary
+    - state: beanbag
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 100
+  - type: MCXenoSunderDamageOnHit
+    amount: 7.5
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 8
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 0
+      falloff: 1
+  - type: CMArmorPiercing
+    amount: 20
+  - type: RMCStunOnHit
+    maxRange: 6.5
+    stunTime: 1
+    superSlowTime: 2
+    slowTime: 6
+  - type: RMCProjectileAccuracy
+    accuracy: 100
+    thresholds:
+    - range: 8
+      falloff: 10
 
-- type: stack
-  id: RMCShellShotgunIncendiary
-  name: handful of incendiary slugs
-  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: incendiary_slug_1 }
-  spawn: CMShellShotgunIncendiary
-  maxCount: 5
-
+# flechette
 - type: entity
   parent: CMShellShotgunBase
-  id: CMShellShotgunBeanbag
-  name: handful of beanbag slugs
-  components:
-  - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
-    layers:
-    - state: beanbag_slug_1
-      map: [ "base" ]
-  - type: CartridgeAmmo
-    proto: CMPelletShotgunBeanbag
-  - type: Stack
-    count: 5
-    stackType: RMCShellShotgunBeanbag
-    baseLayer: base
-    layerStates:
-    - beanbag_slug_1
-    - beanbag_slug_1
-    - beanbag_slug_2
-    - beanbag_slug_3
-    - beanbag_slug_4
-    - beanbag_slug_5
-  - type: Tag
-    tags:
-    - RMCHandful
-    - Cartridge
-    - RMCShellShotgun
-    - RMCShellShotgunBeanbag
-
-- type: stack
-  id: RMCShellShotgunBeanbag
-  name: handful of beanbag slugs
-  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: beanbag_slug_1 }
-  spawn: CMShellShotgunBeanbag
-  maxCount: 5
-
-- type: entity
-  parent: CMShellShotgunBase
-  id: CMShellShotgunFlechette
+  id: MCShellShotgunFlechette
   name: handful of flechette shells
   components:
   - type: Sprite
@@ -200,10 +204,10 @@
     - state: flechette_shell_1
       map: [ "base" ]
   - type: CartridgeAmmo
-    proto: CMPelletShotgunFlechette
+    proto: MCBulletShotgunFlechette
   - type: Stack
     count: 5
-    stackType: RMCShellShotgunFlechette
+    stackType: MCShellShotgunFlechette
     baseLayer: base
     layerStates:
     - flechette_shell_1
@@ -214,78 +218,57 @@
     - flechette_shell_5
   - type: Tag
     tags:
-    - RMCHandful
-    - Cartridge
-    - RMCShellShotgun
-    - RMCShellShotgunFlechette
-
-- type: stack
-  id: RMCShellShotgunFlechette
-  name: handful of flechette shells
-  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: flechette_shell_1 }
-  spawn: CMShellShotgunFlechette
-  maxCount: 5
+    - MCShellShotgunFlechette
+    - MCShellShotgun
+    - MCHandful
 
 - type: entity
-  parent: CMShellShotgunBuckshot
-  id: CMShellShotgunIncendiaryBuckshot
-  name: handful of incendiary buckshot shells
+  parent: MCShellShotgunFlechette
+  id: MCShellShotgunFlechette1
+  suffix: 1
   components:
-  - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
-    layers:
-    - state: incen_buckshot_1
-      map: [ "base" ]
-  - type: CartridgeAmmo
-    proto: CMPelletShotgunIncendiaryBuckshot
   - type: Stack
-    count: 5
-    stackType: RMCShellShotgunIncendiaryBuckshot
-    baseLayer: base
-    layerStates:
-    - incen_buckshot_1
-    - incen_buckshot_1
-    - incen_buckshot_2
-    - incen_buckshot_3
-    - incen_buckshot_4
-    - incen_buckshot_5
-  - type: Tag
-    tags:
-    - RMCHandful
-    - Cartridge
-    - RMCShellShotgun
-    - RMCShellShotgunIncendiaryBuckshot
+    count: 1
 
 - type: stack
-  id: RMCShellShotgunIncendiaryBuckshot
-  name: handful of incendiary buckshot shells
-  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: incen_buckshot_1 }
-  spawn: CMShellShotgunIncendiaryBuckshot
+  id: MCShellShotgunFlechette
+  name: handful of flechette shells
+  icon:
+    sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    state: flechette_shell_1
+  spawn: MCShellShotgunFlechette
   maxCount: 5
 
 - type: Tag
-  id: RMCHandful
+  id: MCShellShotgunFlechette
 
-- type: Tag
-  id: RMCShellShotgun
-
-- type: Tag
-  id: RMCShellShotgunBuckshot
-
-- type: Tag
-  id: RMCShellShotgunSlugs
-
-- type: Tag
-  id: RMCShellShotgunIncendiary
-
-- type: Tag
-  id: RMCShellShotgunBeanbag
-
-- type: Tag
-  id: RMCShellShotgunFlechette
-
-- type: Tag
-  id: RMCShellShotgunIncendiaryBuckshot
-
-- type: Tag
-  id: RMCShellShotgunBreaching
+# flechette bullet
+- type: entity
+  parent: MCBulletShotgun
+  id: MCBulletShotgunFlechette
+  name: flechette shell
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
+    layers:
+    - state: flechette
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 50
+  - type: CMArmorPiercing
+    amount: 15
+  - type: MCXenoSunderDamageOnHit
+    amount: 7
+  - type: ProjectileSpread
+    proto: MCBulletShotgunFlechette
+    count: 3
+    spread: 6
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 12
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 0
+      falloff: 1

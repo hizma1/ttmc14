@@ -8,7 +8,13 @@
   },
   "states": [
     {
-      "name": "mp19"
+      "name": "v41_a"
+    },
+    {
+      "name": "ak47_a"
+    },
+    {
+      "name": "ak47_black_a"
     },
     {
       "name": "ar11_stock"
@@ -23,7 +29,28 @@
       "name": "ar21_stock"
     },
     {
+      "name": "at45_a"
+    },
+    {
+      "name": "dp_a"
+    },
+    {
+      "name": "garand_a"
+    },
+    {
+      "name": "l11_a"
+    },
+    {
+      "name": "l40_a"
+    },
+    {
+      "name": "laser_a"
+    },
+    {
       "name": "leicrep_stock"
+    },
+    {
+      "name": "m41a_a"
     },
     {
       "name": "mg27"
@@ -35,13 +62,52 @@
       "name": "mg60"
     },
     {
+      "name": "ml101_a"
+    },
+    {
+      "name": "mosin_a"
+    },
+    {
+      "name": "mp19"
+    },
+    {
       "name": "mp19-on"
     },
     {
-      "name": "tx15_a"
+      "name": "pal12_a"
+    },
+    {
+      "name": "ppsh_a"
+    },
+    {
+      "name": "ptrs_a"
+    },
+    {
+      "name": "rpd_a"
     },
     {
       "name": "sg29_a"
+    },
+    {
+      "name": "sg62_a"
+    },
+    {
+      "name": "sh15"
+    },
+    {
+      "name": "sh39"
+    },
+    {
+      "name": "smg45"
+    },
+    {
+      "name": "t12_a"
+    },
+    {
+      "name": "t18_a"
+    },
+    {
+      "name": "t27_a"
     },
     {
       "name": "t39"
@@ -50,19 +116,16 @@
       "name": "t39_a"
     },
     {
+      "name": "t42_a"
+    },
+    {
       "name": "t60_a"
     },
     {
+      "name": "t64_a"
+    },
+    {
       "name": "t70_a"
-    },
-    {
-      "name": "tl84_a"
-    },
-    {
-      "name": "tl127_a"
-    },
-    {
-      "name": "tx11_a"
     },
     {
       "name": "t76"
@@ -71,88 +134,31 @@
       "name": "t76_a"
     },
     {
-      "name": "garand_a"
+      "name": "tl84_a"
     },
     {
-      "name": "ak47_a"
-    },
-    {
-      "name": "ak47_black_a"
-    },
-    {
-      "name": "v34"
-    },
-    {
-      "name": "v34_open"
-    },
-    {
-      "name": "v34_a"
-    },
-    {
-      "name": "v34_open_a"
+      "name": "tl127_a"
     },
     {
       "name": "trench_a"
     },
     {
-      "name": "ml101_a"
+      "name": "tx11_a"
     },
     {
-      "name": "l11_a"
+      "name": "tx15_a"
     },
     {
-      "name": "l40_a"
+      "name": "v34"
     },
     {
-      "name": "dp_a"
+      "name": "v34_a"
     },
     {
-      "name": "sg62_a"
+      "name": "v34_open"
     },
     {
-      "name": "t18_a"
-    },
-    {
-      "name": "t42_a"
-    },
-    {
-      "name": "t12_a"
-    },
-    {
-      "name": "laser_a"
-    },
-    {
-      "name": "pal12_a"
-    },
-    {
-      "name": "mosin_a"
-    },
-    {
-      "name": "ppsh_a"
-    },
-    {
-      "name": "rpd_a"
-    },
-    {
-      "name": "v41_a"
-    },
-    {
-      "name": "t64_a"
-    },
-    {
-      "name": "m41a_a"
-    },
-    {
-      "name": "t27_a"
-    },
-    {
-      "name": "ptrs_a"
-    },
-    {
-      "name": "at45_a"
-    },
-    {
-      "name": "smg45"
+      "name": "v34_open_a"
     }
   ]
 }
