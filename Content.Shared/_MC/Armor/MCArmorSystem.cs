@@ -2,6 +2,7 @@
 using Content.Shared._RMC14.Armor;
 using Content.Shared._RMC14.Weapons.Ranged;
 using Content.Shared.Damage;
+using Content.Shared.Explosion;
 using Content.Shared.Inventory;
 using Content.Shared.Tag;
 using Content.Shared.Weapons.Melee;
@@ -30,6 +31,8 @@ public sealed class MCArmorSystem : EntitySystem
 
         SubscribeLocalEvent<MCArmorComponent, MCArmorGetEvent>(OnGet);
         SubscribeLocalEvent<MCArmorComponent, InventoryRelayedEvent<MCArmorGetEvent>>(OnGetRelayed);
+        SubscribeLocalEvent<MCArmorComponent, GetExplosionResistanceEvent>(OnGetExplosionResistance);
+        SubscribeLocalEvent<MCArmorComponent, InventoryRelayedEvent<GetExplosionResistanceEvent>>(OnGetExplosionResistanceRelayed);
 
         SubscribeLocalEvent<MCArmorComponent, DamageModifyEvent>(OnDamageModify);
 
@@ -58,6 +61,16 @@ public sealed class MCArmorSystem : EntitySystem
         args.Args.Bio += entity.Comp.Bio;
         args.Args.Fire += entity.Comp.Fire;
         args.Args.Acid += entity.Comp.Acid;
+    }
+
+    private void OnGetExplosionResistance(Entity<MCArmorComponent> entity, ref GetExplosionResistanceEvent args)
+    {
+        args.DamageCoefficient *= ArmorToValue(entity.Comp.Bomb, 0, _xenoSunder.GetSunder(entity.Owner));
+    }
+
+    private void OnGetExplosionResistanceRelayed(Entity<MCArmorComponent> entity, ref InventoryRelayedEvent<GetExplosionResistanceEvent> args)
+    {
+        args.Args.DamageCoefficient *= ArmorToValue(entity.Comp.Bomb, 0, _xenoSunder.GetSunder(entity.Owner));
     }
 
     private void OnDamageModify(Entity<MCArmorComponent> entity, ref DamageModifyEvent args)
