@@ -1,0 +1,14 @@
+ent-MCAreaShipMedicalLowerMedbay = Medical Lower Medbay
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipMedicalUpperMedbay = Medical Upper Medbay
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipMedicalMorgue = Morgue
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipMedicalOperatingRoomOne = Medical Operating Room 1
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipMedicalOperatingRoomTwo = Medical Operating Room 2
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipMedicalMedicalScience = Medical Research laboratories
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipMedicalChemistry = Medical Chemical laboratory
+    .desc = { ent-MCAreaShip.desc }

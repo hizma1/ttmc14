@@ -1,0 +1,10 @@
+ent-MCDogtagSquadLeader = Squad Leader's dogtags
+    .desc = { ent-MCDogtag.desc }
+ent-MCDogtagSquadSmartgunner = Squad Smartgunner's dogtags
+    .desc = { ent-MCDogtag.desc }
+ent-MCDogtagSquadEngineer = Squad Engineer's dogtags
+    .desc = { ent-MCDogtag.desc }
+ent-MCDogtagSquadCorpsman = Squad Corpsman's dogtags
+    .desc = { ent-MCDogtag.desc }
+ent-MCDogtagSquadMarine = Squad Marines's dogtags
+    .desc = { ent-MCDogtag.desc }
