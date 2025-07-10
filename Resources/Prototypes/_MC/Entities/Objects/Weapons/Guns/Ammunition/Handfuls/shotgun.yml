@@ -83,7 +83,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 40
+        Piercing: 28
   - type: CMArmorPiercing
     amount: 0
   - type: MCXenoSunderDamageOnHit
