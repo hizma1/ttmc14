@@ -25,6 +25,8 @@
       sprite: _MC/Interface/Actions/Xeno/runner.rsi
       state: pounce
     useDelay: 10
+    range: 100
     checkCanAccess: false
+    event: !type:MCXenoPounceActionEvent
   - type: XenoActionPlasma
     cost: 10

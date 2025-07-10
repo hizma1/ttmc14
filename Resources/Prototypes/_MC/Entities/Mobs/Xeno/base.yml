@@ -2,6 +2,10 @@
   id: MCXenoBase
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - MCDamageMelee
   - type: MobState
     allowedStates:
     - Alive
@@ -196,3 +200,12 @@
   components:
   - type: MCXenoSpit
   - type: MCXenoSpitToggle
+
+- type: entity
+  id: MCXenoPounce
+  abstract: true
+  components:
+  - type: MCXenoPounce
+    hitDamage:
+      groups:
+        Brute: 25

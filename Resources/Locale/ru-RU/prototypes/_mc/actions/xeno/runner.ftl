@@ -1,4 +1,4 @@
-ent-MCActionXenoEvasion = Evasion (75)
-    .desc = Take evasive action, forcing non-friendly projectiles that would hit you to miss for a short duration so long as you keep moving.
-ent-MCActionXenoPounce = Pounce (10)
-    .desc = Leap at your target, tackling and disarming them.
+ent-MCActionXenoEvasion = Уклонение (75)
+    .desc = Примите меры уклонения, заставляя вражеские снаряды, которые могли бы попасть в вас, промахиваться в течение короткого времени, пока вы продолжаете двигаться.
+ent-MCActionXenoPounce = Наскок (10)
+    .desc = Прыгайте на цель, атакуя и обезоруживая ее.

@@ -1,4 +1,4 @@
-ent-MCActionXenoEvolve = Evolve
-    .desc = Evolve to the next caste of xenonid or choose a strain if one is available.
-ent-MCActionXenoDevolve = De-evolve
-    .desc = Devolve to the previous caste of xenonid. [color=red]You won't get your evolution points refunded![/color]
+ent-MCActionXenoEvolve = Эволюционировать
+    .desc = Эволюционируйте в следующую касту ксенморфов или выберите стрейн, если он доступен.
+ent-MCActionXenoDevolve = Деградировать
+    .desc = Превратиться в предыдущую касту ксенморфов. [color=red]Вам не вернут очки эволюции![/color]
