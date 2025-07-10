@@ -13,7 +13,7 @@
       state: t70_a
       offset: -1.15625,-0.03125
   - type: Clothing
-    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+    sprite: _MC/Objects/Weapons/Guns/Launchers/gl70.rsi
   - type: RMCSelectiveFire
     baseFireRate: 0.833
   - type: BallisticAmmoProvider

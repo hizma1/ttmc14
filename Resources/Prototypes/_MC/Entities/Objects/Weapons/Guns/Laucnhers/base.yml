@@ -59,7 +59,8 @@
     baseDelay: 0.8
   - type: Clothing
     slots:
-    - suitStorage
+    - back
+    - suitstorage
   - type: StaticPrice
     price: 500
   - type: RMCNameItemOnVend

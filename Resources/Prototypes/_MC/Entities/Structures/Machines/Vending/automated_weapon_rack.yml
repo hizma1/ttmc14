@@ -69,6 +69,7 @@
       entries: []
     - name: Grenades
       entries:
+      - id: MCWeaponLauncherGl81
       - id: MCWeaponLauncherGl70
       - id: MCGrenadeHedp
         amount: 200
