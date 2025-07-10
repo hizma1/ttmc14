@@ -79,9 +79,10 @@
   - type: FixedIdentity
     name: cm-job-name-xeno-larva
   - type: XenoEvolution
-    canEvolveWithoutGranter: true
-    requiresGranter: false
-    max: 60
+    actionId: MCActionXenoEvolve
+    max: 100
     evolvesTo:
     - MCXenoDrone
     - MCXenoDefender
+    - MCXenoRunner
+    - MCXenoSentinel

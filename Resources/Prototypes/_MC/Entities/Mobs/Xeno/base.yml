@@ -15,6 +15,7 @@
   - type: CombatMode
     canDisarm: false
   - type: MeleeWeapon
+    attackRate: 1.25
     autoAttack: true
     widePrimary: true
     altDisarm: false
