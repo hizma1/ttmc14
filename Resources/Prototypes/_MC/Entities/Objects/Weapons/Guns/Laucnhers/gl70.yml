@@ -1,0 +1,33 @@
+- type: entity
+  parent: MCWeaponGrenadeLauncher
+  id: MCWeaponLauncherGl70
+  name: GL-70 grenade launcher
+  description: The GL-70 is the standard grenade launcher used by the TerraGov Marine Corps for area denial and big explosions.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Launchers/gl70.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+      state: t70_a
+      offset: -1.15625,-0.03125
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Machine/mg42.rsi
+  - type: RMCSelectiveFire
+    baseFireRate: 0.833
+  - type: BallisticAmmoProvider
+    capacity: 6
+  - type: AttachableHolder
+    slots:
+      mc-slot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS42xTelescopicMiniscope
+  - type: AttachableHolderVisuals
+    offsets:
+      mc-slot-rail: -0.4375,0.21875
+  - type: ShootAtFixedPoint
+    maxFixedRange: 15
