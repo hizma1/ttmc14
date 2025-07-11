@@ -10,6 +10,7 @@
       sprite: _MC/Interface/Actions/Xeno/runner.rsi
       state: evasion
     useDelay: 10
+    event: !type:MCXenoEvasionActionEvent
   - type: XenoActionPlasma
     cost: 75
 

@@ -11,7 +11,7 @@ public sealed partial class MCXenoPounceComponent : Component
     public float MaxDistance = 6;
 
     [DataField, AutoNetworkedField]
-    public int Strength = 20;
+    public int Strength = 45;
 
     [DataField, AutoNetworkedField]
     public DamageSpecifier HitDamage;

@@ -2,8 +2,6 @@
   parent:
   # MC
   - MCXenoBase
-  - MCXenoHide
-  - MCXenoPounce
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -16,6 +14,32 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/runner.rsi
+    layers:
+    - map: [ "enum.XenoVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.RMCDamageVisualLayers.Base" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Left" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Right" ]
+      visible: false
+    - map: [ "enum.EvasionLayer.Base" ]
+      sprite: _MC/Interface/Hud/timer.rsi
+      state: "1"
+      offset: 0.5,-0.5
+      visible: false
+    - map: [ "focused" ]
+      sprite: _RMC14/Interface/xeno_hud.rsi
+      state: hudeye
+      visible: false
+    - map: [ "targetedDirection" ]
+      sprite: _RMC14/Effects/targeted.rsi
+      state: sniper_lockon_direction
+      visible: false
+    - map: [ "targetedDirectionIntense" ]
+      sprite: _RMC14/Effects/targeted.rsi
+      state: sniper_lockon_intense_direction
+      visible: false
     offset: 0,0.65
   - type: FixedIdentity
     name: mc-job-name-xeno-runner
@@ -66,9 +90,11 @@
     evolvesTo:
     - MCXenoWraith
     - MCXenoHunter
+    - MCXenoBull
   - type: XenoDevolve
     devolvesTo:
     - MCXenoLarva
+  - type: XenoHide
   - type: MCArmor
     melee: 30
     bullet: 30
@@ -90,3 +116,8 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: runner
+  - type: MCXenoPounce
+    hitDamage:
+      groups:
+        Brute: 25
+  - type: MCXenoEvasion
