@@ -100,10 +100,10 @@ public sealed class MCXenoPounceSystem : EntitySystem
         if (!TryComp<MCXenoPounceComponent>(entity, out var pounceComponent))
             return;
 
-        Stop(entity);
-
         if (!HasComp<MobStateComponent>(args.OtherEntity))
             return;
+
+        Stop(entity);
 
         // TODO: work with shields
 
