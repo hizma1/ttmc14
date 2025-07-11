@@ -7,7 +7,7 @@
   - type: EntityTargetAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/wraith.rsi
+      sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: rewind
     event: !type:MCXenoRewindActionEvent
     range: 5
@@ -26,7 +26,7 @@
   - type: WorldTargetAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/wraith.rsi
+      sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: blink
     event: !type:MCXenoBlinkActionEvent
     range: 3
@@ -45,10 +45,42 @@
   - type: InstantAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/wraith.rsi
+      sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: portal
     event: !type:MCXenoPortalPlacerActionEvent
     useDelay: 7
-    deselectOnMiss: false
   - type: XenoActionPlasma
     cost: 100
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoBanish
+  name: Banish (100)
+  description: Banish a creature or object a short distance away within line of sight to null space. Can target oneself and allies. Can be manually cancelled with Recall.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/wraith.rsi
+      state: banish
+    event: !type:MCXenoBanishActionEvent
+    range: 5
+    useDelay: 20
+    deselectOnMiss: false
+    checkCanAccess: false
+  - type: XenoActionPlasma
+    cost: 100
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoRecall
+  name: Recall
+  description: Manually cancels your active banishment.
+  components:
+  - type: InstantAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/wraith.rsi
+      state: recall
+    event: !type:MCXenoRecallActionEvent
+    useDelay: 1

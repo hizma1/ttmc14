@@ -2,9 +2,6 @@
   parent:
   # MC
   - MCXenoBase
-  - MCXenoRewind
-  - MCXenoBlink
-  - MCXenoPortalPlacer
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -35,15 +32,18 @@
     tier: 2
     role: MCXenoWraith
     actionIds:
-    # RMC
     - MCActionXenoRest
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoRewind
     - MCActionXenoBlink
     - MCActionXenoPortalPlacer
+    - MCActionXenoBanish
+    - MCActionXenoRecall
     hudOffset: -0.1,0.1
   - type: XenoEvolution
+    actionId: MCActionXenoEvolve
+    max: 225
     evolvesTo:
     - MCXenoRavager
     - MCXenoDefiler
@@ -71,3 +71,16 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: wraith
+  - type: MCXenoPortalPlacer
+    portalFirst:
+      id: MCXenoPortalOrange
+      icon:
+        sprite: _MC/Effects/portals.rsi
+        state: orange
+    portalSecond:
+      id: MCXenoPortalBlue
+      icon:
+        sprite: _MC/Effects/portals.rsi
+        state: blue
+  - type: MCXenoBlink
+  - type: MCXenoRewind

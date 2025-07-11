@@ -8,13 +8,16 @@
   },
   "states": [
     {
+      "name": "banish"
+    },
+    {
       "name": "rewind"
     },
     {
       "name": "blink"
     },
     {
-      "name": "Recall"
+      "name": "recall"
     },
     {
       "name": "time_stop"
