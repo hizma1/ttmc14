@@ -84,3 +84,4 @@
         state: blue
   - type: MCXenoBlink
   - type: MCXenoRewind
+  - type: MCXenoBanish

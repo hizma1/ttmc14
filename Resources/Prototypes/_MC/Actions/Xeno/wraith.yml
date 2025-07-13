@@ -84,3 +84,5 @@
       state: recall
     event: !type:MCXenoRecallActionEvent
     useDelay: 1
+    checkCanInteract: false
+    checkConsciousness: false
