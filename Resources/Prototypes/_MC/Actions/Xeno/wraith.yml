@@ -29,7 +29,7 @@
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: blink
     event: !type:MCXenoBlinkActionEvent
-    range: 3
+    range: 100
     useDelay: 0.5
     deselectOnMiss: false
     checkCanAccess: false
