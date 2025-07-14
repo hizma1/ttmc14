@@ -5,24 +5,33 @@
   description: A lever action with room for a single round of .557/440 ball. Perfect for any kind of hunt, be it elephant or xeno with how quick to the draw it is.
   components:
   - type: Sprite
-    sprite: _MC/Objects/Weapons/Guns/Shotguns/martini.rsi
+    sprite: _MC/Objects/Weapons/Guns/Rifles/martini.rsi
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/other.rsi
+      state: martini_other
+      offset: 1, 0
+      map: [ "other" ]
   - type: Clothing
-    sprite: _MC/Objects/Weapons/Guns/Shotguns/martini.rsi
+    sprite: _MC/Objects/Weapons/Guns/Rifles/martini.rsi
   - type: Gun
     shotsPerBurst: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
     soundGunshot:
       path: /Audio/_MC/Weapons/Guns/Gunshots/gun_martinihenry.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/sniper_empty.ogg
   - type: ShootUseDelay
   - type: RMCSelectiveFire
-    recoilWielded: 2
-    recoilUnwielded: 4
-    scatterWielded: -50
-    scatterUnwielded: 40
+    baseFireModes:
+    - SemiAuto
+    recoilWielded: 3
+    recoilUnwielded: 5
+    scatterWielded: 6
+    scatterUnwielded: 20
     baseFireRate: 1
   - type: BallisticAmmoProvider
     capacity: 1

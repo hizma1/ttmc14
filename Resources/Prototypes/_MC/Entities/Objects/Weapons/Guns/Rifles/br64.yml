@@ -13,8 +13,12 @@
       map: [ "enum.GunVisualLayers.Mag" ]
     - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
       state: br64_rifle
-      offset: -0.5, 0
+      offset: -0.59, 0
       map: [ "stock" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/other.rsi
+      state: br64_other
+      offset: 1, 0
+      map: [ "other" ]
   - type: Clothing
     sprite: _MC/Objects/Weapons/Guns/Rifles/br64.rsi
   - type: Gun
@@ -28,10 +32,12 @@
     baseFireModes:
     - FullAuto
     - Burst
+    recoilWielded: 1
     recoilUnwielded: 3
     scatterWielded: 0
     scatterUnwielded: 26
     baseFireRate: 3.3
+    burstScatterMult: 2
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 0.9
     accuracyMultiplierUnwielded: 0.6
@@ -43,8 +49,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MCMagazineBR64
-        insertSound: /Audio/_MC/Weapons/Guns/Reload/m41_reload.ogg
-        ejectSound: /Audio/_MC/Weapons/Guns/Reload/m41_unload.ogg
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/m41a_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/m41a_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -84,9 +90,9 @@
           - RMCAttachmentLaserSight
   - type: AttachableHolderVisuals
     offsets:
-      rmc-aslot-barrel: 0.44, 0.19
-      rmc-aslot-rail: -0.15, 0.12
-      rmc-aslot-underbarrel: 0.28, -0.33
+      rmc-aslot-barrel: 1.2, 0.05
+      rmc-aslot-rail: 0.4, 0.25
+      rmc-aslot-underbarrel: 0.88, -0.22
 
 - type: entity
   parent: CMMagazineRifleBase

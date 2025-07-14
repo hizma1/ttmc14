@@ -5,28 +5,38 @@
   description: A mosin nagant rifle, even just looking at it you can feel the cosmoline already. Commonly known by its slang, \"Moist Nugget\", by downbrained colonists and outlaws.
   components:
   - type: Sprite
-    sprite: _MC/Objects/Weapons/Guns/Shotguns/mosin.rsi
+    sprite: _MC/Objects/Weapons/Guns/Rifles/mosin.rsi
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]
     - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
       state: mosin_a
-      offset: -0.65, 0
+      offset: -0.5, 0
       map: [ "stock" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/other.rsi
+      state: mosin_other
+      offset: 1, 0
+      map: [ "other" ]
   - type: Clothing
-    sprite: _MC/Objects/Weapons/Guns/Shotguns/mosin.rsi
+    sprite: _MC/Objects/Weapons/Guns/Rifles/mosin.rsi
   - type: Gun
+    fireRate: 0.8
     shotsPerBurst: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
     soundGunshot:
       path: /Audio/_MC/Weapons/Guns/Gunshots/gun_mosin.ogg
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/sniper_empty.ogg
   - type: ShootUseDelay
   - type: RMCSelectiveFire
-    recoilWielded: 0
-    recoilUnwielded: 2
-    scatterWielded: -2
-    scatterUnwielded: 24
+    baseFireModes:
+    - SemiAuto
+    recoilWielded: 3
+    recoilUnwielded: 5
+    scatterWielded: 6
+    scatterUnwielded: 20
     baseFireRate: 0.5
   - type: BallisticAmmoProvider
     capacity: 5
@@ -59,7 +69,7 @@
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.7, -0.0225
-      rmc-aslot-rail: 0.2, 0.09
+      rmc-aslot-rail: 0.2, 0.15
 
 - type: entity
   parent: BulletRifle10x24mm
@@ -97,7 +107,7 @@
     - state: base
       map: [ "base" ]
   - type: CartridgeAmmo
-    proto: MCBulletGovernmentRounds
+    proto: MCBulletMosin
   - type: Stack
     count: 5
     stackType: MCCartridgeMosin

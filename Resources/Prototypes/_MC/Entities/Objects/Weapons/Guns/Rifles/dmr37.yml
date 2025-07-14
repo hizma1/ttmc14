@@ -11,6 +11,10 @@
       map: [ "enum.GunVisualLayers.Base" ]
     - state: mag-0
       map: [ "enum.GunVisualLayers.Mag" ]
+    - sprite: _MC/Objects/Weapons/Guns/Attachments/other.rsi
+      state: dmr37_other
+      offset: 1, 0
+      map: [ "other" ]
   - type: Clothing
     sprite: _MC/Objects/Weapons/Guns/Rifles/dmr37.rsi
   - type: Gun
@@ -23,9 +27,11 @@
     baseFireModes:
     - FullAuto
     recoilUnwielded: 2
+    recoilWielded: 1
     scatterWielded: -8
     scatterUnwielded: 26
     baseFireRate: 1.5
+    burstScatterMult: 2
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.15
     accuracyMultiplierUnwielded: 0.6
@@ -37,8 +43,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MCMagazineDMR37
-        insertSound: /Audio/_MC/Weapons/Guns/Reload/m41_reload.ogg
-        ejectSound: /Audio/_MC/Weapons/Guns/Reload/m41_unload.ogg
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/m41a_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/m41a_unload.ogg
         priority: 2
         whitelist:
           tags:
@@ -136,7 +142,7 @@
     - range: 25
       falloff: 10
   - type: CMArmorPiercing
-    amount: 17.5
+    amount: 17
   - type: MCXenoSunderDamageOnHit
     amount: 2
   - type: RMCProjectileDamageFalloff

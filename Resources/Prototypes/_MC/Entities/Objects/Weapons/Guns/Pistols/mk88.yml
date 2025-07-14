@@ -1,0 +1,158 @@
+- type: entity
+  parent: CMWeaponPistolBase
+  id: MCWeaponMK88
+  name: MK88 Mod 4 combat pistol
+  description: An uncommon automatic handgun used for self defense, based on the original VP70 more than a century ago. Fires 9mm armor piercing rounds and is capable of 3-round burst or automatic fire.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Pistols/mk88.rsi
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Pistols/mk88.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+  - type: Gun
+    selectedMode: FullAuto
+    shotsPerBurst: 3
+    availableModes:
+    - FullAuto
+    - Burst
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_88mod4.ogg
+    soundEmpty:
+      path: /Audio/_MC/Weapons/Guns/Empty/vp70_empty.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    - Burst
+    recoilUnwielded: 2
+    recoilWielded: 1
+    scatterWielded: -8
+    scatterUnwielded: 26
+    baseFireRate: 5
+    burstFireRateMultiplier: 2
+    modifiers:
+      Burst:
+        fireDelay: 0.1665
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        fireDelay: 0
+        maxScatterModifier: 8
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/vp70_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/vp70_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazinePistolMK88
+        startingItem: MCMagazinePistolMK88
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.2
+    accuracyMultiplierUnwielded: 0.95
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentSuppressor
+          - RMCAttachmentRecoilCompensator
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS5RedDotSight
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBurstFireAssembly
+          - RMCAttachmentLaserSight
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.685, 0.125
+      rmc-aslot-rail: -0.125, 0.215
+      rmc-aslot-underbarrel: 0.284, -0.19
+  - type: Tag
+    tags:
+    - Sidearm
+    - MCWeaponMK88
+
+- type: entity
+  parent: CMBaseMagazinePistol
+  id: MCMagazinePistolMK88
+  name: 88M4 AP magazine (9mm AP)
+  components:
+  - type: Tag
+    tags:
+    - CMMagazinePistol
+    - MCMagazinePistolMK88
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgePistolMK88
+    proto: MCCartridgePistolMK88
+    capacity: 18
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/mk88.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MCCartridgePistolMK88
+  name: cartridge (9mm AP)
+  parent: CMCartridgePistolBase
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MCCartridgePistolMK88
+  - type: CartridgeAmmo
+    proto: MCBulletPistolMK88
+
+- type: entity
+  parent: CMBulletBase
+  id: MCBulletPistolMK88
+  name: bullet (.9mm AP)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 22
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 6
+      falloff: 5
+  - type: CMArmorPiercing
+    amount: 12
+  - type: MCXenoSunderDamageOnHit
+    amount: 0.5
+  - type: RMCProjectileAccuracy
+    thresholds:
+    - range: 5
+
+- type: Tag
+  id: MCMagazinePistolMK88
+
+- type: Tag
+  id: MCCartridgePistolMK88
+
+- type: Tag
+  id: MCWeaponMK88
