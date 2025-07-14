@@ -42,7 +42,7 @@ public sealed class MCXenoToxicStacksSystem : EntitySystem
             if (component.Count >= 20)
                 _rmcSlow.TrySlowdown(uid, TimeSpan.FromSeconds(1));
 
-            Add((uid, component), -component.Decay);
+            TryAdd((uid, component), -component.Decay);
         }
     }
 
@@ -56,15 +56,16 @@ public sealed class MCXenoToxicStacksSystem : EntitySystem
 
     private void OnProjectileHit(Entity<MCXenoToxicStacksOnHitComponent> entity, ref ProjectileHitEvent args)
     {
-        Add(args.Target, entity.Comp.Amount);
+        TryAdd(args.Target, entity.Comp.Amount);
     }
 
-    public void Add(Entity<MCXenoToxicStacksComponent?> entity, int count)
+    public bool TryAdd(Entity<MCXenoToxicStacksComponent?> entity, int count)
     {
         if (!Resolve(entity, ref entity.Comp, logMissing: false))
-            return;
+            return false;
 
         Set(entity, entity.Comp.Count + count);
+        return true;
     }
 
     public void Set(Entity<MCXenoToxicStacksComponent?> entity, int count)

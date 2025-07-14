@@ -1,5 +1,6 @@
 ﻿using Content.Shared._MC.Xeno.Abilities.ToxicStacks;
 using Content.Shared._RMC14.Actions;
+using Content.Shared.Popups;
 using Content.Shared.Weapons.Melee.Events;
 using Robust.Shared.Timing;
 
@@ -10,31 +11,30 @@ public sealed class MCXenoToxicSlashSystem : EntitySystem
     [Dependency] private readonly RMCActionsSystem _rmcActions = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly MCXenoToxicStacksSystem _toxicStacks = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<MCXenoToxicSlashComponent, MCXenoToxicSlashActionEvent>(OnAction);
+
         SubscribeLocalEvent<MCXenoToxicSlashActiveComponent, MeleeHitEvent>(OnActiveMeleeHit);
+        SubscribeLocalEvent<MCXenoToxicSlashActiveComponent, ComponentShutdown>(OnActiveShutdown);
     }
 
-    private void OnActiveMeleeHit(Entity<MCXenoToxicSlashActiveComponent> entity, ref MeleeHitEvent args)
+    public override void Update(float frameTime)
     {
-        foreach (var uid in args.HitEntities)
+        base.Update(frameTime);
+
+        var query = EntityQueryEnumerator<MCXenoToxicSlashActiveComponent>();
+        while (query.MoveNext(out var uid, out var component))
         {
-            _toxicStacks.Add(uid, entity.Comp.Stacks);
+            if (_timing.CurTime < component.Duration)
+                continue;
+
+            RemCompDeferred<MCXenoToxicSlashActiveComponent>(uid);
         }
-
-        entity.Comp.Slashes--;
-
-        if (entity.Comp.Slashes <= 0)
-        {
-            RemCompDeferred<MCXenoToxicSlashActiveComponent>(entity);
-            return;
-        }
-
-        Dirty(entity);
     }
 
     private void OnAction(Entity<MCXenoToxicSlashComponent> entity, ref MCXenoToxicSlashActionEvent args)
@@ -46,6 +46,8 @@ public sealed class MCXenoToxicSlashSystem : EntitySystem
             return;
 
         args.Handled = true;
+
+        _popup.PopupClient("Toxic Slash active", entity, entity);
 
         if (EnsureComp<MCXenoToxicSlashActiveComponent>(entity, out var toxicSlashActiveComponent))
         {
@@ -59,5 +61,32 @@ public sealed class MCXenoToxicSlashSystem : EntitySystem
         toxicSlashActiveComponent.Slashes = entity.Comp.Slashes;
         toxicSlashActiveComponent.Duration = _timing.CurTime + entity.Comp.Duration;
         Dirty(entity);
+    }
+
+    private void OnActiveMeleeHit(Entity<MCXenoToxicSlashActiveComponent> entity, ref MeleeHitEvent args)
+    {
+        foreach (var uid in args.HitEntities)
+        {
+            if (_toxicStacks.TryAdd(uid, entity.Comp.Stacks))
+                break;
+
+            _popup.PopupClient("Immune to Intoxication", entity, entity);
+            return;
+        }
+
+        entity.Comp.Slashes--;
+
+        if (entity.Comp.Slashes <= 0)
+        {
+            RemCompDeferred<MCXenoToxicSlashActiveComponent>(entity);
+            return;
+        }
+
+        Dirty(entity);
+    }
+
+    private void OnActiveShutdown(Entity<MCXenoToxicSlashActiveComponent> entity, ref ComponentShutdown args)
+    {
+        _popup.PopupClient("Toxic Slash over", entity, entity);
     }
 }

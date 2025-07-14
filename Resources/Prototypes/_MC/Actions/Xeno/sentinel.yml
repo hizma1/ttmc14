@@ -62,7 +62,7 @@
   - type: EntityTargetAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Actions/Xeno/spits.rsi
+      sprite: _MC/Interface/Actions/Xeno/sentinel.rsi
       state: neuro_sting
     event: !type:MCXenoDrainStingActionEvent
     range: 1.5

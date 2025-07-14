@@ -61,6 +61,6 @@ public sealed class MCXenoDrainStingSystem : EntitySystem
         _stun.TryKnockdown(args.Target, TimeSpan.FromSeconds(Math.Max(0.1f, (stacks - 10f) / 10f)), true);
         _xenoHeal.Heal(entity, drainPotency);
         _xenoPlasma.RegenPlasma(entity.Owner, drainPotency * 3.5f);
-        _xenoToxicStacks.Add(args.Target, (int) -Math.Round(stacks * 0.7f));
+        _xenoToxicStacks.TryAdd(args.Target, (int) -Math.Round(stacks * 0.7f));
     }
 }
