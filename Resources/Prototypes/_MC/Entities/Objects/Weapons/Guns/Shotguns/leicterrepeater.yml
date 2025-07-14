@@ -21,10 +21,10 @@
       path: /Audio/_MC/Weapons/Guns/Gunshots/gun_repeater.ogg
   - type: ShootUseDelay
   - type: RMCSelectiveFire
-    recoilWielded: 0
-    recoilUnwielded: 2
-    scatterWielded: -5
-    scatterUnwielded: 7
+    recoilWielded: 3
+    recoilUnwielded: 5
+    scatterWielded: 6
+    scatterUnwielded: 20
     baseFireRate: 1
     burstScatterMult: 5
   - type: BallisticAmmoProvider

@@ -1,0 +1,153 @@
+- type: entity
+  parent: CMWeaponPistolBase
+  id: MCWeaponP23
+  name: P-23 service pistol
+  description: A standard P-23 chambered in .45 ACP. Has a smaller magazine capacity, but packs a better punch. Has an irremovable laser sight. Uses .45 magazines.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Pistols/p23.rsi
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Pistols/p23.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+  - type: Gun
+    shotsPerBurst: 1
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_p23.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    recoilWielded: 1
+    recoilUnwielded: 1
+    scatterWielded: -4
+    scatterUnwielded: 8
+    baseFireRate: 5
+    modifiers:
+      Burst:
+        fireDelay: 0.1665
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        fireDelay: 0
+        maxScatterModifier: 8
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/colt_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/colt_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazinePistolP23
+        startingItem: MCMagazinePistolP23
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.2
+    accuracyMultiplierUnwielded: 0.95
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentSuppressor
+          - RMCAttachmentRecoilCompensator
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS5RedDotSight
+      rmc-aslot-underbarrel:
+        locked: true
+        startingAttachable: RMCAttachmentLaserLightModule
+        whitelist:
+          tags:
+          - RMCAttachmentLaserLightModule
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.685, 0.125
+      rmc-aslot-rail: -0.125, 0.215
+      rmc-aslot-underbarrel: 0.284, -0.19
+  - type: Tag
+    tags:
+    - Sidearm
+    - MCWeaponP23
+
+- type: entity
+  parent: CMBaseMagazinePistol
+  id: MCMagazinePistolP23
+  name: P-23 magazine (.45)
+  components:
+  - type: Tag
+    tags:
+    - CMMagazinePistol
+    - MCMagazinePistolP23
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgePistolP23
+    proto: MCCartridgePistolP23
+    capacity: 14
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/p23.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MCCartridgePistolP23
+  name: cartridge (.45)
+  parent: CMCartridgePistolBase
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MCCartridgePistolP23
+  - type: CartridgeAmmo
+    proto: MCBulletPistolP23
+
+- type: entity
+  parent: CMBulletBase
+  id: MCBulletPistolP23
+  name: bullet (.45)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 22
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 6
+      falloff: 5
+  - type: CMArmorPiercing
+    amount: 5
+  - type: MCXenoSunderDamageOnHit
+    amount: 2.15
+  - type: RMCProjectileAccuracy
+    thresholds:
+    - range: 5
+
+- type: Tag
+  id: MCMagazinePistolP23
+
+- type: Tag
+  id: MCCartridgePistolP23
+
+- type: Tag
+  id: MCWeaponP23

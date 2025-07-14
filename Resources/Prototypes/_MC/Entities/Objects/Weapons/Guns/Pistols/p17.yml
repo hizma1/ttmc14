@@ -1,0 +1,143 @@
+- type: entity
+  parent: CMWeaponPistolBase
+  id: MCWeaponP17
+  name: P-17 pocket pistol
+  description: A tiny pistol used by the TGMC as an emergency handgun meant to be stored about anywhere. Fits in boots. Uses .380 ACP stored in an eight round magazine.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Pistols/p17.rsi
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Pistols/p17.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+  - type: Gun
+    shotsPerBurst: 1
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_p17.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    recoilWielded: 1
+    recoilUnwielded: 1
+    scatterWielded: -4
+    scatterUnwielded: 0
+    baseFireRate: 6
+    modifiers:
+      Burst:
+        fireDelay: 0.1665
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        fireDelay: 0
+        maxScatterModifier: 8
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/pistol_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/pistol_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazinePistolP17
+        startingItem: MCMagazinePistolP17
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.2
+    accuracyMultiplierUnwielded: 0.95
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentSuppressor
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.685, 0.125
+      rmc-aslot-rail: -0.125, 0.215
+  - type: Tag
+    tags:
+    - Sidearm
+    - MCWeaponP17
+
+- type: entity
+  parent: CMBaseMagazinePistol
+  id: MCMagazinePistolP17
+  name: P-17 pocket pistol AP magazine (.380 AP)
+  components:
+  - type: Tag
+    tags:
+    - CMMagazinePistol
+    - MCMagazinePistolP17
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgePistolP17
+    proto: MCCartridgePistolP17
+    capacity: 8
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/p17.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MCCartridgePistolP17
+  name: cartridge (.380 AP)
+  parent: CMCartridgePistolBase
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MCCartridgePistolP17
+  - type: CartridgeAmmo
+    proto: MCBulletPistolP17
+
+- type: entity
+  parent: CMBulletBase
+  id: MCBulletPistolP17
+  name: bullet (.380 AP)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 22.5
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 22
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 6
+      falloff: 1.5
+  - type: CMArmorPiercing
+    amount: 15
+  - type: MCXenoSunderDamageOnHit
+    amount: 0.5
+  - type: RMCProjectileAccuracy
+    thresholds:
+    - range: 5
+
+- type: Tag
+  id: MCMagazinePistolP17
+
+- type: Tag
+  id: MCCartridgePistolP17
+
+- type: Tag
+  id: MCWeaponP17
