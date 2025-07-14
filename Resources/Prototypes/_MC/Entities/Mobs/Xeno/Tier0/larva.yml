@@ -54,7 +54,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.7
     baseSprintSpeed: 7.142
-  - type: RestrictEvolveOffWeeds
   - type: Speech
     speechSounds: XenonidLarva
     allowedEmotes: [ "XenoRoar" ]

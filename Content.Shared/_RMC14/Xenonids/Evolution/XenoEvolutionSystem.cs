@@ -354,60 +354,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
             return false;
         }
 
-        // TODO RMC14 only allow evolving towards Queen if none is alive
-        if (!xeno.Comp.CanEvolveWithoutGranter && !HasLiving<XenoEvolutionGranterComponent>(1))
-        {
-            if (doPopup)
-            {
-                _popup.PopupEntity(
-                    Loc.GetString("cm-xeno-evolution-failed-hive-shaken"),
-                    xeno,
-                    xeno,
-                    PopupType.MediumCaution
-                );
-            }
-
-            return false;
-        }
-
-
-        if (TryComp<RestrictEvolveOffWeedsComponent>(xeno.Owner, out var comp))
-        {
-            var coordinates = _transform.GetMoverCoordinates(xeno).SnapToGrid(EntityManager, _map);
-            if (_transform.GetGrid(coordinates) is not { } gridUid ||
-                !TryComp(gridUid, out MapGridComponent? grid))
-            {
-                return false;
-            }
-
-            if (!_xenoWeeds.IsOnWeeds((gridUid, grid), coordinates) && comp.RestrictTime > _gameTicker.RoundDuration())
-            {
-                _popup.PopupEntity(
-                    Loc.GetString("rmc-xeno-evolution-failed-early-weeds"),
-                    xeno,
-                    xeno,
-                    PopupType.MediumCaution
-                );
-                return false;
-            }
-        }
-
         prototype.TryGetComponent(out XenoComponent? newXenoComp, _compFactory);
-        if (newXenoComp != null &&
-            newXenoComp.UnlockAt > _gameTicker.RoundDuration())
-        {
-            if (doPopup)
-            {
-                _popup.PopupEntity(
-                    Loc.GetString("cm-xeno-evolution-failed-cannot-support"),
-                    xeno,
-                    xeno,
-                    PopupType.MediumCaution
-                );
-            }
-
-            return false;
-        }
 
         if (newXenoComp != null &&
             !newXenoComp.BypassTierCount &&
