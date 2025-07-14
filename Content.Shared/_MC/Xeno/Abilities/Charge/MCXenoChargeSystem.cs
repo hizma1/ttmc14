@@ -85,7 +85,6 @@ public sealed class MCXenoChargeSystem : EntitySystem
                 if (_xenoToggleChargingRecentlyHitQuery.TryComp(hit.Target, out var recently) && time < recently.LastHitAt + recently.Cooldown)
                     return;
 
-
                 var ev = new MCXenoChargeCollideEvent(hit.Crusher);
                 RaiseLocalEvent(hit.Target, ref ev);
 
@@ -306,6 +305,9 @@ public sealed class MCXenoChargeSystem : EntitySystem
         args.Handled = true;
 
         var charger = Comp<MCXenoChargeComponent>(args.Charger);
+        if (args.Charger.Comp.Stage < charger.MinimumSteps)
+            return;
+
         var perpendiculars = args.Charger.Comp.Direction.AsDir().GetPerpendiculars();
         var perpendicular = _random.Prob(0.5f) ? perpendiculars.First : perpendiculars.Second;
         var direction = perpendicular.ToVec().Normalized();

@@ -37,8 +37,8 @@
     actionIds:
     # RMC
     - MCActionXenoRest
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoCrestToss
     - MCActionXenoStomp
     - MCActionXenoToggleChargingCrusher

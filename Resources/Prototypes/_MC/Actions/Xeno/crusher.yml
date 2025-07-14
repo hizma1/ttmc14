@@ -7,7 +7,7 @@
   - type: EntityTargetAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/crusher.rsi
+      sprite: _MC/Interface/Actions/Xeno/crusher.rsi
       state: crest_toss
     event: !type:MCXenoCrestTossActionEvent
     range: 1.5
@@ -26,7 +26,7 @@
   - type: InstantAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/crusher.rsi
+      sprite: _MC/Interface/Actions/Xeno/crusher.rsi
       state: stomp
     event: !type:MCXenoStompActionEvent
     useDelay: 20
@@ -42,7 +42,7 @@
   - type: InstantAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/crusher.rsi
+      sprite: _MC/Interface/Actions/Xeno/crusher.rsi
       state: ready_charge
     event: !type:MCXenoChargeActionEvent
     useDelay: 0.1

@@ -52,7 +52,7 @@ public sealed class MCXenoCrestTossSystem : EntitySystem
         if (!_combatMode.IsInCombatMode(entity))
             delta *= -1;
 
-        _damageable.TryChangeDamage(args.Target, entity.Comp.Damage, origin: entity);
+        _damageable.TryChangeDamage(args.Target, entity.Comp.Damage, origin: entity, tool: entity);
         _rmcPulling.TryStopAllPullsFromAndOn(args.Target);
         _throwing.TryThrow(args.Target, delta, entity.Comp.Speed);
     }
