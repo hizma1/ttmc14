@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "intoxicated"
+    },
+    {
+      "name": "intoxicated_high",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount0"
+    },
+    {
+      "name": "intoxicated_amount1"
+    },
+    {
+      "name": "intoxicated_amount2"
+    },
+    {
+      "name": "intoxicated_amount3"
+    },
+    {
+      "name": "intoxicated_amount4"
+    },
+    {
+      "name": "intoxicated_amount5"
+    },
+    {
+      "name": "intoxicated_amount6"
+    },
+    {
+      "name": "intoxicated_amount7"
+    },
+    {
+      "name": "intoxicated_amount8"
+    },
+    {
+      "name": "intoxicated_amount9"
+    },
+    {
+      "name": "intoxicated_amount10"
+    },
+    {
+      "name": "intoxicated_amount11"
+    },
+    {
+      "name": "intoxicated_amount12"
+    },
+    {
+      "name": "intoxicated_amount13"
+    },
+    {
+      "name": "intoxicated_amount14"
+    },
+    {
+      "name": "intoxicated_amount15"
+    },
+    {
+      "name": "intoxicated_amount16"
+    },
+    {
+      "name": "intoxicated_amount17"
+    },
+    {
+      "name": "intoxicated_amount18"
+    },
+    {
+      "name": "intoxicated_amount19"
+    },
+    {
+      "name": "intoxicated_amount20",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount21",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount22",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount23",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount24",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount25",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount26",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount27",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount28",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount29",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "intoxicated_amount30",
+      "delays": [
+        [
+          0.4,
+          0.4
+        ]
+      ]
+    }
+  ]
+}
