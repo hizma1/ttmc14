@@ -354,6 +354,22 @@ public sealed class XenoEvolutionSystem : EntitySystem
             return false;
         }
 
+        // TODO RMC14 only allow evolving towards Queen if none is alive
+        if (!xeno.Comp.CanEvolveWithoutGranter && !HasLiving<XenoEvolutionGranterComponent>(1))
+        {
+            if (doPopup)
+            {
+                _popup.PopupEntity(
+                    Loc.GetString("cm-xeno-evolution-failed-hive-shaken"),
+                    xeno,
+                    xeno,
+                    PopupType.MediumCaution
+                );
+            }
+
+            return false;
+        }
+
         prototype.TryGetComponent(out XenoComponent? newXenoComp, _compFactory);
 
         if (newXenoComp != null &&
