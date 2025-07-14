@@ -38,6 +38,7 @@
     - MCActionXenoToggleToxicSpit
     - MCActionXenoToxicSlash
     - MCActionXenoDrainSting
+    - MCActionXenoAcidWeak
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     actionId: MCActionXenoEvolve
@@ -69,3 +70,4 @@
       state: sentinel
   - type: MCXenoToxicSlash
   - type: MCXenoDrainSting
+  - type: XenoAcid

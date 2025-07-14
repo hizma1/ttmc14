@@ -1,5 +1,4 @@
-ent-MCXenoProjectileToxicSpit = spit
-    .desc = { ent-XenoBaseProjectile.desc }
+
 ent-MCXenoProjectileMedium = acid spatter
     .desc = { ent-XenoBaseProjectile.desc }
 ent-MCXenoProjectileToxinHeavy = neurotoxic splash

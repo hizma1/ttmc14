@@ -53,3 +53,22 @@
       state: emit_pheromones
     event: !type:XenoPheromonesActionEvent
     useDelay: 0.33
+
+- type: entity
+  parent: ActionXenoAcidNormal
+  id: MCActionXenoAcidWeak
+  name: Weak Corrosive Acid (75)
+  description: Melts down a structure or item over time.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/general.rsi
+      state: corrosive_acid
+    event: !type:XenoCorrosiveAcidEvent
+      acidId: XenoAcidWeak
+      plasmaCost: 75
+      time: 480
+      dps: 4
+      expendableLightDps: 0.3
+    checkCanInteract: false
