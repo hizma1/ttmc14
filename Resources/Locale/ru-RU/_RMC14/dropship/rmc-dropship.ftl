@@ -25,7 +25,9 @@ rmc-dropship-weapons-target-strike =
 
 #  Attack Vector {$vector}
 
+
 #  Offset 0,0
+
 
 #  Guidance computer INCOMPLETE
 

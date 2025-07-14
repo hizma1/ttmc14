@@ -37,6 +37,7 @@
     - MCActionXenoPsydrain
     - MCActionXenoToggleToxicSpit
     - MCActionXenoToxicSlash
+    - MCActionXenoDrainSting
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     actionId: MCActionXenoEvolve
@@ -67,3 +68,4 @@
       sprite: _MC/Interface/Xeno/icons.rsi
       state: sentinel
   - type: MCXenoToxicSlash
+  - type: MCXenoDrainSting

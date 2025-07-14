@@ -52,3 +52,22 @@
     useDelay: 10
   - type: XenoActionPlasma
     cost: 100
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoDrainSting
+  name: Drain Sting (75)
+  description: Sting your victim, draining them and gaining benefits if they are Intoxicated.
+  components:
+  - type: EntityTargetAction
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/spits.rsi
+      state: neuro_sting
+    event: !type:MCXenoDrainStingActionEvent
+    range: 1.5
+    useDelay: 25
+    deselectOnMiss: false
+    checkCanAccess: true
+  - type: XenoActionPlasma
+    cost: 75
