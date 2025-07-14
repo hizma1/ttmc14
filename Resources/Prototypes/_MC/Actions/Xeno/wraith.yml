@@ -1,7 +1,7 @@
 - type: entity
   parent: ActionXenoBase
   id: MCActionXenoRewind
-  name: Blink (150)
+  name: Rewind (150)
   description: Save the location and status of the target. When the time is up, the target location and status are restored
   components:
   - type: EntityTargetAction
@@ -15,7 +15,7 @@
     deselectOnMiss: false
     checkCanAccess: false
   - type: XenoActionPlasma
-    cost: 100
+    cost: 150
 
 - type: entity
   parent: ActionXenoBase
@@ -64,7 +64,7 @@
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: banish
     event: !type:MCXenoBanishActionEvent
-    range: 5
+    range: 3
     useDelay: 20
     deselectOnMiss: false
     checkCanAccess: false
