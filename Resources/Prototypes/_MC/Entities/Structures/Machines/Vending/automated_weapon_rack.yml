@@ -45,7 +45,15 @@
       - id: MCMagazineSMG45
       - id: MCMagazineSMG45SH
     - name: Marksman
-      entries: []
+      entries:
+      - id: MCWeaponDMR37
+      - id: MCMagazineDMR37
+      - id: MCWeaponBR64
+      - id: MCMagazineBR64
+      - id: MCWeaponShotgunMosin
+      - id: MCCartridgeMosin
+      - id: MCWeaponShotgunMartini
+      - id: MCCartridgeMartini
     - name: Shotgun
       entries:
       - id: MCWeaponShotgunSH35
@@ -66,7 +74,17 @@
     - name: Melee
       entries: []
     - name: Sidearm
-      entries: []
+      entries:
+      - id: MCWeaponP14
+      - id: MCMagazinePistolP14
+      - id: MCWeaponP23
+      - id: MCMagazinePistolP23
+      - id: MCWeaponRevolverR44
+      - id: MCSpeedLoaderR44
+      - id: MCWeaponP17
+      - id: MCMagazinePistolP17
+      - id: MCWeaponMK88
+      - id: MCMagazinePistolMK88
     - name: Grenades
       entries:
       - id: MCWeaponLauncherGl81
