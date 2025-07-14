@@ -599,6 +599,9 @@ public sealed class XenoEvolutionSystem : EntitySystem
 
     public override void Update(float frameTime)
     {
+        // Bye bye cm evolve system
+        return;
+
         var newly = EntityQueryEnumerator<XenoNewlyEvolvedComponent>();
         while (newly.MoveNext(out var uid, out var comp))
         {

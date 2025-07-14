@@ -1,3 +1,4 @@
+using Content.Shared._MC.Xeno.Evolution;
 using Content.Shared.Actions;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Audio;
@@ -8,7 +9,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Shared._RMC14.Xenonids.Evolution;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true), AutoGenerateComponentPause]
-[Access(typeof(XenoEvolutionSystem))]
+[Access(typeof(XenoEvolutionSystem), typeof(MCXenoEvolutionSystem))]
 public sealed partial class XenoEvolutionComponent : Component
 {
     [DataField, AutoNetworkedField]
@@ -36,7 +37,7 @@ public sealed partial class XenoEvolutionComponent : Component
     public FixedPoint2 Max;
 
     [DataField, AutoNetworkedField]
-    public FixedPoint2 PointsPerSecond = 0.5;
+    public FixedPoint2 PointsPerSecond = 1;
 
     [DataField, AutoNetworkedField]
     public FixedPoint2 EarlyPointsPerSecond = 1;
