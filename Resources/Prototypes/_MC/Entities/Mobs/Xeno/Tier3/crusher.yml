@@ -67,3 +67,5 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: crusher
+  - type: MCXenoSunder
+    multiplier: 0.85

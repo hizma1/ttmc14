@@ -72,7 +72,10 @@ public sealed class MCXenoSunderSystem : EntitySystem
 
     private void OnProjectileHit(Entity<MCXenoSunderDamageOnHitComponent> entity, ref ProjectileHitEvent args)
     {
-        AddSunder(args.Target, -entity.Comp.Amount);
+        if (!_sunderQuery.TryComp(args.Target, out var sunderComponent))
+            return;
+
+        AddSunder(args.Target, -entity.Comp.Amount * sunderComponent.Multiplier);
     }
 
     public void RegenSunder(Entity<MCXenoSunderComponent?> entity, bool resting, float weeds, float pheromones)
