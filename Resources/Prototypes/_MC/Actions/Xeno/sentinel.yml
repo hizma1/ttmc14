@@ -48,7 +48,7 @@
     icon:
       sprite: _MC/Interface/Actions/Xeno/sentinel.rsi
       state: neuroclaws_off
-    event: !type:MCXenoToxicSlashActionEvent ""
+    event: !type:MCXenoToxicSlashActionEvent
     useDelay: 10
   - type: XenoActionPlasma
     cost: 100
