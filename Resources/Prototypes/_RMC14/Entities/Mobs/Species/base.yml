@@ -7,6 +7,7 @@
   suffix: RMC14
   components:
   - type: MCArmor
+  - type: MCXenoToxicStacks
   - type: Fixtures
     fixtures:
       fix1:

@@ -2,6 +2,7 @@
   abstract: true
   id: XenoBaseProjectile
   name: projectile
+  categories: [ HideSpawnMenu ]
   components:
   - type: Clickable
   - type: Sprite
@@ -14,8 +15,7 @@
   - type: Fixtures
     fixtures:
       projectile:
-        shape:
-          !type:PhysShapeAabb
+        shape: !type:PhysShapeAabb
           bounds: "-0.1,-0.1,0.1,0.1"
         hard: false
         mask:
@@ -40,7 +40,7 @@
       path: /Audio/_RMC14/Xeno/acid_impact1.ogg
 
 - type: entity
-  parent: [XenoSpitImpactSounds, XenoBaseProjectile]
+  parent: [ XenoSpitImpactSounds, XenoBaseProjectile ]
   id: XenoSpitProjectile
   name: spit
   categories:
@@ -95,7 +95,7 @@
 
 - type: entity
   id: XenoSlowingSpitProjectile
-  parent: [XenoSpitImpactSounds, XenoBaseProjectile]
+  parent: [ XenoSpitImpactSounds, XenoBaseProjectile ]
   name: slowing spit
   categories:
   - HideSpawnMenu
@@ -115,7 +115,7 @@
 
 - type: entity
   id: XenoQueenNeuroSpitProjectile
-  parent: [XenoSpitImpactSounds, XenoBaseProjectile]
+  parent: [ XenoSpitImpactSounds, XenoBaseProjectile ]
   name: neurotoxic spit
   categories:
   - HideSpawnMenu
@@ -136,10 +136,9 @@
   - type: RMCProjectileAccuracy
     accuracy: 125
 
-
 - type: entity
   id: XenoScatteredSpitProjectile
-  parent: [XenoSpitImpactSounds, XenoBaseProjectile]
+  parent: [ XenoSpitImpactSounds, XenoBaseProjectile ]
   name: scattered spit
   categories:
   - HideSpawnMenu
@@ -269,14 +268,14 @@
     affectsDead: false
     affectsInfectedNested: false
     toxinDamage:
-        groups:
-          Toxin: 2
+      groups:
+        Toxin: 2
     oxygenDamage:
-        types:
-          Asphyxiation: 150
+      types:
+        Asphyxiation: 150
     coughDamage:
-        groups:
-          Brute: 5
+      groups:
+        Brute: 5
   - type: RMCProjectileAccuracy
     accuracy: 95
 
@@ -368,8 +367,7 @@
   - type: Fixtures
     fixtures:
       projectile:
-        shape:
-          !type:PhysShapeAabb
+        shape: !type:PhysShapeAabb
           bounds: "-0.1,-0.1,0.1,0.1"
         hard: false
         mask:
@@ -377,8 +375,7 @@
         - BulletImpassable
         - XenoProjectileImpassable
       fix2:
-        shape:
-          !type:PhysShapeAabb
+        shape: !type:PhysShapeAabb
           bounds: "-0.1,-0.1,0.1,0.1"
         hard: true
         mask:
@@ -405,8 +402,9 @@
     limit: 4
   - type: ContainerContainer
     containers:
-      cluster-payload: !type:Container
+      cluster-payload:
 
+        !type:Container ""
 - type: entity
   parent: XenoBaseProjectile
   id: XenoOppressorTailHook
@@ -431,4 +429,3 @@
   - type: RMCProjectileAccuracy
     accuracy: 185
   - type: XenoHookOnHit
-

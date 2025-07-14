@@ -1,23 +1,5 @@
 - type: entity
   parent: ActionXenoBase
-  id: MCActionXenoToggleToxicSpit
-  name: Toxic Spit
-  description: Spit a toxin at your target up to 7 tiles away, inflicting the Intoxicated debuff and dealing damage over time.
-  components:
-  - type: InstantAction
-    itemIconStyle: NoItem
-    icon:
-      sprite: _MC/Interface/Xeno/Actions/spits.rsi
-      state: shift_spit_xeno_toxic
-    event: !type:MCXenoSpitToggleActionEvent
-      projectileId: MCXenoProjectileToxicSpit
-      plasmaCost: 30
-      delay: 1
-      speed: 30
-    useDelay: 0.1
-
-- type: entity
-  parent: ActionXenoBase
   id: MCActionXenoToggleXenoSpit
   name: Xeno Spit
   description: Spit neurotoxin or acid at your target up to 7 tiles away.
@@ -25,7 +7,7 @@
   - type: InstantAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/spits.rsi
+      sprite: _MC/Interface/Actions/Xeno/spits.rsi
       state: shift_spit_xeno_acid
     event: !type:MCXenoSpitToggleActionEvent
       projectileId: MCXenoProjectileMedium
@@ -43,7 +25,7 @@
   - type: InstantAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/spits.rsi
+      sprite: _MC/Interface/Actions/Xeno/spits.rsi
       state: shift_spit_neurotoxin
     event: !type:MCXenoSpitToggleActionEvent
       projectileId: MCXenoProjectileToxinHeavy
@@ -61,7 +43,7 @@
   - type: InstantAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/spits.rsi
+      sprite: _MC/Interface/Actions/Xeno/spits.rsi
       state: shift_spit_sticky
     event: !type:MCXenoSpitToggleActionEvent
       projectileId: MCXenoProjectileStickyResin

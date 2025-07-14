@@ -33,13 +33,14 @@
     tier: 1
     role: MCXenoSentinel
     actionIds:
-    # RMC
     - MCActionXenoRest
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
     - MCActionXenoToggleToxicSpit
+    - MCActionXenoToxicSlash
     hudOffset: -0.1,0.1
   - type: XenoEvolution
+    actionId: MCActionXenoEvolve
+    max: 225
     evolvesTo:
     - MCXenoSpitter
   - type: XenoDevolve
@@ -65,3 +66,4 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: sentinel
+  - type: MCXenoToxicSlash

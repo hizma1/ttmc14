@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "neuroclaws_on"
+    },
+    {
+      "name": "neuroclaws_off"
+    },
+    {
+      "name": "gas_mine"
+    },
+    {
+      "name": "neuro_sting"
+    }
+  ]
+}
