@@ -94,6 +94,8 @@ public abstract class MCSharedXenoRewindSystem : EntitySystem
 
     protected virtual void OnTagetShutdown(Entity<MCXenoRewindTargetComponent> entity, ref ComponentShutdown _)
     {
+        _transform.SetCoordinates(entity, entity.Comp.Position);
+
         if (TryComp<DamageableComponent>(entity, out var damageableComponent) && entity.Comp.Damage is not null)
              _damageable.SetDamage(entity, damageableComponent, entity.Comp.Damage);
 
@@ -102,7 +104,5 @@ public abstract class MCSharedXenoRewindSystem : EntitySystem
 
         if (TryComp<PullerComponent>(entity, out var pullerComp) && TryComp<PullableComponent>(pullerComp.Pulling, out var subjectPulling))
             _pulling.TryStopPull(pullerComp.Pulling.Value, subjectPulling);
-
-        _transform.SetCoordinates(entity, entity.Comp.Position);
     }
 }
