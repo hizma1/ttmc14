@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": null,
-  "copyright": null,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/7b27595c111fc086e2e281ddbaf7edffb6c18870",
   "size": {
     "x": 96,
     "y": 96

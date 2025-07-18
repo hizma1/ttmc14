@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": null,
-  "copyright": null,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/92882ac9a257937ee67ce1074b6934c5f9f8a530, modified by TornadoTechnology (GitHub)",
   "size": {
     "x": 32,
     "y": 32
