@@ -131,6 +131,7 @@
     evolvesTo:
     - MCXenoHivelord
     - MCXenoCarrier
+    - MCXenoShrike 
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000

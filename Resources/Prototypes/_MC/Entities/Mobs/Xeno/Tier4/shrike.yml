@@ -1,0 +1,82 @@
+- type: entity
+  parent:
+  # MC
+  - MCXenoBase
+  - MCXenoPlantingWeeds
+  - MCXenoPickupOne
+  # RMC
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoShrike
+  name: shrike
+  description: A psychically unstable xeno. The Shrike controls the hive when there's no Queen and acts as its successor when there is.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/shrike.rsi
+    offset: 0,0.2
+  - type: GhostRole
+    name: mc-job-name-xeno-shrike
+  - type: FixedIdentity
+    name: mc-job-name-xeno-shrike
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Critical
+      500: Dead
+  - type: XenoPlasma
+    plasma: 925
+    maxPlasma: 925
+    plasmaRegenOnWeeds: 60
+  - type: Xeno
+    tier: 4
+    role: MCXenoShrike
+    actionIds:
+    - MCActionXenoRest
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
+    - MCActionXenoSelectWeeds
+    - MCActionXenoPlantWeeds
+    - MCActionXenoLayEgg
+    - MCActionXenoPheromones
+    - ActionXenoTransferPlasma
+    - MCActionXenoAcidicSalve
+    - MCActionXenoPsychicFling
+    hudOffset: -0.1,0.1
+  - type: XenoEvolutionCapped
+    id: MCXenoShrike
+    max: 1
+  - type: XenoDevolve
+    devolvesTo:
+    - MCXenoDrone
+  - type: MCArmor
+    melee: 45
+    bullet: 45
+    laser: 45
+    energy: 45
+    bomb: 20
+    bio: 25
+    fire: 45
+    acid: 20
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 25
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.941
+    baseSprintSpeed: 4.166
+  - type: XenoPheromones
+    pheromonesMultiplier: 3
+    pheroSuffix: queen
+  - type: TunnelRenamer
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: shrike
+  - type: XenoInhands
+    prefix: shrike
+  - type: MCXenoAcidicSalve
+  - type: MCXenoLayEgg
+  - type: MCXenoPsychicFling  

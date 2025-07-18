@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "psychic_whisper"
+    },
+    {
+      "name": "fling"
+    },
+    {
+      "name": "vortex"
+    },
+    {
+      "name": "drone_sting"
+    }
+  ]
+}
