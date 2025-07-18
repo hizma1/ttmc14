@@ -123,12 +123,9 @@ public sealed class MCXenoEvasionSystem : EntitySystem
 
     private void RefreshAction(EntityUid uid)
     {
-        foreach (var (actionUid, actionComponent) in _actions.GetActions(uid))
+        foreach (var action in _rmcActions.GetActionsWithEvent<MCXenoEvasionActionEvent>(uid))
         {
-            if (actionComponent.BaseEvent is not MCXenoEvasionActionEvent)
-                continue;
-
-            _actions.ClearCooldown(actionUid);
+            _actions.ClearCooldown((action, action));
         }
     }
 

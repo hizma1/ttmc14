@@ -44,10 +44,10 @@ public sealed class MCXenoResinJellySystem : EntitySystem
         if (args.Handled)
             return;
 
-        if (_hands.GetActiveHand(entity.Owner) is not { } activeHand)
+        if (_hands.GetActiveHand(entity.Owner) is not { } handId)
             return;
 
-        if (!activeHand.IsEmpty)
+        if (_hands.GetHeldItem(entity.Owner, handId) is not null)
             return;
 
         if (!_rmcActions.TryUseAction(entity, args.Action, entity))
@@ -60,7 +60,7 @@ public sealed class MCXenoResinJellySystem : EntitySystem
 
         var instance = Spawn(entity.Comp.ProtoId);
         _xenoHive.SetSameHive(entity.Owner, instance);
-        _hands.TryPickup(entity, instance, activeHand, false, false);
+        _hands.TryPickup(entity, instance, handId, false, false);
     }
 
     private void OnAfterInteract(Entity<MCXenoResinJellyComponent> entity, ref AfterInteractEvent args)

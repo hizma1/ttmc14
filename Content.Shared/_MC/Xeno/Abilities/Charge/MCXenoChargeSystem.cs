@@ -1,4 +1,5 @@
-﻿using Content.Shared._RMC14.Emote;
+﻿using Content.Shared._RMC14.Actions;
+using Content.Shared._RMC14.Emote;
 using Content.Shared._RMC14.Map;
 using Content.Shared._RMC14.Pulling;
 using Content.Shared._RMC14.Throwing;
@@ -40,6 +41,7 @@ public sealed class MCXenoChargeSystem : EntitySystem
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedXenoHiveSystem _xenoHive = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;
+    [Dependency] private readonly RMCActionsSystem _rmcActions = default!;
 
     private EntityQuery<InputMoverComponent> _inputMoverQuery;
     private EntityQuery<MCXenoChargeComponent> _xenoToggleChargingQuery;
@@ -147,20 +149,18 @@ public sealed class MCXenoChargeSystem : EntitySystem
     private void OnActiveInit(Entity<MCXenoChargeActiveComponent> entity, ref MapInitEvent args)
     {
         _movementSpeed.RefreshMovementSpeedModifiers(entity);
-        foreach (var action in _actions.GetActions(entity))
+        foreach (var action in  _rmcActions.GetActionsWithEvent<MCXenoChargeActionEvent>(entity))
         {
-            if (action.Comp.BaseEvent is MCXenoChargeActionEvent)
-                _actions.SetToggled(action.Id, true);
+            _actions.SetToggled((action, action), true);
         }
     }
 
     private void OnActiveRemove(Entity<MCXenoChargeActiveComponent> entity, ref ComponentRemove args)
     {
         _movementSpeed.RefreshMovementSpeedModifiers(entity);
-        foreach (var action in _actions.GetActions(entity))
+        foreach (var action in  _rmcActions.GetActionsWithEvent<MCXenoChargeActionEvent>(entity))
         {
-            if (action.Comp.BaseEvent is MCXenoChargeActionEvent)
-                _actions.SetToggled(action.Id, false);
+            _actions.SetToggled((action, action), false);
         }
     }
 

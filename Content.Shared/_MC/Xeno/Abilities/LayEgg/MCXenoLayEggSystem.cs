@@ -75,15 +75,13 @@ public sealed class LayEggSystem : EntitySystem
         if (args.Cancelled)
             return;
 
-        foreach (var (actionId, action) in _actions.GetActions(entity))
-        {
-            if (action.BaseEvent is not MCXenoLayEggActionEvent)
-                continue;
 
-            if (!_rmcActions.TryUseAction(entity, actionId, entity))
+        foreach (var action in _rmcActions.GetActionsWithEvent<MCXenoLayEggActionEvent>(entity))
+        {
+            if (!_rmcActions.TryUseAction(entity, action, entity))
                 return;
 
-            _actions.StartUseDelay(actionId);
+            _actions.StartUseDelay((action, action));
         }
 
         _audio.PlayPredicted(entity.Comp.Sound, entity, args.User);

@@ -4,17 +4,18 @@
   name: Toxic Spit
   description: Spit a toxin at your target up to 7 tiles away, inflicting the Intoxicated debuff and dealing damage over time.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/spits.rsi
       state: shift_spit_xeno_toxic
+    useDelay: 0.1
+  - type: InstantAction
     event: !type:MCXenoSpitToggleActionEvent
       projectileId: MCXenoProjectileToxicSpit
       plasmaCost: 30
       delay: 1
       speed: 30
-    useDelay: 0.1
 
 - type: entity
   parent: XenoBaseProjectile
@@ -43,13 +44,14 @@
   name: Toxic Slash (100)
   description: Imbue your claws with acid, inflicting the Intoxicated debuff with every slash. You won't have Toxic Slash after 4 seconds or after 3 slashes have been dealt.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/sentinel.rsi
       state: neuroclaws_off
-    event: !type:MCXenoToxicSlashActionEvent
     useDelay: 10
+  - type: InstantAction
+    event: !type:MCXenoToxicSlashActionEvent
   - type: XenoActionPlasma
     cost: 100
 
@@ -59,15 +61,14 @@
   name: Drain Sting (75)
   description: Sting your victim, draining them and gaining benefits if they are Intoxicated.
   components:
-  - type: EntityTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/sentinel.rsi
       state: neuro_sting
-    event: !type:MCXenoDrainStingActionEvent
-    range: 1.5
     useDelay: 25
-    deselectOnMiss: false
-    checkCanAccess: true
+  - type: TargetAction
+  - type: EntityTargetAction
+    event: !type:MCXenoDrainStingActionEvent
   - type: XenoActionPlasma
     cost: 75

@@ -4,13 +4,15 @@
   name: Psychic Fling (100)
   description: Sends an enemy or an item flying. A close ranged ability.
   components:
-  - type: EntityTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/shrike.rsi
       state: fling
-    event: !type:MCXenoPsychicFlingActionEvent
-    range: 3
     useDelay: 12
+  - type: TargetAction
+    range: 3
+  - type: EntityTargetAction
+    event: !type:MCXenoPsychicFlingActionEvent
   - type: XenoActionPlasma
     cost: 100

@@ -4,16 +4,18 @@
   name: Rewind (150)
   description: Save the location and status of the target. When the time is up, the target location and status are restored
   components:
-  - type: EntityTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: rewind
-    event: !type:MCXenoRewindActionEvent
-    range: 5
     useDelay: 30
-    deselectOnMiss: false
-    checkCanAccess: false
+    checkCanInteract: false
+  - type: TargetAction
+    range: -1
+    # checkCanAccess: false
+  - type: EntityTargetAction
+    event: !type:MCXenoRewindActionEvent
   - type: XenoActionPlasma
     cost: 150
 
@@ -23,16 +25,17 @@
   name: Blink (30)
   description: Teleport to a space a short distance away within line of sight. Can teleport mobs you're dragging with you at the cost of higher cooldown.
   components:
-  - type: WorldTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: blink
-    event: !type:MCXenoBlinkActionEvent
-    range: 100
     useDelay: 0.5
-    deselectOnMiss: false
+  - type: TargetAction
+    range: -1
     checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:MCXenoBlinkActionEvent
   - type: XenoActionPlasma
     cost: 30
 
@@ -42,13 +45,14 @@
   name: Portal (100)
   description: Place a portal on your location. You and other, whether it be marine or xenomorph, can travel from portal to portal.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: portal
-    event: !type:MCXenoPortalPlacerActionEvent
     useDelay: 7
+  - type: InstantAction
+    event: !type:MCXenoPortalPlacerActionEvent
   - type: XenoActionPlasma
     cost: 100
 
@@ -58,16 +62,17 @@
   name: Banish (100)
   description: Banish a creature or object a short distance away within line of sight to null space. Can target oneself and allies. Can be manually cancelled with Recall.
   components:
-  - type: EntityTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: banish
-    event: !type:MCXenoBanishActionEvent
-    range: 3
     useDelay: 20
-    deselectOnMiss: false
-    checkCanAccess: false
+  - type: TargetAction
+    range: -1
+    # checkCanAccess: false
+  - type: EntityTargetAction
+    event: !type:MCXenoBanishActionEvent
   - type: XenoActionPlasma
     cost: 100
 
@@ -77,12 +82,13 @@
   name: Recall
   description: Manually cancels your active banishment.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: recall
-    event: !type:MCXenoRecallActionEvent
     useDelay: 1
     checkCanInteract: false
     checkConsciousness: false
+  - type: InstantAction
+    event: !type:MCXenoRecallActionEvent

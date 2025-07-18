@@ -129,15 +129,12 @@ public sealed class MCXenoBlinkSystem : EntitySystem
 
     private void IncreaseCooldown(Entity<MCXenoBlinkComponent> entity, float modifier)
     {
-        foreach (var (actionId, action) in _actions.GetActions(entity))
+        foreach (var action in _rmcActions.GetActionsWithEvent<MCXenoBlinkActionEvent>(entity))
         {
-            if (action.BaseEvent is not MCXenoBlinkActionEvent)
+            if (action.Comp.Cooldown is null)
                 continue;
 
-            if (action.Cooldown is null)
-                continue;
-
-            _actions.SetCooldown(actionId, action.Cooldown.Value.Start, action.Cooldown.Value.End + (action.UseDelay ?? TimeSpan.Zero) * modifier);
+            _actions.SetCooldown((action, action), action.Comp.Cooldown.Value.Start, action.Comp.Cooldown.Value.End + (action.Comp.UseDelay ?? TimeSpan.Zero) * modifier);
         }
     }
 
