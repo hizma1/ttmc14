@@ -10,9 +10,10 @@
       sprite: _MC/Interface/Actions/Xeno/wraith.rsi
       state: rewind
     useDelay: 30
+    checkCanInteract: false
   - type: TargetAction
-    range: 5
-    checkCanAccess: false
+    range: -1
+    # checkCanAccess: false
   - type: EntityTargetAction
     event: !type:MCXenoRewindActionEvent
   - type: XenoActionPlasma
@@ -31,7 +32,7 @@
       state: blink
     useDelay: 0.5
   - type: TargetAction
-    range: 100
+    range: -1
     checkCanAccess: false
   - type: WorldTargetAction
     event: !type:MCXenoBlinkActionEvent
@@ -68,8 +69,8 @@
       state: banish
     useDelay: 20
   - type: TargetAction
-    range: 3
-    checkCanAccess: false
+    range: -1
+    # checkCanAccess: false
   - type: EntityTargetAction
     event: !type:MCXenoBanishActionEvent
   - type: XenoActionPlasma
