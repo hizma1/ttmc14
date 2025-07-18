@@ -4,13 +4,14 @@
   name: Select Weeds
   description: Choose a weeds to plant with the 'Plant Weeds' ability.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Xeno/weed_icons.rsi
       state: default
-    event: !type:MCXenoChooseWeedsActionEvent
     useDelay: 0.1
+  - type: InstantAction
+    event: !type:MCXenoChooseWeedsActionEvent
   - type: MCXenoChooseWeedsAction
 
 - type: entity
@@ -19,13 +20,14 @@
   name: Plant Weeds
   description: Plants a resin weed node, which will start growing resin weeds in a 3-tile radius that allows xenomorphs to heal and restore plasma while on top of the tile.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: plant_weeds
-    event: !type:MCXenoPlaceWeedsActionEvent
     useDelay: 0.1
+  - type: InstantAction
+    event: !type:MCXenoPlaceWeedsActionEvent
 
 - type: entity
   parent: ActionXenoBase
@@ -33,12 +35,13 @@
   name: Lay Egg (200)
   description: Create an egg that will grow a larval hugger after a short delay. Empty eggs can have huggers inserted into them.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Xeno/Actions/construction.rsi
       state: lay_egg
-    event: !type:MCXenoLayEggActionEvent
     useDelay: 12
+  - type: InstantAction
+    event: !type:MCXenoLayEggActionEvent
   - type: XenoActionPlasma
     cost: 200

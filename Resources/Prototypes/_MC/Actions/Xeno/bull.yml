@@ -4,10 +4,11 @@
   name: Toggle Charging
   description: Toggles the movement-based charge on and off.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Xeno/Actions/bull.rsi
       state: bull_ready_charge
-    event: !type:MCXenoChargeActionEvent
     useDelay: 0.1
+  - type: InstantAction
+    event: !type:MCXenoChargeActionEvent

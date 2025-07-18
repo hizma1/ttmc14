@@ -4,13 +4,14 @@
   name: Rest
   description: Lie down to regenerate health more quickly while on weeds.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/general.rsi
       state: resting
-    event: !type:XenoRestActionEvent
     useDelay: 1
+  - type: InstantAction
+    event: !type:XenoRestActionEvent
 
 - type: entity
   parent: ActionXenoBase
@@ -18,13 +19,14 @@
   name: Hide
   description: Hide under tables and other objects.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/general.rsi
       state: xenohide
-    event: !type:XenoHideActionEvent
     useDelay: 0.5
+  - type: InstantAction
+    event: !type:XenoHideActionEvent
 
 - type: entity
   parent: ActionXenoBase
@@ -32,11 +34,14 @@
   name: Psy drain (50)
   description: Drain the victim of its life force to gain larva and psych points.
   components:
-  - type: WorldTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/general.rsi
       state: headbite
+  - type: TargetAction
+  - type: WorldTargetAction
+    event: !type:MCXenoPounceActionEvent
   - type: XenoActionPlasma
     cost: 50
 
@@ -46,13 +51,14 @@
   name: Emit Pheromones (35)
   description: Gives a buff to nearby xenonids. [color=cyan]Consumes 2.5 plasma per second.[/color]
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/general.rsi
       state: emit_pheromones
-    event: !type:XenoPheromonesActionEvent
     useDelay: 0.33
+  - type: InstantAction
+    event: !type:XenoPheromonesActionEvent
 
 - type: entity
   parent: ActionXenoAcidNormal
@@ -60,15 +66,17 @@
   name: Weak Corrosive Acid (75)
   description: Melts down a structure or item over time.
   components:
-  - type: EntityTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Actions/Xeno/general.rsi
       state: corrosive_acid
+  - type: TargetAction
+    checkCanInteract: false
+  - type: EntityTargetAction
     event: !type:XenoCorrosiveAcidEvent
       acidId: XenoAcidWeak
       plasmaCost: 75
       time: 480
       dps: 4
       expendableLightDps: 0.3
-    checkCanInteract: false
