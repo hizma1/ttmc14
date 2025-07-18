@@ -40,9 +40,11 @@
   name: Recycle (750)
   description: We deconstructthe body of a fellow fallen xenomorph to avoid marines from harvesting our sisters in arms.
   components:
-  - type: EntityTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/drone.rsi
+      sprite: _MC/Interface/Actions/Xeno/drone.rsi
       state: recycle
+  - type: TargetAction
+  - type: EntityTarget
     event: !type:MCXenoRecycleActionEvent
