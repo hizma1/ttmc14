@@ -7,7 +7,7 @@
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/bull.rsi
+      sprite: _MC/Interface/Actions/Xeno/bull.rsi
       state: bull_ready_charge
     useDelay: 0.1
   - type: InstantAction

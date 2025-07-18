@@ -65,7 +65,7 @@
   - type: MCXenoPlantingWeeds
     selected: MCXenoWeedsNode
     autoSprite:
-      sprite: _MC/Interface/Xeno/Actions/general.rsi
+      sprite: _MC/Interface/Actions/Xeno/general.rsi
       state: repeating
     weeds:
       MCXenoWeedsNode:

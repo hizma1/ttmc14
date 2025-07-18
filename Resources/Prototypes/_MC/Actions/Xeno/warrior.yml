@@ -7,9 +7,9 @@
   - type: WorldTargetAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/warrior.rsi
+      sprite: _MC/Interface/Actions/Xeno/warrior.rsi
       state: grapple_toss
-    event: !type:MCXenoGrappleTossActionEvent
+    event: !type:MCXenoGrappleTossActionEvent ""
     range: 0
     useDelay: 20
     checkCanAccess: false

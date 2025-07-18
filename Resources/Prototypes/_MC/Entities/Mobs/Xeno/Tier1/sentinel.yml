@@ -35,6 +35,7 @@
     actionIds:
     - MCActionXenoRest
     - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoToggleToxicSpit
     - MCActionXenoToxicSlash
     - MCActionXenoDrainSting

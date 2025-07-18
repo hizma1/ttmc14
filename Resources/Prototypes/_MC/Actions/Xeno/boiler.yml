@@ -7,12 +7,11 @@
   - type: WorldTargetAction
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/boiler.rsi
+      sprite: _MC/Interface/Actions/Xeno/boiler.rsi
       state: spray_acid
-    event: !type:XenoSprayAcidActionEvent
+    event: !type:XenoSprayAcidActionEvent ""
     useDelay: 9
     range: 15
   - type: ActionBlockIfResting
   - type: XenoActionPlasma
     cost: 250
-

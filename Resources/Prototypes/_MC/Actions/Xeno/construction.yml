@@ -38,7 +38,7 @@
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/construction.rsi
+      sprite: _MC/Interface/Actions/Xeno/construction.rsi
       state: lay_egg
     useDelay: 12
   - type: InstantAction

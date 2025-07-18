@@ -117,24 +117,27 @@
   - type: Xeno
     actionIds:
     # RMC
-    - MCActionXenoRest
-    - MCActionXenoPheromones
-    - ActionXenoAcidWeak
-    - ActionXenoDevolve
     - ActionXenoChooseStructure
     - ActionXenoSecreteStructure
     - ActionXenoTransferPlasma
     # MC
+    - MCActionXenoRest
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
+    - MCActionXenoPheromones
+    - MCActionXenoAcidWeak
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoCreateResinJelly
     - MCActionXenoAcidicSalve
     - MCActionXenoRecycle
   - type: XenoEvolution
+    actionId: MCActionXenoEvolve
+    max: 225
     evolvesTo:
     - MCXenoHivelord
     - MCXenoCarrier
-    - MCXenoShrike 
+    - MCXenoShrike
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000

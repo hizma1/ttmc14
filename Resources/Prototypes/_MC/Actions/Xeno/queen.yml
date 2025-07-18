@@ -7,8 +7,8 @@
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/queen.rsi
+      sprite: _MC/Interface/Actions/Xeno/queen.rsi
       state: queen_ready_charge
     useDelay: 0.1
   - type: InstantAction
-    event: !type:MCXenoChargeActionEvent
+    event: !type:MCXenoChargeActionEvent ""

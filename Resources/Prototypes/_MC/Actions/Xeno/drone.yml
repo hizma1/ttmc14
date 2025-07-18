@@ -24,7 +24,7 @@
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Xeno/Actions/drone.rsi
+      sprite: _MC/Interface/Actions/Xeno/drone.rsi
       state: heal_xeno
     useDelay: 5
   - type: TargetAction
@@ -46,5 +46,5 @@
       sprite: _MC/Interface/Actions/Xeno/drone.rsi
       state: recycle
   - type: TargetAction
-  - type: EntityTarget
+  - type: EntityTargetAction
     event: !type:MCXenoRecycleActionEvent
