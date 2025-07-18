@@ -1,0 +1,12 @@
+ent-MCAreaShipAtmosphericsPort = Atmospherics Port
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipEngineReactorCoreRoom = Engine Reactor Core Room
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipUpperEngineering = Upper Engineering
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipEngineeringLower = Engineering Lower
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipChiefShipEngineerOffice = Chief Ship Engineer Office
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipEngineeringWorkshop = Engineering Workshop
+    .desc = { ent-MCAreaShip.desc }

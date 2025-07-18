@@ -1,0 +1,17 @@
+- type: entity
+  parent: MCFlag
+  id: MCFlagTerraGov
+  name: TerraGov flag
+  description: A flag bearing the symbol of TerraGov. It flutters in the breeze heroically. This one looks ready to be planted into the ground.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Flags/tg.rsi
+
+- type: entity
+  parent: MCFlag
+  id: MCFlagSOM
+  name: SOM flag
+  description: A flag bearing the symbol of the Sons of Mars. It flutters in the breeze heroically. This one looks ready to be planted into the ground.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Flags/som.rsi

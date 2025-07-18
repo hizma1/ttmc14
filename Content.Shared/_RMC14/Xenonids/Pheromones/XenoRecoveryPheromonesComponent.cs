@@ -1,4 +1,5 @@
-﻿using Content.Shared.FixedPoint;
+﻿using Content.Shared._MC.Xeno.Sunder;
+using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
 using static Robust.Shared.Utility.SpriteSpecifier;
@@ -6,7 +7,7 @@ using static Robust.Shared.Utility.SpriteSpecifier;
 namespace Content.Shared._RMC14.Xenonids.Pheromones;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedXenoPheromonesSystem))]
+[Access(typeof(SharedXenoPheromonesSystem), typeof(MCXenoSunderSystem))]
 public sealed partial class XenoRecoveryPheromonesComponent : Component
 {
     [DataField, AutoNetworkedField]

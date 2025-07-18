@@ -16,6 +16,11 @@ using Robust.Shared.GameObjects;
 using Robust.Shared.IoC;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Maths;
+using Robust.Shared.GameObjects;
+using Robust.Shared.IoC;
+using Robust.Shared.Localization;
+using Robust.Shared.Map.Components;
+using Robust.Shared.Maths;
 using Robust.Shared.Timing;
 using Robust.Shared.Input;
 
@@ -43,13 +48,13 @@ public sealed partial class TacticalMapWrapper : Control
 
     private readonly List<(string Name, Color Color)> _colors = new()
     {
-        ("Black", Color.Black),
-        ("Red", Color.FromHex("#F40002")),
-        ("Orange", Color.FromHex("#F39504")),
-        ("Blue", Color.FromHex("#015CF5")),
-        ("Purple", Color.FromHex("#BF00F1")),
-        ("Green", Color.FromHex("#00BB48")),
-        ("Brown", Color.FromHex("#5A3121")),
+        (Loc.GetString("ui-tactical-map-color-black"), Color.Black),
+        (Loc.GetString("ui-tactical-map-color-red"), Color.FromHex("#F40002")),
+        (Loc.GetString("ui-tactical-map-color-orange"), Color.FromHex("#F39504")),
+        (Loc.GetString("ui-tactical-map-color-blue"), Color.FromHex("#015CF5")),
+        (Loc.GetString("ui-tactical-map-color-purple"), Color.FromHex("#BF00F1")),
+        (Loc.GetString("ui-tactical-map-color-green"), Color.FromHex("#00BB48")),
+        (Loc.GetString("ui-tactical-map-color-brown"), Color.FromHex("#5A3121")),
     };
 
     private bool _followingPlayer;
@@ -268,7 +273,7 @@ public sealed partial class TacticalMapWrapper : Control
     {
         float initialBlipSize = 1.0f;
         BlipSizeSlider.Value = initialBlipSize;
-        BlipSizeLabel.Text = $"Blip Size: {initialBlipSize:F1}x";
+        BlipSizeLabel.Text = Loc.GetString("ui-tactical-map-blip-size-label", ("size", initialBlipSize.ToString("F1")));
 
         Map.BlipSizeMultiplier = initialBlipSize;
         Canvas.BlipSizeMultiplier = initialBlipSize;
@@ -276,7 +281,7 @@ public sealed partial class TacticalMapWrapper : Control
         BlipSizeSlider.OnValueChanged += args =>
         {
             float value = (float)args.Value;
-            BlipSizeLabel.Text = $"Blip Size: {value:F1}x";
+            BlipSizeLabel.Text = Loc.GetString("ui-tactical-map-blip-size-label", ("size", value.ToString("F1")));
             Map.BlipSizeMultiplier = value;
             Canvas.BlipSizeMultiplier = value;
         };
@@ -286,7 +291,7 @@ public sealed partial class TacticalMapWrapper : Control
     {
         float initialThickness = 2.0f;
         LineThicknessSlider.Value = initialThickness;
-        LineThicknessLabel.Text = $"Line Width: {initialThickness:F1}px";
+        LineThicknessLabel.Text = Loc.GetString("ui-tactical-map-line-width-label", ("width", initialThickness.ToString("F1")));
 
         Map.LineThickness = initialThickness;
         Canvas.LineThickness = initialThickness;
@@ -294,7 +299,7 @@ public sealed partial class TacticalMapWrapper : Control
         LineThicknessSlider.OnValueChanged += args =>
         {
             float value = (float)args.Value;
-            LineThicknessLabel.Text = $"Line Width: {value:F1}px";
+            LineThicknessLabel.Text = Loc.GetString("ui-tactical-map-line-width-label", ("width", value.ToString("F1")));
             Map.LineThickness = value;
             Canvas.LineThickness = value;
         };
@@ -469,19 +474,19 @@ public sealed partial class TacticalMapWrapper : Control
         switch (_currentLabelState)
         {
             case TacticalMapControl.LabelMode.Area:
-                text = "Area";
+                text = Loc.GetString("ui-tactical-map-labels-mode-area");
                 color = Color.Orange;
                 break;
             case TacticalMapControl.LabelMode.Tactical:
-                text = "Tactical";
+                text = Loc.GetString("ui-tactical-map-labels-mode-tactical");
                 color = Color.Green;
                 break;
             case TacticalMapControl.LabelMode.None:
-                text = "Labels";
+                text = Loc.GetString("ui-tactical-map-labels-mode-none");
                 color = Color.Red;
                 break;
             default:
-                text = "Labels";
+                text = Loc.GetString("ui-tactical-map-labels-mode-none");
                 color = Color.White;
                 break;
         }
@@ -502,12 +507,16 @@ public sealed partial class TacticalMapWrapper : Control
     private void UpdateSettingsVisibility()
     {
         SettingsContainer.Visible = _settingsVisible;
-        SettingsToggleButton.Text = _settingsVisible ? "▼" : "▶";
+        SettingsToggleButton.Text = _settingsVisible ?
+            Loc.GetString("ui-tactical-map-settings-toggle-expanded") :
+            Loc.GetString("ui-tactical-map-settings-toggle-collapsed");
     }
 
     private void UpdateFollowButtonText()
     {
-        string text = _followingPlayer ? "Stop" : "Centre";
+        string text = _followingPlayer ?
+            Loc.GetString("ui-tactical-map-follow-player-active") :
+            Loc.GetString("ui-tactical-map-follow-player-inactive");
         Color color = _followingPlayer ? Color.Red : Color.White;
 
         if (FollowPlayerButton != null)
@@ -564,7 +573,7 @@ public sealed partial class TacticalMapWrapper : Control
         CooldownBar.MinValue = (float)LastUpdateAt.TotalSeconds;
         CooldownBar.MaxValue = (float)NextUpdateAt.TotalSeconds;
         CooldownBar.Value = (float)(LastUpdateAt.TotalSeconds + NextUpdateAt.TotalSeconds - time.CurTime.TotalSeconds);
-        CooldownLabel.Text = $"{(int)cooldown.TotalSeconds}";
+        CooldownLabel.Text = Loc.GetString("ui-tactical-map-cooldown-seconds", ("seconds", (int)cooldown.TotalSeconds));
     }
 
     private bool IsInQueenEyeMode()

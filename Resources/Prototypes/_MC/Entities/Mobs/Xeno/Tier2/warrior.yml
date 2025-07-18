@@ -34,7 +34,7 @@
     role: MCXenoWarrior
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoDevolve
     # MC
     - MCActionXenoGrappleToss

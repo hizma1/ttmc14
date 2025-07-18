@@ -2,7 +2,6 @@
   parent:
   # MC
   - MCXenoBase
-  - MCXenoHide
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -15,7 +14,33 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/runner.rsi
-    offset: 0,0.75
+    layers:
+    - map: [ "enum.XenoVisualLayers.Base" ]
+      state: alive
+    - map: [ "enum.RMCDamageVisualLayers.Base" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Left" ]
+      visible: false
+    - map: [ "enum.XenoInhandVisualLayers.Right" ]
+      visible: false
+    - map: [ "enum.EvasionLayer.Base" ]
+      sprite: _MC/Interface/Hud/timer.rsi
+      state: "1"
+      offset: 0.5,-0.5
+      visible: false
+    - map: [ "focused" ]
+      sprite: _RMC14/Interface/xeno_hud.rsi
+      state: hudeye
+      visible: false
+    - map: [ "targetedDirection" ]
+      sprite: _RMC14/Effects/targeted.rsi
+      state: sniper_lockon_direction
+      visible: false
+    - map: [ "targetedDirectionIntense" ]
+      sprite: _RMC14/Effects/targeted.rsi
+      state: sniper_lockon_intense_direction
+      visible: false
+    offset: 0,0.65
   - type: FixedIdentity
     name: mc-job-name-xeno-runner
   - type: GhostRole
@@ -23,8 +48,7 @@
   - type: Fixtures
     fixtures:
       fix1:
-        shape:
-          !type:PhysShapeCircle
+        shape: !type:PhysShapeCircle
           radius: 0.35
         density: 85
         mask:
@@ -35,8 +59,7 @@
         layer:
         - MobLayer
       fix2:
-        shape:
-          !type:PhysShapeCircle
+        shape: !type:PhysShapeCircle
           radius: 0.40
         density: 85
         layer:
@@ -54,19 +77,24 @@
     tier: 1
     role: MCXenoRunner
     actionIds:
-    # RMC
-    - ActionXenoRest
-    - ActionXenoDevolve
-    - ActionXenoHide
-    # MC
-    hudOffset: -0.1,0.1
+    - MCActionXenoRest
+    - MCActionXenoPsydrain
+    - MCActionXenoHide
+    - MCActionXenoDevolve
+    - MCActionXenoEvasion
+    - MCActionXenoPounce
+    hudOffset: -0.2,0.3
   - type: XenoEvolution
+    actionId: MCActionXenoEvolve
+    max: 225
     evolvesTo:
     - MCXenoWraith
     - MCXenoHunter
+    - MCXenoBull
   - type: XenoDevolve
     devolvesTo:
     - MCXenoLarva
+  - type: XenoHide
   - type: MCArmor
     melee: 30
     bullet: 30
@@ -77,6 +105,7 @@
     fire: 20
     acid: 5
   - type: MeleeWeapon
+    attackRate: 1.67
     damage:
       groups:
         Brute: 23
@@ -87,3 +116,8 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: runner
+  - type: MCXenoPounce
+    hitDamage:
+      groups:
+        Brute: 25
+  - type: MCXenoEvasion

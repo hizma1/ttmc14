@@ -29,7 +29,7 @@
     role: MCXenoGorger
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoDevolve
     # MC
     hudOffset: -0.1,0.1

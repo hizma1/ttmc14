@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/92882ac9a257937ee67ce1074b6934c5f9f8a530, modified by TornadoTechnology (GitHub)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "queen_ready_charge"
+    },
+    {
+      "name": "toggle_queen_zoom"
+    },
+    {
+      "name": "screech"
+    },
+    {
+      "name": "bulwark"
+    },
+    {
+      "name": "watch_xeno"
+    },
+    {
+      "name": "xeno_lead"
+    },
+    {
+      "name": "queen_give_plasma"
+    },
+    {
+      "name": "heal_screech"
+    },
+    {
+      "name": "plasma_screech"
+    },
+    {
+      "name": "frenzy_screech"
+    }
+  ]
+}

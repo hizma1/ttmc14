@@ -9,7 +9,7 @@ new_player_threshold = 600
 alert.explosion_min_intensity = -1
 
 [adminlogs]
-server_name = "ttmc"
+server_name = "TTMC"
 
 [atmos]
 space_wind = false
@@ -33,8 +33,8 @@ fallbackpreset = "CMDistressSignal"
 round_end_sound_collection = "CMRoundEnd"
 map = "MCPillarOfSpring"
 contraband_examine = false
-maxplayers = 500
-soft_max_players = 350
+maxplayers = 100
+soft_max_players = 60
 panic_bunker.enabled = false
 round_end_pvs_overrides = false
 round_restart_time = 180
@@ -74,13 +74,13 @@ maxlinvelocity = 72
 target_minimum_tickrate = 140
 
 [pointing]
-cooldown_seconds = 0.5
+cooldown_seconds = 0.1
 
 [procgen]
 preload = false
 
 [replay]
-auto_record = true
+auto_record = false
 max_compressed_size = 4194304
 max_uncompressed_size = 8388608
 auto_record_temp_dir = "recording"

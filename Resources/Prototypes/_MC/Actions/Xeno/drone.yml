@@ -4,13 +4,14 @@
   name: Create Resin Jelly (100)
   description: Places Resin Jelly in your active hand, which can be used on yourself or other xeno castes for a 30-second protection from fire.
   components:
-  - type: InstantAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Objects/Xeno/resin_jelly.rsi
       state: icon
-    event: !type:MCXenoCreateResinJellyActionEvent
     useDelay: 45
+  - type: InstantAction
+    event: !type:MCXenoCreateResinJellyActionEvent
   - type: XenoActionPlasma
     cost: 100
 
@@ -20,15 +21,16 @@
   name: Acidic Salve (150)
   description: Allows you to spend 150 plasma on healing a xeno for 50 HP + (Recovery Pheremone Level * the Xeno's max health * 0.01) along with healing (total heal amount/10) sunder.
   components:
-  - type: EntityTargetAction
+  - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _MC/Interface/Xeno/Actions/drone.rsi
       state: heal_xeno
-    event: !type:MCXenoAcidicSlaveActionEvent
-    range: 1.5
     useDelay: 5
-    deselectOnMiss: false
+  - type: TargetAction
+    range: 1.5
+  - type: EntityTargetAction
+    event: !type:MCXenoAcidicSlaveActionEvent
   - type: XenoActionPlasma
     cost: 150
 

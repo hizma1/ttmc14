@@ -5,7 +5,7 @@
   components:
   - type: Sprite
     state: icon
-  - type: CMArmor
+  - type: MCArmor
     melee: 25
     bullet: 15
     laser: 10

@@ -138,7 +138,7 @@
   components:
   - type: Tag
     tags:
-    - CMMagazineSmg
+    - MCMagazineSmg
     - MCMagazineSMG45
   - type: BallisticAmmoProvider
     mayTransfer: True
@@ -183,6 +183,8 @@
     damage:
       types:
         Piercing: 27.5
+  - type: MCXenoSunderDamageOnHit
+    amount: 1
   - type: RMCProjectileDamageFalloff
     thresholds:
     - range: 22
@@ -215,6 +217,8 @@
     damage:
       types:
         Piercing: 15
+  - type: MCXenoSunderDamageOnHit
+    amount: 1
   - type: RMCProjectileDamageFalloff
     thresholds:
     - range: 22

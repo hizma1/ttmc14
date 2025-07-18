@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/2e863a6c2f2b551cf3f6dad97ed2f3a91dc7e556",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base",
+      "delays": [
+        [
+          0.25,
+          0.3,
+          0.3,
+          0.15,
+          0.25,
+          0.25,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.15,
+          0.125,
+          0.1,
+          0.1,
+          0.3,
+          0.15
+        ]
+      ]
+    }
+  ]
+}

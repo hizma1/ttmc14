@@ -1,0 +1,14 @@
+ent-MCAreaShipSelfDestructCoreRoom = Self-Destruct Core Room
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipAICore = AI Core
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipCorporateLiaisonOffice = Corporate Liaison Office
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipTelecommunications = Telecommunications
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipCombatInformationCenter = Combat Information Center
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipWeaponControlRoom = Weapon Control Room
+    .desc = { ent-MCAreaShip.desc }
+ent-MCAreaShipBrig = Brig
+    .desc = { ent-MCAreaShip.desc }

@@ -117,10 +117,9 @@
   - type: Xeno
     actionIds:
     # RMC
-    - ActionXenoRest
-    - ActionXenoWatch
+    - MCActionXenoRest
+    - MCActionXenoPheromones
     - ActionXenoAcidWeak
-    - ActionXenoPheromones
     - ActionXenoDevolve
     - ActionXenoChooseStructure
     - ActionXenoSecreteStructure
@@ -135,6 +134,7 @@
     evolvesTo:
     - MCXenoHivelord
     - MCXenoCarrier
+    - MCXenoShrike 
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000

@@ -2,6 +2,10 @@
   id: MCXenoBase
   abstract: true
   components:
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - MCDamageMelee
   - type: MobState
     allowedStates:
     - Alive
@@ -11,9 +15,11 @@
     overlay: false
     drawFov: false
   - type: MCXenoDamageVisuals
+  - type: MCXenoSunder
   - type: CombatMode
     canDisarm: false
   - type: MeleeWeapon
+    attackRate: 1.25
     autoAttack: true
     widePrimary: true
     altDisarm: false
@@ -109,34 +115,6 @@
       whitelist:
         components:
         - XenoEgg
-
-- type: entity
-  id: MCXenoRewind
-  abstract: true
-  components:
-  - type: MCXenoRewind
-
-- type: entity
-  id: MCXenoBlink
-  abstract: true
-  components:
-  - type: MCXenoBlink
-
-- type: entity
-  id: MCXenoPortalPlacer
-  abstract: true
-  components:
-  - type: MCXenoPortalPlacer
-    portalFirst:
-      id: MCXenoPortalOrange
-      icon:
-        sprite: _MC/Effects/portals.rsi
-        state: orange
-    portalSecond:
-      id: MCXenoPortalBlue
-      icon:
-        sprite: _MC/Effects/portals.rsi
-        state: blue
 
 - type: entity
   id: MCXenoGrappleToss

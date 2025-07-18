@@ -38,9 +38,9 @@
     role: MCXenoHivelord
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
+    - MCActionXenoPheromones
     - ActionXenoAcidWeak
-    - ActionXenoPheromones
     - ActionXenoDevolve
     - ActionXenoChooseStructure
     - ActionXenoSecreteStructure

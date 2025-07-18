@@ -1,0 +1,10 @@
+ent-MCWeaponRevolverR44 = R-44 combat revolver
+    .desc = The R-44 standard combat revolver, produced by Terran Armories. A sturdy and hard hitting firearm that loads .44 Magnum rounds. Holds 7 rounds in the cylinder. Due to an error in the cylinder rotation system the fire rate of the gun is much faster than intended, it ended up being billed as a feature of the system.
+ent-MCBaseSpeedLoader44 = R-44 magnum speed loader (.44)
+    .desc = { ent-BaseItem.desc }
+ent-MCSpeedLoaderR44 = R-44 magnum speed loader (.44)
+    .desc = A revolver speed loader.
+ent-MCCartridgeRevolver44 = cartridge (.44)
+    .desc = { ent-CMCartridgePistolBase.desc }
+ent-MCBulletRevolver44 = bullet (.44)
+    .desc = { ent-CMBulletBase.desc }

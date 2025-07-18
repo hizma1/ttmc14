@@ -60,13 +60,13 @@ public sealed class MCXenoStompSystem : EntitySystem
 
             if (distance <= 1.1f)
             {
-                _damageable.TryChangeDamage(target, damage, origin: entity);
+                _damageable.TryChangeDamage(target, damage, origin: entity, tool: entity);
                 _stun.TryParalyze(target, entity.Comp.Paralyze, true);
                 _rmcCameraShake.ShakeCamera(target, 3, 3);
                 continue;
             }
 
-            _damageable.TryChangeDamage(target, damage, origin: entity);
+            _damageable.TryChangeDamage(target, damage, origin: entity, tool: entity);
 
             _rmcPulling.TryStopAllPullsFromAndOn(target);
             _throwing.TryThrow(target, delta.Normalized() * entity.Comp.ThrowDistance, entity.Comp.ThrowSpeed);

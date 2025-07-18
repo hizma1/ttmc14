@@ -2,9 +2,15 @@
   parent: RMCHeadsetShip
   id: MCHeadsetMarine
   components:
-  - type: GrantSquadLeaderTracker
   - type: Sprite
     sprite: _MC/Clothing/radio.rsi
+  - type: GrantSquadLeaderTracker
+    defaultMode: SquadLeader
+    trackerModes:
+    - SquadLeader
+    - FireteamLeader
+    - SeniorEnlistedAdvisor
+    - PrimaryLandingZone
 
 # Alpha
 - type: entity

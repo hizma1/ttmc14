@@ -33,7 +33,7 @@
     role: MCXenoBoiler
     actionIds:
     # RMC
-    - ActionXenoRest
+    - MCActionXenoRest
     - ActionXenoDevolve
     # MC
     - MCActionXenoSprayAcidBoiler

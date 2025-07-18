@@ -1,0 +1,14 @@
+ent-MCWeaponRifleAR12 = AR-12 K&H assault rifle
+    .desc = The Keckler and Hoch AR-12 assault rifle used to be the TerraGov Marine Corps standard issue rifle before the AR-18 carbine replaced it. It is, however, still used widely despite that. The gun itself is very good at being used in most situations however it suffers in engagements at close quarters and is relatively hard to shoulder than some others. It uses 10x24mm caseless ammunition.
+ent-MCMagazineRifleAR12 = AR-12 magazine (10x24mm)
+    .desc = A 10mm assault rifle magazine.
+ent-MCMagazineRifleAR12AP = AR-12 AP magazine (10x24mm)
+    .desc = A 10mm assault rifle magazine, loaded with light armor piercing rounds.
+ent-MCCartridgeRifleAR12AP = патрон бронебойный (10x24мм)
+    .desc = Винтовочный бронебойный патрон 10x24мм
+ent-MCCartridgeRifleAR12 = патрон (10x24мм)
+    .desc = Винтовочный патрон 10x24мм
+ent-MCBulletRifleAR12AP = { ent-RMCBaseBullet }
+    .desc = { ent-RMCBaseBullet.desc }
+ent-MCBulletRifleAR12 = { ent-RMCBaseBullet }
+    .desc = { ent-RMCBaseBullet.desc }

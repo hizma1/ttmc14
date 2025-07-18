@@ -92,7 +92,7 @@
   components:
   - type: Tag
     tags:
-    - CMMagazineSmg
+    - MCMagazineSmg
     - MCMagazineSMG90
   - type: BallisticAmmoProvider
     mayTransfer: True
@@ -137,6 +137,10 @@
     damage:
       types:
         Piercing: 20
+  - type: CMArmorPiercing
+    amount: 5
+  - type: MCXenoSunderDamageOnHit
+    amount: 0.5
   - type: RMCProjectileDamageFalloff
     thresholds:
     - range: 22
@@ -144,8 +148,6 @@
       ignoreModifiers: true
     - range: 8
       falloff: 5
-  - type: CMArmorPiercing
-    amount: 5
 
 - type: Tag
   id: MCMagazineSMG90

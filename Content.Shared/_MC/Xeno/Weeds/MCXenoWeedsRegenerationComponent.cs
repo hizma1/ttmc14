@@ -10,4 +10,7 @@ public sealed partial class MCXenoWeedsRegenerationComponent : Component
 
     [DataField]
     public float PlasmaModifier = 1.2f;
+
+    [DataField]
+    public float SunderModifier = 2f;
 }

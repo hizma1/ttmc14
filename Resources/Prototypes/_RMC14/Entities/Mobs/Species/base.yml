@@ -6,6 +6,8 @@
   name: Urist C.M. McHands
   suffix: RMC14
   components:
+  - type: MCArmor
+  - type: MCXenoToxicStacks
   - type: Fixtures
     fixtures:
       fix1:
@@ -16,6 +18,7 @@
         restitution: 0.0
         mask:
         - MobMask
+        - BarricadeImpassable
         - BarbedBarricade
         layer:
         - Opaque
@@ -52,7 +55,6 @@
     - KnockedDown
     - SlowedDown
     - Stutter
-    - SeeingRainbows
     - Electrocution
     - ForcedSleep
     - TemporaryBlindness
@@ -383,3 +385,4 @@
     whitelist:
       components:
       - Xeno
+  - type: RMCHealthIcons

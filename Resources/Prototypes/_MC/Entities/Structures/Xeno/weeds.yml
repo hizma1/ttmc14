@@ -213,6 +213,7 @@
   - type: MCXenoWeedsRegeneration
     healthModifier: 1.2
     plasmaModifier: 1.2
+    sunderModifier: 2
 
 - type: entity
   parent: MCXenoWeedsNodeBase
@@ -225,4 +226,4 @@
   - type: MCXenoWeedsRegeneration
     healthModifier: 1.2
     plasmaModifier: 1.2
-
+    sunderModifier: 2

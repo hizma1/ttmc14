@@ -1,4 +1,5 @@
-﻿using Content.Shared._RMC14.Actions;
+﻿using System.Numerics;
+using Content.Shared._RMC14.Actions;
 using Content.Shared._RMC14.Slow;
 using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Hive;
@@ -15,16 +16,16 @@ namespace Content.Shared._MC.Xeno.Abilities.Blink;
 
 public sealed class MCXenoBlinkSystem : EntitySystem
 {
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly ExamineSystemShared _examine = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly RMCActionsSystem _rmcActions = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly PullingSystem _pulling = default!;
-    [Dependency] private readonly SharedXenoHiveSystem _xenoHive = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly RMCSlowSystem _rmcSlow = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly ExamineSystemShared _examine = default!;
+    [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly PullingSystem _pulling = default!;
+    [Dependency] private readonly RMCActionsSystem _rmcActions = default!;
+    [Dependency] private readonly RMCSlowSystem _rmcSlow = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedXenoHiveSystem _xenoHive = default!;
 
     public override void Initialize()
     {
@@ -40,11 +41,15 @@ public sealed class MCXenoBlinkSystem : EntitySystem
             return;
 
         var origin = _transform.GetMapCoordinates(entity);
-        var target = _transform.ToMapCoordinates(args.Target);
-        var distance = (origin.Position - target.Position).LengthSquared();
+        var direction = _transform.ToMapCoordinates(args.Target).Position - origin.Position;
 
-        if (distance > entity.Comp.Range * entity.Comp.Range)
+        if (direction == Vector2.Zero)
             return;
+
+        var length = direction.Length();
+        var distance = Math.Clamp(length, 0, entity.Comp.Range);
+
+        var target =  new MapCoordinates(origin.Position + direction.Normalized() * distance, _transform.GetMapId(args.Target));
 
         if (!_examine.InRangeUnOccluded(origin, target, entity.Comp.Range, null))
             return;
@@ -124,15 +129,12 @@ public sealed class MCXenoBlinkSystem : EntitySystem
 
     private void IncreaseCooldown(Entity<MCXenoBlinkComponent> entity, float modifier)
     {
-        foreach (var (actionId, action) in _actions.GetActions(entity))
+        foreach (var action in _rmcActions.GetActionsWithEvent<MCXenoBlinkActionEvent>(entity))
         {
-            if (action.BaseEvent is not MCXenoBlinkActionEvent)
+            if (action.Comp.Cooldown is null)
                 continue;
 
-            if (action.Cooldown is null)
-                continue;
-
-            _actions.SetCooldown(actionId, action.Cooldown.Value.Start, action.Cooldown.Value.End + (action.UseDelay ?? TimeSpan.Zero) * modifier);
+            _actions.SetCooldown((action, action), action.Comp.Cooldown.Value.Start, action.Comp.Cooldown.Value.End + (action.Comp.UseDelay ?? TimeSpan.Zero) * modifier);
         }
     }
 

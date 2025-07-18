@@ -45,15 +45,23 @@
       - id: MCMagazineSMG45
       - id: MCMagazineSMG45SH
     - name: Marksman
-      entries: []
+      entries:
+      - id: MCWeaponDMR37
+      - id: MCMagazineDMR37
+      - id: MCWeaponBR64
+      - id: MCMagazineBR64
+      - id: MCWeaponShotgunMosin
+      - id: MCCartridgeMosin
+      - id: MCWeaponShotgunMartini
+      - id: MCCartridgeMartini
     - name: Shotgun
       entries:
       - id: MCWeaponShotgunSH35
       - id: MCWeaponShotgunSH39
       - id: MCWeaponShotgunSH34
-      - id: RMCBoxShotgunSlugs
-      - id: RMCBoxShotgunBuckshot
-      - id: RMCBoxShotgunFlechette
+      - id: MCBoxShotgunSlugs
+      - id: MCBoxShotgunBuckshot
+      - id: MCBoxShotgunFlechette
       - id: MCWeaponShotgunSH15
       - id: MCMagazineShotgunSH15Flechette
       - id: MCMagazineShotgunSH15Slug
@@ -66,18 +74,30 @@
     - name: Melee
       entries: []
     - name: Sidearm
-      entries: []
+      entries:
+      - id: MCWeaponP14
+      - id: MCMagazinePistolP14
+      - id: MCWeaponP23
+      - id: MCMagazinePistolP23
+      - id: MCWeaponRevolverR44
+      - id: MCSpeedLoaderR44
+      - id: MCWeaponP17
+      - id: MCMagazinePistolP17
+      - id: MCWeaponMK88
+      - id: MCMagazinePistolMK88
     - name: Grenades
       entries:
-      - id: CMGrenadeHighExplosive
+      - id: MCWeaponLauncherGl81
+      - id: MCWeaponLauncherGl70
+      - id: MCGrenadeHedp
         amount: 200
-      - id: CMGrenadeFragOld
+      - id: MCGrenadeHefaM15
         amount: 30
       # M40 adhesive charge grenade
       # M45 Trailblazer grenade
-      - id: RMCGrenadeIncendiary
+      - id: MCGrenadeHidp
         amount: 50
-      - id: CMGrenadeSmoke
+      - id: MCGrenadeHsdp
         amount: 25
       # M40-2 SCDP smoke grenade
       # M40-AG smoke grenade

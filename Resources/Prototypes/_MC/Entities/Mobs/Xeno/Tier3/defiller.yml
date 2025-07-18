@@ -36,8 +36,8 @@
     role: MCXenoDefiler
     actionIds:
     # RMC
-    - ActionXenoRest
-    - ActionXenoPheromones
+    - MCActionXenoRest
+    - MCActionXenoPheromones
     - ActionXenoDevolve
     # MC
     - MCActionXenoSelectWeeds

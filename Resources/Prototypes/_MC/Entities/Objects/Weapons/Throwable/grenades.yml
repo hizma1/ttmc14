@@ -1,0 +1,184 @@
+# hedp
+- type: entity
+  parent: MCGrenade
+  id: MCGrenadeHedp
+  name: M40 HEDP grenade
+  description: A small, but deceptively strong high explosive grenade that has been phasing out the M15 fragmentation grenades. Capable of being loaded in the any grenade launcher, or thrown by hand.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hedp.rsi
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    maxIntensity: 20 # max 100 brute, 100 burn
+    intensitySlope: 6
+    totalIntensity: 200
+    canCreateVacuum: false
+  - type: Ammo
+  - type: CMExplosionEffect
+  - type: CMVocalizeTrigger
+  - type: RMCScorchEffect
+  - type: Tag
+    tags:
+    - MCGrenade
+    - MCGrenadeHedp
+
+- type: Tag
+  id: MCGrenadeHedp
+
+# hsdp
+- type: entity
+  parent: MCGrenade
+  id: MCGrenadeHsdp
+  name: M40 HSDP smoke grenade
+  description: The M40 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. It is set to detonate in 2 seconds.
+  components:
+  - type: OnUseTimerTrigger
+    delay: 2
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hsdp.rsi
+  - type: SpawnOnTerminate
+    spawn: RMCSmoke
+    projectileAdjust: false
+  - type: SoundOnTrigger
+    sound: /Audio/Effects/smoke.ogg
+  - type: DeleteOnTrigger
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: /Audio/Effects/Smoke-grenade.ogg
+  - type: Tag
+    tags:
+    - MCGrenade
+    - MCGrenadeHsdp
+  - type: Ammo
+
+- type: Tag
+  id: MCGrenadeHsdp
+
+# hefa
+- type: entity
+  parent: MCGrenadeHedp
+  id: MCGrenadeHefa
+  name: M40 HEFA grenade
+  description: High-Explosive Fragmenting-Antipersonnel. A small, but deceptively strong fragmentation grenade that has been phasing out the M15 fragmentation grenades alongside the M40 HEDP. Capable of being loaded in grenade launchers, or thrown by hand.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hefa.rsi
+  - type: Explosive
+    maxIntensity: 8 # max 40 brute 40 burn
+    intensitySlope: 4
+    totalIntensity: 110
+    deleteAfterExplosion: false
+  - type: ProjectileGrenade
+    fillPrototype: CMProjectileShrapnel
+    capacity: 48
+    directHit: false
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: Ammo
+  - type: ClusterLimitHits
+  - type: CMExplosionEffect
+    maxShrapnel: 0
+  - type: CMVocalizeTrigger
+  - type: RMCScorchEffect
+  - type: Tag
+    tags:
+    - MCGrenade
+    - MCGrenadeHefa
+
+- type: Tag
+  id: MCGrenadeHefa
+
+# m15 hefa
+- type: entity
+  parent: MCGrenadeHedp
+  id: MCGrenadeHefaM15
+  name: M15 fragmentation grenade
+  description: An outdated TGMC fragmentation grenade. With decades of service in the TGMC, the old M15 Fragmentation Grenade is slowly being replaced with the slightly safer M40 HEDP.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hefa_m15.rsi
+  - type: Explosive
+    maxIntensity: 20
+    intensitySlope: 6
+    totalIntensity: 240
+    deleteAfterExplosion: false
+  - type: ProjectileGrenade
+    fillPrototype: CMProjectileShrapnel
+    capacity: 48 # same as HEFA
+    directHit: false
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: Ammo
+  - type: ClusterLimitHits
+  - type: CMExplosionEffect
+    maxShrapnel: 0
+  - type: CMVocalizeTrigger
+  - type: RMCScorchEffect
+  - type: Tag
+    tags:
+    - MCGrenade
+    - MCGrenadeHefaM15
+
+- type: Tag
+  id: MCGrenadeHefaM15
+
+# m25 hefa
+- type: entity
+  parent: MCGrenadeHedp
+  id: MCGrenadeHefaM25
+  name: M25 fragmentation grenade
+  description: An outdated UNMC Fragmentation Grenade. With decades of service in the UNMC, the old M15 Fragmentation Grenade is slowly being replaced by the slightly safer M40-series grenades. It is set to detonate in 4 seconds.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hefa_m25.rsi
+  - type: Explosive
+    maxIntensity: 20
+    intensitySlope: 6
+    totalIntensity: 240
+    deleteAfterExplosion: false
+  - type: ProjectileGrenade
+    fillPrototype: CMProjectileShrapnel
+    capacity: 48 #same as HEFA
+    directHit: false
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: Ammo
+  - type: ClusterLimitHits
+  - type: CMExplosionEffect
+    maxShrapnel: 0
+  - type: CMVocalizeTrigger
+  - type: RMCScorchEffect
+  - type: Tag
+    tags:
+    - MCGrenade
+    - MCGrenadeHefaM25
+
+- type: Tag
+  id: MCGrenadeHefaM25
+
+# hidp
+- type: entity
+  parent: MCGrenade
+  id: MCGrenadeHidp
+  name: M40 HIDP incendiary grenade
+  description: The M40 HIDP is a small, but deceptively strong incendiary grenade. It is set to detonate in 4 seconds.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hidp.rsi
+  - type: OnUseTimerTrigger
+    beepSound: null
+  - type: CMVocalizeTrigger
+  - type: TileFireOnTrigger
+    spawn: RMCTileFireGreen
+    sound:
+      path: /Audio/_RMC14/Weapons/Guns/Flamer/gun_flamethrower2.ogg
+  - type: Tag
+    tags:
+    - MCGrenade
+    - MCGrenadeHidp
+
+- type: Tag
+  id: MCGrenadeHidp

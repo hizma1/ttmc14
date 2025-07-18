@@ -1,0 +1,152 @@
+- type: entity
+  parent: CMWeaponPistolBase
+  id: MCWeaponP14
+  name: P-14 pistol
+  description: The P-14, produced by Terran Armories. A reliable sidearm that loads 9x19mm Parabellum Auto munitions. Capable of mounting a limited amount of attachments, and firing at a respectable rate of fire, often as fast as you can pull the trigger. Takes 21-round 9mm magazines.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Pistols/p14.rsi
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Pistols/p14.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8
+  - type: Gun
+    shotsPerBurst: 1
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_MC/Weapons/Guns/Gunshots/gun_p14.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    recoilWielded: 1
+    recoilUnwielded: 1
+    scatterWielded: -4
+    scatterUnwielded: 8
+    baseFireRate: 6.6
+    modifiers:
+      Burst:
+        fireDelay: 0.1665
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        fireDelay: 0
+        maxScatterModifier: 8
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/pistol_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/pistol_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazinePistolP14
+        startingItem: MCMagazinePistolP14
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.1
+    accuracyMultiplierUnwielded: 0.95
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentSuppressor
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS5RedDotSight
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentLaserSight
+          - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentBurstFireAssembly
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.685, 0.125
+      rmc-aslot-rail: -0.125, 0.215
+      rmc-aslot-underbarrel: 0.284, -0.19
+  - type: Tag
+    tags:
+    - Sidearm
+    - MCWeaponP14
+
+- type: entity
+  parent: CMBaseMagazinePistol
+  id: MCMagazinePistolP14
+  name: P-14 magazine (9mm)
+  components:
+  - type: Tag
+    tags:
+    - CMMagazinePistol
+    - MCMagazinePistolP14
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgePistolP14
+    proto: MCCartridgePistolP14
+    capacity: 21
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/p14.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: MCCartridgePistolP14
+  name: cartridge (9mm)
+  parent: CMCartridgePistolBase
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - MCCartridgePistolP14
+  - type: CartridgeAmmo
+    proto: MCBulletPistolP14
+
+- type: entity
+  parent: CMBulletBase
+  id: MCBulletPistolP14
+  name: bullet (9mm)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 22
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 6
+      falloff: 5
+  - type: CMArmorPiercing
+    amount: 5
+  - type: MCXenoSunderDamageOnHit
+    amount: 1
+  - type: RMCProjectileAccuracy
+    thresholds:
+    - range: 5
+
+- type: Tag
+  id: MCMagazinePistolP14
+
+- type: Tag
+  id: MCCartridgePistolP14
+
+- type: Tag
+  id: MCWeaponP14

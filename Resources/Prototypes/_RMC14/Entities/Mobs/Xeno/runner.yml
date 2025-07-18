@@ -42,6 +42,7 @@
         - HighImpassable
         - LowImpassable
         - BarbedBarricade
+        - BarricadeImpassable
         layer:
         - MobLayer
       fix2:
@@ -118,6 +119,8 @@
     minimumSpeedModifier: 0.1
   - type: FixedIdentity
     name: cm-job-name-xeno-runner
+  - type: RMCSurgeryXenoHeart
+    item: RMCOrganXenoHeartT1
 
 - type: entity
   parent: CMXenoRunnerBase

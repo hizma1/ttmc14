@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/53646c40415a2b0c70926011011d96fd41d6c1fe, modified by TornadoTechnology (GitHub)",,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "template"
+    },
+    {
+      "name": "template2"
+    },
+    {
+      "name": "template_on"
+    },
+    {
+      "name": "selected_frame"
+    },
+    {
+      "name": "active"
+    },
+    {
+      "name": "repeating"
+    },
+    {
+      "name": "borders_multi",
+      "directions": 8
+    },
+    {
+      "name": "borders_singles",
+      "directions": 4
+    },
+    {
+      "name": "borders_center"
+    },
+    {
+      "name": "selected_purple_frame"
+    },
+    {
+      "name": "xenohide"
+    },
+    {
+      "name": "resting"
+    },
+    {
+      "name": "bumpattack_off"
+    },
+    {
+      "name": "bumpattack_on"
+    },
+    {
+      "name": "emit_pheromones"
+    },
+    {
+      "name": "regurgitate"
+    },
+    {
+      "name": "headbite"
+    },
+    {
+      "name": "corrosive_acid"
+    },
+    {
+      "name": "recovery"
+    },
+    {
+      "name": "warding"
+    },
+    {
+      "name": "frenzy"
+    }
+  ]
+}

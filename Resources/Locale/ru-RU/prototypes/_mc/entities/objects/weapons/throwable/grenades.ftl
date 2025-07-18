@@ -1,0 +1,12 @@
+ent-MCGrenadeHedp = M40 HEDP grenade
+    .desc = A small, but deceptively strong high explosive grenade that has been phasing out the M15 fragmentation grenades. Capable of being loaded in the any grenade launcher, or thrown by hand.
+ent-MCGrenadeHsdp = M40 HSDP smoke grenade
+    .desc = The M40 HSDP is a small, but powerful smoke grenade. Based off the same platform as the M40 HEDP. It is set to detonate in 2 seconds.
+ent-MCGrenadeHefa = M40 HEFA grenade
+    .desc = High-Explosive Fragmenting-Antipersonnel. A small, but deceptively strong fragmentation grenade that has been phasing out the M15 fragmentation grenades alongside the M40 HEDP. Capable of being loaded in grenade launchers, or thrown by hand.
+ent-MCGrenadeHefaM15 = M15 fragmentation grenade
+    .desc = An outdated TGMC fragmentation grenade. With decades of service in the TGMC, the old M15 Fragmentation Grenade is slowly being replaced with the slightly safer M40 HEDP.
+ent-MCGrenadeHefaM25 = M25 fragmentation grenade
+    .desc = An outdated UNMC Fragmentation Grenade. With decades of service in the UNMC, the old M15 Fragmentation Grenade is slowly being replaced by the slightly safer M40-series grenades. It is set to detonate in 4 seconds.
+ent-MCGrenadeHidp = M40 HIDP incendiary grenade
+    .desc = The M40 HIDP is a small, but deceptively strong incendiary grenade. It is set to detonate in 4 seconds.

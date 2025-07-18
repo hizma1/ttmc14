@@ -22,9 +22,8 @@
   - type: Xeno
     role: MCXenoLarva
     actionIds:
-    - ActionXenoRest
-    - ActionXenoWatch
-    - ActionXenoHide
+    - MCActionXenoRest
+    - MCActionXenoHide
     hudOffset: -0.1,0.25
     tier: 0
     unlockAt: 0
@@ -55,7 +54,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.7
     baseSprintSpeed: 7.142
-  - type: RestrictEvolveOffWeeds
   - type: Speech
     speechSounds: XenonidLarva
     allowedEmotes: [ "XenoRoar" ]
@@ -80,9 +78,10 @@
   - type: FixedIdentity
     name: cm-job-name-xeno-larva
   - type: XenoEvolution
-    canEvolveWithoutGranter: true
-    requiresGranter: false
-    max: 60
+    actionId: MCActionXenoEvolve
+    max: 100
     evolvesTo:
     - MCXenoDrone
     - MCXenoDefender
+    - MCXenoRunner
+    - MCXenoSentinel

@@ -1,0 +1,35 @@
+- type: entity
+  parent: MCWeaponGrenadeLauncher
+  id: MCWeaponLauncherGl81
+  name: GL-81 grenade launcher
+  description: A lightweight, single-shot grenade launcher used by the TerraGov Marine Corps for area denial and big explosions.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Launchers/gl81.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Launchers/gl81.rsi
+    slots:
+    - belt
+    - back
+    - suitstorage
+  - type: RMCSelectiveFire
+    baseFireRate: 0.952
+  - type: BallisticAmmoProvider
+    capacity: 1
+  - type: AttachableHolder
+    slots:
+      mc-slot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentRailFlashlight
+  - type: AttachableHolderVisuals
+    offsets:
+      mc-slot-rail: 0,0.15625
+  - type: ShootAtFixedPoint
+    maxFixedRange: 10
+  - type: WieldDelay
+    baseDelay: 0.2

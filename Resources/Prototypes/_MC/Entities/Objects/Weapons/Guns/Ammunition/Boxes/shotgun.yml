@@ -1,0 +1,128 @@
+﻿- type: entity
+  parent: BaseStorageItem
+  id: MCBoxShotgun
+  name: box of shotgun shells
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+  - type: Storage
+    grid:
+    - 0,0,9,1 # 5 slots
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Boxes/modular_boxes.rsi
+    layers:
+    - state: smallshell_box
+      color: "#ff0000"
+    - state: smallshell_box_12g
+      color: "#00ff00"
+    - state: smallshell_ammo_full_12g_base
+      color: "#ffffff"
+    - state: smallshell_ammo_full_12g_color
+      color: "#0000ff"
+      map: [ "full" ]
+    - state: smallshell_empty
+      map: [ "empty" ]
+      color: "#ff0000"
+  - type: Appearance
+  - type: Tag
+    tags:
+    - MCBoxShotgunShells
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: CMStorageVisualizer
+    storageEmpty: empty
+  - type: RMCStorageEjectHand
+    state: Last
+
+- type: Tag
+  id: MCBoxShotgunShells
+
+- type: entity
+  parent: MCBoxShotgun
+  id: MCBoxShotgunBuckshot
+  name: box of buckshot shells
+  description: A box filled with buckshot spread shotgun shells. 12 Gauge.
+  components:
+  - type: Storage
+    whitelist:
+      tags:
+      - MCShellShotgunBuckshot
+  - type: StorageFill
+    contents:
+    - id: MCShellShotgunBuckshot
+      amount: 5
+  - type: Sprite
+    layers:
+    - state: smallshell_box
+      color: "#944444"
+    - state: shell_box_buckshot
+      color: "#e0d5c2"
+    - state: smallshell_ammo_full_12g_base
+      color: "#ffffff"
+    - state: smallshell_ammo_full_12g_color
+      color: "#944444"
+      map: [ "full" ]
+    - state: smallshell_empty
+      map: [ "empty" ]
+      color: "#944444"
+
+- type: entity
+  parent: MCBoxShotgun
+  id: MCBoxShotgunSlugs
+  name: box of slug shells
+  description: A box filled with heavy shotgun shells. A timeless classic. 12 Gauge.
+  components:
+  - type: Storage
+    whitelist:
+      tags:
+      - MCShellShotgunSlugs
+  - type: StorageFill
+    contents:
+    - id: MCShellShotgunSlugs
+      amount: 5
+  - type: Sprite
+    layers:
+    - state: smallshell_box
+      color: "#578e75"
+    - state: shell_box_slugs
+      color: "#e0d5c2"
+    - state: smallshell_ammo_full_12g_base
+      color: "#ffffff"
+    - state: smallshell_ammo_full_12g_color
+      color: "#578e75"
+      map: [ "full" ]
+    - state: smallshell_empty
+      map: [ "empty" ]
+      color: "#578e75"
+
+- type: entity
+  parent: MCBoxShotgun
+  id: MCBoxShotgunFlechette
+  name: box of flechette shells
+  description: A box filled with flechette shotgun shells. 12 Gauge.
+  components:
+  - type: Storage
+    whitelist:
+      tags:
+      - MCShellShotgunFlechette
+  - type: StorageFill
+    contents:
+    - id: MCShellShotgunFlechette
+      amount: 5
+  - type: Sprite
+    layers:
+    - state: smallshell_box
+      color: "#6551a0"
+    - state: shell_box_flechette
+      color: "#e0d5c2"
+    - state: smallshell_ammo_full_12g_base
+      color: "#ffffff"
+    - state: smallshell_ammo_full_12g_color
+      color: "#6551a0"
+      map: [ "full" ]
+    - state: smallshell_empty
+      map: [ "empty" ]
+      color: "#6551a0"

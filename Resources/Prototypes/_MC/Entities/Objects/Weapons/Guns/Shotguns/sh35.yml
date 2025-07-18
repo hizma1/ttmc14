@@ -26,19 +26,14 @@
     capacity: 8
     whitelist:
       tags:
-      - RMCShellShotgunBuckshot
-      - RMCShellShotgunSlugs
-      - RMCShellShotgunFlechette
-      - RMCShellShotgunIncendiaryBuckshot
-      - RMCShellShotgunIncendiary
-      - RMCShellShotgunBeanbag
+      - MCShellShotgun
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1
     accuracyMultiplierUnwielded: 1
   - type: PumpAction
   - type: AttachableHolder
     slots:
-       mc-slot-stock:
+      mc-slot-stock:
         locked: true
         startingAttachable: MCAttachmentStockSH35
         whitelist:
@@ -46,4 +41,4 @@
           - MCAttachmentStockSH35
   - type: AttachableHolderVisuals
     offsets:
-      mc-slot-stock: -0.65625, 0.03125
+      mc-slot-stock: -0.1875, 0.03125

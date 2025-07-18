@@ -1,0 +1,22 @@
+- type: entity
+  parent: BaseItem
+  id: MCFlag
+  name: flag
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "base" ]
+  - type: Item
+    size: Large
+  - type: Corrodible
+    isCorrodible: false
+  - type: Appearance
+  - type: PlantableFlag
+  - type: GenericVisualizer
+    visuals:
+      enum.PlantableFlagVisuals.Planted:
+        base:
+          True: { state: deploy }
+          False: { state: icon }

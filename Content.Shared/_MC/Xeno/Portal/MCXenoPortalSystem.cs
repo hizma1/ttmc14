@@ -1,7 +1,9 @@
 ﻿using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Hive;
+using Content.Shared.Item;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Systems;
+using Content.Shared.Projectiles;
 using Content.Shared.Teleportation.Components;
 using Robust.Shared.Physics.Events;
 
@@ -28,10 +30,10 @@ public sealed class MCXenoPortalSystem : EntitySystem
 
         var target = args.OtherEntity;
 
-        if (!HasComp<XenoComponent>(target))
+        if (!HasComp<XenoComponent>(target) && !HasComp<ItemComponent>(target) && !HasComp<ProjectileComponent>(target))
             return;
 
-        if (!_xenoHive.FromSameHive(entity.Owner, target))
+        if (HasComp<XenoComponent>(target) && !_xenoHive.FromSameHive(entity.Owner, target))
             return;
 
         if (TryComp<PullableComponent>(target, out var pullable) && pullable.BeingPulled)

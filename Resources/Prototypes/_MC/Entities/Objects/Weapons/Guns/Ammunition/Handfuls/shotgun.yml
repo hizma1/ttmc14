@@ -1,0 +1,274 @@
+# tags
+- type: Tag
+  id: MCHandful
+
+- type: Tag
+  id: MCShellShotgun
+
+# base
+- type: entity
+  parent: CMBulletBase
+  id: MCBulletShotgun
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/bullet_projectiles.rsi
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: Projectile
+
+# buckshot
+- type: entity
+  parent: CMShellShotgunBase
+  id: MCShellShotgunBuckshot
+  name: handful of buckshot shells
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    layers:
+    - state: buckshot_shell_1
+      map: [ "base" ]
+  - type: CartridgeAmmo
+    proto: MCBulletShotgunBuckshot
+  - type: Stack
+    count: 5
+    stackType: MCShellShotgunBuckshot
+    baseLayer: base
+    layerStates:
+    - buckshot_shell_1
+    - buckshot_shell_1
+    - buckshot_shell_2
+    - buckshot_shell_3
+    - buckshot_shell_4
+    - buckshot_shell_5
+  - type: Tag
+    tags:
+    - MCShellShotgunBuckshot
+    - MCShellShotgun
+    - MCHandful
+
+- type: entity
+  parent: MCShellShotgunBuckshot
+  id: MCShellShotgunBuckshot1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: MCShellShotgunBuckshot
+  name: handful of buckshot shells
+  icon:
+    sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    state: buckshot_shell_1
+  spawn: MCShellShotgunBuckshot
+  maxCount: 5
+
+- type: Tag
+  id: MCShellShotgunBuckshot
+
+# buckshot bullet
+- type: entity
+  parent: MCBulletShotgun
+  id: MCBulletShotgunBuckshot
+  name: buckshot
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
+    layers:
+    - state: buckshot
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 28
+  - type: CMArmorPiercing
+    amount: 0
+  - type: MCXenoSunderDamageOnHit
+    amount: 0
+  - type: ProjectileSpread
+    proto: MCBulletShotgunBuckshot
+    count: 6
+    spread: 15
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 4
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 0
+      falloff: 1
+  - type: RMCProjectileAccuracy
+    thresholds:
+    - range: 4
+      falloff: 10
+  - type: RMCStunOnHit
+
+# slugs
+- type: entity
+  parent: CMShellShotgunBase
+  id: MCShellShotgunSlugs
+  name: handful of shotgun slugs
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    layers:
+    - state: slug_shell_1
+      map: [ "base" ]
+  - type: CartridgeAmmo
+    proto: MCBulletShotgunSlug
+  - type: Stack
+    count: 5
+    stackType: MCShellShotgunSlugs
+    baseLayer: base
+    layerStates:
+    - slug_shell_1
+    - slug_shell_1
+    - slug_shell_2
+    - slug_shell_3
+    - slug_shell_4
+    - slug_shell_5
+  - type: Tag
+    tags:
+    - MCShellShotgunSlugs
+    - MCShellShotgun
+    - MCHandful
+
+- type: entity
+  parent: MCShellShotgunSlugs
+  id: MCShellShotgunSlugs1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: MCShellShotgunSlugs
+  name: handful of shotgun slugs
+  icon:
+    sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    state: slug_shell_1
+  spawn: MCShellShotgunSlugs
+  maxCount: 5
+
+- type: Tag
+  id: MCShellShotgunSlugs
+
+# slug bullet
+- type: entity
+  parent: MCBulletShotgun
+  id: MCBulletShotgunSlug
+  name: slug
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
+    layers:
+    - state: beanbag
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 100
+  - type: MCXenoSunderDamageOnHit
+    amount: 7.5
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 8
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 0
+      falloff: 1
+  - type: CMArmorPiercing
+    amount: 20
+  - type: RMCStunOnHit
+    maxRange: 6.5
+    stunTime: 1
+    superSlowTime: 2
+    slowTime: 6
+  - type: RMCProjectileAccuracy
+    accuracy: 100
+    thresholds:
+    - range: 8
+      falloff: 10
+
+# flechette
+- type: entity
+  parent: CMShellShotgunBase
+  id: MCShellShotgunFlechette
+  name: handful of flechette shells
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    layers:
+    - state: flechette_shell_1
+      map: [ "base" ]
+  - type: CartridgeAmmo
+    proto: MCBulletShotgunFlechette
+  - type: Stack
+    count: 5
+    stackType: MCShellShotgunFlechette
+    baseLayer: base
+    layerStates:
+    - flechette_shell_1
+    - flechette_shell_1
+    - flechette_shell_2
+    - flechette_shell_3
+    - flechette_shell_4
+    - flechette_shell_5
+  - type: Tag
+    tags:
+    - MCShellShotgunFlechette
+    - MCShellShotgun
+    - MCHandful
+
+- type: entity
+  parent: MCShellShotgunFlechette
+  id: MCShellShotgunFlechette1
+  suffix: 1
+  components:
+  - type: Stack
+    count: 1
+
+- type: stack
+  id: MCShellShotgunFlechette
+  name: handful of flechette shells
+  icon:
+    sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    state: flechette_shell_1
+  spawn: MCShellShotgunFlechette
+  maxCount: 5
+
+- type: Tag
+  id: MCShellShotgunFlechette
+
+# flechette bullet
+- type: entity
+  parent: MCBulletShotgun
+  id: MCBulletShotgunFlechette
+  name: flechette shell
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
+    layers:
+    - state: flechette
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 50
+  - type: CMArmorPiercing
+    amount: 15
+  - type: MCXenoSunderDamageOnHit
+    amount: 7
+  - type: ProjectileSpread
+    proto: MCBulletShotgunFlechette
+    count: 3
+    spread: 6
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 12
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 0
+      falloff: 1

@@ -43,6 +43,19 @@
       entries:
       - id: MCBackpackMarineStandard
       - id: MCSatchelMarineStandard
+    - name: Belt
+      choices:
+        MCBelt: 1
+      entries:
+      # Utility belt
+      - id: MCClothingBeltMarine
+        recommended: true
+      - id: MCClothingBeltShotgun
+        recommended: true
+      # Knives belt
+      # Pistol belt
+      # Revolver belt
+      # Belt harness
     - name: Pouches
       choices:
         MCPouch: 2

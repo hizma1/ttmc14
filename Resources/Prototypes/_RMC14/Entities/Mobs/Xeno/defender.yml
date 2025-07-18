@@ -69,6 +69,12 @@
     tailDamage:
       groups:
         Brute: 36
+    soundHit:
+        collection: Punch
+        params:
+          variation: 0.15
+    hitAnimationId: RMCEffectSlam
+
   - type: Tackle
     max: 4
   - type: Fixtures
@@ -81,6 +87,7 @@
         mask:
         - MobMask
         - BarbedBarricade
+        - BarricadeImpassable
         layer:
         - MobLayer
       fix2:
@@ -100,6 +107,8 @@
     value: 0.1
   - type: FixedIdentity
     name: cm-job-name-xeno-defender
+  - type: RMCSurgeryXenoHeart
+    item: RMCOrganXenoHeartT1
 
 - type: entity
   parent: CMXenoDefenderBase
@@ -172,4 +181,3 @@
         Blunt: 37.5
   - type: XenoSoak
   - type: XenoHidden
-

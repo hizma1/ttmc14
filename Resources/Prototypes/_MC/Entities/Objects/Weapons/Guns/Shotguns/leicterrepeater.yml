@@ -21,10 +21,10 @@
       path: /Audio/_MC/Weapons/Guns/Gunshots/gun_repeater.ogg
   - type: ShootUseDelay
   - type: RMCSelectiveFire
-    recoilWielded: 0
-    recoilUnwielded: 2
-    scatterWielded: -5
-    scatterUnwielded: 7
+    recoilWielded: 3
+    recoilUnwielded: 5
+    scatterWielded: 6
+    scatterUnwielded: 20
     baseFireRate: 1
     burstScatterMult: 5
   - type: BallisticAmmoProvider
@@ -71,6 +71,8 @@
         Piercing: 70
   - type: CMArmorPiercing
     amount: 20
+  - type: MCXenoSunderDamageOnHit
+    amount: 1.25
   - type: GunStacksProjectile
   - type: RMCProjectileDamageFalloff
     thresholds:
@@ -140,10 +142,9 @@
     - GOV8
   - type: Tag
     tags:
-    - RMCHandful
+    - MCHandful
     - Cartridge
     - MCCartridgeGovernmentRounds
-    - MCMagazineHandful
 
 - type: stack
   id: MCCartridgeGovernmentRounds
