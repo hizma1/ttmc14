@@ -54,7 +54,7 @@
     - name: Pouches
       choices:
         MCPouch: 2
-      entries: []
+      entries:
       # Advanced Autoinjector pouch
       # Medkit pouch
       - id: MCPouchConstructionFill
