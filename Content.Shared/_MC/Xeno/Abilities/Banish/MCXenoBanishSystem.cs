@@ -2,6 +2,7 @@
 using Content.Shared._RMC14.Actions;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Examine;
+using Content.Shared.StatusEffectNew;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
@@ -17,6 +18,7 @@ public sealed class MCXenoBanishSystem : EntitySystem
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SleepingSystem _sleeping = default!;
+    [Dependency] private readonly SharedStatusEffectsSystem _statusEffects = default!;
 
     public override void Initialize()
     {
@@ -74,7 +76,7 @@ public sealed class MCXenoBanishSystem : EntitySystem
         banished.EndTime = _timing.CurTime + entity.Comp.Duration;
         Dirty(args.Target, banished);
 
-        EnsureComp<ForcedSleepingComponent>(args.Target);
+        _statusEffects.TryAddStatusEffectDuration(args.Target, "StatusEffectForcedSleeping", TimeSpan.FromHours(1));
 
         _transform.SetMapCoordinates(args.Target, new MapCoordinates(_transform.GetWorldPosition(args.Target), GetMap()));
     }
@@ -105,7 +107,8 @@ public sealed class MCXenoBanishSystem : EntitySystem
 
         _transform.SetMapCoordinates(entity, entity.Comp.Position);
 
-        RemComp<ForcedSleepingComponent>(entity);
+        _statusEffects.TryRemoveStatusEffect(entity, "StatusEffectForcedSleeping");
+
         _sleeping.TryWaking(entity.Owner, true);
     }
 

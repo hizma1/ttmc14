@@ -38,15 +38,12 @@ public sealed class MCXenoPortalPlacerSystem : EntitySystem
         if (args.Id != entity.Comp.PortalFirst.Id && args.Id != entity.Comp.PortalSecond.Id)
             return;
 
-        foreach (var (actionId, action) in _actions.GetActions(entity))
+        foreach (var action in _rmcActions.GetActionsWithEvent<MCXenoPortalPlacerActionEvent>(entity))
         {
-            if (action.BaseEvent is not MCXenoPortalPlacerActionEvent)
-                continue;
-
-            if (!_rmcActions.TryUseAction(entity, actionId, entity))
+            if (!_rmcActions.TryUseAction(entity, action, entity))
                 return;
 
-            _actions.StartUseDelay(actionId);
+            _actions.StartUseDelay((action, action));
         }
 
         var coordinates = Transform(entity).Coordinates;

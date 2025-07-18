@@ -1,4 +1,5 @@
 ﻿using Content.Shared._MC.Xeno.Spit;
+using Content.Shared._RMC14.Actions;
 using Content.Shared.Actions;
 
 namespace Content.Shared._MC.Xeno.Abilities.SpitToggle;
@@ -7,6 +8,7 @@ public sealed class MCXenoSpitToggleSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly MCSharedXenoSpitSystem _xenoSpit = default!;
+    [Dependency] private readonly RMCActionsSystem _rmcActions = default!;
 
     public override void Initialize()
     {
@@ -24,12 +26,9 @@ public sealed class MCXenoSpitToggleSystem : EntitySystem
 
         // Disable all other "Xeno Spit" toggle actions for this entity
         // This affects only visuals and action state, not actual logic
-        foreach (var (actionId, actionComponent) in _actions.GetActions(entity))
+        foreach (var action in _rmcActions.GetActionsWithEvent<MCXenoSpitToggleActionEvent>(entity))
         {
-            if (actionComponent.BaseEvent is not MCXenoSpitToggleActionEvent)
-                continue;
-
-            _actions.SetToggled(actionId, false);
+            _actions.SetToggled((action, action), false);
         }
 
         if (!xenoSpitComponent.Enabled ||
@@ -48,7 +47,7 @@ public sealed class MCXenoSpitToggleSystem : EntitySystem
             entity.Comp.ActionId = args.Action;
             Dirty(entity);
 
-            _actions.SetToggled(args.Action, true);
+            _actions.SetToggled((args.Action, args.Action), true);
             return;
         }
 
@@ -58,6 +57,6 @@ public sealed class MCXenoSpitToggleSystem : EntitySystem
         Dirty(entity);
 
         _xenoSpit.ResetPreset(entity.Owner);
-        _actions.SetToggled(args.Action, false);
+        _actions.SetToggled((args.Action, args.Action), false);
     }
 }

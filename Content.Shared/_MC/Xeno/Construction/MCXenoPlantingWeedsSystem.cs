@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using Content.Shared._RMC14.Actions;
 using Content.Shared._RMC14.Xenonids.Hive;
 using Content.Shared._RMC14.Xenonids.Plasma;
 using Content.Shared._RMC14.Xenonids.Weeds;
@@ -31,6 +32,7 @@ public sealed class MCXenoPlantingWeedsSystem : EntitySystem
     [Dependency] private readonly SharedXenoWeedsSystem _xenoWeeds = default!;
     [Dependency] private readonly SharedXenoHiveSystem _xenoHive = default!;
     [Dependency] private readonly XenoPlasmaSystem _xenoPlasma = default!;
+    [Dependency] private readonly RMCActionsSystem _rmcActions = default!;
 
     public override void Initialize()
     {
@@ -82,12 +84,9 @@ public sealed class MCXenoPlantingWeedsSystem : EntitySystem
             if (_xenoWeeds.IsOnWeeds((gridUid, gridComp), coordinates))
                 continue;
 
-            foreach (var (_, actionComponent) in _actions.GetActions(entityUid))
+            foreach (var action in  _rmcActions.GetActionsWithEvent<MCXenoPlaceWeedsActionEvent>(entityUid))
             {
-                if (actionComponent.BaseEvent is not MCXenoPlaceWeedsActionEvent)
-                    continue;
-
-                if (_actions.IsCooldownActive(actionComponent))
+                if (_actions.IsCooldownActive(action))
                     continue;
 
                 TryPlace((entityUid, comp));
@@ -170,11 +169,7 @@ public sealed class MCXenoPlantingWeedsSystem : EntitySystem
 
     private void OnActionWeedsChosen(Entity<MCXenoChooseWeedsActionComponent> entity, ref MCXenoWeedsChosenEvent args)
     {
-        if (!_actions.TryGetActionData(entity, out var action))
-            return;
-
-        action.Icon = args.Data.Sprite;
-        Dirty(entity, action);
+        _actions.SetIcon(entity.Owner, args.Data.Sprite);
     }
 
     private void Select(Entity<MCXenoPlantingWeedsComponent> entity, EntProtoId id)
