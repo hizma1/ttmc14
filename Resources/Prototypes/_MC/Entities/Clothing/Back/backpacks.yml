@@ -1,5 +1,5 @@
 - type: entity
-  parent: CMBackpack
+  parent: MCBackpack
   id: MCBackpackMarineStandard
   name: lightweight IMP backpack
   description: The standard-issue pack of the TGMC forces. Designed to slug gear into the battlefield.
@@ -8,7 +8,7 @@
     sprite: _MC/Clothing/Back/Backpacks/Marines/standard.rsi
 
 - type: entity
-  parent: CMBackpack
+  parent: MCBackpack
   id: MCBackpackMarineTechnician
   name: technician backpack
   description: The standard-issue backpack worn by TGMC technicians. Specially equipped to hold sentry gun and HSG-102 emplacement parts.

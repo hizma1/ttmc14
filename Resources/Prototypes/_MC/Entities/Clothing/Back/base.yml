@@ -1,0 +1,93 @@
+- type: entity
+  parent: BaseItem
+  id: MCMPersonalStorage
+  name: backpack
+  description: You wear this on your back and put items into it.
+  abstract: true
+  components:
+  - type: GroupExamine
+  - type: Armor
+    modifiers: {}
+  - type: FlavorProfile
+    flavors:
+    - fiber
+  - type: UseDelay
+    delay: 0
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Backpack
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Back/Backpacks/Civilians/standard.rsi
+    layers:
+    - state: icon
+  - type: Appearance
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: Item
+    size: Large
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,20,1
+    blacklist: {}
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ExplosionResistance
+    examine: explosion-resistance-contents-coefficient-value
+    damageCoefficient: 0
+    worn: false
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: StorageStoreSkillRequired
+    entries:
+    - whitelist:
+        tags:
+        - RMCEngineerKit
+      skills:
+        all:
+          RMCSkillEngineer: 2
+    - whitelist:
+        tags:
+        - CMFirstAidKit
+      skills:
+        all:
+          RMCSkillMedical: 2
+  - type: RMCStorageEjectHand
+  - type: StoreAfterFailedInteract
+
+- type: entity
+  parent: MCMPersonalStorage
+  id: MCBackpack
+  name: backpack
+  description: You wear this on your back and put items into it.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Back/Backpacks/Marines/standard.rsi
+  - type: StorageOpenDoAfter
+    skipInHand: true
+    skipOnGround: true
+  - type: StorageCloseOnMove
+    skipInHand: true
+
+- type: entity
+  parent: MCMPersonalStorage
+  id: MCSatchel
+  name: leather satchel
+  description: A very fancy satchel made of fine leather. Looks pretty pricey.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Back/Satchels/Marines/standard.rsi
+  - type: Storage
+    grid:
+    - 0,0,14,1

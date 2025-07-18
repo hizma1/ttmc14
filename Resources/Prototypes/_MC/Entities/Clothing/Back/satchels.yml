@@ -1,5 +1,5 @@
 - type: entity
-  parent: CMSatchel
+  parent: MCSatchel
   id: MCSatchelMarineStandard
   name: satchel
   description: A heavy-duty satchel carried by some TGMC soldiers and support personnel.
@@ -8,7 +8,7 @@
     sprite: _MC/Clothing/Back/Satchels/Marines/standard.rsi
 
 - type: entity
-  parent: CMSatchel
+  parent: MCSatchel
   id: MCSatchelMarineStandardGreen
   name: satchel
   description: A heavy-duty satchel carried by some TGMC soldiers and support personnel.
@@ -17,7 +17,7 @@
     sprite: _MC/Clothing/Back/Satchels/Marines/standard_green.rsi
 
 - type: entity
-  parent: CMSatchel
+  parent: MCSatchel
   id: MCSatchelMarineTechnician
   name: technician satchel
   description: A heavy-duty satchel carried by some TGMC technicians. Can hold the ST-580 point defense sentry and ammo.
