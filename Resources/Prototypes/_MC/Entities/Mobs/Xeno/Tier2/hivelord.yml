@@ -52,6 +52,7 @@
     - MCActionXenoPlantWeeds
     - MCActionXenoCreateResinJellyHivelord
     - MCActionXenoToggleXenoSpitStickyResin
+    - MCActionXenoRecycle
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:
@@ -60,6 +61,7 @@
   - type: XenoDevolve
     devolvesTo:
     - MCXenoDrone
+  - type: MCXenoRecycle
   - type: MCArmor
     melee: 35
     bullet: 35
