@@ -41,18 +41,22 @@
       choices:
         MCBackpack: 1
       entries:
-      - id: MCBackpackMarineStandard
       - id: MCSatchelMarineStandard
+        recommended: true
+      # Corspman Backpack
+    - name: Belt
+      choices:
+        MCBelt: 1
+      entries: []
+      # Lifesaver belt
+      # Rig belt
+      # Hypospray belt
     - name: Pouches
       choices:
         MCPouch: 2
-      entries:
-      - id: MCPouchShotgunShell
-      - id: MCPouchMagazineLarge
-      - id: MCPouchToolsFill
-        name: Tool pouch (tools included)
-      - id: MCPouchGrenadeFill
-        name: Grenade pouch (grenades included)
+      entries: []
+      # Advanced Autoinjector pouch
+      # Medkit pouch
       - id: MCPouchConstructionFill
         name: Construction pouch (materials included)
-      - id: MCPouchPistolMagazineLarge
+        recommended: true

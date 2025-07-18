@@ -41,8 +41,20 @@
       choices:
         MCBackpack: 1
       entries:
-      - id: MCBackpackMarineStandard
       - id: MCSatchelMarineStandard
+        recommended: true
+      # Technician Backpack
+      # Machete scabbard
+      # Welderpack
+      # Radio Pack
+      # Dispenser
+      # Mortar bag
+      # Flamethrower bag
+    - name: Belt
+      choices:
+        MCBelt: 1
+      entries:
+      - id: MCClothingBeltToolsFill
     - name: Pouches
       choices:
         MCPouch: 2

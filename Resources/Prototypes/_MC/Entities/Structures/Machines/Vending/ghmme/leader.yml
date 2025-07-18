@@ -43,12 +43,28 @@
       entries:
       - id: MCBackpackMarineStandard
       - id: MCSatchelMarineStandard
+    - name: Belt
+      choices:
+        MCBelt: 1
+      entries:
+      - id: MCClothingBeltMarine
+        recommended: true
+      - id: MCClothingBeltShotgun
+        recommended: true
+      # Knives belt
+      # Pistol belt
+      # G8 general utility pouch
+      # Belt harness
     - name: Pouches
       choices:
         MCPouch: 2
       entries:
       - id: MCPouchShotgunShell
+      # General pouch
       - id: MCPouchMagazineLarge
+      # Flare pouch
+      # Combat injector pouch
+      # First aid pouch
       - id: MCPouchToolsFill
         name: Tool pouch (tools included)
       - id: MCPouchGrenadeFill
@@ -56,3 +72,5 @@
       - id: MCPouchConstructionFill
         name: Construction pouch (materials included)
       - id: MCPouchPistolMagazineLarge
+      # Sidearm pouch
+      - id: MCPouchExplosive
