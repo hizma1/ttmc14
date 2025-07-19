@@ -1,7 +1,7 @@
 - type: department
   parent: MCDepartment
   id: MCCommand
-  name: department-Command
+  name: department-MCCommand
   description: mc-department-Command-description
   color: "#334E6D"
   roles:
