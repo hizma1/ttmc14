@@ -4,6 +4,7 @@
   components:
   - type: Sprite
     sprite: _MC/Clothing/radio.rsi
+    state: marine_generic
   - type: GrantSquadLeaderTracker
     defaultMode: SquadLeader
     trackerModes:
