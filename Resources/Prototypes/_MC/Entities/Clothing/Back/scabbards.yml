@@ -80,7 +80,7 @@
           - MCMachete
   - type: ItemMapper
     mapLayers:
-      cabbard_full:
+      scabbard_full:
         whitelist:
           tags:
           - MCMachete
