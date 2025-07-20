@@ -1,0 +1,34 @@
+- type: entity
+  parent: [ RMCBaseMeleeWeapon, BaseSword ]
+  id: MCClaymore
+  name: Claymore
+  description: What are you standing around staring at this for? Get to killing!
+  components:
+  - type: Clothing
+    slots:
+    - belt #нужно будет добавить спрайт на спину, как-то блять я ебу чтоль как?
+  - type: Tag
+    tags:
+    - MCSwords
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Melee/swords.rsi
+    state: claymore
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1
+    damage:
+      types:
+        Slash: 40
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 10
+  - type: Item
+    size: Large
+    sprite: _MC/Objects/Weapons/Melee/swords.rsi
+    state: claymore
+  - type: DisarmMalus
+    malus: 0.225
+  - type: DeleteOnExplosion
