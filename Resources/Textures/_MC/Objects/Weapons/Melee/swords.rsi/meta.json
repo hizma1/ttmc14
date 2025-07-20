@@ -1,15 +1,12 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/f2a69850c86b96920277a8064050ecd88158ebeb, modified by F8ctor (GitHub)",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/f2a69850c86b96920277a8064050ecd88158ebeb",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
-    {
-      "name": "claymore"
-    },
     {
       "name": "mercsword"
     },
