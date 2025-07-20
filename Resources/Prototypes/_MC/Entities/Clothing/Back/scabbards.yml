@@ -1,6 +1,7 @@
 - type: entity
   parent: RMCScabbardBase
   id: MCScabbardKatana
+  suffix: MC
   name: katana scabbard
   description: A large, vibrantly colored katana scabbard used to carry a japanese sword. It can be strapped to the back, waist or armor. Because of the sturdy wood casing of the scabbard, it makes an okay defensive weapon in a pinch.
   components:
@@ -34,12 +35,12 @@
   - type: Tag
     tags:
     - Scabbard
-    - RMCScabbardKatana
+    - MCScabbardKatana
 
 - type: entity
   parent: MCScabbardKatana
   id: MCScabbardKatanaFilled
-  suffix: Filled
+  suffix: Filled, MC
   components:
   - type: ContainerFill
     containers:
