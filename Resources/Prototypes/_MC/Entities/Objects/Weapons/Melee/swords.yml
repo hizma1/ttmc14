@@ -49,7 +49,7 @@
     sprite: _RMC14/Objects/Weapons/Melee/katana.rsi
     state: icon
   - type: Item
-    size: Large
+    size: Normal
     sprite: _RMC14/Objects/Weapons/Melee/katana.rsi
   - type: MeleeWeapon
     damage:
