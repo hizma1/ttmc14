@@ -28,7 +28,7 @@
       types:
         Slash: 10
   - type: Item
-    size: Large
+    size: Huge
     sprite: _MC/Objects/Weapons/Melee/claymore.rsi
   - type: DisarmMalus
     malus: 0.225
@@ -49,12 +49,38 @@
     sprite: _RMC14/Objects/Weapons/Melee/katana.rsi
     state: icon
   - type: Item
-    size: Large
+    size: Medium #also Large
     sprite: _RMC14/Objects/Weapons/Melee/katana.rsi
   - type: MeleeWeapon
     damage:
       types:
         Slash: 50
+  - type: UsableWhileDevoured
+    damage:
+      types:
+        Slash: 10
+
+- type: entity
+  parent: MССlaymore
+  id: MCMachete
+  name: M2132 machete
+  description: Latest issue of the TGMC Machete. Great for clearing out jungle or brush on outlying colonies. Found commonly in the hands of scouts and trackers, but difficult to carry with the usual kit.
+  components:
+  - type: Tag
+    tags:
+    - MCMachete
+    - Knife
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Melee/machete.rsi
+    state: icon
+  - type: Item
+    size: Large
+    sprite: _MC/Objects/Weapons/Melee/machete.rsi
+  - type: MeleeWeapon
+    attackRate: 0.85
+    damage:
+      types:
+        Slash: 75
   - type: UsableWhileDevoured
     damage:
       types:

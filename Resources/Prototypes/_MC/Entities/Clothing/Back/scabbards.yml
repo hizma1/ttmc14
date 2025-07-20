@@ -49,3 +49,55 @@
 
 - type: Tag
   id: MCScabbardKatana
+
+- type: entity
+  parent: RMCScabbardBase
+  id: MCScabbardMachete
+  suffix: MC
+  name: H5 pattern M2132 machete scabbard
+  description: A large leather scabbard used to carry a M2132 machete. It can be strapped to the back, waist or armor.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Back/Scabbards/machete_scabbard.rsi
+    state: scabbard
+  - type: Clothing
+    sprite: _MC/Clothing/Back/Scabbards/machete_scabbard.rsi
+    quickEquip: false
+    slots:
+    - back
+    - belt
+    - suitstorage
+  - type: ItemSlots
+    slots:
+      item:
+        name: M2132 machete
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/_RMC14/Weapons/Guns/gun_rifle_draw.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Guns/gun_rifle_draw.ogg
+        whitelist:
+          tags:
+          - MCMachete
+  - type: ItemMapper
+    mapLayers:
+      cabbard_full:
+        whitelist:
+          tags:
+          - MCMachete
+  - type: Tag
+    tags:
+    - Scabbard
+    - MCScabbardMachete
+
+- type: entity
+  parent: MCScabbardMachete
+  id: MCScabbardMacheteFilled
+  suffix: Filled, MC
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - MCMachete
+
+- type: Tag
+  id: MCScabbardMachete
