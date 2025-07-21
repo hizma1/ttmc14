@@ -10,7 +10,7 @@
     - suitstorage
   - type: Tag
     tags:
-    - MCSwords
+    - MCSword
     - Knife
   - type: Sprite
     sprite: _MC/Objects/Weapons/Melee/claymore.rsi
@@ -28,11 +28,76 @@
       types:
         Slash: 10
   - type: Item
-    size: Huge
+    size: Normal
     sprite: _MC/Objects/Weapons/Melee/claymore.rsi
-  - type: DisarmMalus
-    malus: 0.225
   - type: DeleteOnExplosion
+
+- type: entity
+  parent: MССlaymore
+  id: MCMercsword
+  name: combat sword
+  description: A dusty sword commonly seen in historical museums. Where you got this is a mystery, for sure. Only a mercenary would be nuts enough to carry one of these. Sharpened to deal massive damage.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Melee/mercsword.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: _MC/Objects/Weapons/Melee/mercsword.rsi
+  - type: MeleeWeapon
+    attackRate: 0.9
+    damage:
+      types:
+        Slash: 39
+
+- type: entity
+  parent: MССlaymore
+  id: MCCeremonialSword
+  name: Ceremonial Sword
+  description: A fancy ceremonial sword passed down from generation to generation. Despite this, it has been very well cared for, and is in top condition.
+  components:
+  - type: MeleeWeapon
+    attackRate: 0.9
+    damage:
+      types:
+        Slash: 55
+
+- type: entity
+  parent: MССlaymore
+  id: MCOfficersSword
+  name: officers sword
+  description: This appears to be a rather old blade that has been well taken care of, it is probably a family heirloom. Oddly despite its probable non-combat purpose it is sharpened and not blunt.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Melee/officer_sword.rsi
+    state: icon
+  - type: Item
+    size: Large
+    sprite: _MC/Objects/Weapons/Melee/officer_sword.rsi
+  - type: MeleeWeapon
+    attackRate: 0.9
+    damage:
+      types:
+        Slash: 75
+        Piercing: 15
+
+- type: entity
+  parent: MССlaymore
+  id: MCComSword
+  name: commissars sword
+  description: The pride of an imperial commissar, held high as they charge into battle.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Melee/comsword.rsi
+    state: icon
+  - type: Item
+    size: Large
+    sprite: _MC/Objects/Weapons/Melee/comsword.rsi
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Slash: 80
 
 - type: entity
   parent: MССlaymore
@@ -52,10 +117,69 @@
     size: Normal
     sprite: _RMC14/Objects/Weapons/Melee/katana.rsi
   - type: MeleeWeapon
+    attackRate: 0.9
     damage:
       types:
         Slash: 50
-  - type: UsableWhileDevoured
+
+- type: entity
+  parent: MCKatana
+  id: MCKatanaReplica
+  name: replica katana
+  suffix: MC
+  description: A cheap knock-off commonly found in regular knife stores. Can still do some damage.
+  components:
+  - type: MeleeWeapon
+    attackRate: 0.9
+    damage:
+      types:
+        Slash: 27
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 7
+
+- type: entity
+  parent: MCKatanaReplica
+  id: MCKatanaReplicaToy
+  name: replica katana
+  suffix: MC, Toy
+  description: Woefully underpowered in D20.
+  components:
+  - type: MeleeWeapon
+    attackRate: 0.9
+    damage:
+      types:
+        Blunt: 5 #Slash from a toy?
+    soundHit:
+      path: /Audio/Weapons/boxingpunch1.ogg
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5 #Slash from a toy?
+
+- type: entity
+  parent: MССlaymore
+  id: MCKatanaSamurai
+  name: tachi
+  description: A genuine replica of an ancient blade. This one is in remarkably good condition. It could do some damage to everyone, including yourself.
+  components:
+  - type: Tag
+    tags:
+    - MCKatana
+    - Knife
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Melee/samurai.rsi
+    state: icon
+  - type: Item
+    size: Large
+    sprite: _MC/Objects/Weapons/Melee/samurai.rsi
+  - type: MeleeWeapon
+    attackRate: 0.8
+    damage:
+      types:
+        Slash: 60
+  - type: DamageOtherOnHit
     damage:
       types:
         Slash: 10
@@ -82,16 +206,12 @@
     damage:
       types:
         Slash: 75
-  - type: UsableWhileDevoured
-    damage:
-      types:
-        Slash: 10
 
 - type: entity
   parent: MCMachete
   id: MCMacheteAlt
-  name: Machete
-  suffix: MC
+  name: machete
+  suffix: MC, Alt
   description: A nice looking machete. Great for clearing out jungle or brush on outlying colonies. Found commonly in the hands of scouts and trackers, but difficult to carry with the usual kit.
   components:
   - type: Tag
