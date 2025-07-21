@@ -89,6 +89,9 @@
     - Scabbard
     - MCScabbardMachete
 
+- type: Tag
+  id: MCScabbardMachete
+
 - type: entity
   parent: MCScabbardMachete
   id: MCScabbardMacheteFilled
@@ -99,5 +102,12 @@
       item:
       - MCMachete
 
-- type: Tag
-  id: MCScabbardMachete
+- type: entity
+  parent: MCScabbardMachete
+  id: MCScabbardMacheteAltFilled
+  suffix: Filled, MC, Alt
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - MCMacheteAlt

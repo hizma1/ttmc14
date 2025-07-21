@@ -64,6 +64,7 @@
   parent: MССlaymore
   id: MCMachete
   name: M2132 machete
+  suffix: MC
   description: Latest issue of the TGMC Machete. Great for clearing out jungle or brush on outlying colonies. Found commonly in the hands of scouts and trackers, but difficult to carry with the usual kit.
   components:
   - type: Tag
@@ -77,7 +78,7 @@
     size: Large
     sprite: _MC/Objects/Weapons/Melee/machete.rsi
   - type: MeleeWeapon
-    attackRate: 0.85
+    attackRate: 0.8
     damage:
       types:
         Slash: 75
@@ -85,3 +86,21 @@
     damage:
       types:
         Slash: 10
+
+- type: entity
+  parent: MCMachete
+  id: MCMacheteAlt
+  name: Machete
+  suffix: MC
+  description: A nice looking machete. Great for clearing out jungle or brush on outlying colonies. Found commonly in the hands of scouts and trackers, but difficult to carry with the usual kit.
+  components:
+  - type: Tag
+    tags:
+    - MCMachete
+    - Knife
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Melee/machete.rsi
+    state: machete_alt
+  - type: Item
+    size: Large
+    sprite: _MC/Objects/Weapons/Melee/machete.rsi
