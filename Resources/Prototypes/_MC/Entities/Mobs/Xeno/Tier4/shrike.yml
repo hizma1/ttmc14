@@ -44,6 +44,7 @@
     - ActionXenoTransferPlasma
     - MCActionXenoAcidicSalve
     - MCActionXenoPsychicFling
+    - MCActionXenoUnrelentingForce
     hudOffset: -0.1,0.1
   - type: XenoEvolutionCapped
     id: MCXenoShrike
@@ -79,4 +80,5 @@
     prefix: shrike
   - type: MCXenoAcidicSalve
   - type: MCXenoLayEgg
-  - type: MCXenoPsychicFling  
+  - type: MCXenoPsychicFling
+  - type: MCXenoUnrelentingForce
