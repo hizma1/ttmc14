@@ -46,6 +46,11 @@
     - MCActionXenoPsychicFling
     - MCActionXenoUnrelentingForce
     hudOffset: -0.1,0.1
+  - type: XenoEvolution
+    canEvolveWithoutGranter: true
+    actionId: MCActionXenoEvolve
+    evolvesToWithoutPoints:
+    - MCXenoQueen
   - type: XenoEvolutionCapped
     id: MCXenoShrike
     max: 1

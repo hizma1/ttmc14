@@ -8,6 +8,9 @@ server_ban_erase_player = true
 new_player_threshold = 600
 alert.explosion_min_intensity = -1
 
+[host]
+name = "TTMC"
+
 [adminlogs]
 server_name = "TTMC"
 

@@ -47,6 +47,9 @@
     - MCActionXenoToggleChargingQueen
     - MCActionXenoToggleXenoSpitStickyResin
     hudOffset: -0.1,0.1
+  - type: XenoEvolutionCapped
+    id: MCXenoQueen
+    max: 1
   - type: MCArmor
     melee: 65
     bullet: 65

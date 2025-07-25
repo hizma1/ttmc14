@@ -132,12 +132,14 @@
     - MCActionXenoAcidicSalve
     - MCActionXenoRecycle
   - type: XenoEvolution
+    canEvolveWithoutGranter: true
     actionId: MCActionXenoEvolve
     max: 225
     evolvesTo:
     - MCXenoHivelord
     - MCXenoCarrier
     - MCXenoShrike
+    - MCXenoQueen
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000
