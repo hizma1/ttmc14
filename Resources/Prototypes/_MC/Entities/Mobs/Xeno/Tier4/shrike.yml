@@ -45,6 +45,7 @@
     - MCActionXenoAcidicSalve
     - MCActionXenoPsychicFling
     - MCActionXenoUnrelentingForce
+    - MCActionXenoBlessings
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     canEvolveWithoutGranter: true

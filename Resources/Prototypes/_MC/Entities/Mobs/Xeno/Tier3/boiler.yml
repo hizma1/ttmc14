@@ -32,10 +32,9 @@
     tier: 3
     role: MCXenoBoiler
     actionIds:
-    # RMC
     - MCActionXenoRest
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoSprayAcidBoiler
     hudOffset: -0.15,0.25
   - type: XenoDevolve

@@ -33,10 +33,9 @@
     tier: 2
     role: MCXenoBull
     actionIds:
-    # RMC
     - MCActionXenoRest
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoToggleChargingBull
     hudOffset: -0.15,0.25
   - type: XenoEvolution

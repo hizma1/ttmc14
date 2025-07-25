@@ -30,6 +30,21 @@
 
 - type: entity
   parent: ActionXenoBase
+  id: MCActionXenoBlessings
+  name: Queen Mother's Blessings
+  description: Opens the Queen Mothers Blessings menu, where hive buildings and upgrades are bought.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/general.rsi
+      state: xenohide
+    useDelay: 0.5
+  - type: InstantAction
+    event: !type:XenoHideActionEvent
+
+- type: entity
+  parent: ActionXenoBase
   id: MCActionXenoPsydrain
   name: Psy drain (50)
   description: Drain the victim of its life force to gain larva and psych points.

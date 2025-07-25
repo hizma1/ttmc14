@@ -33,11 +33,10 @@
     tier: 3
     role: MCXenoPraetorian
     actionIds:
-    # RMC
     - MCActionXenoRest
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoPheromones
-    - ActionXenoDevolve
-    # MC
     - MCActionXenoToggleXenoSpitPraetorian
     hudOffset: -0.15,0.25
   - type: XenoDevolve

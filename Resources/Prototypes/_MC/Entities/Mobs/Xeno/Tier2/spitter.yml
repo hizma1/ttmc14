@@ -33,10 +33,9 @@
     tier: 2
     role: MCXenoSpitter
     actionIds:
-    # RMC
     - MCActionXenoRest
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoSprayAcid
     - MCActionXenoToggleXenoSpit
     hudOffset: -0.1,0.1

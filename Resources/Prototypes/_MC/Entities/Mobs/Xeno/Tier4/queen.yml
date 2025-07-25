@@ -37,15 +37,16 @@
     tier: 4
     role: MCXenoQueen
     actionIds:
-    # RMC
     - MCActionXenoRest
+    - MCActionXenoPsydrain
     - MCActionXenoPheromones
-    # MC
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoLayEgg
-    - MCActionXenoToggleChargingQueen
     - MCActionXenoToggleXenoSpitStickyResin
+    - MCActionXenoBlessings
+    # Primo
+    # - MCActionXenoToggleChargingQueen
     hudOffset: -0.1,0.1
   - type: XenoEvolutionCapped
     id: MCXenoQueen

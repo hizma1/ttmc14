@@ -37,22 +37,16 @@
     tier: 2
     role: MCXenoHivelord
     actionIds:
-    # RMC
     - MCActionXenoRest
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoPheromones
-    - ActionXenoAcidWeak
-    - ActionXenoDevolve
-    - ActionXenoChooseStructure
-    - ActionXenoSecreteStructure
-    - ActionXenoTransferPlasmaHivelord
-    - ActionXenoDigTunnel
-    - ActionXenoResinWalker
-    # MC
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoCreateResinJellyHivelord
     - MCActionXenoToggleXenoSpitStickyResin
     - MCActionXenoRecycle
+    - MCActionXenoBlessings
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     evolvesTo:
@@ -97,6 +91,5 @@
     - WallXenoMembraneThick
     - DoorXenoResinThick
     - XenoStickyResin
-    - XenoFastResin
     canUpgrade: true
   - type: AcidTrap

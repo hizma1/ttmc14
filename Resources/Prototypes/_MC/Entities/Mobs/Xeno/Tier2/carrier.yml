@@ -117,15 +117,10 @@
       visible: false
   - type: Xeno
     actionIds:
-    # RMC
     - MCActionXenoRest
     - MCActionXenoPheromones
-    - ActionXenoDevolve
-    - ActionXenoResinHole
-    - ActionXenoThrowParasite
-    - ActionXenoRetrieveEgg
-    - ActionXenoParasiteReserve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoLayEgg

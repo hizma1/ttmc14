@@ -33,10 +33,9 @@
     tier: 2
     role: MCXenoWarrior
     actionIds:
-    # RMC
     - MCActionXenoRest
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
     - MCActionXenoGrappleToss
     hudOffset: -0.15,0.25
   - type: XenoEvolution
