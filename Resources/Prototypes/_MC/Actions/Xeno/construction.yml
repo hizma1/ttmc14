@@ -31,6 +31,23 @@
 
 - type: entity
   parent: ActionXenoBase
+  id: MCActionXenoCreateResinJelly
+  name: Create Resin Jelly (100)
+  description: Places Resin Jelly in your active hand, which can be used on yourself or other xeno castes for a 30-second protection from fire.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/construction.rsi
+      state: resin_jelly
+    useDelay: 45
+  - type: InstantAction
+    event: !type:MCXenoCreateResinJellyActionEvent
+  - type: XenoActionPlasma
+    cost: 100
+
+- type: entity
+  parent: ActionXenoBase
   id: MCActionXenoLayEgg
   name: Lay Egg (200)
   description: Create an egg that will grow a larval hugger after a short delay. Empty eggs can have huggers inserted into them.

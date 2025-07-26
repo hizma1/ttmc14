@@ -25,6 +25,8 @@
         type: MCXenoChoosePortalBui
       enum.MCXenoPlantingWeedsUI.Key:
         type: MCXenoChooseWeedsBui
+      enum.MCXenoBlessingsUiKey.Key:
+        type: MCXenoBlessingsBui
       # RMC
       enum.XenoEvolutionUIKey.Key:
         type: XenoEvolutionBui

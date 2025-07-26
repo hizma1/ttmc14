@@ -37,11 +37,11 @@
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _MC/Interface/Actions/Xeno/general.rsi
-      state: xenohide
+      sprite: _MC/Interface/Actions/Xeno/queen.rsi
+      state: blessing
     useDelay: 0.5
   - type: InstantAction
-    event: !type:XenoHideActionEvent
+    event: !type:MCXenoBlessingsActionEvent
 
 - type: entity
   parent: ActionXenoBase

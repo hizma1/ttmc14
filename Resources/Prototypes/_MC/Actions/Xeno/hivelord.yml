@@ -1,16 +1,6 @@
 - type: entity
-  parent: ActionXenoBase
+  parent: MCActionXenoCreateResinJelly
   id: MCActionXenoCreateResinJellyHivelord
-  name: Create Resin Jelly (100)
-  description: Places Resin Jelly in your active hand, which can be used on yourself or other xeno castes for a 30-second protection from fire.
   components:
   - type: Action
-    itemIconStyle: NoItem
-    icon:
-      sprite: _MC/Objects/Xeno/resin_jelly.rsi
-      state: icon
     useDelay: 20
-  - type: InstantAction
-    event: !type:MCXenoCreateResinJellyActionEvent
-  - type: XenoActionPlasma
-    cost: 100
