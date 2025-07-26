@@ -1,5 +1,57 @@
 - type: entity
-  parent: CMAutoInjector
+  parent: ChemicalMedipen
+  id: MCAutoInjectorBase
+  name: autoinjector
+  description: An autoinjector.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Medical/auto_injectors.rsi
+    layers:
+    - state: autoinjector
+    - state: autoinjector1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    size: Small
+    sprite: null
+    inhandVisuals: { }
+  - type: Hypospray
+    solutionName: pen
+    injectSound: /Audio/_RMC14/Medical/hypospray.ogg
+    transferAmount: 15
+    injectOnly: true
+    onlyAffectsMobs: true
+    canContainerDraw: false
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 45
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: autoinjector
+    emptySpriteName: autoinjector
+    changeColor: true
+  - type: Tag
+    tags:
+    - CMAutoInjector
+  - type: IconLabel
+    textColor: White
+    storedOffset: 0, 12
+  - type: RMCSmartFridgeInsertable
+
+- type: entity
+  parent: MCAutoInjectorBase
+  id: MCAutoInjector
+  abstract: true
+  components:
+  - type: MedicallyUnskilledDoAfter
+  - type: CMRefillableSolution
+    solution: pen
+    reagents: {}
+
+- type: entity
+  parent: MCAutoInjector
   id: MCDyloveneAutoInjector
   name: dylovene autoinjector
   description: An auto-injector loaded with 3 doses of dylovene, an anti-toxin agent useful in cases of poisoning, overdoses and toxin build-up.
@@ -16,3 +68,22 @@
       CMTricordrazine: 45
   - type: IconLabel
     labelTextLocId: rmc-dylovene-container-label-text
+
+- type: entity
+  parent: MCDyloveneAutoInjector
+  id: MCBicaridineAutoInjector
+  name: bicaridine autoinjector
+  description: An auto-injector loaded with 3 doses of bicaridine, a common brute and circulatory damage medicine.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 45
+        reagents:
+        - ReagentId: MCBicaridine
+          Quantity: 45
+  - type: CMRefillableSolution
+    reagents:
+      CMTricordrazine: 45
+  - type: IconLabel
+    labelTextLocId: rmc-bicaridine-container-label-text

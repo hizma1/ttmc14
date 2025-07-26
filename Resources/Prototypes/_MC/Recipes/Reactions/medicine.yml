@@ -1,0 +1,9 @@
+- type: reaction
+  id: MCBicaridine
+  reactants:
+    CMInaprovaline: #потом поменять на MCInaprovaline
+      amount: 1
+    RMCCarbon:
+      amount: 1
+  products:
+    MCBicaridine: 2

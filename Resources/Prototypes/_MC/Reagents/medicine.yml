@@ -1,0 +1,106 @@
+﻿- type: reagent
+  parent: CMReagentMedicine
+  id: MCBicaridine
+  name: reagent-name-cmbicaridine
+  group: Medicine
+  physicalDesc: reagent-physical-desc-opaque
+  desc: reagent-desc-cmbicaridine
+  flavor: medicine
+  color: "#ed4847"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+        - !type:HealthChange
+          damage:
+            groups:
+              Brute: -1.5
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 30
+          damage:
+            groups:
+              Burn: 1
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 50
+          damage:
+            groups:
+              Burn: 3
+              Brute: 1
+              Toxin: 2
+
+- type: reagent
+  parent: CMReagentMedicine
+  id: MCDexalin
+  name: reagent-name-cmdexalin
+  group: Medicine
+  physicalDesc: reagent-physical-desc-opaque
+  desc: reagent-desc-cmdexalin
+  flavor: medicine
+  color: "#1f28a7"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+        - !type:HealthChange
+          damage:
+            groups:
+              Airloss: -4.5 #225, если нет - я просчитался.
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 30
+          damage:
+            groups:
+              Toxin: 1
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 50
+          damage:
+            groups:
+              Brute: 2
+              Toxin: 2
+
+- type: reagent
+  parent: CMReagentMedicine
+  id: MCKelotane
+  name: reagent-name-cmkelotane
+  group: Medicine
+  desc: reagent-desc-cmkelotane
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: medicine
+  color: "#f5e123"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+        - !type:HealthChange
+          damage:
+            groups:
+              Airloss: -1.5
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 30
+          damage:
+            groups:
+              Brute: 1
+              Toxin: 1
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 50
+          damage:
+            groups:
+              Brute: 2
+              Toxin: 2

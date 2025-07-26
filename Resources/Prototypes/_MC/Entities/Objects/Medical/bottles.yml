@@ -1,0 +1,16 @@
+- type: entity
+  parent: CMBottleFilled
+  id: MCBottleBicaridine
+  name: bicaridine bottle
+  description: A small bottle. Contains Bicaridine - Used to treat brute damage by doctors.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCBicaridine
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCBicaridine: 60
