@@ -19,14 +19,14 @@
     wideAnimationRotation: -135
     attackRate: 0.9
     damage:
-      types:
-        Slash: 40
+      groups:
+        Brute: 40
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: DamageOtherOnHit
     damage:
-      types:
-        Slash: 10
+      groups:
+        Brute: 10
   - type: Item
     size: Normal
     sprite: _MC/Objects/Weapons/Melee/claymore.rsi
@@ -47,8 +47,8 @@
   - type: MeleeWeapon
     attackRate: 0.9
     damage:
-      types:
-        Slash: 39
+      groups:
+        Brute: 39
 
 - type: entity
   parent: MССlaymore
@@ -59,8 +59,8 @@
   - type: MeleeWeapon
     attackRate: 0.9
     damage:
-      types:
-        Slash: 55
+      groups:
+        Brute: 55
 
 - type: entity
   parent: MССlaymore
@@ -77,9 +77,9 @@
   - type: MeleeWeapon
     attackRate: 0.9
     damage:
-      types:
-        Slash: 75
-        Piercing: 15
+      groups:
+        Brute: 75
+#No parity, there should be penetration 15
 
 - type: entity
   parent: MССlaymore
@@ -96,8 +96,8 @@
   - type: MeleeWeapon
     attackRate: 1
     damage:
-      types:
-        Slash: 80
+      groups:
+        Brute: 80
 
 - type: entity
   parent: MССlaymore
@@ -119,8 +119,8 @@
   - type: MeleeWeapon
     attackRate: 0.9
     damage:
-      types:
-        Slash: 50
+      groups:
+        Brute: 50
 
 - type: entity
   parent: MCKatana
@@ -132,12 +132,12 @@
   - type: MeleeWeapon
     attackRate: 0.9
     damage:
-      types:
-        Slash: 27
+      groups:
+        Brute: 27
   - type: DamageOtherOnHit
     damage:
-      types:
-        Slash: 7
+      groups:
+        Brute: 7
 
 - type: entity
   parent: MCKatanaReplica
@@ -149,14 +149,14 @@
   - type: MeleeWeapon
     attackRate: 0.9
     damage:
-      types:
-        Blunt: 5 #Slash from a toy?
+      groups:
+        Brute: 5
     soundHit:
       path: /Audio/Weapons/boxingpunch1.ogg
   - type: DamageOtherOnHit
     damage:
-      types:
-        Blunt: 5 #Slash from a toy?
+      groups:
+        Brute: 5
 
 - type: entity
   parent: MССlaymore
@@ -177,12 +177,12 @@
   - type: MeleeWeapon
     attackRate: 0.8
     damage:
-      types:
-        Slash: 60
+      groups:
+        Brute: 60
   - type: DamageOtherOnHit
     damage:
-      types:
-        Slash: 10
+      groups:
+        Brute: 10
 
 - type: entity
   parent: MССlaymore
@@ -204,8 +204,8 @@
   - type: MeleeWeapon
     attackRate: 0.8
     damage:
-      types:
-        Slash: 75
+      groups:
+        Brute: 75
 
 - type: entity
   parent: MCMachete
