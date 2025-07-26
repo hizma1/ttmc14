@@ -24,23 +24,21 @@
     tier: 1
     role: MCXenoDefender
     actionIds:
-    # RMC
     - MCActionXenoRest
-    - ActionXenoRegurgitate
-    - ActionXenoWatch
-    - ActionXenoTailSlam
-    - ActionXenoToggleCrest
-    - ActionXenoHeadbutt
-    - ActionXenoTailSweep
-    - ActionXenoFortify
-    - ActionXenoDevolve
-    # MC
+    - MCActionXenoPsydrain
+    - MCActionXenoDevolve
+    - MCActionXenoCrestDefense
+    - MCActionXenoFortify
+    - MCActionXenoTailSweep
+    - MCActionXenoForwardCharge
     hudOffset: -0.1, 0.2
   - type: XenoDevolve
     devolvesTo:
     - MCXenoLarva
     canBeDevolvedByOther: false
   - type: XenoEvolution
+    actionId: MCActionXenoEvolve
+    max: 225
     evolvesTo:
     - MCXenoWarrior
   - type: MCArmor
