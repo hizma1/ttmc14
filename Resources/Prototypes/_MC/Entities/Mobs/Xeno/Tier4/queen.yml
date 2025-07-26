@@ -46,7 +46,7 @@
     - MCActionXenoToggleXenoSpitStickyResin
     - MCActionXenoBlessings
     # Primo
-    # - MCActionXenoToggleChargingQueen
+    - MCActionXenoToggleChargingQueen
     hudOffset: -0.1,0.1
   - type: XenoEvolutionCapped
     id: MCXenoQueen
@@ -78,3 +78,4 @@
   - type: XenoInhands
     prefix: queen
   - type: MCXenoBlessings
+  - type: MCXenoHiveLeader

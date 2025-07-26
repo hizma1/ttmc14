@@ -25,7 +25,7 @@ public sealed partial class CMDistressSignalRuleComponent : Component
     public EntityUid? XenoMap;
 
     [DataField]
-    public EntProtoId HiveId = "CMXenoHive";
+    public EntProtoId HiveId = "MCXenoHive";
 
     [DataField]
     public EntityUid Hive;
@@ -35,16 +35,16 @@ public sealed partial class CMDistressSignalRuleComponent : Component
     public bool Hijack;
 
     [DataField]
-    public ProtoId<JobPrototype> QueenJob = "CMXenoQueen";
+    public ProtoId<JobPrototype> QueenJob = "MCXenoQueen";
 
     [DataField]
-    public EntProtoId QueenEnt = "CMXenoQueen";
+    public EntProtoId QueenEnt = "MCXenoQueen";
 
     [DataField]
-    public ProtoId<JobPrototype> XenoSelectableJob = "CMXenoSelectableXeno";
+    public ProtoId<JobPrototype> XenoSelectableJob = "MCXenoSelectableXeno";
 
     [DataField]
-    public EntProtoId LarvaEnt = "CMXenoLarva";
+    public EntProtoId LarvaEnt = "MCXenoLarva";
 
     [DataField]
     public EntProtoId<IFFFactionComponent> MarineFaction = "FactionMarine";

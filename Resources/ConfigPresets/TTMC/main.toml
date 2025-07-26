@@ -8,9 +8,6 @@ server_ban_erase_player = true
 new_player_threshold = 600
 alert.explosion_min_intensity = -1
 
-[host]
-name = "TTMC"
-
 [adminlogs]
 server_name = "TTMC"
 
@@ -30,6 +27,8 @@ enabled = false
 can_create_vacuum = false
 
 [game]
+hostname = "TTMC"
+desc = "Сборка сервера основана на https://github.com/ttmc14/ttmc14"
 defaultpreset = "CMDistressSignal"
 fallbackenabled = false
 fallbackpreset = "CMDistressSignal"

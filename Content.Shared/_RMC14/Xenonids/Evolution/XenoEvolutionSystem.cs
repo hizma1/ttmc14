@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._MC.Xeno.Hive.Components;
 using Content.Shared._RMC14.CCVar;
 using Content.Shared._RMC14.Xenonids.Announce;
 using Content.Shared._RMC14.Xenonids.Egg;
@@ -355,7 +356,7 @@ public sealed class XenoEvolutionSystem : EntitySystem
         }
 
         // TODO RMC14 only allow evolving towards Queen if none is alive
-        if (!xeno.Comp.CanEvolveWithoutGranter && !HasLiving<XenoEvolutionGranterComponent>(1))
+        if (!xeno.Comp.CanEvolveWithoutGranter && !HasLiving<MCXenoHiveLeaderComponent>(1))
         {
             if (doPopup)
             {
