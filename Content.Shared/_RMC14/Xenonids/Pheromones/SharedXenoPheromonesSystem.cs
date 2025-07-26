@@ -196,6 +196,8 @@ public abstract class SharedXenoPheromonesSystem : EntitySystem
 
     private void OnFrenzyMovementSpeedModifiers(Entity<XenoFrenzyPheromonesComponent> frenzy, ref RefreshMovementSpeedModifiersEvent args)
     {
+        return;
+
         var speed = 1 + (frenzy.Comp.MovementSpeedModifier * frenzy.Comp.Multiplier).Float();
         if (HasComp<PullingSlowedComponent>(frenzy.Owner))
             speed = 1 + (frenzy.Comp.PullMovementSpeedModifier * frenzy.Comp.Multiplier).Float();
