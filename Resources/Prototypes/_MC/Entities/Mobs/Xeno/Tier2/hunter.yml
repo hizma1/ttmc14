@@ -37,6 +37,8 @@
     - MCActionXenoDevolve
     hudOffset: -0.1,0.1
   - type: XenoEvolution
+    actionId: MCActionXenoEvolve
+    max: 225
     evolvesTo:
     - MCXenoWarlock
   - type: XenoDevolve

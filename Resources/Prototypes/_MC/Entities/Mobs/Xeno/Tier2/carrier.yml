@@ -126,5 +126,7 @@
     - MCActionXenoLayEgg
   - type: XenoParasiteThrower
   - type: XenoEvolution
+    actionId: MCActionXenoEvolve
+    max: 225
     evolvesTo:
     - MCXenoDefiler
