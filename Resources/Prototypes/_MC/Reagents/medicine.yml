@@ -121,12 +121,12 @@
       metabolismRate: 0.2
       effects:
       - !type:ChemHealEyeDamage
-        amount: 000.1
+        amount: 0.5
         conditions:
         - !type:ReagentThreshold
           min: 30
       - !type:ChemHealEyeDamage
-        amount: 0.1
+        amount: 1
         conditions:
         - !type:ReagentThreshold
           min: 50
