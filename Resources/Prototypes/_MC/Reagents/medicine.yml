@@ -87,7 +87,132 @@
         - !type:HealthChange
           damage:
             groups:
-              Airloss: -1.5
+              Burn: -1.5
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 30
+          damage:
+            groups:
+              Brute: 1
+              Toxin: 1
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 50
+          damage:
+            groups:
+              Brute: 2
+              Toxin: 2
+
+- type: reagent
+  parent: CMReagentMedicine
+  id: MCDylovene
+  name: reagent-name-cmdylovene
+  group: Medicine
+  desc: reagent-desc-cmdylovene
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: medicine
+  color: "#3fc92a"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:ChemHealEyeDamage
+        amount: 000.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+      - !type:ChemHealEyeDamage
+        amount: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+      - !type:HealthChange
+        damage:
+          groups:
+            Toxin: -1.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Brute: 2
+            Burn: 2
+  plantMetabolism:
+  - !type:PlantAdjustToxins # для растений хуйня
+    amount: -10
+  - !type:PlantAdjustHealth
+    amount: 1
+
+- type: reagent
+  parent: CMReagentMedicine
+  id: MCInaprovaline
+  name: reagent-name-cminaprovaline
+  group: Medicine
+  desc: reagent-desc-cminaprovaline
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+  color: "#fe33cb"
+  overdose: 60
+  criticalOverdose: 100
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical
+        damage:
+          types:
+            Asphyxiation: -1
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        key: Unconscious
+        component: RMCUnconscious
+        time: 20
+        type: Add
+        refresh: false
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 100
+        key: Unconscious
+        component: RMCUnconscious
+        probability: 0.05
+        time: 10
+        type: Add
+        refresh: false
+
+- type: reagent
+  parent: CMReagentMedicine
+  id: MCTricordrazine
+  name: reagent-name-cmtricordrazine
+  group: Medicine
+  desc: reagent-desc-cmtricordrazine
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+  color: "#d87f2b"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+        - !type:HealthChange
+          damage:
+            groups:
+              Burn: -1.5
         - !type:HealthChange
           conditions:
             - !type:ReagentThreshold
