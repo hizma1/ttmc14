@@ -1,6 +1,7 @@
 - type: entity
   parent: CMBottleFilled
   id: MCBottleBicaridine
+  suffix: MC
   name: bicaridine bottle
   description: A small bottle. Contains Bicaridine - Used to treat brute damage by doctors.
   components:
@@ -14,3 +15,93 @@
   - type: CMRefillableSolution
     reagents:
       MCBicaridine: 60
+
+- type: entity
+  parent: CMBottleFilled
+  id: MCBottleDexalin
+  suffix: MC
+  name: dexalin bottle
+  description: A small bottle. Contains dexalin - used to supply blood with oxygen.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCDexalin
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCDexalin: 60
+
+- type: entity
+  parent: CMBottleFilled
+  id: MCBottleKelotane
+  suffix: MC
+  name: kelotane bottle
+  description: A small bottle. Contains kelotane - used to treat burned areas.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCKelotane
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCKelotane: 60
+
+- type: entity
+  parent: CMBottleFilled
+  id: MCBottleDylovene
+  suffix: MC
+  name: dylovene bottle
+  description: A small bottle of dylovene. Used to counter poisons. Basically an anti-toxin.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCDylovene
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCDylovene: 60
+
+- type: entity
+  parent: CMBottleFilled
+  id: MCBottleInaprovaline
+  suffix: MC
+  name: inaprovaline bottle
+  description: A small bottle. Contains inaprovaline - used to stabilize patients.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCInaprovaline
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCInaprovaline: 60
+
+- type: entity
+  parent: CMBottleFilled
+  id: MCBottleTricordrazine
+  suffix: MC
+  name: tricordrazine bottle
+  description: A small bottle. Contains tricordrazine - used as a generic treatment for injuries.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCTricordrazine
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCTricordrazine: 60
