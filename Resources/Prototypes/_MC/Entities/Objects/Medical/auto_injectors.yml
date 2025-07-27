@@ -19,14 +19,14 @@
   - type: Hypospray
     solutionName: pen
     injectSound: /Audio/_RMC14/Medical/hypospray.ogg
-    transferAmount: 15
+    transferAmount: 10
     injectOnly: true
     onlyAffectsMobs: true
-    canContainerDraw: false
+    canContainerDraw: true
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 45
+        maxVol: 30
   - type: SolutionContainerVisuals
     maxFillLevels: 3
     fillBaseName: autoinjector
@@ -35,17 +35,21 @@
   - type: Tag
     tags:
     - CMAutoInjector
+    - MCAutoInjector
   - type: IconLabel
     textColor: White
     storedOffset: 0, 12
   - type: RMCSmartFridgeInsertable
 
+- type: Tag
+  id: MCAutoInjector
+
 - type: entity
   parent: MCAutoInjectorBase
   id: MCAutoInjector
+  suffix: MC
   abstract: true
   components:
-  - type: MedicallyUnskilledDoAfter
   - type: CMRefillableSolution
     solution: pen
     reagents: {}
@@ -59,18 +63,37 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 45
+        maxVol: 30
         reagents:
-        - ReagentId: CMDylovene
-          Quantity: 45
+        - ReagentId: MCDylovene
+          Quantity: 30
   - type: CMRefillableSolution
     reagents:
-      CMTricordrazine: 45
+      MCDylovene: 30
   - type: IconLabel
     labelTextLocId: rmc-dylovene-container-label-text
 
 - type: entity
-  parent: MCDyloveneAutoInjector
+  parent: MCAutoInjector
+  id: MCKelotaneAutoInjector
+  name: kelotane autoinjector
+  description: An auto-injector loaded with 3 doses of kelotane, a common burn medicine.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCKelotane
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCKelotane: 30
+  - type: IconLabel
+    labelTextLocId: rmc-kelotane-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
   id: MCBicaridineAutoInjector
   name: bicaridine autoinjector
   description: An auto-injector loaded with 3 doses of bicaridine, a common brute and circulatory damage medicine.
@@ -78,12 +101,71 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 45
+        maxVol: 30
         reagents:
         - ReagentId: MCBicaridine
-          Quantity: 45
+          Quantity: 30
   - type: CMRefillableSolution
     reagents:
-      CMTricordrazine: 45
+      MCBicaridine: 30
   - type: IconLabel
     labelTextLocId: rmc-bicaridine-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCTricordrazineAutoInjector
+  name: tricordrazine autoinjector
+  description: An autoinjector loaded with 3 doses of tricordrazine, a weak general use medicine for treating damage.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCTricordrazine
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCTricordrazine: 30
+  - type: IconLabel
+    labelTextLocId: rmc-tricordazine-container-label-text #ОФФЫ Я ЛЮБЛЮ ВАС ЗА ВАШИ ОРФОГРАФИЧЕСКИЕ ОШИБКИ
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCInaprovalineAutoInjector
+  name: inaprovaline autoinjector
+  description: An auto-injector loaded with 2 doses of inaprovaline, an emergency stabilization medicine for patients in critical condition.
+  components:
+  - type: Hypospray
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCInaprovaline
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCInaprovaline: 30
+  - type: IconLabel
+    labelTextLocId: rmc-inaprovaline-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCDexalinAutoInjector
+  name: dexalin autoinjector
+  description: An auto-injector loaded with 3 doses of dexalin, a medicine that oxygenates the body helping those with respiratory issues or low blood.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCDexalin
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCDexalin: 30
+  - type: IconLabel
+    labelTextLocId: rmc-dexalin-container-label-text
