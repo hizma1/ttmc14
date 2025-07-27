@@ -132,7 +132,7 @@
     labelTextLocId: rmc-kelotane-container-label-text
 
 - type: entity
-  parent: PillCanister
+  parent: MCPillCanister
   id: MCPillCanisterDexalin
   name: dexalin pill bottle
   description: Contains pills that heal oxygen damage. They can suppress bloodloss symptoms as well.
