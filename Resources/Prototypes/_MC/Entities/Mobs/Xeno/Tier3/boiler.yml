@@ -60,3 +60,5 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: boiler
+  - type: RMCSize
+    size: Big

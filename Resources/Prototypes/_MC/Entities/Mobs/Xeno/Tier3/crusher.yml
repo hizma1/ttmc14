@@ -69,3 +69,5 @@
       state: crusher
   - type: MCXenoSunder
     multiplier: 0.85
+  - type: RMCSize
+    size: Big

@@ -83,11 +83,17 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 28
+        Piercing: 40
   - type: CMArmorPiercing
     amount: 0
   - type: MCXenoSunderDamageOnHit
     amount: 0
+  - type: MCStunOnHit
+    paralyzeTime: 2
+    staggerTime: 2
+    knockback: 2
+    slowdownTime: 0.5
+    maxDistance: 3
   - type: ProjectileSpread
     proto: MCBulletShotgunBuckshot
     count: 6
@@ -172,6 +178,13 @@
         Piercing: 100
   - type: MCXenoSunderDamageOnHit
     amount: 7.5
+  - type: CMArmorPiercing
+    amount: 20
+  - type: MCStunOnHit
+    paralyzeTime: 2
+    staggerTime: 2
+    knockback: 1
+    slowdownTime: 2
   - type: RMCProjectileDamageFalloff
     thresholds:
     - range: 8
@@ -179,13 +192,6 @@
       ignoreModifiers: true
     - range: 0
       falloff: 1
-  - type: CMArmorPiercing
-    amount: 20
-  - type: RMCStunOnHit
-    maxRange: 6.5
-    stunTime: 1
-    superSlowTime: 2
-    slowTime: 6
   - type: RMCProjectileAccuracy
     accuracy: 100
     thresholds:
