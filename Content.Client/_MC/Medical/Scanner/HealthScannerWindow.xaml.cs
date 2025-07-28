@@ -2,7 +2,7 @@
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client._MC14.Medical.Scanner;
+namespace Content.Client._MC.Medical.Scanner;
 
 [GenerateTypedNameReferences]
 public sealed partial class HealthScannerWindow : DefaultWindow
