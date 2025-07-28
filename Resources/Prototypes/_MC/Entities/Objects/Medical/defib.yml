@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: _MC14/Objects/Medical/defib.rsi
+    sprite: _MC/Objects/Medical/defib.rsi
     layers:
     - state: defib
     - state: defib_on
@@ -19,9 +19,20 @@
         enum.ToggleableVisuals.Layer:
           True: { visible: true }
           False: { visible: false }
+  - type: MeleeWeapon
+    attackRate: 0.9
+    damage:
+      groups:
+        Brute: 5
+    soundHit:
+      collection: GenericHit
+  - type: DamageOtherOnHit
+    damage:
+      groups:
+        Brute: 6
   - type: Item
     size: Normal
-    sprite: _MC14/Objects/Medical/defib.rsi
+    sprite: _MC/Objects/Medical/defib.rsi
     heldPrefix: defib
   - type: Speech
     speechVerb: Robotic
@@ -32,7 +43,7 @@
       path: /Audio/_RMC14/Medical/defib_safetyOff.ogg
   - type: Defibrillator
     zapDelay: 0
-    doAfterDuration: 6.25
+    doAfterDuration: 7
     allowDoAfterMovement: false
     canDefibCrit: false
     cmZapHeal:
@@ -46,34 +57,28 @@
     zapSound:
       path: /Audio/_RMC14/Medical/defib_release.ogg
       params:
-        volume: -6
+        volume: -2
     chargeSound:
       path: /Audio/_RMC14/Medical/defib_charge.ogg
       params:
-        volume: -8
+        volume: -3
     failureSound:
       path: /Audio/_RMC14/Medical/defib_failed.ogg
       params:
-        volume: -6
+        volume: -2
     successSound:
       path: /Audio/_RMC14/Medical/defib_success.ogg
       params:
-        volume: -6
+        volume: -2
     readySound:
       path: /Audio/_RMC14/Medical/defib_ready.ogg
       params:
-        volume: -6
+        volume: -2
     zapDamage: 0
   - type: DoAfter
   - type: UseDelay
   - type: StaticPrice
     price: 100
-  - type: GuideHelp
-    guides:
-    - Medical Doctor
-  - type: RequiresSkill
-    skills:
-      RMCSkillMedical: 2
 
 - type: entity
   id: MCDefibrillator
@@ -84,14 +89,10 @@
     enabled: false
     useRate: 66
   - type: RMCPowerUsageDisplay
-  - type: UseOnSynthBlocked
-    whitelist:
-      components:
-        - Marine
 
 - type: entity
   id: MCDefibrillatorEmpty
-  parent: CMDefibrillator
+  parent: MCDefibrillator
   suffix: MC, Empty
   components:
   - type: ItemSlots
