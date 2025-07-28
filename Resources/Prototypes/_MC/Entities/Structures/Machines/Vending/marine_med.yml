@@ -15,43 +15,44 @@
     sections:
     - name: Pill Bottles
       entries:
-      - id: CMPillCanisterBicaridine
-      - id: CMPillCanisterKelotane
+      - id: MCPillCanisterBicaridine
+      - id: MCPillCanisterKelotane
       # tramadol
-      - id: CMPillCanisterTricordrazine
-      - id: CMPillCanisterDylovene
+      - id: MCPillCanisterTricordrazine
+      - id: MCPillCanisterDylovene
       # paracetamol
       # isotonic
       - id: CMPillCanister
     - name: Auto Injector
       entries:
-      - id: CMBicaridineAutoInjector
-      - id: CMKelotaneAutoInjector
+      - id: MCBicaridineAutoInjector
+      - id: MCKelotaneAutoInjector
       # tramadol
-      - id: CMTricordrazineAutoInjector
+      - id: MCTricordrazineAutoInjector
       - id: MCDyloveneAutoInjector
       # combat
       # isotonic
-      - id: CMInaprovalineAutoInjector
+      - id: MCInaprovalineAutoInjector
       # oxycodone = 30
       # spaceacillin = 20
       # hypervene = 20
       # alkysine = 20
-      # imidazoline = 20
+      - id: MCImidazolineAutoInjector
+        amount: 20
       # quickclot = 10
       # medicalnanites = 20
     - name: Heal Pack
       entries:
-      - id: CMGauze10
-      - id: CMOintment10
-      # splint
-      - id: CMTraumaKit10
+      - id: MCGauze
+      - id: MCOintment
+      # splint (ждём лимбдамадже)
+      - id: MCTraumaKit
         amount: 50
-      - id: CMBurnKit10
+      - id: MCBurnKit
         amount: 50
     - name: Misc
       entries:
-      - id: CMDefibrillator
+      - id: MCDefibrillator
         amount: 8
       - id: CMHealthAnalyzer
         amount: 16

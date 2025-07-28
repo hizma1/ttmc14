@@ -15,19 +15,20 @@
     sections:
     - name: Pill Bottles
       entries:
-      - id: CMPillCanisterBicaridine
-      - id: CMPillCanisterKelotane
+      - id: MCPillCanisterBicaridine
+      - id: MCPillCanisterKelotane
       # tramadol
-      - id: CMPillCanisterTricordrazine
-      - id: CMPillCanisterDylovene
-      - id: CMPillCanisterInaprovaline
+      - id: MCPillCanisterTricordrazine
+      - id: MCPillCanisterDylovene
+      - id: MCPillCanisterInaprovaline
       # isotonic
       # paracetamol
-      - id: CMPillCanisterDexalin
+      - id: MCPillCanisterDexalin
         amount: 6
       # spaceacillin = 6
       # alkysine = 6
-      # imidazoline = 6
+      - id: MCPillCanisterImidazoline
+        amount: 6
       # quickclot = 6
       # hypervene = 6
     # - name: Hypospray
@@ -36,16 +37,18 @@
       #	/obj/item/reagent_containers/hypospray/advanced = 30
     - name: Reagent Bottle
       entries:
-      - id: CMBottleBicaridine
-      - id: CMBottleKelotane
+      - id: MCBottleBicaridine
+      - id: MCBottleKelotane
       # tramadol
-      - id: CMBottleTricordrazine
-      - id: CMBottleDylovene
-      - id: CMBottleInaprovaline
+      - id: MCBottleTricordrazine
+      - id: MCBottleDylovene
+      - id: MCBottleInaprovaline
       # paracetamol
       # isotonic
       # leporazine
-      - id: CMBottleDexalin
+      - id: MCBottleDexalin
+        amount: 6
+      - id: MCBottleImidazoline #не парити но мне похуй, я не просто так это делал
         amount: 6
       # spaceacillin = 6
       # oxycodone = 6
