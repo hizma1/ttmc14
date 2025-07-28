@@ -31,3 +31,10 @@ mc-health-analyzer-advice-kelotane = [color=#f5e123][font="Emoji"]💉[/font][/c
 mc-health-analyzer-advice-dylovene = [color=#3fc92a][font="Emoji"]💉[/font][/color] Введите дозу диловена.
 
 mc-wounds-brackets-translators-note = {"{ }"} = Не лечится
+mc-health-healthscanner = Здоровье
+mc-demage-healthscanner = Урон
+mc-holocard-healthscanner = Голокарта
+mc-temperature-healthscanner = Температура Тела
+mc-pulse-healthscanner = Пульс
+mc-container-healthscanner = Содержание химических веществ
+mc-medical-advice-healthscanner = Медицинская рекомендация
