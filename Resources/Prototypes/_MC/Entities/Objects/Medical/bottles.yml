@@ -105,3 +105,21 @@
   - type: CMRefillableSolution
     reagents:
       MCTricordrazine: 60
+
+- type: entity
+  parent: CMBottleFilled
+  id: MCBottleImidazoline
+  suffix: MC
+  name: imidazoline bottle
+  description: A small bottle. Contains imidazoline - used to treat eyes.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCImidazoline
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCImidazoline: 60

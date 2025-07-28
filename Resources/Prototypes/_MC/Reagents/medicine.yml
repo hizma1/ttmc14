@@ -230,3 +230,36 @@
           conditions:
           - !type:ReagentThreshold
             min: 30
+
+- type: reagent
+  parent: CMReagentMedicine
+  id: MCImidazoline
+  name: reagent-name-cmimidazoline
+  group: Medicine
+  desc: reagent-desc-cmimidazoline
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+  color: "#F7A151"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:ChemHealEyeDamage
+        amount: -0.1 #представим что это единица целая
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Burn: 1
+            Toxin: 2

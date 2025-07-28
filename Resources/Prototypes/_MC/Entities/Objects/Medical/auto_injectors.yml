@@ -71,7 +71,7 @@
     reagents:
       MCDylovene: 30
   - type: IconLabel
-    labelTextLocId: rmc-dylovene-container-label-text
+    labelTextLocId: mc-dylovene-container-label-text
 
 - type: entity
   parent: MCAutoInjector
@@ -90,7 +90,7 @@
     reagents:
       MCKelotane: 30
   - type: IconLabel
-    labelTextLocId: rmc-kelotane-container-label-text
+    labelTextLocId: mc-kelotane-container-label-text
 
 - type: entity
   parent: MCAutoInjector
@@ -109,7 +109,7 @@
     reagents:
       MCBicaridine: 30
   - type: IconLabel
-    labelTextLocId: rmc-bicaridine-container-label-text
+    labelTextLocId: mc-bicaridine-container-label-text
 
 - type: entity
   parent: MCAutoInjector
@@ -128,7 +128,7 @@
     reagents:
       MCTricordrazine: 30
   - type: IconLabel
-    labelTextLocId: rmc-tricordazine-container-label-text #ОФФЫ Я ЛЮБЛЮ ВАС ЗА ВАШИ ОРФОГРАФИЧЕСКИЕ ОШИБКИ
+    labelTextLocId: mc-tricordazine-container-label-text #ОФФЫ Я ЛЮБЛЮ ВАС ЗА ВАШИ ОРФОГРАФИЧЕСКИЕ ОШИБКИ
 
 - type: entity
   parent: MCAutoInjector
@@ -149,7 +149,7 @@
     reagents:
       MCInaprovaline: 30
   - type: IconLabel
-    labelTextLocId: rmc-inaprovaline-container-label-text
+    labelTextLocId: mc-inaprovaline-container-label-text
 
 - type: entity
   parent: MCAutoInjector
@@ -168,4 +168,23 @@
     reagents:
       MCDexalin: 30
   - type: IconLabel
-    labelTextLocId: rmc-dexalin-container-label-text
+    labelTextLocId: mc-dexalin-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCImidazolineAutoInjector
+  name: imidazoline autoinjector
+  description: An auto-injector loaded with 3 doses of imidazoline, medicine for fixing eyesight.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCImidazoline
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCImidazoline: 30
+  - type: IconLabel
+    labelTextLocId: mc-imidazoline-container-label-text

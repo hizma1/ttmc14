@@ -136,3 +136,19 @@
     layers:
     - state: pill9
       map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillImidazoline
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: MCImidazoline
+          Quantity: 15
+  - type: Sprite
+    layers:
+    - state: pill17
+      map: [ "enum.DamageStateVisualLayers.Base" ]

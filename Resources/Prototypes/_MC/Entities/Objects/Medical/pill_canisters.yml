@@ -105,7 +105,7 @@
     - id: MCPillBicaridine
       amount: 16
   - type: IconLabel
-    labelTextLocId: rmc-bicaridine-container-label-text
+    labelTextLocId: mc-bicaridine-container-label-text
 
 - type: entity
   parent: MCPillCanister
@@ -129,7 +129,7 @@
     - id: MCPillKelotane
       amount: 16
   - type: IconLabel
-    labelTextLocId: rmc-kelotane-container-label-text
+    labelTextLocId: mc-kelotane-container-label-text
 
 - type: entity
   parent: MCPillCanister
@@ -153,7 +153,7 @@
     - id: MCPillDexalin
       amount: 16
   - type: IconLabel
-    labelTextLocId: rmc-dexalin-container-label-text
+    labelTextLocId: mc-dexalin-container-label-text
 
 - type: entity
   parent: MCPillCanister
@@ -177,7 +177,7 @@
     - id: MCPillTricordrazine
       amount: 16
   - type: IconLabel
-    labelTextLocId: rmc-tricordazine-container-label-text #ОФФЫ Я ЛЮБЛЮ ВАС ЗА ВАШИ ОРФОГРАФИЧЕСКИЕ ОШИБКИ
+    labelTextLocId: mc-tricordrazine-container-label-text
 
 - type: entity
   parent: MCPillCanister
@@ -201,7 +201,7 @@
     - id: MCPillDylovene
       amount: 16
   - type: IconLabel
-    labelTextLocId: rmc-dexalin-container-label-text
+    labelTextLocId: mc-dylovene-container-label-text
 
 - type: entity
   parent: MCPillCanister
@@ -225,4 +225,28 @@
     - id: MCPillInaprovaline
       amount: 16
   - type: IconLabel
-    labelTextLocId: rmc-inaprovaline-container-label-text
+    labelTextLocId: mc-inaprovaline-container-label-text
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterImidazoline
+  name: imidazoline pill bottle
+  description: Contains pills that heal eye damage.
+  suffix: Imidazoline, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 2
+  - type: Sprite
+    layers:
+    - state: pill_canister2
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillImidazoline
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-imidazoline-container-label-text
