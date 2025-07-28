@@ -128,7 +128,7 @@
     reagents:
       MCTricordrazine: 30
   - type: IconLabel
-    labelTextLocId: mc-tricordazine-container-label-text #ОФФЫ Я ЛЮБЛЮ ВАС ЗА ВАШИ ОРФОГРАФИЧЕСКИЕ ОШИБКИ
+    labelTextLocId: mc-tricordrazine-container-label-text
 
 - type: entity
   parent: MCAutoInjector
