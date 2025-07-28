@@ -102,7 +102,7 @@
     consumable: true
     canUseUnskilled: true
     skills:
-      RMCSkillMedical: 0 #Эту хуйню не законтрить
+      RMCSkillMedical: 2 #Эту хуйню не законтрить
     treatBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
     treatEndSound:
