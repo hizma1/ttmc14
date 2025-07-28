@@ -43,7 +43,7 @@
       path: /Audio/_RMC14/Medical/defib_safetyOff.ogg
   - type: Defibrillator
     zapDelay: 0
-    doAfterDuration: 7
+    doAfterDuration: 7.5
     allowDoAfterMovement: false
     canDefibCrit: false
     cmZapHeal:
