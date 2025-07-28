@@ -1,0 +1,42 @@
+- type: entity
+  parent: ColMarTechBase
+  id: MCMachineVendingNanoMed
+  name: NanoMed
+  description: Wall-mounted Medical Equipment dispenser.
+  components:
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: _MC/Structures/Machines/vending.rsi
+    offset: 0,-1
+    layers:
+    - state: wallmed-off
+      map: [ "enum.VendingMachineVisualLayers.Base" ]
+    - state: wallmed
+      map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
+  - type: CMAutomatedVendor
+    sections:
+    - name: Auto Injector
+      entries:
+      - id: CMBicaridineAutoInjector
+        amount: 1
+      - id: CMKelotaneAutoInjector
+        amount: 1
+      # tramadol
+      - id: CMTricordrazineAutoInjector
+        amount: 1
+      - id: MCDyloveneAutoInjector
+        amount: 1
+      # combat
+      # hypervene
+    - name: Heal Pack
+      entries:
+      - id: CMGauze10
+        amount: 2
+      - id: CMOintment10
+        amount: 2
+      # splint
+    - name: Misc
+      entries:
+      - id: CMHealthAnalyzer
+        amount: 1

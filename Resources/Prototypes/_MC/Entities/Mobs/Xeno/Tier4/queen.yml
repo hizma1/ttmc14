@@ -79,3 +79,5 @@
     prefix: queen
   - type: MCXenoBlessings
   - type: MCXenoHiveLeader
+  - type: RMCSize
+    size: Big

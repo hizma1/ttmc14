@@ -65,3 +65,5 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: praetorian
+  - type: RMCSize
+    size: Big

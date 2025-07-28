@@ -114,3 +114,5 @@
     - PrimordialTierTwo
     - PrimordialTierThree
     - PrimordialTierFour
+  - type: RMCSize
+    size: Big

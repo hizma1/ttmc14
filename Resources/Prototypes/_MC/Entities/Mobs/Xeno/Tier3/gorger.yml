@@ -56,3 +56,5 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: gorger
+  - type: RMCSize
+    size: Big

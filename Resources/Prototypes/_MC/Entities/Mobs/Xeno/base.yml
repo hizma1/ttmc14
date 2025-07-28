@@ -2,6 +2,8 @@
   id: MCXenoNoMeleeBase
   abstract: true
   components:
+  - type: RMCSize
+    size: Xeno
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -14,7 +16,6 @@
   - type: NightVision
     overlay: false
     drawFov: false
-  - type: MCXenoDamageVisuals
   - type: MCXenoSunder
   - type: CombatMode
     canDisarm: false
@@ -65,6 +66,7 @@
     widePrimary: true
     altDisarm: false
     altHeavy: false
+  - type: MCXenoDamageVisuals
 
 - type: entity
   id: MCXenoPlantingWeeds
