@@ -75,7 +75,7 @@ public sealed class HealthScannerBui : BoundUserInterface
         if (_window == null)
         {
             _window = this.CreateWindow<HealthScannerWindow>();
-            _window.Title = Loc.GetString("rmc-health-analyzer-title");
+            _window.Title = Loc.GetString("mc-health-analyzer-title");
         }
 
         if (_entities.GetEntity(uiState.Target) is not { Valid: true } target)
@@ -83,7 +83,7 @@ public sealed class HealthScannerBui : BoundUserInterface
 
         _lastTarget = uiState.Target;
 
-        _window.PatientLabel.Text = Loc.GetString("rmc-health-analyzer-patient", ("name", Identity.Name(target, _entities, _player.LocalEntity)));
+        _window.PatientLabel.Text = Loc.GetString("mc-health-analyzer-patient", ("name", Identity.Name(target, _entities, _player.LocalEntity)));
 
         var thresholdsSystem = _entities.System<MobThresholdSystem>();
         if (!_entities.TryGetComponent(target, out DamageableComponent? damageable))
@@ -95,14 +95,14 @@ public sealed class HealthScannerBui : BoundUserInterface
         }
 
         var ent = new Entity<DamageableComponent>(target, damageable);
-        AddGroup(ent, _window.BruteLabel, Color.FromHex("#DF3E3E"), "Brute", Loc.GetString("rmc-health-analyzer-brute"));
-        AddGroup(ent, _window.BurnLabel, Color.FromHex("#FFB833"), "Burn", Loc.GetString("rmc-health-analyzer-burn"));
-        AddGroup(ent, _window.ToxinLabel, Color.FromHex("#25CA4C"), "Toxin", Loc.GetString("rmc-health-analyzer-toxin"));
-        AddGroup(ent, _window.OxygenLabel, Color.FromHex("#2E93DE"), "Airloss", Loc.GetString("rmc-health-analyzer-oxygen"));
+        AddGroup(ent, _window.BruteLabel, Color.FromHex("#DF3E3E"), "Brute", Loc.GetString("mc-health-analyzer-brute"));
+        AddGroup(ent, _window.BurnLabel, Color.FromHex("#FFB833"), "Burn", Loc.GetString("mc-health-analyzer-burn"));
+        AddGroup(ent, _window.ToxinLabel, Color.FromHex("#25CA4C"), "Toxin", Loc.GetString("mc-health-analyzer-toxin"));
+        AddGroup(ent, _window.OxygenLabel, Color.FromHex("#2E93DE"), "Airloss", Loc.GetString("mc-health-analyzer-oxygen"));
         if (damageable.DamagePerGroup["Genetic"] > 0)
         {
             _window.CloneBox.Visible = true;
-            AddGroup(ent, _window.CloneLabel, Color.FromHex("#02c9c0"), "Genetic", Loc.GetString("rmc-health-analyzer-clone"));
+            AddGroup(ent, _window.CloneLabel, Color.FromHex("#02c9c0"), "Genetic", Loc.GetString("mc-health-analyzer-clone"));
         }
         else
             _window.CloneBox.Visible = false;
@@ -121,7 +121,7 @@ public sealed class HealthScannerBui : BoundUserInterface
                 isPermaDead = true;
                 _window.HealthBar.Value = 100;
                 _window.HealthBar.ModulateSelfOverride = Color.Red;
-                _window.HealthBarText.Text = Loc.GetString("rmc-health-analyzer-permadead");
+                _window.HealthBarText.Text = Loc.GetString("mc-health-analyzer-permadead");
             }
             else
             {
@@ -136,7 +136,7 @@ public sealed class HealthScannerBui : BoundUserInterface
 
                 var healthString = MathHelper.CloseTo(healthValue, 100) ? "100%" : $"{healthValue:F2}%";
 
-                _window.HealthBarText.Text = Loc.GetString("rmc-health-analyzer-healthy", ("percent", healthString));
+                _window.HealthBarText.Text = Loc.GetString("mc-health-analyzer-healthy", ("percent", healthString));
             }
         }
 
@@ -199,7 +199,7 @@ public sealed class HealthScannerBui : BoundUserInterface
             }
         }
 
-        _window.UnknownReagentsLabel.SetMarkupPermissive(Loc.GetString("rmc-health-analyzer-unknown-reagents"));
+        _window.UnknownReagentsLabel.SetMarkupPermissive(Loc.GetString("mc-health-analyzer-unknown-reagents"));
         _window.UnknownChemicalsPanel.Visible = anyUnknown;
         _window.ChemicalContentsLabel.Visible = anyChemicals;
         _window.ChemicalContentsSeparator.Visible = anyChemicals;
@@ -308,18 +308,18 @@ public sealed class HealthScannerBui : BoundUserInterface
             if (thresholdsSystem.TryGetDeadThreshold(target, out var deadThreshold))
             {
                 if (deadThreshold + 30 < target.Comp.Damage.GetTotal() && uiState.Chemicals != null
-                    && !uiState.Chemicals.ContainsReagent("CMEpinephrine", null))
+                    && !uiState.Chemicals.ContainsReagent("MCInaprovaline", null))
                 {
-                    AddAdvice(Loc.GetString("rmc-health-analyzer-advice-epinedrine"), window);
+                    AddAdvice(Loc.GetString("mc-health-analyzer-advice-inaprovaline"), window);
                 }
                 else
                 {
                     string defib = String.Empty;
                     if (deadThreshold - 20 <= target.Comp.Damage.GetTotal() &&
                         wounds != null && !hasBruteWounds && !hasBurnWounds)
-                        defib = Loc.GetString("rmc-health-analyzer-advice-defib-repeated");
+                        defib = Loc.GetString("mc-health-analyzer-advice-defib-repeated");
                     else if (deadThreshold > target.Comp.Damage.GetTotal())
-                        defib = Loc.GetString("rmc-health-analyzer-advice-defib");
+                        defib = Loc.GetString("mc-health-analyzer-advice-defib");
 
                     if (defib != String.Empty && !_skills.HasAllSkills(viewer, DefibSkill))
                         defib = $"[color=#858585]{defib}[/color]";
@@ -329,27 +329,18 @@ public sealed class HealthScannerBui : BoundUserInterface
                 }
             }
 
-            AddAdvice(Loc.GetString("rmc-health-analyzer-advice-cpr"), window);
+            AddAdvice(Loc.GetString("mc-health-analyzer-advice-cpr"), window);
         }
 
         //Surgery related
         if (_entities.TryGetComponent(target, out HolocardStateComponent? holocardComponent) &&
             holocardComponent.HolocardStatus == HolocardStatus.Xeno)
         {
-            string larvaSurgery = Loc.GetString("rmc-health-analyzer-advice-larva-surgery");
+            string larvaSurgery = Loc.GetString("mc-health-analyzer-advice-larva-surgery");
             if (!_skills.HasAllSkills(viewer, LarvaSurgerySkill))
                 larvaSurgery = $"[color=#858585]{larvaSurgery}[/color]";
-            AddAdvice(Loc.GetString("rmc-health-analyzer-advice-larva-surgery"), window);
+            AddAdvice(Loc.GetString("mc-health-analyzer-advice-larva-surgery"), window);
         }
-
-        //TODO RMC14 more surgery advice
-
-        //Wound related
-        if (hasBruteWounds)
-            AddAdvice(Loc.GetString("rmc-health-analyzer-advice-brute-wounds"), window);
-
-        if (hasBurnWounds)
-            AddAdvice(Loc.GetString("rmc-health-analyzer-advice-burn-wounds"), window);
 
         //Blood related
         if (uiState.Blood < uiState.MaxBlood)
@@ -358,14 +349,14 @@ public sealed class HealthScannerBui : BoundUserInterface
 
             if (bloodPercent < 0.85)
             {
-                string bloodpack = Loc.GetString("rmc-health-analyzer-advice-blood-pack");
+                string bloodpack = Loc.GetString("mc-health-analyzer-advice-blood-pack");
                 if (!_skills.HasAllSkills(viewer, BloodPackSkill))
                     bloodpack = $"[color=#858585]{bloodpack}[/color]";
                 AddAdvice(bloodpack, window);
             }
 
             if (bloodPercent < 0.9 && uiState.Chemicals != null && !uiState.Chemicals.ContainsReagent("Nutriment", null))
-                AddAdvice(Loc.GetString("rmc-health-analyzer-advice-food"), window);
+                AddAdvice(Loc.GetString("mc-health-analyzer-advice-food"), window);
         }
 
         //TODO RMC14 Pain related medical advice
@@ -380,27 +371,27 @@ public sealed class HealthScannerBui : BoundUserInterface
         if (airloss > 0 && !_mob.IsDead(target))
         {
             if (airloss > 10 && _mob.IsCritical(target))
-                AddAdvice(Loc.GetString("rmc-health-analyzer-advice-cpr-crit"), window);
+                AddAdvice(Loc.GetString("mc-health-analyzer-advice-cpr-crit"), window);
 
             if (airloss > 30 && uiState.Chemicals != null &&
-                !uiState.Chemicals.ContainsReagent("CMDexalin", null))
-                AddAdvice(Loc.GetString("rmc-health-analyzer-advice-dexalin"), window);
+                !uiState.Chemicals.ContainsReagent("MCDexalin", null))
+                AddAdvice(Loc.GetString("mc-health-analyzer-advice-dexalin"), window);
         }
 
         if (brute > 30 && uiState.Chemicals != null &&
-            !uiState.Chemicals.ContainsReagent("CMBicaridine", null) &&
+            !uiState.Chemicals.ContainsReagent("MCBicaridine", null) &&
             !_mob.IsDead(target))
-            AddAdvice(Loc.GetString("rmc-health-analyzer-advice-bicaridine"), window);
+            AddAdvice(Loc.GetString("mc-health-analyzer-advice-bicaridine"), window);
 
         if (burn > 30 && uiState.Chemicals != null &&
-            !uiState.Chemicals.ContainsReagent("CMKelotane", null) &&
+            !uiState.Chemicals.ContainsReagent("MCKelotane", null) &&
             !_mob.IsDead(target))
-            AddAdvice(Loc.GetString("rmc-health-analyzer-advice-kelotane"), window);
+            AddAdvice(Loc.GetString("mc-health-analyzer-advice-kelotane"), window);
 
         if (toxin > 10 && uiState.Chemicals != null &&
-            !uiState.Chemicals.ContainsReagent("CMDylovene", null) && !uiState.Chemicals.ContainsReagent("Inaprovaline", null) &&
+            !uiState.Chemicals.ContainsReagent("MCDylovene", null) && !uiState.Chemicals.ContainsReagent("Inaprovaline", null) &&
             !_mob.IsDead(target))
-            AddAdvice(Loc.GetString("rmc-health-analyzer-advice-dylovene"), window);
+            AddAdvice(Loc.GetString("mc-health-analyzer-advice-dylovene"), window);
 
         //TODO RMC14 Clone damage advice
     }
