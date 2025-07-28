@@ -24,7 +24,7 @@
   - type: UserInterface
     interfaces:
       enum.HealthScannerUIKey.Key:
-        type: HealthScannerBui
+        type: MCHealthScannerBui
   - type: HealthScanner
     sound:
       path: "/Audio/_RMC14/Medical/healthanalyzer.ogg"

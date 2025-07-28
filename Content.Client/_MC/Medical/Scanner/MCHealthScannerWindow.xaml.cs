@@ -5,9 +5,9 @@ using Robust.Client.UserInterface.XAML;
 namespace Content.Client._MC.Medical.Scanner;
 
 [GenerateTypedNameReferences]
-public sealed partial class HealthScannerWindow : DefaultWindow
+public sealed partial class MCHealthScannerWindow : DefaultWindow
 {
-    public HealthScannerWindow()
+    public MCHealthScannerWindow()
     {
         RobustXamlLoader.Load(this);
     }
