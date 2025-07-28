@@ -54,7 +54,7 @@
       entries:
       - id: MCDefibrillator
         amount: 8
-      - id: CMHealthAnalyzer
+      - id: MCHealthAnalyzer
         amount: 16
       - id: CMStasisBagFolded
         amount: 24

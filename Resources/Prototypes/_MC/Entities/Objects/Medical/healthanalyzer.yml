@@ -19,27 +19,21 @@
     heldPrefix: analyzer
     storedRotation: -90
   - type: ActivatableUI
-    key: enum.HealthAnalyzerUiKey.Key
+    key: enum.HealthScannerUIKey.Key
+    inHandsOnly: false
   - type: UserInterface
     interfaces:
       enum.HealthScannerUIKey.Key:
         type: HealthScannerBui
-  - type: ItemToggle
-    onUse: false
-  - type: HealthAnalyzer
-    scanningEndSound:
-      path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: HealthScanner
+    sound:
+      path: "/Audio/_RMC14/Medical/healthanalyzer.ogg"
+  - type: UseDelay
+    delay: 0
   - type: Tag
     tags:
-      - DiscreteHealthAnalyzer
+    - DiscreteHealthAnalyzer
   - type: Clothing
     quickEquip: false
     slots:
     - belt
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.PowerCellSlotVisuals.Enabled:
-        enum.PowerDeviceVisualLayers.Powered:
-          True: { visible: true }
-          False: { visible: false }
