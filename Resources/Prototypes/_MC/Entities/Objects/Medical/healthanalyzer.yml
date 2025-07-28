@@ -1,0 +1,45 @@
+- type: entity
+  id: MCHealthAnalyzer
+  parent: BaseItem
+  name: HF2 health analyzer
+  suffix: MC
+  description: A high-tech hand-held body scanner able to distinguish vital signs of subjects. The front panel is able to provide the readout of a subject's status.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Medical/healthanalyzer.rsi
+    state: icon
+    layers:
+      - state: icon
+      - state: analyzer
+        shader: unshaded
+        visible: true
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Item
+    size: Small
+    heldPrefix: analyzer
+    storedRotation: -90
+  - type: ActivatableUI
+    key: enum.HealthAnalyzerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.HealthScannerUIKey.Key:
+        type: HealthScannerBui
+  - type: ItemToggle
+    onUse: false
+  - type: HealthAnalyzer
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: Tag
+    tags:
+      - DiscreteHealthAnalyzer
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - belt
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerCellSlotVisuals.Enabled:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
