@@ -190,7 +190,7 @@ public sealed class HealthScannerBui : BoundUserInterface
 
                 var text = $"{reagent.Quantity.Float():F1} {prototype.LocalizedName}";
                 if (prototype.Overdose != null && reagent.Quantity > prototype.Overdose)
-                    text = $"[bold][color=red]{FormattedMessage.EscapeText(text)} OD[/color][/bold]";
+                    text = $"[bold][color=red]{FormattedMessage.EscapeText(text)} Передоз[/color][/bold]";
 
                 var label = new RichTextLabel();
                 label.SetMarkupPermissive(text);
@@ -205,7 +205,7 @@ public sealed class HealthScannerBui : BoundUserInterface
         _window.ChemicalContentsSeparator.Visible = anyChemicals;
         _window.ChemicalsContainer.Visible = anyChemicals;
 
-        _window.BloodTypeLabel.Text = "Blood:";
+        _window.BloodTypeLabel.Text = "Кровь:";
         var bloodMsg = new FormattedMessage();
         bloodMsg.PushColor(Color.FromHex("#25B732"));
 
