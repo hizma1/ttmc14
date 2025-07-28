@@ -20,7 +20,7 @@ mc-health-analyzer-advice-cpr = [color=skyblue][font="Emoji"]🫀[/font][/color]
 
 mc-health-analyzer-advice-larva-surgery = [color=purple][font="Emoji"]🫃[/font][/color] Переведите пациента на хирургический стол для проведения операции по извлечению эмбриона.
 
-mc-health-analyzer-advice-blood-pack = [color=red][font="Emoji"]🩸[/font][/color] Подключите пакет с кровью или O+ к пациенту.
+mc-health-analyzer-advice-blood-pack = [color=red][font="Emoji"]🩸[/font][/color] Подключите пакет с кровью группы O- к пациенту.
 mc-health-analyzer-advice-food = [font="Emoji"]🍕[/font] Дайте пациенту еду или порекомендуйте поесть.
 
 mc-health-analyzer-advice-cpr-crit = [color=skyblue][font="Emoji"]🫀[/font][/color] Проведите СЛР для стабилизации пациента.
