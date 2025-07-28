@@ -25,7 +25,7 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Client._RMC14.Medical.Scanner;
+namespace Content.Client._MC.Medical.Scanner;
 
 [UsedImplicitly]
 public sealed class HealthScannerBui : BoundUserInterface
