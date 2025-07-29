@@ -18,12 +18,12 @@
     sections:
     - name: Auto Injector
       entries:
-      - id: CMBicaridineAutoInjector
+      - id: MCBicaridineAutoInjector
         amount: 1
-      - id: CMKelotaneAutoInjector
+      - id: MCKelotaneAutoInjector
         amount: 1
       # tramadol
-      - id: CMTricordrazineAutoInjector
+      - id: MCTricordrazineAutoInjector
         amount: 1
       - id: MCDyloveneAutoInjector
         amount: 1
@@ -31,12 +31,12 @@
       # hypervene
     - name: Heal Pack
       entries:
-      - id: CMGauze10
+      - id: MCGauze
         amount: 2
-      - id: CMOintment10
+      - id: MCOintment
         amount: 2
       # splint
     - name: Misc
       entries:
-      - id: CMHealthAnalyzer
+      - id: MCHealthAnalyzer
         amount: 1
