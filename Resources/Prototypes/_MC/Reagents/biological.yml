@@ -1,11 +1,11 @@
 ﻿- type: reagent
   id: MCWater
   name: mc-reagent-name-water
-  parent: BaseDrink
+  parent: BaseDrink #потом поменять
   desc: mc-reagent-desc-water
   evaporationSpeed: 0.3
   absorbent: true
-  physicalDesc: reagent-physical-desc-translucent
+  physicalDesc: mc-reagent-physical-desc-translucent
   flavor: water
   color: "#0064C8"
   recognizable: true
@@ -40,3 +40,18 @@
       - !type:SatiateThirst
         factor: 4
 
+- type: reagent
+  parent: MCReagentElement
+  id: MCSugar
+  name: mc-reagent-name-sugar
+  group: Foods
+  desc: mc-reagent-desc-sugar
+  physicalDesc: mc-reagent-physical-desc-sweet
+  flavor: sweet
+  color: "FFFFFF"
+  metabolisms:
+    Food:
+      metabolismRate: 0.4
+      effects:
+      - !type:SatiateHunger #Тут нужно будет накинуть taste_multi = 1.5 который блокирует вкусы других веществ.
+        factor: 5
