@@ -1,7 +1,6 @@
 - type: entity
-  parent: CMBottleFilled
+  parent: MCBottleFilled
   id: MCBottleBicaridine
-  suffix: MC
   name: bicaridine bottle
   description: A small bottle. Contains Bicaridine - Used to treat brute damage by doctors.
   components:
@@ -17,9 +16,8 @@
       MCBicaridine: 60
 
 - type: entity
-  parent: CMBottleFilled
+  parent: MCBottleFilled
   id: MCBottleDexalin
-  suffix: MC
   name: dexalin bottle
   description: A small bottle. Contains dexalin - used to supply blood with oxygen.
   components:
@@ -35,9 +33,8 @@
       MCDexalin: 60
 
 - type: entity
-  parent: CMBottleFilled
+  parent: MCBottleFilled
   id: MCBottleKelotane
-  suffix: MC
   name: kelotane bottle
   description: A small bottle. Contains kelotane - used to treat burned areas.
   components:
@@ -53,9 +50,8 @@
       MCKelotane: 60
 
 - type: entity
-  parent: CMBottleFilled
+  parent: MCBottleFilled
   id: MCBottleDylovene
-  suffix: MC
   name: dylovene bottle
   description: A small bottle of dylovene. Used to counter poisons. Basically an anti-toxin.
   components:
@@ -71,9 +67,8 @@
       MCDylovene: 60
 
 - type: entity
-  parent: CMBottleFilled
+  parent: MCBottleFilled
   id: MCBottleInaprovaline
-  suffix: MC
   name: inaprovaline bottle
   description: A small bottle. Contains inaprovaline - used to stabilize patients.
   components:
@@ -89,9 +84,8 @@
       MCInaprovaline: 60
 
 - type: entity
-  parent: CMBottleFilled
+  parent: MCBottleFilled
   id: MCBottleTricordrazine
-  suffix: MC
   name: tricordrazine bottle
   description: A small bottle. Contains tricordrazine - used as a generic treatment for injuries.
   components:
@@ -107,9 +101,8 @@
       MCTricordrazine: 60
 
 - type: entity
-  parent: CMBottleFilled
+  parent: MCBottleFilled
   id: MCBottleImidazoline
-  suffix: MC
   name: imidazoline bottle
   description: A small bottle. Contains imidazoline - used to treat eyes.
   components:

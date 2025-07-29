@@ -1,0 +1,54 @@
+- type: entity
+  parent: [ ClothingEyesHudMedical, BaseToggleClothing ]
+  id: MCGlassesHudHealth
+  name: HealthMate HUD
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their health status.
+  components:
+  - type: Tag
+    tags:
+    - MCGlassesHudHealth
+  - type: Item
+    storedRotation: 0
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Eyes/Glasses/medicalhud.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Eyes/Glasses/medicalhud.rsi
+  - type: ItemToggle
+    activated: true
+    soundActivate:
+      path: /Audio/_RMC14/Machines/click.ogg
+      params:
+        variation: 0.250
+    soundDeactivate:
+      path: /Audio/_RMC14/Machines/click.ogg
+      params:
+        variation: 0.250
+  - type: ToggleClothing
+    action: RMCActionToggleMedhud
+  - type: ComponentToggler
+    components:
+    - type: ShowHealthBars
+      damageContainers:
+      - Biological
+    - type: HolocardScanner
+    - type: ShowHealthIcons
+      damageContainers:
+      - Biological
+  - type: RMCItemToggleClothingVisuals
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { state: icon-on }
+          False: { state: icon }
+  - type: Appearance
+  - type: ItemToggleRequiresSkill
+    skills:
+      RMCSkillMedical: 1
+  - type: ItemToggleDeactivateUnskilled
+    skills:
+      RMCSkillMedical: 1
+    popup: rmc-skills-hud-toggle
+
+- type: Tag
+  id: MCGlassesHudHealth

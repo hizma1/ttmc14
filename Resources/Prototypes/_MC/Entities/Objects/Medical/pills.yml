@@ -34,12 +34,15 @@
     price: 0
   - type: Tag
     tags:
-    - Pill
+    - MCPill
   - type: Clothing
     quickEquip: false
     slots:
     - suitstorage
   - type: RMCSmartFridgeInsertable
+
+- type: Tag
+  id: MCPill
 
 - type: entity
   parent: MCPill

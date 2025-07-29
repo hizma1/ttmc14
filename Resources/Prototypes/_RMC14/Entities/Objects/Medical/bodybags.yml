@@ -31,6 +31,7 @@
   - type: HealthScannableContainer
   - type: Tag
     tags:
+    - MCBodyBag
     - BodyBag
   - type: Clickable
   - type: InteractionOutline

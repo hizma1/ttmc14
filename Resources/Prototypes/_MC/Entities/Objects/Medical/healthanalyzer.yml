@@ -32,8 +32,11 @@
     delay: 0
   - type: Tag
     tags:
-    - DiscreteHealthAnalyzer
+    - MCHealthAnalyzer
   - type: Clothing
     quickEquip: false
     slots:
     - belt
+
+- type: Tag
+  id: MCHealthAnalyzer

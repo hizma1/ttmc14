@@ -13,4 +13,8 @@
       map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
   - type: CMAutomatedVendor
     jobs: [ MCSquadCorpsman ]
-    sections: []
+    sections:
+    - name: Tools
+      entries:
+      - id: MCGlassesHudHealth
+        points: 2

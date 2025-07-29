@@ -6,6 +6,8 @@
   components:
   - type: Tag
     tags:
+    - MCWeaponSidearm
+    - MCWeaponRevoler
     - MCWeaponRevolverR44
   - type: Sprite
     sprite: _MC/Objects/Weapons/Guns/Pistols/r44.rsi
@@ -59,11 +61,13 @@
   parent: BaseItem
   abstract: true
   components:
-  - type: Item
-    size: Small
   - type: Tag
     tags:
+    - MCMagazineSidearm
+    - MCMagazineRevoler
     - MCSpeedLoaderR44
+  - type: Item
+    size: Small
   - type: SpeedLoader
   - type: BallisticAmmoProvider
     whitelist:

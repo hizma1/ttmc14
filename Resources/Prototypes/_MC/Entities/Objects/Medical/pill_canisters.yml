@@ -3,7 +3,6 @@
   id: MCPillCanister
   name: pill bottle
   description: It's an airtight container for storing medication.
-  suffix: MC
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Chemistry/pill_canister.rsi
@@ -61,7 +60,7 @@
   - type: Appearance
   - type: Tag
     tags:
-    - PillCanister
+    - MCPillCanister
   - type: IconLabel
     textColor: White
     storedOffset: 3, 12
@@ -82,6 +81,9 @@
       - RMCBeltMedical
   - type: RMCSmartFridgeInsertable
     category: Pills
+
+- type: Tag
+  id: MCPillCanister
 
 - type: entity
   parent: MCPillCanister
