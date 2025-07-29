@@ -15,10 +15,8 @@
   criticalOverdose: 60 #parity
   metabolisms:
     Medicine:
-      metabolismRate: 1
+      metabolismRate: 1 #не нихуя не всё пуржит, потом пурж сделать ибо заеб.
       effects:
-      - !type:MCPurgeAll #parity
-        amount: 1
       - !type:Jitter
         conditions:
         - !type:ReagentThreshold
