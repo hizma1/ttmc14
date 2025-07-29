@@ -604,7 +604,7 @@ namespace Content.Shared.Preferences
 
             if (configManager.GetCVar(CCVars.RestrictedNames))
             {
-                name = RestrictedNameRegex.Replace(name, string.Empty);
+                name = RestrictedNameRegex.Replace(name, "[^А-Я,а-я,A-Z,a-z,0-9, -']");
             }
 
             if (configManager.GetCVar(CCVars.ICNameCase))
