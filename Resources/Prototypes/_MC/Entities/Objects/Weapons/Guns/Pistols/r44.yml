@@ -6,8 +6,6 @@
   components:
   - type: Tag
     tags:
-    - Sidearm
-    - RMCRevolver
     - MCWeaponRevolverR44
   - type: Sprite
     sprite: _MC/Objects/Weapons/Guns/Pistols/r44.rsi
@@ -65,8 +63,7 @@
     size: Small
   - type: Tag
     tags:
-    - RMCMagazineRevolver
-    - MCBaseSpeedLoader44
+    - MCSpeedLoaderR44
   - type: SpeedLoader
   - type: BallisticAmmoProvider
     whitelist:
@@ -108,8 +105,7 @@
   components:
   - type: Tag
     tags:
-    - Cartridge
-    - RMCCartridgeRevolver44
+    - MCCartridgeRevolver44
   - type: CartridgeAmmo
     proto: MCBulletRevolver44
 
@@ -132,9 +128,6 @@
 
 - type: Tag
   id: MCWeaponRevolverR44
-
-- type: Tag
-  id: MCBaseSpeedLoader44
 
 - type: Tag
   id: MCCartridgeRevolver44
