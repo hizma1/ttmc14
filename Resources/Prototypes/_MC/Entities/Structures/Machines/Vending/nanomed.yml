@@ -18,17 +18,18 @@
     sections:
     - name: Auto Injector
       entries:
-      - id: MCBicaridineAutoInjector
+      - id: MCAutoInjectorBicaridine
         amount: 1
-      - id: MCKelotaneAutoInjector
+      - id: MCAutoInjectorKelotane
         amount: 1
       # tramadol
-      - id: MCTricordrazineAutoInjector
+      - id: MCAutoInjectorTricordrazine
         amount: 1
-      - id: MCDyloveneAutoInjector
+      - id: MCAutoInjectorDylovene
         amount: 1
       # combat
-      # hypervene
+      - id: MCAutoInjectorHypervene
+        amount: 1
     - name: Heal Pack
       entries:
       - id: MCGauze

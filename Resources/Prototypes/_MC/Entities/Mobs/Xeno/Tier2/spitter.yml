@@ -69,3 +69,4 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: spitter
+  - type: XenoAcid

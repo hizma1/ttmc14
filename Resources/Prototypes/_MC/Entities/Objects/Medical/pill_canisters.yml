@@ -252,3 +252,27 @@
       amount: 16
   - type: IconLabel
     labelTextLocId: mc-imidazoline-container-label-text
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterHypervene
+  name: hypervene pill bottle
+  description: A purge medication used to treat overdoses and rapidly remove toxins. Causes pain and vomiting.
+  suffix: Hypervene, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 12
+  - type: Sprite
+    layers:
+    - state: pill_canister12
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillHypervene
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-hypervene-container-label-text

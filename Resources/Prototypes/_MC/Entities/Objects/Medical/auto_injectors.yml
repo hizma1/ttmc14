@@ -10,12 +10,12 @@
     layers:
     - state: autoinjector
     - state: autoinjector1
-      map: ["enum.SolutionContainerLayers.Fill"]
+      map: [ "enum.SolutionContainerLayers.Fill" ]
       visible: false
   - type: Item
     size: Small
     sprite: null
-    inhandVisuals: { }
+    inhandVisuals: {}
   - type: Hypospray
     solutionName: pen
     injectSound: /Audio/_RMC14/Medical/hypospray.ogg
@@ -56,7 +56,7 @@
 
 - type: entity
   parent: MCAutoInjector
-  id: MCDyloveneAutoInjector
+  id: MCAutoInjectorDylovene
   name: dylovene autoinjector
   description: An auto-injector loaded with 3 doses of dylovene, an anti-toxin agent useful in cases of poisoning, overdoses and toxin build-up.
   components:
@@ -75,7 +75,7 @@
 
 - type: entity
   parent: MCAutoInjector
-  id: MCKelotaneAutoInjector
+  id: MCAutoInjectorKelotane
   name: kelotane autoinjector
   description: An auto-injector loaded with 3 doses of kelotane, a common burn medicine.
   components:
@@ -94,7 +94,7 @@
 
 - type: entity
   parent: MCAutoInjector
-  id: MCBicaridineAutoInjector
+  id: MCAutoInjectorBicaridine
   name: bicaridine autoinjector
   description: An auto-injector loaded with 3 doses of bicaridine, a common brute and circulatory damage medicine.
   components:
@@ -113,7 +113,7 @@
 
 - type: entity
   parent: MCAutoInjector
-  id: MCTricordrazineAutoInjector
+  id: MCAutoInjectorTricordrazine
   name: tricordrazine autoinjector
   description: An autoinjector loaded with 3 doses of tricordrazine, a weak general use medicine for treating damage.
   components:
@@ -132,7 +132,7 @@
 
 - type: entity
   parent: MCAutoInjector
-  id: MCInaprovalineAutoInjector
+  id: MCAutoInjectorInaprovaline
   name: inaprovaline autoinjector
   description: An auto-injector loaded with 2 doses of inaprovaline, an emergency stabilization medicine for patients in critical condition.
   components:
@@ -153,7 +153,7 @@
 
 - type: entity
   parent: MCAutoInjector
-  id: MCDexalinAutoInjector
+  id: MCAutoInjectorDexalin
   name: dexalin autoinjector
   description: An auto-injector loaded with 3 doses of dexalin, a medicine that oxygenates the body helping those with respiratory issues or low blood.
   components:
@@ -172,7 +172,7 @@
 
 - type: entity
   parent: MCAutoInjector
-  id: MCImidazolineAutoInjector
+  id: MCAutoInjectorImidazoline
   name: imidazoline autoinjector
   description: An auto-injector loaded with 3 doses of imidazoline, medicine for fixing eyesight.
   components:
@@ -188,3 +188,24 @@
       MCImidazoline: 30
   - type: IconLabel
     labelTextLocId: mc-imidazoline-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorHypervene
+  name: hypervene autoinjector
+  description: An auto-injector loaded with 3 uses of hypervene, an emergency medicine that rapidly purges chems. Causes pain and vomiting.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 9
+        reagents:
+        - ReagentId: MCHypervene
+          Quantity: 9
+  - type: CMRefillableSolution
+    reagents:
+      MCHypervene: 9
+  - type: Hypospray
+    transferAmount: 3
+  - type: IconLabel
+    labelTextLocId: mc-hypervene-container-label-text
