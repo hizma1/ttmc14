@@ -16,6 +16,7 @@
     event: !type:MCXenoPsychicFlingActionEvent
   - type: XenoActionPlasma
     cost: 100
+  - type: ActionBlockIfResting
 
 - type: entity
   parent: ActionXenoBase
@@ -36,3 +37,4 @@
     event: !type:MCXenoUnrelentingForceActionEvent
   - type: XenoActionPlasma
     cost: 300
+  - type: ActionBlockIfResting

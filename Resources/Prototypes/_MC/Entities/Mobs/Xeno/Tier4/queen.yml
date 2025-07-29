@@ -45,6 +45,7 @@
     - MCActionXenoLayEgg
     - MCActionXenoToggleXenoSpitStickyResin
     - MCActionXenoBlessings
+    - MCActionXenoAcidStrong
     # Primo
     - MCActionXenoToggleChargingQueen
     hudOffset: -0.1,0.1

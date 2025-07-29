@@ -38,6 +38,7 @@
     - MCActionXenoDevolve
     - MCActionXenoPheromones
     - MCActionXenoToggleXenoSpitPraetorian
+    - MCActionXenoAcidMedium
     hudOffset: -0.15,0.25
   - type: XenoDevolve
     devolvesTo:

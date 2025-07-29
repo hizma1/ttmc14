@@ -34,3 +34,4 @@
     useDelay: 300
   - type: InstantAction
     event: !type:XenoDigTunnelActionEvent
+  - type: ActionBlockIfResting

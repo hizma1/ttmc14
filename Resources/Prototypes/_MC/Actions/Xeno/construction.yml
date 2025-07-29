@@ -23,7 +23,7 @@
   - type: Action
     itemIconStyle: NoItem
     icon:
-      sprite: _RMC14/Actions/xeno_actions.rsi
+      sprite: _MC/Interface/Actions/Xeno/legacy.rsi
       state: plant_weeds
     useDelay: 0.1
   - type: InstantAction

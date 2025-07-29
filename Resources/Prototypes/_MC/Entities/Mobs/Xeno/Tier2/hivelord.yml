@@ -49,6 +49,7 @@
     - MCActionXenoBlessings
     - MCActionXenoResinWalker
     - MCActionXenoDigTunnel
+    - MCActionXenoAcidMedium
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     actionId: MCActionXenoEvolve
