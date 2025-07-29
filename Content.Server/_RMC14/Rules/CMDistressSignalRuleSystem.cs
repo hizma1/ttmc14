@@ -29,6 +29,7 @@ using Content.Server.Station.Systems;
 using Content.Server.Stunnable;
 using Content.Server.Voting;
 using Content.Server.Voting.Managers;
+using Content.Shared._MC.Xeno.Hive.Components;
 using Content.Shared._RMC14.Areas;
 using Content.Shared._RMC14.ARES;
 using Content.Shared._RMC14.Armor.Ghillie;
@@ -1311,7 +1312,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 }
             }
 
-            if (_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(1))
+            if (_xenoEvolution.HasLiving<MCXenoHiveLeaderComponent>(1))
             {
                 distress.QueenDiedCheck = null;
                 continue;
