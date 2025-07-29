@@ -342,6 +342,13 @@ public sealed class MCHealthScannerBui : BoundUserInterface
             AddAdvice(Loc.GetString("mc-health-analyzer-advice-larva-surgery"), window);
         }
 
+        //Wound related
+        if (hasBruteWounds)
+            AddAdvice(Loc.GetString("mc-health-analyzer-advice-brute-wounds"), window);
+
+        if (hasBurnWounds)
+            AddAdvice(Loc.GetString("mc-health-analyzer-advice-burn-wounds"), window);
+
         //Blood related
         if (uiState.Blood < uiState.MaxBlood)
         {

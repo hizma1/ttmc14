@@ -19,6 +19,8 @@ mc-health-analyzer-advice-defib-repeated = [color=yellow][font="Emoji"]⚡[/font
 mc-health-analyzer-advice-cpr = [color=skyblue][font="Emoji"]🫀[/font][/color] Регулярно проводите СЛР, чтобы предотвратить смерть мозга.
 
 mc-health-analyzer-advice-larva-surgery = [color=purple][font="Emoji"]🫃[/font][/color] Переведите пациента на хирургический стол для проведения операции по извлечению эмбриона.
+mc-health-analyzer-advice-brute-wounds = [color=green][font="Emoji"]🩹[/font][/color] Используйте травматологические наборы или бинты, чтобы обработать порезанные участки.
+mc-health-analyzer-advice-burn-wounds = [color=orange][font="Emoji"]🩹[/font][/color] Используйте противоожоговые наборы или мазь, чтобы обработать обожжённые участки.
 
 mc-health-analyzer-advice-blood-pack = [color=red][font="Emoji"]🩸[/font][/color] Подключите пакет с кровью группы O- к пациенту.
 mc-health-analyzer-advice-food = [font="Emoji"]🍕[/font] Дайте пациенту еду или порекомендуйте поесть.
