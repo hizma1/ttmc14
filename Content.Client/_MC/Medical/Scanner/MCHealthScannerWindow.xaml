@@ -1,6 +1,6 @@
-<scanner:HealthScannerWindow
+<scanner:MCHealthScannerWindow
     xmlns="https://spacestation14.io"
-    xmlns:scanner="clr-namespace:Content.Client._RMC14.Medical.Scanner"
+    xmlns:scanner="clr-namespace:Content.Client._MC.Medical.Scanner"
     xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     MinSize="500 600">
@@ -8,18 +8,18 @@
         <BoxContainer Orientation="Horizontal">
             <Label Name="PatientLabel" Access="Public" />
             <Control HorizontalExpand="True" />
-            <Label Text="{Loc cm-wounds-brackets-translators-note}" />
+            <Label Text="{Loc mc-wounds-brackets-translators-note}" />
         </BoxContainer>
         <cc:HSeparator Color="#4972A1" Margin="0 0 0 5" />
         <BoxContainer Orientation="Horizontal" Margin="0 0 0 5">
-            <Label Text="Health:" MinWidth="80" Modulate="#5B88B0" />
+            <Label Text="{Loc mc-health-healthscanner}" MinWidth="80" Modulate="#5B88B0" />
             <ProgressBar Name="HealthBar" Access="Public"
                          HorizontalExpand="True">
                 <Label Name="HealthBarText" Access="Public" Align="Right" Margin="0 0 5 0" />
             </ProgressBar>
         </BoxContainer>
         <BoxContainer Orientation="Horizontal" Margin="0 0 0 20">
-            <Label Text="Damage:" MinWidth="80" Modulate="#5B88B0" />
+            <Label Text="{Loc mc-demage-healthscanner}" MinWidth="80" Modulate="#5B88B0" />
             <PanelContainer Margin="0 0 5 0">
                 <PanelContainer.PanelOverride>
                     <graphics:StyleBoxFlat BorderColor="#4972A1" BorderThickness="2" />
@@ -52,7 +52,7 @@
             </PanelContainer>
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
-            <Label Text="Holocard:" MinWidth="80" Modulate="#5B88B0" />
+            <Label Text="{Loc mc-holocard-healthscanner}" MinWidth="80" Modulate="#5B88B0" />
 			<PanelContainer Name="HolocardPanel" Access="Public" Visible="True" Margin="2 5">
 				<PanelContainer.PanelOverride>
 					<graphics:StyleBoxFlat BackgroundColor="#984A16" />
@@ -67,14 +67,14 @@
             <RichTextLabel Name="Bleeding" Access="Public" />
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
-            <Label Text="Body Temperature:" MinWidth="160" Modulate="#5B88B0" />
+            <Label Text="{Loc mc-temperature-healthscanner}" MinWidth="160" Modulate="#5B88B0" />
             <RichTextLabel Name="BodyTemperatureLabel" Access="Public" />
         </BoxContainer>
         <BoxContainer Orientation="Horizontal" Visible="False">
-            <Label Text="Pulse:" MinWidth="160" Modulate="#5B88B0" />
+            <Label Text="{Loc mc-pulse-healthscanner}" MinWidth="160" Modulate="#5B88B0" />
             <RichTextLabel Name="PulseLabel" Access="Public" />
         </BoxContainer>
-        <Label Name="ChemicalContentsLabel" Access="Public" Text="Chemical Contents" Margin="0 20 0 0" />
+        <Label Name="ChemicalContentsLabel" Access="Public" Text="{Loc mc-container-healthscanner}" Margin="0 20 0 0" />
         <cc:HSeparator Name="ChemicalContentsSeparator" Access="Public" Color="#4972A1" Margin="0 0 0 5" />
         <BoxContainer Orientation="Vertical">
             <PanelContainer Name="UnknownChemicalsPanel" Access="Public" Visible="False" Margin="0 5">
@@ -85,10 +85,10 @@
             </PanelContainer>
             <BoxContainer Name="ChemicalsContainer" Access="Public" Orientation="Vertical" />
         </BoxContainer>
-        <Label Name="MedicalAdviceLabel" Access="Public" Text="Medical Advice" Margin="0 20 0 0" />
+        <Label Name="MedicalAdviceLabel" Access="Public" Text="{Loc mc-medical-advice-healthscanner}" Margin="0 20 0 0" />
         <cc:HSeparator Name="MedicalAdviceSeparator" Access="Public" Color="#4972A1" Margin="0 0 0 5" />
         <BoxContainer Orientation="Vertical">
             <BoxContainer Name="AdviceContainer" Access="Public" Orientation="Vertical" />
         </BoxContainer>
     </BoxContainer>
-</scanner:HealthScannerWindow>
+</scanner:MCHealthScannerWindow>
