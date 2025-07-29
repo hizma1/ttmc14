@@ -263,3 +263,57 @@
           groups:
             Burn: 1
             Toxin: 2
+
+- type: reagent
+  parent: CMReagentMedicine
+  id: MCHypervene
+  name: reagent-name-mc-hypervene
+  group: Medicine
+  desc: reagent-desc-mc-hypervene
+  physicalDesc: reagent-physical-desc-opaque
+  flavor: medicine
+  color: "#a76d32"
+  overdose: 15
+  criticalOverdose: 25
+  metabolisms:
+    Medicine:
+      metabolismRate: 1
+      effects:
+      - !type:MCPurgeAll
+        amount: 5
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 0
+          max: 15
+        probability: 0.05
+      # Overdose
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+          max: 25
+        damage:
+          groups:
+            Brute: 1
+            Burn: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+          max: 25
+        probability: 0.1
+      # Critical overdose
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+        damage:
+          groups:
+            Brute: 2
+            Burn: 2
+      - !type:ChemVomit
+          conditions:
+          - !type:ReagentThreshold
+            min: 25
+          probability: 0.5

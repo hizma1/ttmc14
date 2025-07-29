@@ -116,3 +116,20 @@
   - type: CMRefillableSolution
     reagents:
       MCImidazoline: 60
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleHypervene
+  name: hypervene bottle
+  description: A very small bottle. Contains Hypervene - A purge chem for flushing toxins. Causes pain and vomiting.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 10
+        reagents:
+        - ReagentId: MCHypervene
+          Quantity: 10
+  - type: CMRefillableSolution
+    reagents:
+      MCHypervene: 10

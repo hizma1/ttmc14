@@ -25,19 +25,20 @@
       - id: MCPillCanister
     - name: Auto Injector
       entries:
-      - id: MCBicaridineAutoInjector
-      - id: MCKelotaneAutoInjector
+      - id: MCAutoInjectorBicaridine
+      - id: MCAutoInjectorKelotane
       # tramadol
-      - id: MCTricordrazineAutoInjector
-      - id: MCDyloveneAutoInjector
+      - id: MCAutoInjectorTricordrazine
+      - id: MCAutoInjectorDylovene
       # combat
       # isotonic
-      - id: MCInaprovalineAutoInjector
+      - id: MCAutoInjectorInaprovaline
       # oxycodone = 30
       # spaceacillin = 20
-      # hypervene = 20
+      - id: MCAutoInjectorHypervene
+        amount: 20
       # alkysine = 20
-      - id: MCImidazolineAutoInjector
+      - id: MCAutoInjectorImidazoline
         amount: 20
       # quickclot = 10
       # medicalnanites = 20

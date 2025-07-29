@@ -27,12 +27,12 @@ public sealed partial class MCPurgeAll : EntityEffect
         if (reagentArgs.Reagent is not { } reagent)
             return;
 
-        foreach (var quantity in source.Contents)
+        foreach (var quantity in new List<ReagentQuantity>(source.Contents))
         {
             if (reagent.ID == quantity.Reagent.Prototype)
                 continue;
 
-            source.RemoveReagent(quantity.Reagent, -Amount);
+            source.RemoveReagent(quantity.Reagent, Amount);
         }
     }
 }
