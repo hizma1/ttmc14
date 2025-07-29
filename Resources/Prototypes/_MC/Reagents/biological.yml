@@ -5,7 +5,7 @@
   desc: mc-reagent-desc-water
   evaporationSpeed: 0.3
   absorbent: true
-  physicalDesc: mc-reagent-physical-desc-translucent
+  physicalDesc: mc-reagent-physical-desc-liquid
   flavor: water
   color: "#0064C8"
   recognizable: true
@@ -17,6 +17,12 @@
     Medicine:
       metabolismRate: 1 #не нихуя не всё пуржит, потом пурж сделать ибо заеб.
       effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
       - !type:Jitter
         conditions:
         - !type:ReagentThreshold
@@ -24,17 +30,11 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
-          min: 60
-        damage:
-          types:
-            Asphyxiation: 0.2 # применим логику 1.5 литра за раз (тяжело дышать)
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
           min: 120
         damage:
           types:
-            Asphyxiation: 5 # применим логику что у чел пьёт 3 литра воды за раз
+            Asphyxiation: 5 # применим логику, 3 литра за раз это смерть
+
     Drink:
       effects:
       - !type:SatiateThirst

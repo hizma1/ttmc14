@@ -1,1 +1,125 @@
-﻿
+﻿- type: reagent
+  parent: MCReagentElement
+  id: MCIron
+  name: mc-reagent-name-iron
+  desc: mc-reagent-desc-iron
+  physicalDesc: mc-reagent-physical-desc-metallic
+  flavor: metallic
+  color: "#C8A5DC"
+  overdose: 30
+  criticalOverdose: 60
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 1
+            Burn: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        damage:
+          groups:
+            Toxin: 1
+            Burn: 1
+
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCLithium
+  name: mc-reagent-name-lithium
+  desc: mc-reagent-desc-lithium
+  physicalDesc: mc-reagent-physical-desc-solid
+  flavor: metallic
+  color: "#808080"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        damage:
+          groups:
+            Toxin: 2
+      - !type:Emote
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        emote: Scream
+        probability: 0.05
+      - !type:Emote
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        emote: Laugh
+        probability: 0.05
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 45 # именно где-то на этой цифре и начинается рвота
+        probability: 0.3
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCGold #*счастливые звуки нихуянеделания*
+  name: mc-reagent-name-gold
+  desc: mc-reagent-desc-gold
+  physicalDesc: mc-reagent-physical-desc-shiny
+  flavor: metallic
+  color: "#F7C430"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCSilver #*счастливые звуки нихуянеделания*
+  name: mc-reagent-name-silver
+  desc: mc-reagent-desc-silver
+  physicalDesc: mc-reagent-physical-desc-shiny
+  flavor: metallic
+  color: "#D0D0D0"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCSodium
+  name: mc-reagent-name-sodium
+  desc: mc-reagent-desc-sodium
+  physicalDesc: mc-reagent-physical-desc-salty
+  flavor: metallic
+  color: "#808080"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.05
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCPhosphorus
+  name: mc-reagent-name-phosphorus
+  desc: mc-reagent-desc-phosphorus
+  physicalDesc: mc-reagent-physical-desc-vinegary
+  flavor: acidic
+  color: "#832828"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.05

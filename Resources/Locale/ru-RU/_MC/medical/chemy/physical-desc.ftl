@@ -97,3 +97,6 @@ mc-reagent-physical-desc-slimy = склизкий
 mc-reagent-physical-desc-neural = нейтральный
 mc-reagent-physical-desc-unidentifiable = неидентифицируемый
 mc-reagent-physical-desc-non-newtonian = неньютоновский
+mc-reagent-physical-desc-solid = твердый
+mc-reagent-physical-desc-liquid = жидкий
+mc-reagent-physical-desc-vinegary = уксусный
