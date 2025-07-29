@@ -1,8 +1,8 @@
 ﻿- type: reagent
-  id: Water
-  name: reagent-name-water
+  id: MCWater
+  name: mc-reagent-name-water
   parent: BaseDrink
-  desc: reagent-desc-water
+  desc: mc-reagent-desc-water
   evaporationSpeed: 0.3
   absorbent: true
   physicalDesc: reagent-physical-desc-translucent
@@ -12,20 +12,33 @@
   boilingPoint: 100.0
   meltingPoint: 0.0
   friction: 0.4
+  criticalOverdose: 60 #parity
   metabolisms:
+    Medicine:
+      metabolismRate: 1
+      effects:
+      - !type:MCPurgeAll #parity
+        amount: 1
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        damage:
+          types:
+            Asphyxiation: 0.2 # применим логику 1.5 литра за раз (тяжело дышать)
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 120
+        damage:
+          types:
+            Asphyxiation: 5 # применим логику что у чел пьёт 3 литра воды за раз
     Drink:
       effects:
       - !type:SatiateThirst
         factor: 4
-    Gas:
-      effects:
-      - !type:HealthChange
-        scaleByQuantity: true
-        ignoreResistances: true
-        conditions:
-        - !type:OrganType
-          type: Slime
-          shouldHave: true
-        damage:
-          types:
-            Heat: 3
+
