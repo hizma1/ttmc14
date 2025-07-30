@@ -32,9 +32,6 @@ public abstract class SharedMCChemistrySystem : EntitySystem
 
     public override void Initialize()
     {
-
-        SubscribeLocalEvent<MCSolutionSyncComponent, ComponentGetState>(OnMCSolutionGetState);
-
         SubscribeLocalEvent<MCDetailedExaminableSolutionComponent, ExaminedEvent>(OnDetailedSolutionExamined);
 
         SubscribeLocalEvent<MCChemicalDispenserComponent, MapInitEvent>(OnDispenserMapInit);
@@ -57,15 +54,6 @@ public abstract class SharedMCChemistrySystem : EntitySystem
                 subs.Event<MCChemicalDispenserEjectBeakerBuiMsg>(OnChemicalDispenserEjectBeakerMsg);
                 subs.Event<MCChemicalDispenserDispenseBuiMsg>(OnChemicalDispenserDispenseMsg);
             });
-    }
-
-    private void OnMCSolutionGetState(Entity<MCSolutionSyncComponent> ent, ref ComponentGetState args)
-    {
-        if (!_solution.TryGetSolution(ent, ent.Comp.Solution, out _, out var solution))
-            return;
-
-        var reagents = solution.Contents.Select(r => new ReagentQuantity(r.Reagent, r.Quantity)).ToArray();
-        args.State = new MCSolutionSyncComponentState(reagents, solution.Volume, solution.MaxVolume);
     }
 
     private void OnDetailedSolutionExamined(Entity<MCDetailedExaminableSolutionComponent> ent, ref ExaminedEvent args)
