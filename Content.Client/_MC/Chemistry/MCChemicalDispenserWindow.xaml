@@ -1,6 +1,6 @@
-﻿<controls:RMCChemicalDispenserWindow
+﻿<controls:MCChemicalDispenserWindow
     xmlns="https://spacestation14.io"
-    xmlns:controls="clr-namespace:Content.Client._RMC14.Chemistry"
+    xmlns:controls="clr-namespace:Content.Client._MC.Chemistry"
     xmlns:ui="clr-namespace:Content.Client._RMC14.UserInterface"
     Title="Chemical Dispenser" MinSize="470 550">
     <BoxContainer Orientation="Vertical">
@@ -38,4 +38,4 @@
             <BoxContainer Name="BeakerContents" Access="Public" Orientation="Vertical" />
         </BoxContainer>
     </BoxContainer>
-</controls:RMCChemicalDispenserWindow>
+</controls:MCChemicalDispenserWindow>

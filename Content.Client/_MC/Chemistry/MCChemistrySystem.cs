@@ -1,4 +1,4 @@
-﻿using Content.Shared._RMC14.Chemistry;
+﻿using Content.Shared._MC.Chemistry;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 
@@ -29,13 +29,13 @@ public sealed class MCChemistryUISystem : SharedMCChemistrySystem
 
             foreach (var bui in ui.ClientOpenInterfaces.Values)
             {
-                if (bui is RMCChemicalDispenserBui dispenserUi)
+                if (bui is MCChemicalDispenserBui dispenserUi)
                     dispenserUi.Refresh();
             }
         }
         catch (Exception e)
         {
-            Log.Error($"Error refreshing {nameof(RMCChemicalDispenserBui)}\n{e}");
+            Log.Error($"Error refreshing {nameof(MCChemicalDispenserBui)}\n{e}");
         }
     }
 
