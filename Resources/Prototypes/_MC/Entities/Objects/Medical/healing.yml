@@ -127,7 +127,8 @@
     noWoundsOnUserPopup: cm-wounds-already-treated-self-popup
     noWoundsOnTargetPopup: cm-wounds-already-treated-target-popup
   - type: MedicallyUnskilledDoAfter
-    doAfter: 0.5
+    doAfter: 2
+    min: 2 # это и так решает итог битвы, поставил побольше.
   - type: Stack
     stackType: MCGauze
     count: 40
@@ -176,6 +177,9 @@
       params:
         volume: 1.0
         variation: 0.125
+  - type: MedicallyUnskilledDoAfter
+    min: 1
+    doAfter: 8 # Parity
   - type: Sprite
     state: traumakit
   - type: Item
@@ -229,6 +233,9 @@
     state: burnkit
   - type: Item
     heldPrefix: burnkit
+  - type: MedicallyUnskilledDoAfter
+    min: 1
+    doAfter: 8 # Parity
 
 - type: Tag
   id: MCBurnKit

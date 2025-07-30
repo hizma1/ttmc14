@@ -7,7 +7,7 @@
   flavor: metallic
   color: "#C8A5DC"
   overdose: 30
-  criticalOverdose: 60
+  criticalOverdose: 50
   metabolisms:
     Medicine:
       metabolismRate: 0.2
@@ -23,12 +23,11 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
-          min: 60
+          min: 50
         damage:
           groups:
             Toxin: 1
             Burn: 1
-
 
 - type: reagent
   parent: MCReagentElement
@@ -54,7 +53,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
-          min: 60
+          min: 50
         damage:
           groups:
             Toxin: 2
@@ -86,6 +85,8 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: alcohol
   color: "#404030"
+  overdose: 60
+  criticalOverdose: 100
   metabolisms:
     Alcohol:
       metabolismRate: 0.65
@@ -113,6 +114,124 @@
           min: 100
         probability: 0.25 # Liver damage, а ещё выпивка должна вызывать заблуждение, но пока у нас нету механики заблуждений.
 
+- type: reagent
+  parent: MCReagentElement
+  id: MCRadium
+  name: mc-reagent-name-radium
+  desc: mc-reagent-desc-radium
+  physicalDesc: mc-reagent-physical-desc-glowing
+  flavor: metallic
+  color: "#C7C7C7"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:GenericStatusEffect
+        key: StaminaModifier
+        component: StaminaModifier
+        time: 1
+        type: Remove
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCFluorine
+  name: mc-reagent-name-fluorine
+  desc: mc-reagent-desc-fluorine
+  physicalDesc: mc-reagent-physical-desc-acrid
+  flavor: acid
+  color: "#808080"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+        - !type:HealthChange
+          damage:
+            groups:
+              Toxin: 0.5
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 30
+          damage:
+            groups:
+              Toxin: 1
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 50
+          damage:
+            groups:
+              Toxin: 1
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCChlorine
+  name: mc-reagent-name-chlorine
+  desc: mc-reagent-desc-chlorine
+  physicalDesc: mc-reagent-physical-desc-acrid
+  flavor: bitter
+  color: "#808080"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 30
+          damage:
+            groups:
+              Toxin: 1
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentThreshold
+              min: 50
+          damage:
+            groups:
+              Toxin: 1
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCMercury
+  name: mc-reagent-name-mercury
+  desc: mc-reagent-desc-mercury
+  physicalDesc: mc-reagent-physical-desc-liquid
+  flavor: metallic
+  color: "#DB5008"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+        - !type:GenericStatusEffect # Braind Damaged
+          key: Stutter
+          component: ScrambledAccent
+        - !type:Jitter
+        - !type:Emote
+          showInChat: false
+          emote: Laugh
+          probability: 0.05
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCSulphuricAcid
+  name: mc-reagent-name-sulphuric-acid
+  desc: mc-reagent-desc-sulphuric-acid
+  physicalDesc: mc-reagent-physical-desc-acid
+  flavor: acid
+  color: "#808000"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.13
+      effects:
+        - !type:HealthChange
+          damage:
+            groups:
+              Toxin: 0.5
+              Burn: 1
 
 # Misc elements (потому что не интересно нихуя)
 - type: reagent
@@ -282,3 +401,4 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+

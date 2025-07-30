@@ -1,7 +1,7 @@
 ﻿- type: reagent
   id: MCWater
   name: mc-reagent-name-water
-  parent: BaseDrink #потом поменять
+  parent: BaseDrink # похуй короче
   desc: mc-reagent-desc-water
   evaporationSpeed: 0.3
   absorbent: true
@@ -34,7 +34,6 @@
         damage:
           types:
             Asphyxiation: 5 # применим логику, 3 литра за раз это смерть
-
     Drink:
       effects:
       - !type:SatiateThirst
