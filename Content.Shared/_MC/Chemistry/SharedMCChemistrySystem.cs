@@ -32,6 +32,9 @@ public abstract class SharedMCChemistrySystem : EntitySystem
 
     public override void Initialize()
     {
+        SubscribeLocalEvent<SolutionComponent, ComponentGetState>(OnSolutionGetState);
+        SubscribeLocalEvent<SolutionComponent, ComponentHandleState>(OnSolutionHandleState);
+
         SubscribeLocalEvent<MCDetailedExaminableSolutionComponent, ExaminedEvent>(OnDetailedSolutionExamined);
 
         SubscribeLocalEvent<MCChemicalDispenserComponent, MapInitEvent>(OnDispenserMapInit);
@@ -54,6 +57,20 @@ public abstract class SharedMCChemistrySystem : EntitySystem
                 subs.Event<MCChemicalDispenserEjectBeakerBuiMsg>(OnChemicalDispenserEjectBeakerMsg);
                 subs.Event<MCChemicalDispenserDispenseBuiMsg>(OnChemicalDispenserDispenseMsg);
             });
+    }
+
+    private void OnSolutionGetState(Entity<SolutionComponent> ent, ref ComponentGetState args)
+    {
+        var s = new Solution(ent.Comp.Solution, _prototypes);
+        args.State = new SolutionComponentState(s);
+    }
+
+    private void OnSolutionHandleState(Entity<SolutionComponent> ent, ref ComponentHandleState args)
+    {
+        if (args.Current is not SolutionComponentState s)
+            return;
+
+        ent.Comp.Solution = new Solution(s.Solution, _prototypes);
     }
 
     private void OnDetailedSolutionExamined(Entity<MCDetailedExaminableSolutionComponent> ent, ref ExaminedEvent args)
