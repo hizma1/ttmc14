@@ -61,7 +61,7 @@ public abstract class SharedMCChemistrySystem : EntitySystem
 
     private void OnMCSolutionGetState(Entity<MCSolutionSyncComponent> ent, ref ComponentGetState args)
     {
-        if (!_solution.TryGetSolution(ent.Owner, ent.Comp.Solution, out _, out var solution))
+        if (!_solution.TryGetSolution(ent, ent.Comp.Solution, out _, out var solution))
             return;
 
         var reagents = solution.Contents.Select(r => new ReagentQuantity(r.Reagent, r.Quantity)).ToArray();
