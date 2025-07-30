@@ -20,7 +20,7 @@
         - MachineLayer
   - type: Clickable
   - type: InteractionOutline
-  - type: RMCChemicalDispenser
+  - type: MCChemicalDispenser
   - type: ApcPowerReceiver
     needsPower: false # TODO RMC14
     powerLoad: 0
@@ -40,9 +40,9 @@
   - type: UserInterface
     interfaces:
       enum.RMCChemicalDispenserUi.Key:
-        type: RMCChemicalDispenserBui
+        type: MCChemicalDispenserBui
   - type: ActivatableUI
-    key: enum.RMCChemicalDispenserUi.Key
+    key: enum.MCChemicalDispenserUi.Key
   - type: InteractedBlacklist
     blacklist:
       components:
@@ -72,7 +72,7 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
-  - type: RMCChemicalDispenser
+  - type: MCChemicalDispenser
     network: MCChemDispenserGround
   - type: Machine
     board: CMCircuitboardDispenserChem
@@ -93,7 +93,7 @@
   id: MCChemDispenserGround
   suffix: MC, Ground
   components:
-  - type: RMCChemicalDispenser
+  - type: MCChemicalDispenser
     network: MCChemStorageGround
 
 - type: entity
@@ -101,7 +101,7 @@
   id: MCChemDispenserMedbay
   suffix: MC, Medbay
   components:
-  - type: RMCChemicalDispenser
+  - type: MCChemicalDispenser
     network: MCChemStorageMedbay
 
 - type: entity
@@ -109,7 +109,7 @@
   id: MCChemDispenserResearch
   suffix: MC, Research
   components:
-  - type: RMCChemicalDispenser
+  - type: MCChemicalDispenser
     network: MCChemStorageResearch
 
 - type: entity
@@ -195,7 +195,7 @@
       enum.PowerDeviceVisuals.Powered:
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
-  - type: RMCChemicalDispenser
+  - type: MCChemicalDispenser
     network: MCChemStorageGround
     reagents:
       - CMBicaridine
@@ -212,5 +212,5 @@
   id: MCChemDispenserCorpsmanMedbay
   suffix: MC, Medbay
   components:
-  - type: RMCChemicalDispenser
+  - type: MCChemicalDispenser
     network: MCChemStorageGround
