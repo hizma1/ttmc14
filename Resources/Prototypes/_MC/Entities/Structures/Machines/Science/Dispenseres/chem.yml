@@ -198,14 +198,13 @@
   - type: MCChemicalDispenser
     network: MCChemStorageGround
     reagents:
-      - CMBicaridine
-      - CMKelotane
-      - CMDylovene
-      - CMDexalin
-      - CMDexalinPlus
-      - CMInaprovaline
-      - CMEpinephrine
-      - CMTricordrazine
+      - MCBicaridine
+      - MCKelotane
+      - MCDylovene
+      - MCDexalin
+      #- MCDexalinPlus
+      - MCInaprovaline
+      - MCTricordrazine
 
 - type: entity
   parent: MCChemDispenserCorpsmanBase
