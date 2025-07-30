@@ -356,21 +356,6 @@
 
 - type: reagent
   parent: MCReagentElement
-  id: MCPotassium #*счастливые звуки нихуянеделания*
-  name: mc-reagent-name-potassium
-  desc: mc-reagent-desc-potassium
-  physicalDesc: mc-reagent-physical-desc-alkaline
-  color: "#A0A0A0"
-  flavor: sweet
-  metabolisms:
-    Medicine:
-      metabolismRate: 0.05
-      effects:
-      - !type:ChemVomit
-        probability: 0
-
-- type: reagent
-  parent: MCReagentElement
   id: MCAluminum #*счастливые звуки нихуянеделания*
   name: mc-reagent-name-aluminum
   desc: mc-reagent-desc-aluminum

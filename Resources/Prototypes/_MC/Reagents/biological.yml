@@ -48,7 +48,7 @@
   desc: mc-reagent-desc-sugar
   physicalDesc: mc-reagent-physical-desc-sweet
   flavor: sweet
-  color: "FFFFFF"
+  color: "#ffffff"
   metabolisms:
     Food:
       metabolismRate: 0.4

@@ -91,7 +91,7 @@
 - type: entity
   parent: MCChemDispenserBase
   id: MCChemDispenserGround
-  suffix: Ground
+  suffix: MC, Ground
   components:
   - type: RMCChemicalDispenser
     network: MCChemStorageGround
@@ -99,15 +99,15 @@
 - type: entity
   parent: MCChemDispenserBase
   id: MCChemDispenserMedbay
-  suffix: Medbay
+  suffix: MC, Medbay
   components:
   - type: RMCChemicalDispenser
     network: MCChemStorageMedbay
 
 - type: entity
   parent: MCChemDispenserBase
-  id: RMCChemDispenserResearch
-  suffix: Research
+  id: MCChemDispenserResearch
+  suffix: MC, Research
   components:
   - type: RMCChemicalDispenser
     network: MCChemStorageResearch
@@ -144,7 +144,7 @@
 - type: entity
   parent: MCChemStorageBase
   id: MCChemStorageGround
-  suffix: Ground
+  suffix: MC, Ground
   components:
   - type: RMCChemicalStorage
     network: MCChemStorageGround
@@ -152,7 +152,7 @@
 - type: entity
   parent: MCChemStorageBase
   id: MCChemStorageMedbay
-  suffix: Medbay
+  suffix: MC, Medbay
   components:
   - type: RMCChemicalStorage
     network: MCChemStorageMedbay
@@ -160,7 +160,7 @@
 - type: entity
   parent: MCChemStorageBase
   id: MCChemStorageResearch
-  suffix: Research
+  suffix: MC, Research
   components:
   - type: RMCChemicalStorage
     network: MCChemStorageResearch
@@ -210,7 +210,7 @@
 - type: entity
   parent: MCChemDispenserCorpsmanBase
   id: MCChemDispenserCorpsmanMedbay
-  suffix: Medbay
+  suffix: MC, Medbay
   components:
   - type: RMCChemicalDispenser
     network: MCChemStorageGround
