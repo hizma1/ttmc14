@@ -27,10 +27,10 @@ public sealed partial class MCChemicalDispenserComponent : Component
     [DataField, AutoNetworkedField]
     public ProtoId<ReagentPrototype>[] Reagents =
     [
-        "RMCAluminum", "RMCCarbon", "RMCChlorine", "RMCCopper", "RMCEthanol", "RMCFluorine",
-        "RMCHydrogen", "RMCIron", "RMCLithium", "RMCMercury", "RMCNitrogen", "RMCOxygen",
-        "RMCPhosphorus", "RMCPotassium", "RMCRadium", "RMCSilicon", "RMCSodium", "RMCSugar",
-        "RMCSulfur", "RMCSulphuricAcid", "Water",
+        "MCAluminum", "MCCarbon", "MCChlorine", "MCCopper", "MCEthanol", "MCFluorine",
+        "MCHydrogen", "MCIron", "MCLithium", "MCMercury", "MCNitrogen", "MCOxygen",
+        "MCPhosphorus", "MCPotassium", "MCRadium", "MCSilicon", "MCSodium", "MCSugar",
+        "MCSulfur", "MCSulphuricAcid", "MCWater",
     ];
 
     [DataField, AutoNetworkedField]
