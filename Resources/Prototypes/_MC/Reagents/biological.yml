@@ -12,7 +12,8 @@
   boilingPoint: 100.0
   meltingPoint: 0.0
   friction: 0.4
-  criticalOverdose: 60 #parity
+  overdose: 60
+  criticalOverdose: 120 #parity
   metabolisms:
     Medicine:
       metabolismRate: 1 #не нихуя не всё пуржит, потом пурж сделать ибо заеб.
