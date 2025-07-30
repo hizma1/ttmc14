@@ -6,8 +6,8 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Shared._MC.Chemistry;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState, AutoGenerateComponentPause]
-[Access(typeof(SharedRMCChemistrySystem))]
-public sealed partial class RMCChemicalStorageComponent : Component
+[Access(typeof(SharedMCChemistrySystem))]
+public sealed partial class MCChemicalStorageComponent : Component
 {
     [DataField, AutoNetworkedField]
     public FixedPoint2 Energy = 50;

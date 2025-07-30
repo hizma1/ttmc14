@@ -3,11 +3,11 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._RMC14.Chemistry;
+namespace Content.Shared._MC.Chemistry;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
-[Access(typeof(SharedRMCChemistrySystem))]
-public sealed partial class RMCChemicalDispenserComponent : Component
+[Access(typeof(SharedMCChemistrySystem))]
+public sealed partial class MCChemicalDispenserComponent : Component
 {
     [DataField, AutoNetworkedField]
     public FixedPoint2 Energy;

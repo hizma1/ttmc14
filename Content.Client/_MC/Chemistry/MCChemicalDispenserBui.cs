@@ -15,17 +15,17 @@ using Robust.Shared.Utility;
 namespace Content.Client._MC.Chemistry;
 
 [UsedImplicitly]
-public sealed class RMCChemicalDispenserBui : BoundUserInterface
+public sealed class MCChemicalDispenserBui : BoundUserInterface
 {
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
 
-    private RMCChemicalDispenserWindow? _window;
+    private MCChemicalDispenserWindow? _window;
 
     private readonly ContainerSystem _container;
     private readonly SolutionContainerSystem _solution;
     private readonly List<(Button Button, FixedPoint2 Amount)> _dispenseButtons = new();
 
-    public RMCChemicalDispenserBui(EntityUid owner, Enum uiKey) : base(owner, uiKey)
+    public MCChemicalDispenserBui(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
         _container = EntMan.System<ContainerSystem>();
         _solution = EntMan.System<SolutionContainerSystem>();
@@ -34,10 +34,10 @@ public sealed class RMCChemicalDispenserBui : BoundUserInterface
     protected override void Open()
     {
         base.Open();
-        _window = this.CreateWindow<RMCChemicalDispenserWindow>();
-        _window.EjectBeakerButton.OnPressed += _ => SendPredictedMessage(new RMCChemicalDispenserEjectBeakerBuiMsg());
+        _window = this.CreateWindow<MCChemicalDispenserWindow>();
+        _window.EjectBeakerButton.OnPressed += _ => SendPredictedMessage(new MCChemicalDispenserEjectBeakerBuiMsg());
 
-        if (EntMan.TryGetComponent(Owner, out RMCChemicalDispenserComponent? dispenser))
+        if (EntMan.TryGetComponent(Owner, out MCChemicalDispenserComponent? dispenser))
         {
             for (var i = 0; i < dispenser.Reagents.Length; i += 3)
             {
@@ -55,7 +55,7 @@ public sealed class RMCChemicalDispenserBui : BoundUserInterface
                         reagentButton.Label.AddStyleClass("CMAlignLeft");
 
                         reagentButton.OnPressed += _ =>
-                            SendPredictedMessage(new RMCChemicalDispenserDispenseBuiMsg(reagentId));
+                            SendPredictedMessage(new MCChemicalDispenserDispenseBuiMsg(reagentId));
 
                         row.AddChild(reagentButton);
                     }
@@ -81,7 +81,7 @@ public sealed class RMCChemicalDispenserBui : BoundUserInterface
                     Pressed = dispenser.DispenseSetting == setting,
                 };
                 dispenseButton.OnPressed += _ =>
-                    SendPredictedMessage(new RMCChemicalDispenserDispenseSettingBuiMsg(setting));
+                    SendPredictedMessage(new MCChemicalDispenserDispenseSettingBuiMsg(setting));
                 _window.DispenseContainer.AddChild(dispenseButton);
                 _dispenseButtons.Add((dispenseButton, setting));
 
@@ -93,7 +93,7 @@ public sealed class RMCChemicalDispenserBui : BoundUserInterface
                     Margin = new Thickness(0, 0, 0, 3),
                 };
                 beakerButton.OnPressed += _ =>
-                    SendPredictedMessage(new RMCChemicalDispenserBeakerBuiMsg(setting));
+                    SendPredictedMessage(new MCChemicalDispenserBeakerBuiMsg(setting));
                 _window.BeakerContainer.AddChild(beakerButton);
             }
         }
@@ -106,7 +106,7 @@ public sealed class RMCChemicalDispenserBui : BoundUserInterface
         if (_window is not { IsOpen: true })
             return;
 
-        if (!EntMan.TryGetComponent(Owner, out RMCChemicalDispenserComponent? dispenser))
+        if (!EntMan.TryGetComponent(Owner, out MCChemicalDispenserComponent? dispenser))
             return;
 
         var max = dispenser.MaxEnergy;

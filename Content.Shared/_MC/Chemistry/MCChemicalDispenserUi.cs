@@ -3,31 +3,31 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._RMC14.Chemistry;
+namespace Content.Shared._MC.Chemistry;
 
 [Serializable, NetSerializable]
-public enum RMCChemicalDispenserUi
+public enum MCChemicalDispenserUi
 {
     Key,
 }
 
 [Serializable, NetSerializable]
-public sealed class RMCChemicalDispenserDispenseSettingBuiMsg(FixedPoint2 amount) : BoundUserInterfaceMessage
+public sealed class MCChemicalDispenserDispenseSettingBuiMsg(FixedPoint2 amount) : BoundUserInterfaceMessage
 {
     public readonly FixedPoint2 Amount = amount;
 }
 
 [Serializable, NetSerializable]
-public sealed class RMCChemicalDispenserBeakerBuiMsg(FixedPoint2 amount) : BoundUserInterfaceMessage
+public sealed class MCChemicalDispenserBeakerBuiMsg(FixedPoint2 amount) : BoundUserInterfaceMessage
 {
     public readonly FixedPoint2 Amount = amount;
 }
 
 [Serializable, NetSerializable]
-public sealed class RMCChemicalDispenserEjectBeakerBuiMsg : BoundUserInterfaceMessage;
+public sealed class MCChemicalDispenserEjectBeakerBuiMsg : BoundUserInterfaceMessage;
 
 [Serializable, NetSerializable]
-public sealed class RMCChemicalDispenserDispenseBuiMsg(ProtoId<ReagentPrototype> reagent) : BoundUserInterfaceMessage
+public sealed class MCChemicalDispenserDispenseBuiMsg(ProtoId<ReagentPrototype> reagent) : BoundUserInterfaceMessage
 {
     public readonly ProtoId<ReagentPrototype> Reagent = reagent;
 }
