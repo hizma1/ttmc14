@@ -245,6 +245,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.2
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -257,6 +260,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.2
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -269,6 +275,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -281,6 +290,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -293,6 +305,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -305,6 +320,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -317,6 +335,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -329,17 +350,24 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
   id: MCPotassium #*счастливые звуки нихуянеделания*
   name: mc-reagent-name-potassium
   desc: mc-reagent-desc-potassium
+  physicalDesc: mc-reagent-physical-desc-alkaline
   color: "#A0A0A0"
   flavor: sweet
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -352,6 +380,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.2
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -364,6 +395,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -375,8 +409,11 @@
   color: "#1C1300"
   metabolisms:
     Medicine:
-      metabolismRate: 0.05 # Важное замечание, у нас нету механики создания грязного пола или торфа/турфа
-                           # я хз короче тупо по механу он как-то пол грязный делает на ТГМС13
+      metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
+
 
 - type: reagent
   parent: MCReagentElement
@@ -389,6 +426,9 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0
 
 - type: reagent
   parent: MCReagentElement
@@ -401,4 +441,6 @@
   metabolisms:
     Medicine:
       metabolismRate: 0.05
-
+      effects:
+      - !type:ChemVomit
+        probability: 0
