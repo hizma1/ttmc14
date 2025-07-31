@@ -91,3 +91,6 @@
   - type: MCXenoUnrelentingForce
   - type: MCXenoBlessings
   - type: MCXenoHiveLeader
+  - type: DropshipHijacker
+  - type: TacticalMapUser
+    canDraw: true
