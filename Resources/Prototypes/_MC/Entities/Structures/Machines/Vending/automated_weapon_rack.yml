@@ -110,7 +110,10 @@
       - id: RMCPackFlareCAS
         amount: 30
     - name: Specialized
-      entries: []
+      entries:
+      - id: MCWeaponPepperball
+        amount: 4
+      - id: MCMagazinePepperball
     - name: Heavy Weapons
       entries: []
     - name: Attachments
