@@ -39,7 +39,7 @@
       machine_parts: !type:Container
   - type: UserInterface
     interfaces:
-      enum.MCChemicalDispenserUi.Key:
+      enum.RMCChemicalDispenserUi.Key:
         type: MCChemicalDispenserBui
   - type: ActivatableUI
     key: enum.MCChemicalDispenserUi.Key
@@ -78,7 +78,7 @@
     board: CMCircuitboardDispenserChem
   - type: RequiresSkill
     skills:
-      RMCSkillMedical: 2
+      RMCSkillMedical: 3
   - type: ItemSlots
     slots:
       chemical_dispenser_slot:
@@ -139,14 +139,14 @@
     sprite: _RMC14/Structures/Machines/chemical_storage.rsi
     state: chemstorage
     offset: 0.5,0
-  - type: MCChemicalStorage
+  - type: RMCChemicalStorage
 
 - type: entity
   parent: MCChemStorageBase
   id: MCChemStorageGround
   suffix: MC, Ground
   components:
-  - type: MCChemicalStorage
+  - type: RMCChemicalStorage
     network: MCChemStorageGround
 
 - type: entity
@@ -154,7 +154,7 @@
   id: MCChemStorageMedbay
   suffix: MC, Medbay
   components:
-  - type: MCChemicalStorage
+  - type: RMCChemicalStorage
     network: MCChemStorageMedbay
 
 - type: entity
@@ -162,7 +162,7 @@
   id: MCChemStorageResearch
   suffix: MC, Research
   components:
-  - type: MCChemicalStorage
+  - type: RMCChemicalStorage
     network: MCChemStorageResearch
 
 - type: entity
