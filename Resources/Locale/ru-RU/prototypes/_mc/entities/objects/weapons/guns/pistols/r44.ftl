@@ -1,8 +1,8 @@
-ent-MCWeaponRevolverR44 = Боевой револьвер R-44
+ent-MCWeaponRevolverR44 = боевой револьвер R-44
     .desc = R-44 — стандартный боевой револьвер производства Terran Armories. Прочное и мощное огнестрельное оружие, использующее патроны калибра.44 Magnum. В барабане помещается 7 патронов. Из-за ошибки в системе вращения барабана скорострельность оружия оказалась значительно выше запланированной, но в итоге это было представлено как особенность системы.
-ent-MCBaseSpeedLoader44 = Магнум спидлоадер R-44 (.44)
+ent-MCBaseSpeedLoader44 = магнум спидлоадер R-44 (.44)
     .desc = { ent-BaseItem.desc }
-ent-MCSpeedLoaderR44 = Магнум спидлоадер R-44 (.44)
+ent-MCSpeedLoaderR44 = магнум спидлоадер R-44 (.44)
     .desc = Спидлоадер для револьвера.
 ent-MCCartridgeRevolver44 = патрон (.44)
     .desc = { ent-CMCartridgePistolBase.desc }

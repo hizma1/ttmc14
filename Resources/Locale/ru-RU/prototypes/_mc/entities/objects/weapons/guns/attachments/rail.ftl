@@ -1,2 +1,2 @@
-ent-MCAttachmentMiniScope = Рельсовый мини-прицел
+ent-MCAttachmentMiniScope = рельсовый мини-прицел
     .desc = Компактный прицел, устанавливаемый на рельсу.
