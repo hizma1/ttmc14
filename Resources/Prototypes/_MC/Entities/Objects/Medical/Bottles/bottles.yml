@@ -1,3 +1,4 @@
+#NEDICINE BOTTLES
 - type: entity
   parent: MCBottleFilled
   id: MCBottleBicaridine
@@ -167,3 +168,91 @@
   - type: CMRefillableSolution
     reagents:
       MCParacetamol: 60
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleMeralyne
+  name: meralyne bottle
+  description: A small bottle. Contains meralyne - used as a potent treatment against brute damage.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCMeralyne
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCMeralyne: 60
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleDermaline
+  name: dermaline bottle
+  description: A small bottle. Contains dermaline - used as a potent treatment against burns.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCDermaline
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCDermaline: 60
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleLeporazine
+  name: leporazine bottle
+  description: A small bottle. Contains leporazine - used to stabilize body temperature.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCLeporazine
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCLeporazine: 60
+
+# CHEMICAL BOTTLES
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleLemoline
+  name: lemoline bottle
+  description: A small bottle. Contains 10 units of lemoline, a reagent used in the creation of advanced medicine.
+  suffix: MC, 10
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCLemoline
+          Quantity: 10
+  - type: CMRefillableSolution
+    reagents:
+      MCLemoline: 10
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleLemolineDoctor
+  name: lemoline bottle
+  description: A small bottle. Contains 30 units of lemoline, a reagent used in the creation of advanced medicine.
+  suffix: MC, 30
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCLemoline
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCLemoline: 30

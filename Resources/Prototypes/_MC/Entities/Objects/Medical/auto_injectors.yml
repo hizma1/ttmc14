@@ -249,3 +249,56 @@
       MCParacetamol: 30
   - type: IconLabel
     labelTextLocId: mc-paracetamol-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorDexalinPlus
+  name: dexalin plus autoinjector
+  description: An autoinjector loaded with 3 uses of dexalin plus, designed to immediately oxygenate the entire body.
+  components:
+  - type: Hypospray
+    transferAmount: 1
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 3
+        reagents:
+        - ReagentId: MCDexalinPlus
+          Quantity: 3
+  - type: CMRefillableSolution
+    reagents:
+      MCDexalinPlus: 3
+  - type: IconLabel
+    labelTextLocId: mc-dexalinplus-container-label-text
+
+
+# MISC
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorCombat
+  name: combat autoinjector
+  description: An autoinjector loaded with 2 doses of healing and painkilling chemicals. Intended for use in active combat.
+  components:
+  - type: Hypospray
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCBicaridine
+          Quantity: 10
+        - ReagentId: MCKelotane
+          Quantity: 10
+        - ReagentId: MCTricordrazine
+          Quantity: 5
+        - ReagentId: MCTramadol
+          Quantity: 5
+  - type: CMRefillableSolution
+    reagents:
+      MCBicaridine: 10
+      MCKelotane: 10
+      MCTricordrazine: 5
+      MCTramadol: 5
+  - type: IconLabel
+    labelTextLocId: mc-combat-container-label-text

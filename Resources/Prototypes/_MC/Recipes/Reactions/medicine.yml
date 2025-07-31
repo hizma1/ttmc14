@@ -1,3 +1,5 @@
+# T1
+
 - type: reaction
   id: MCKelotane
   reactants:
@@ -98,3 +100,104 @@
       amount: 1
   products:
     MCParacetamol: 3
+
+# T2
+
+- type: reaction
+  id: MCMeralyne
+  reactants:
+    MCInaprovaline:
+      amount: 1
+    MCBicaridine:
+      amount: 1
+    MCIron:
+      amount: 1
+    MCLemoline:
+      amount: 1
+  products:
+    MCMeralyne: 4
+
+- type: reaction
+  id: MCDermaline
+  reactants:
+    MCKelotane:
+      amount: 1
+    MCPhosphorus:
+      amount: 1
+    MCOxygen:
+      amount: 1
+    MCLemoline:
+      amount: 1
+  products:
+    MCDermaline: 4
+
+- type: reaction
+  id: MCHyronalin
+  reactants:
+    MCDylovene:
+      amount: 1
+    MCRadium:
+      amount: 1
+    MCLemoline:
+      amount: 1
+  products:
+    MCHyronalin: 3
+
+- type: reaction
+  id: MCArithrazine
+  reactants:
+    MCHyronalin:
+      amount: 1
+    MCHydrogen:
+      amount: 1
+  products:
+    MCArithrazine: 2
+
+- type: reaction
+  id: MCEthylredoxrazine
+  reactants:
+    MCOxygen:
+      amount: 1
+    MCDylovene:
+      amount: 1
+    MCCarbon:
+      amount: 1
+  products:
+    MCEthylredoxrazine: 3
+
+- type: reaction
+  id: MCHypervene
+  reactants:
+    MCArithrazine:
+      amount: 1
+    MCDylovene:
+      amount: 1
+    MCEthylredoxrazine:
+      amount: 1
+  products:
+    MCHypervene: 3
+
+- type: reaction
+  id: MCDexalinPlus
+  reactants:
+    MCDexalin:
+      amount: 1
+    MCCarbon:
+      amount: 1
+    MCIron:
+      amount: 1
+  products:
+    MCDexalinPlus: 3
+
+- type: reaction
+  id: MCLeporazine
+  reactants:
+    MCCopper:
+      amount: 1
+    MCSilicon:
+      amount: 1
+    MCPhoron:
+      amount: 5
+  products:
+    MCLeporazine: 2
+    MCPhoron: 5

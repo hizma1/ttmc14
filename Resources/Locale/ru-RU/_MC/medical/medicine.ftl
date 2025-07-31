@@ -27,13 +27,16 @@ reagent-desc-mc-tricordrazine = Трикордразин мощный стиму
 # T2
 
 reagent-name-mc-meralyne = Мералин
-reagent-desc-mc-meralyne = Мералин концентрированная форма Бикаридина, используется для лечения обширных тупых травм.
+reagent-desc-mc-meralyne = Мералин концентрированная форма бикаридина, используется для лечения обширных тупых травм.
 
 reagent-name-mc-dermaline = Дермалин
 reagent-desc-mc-dermaline = Дермалин следующий шаг в лечении ожогов.
 
 reagent-name-mc-arithrazine = Аритразин
 reagent-desc-mc-arithrazine = Аритразин нестабильное лекарство, используемое при лёгких отравлениях токсинами.
+
+reagent-name-mc-hyronalin = Хироналин
+reagent-desc-mc-hyronalin = Хироналин это лекарственный препарат, применяемый для нейтрализации последствий токсического отравления.
 
 reagent-name-mc-dexalinplus = Дексалин Плюс
 reagent-desc-mc-dexalinplus = Препарат для лечения экстремальных случаев гипоксии. Мгновенно устраняет весь урон от удушья, значительно эффективнее обычного Дексалина. Выводит Лексорин из крови.
@@ -46,5 +49,8 @@ reagent-desc-mc-imidazoline = Применяется при негетическ
 
 reagent-name-mc-hypervene = Гипервен
 reagent-desc-mc-hypervene = Быстро выводит другие химические вещества из организма.
+
+reagent-name-mc-leporazine = Лепоразин
+reagent-desc-mc-leporazine = Лепоразин используется для стабилизации температуры тела пациента.
 
 # T3

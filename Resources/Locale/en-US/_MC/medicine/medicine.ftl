@@ -9,5 +9,9 @@ mc-imidazoline-container-label-text = Im
 mc-hypervene-container-label-text = Hy
 mc-tramadol-container-label-text = Ta
 mc-paracetamol-container-label-text = Pa
+mc-dexalinplus-container-label-text = Dx+
+mc-combat-container-label-text = Cb
+mc-meralyne-container-label-text = Me
+mc-dermaline-container-label-text = De
 
 mc-custom-container-label-text = {$customLabel}

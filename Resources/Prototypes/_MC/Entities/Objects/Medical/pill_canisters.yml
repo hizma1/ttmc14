@@ -325,3 +325,52 @@
       amount: 16
   - type: IconLabel
     labelTextLocId: mc-paracetamol-container-label-text
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterMeralyne
+  name: meralyne pill bottle
+  description: Contains pills that heal cuts and bruises, but cause slight pain. Take two to heal faster, but have slightly more pain.
+  suffix: Meralyne, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 8
+  - type: Sprite
+    layers:
+    - state: pill_canister8
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillMeralyne
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-meralyne-container-label-text
+
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterDermaline
+  name: dermaline pill bottle
+  description: Contains pills that heal burns, but cause slight pain. Take two to heal faster, but have slightly more pain.
+  suffix: Dermaline, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 2
+  - type: Sprite
+    layers:
+    - state: pill_canister2
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillDermaline
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-dermaline-container-label-text

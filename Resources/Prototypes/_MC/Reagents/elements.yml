@@ -222,7 +222,7 @@
   id: MCSulphuricAcid
   name: mc-reagent-name-sulphuric-acid
   desc: mc-reagent-desc-sulphuric-acid
-  physicalDesc: mmc-reagent-physical-desc-acidic
+  physicalDesc: mc-reagent-physical-desc-acidic
   flavor: acid
   color: "#808000"
   metabolisms:
@@ -234,6 +234,21 @@
             groups:
               Toxin: 0.5
               Burn: 1
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCLemoline
+  name: mc-reagent-name-lemoline
+  desc: mc-reagent-desc-lemoline
+  physicalDesc: mc-reagent-physical-desc-liquid
+  flavor: bitter
+  color: "#66801e"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:ChemVomit
+        probability: 5 # А нехуй пробовать всякую хуйню, которая не предназначена для человека
 
 # Misc elements (потому что не интересно нихуя)
 - type: reagent

@@ -1,4 +1,5 @@
-﻿- type: reagent
+﻿# T1
+- type: reagent
   parent: MCReagentMedicine
   id: MCBicaridine
   name: reagent-name-mc-bicaridine
@@ -36,7 +37,7 @@
   name: reagent-name-mc-dexalin
   desc: reagent-desc-mc-dexalin
   physicalDesc: mc-reagent-physical-desc-opaque
-  color: "#1f28a7"
+  color: "#5972FD"
   overdose: 30
   criticalOverdose: 50
   metabolisms:
@@ -106,7 +107,7 @@
   criticalOverdose: 50
   metabolisms:
     Medicine:
-      metabolismRate: 0.2
+      metabolismRate: 0.2 # дать потом диловену урон по стамине.
       effects:
       - !type:Antitoxic
         potency: 4
@@ -252,58 +253,6 @@
 
 - type: reagent
   parent: MCReagentMedicine
-  id: MCHypervene
-  name: reagent-name-mc-hypervene
-  desc: reagent-desc-mc-hypervene
-  physicalDesc: mc-reagent-physical-desc-opaque
-  color: "#a76d32"
-  overdose: 15
-  criticalOverdose: 25
-  metabolisms:
-    Medicine:
-      metabolismRate: 1
-      effects:
-      - !type:MCPurgeAll
-        amount: 5
-      - !type:ChemVomit
-        conditions:
-        - !type:ReagentThreshold
-          min: 0
-          max: 15
-        probability: 0.05
-      # Overdose
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
-          max: 25
-        damage:
-          groups:
-            Brute: 1
-            Burn: 1
-      - !type:ChemVomit
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
-          max: 25
-        probability: 0.1
-      # Critical overdose
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          min: 25
-        damage:
-          groups:
-            Brute: 2
-            Burn: 2
-      - !type:ChemVomit
-          conditions:
-          - !type:ReagentThreshold
-            min: 25
-          probability: 0.5
-
-- type: reagent
-  parent: MCReagentMedicine
   id: MCTramadol
   name: reagent-name-mc-tramadol
   desc: reagent-desc-mc-tramadol
@@ -382,8 +331,300 @@
         damage:
           groups:
             Toxin: 0.5
-      - !type:ReagentThreshold
-        min: 100
-      damage:
-        groups:
-          Toxin: 3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 100
+        damage:
+          groups:
+            Toxin: 3
+
+# T2
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCMeralyne
+  name: reagent-name-mc-meralyne
+  desc: reagent-desc-mc-meralyne
+  physicalDesc: mc-reagent-physical-desc-liquid
+  color: "#FD5964"
+  overdose: 15
+  criticalOverdose: 25
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2 # пуржит оксикодон в 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: 3.5 # даёт ещё и боль
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          groups:
+            Burn: 2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+        damage:
+          groups:
+            Brute: 2
+            Burn: 4
+            Toxin: 4
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCDermaline
+  name: reagent-name-mc-dermaline
+  desc: reagent-desc-mc-dermaline
+  physicalDesc: mc-reagent-physical-desc-liquid
+  color: "#ffef00"
+  overdose: 15
+  criticalOverdose: 25
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2 # пуржит оксикодон в 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: 3.5 # даёт ещё и боль
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          groups:
+            Brute: 1
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+        damage:
+          groups:
+            Brute: 3
+            Toxin: 3
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCHyronalin
+  name: reagent-name-mc-hyronalin
+  desc: reagent-desc-mc-hyronalin
+  physicalDesc: mc-reagent-physical-desc-liquid
+  color: "#426300"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:Antitoxic
+        potency: 4
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Burn: 1
+            Toxin: 1
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCArithrazine
+  name: reagent-name-mc-arithrazine
+  desc: reagent-desc-mc-arithrazine
+  physicalDesc: mc-reagent-physical-desc-liquid
+  color: "#C8A5DC"
+  overdose: 15
+  criticalOverdose: 25
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        probability: 0.15
+        damage:
+          groups:
+            Brute: 1
+      - !type:HealthChange
+        damage:
+          groups:
+            Toxin: 0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          groups:
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+        damage:
+          groups:
+            Brute: 1
+            Burn: 1
+            Toxin: 2
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCEthylredoxrazine
+  name: reagent-name-mc-ethylredoxrazine
+  desc: reagent-desc-mc-ethylredoxrazine
+  physicalDesc: mc-reagent-physical-desc-solid
+  color: "#605048"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:GenericStatusEffect
+        key: Drunk
+        time: 1.5
+        type: Remove
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Toxin: 3
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCHypervene
+  name: reagent-name-mc-hypervene
+  desc: reagent-desc-mc-hypervene
+  physicalDesc: mc-reagent-physical-desc-opaque
+  color: "#a76d32"
+  overdose: 15
+  criticalOverdose: 25
+  metabolisms:
+    Medicine:
+      metabolismRate: 1
+      effects:
+      - !type:MCPurgeAll
+        amount: 5
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 0
+          max: 15
+        probability: 0.05
+      # Overdose
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+          max: 25
+        damage:
+          groups:
+            Brute: 1
+            Burn: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+          max: 25
+        probability: 0.1
+      # Critical overdose
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+        damage:
+          groups:
+            Brute: 2
+            Burn: 2
+      - !type:ChemVomit
+          conditions:
+          - !type:ReagentThreshold
+            min: 25
+          probability: 0.5
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCDexalinPlus
+  name: reagent-name-mc-dexalinplus
+  desc: reagent-desc-mc-dexalinplus
+  physicalDesc: mc-reagent-physical-desc-liquid
+  color: "#2445ff"
+  overdose: 15
+  criticalOverdose: 25
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:Oxygenating # пуржит лексорин
+        potency: 6
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          groups:
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+        damage:
+          groups:
+            Brute: 2
+            Toxin: 3
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCLeporazine
+  name: reagent-name-mc-leporazine
+  desc: reagent-desc-mc-leporazine
+  physicalDesc: mc-reagent-physical-desc-liquid
+  color: "#C8A5DC"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:StabilizeTemperature
+        stable: 310
+        change: 30
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        key: Unconscious
+        component: RMCUnconscious
+        time: 20
+        type: Add
+        refresh: false
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        key: Unconscious
+        component: RMCUnconscious
+        probability: 0.05
+        time: 10
+        type: Add
+        refresh: false
