@@ -1,4 +1,5 @@
 ﻿using Content.Shared._MC.Knockback;
+using Content.Shared._MC.Xeno.Abilities.Agility;
 using Content.Shared._RMC14.Actions;
 using Content.Shared._RMC14.Damage.ObstacleSlamming;
 using Content.Shared._RMC14.Marines;
@@ -76,6 +77,8 @@ public sealed class MCXenoLungeSystem : EntitySystem
 
         if (!_rmcActions.TryUseAction(entity, args.Action, entity))
             return;
+
+        RemComp<MCXenoAgilityActiveComponent>(entity);
 
         args.Handled = true;
 

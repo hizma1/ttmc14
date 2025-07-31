@@ -1,5 +1,6 @@
 ﻿using Content.Shared._MC.Knockback;
 using Content.Shared._MC.Stun;
+using Content.Shared._MC.Xeno.Abilities.Agility;
 using Content.Shared._RMC14.Actions;
 using Content.Shared._RMC14.CameraShake;
 using Content.Shared._RMC14.Stamina;
@@ -88,6 +89,8 @@ public sealed class MCXenoFlingSystem : EntitySystem
 
         if (!_rmcActions.TryUseAction(entity, args.Action, entity))
             return false;
+
+        RemComp<MCXenoAgilityActiveComponent>(entity);
 
         args.Handled = true;
         return true;

@@ -86,3 +86,21 @@
   - type: ActionBlockIfResting
   - type: XenoActionPlasma
     cost: 30
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoAgility
+  name: Agility
+  description: Drop to all fours to move faster. Using any ability will take you out of agility. Also reduces your armor by 30% in all categories.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    iconOn:
+      sprite: _MC/Interface/Actions/Xeno/warrior.rsi
+      state: agility_on
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/warrior.rsi
+      state: agility_off
+    useDelay: 0.4
+  - type: InstantAction
+    event: !type:MCXenoAgilityActionEvent
