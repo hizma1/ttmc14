@@ -1,2 +1,2 @@
-ent-MCAttachmentMiniScope = mini rail scope
-    .desc = A small rail mounted zoom sight scope. Allows zoom by activating the attachment.
+ent-MCAttachmentMiniScope = Рельсовый мини-прицел
+    .desc = Компактный прицел, устанавливаемый на рельсу.
