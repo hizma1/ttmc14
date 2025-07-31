@@ -31,7 +31,7 @@
     maxPlasma: 925
     plasmaRegenOnWeeds: 60
   - type: Xeno
-    tier: 4
+    tier: 0 # 4
     role: MCXenoShrike
     actionIds:
     - MCActionXenoRest
