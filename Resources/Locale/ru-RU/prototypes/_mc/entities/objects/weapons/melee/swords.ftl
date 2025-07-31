@@ -1,5 +1,5 @@
 ent-MССlaymore = клеймор
-  .desc = А ты чего уставился? Вперёд, убивать!
+    .desc = А ты чего уставился? Вперёд, убивать!
 ent-MCMercsword = боевой меч
     .desc = A dusty sword commonly seen in historical museums. Where you got this is a mystery, for sure. Only a mercenary would be nuts enough to carry one of these. Sharpened to deal massive damage.
 ent-MCCeremonialSword = церемониальный меч
