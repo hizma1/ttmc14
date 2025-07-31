@@ -1,1 +1,26 @@
-﻿
+﻿- type: reagent
+  parent: [ CMReagent, BasePyrotechnic ]
+  id: MCPhoron
+  name: reagent-name-mcphoron
+  desc: reagent-desc-mcphoron
+  physicalDesc: reagent-physical-desc-shiny
+  flavor: bitter
+  color: "#E71B00"
+  tileReactions:
+  - !type:FlammableTileReaction {}
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:FlammableReaction
+        multiplier: 0.2
+  metabolisms:
+    Poison:
+      metabolismRate: 0.55
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.55
+      - !type:FlammableReaction
+        multiplier: 0.2
