@@ -1,8 +1,8 @@
-ent-MCActionXenoGrappleToss = Бросок из захвата (30)
-    .desc = отбрасывает захваченную цель на расстояние до 5 клеток. Имеет общую перезарядку со способностью Швырнуть.
-ent-MCActionXenoPunch = Punch (15)
-    .desc = Strike a target next to you, inflicting stamina damage, stagger and slowdown. Deals 1.5x damage, stagger and slowdown to grappled targets. Deals quadruple damage to structures and machinery.
-ent-MCActionXenoFling = Fling (20)
-    .desc = Knock an adjacent target flying up to 3 tiles away, leaving them disarmed and knocked down for a short period.
-ent-MCActionXenoLunge = Lunge (30)
-    .desc = Reach up to four tiles away to grab someone, knocking them down and grabbing them. The target can resist to try and break out of your grip and you'll be slower while moving them. This can combo with Punch to deal an extra 1.5x MELEE damage. Lunge can also be used to grab friendly xenos and grapple toss them away from harm.
+ent-MCActionXenoGrappleToss = Кинуть (30)
+    .desc = Отбрасывает захваченную цель на расстояние до 4 тайлов. Имеет общую перезарядку со способностью [color=purple]Откинуть[/color].
+ent-MCActionXenoPunch = Удар (15)
+    .desc = Наносит усиленный удар по здоровью и выносливости цели рядом с вами, ошеломляя и замедляя её. Наносит дополнительный урон и парализует если цель захвачена вами. Наносит четырехкратный урон строениям и механизмам.
+ent-MCActionXenoFling = Откинуть (20)
+    .desc = Отбрасывает захваченную цель на расстояние до 4 тайлов. Имеет общую перезарядку со способностью [color=purple]Кинуть[/color].
+ent-MCActionXenoLunge = Захватить (30)
+    .desc = Совершает рывок на расстояние 4 тайлов, после чего сразу же берет цель в захват, оглушая её. Если целью является дружественный ксеноморф, он не получит оглушение, но всё так же будет схвачен.

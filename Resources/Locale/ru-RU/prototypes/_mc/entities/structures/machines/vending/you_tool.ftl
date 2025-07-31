@@ -1,2 +1,2 @@
-ent-MCMachineVendingYouTool = YouTool
-    .desc = Tools for tools.
+ent-MCMachineVendingYouTool = ТвоиИнструменты
+    .desc = Инструменты для инструментов.

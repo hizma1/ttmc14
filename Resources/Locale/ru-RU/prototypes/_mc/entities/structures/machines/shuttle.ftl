@@ -1,2 +1,2 @@
-ent-MCComputerDropshipNavigation = dropship navigation computer
-    .desc = A flight computer that can be used for autopilot or long-range flights.
+ent-MCComputerDropshipNavigation = навигационный компьютер корабля
+    .desc = Полетный компьютер, который можно использовать для автопилотирования или дальних полетов.

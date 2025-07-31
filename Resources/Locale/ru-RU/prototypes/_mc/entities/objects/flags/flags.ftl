@@ -1,4 +1,4 @@
-ent-MCFlagTerraGov = TerraGov flag
-    .desc = A flag bearing the symbol of TerraGov. It flutters in the breeze heroically. This one looks ready to be planted into the ground.
-ent-MCFlagSOM = SOM flag
-    .desc = A flag bearing the symbol of the Sons of Mars. It flutters in the breeze heroically. This one looks ready to be planted into the ground.
+ent-MCFlagTerraGov = флаг TerraGov
+    .desc = Флаг с символом TerraGov. Он героически развевается на ветру. Этот выглядит готовым к установке на землю.
+ent-MCFlagSOM = флаг SOM
+    .desc = Флаг с символом Сынов Марса. Он героически развевается на ветру. Этот флаг выглядит готовым к установке на землю.

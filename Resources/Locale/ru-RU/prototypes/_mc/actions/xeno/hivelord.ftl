@@ -1,6 +1,6 @@
-ent-MCActionXenoCreateResinJellyHivelord = Выделить смоляное желе (100)
-    .desc = создает смоляное желе в вашей активной руке. Данное желе может быть использовано на другого ксеноморфа или на самого себя, для получения иммунитета к огню на 30 секунд. Если положить желе на землю, то другие ксеноморфы всё равно смогут его использовать.
-ent-MCActionXenoResinWalker = Resin Walker (50)
-    .desc = Run faster on weeds. [color=cyan]Consumes 30 plasma per second.[/color]
-ent-MCActionXenoDigTunnel = Dig Tunnel (200)
-    .desc = Dig a tunnel for speedy transportation across the hive.
+ent-MCActionXenoCreateResinJellyHivelord = Создать смоляное желе (100)
+    .desc = Создаёт в активной руке смоляное желе, которое можно использовать на себя или других ксеносов для 30-секундной защиты от огня.
+ent-MCActionXenoResinWalker = Смоляной бегун (50)
+    .desc = Ускоряет передвижение по смоляной траве.
+ent-MCActionXenoDigTunnel = Вырыть туннель (200)
+    .desc = Прокапывает туннель для быстрого перемещения по улью.

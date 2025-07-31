@@ -1,2 +1,2 @@
-ent-MCMachineVendingEngi = Engi-Vend
-    .desc = Spare engineer vending. What? Did you expect some witty description?
+ent-MCMachineVendingEngi = Инжи-Венд
+    .desc = Запасной инженерный вендинг. Что? Вы ожидали остроумного описания?

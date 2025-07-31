@@ -1,4 +1,4 @@
-ent-MCActionXenoPsychicFling = Psychic Fling (100)
-    .desc = Sends an enemy or an item flying. A close ranged ability.
-ent-MCActionXenoUnrelentingForce = Unrelenting Force (300)
-    .desc = Unleashes our raw psychic power, pushing aside anyone who stands in our path.
+ent-MCActionXenoPsychicFling = Пси-бросок (100)
+    .desc = Используется на гуманоидах или предметах в пределах 3 тайлов, отталкивая их на 5 тайлов.
+ent-MCActionXenoUnrelentingForce = Неумолимая сила (300)
+    .desc = Швыряет далеко вперед всех гуманоидов и предметы в квадрате 3x3 перед вами (Не работает по диагональным направлениям).

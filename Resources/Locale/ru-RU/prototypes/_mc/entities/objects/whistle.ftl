@@ -1,2 +1,2 @@
-ent-MCWhistle = whistle
-    .desc = A metal pea-whistle. Can be blown while held, or worn in the mouth
+ent-MCWhistle = свисток
+    .desc = Металлический гороховый свисток. В него можно дуть, держа в руках, или носить во рту.

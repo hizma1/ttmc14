@@ -1,2 +1,2 @@
-ent-MCMachineVendingNanoMed = NanoMed
-    .desc = Wall-mounted Medical Equipment dispenser.
+ent-MCMachineVendingNanoMed = НаноМед
+    .desc = Настенный диспенсер для медицинского оборудования.
