@@ -1,2 +1,6 @@
-ent-MCActionXenoCreateResinJellyHivelord = Create Resin Jelly (100)
-    .desc = Places Resin Jelly in your active hand, which can be used on yourself or other xeno castes for a 30-second protection from fire.
+ent-MCActionXenoCreateResinJellyHivelord = { ent-MCActionXenoCreateResinJelly }
+    .desc = { ent-MCActionXenoCreateResinJelly.desc }
+ent-MCActionXenoResinWalker = Resin Walker (50)
+    .desc = Run faster on weeds. [color=cyan]Consumes 30 plasma per second.[/color]
+ent-MCActionXenoDigTunnel = Dig Tunnel (200)
+    .desc = Dig a tunnel for speedy transportation across the hive.

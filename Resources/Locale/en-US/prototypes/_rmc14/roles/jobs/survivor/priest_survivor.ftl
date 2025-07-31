@@ -4,4 +4,4 @@ ent-CMSatchelFillSurvivorPriest = { ent-CMSatchelFillSurvivor }
 ent-RMCSpawnPointSurvivorPriest = survivor priest spawn point
     .desc = { ent-CMSpawnPointJobBase.desc }
 ent-RMCGearSurvivorPresetPriest = priest colonist preset
-    .desc = { ent-RMCSurvivorPresetCivilian.desc }
+    .desc = { ent-RMCSurvivorPresetCivilianRareItem.desc }

@@ -10,7 +10,6 @@ ent-CMPamphletSpotter = spotter instructional pamphlet
     .desc = A pamphlet used to quickly impart vital knowledge. This one has the image of a pair of binoculars on it.
 ent-CMPamphletPowerloader = powerloader instructional pamphlet
     .desc = A pamphlet used to quickly impart vital knowledge. This one has a powerloader insignia. The title reads 'Moving freight and squishing heads - a practical guide to a Work Loader'.
-    .suffix = NOT IMPLEMENTED
 ent-CMPamphletPolice = policing instructional pamphlet
     .desc = A pamphlet used to quickly impart vital knowledge. This one has the image of a radio on it.
 ent-CMPamphletSurgery = surgery instructional pamphlet

@@ -1,13 +1,13 @@
 ent-CMVendorBundleRiflemanApparel = standard marine apparel
     .desc = Contains a marine jumpsuit, a M10 helmet, a headset, combat gloves and combat boots.
 ent-CMVendorBundleFireteamLeaderApparel = standard marine apparel
-    .desc = Contains a marine jumpsuit, a M12 helmet, a headset, insulated gloves and combat boots.
+    .desc = Contains a marine jumpsuit, a M12 helmet, a headset, and combat boots.
 ent-CMVendorBundleSquadMedicalApparel = standard marine apparel
     .desc = Contains a corpsman jumpsuit, a M10 helmet, a headset and combat boots.
 ent-CMVendorBundleSquadMedicalEssentials = essential medical set
     .desc = Contains a stasis bag, a defibrillator, a roller bed, medical tools, and two blood packs.
 ent-CMVendorBundleCombatTechnicianApparel = standard marine apparel
-    .desc = Contains a marine jumpsuit, a headset, insulated gloves and combat boots.
+    .desc = Contains a marine jumpsuit, a headset, and combat boots.
 ent-CMVendorBundleCombatTechnicianEssentials = essential engineer set
     .desc = Contains 50 metal, 40 plasteel, 25 sandbags, a high-capacity power cell, an entrenching tool, a light replacer, and a nailgun.
 ent-CMVendorBundleSquadLeaderApparel = standard marine apparel
