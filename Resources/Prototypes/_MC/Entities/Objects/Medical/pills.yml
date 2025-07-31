@@ -155,3 +155,20 @@
     layers:
     - state: pill17
       map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillHypervene
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 3
+        reagents:
+        - ReagentId: MCHypervene
+          Quantity: 3
+  - type: Sprite
+    layers:
+    - state: pill14
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+

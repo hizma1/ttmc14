@@ -29,7 +29,7 @@ public sealed partial class MCPurge : EntityEffect
 
         foreach (var reagent in Reagents)
         {
-            source.RemoveReagent(reagent, -Amount);
+            source.RemoveReagent(reagent, Amount);
         }
     }
 }

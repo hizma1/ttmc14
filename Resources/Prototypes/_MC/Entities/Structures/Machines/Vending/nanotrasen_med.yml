@@ -30,7 +30,8 @@
       - id: MCPillCanisterImidazoline
         amount: 6
       # quickclot = 6
-      # hypervene = 6
+      - id: MCPillCanisterHypervene
+        amount: 6
     # - name: Hypospray
       #	/obj/item/reagent_containers/hypospray/autoinjector/dexalinplus = 10
       #	/obj/item/reagent_containers/hypospray/autoinjector/sleeptoxin = 10

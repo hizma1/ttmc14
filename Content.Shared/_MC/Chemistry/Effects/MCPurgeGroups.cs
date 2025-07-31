@@ -6,8 +6,11 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._MC.Chemistry.Effects;
 
-public sealed partial class MCPurgeAll : EntityEffect
+public sealed partial class MCPurgeGroups : EntityEffect
 {
+    [DataField, JsonPropertyName("groups")]
+    public List<string> Groups = new();
+
     [DataField, JsonPropertyName("rate")]
     public FixedPoint2 Amount;
 
@@ -30,6 +33,9 @@ public sealed partial class MCPurgeAll : EntityEffect
         foreach (var quantity in new List<ReagentQuantity>(source.Contents))
         {
             if (reagent.ID == quantity.Reagent.Prototype)
+                continue;
+
+            if (!Groups.Contains(reagent.Group))
                 continue;
 
             source.RemoveReagent(quantity.Reagent, Amount);
