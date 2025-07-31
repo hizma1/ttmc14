@@ -95,7 +95,7 @@
   components:
   - type: Storage
     grid:
-    - 0,0,21,1
+    - 0,0,11,1 # 6 slots
     whitelist:
       tags:
       - MCCartridgeGovernmentRounds
@@ -114,6 +114,8 @@
   - type: Tag
     tags:
     - MCBoxGovernmentRounds
+  - type: Item
+    size: Small
 
 - type: entity
   parent: CMShellShotgunBase
