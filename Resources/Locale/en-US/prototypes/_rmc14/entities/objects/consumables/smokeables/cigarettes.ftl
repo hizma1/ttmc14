@@ -1,5 +1,5 @@
 ent-CMCigarettePackLuckySlothsMini = lucky sloths mini packet
-    .desc = These four-packs of Luckies come in every MRE. They're not as good as the Embassy Crowns found in some TSE MREs, but at least they're free.
+    .desc = These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free.
 ent-RMCCigarettePackLuckySloths = lucky sloths packet
     .desc = Lucky Sloths Means Fine Tobacco! 9/10 doctors agree on Lucky Sloths...as the leading cause of marine lung cancer.
 ent-RMCCigarette = { ent-Cigarette }

@@ -24,5 +24,3 @@ ent-CMBedsheetGray = { ent-CMBedsheetBase }
     .desc = { ent-CMBedsheetBase.desc }
 ent-CMBedsheetBrown = { ent-CMBedsheetBase }
     .desc = { ent-CMBedsheetBase.desc }
-ent-RMCBedsheetSoro = { ent-CMBedsheetWhite }
-    .desc = { ent-CMBedsheetWhite.desc }

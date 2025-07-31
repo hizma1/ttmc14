@@ -10,5 +10,4 @@ ent-CMLightReplacerEmpty = { ent-CMLightReplacer }
     .suffix = Empty
     .desc = { ent-CMLightReplacer.desc }
 ent-RMCSprayBottleSpaceCleaner = { ent-SprayBottleSpaceCleaner }
-    .suffix = RMC
     .desc = { ent-SprayBottleSpaceCleaner.desc }

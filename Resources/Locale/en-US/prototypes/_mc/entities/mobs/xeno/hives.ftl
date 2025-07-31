@@ -1,2 +1,0 @@
-ent-MCXenoHive = Main
-    .desc = { "" }

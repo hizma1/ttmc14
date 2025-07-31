@@ -1,7 +1,5 @@
-ent-MCXenoNoMeleeBase = { "" }
+ent-MCXenoBase = { "" }
     .desc = { "" }
-ent-MCXenoBase = { ent-MCXenoNoMeleeBase }
-    .desc = { ent-MCXenoNoMeleeBase.desc }
 ent-MCXenoPlantingWeeds = { "" }
     .desc = { "" }
 ent-MCXenoCreateResinJelly = { "" }
@@ -9,6 +7,8 @@ ent-MCXenoCreateResinJelly = { "" }
 ent-MCXenoAcidicSalve = { "" }
     .desc = { "" }
 ent-MCXenoPickupOne = { "" }
+    .desc = { "" }
+ent-MCXenoGrappleToss = { "" }
     .desc = { "" }
 ent-MCXenoLayEgg = { "" }
     .desc = { "" }

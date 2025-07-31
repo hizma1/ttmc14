@@ -1,2 +1,2 @@
 ent-MCXenoLarva = Larva
-    .desc = { ent-MCXenoNoMeleeBase.desc }
+    .desc = { ent-CMXenoUndeveloped.desc }

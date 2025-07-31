@@ -1,11 +1,7 @@
 ent-RMCCurtainBase = curtain
     .desc = { ent-BaseCurtains.desc }
 ent-RMCCurtainGreen = { ent-RMCCurtainBase }
-    .suffix = Green
     .desc = { ent-RMCCurtainBase.desc }
-ent-RMCCurtainBlack = { ent-RMCCurtainGreen }
-    .suffix = Black
-    .desc = { ent-RMCCurtainGreen.desc }
 ent-RMCCurtainMedical = plastic curtain
     .desc = { ent-RMCCurtainBase.desc }
 ent-RMCCurtainMedicalOpen = { ent-RMCCurtainMedical }

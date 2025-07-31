@@ -1,9 +1,9 @@
 ent-RMCToolboxBase = { ent-ToolboxBase }
     .desc = { ent-ToolboxBase.desc }
-ent-RMCToolboxEmergency = emergency toolbox
+ent-RMCToolboxEmergency = { ent-RMCToolboxBase }
     .suffix = RMC14
     .desc = { ent-RMCToolboxBase.desc }
-ent-RMCToolboxEmergencyFilled = { ent-RMCToolboxEmergency }
+ent-RMCToolboxEmergencyFilled = emergency toolbox
     .suffix = RMC14, Filled
     .desc = { ent-RMCToolboxEmergency.desc }
 ent-RMCToolboxElectrical = electrical toolbox

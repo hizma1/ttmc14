@@ -20,6 +20,3 @@ ent-RMCPouchFirstAidPMC = We-Ya first-aid pouch
 ent-RMCPouchFirstAidPMCFill = { ent-RMCPouchFirstAidPMC }
     .suffix = Filled
     .desc = { ent-RMCPouchFirstAidPMC.desc }
-ent-RMCPouchFirstAidSPPArmyFill = first-aid pouch
-    .suffix = Filled
-    .desc = { ent-RMCPouchFirstAidPMC.desc }

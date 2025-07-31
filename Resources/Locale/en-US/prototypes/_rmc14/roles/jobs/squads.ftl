@@ -28,5 +28,3 @@ ent-SquadFORECON = Recon
     .desc = { ent-SquadBase.desc }
 ent-SquadSOF = SOF
     .desc = { ent-SquadBase.desc }
-ent-SquadCLF = CLF
-    .desc = { ent-SquadBase.desc }

@@ -8,5 +8,3 @@ ent-CMSurgeryOpenRibcage = Open Ribcage
     .desc = { ent-CMSurgeryBase.desc }
 ent-CMSurgeryAlienEmbryoRemoval = Alien Embryo Removal
     .desc = Removal of an alien embryo from the body.
-ent-RMCSurgeryAlienHeartRemoval = Experimental Harvesting Surgery
-    .desc = Harvest the heart of an deceased alien.
