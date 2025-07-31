@@ -88,16 +88,16 @@ public abstract class SharedRankSystem : EntitySystem
         if (isShort)
         {
             if (rank.FemalePrefix == null || rank.MalePrefix == null)
-                return rank.Prefix;
+                return Loc.GetString(rank.Prefix);
 
             if (!TryComp<HumanoidAppearanceComponent>(uid, out var humanoidAppearance))
-                return rank.Prefix;
+                return Loc.GetString(rank.Prefix);
 
             var genderPrefix = humanoidAppearance.Gender switch
             {
                 Gender.Female => rank.FemalePrefix,
                 Gender.Male => rank.MalePrefix,
-                Gender.Epicene or Gender.Neuter or _ => rank.Prefix
+                Gender.Epicene or Gender.Neuter or _ => Loc.GetString(rank.Prefix),
             };
 
             return genderPrefix;

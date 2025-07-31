@@ -34,7 +34,7 @@
     maxPlasma: 1200
     plasmaRegenOnWeeds: 90
   - type: Xeno
-    tier: 4
+    tier: 0 # 4
     role: MCXenoQueen
     actionIds:
     - MCActionXenoRest

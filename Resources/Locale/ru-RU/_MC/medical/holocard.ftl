@@ -3,17 +3,14 @@ hc-urgent-description = Пациенту требуется плановая о�
 hc-emergency-description = Пациенту требуется неотложное спасение жизни.
 hc-permadead-description = Пациент безвозвратно мёртв.
 hc-xeno-description = Пациент заражён ксено-эмбрионом.
-
 hc-none-name = Нет
 hc-urgent-name = Операция
 hc-emergency-name = Экстренно
 hc-permadead-name = Мёртв
 hc-xeno-name = Ксеноэмбрион
-
 scannable-holocard-verb-text = Изменить голокарту
 scannable-holocard-verb-message = Изменить голокарты
 ui-holocard-change-title = Изменение голокарты
 ui-holocard-change-searchbar-placeholder = Голокарта
 ui-health-scanner-holocard-change = Изменить
-
 ui-holocard-change-insufficient-skill = У вас недостаточно медицинских навыков, чтобы применить голокарту

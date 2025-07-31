@@ -78,10 +78,10 @@
   - type: Storage
     whitelist:
       tags:
-      - MCShellShotgunSlugs
+      - MCShellShotgunSlug
   - type: StorageFill
     contents:
-    - id: MCShellShotgunSlugs
+    - id: MCShellShotgunSlug
       amount: 5
   - type: Sprite
     layers:

@@ -64,6 +64,21 @@ public sealed class MCStunSystem : EntitySystem
         _throwing.TryThrow(args.Target, direction.Normalized() * entity.Comp.Knockback, entity.Comp.KnockbackSpeed, animated: false, playSound: false, compensateFriction: true);
     }
 
+    public void Paralyze(EntityUid uid, TimeSpan duration)
+    {
+        _stun.TryParalyze(uid, duration, refresh: true);
+    }
+
+    public void Slowdown(EntityUid uid, TimeSpan duration)
+    {
+        _slow.TrySlowdown(uid, duration);
+    }
+
+    public void Stagger(EntityUid uid, TimeSpan duration)
+    {
+
+    }
+
     public bool IsStun(EntityUid uid)
     {
         return HasComp<StunnedComponent>(uid);

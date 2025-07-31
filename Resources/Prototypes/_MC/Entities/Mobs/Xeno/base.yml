@@ -127,12 +127,6 @@
         - XenoEgg
 
 - type: entity
-  id: MCXenoGrappleToss
-  abstract: true
-  components:
-  - type: MCXenoGrappleToss
-
-- type: entity
   id: MCXenoLayEgg
   abstract: true
   components:
