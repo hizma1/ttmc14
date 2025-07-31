@@ -166,7 +166,6 @@
     damage:
       groups:
         Brute: -16 # похуй мне сколько там хилить должно в тгмс, мне важен баланс сс14 ебаной
-    delay: 1.5
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -178,8 +177,8 @@
         volume: 1.0
         variation: 0.125
   - type: MedicallyUnskilledDoAfter
-    min: 1
-    doAfter: 8 # Parity
+    min: 2
+    doAfter: 6 # Parity
   - type: Sprite
     state: traumakit
   - type: Item
@@ -215,7 +214,6 @@
     damage:
       groups:
         Burn: -18 # тут можно проставить чтобы по 6 урона хилило, и так все 4 типа урона.
-    delay: 1.5
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -235,7 +233,7 @@
     heldPrefix: burnkit
   - type: MedicallyUnskilledDoAfter
     min: 1
-    doAfter: 8 # Parity
+    doAfter: 6 # Parity
 
 - type: Tag
   id: MCBurnKit

@@ -1,8 +1,8 @@
 ﻿- type: reagent
   parent: MCReagentMedicine
   id: MCBicaridine
-  name: reagent-name-cmbicaridine
-  desc: reagent-desc-cmbicaridine
+  name: reagent-name-mc-bicaridine
+  desc: reagent-desc-mc-bicaridine
   physicalDesc: mc-reagent-physical-desc-opaque
   color: "#ed4847"
   overdose: 30
@@ -33,8 +33,8 @@
 - type: reagent
   parent: MCReagentMedicine
   id: MCDexalin
-  name: reagent-name-cmdexalin
-  desc: reagent-desc-cmdexalin
+  name: reagent-name-mc-dexalin
+  desc: reagent-desc-mc-dexalin
   physicalDesc: mc-reagent-physical-desc-opaque
   color: "#1f28a7"
   overdose: 30
@@ -66,8 +66,8 @@
 - type: reagent
   parent: MCReagentMedicine
   id: MCKelotane
-  name: reagent-name-cmkelotane
-  desc: reagent-desc-cmkelotane
+  name: reagent-name-mc-kelotane
+  desc: reagent-desc-mc-kelotane
   physicalDesc: mc-reagent-physical-desc-strong-smelling
   color: "#f5e123"
   overdose: 30
@@ -98,8 +98,8 @@
 - type: reagent
   parent: MCReagentMedicine
   id: MCDylovene
-  name: reagent-name-cmdylovene
-  desc: reagent-desc-cmdylovene
+  name: reagent-name-mc-dylovene
+  desc: reagent-desc-mc-dylovene
   physicalDesc: mc-reagent-physical-desc-translucent
   color: "#3fc92a"
   overdose: 30
@@ -137,8 +137,8 @@
 - type: reagent
   parent: MCReagentMedicine
   id: MCInaprovaline
-  name: reagent-name-cminaprovaline
-  desc: reagent-desc-cminaprovaline
+  name: reagent-name-mc-inaprovaline
+  desc: reagent-desc-mc-inaprovaline
   physicalDesc: mc-reagent-physical-desc-opaque
   color: "#fe33cb"
   overdose: 60
@@ -181,8 +181,8 @@
 - type: reagent
   parent: MCReagentMedicine
   id: MCTricordrazine
-  name: reagent-name-cmtricordrazine
-  desc: reagent-desc-cmtricordrazine
+  name: reagent-name-mc-tricordrazine
+  desc: reagent-desc-mc-tricordrazine
   physicalDesc: mc-reagent-physical-desc-opaque
   color: "#d87f2b"
   overdose: 30
@@ -222,8 +222,8 @@
 - type: reagent
   parent: MCReagentMedicine
   id: MCImidazoline
-  name: reagent-name-cmimidazoline
-  desc: reagent-desc-cmimidazoline
+  name: reagent-name-mc-imidazoline
+  desc: reagent-desc-mc-imidazoline
   physicalDesc: mc-reagent-physical-desc-opaque
   color: "#F7A151"
   overdose: 30
@@ -301,3 +301,89 @@
           - !type:ReagentThreshold
             min: 25
           probability: 0.5
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCTramadol
+  name: reagent-name-mc-tramadol
+  desc: reagent-desc-mc-tramadol
+  physicalDesc: mc-reagent-physical-desc-soothing
+  color: "#8a8686"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.1
+      effects:
+      - !type:GenericStatusEffect # Бафф
+        key: Stun
+        time: 1
+        type: Remove
+      - !type:GenericStatusEffect # Бафф
+        key: KnockedDown
+        time: 1
+        type: Remove
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          types:
+            Asphyxiation: 1
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        type: Add
+        time: 15
+        refresh: true
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Toxin: 3
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCParacetamol
+  name: reagent-name-mc-paracetamol
+  desc: reagent-desc-mc-paracetamol
+  physicalDesc: mc-reagent-physical-desc-soothing
+  color: "#8a8686"
+  overdose: 60
+  criticalOverdose: 100
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.025
+      effects:
+      - !type:Neogenetic
+        potency: 0.2
+      - !type:Antitoxic
+        potency: 0.2
+      - !type:Anticorrosive
+        potency: 0.2
+      - !type:Oxygenating
+        potency: 0.2
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        type: Add
+        time: 0.5
+        refresh: true
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        damage:
+          groups:
+            Toxin: 0.5
+      - !type:ReagentThreshold
+        min: 100
+      damage:
+        groups:
+          Toxin: 3

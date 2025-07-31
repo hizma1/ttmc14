@@ -1,8 +1,8 @@
 ﻿- type: reagent
   parent: [ CMReagent, BasePyrotechnic ]
   id: MCPhoron
-  name: reagent-name-mcphoron
-  desc: reagent-desc-mcphoron
+  name: mc-reagent-name-phoron
+  desc: mc-reagent-desc-phoron
   physicalDesc: reagent-physical-desc-shiny
   flavor: bitter
   color: "#E71B00"
@@ -24,3 +24,5 @@
             Poison: 0.55
       - !type:FlammableReaction
         multiplier: 0.2
+      - !type:ChemVomit
+          probability: 0.1

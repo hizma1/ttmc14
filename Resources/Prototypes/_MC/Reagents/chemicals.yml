@@ -18,7 +18,7 @@
   parent: SheetOtherBase
   id: MCSheetPhoron
   name: phoron
-  suffix: Full
+  suffix: Full, MC
   components:
   - type: Material
   - type: PhysicalComposition

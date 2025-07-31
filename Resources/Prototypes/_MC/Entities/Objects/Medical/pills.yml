@@ -172,3 +172,34 @@
     - state: pill14
       map: [ "enum.DamageStateVisualLayers.Base" ]
 
+- type: entity
+  parent: MCPill
+  id: MCPillTramadol
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: MCTramadol
+          Quantity: 15
+  - type: Sprite
+    layers:
+    - state: pill7
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillParacetamol
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: MCParacetamol
+          Quantity: 15
+  - type: Sprite
+    layers:
+    - state: pill6
+      map: [ "enum.DamageStateVisualLayers.Base" ]

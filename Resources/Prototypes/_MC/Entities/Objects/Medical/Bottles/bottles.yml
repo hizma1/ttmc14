@@ -133,3 +133,37 @@
   - type: CMRefillableSolution
     reagents:
       MCHypervene: 10
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottletramadol
+  name: tramadol bottle
+  description: A small bottle. Contains Tramadol - Used as a basic painkiller.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCTramadol
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCTramadol: 60
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleParacetamol
+  name: paracetamol bottle
+  description: A small bottle. Contains paracetamol - a mild, simple painkiller, good for enduring heavy labor.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCParacetamol
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCParacetamol: 60

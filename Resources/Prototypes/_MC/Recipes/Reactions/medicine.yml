@@ -1,1 +1,100 @@
-# ОЙ ХЕХЕХЕ, Я ТАК ПОДУМАЛ ЧТО ТУТ МНЕ КОНЕЦ.
+- type: reaction
+  id: MCKelotane
+  reactants:
+    MCSilicon:
+      amount: 1
+    MCCarbon:
+      amount: 1
+  products:
+    MCKelotane: 2
+
+- type: reaction
+  id: MCBicaridine
+  reactants:
+    MCInaprovaline:
+      amount: 1
+    MCCarbon:
+      amount: 1
+  products:
+    MCBicaridine: 2
+
+- type: reaction
+  id: MCInaprovaline
+  reactants:
+    MCOxygen:
+      amount: 1
+    MCCarbon:
+      amount: 1
+    MCSugar:
+      amount: 1
+  products:
+    MCInaprovaline: 3
+
+- type: reaction
+  id: MCDylovene
+  reactants:
+    MCSilicon:
+      amount: 1
+    MCPotassium:
+      amount: 1
+    MCNitrogen:
+      amount: 1
+  products:
+    MCDylovene: 3
+
+- type: reaction
+  id: MCImidazoline
+  reactants:
+    MCHydrogen:
+      amount: 1
+    MCDylovene:
+      amount: 1
+    MCCarbon:
+      amount: 1
+  products:
+    MCImidazoline: 3
+
+- type: reaction
+  id: MCTricordrazine
+  reactants:
+    MCDylovene:
+      amount: 1
+    MCInaprovaline:
+      amount: 1
+  products:
+    MCTricordrazine: 1
+
+- type: reaction
+  id: MCDexalin
+  reactants:
+    MCOxygen:
+      amount: 2
+    MCPhoron:
+      amount: 5.1
+  products:
+    MCDexalin: 1
+    MCPhoron: 5
+
+- type: reaction
+  id: MCTramadol
+  reactants:
+    MCEthanol:
+      amount: 1
+    MCInaprovaline:
+      amount: 1
+    MCOxygen:
+      amount: 1
+  products:
+    MCTramadol: 3
+
+- type: reaction
+  id: MCParacetamol
+  reactants:
+    MCWater:
+      amount: 1
+    MCSugar:
+      amount: 1
+    MCTramadol:
+      amount: 1
+  products:
+    MCParacetamol: 3
