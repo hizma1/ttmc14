@@ -10,7 +10,7 @@ public sealed class MCKnockbackSystem : EntitySystem
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
-    public void Knockback(EntityUid uid, Vector2 direction, float distance, float speed)
+    public void Knockback(EntityUid uid, Vector2 direction, float distance, float speed, bool compensateFriction = false, bool animated = true)
     {
         if (Transform(uid).Anchored)
             return;

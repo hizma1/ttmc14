@@ -44,7 +44,7 @@ public sealed class MCXenoPunchSystem : EntitySystem
 
     private void OnAction(Entity<MCXenoPunchComponent> entity, ref MCXenoPunchActionEvent args)
     {
-        if (!Useable(entity, ref args))
+        if (!TryUse(entity, ref args))
             return;
 
         // TODO: empower
@@ -87,7 +87,7 @@ public sealed class MCXenoPunchSystem : EntitySystem
         _audio.PlayPredicted(sound, entity, entity);
     }
 
-    private bool Useable(Entity<MCXenoPunchComponent> entity, ref MCXenoPunchActionEvent args)
+    private bool TryUse(Entity<MCXenoPunchComponent> entity, ref MCXenoPunchActionEvent args)
     {
         if (args.Handled)
             return false;
