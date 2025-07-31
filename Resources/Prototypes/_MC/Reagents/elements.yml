@@ -126,11 +126,13 @@
     Poison:
       metabolismRate: 0.2
       effects:
-      - !type:GenericStatusEffect
-        key: StaminaModifier
-        component: StaminaModifier
-        time: 1
-        type: Remove
+      - !type:ChemVomit
+        probability: 0
+      #- !type:GenericStatusEffect НЕ РАБОТАЕТ СУКА
+        #key: StaminaModifier
+        #component: StaminaModifier
+        #time: 2
+        #type: Remove
 
 - type: reagent
   parent: MCReagentElement
@@ -220,7 +222,7 @@
   id: MCSulphuricAcid
   name: mc-reagent-name-sulphuric-acid
   desc: mc-reagent-desc-sulphuric-acid
-  physicalDesc: mc-reagent-physical-desc-acid
+  physicalDesc: mmc-reagent-physical-desc-acidic
   flavor: acid
   color: "#808000"
   metabolisms:
@@ -398,7 +400,6 @@
       effects:
       - !type:ChemVomit
         probability: 0
-
 
 - type: reagent
   parent: MCReagentElement

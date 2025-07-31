@@ -21,6 +21,31 @@
   - type: Clickable
   - type: InteractionOutline
   - type: RMCChemicalDispenser
+    costPerUnit: 1
+    energy: 0
+    maxEnergy: 3000
+    reagents:
+    - MCAluminum
+    - MCCarbon
+    - MCChlorine
+    - MCCopper
+    - MCEthanol
+    - MCFluorine
+    - MCHydrogen
+    - MCIron
+    - MCLithium
+    - MCMercury
+    - MCNitrogen
+    - MCOxygen
+    - MCPhosphorus
+    - MCPotassium
+    - MCRadium
+    - MCSilicon
+    - MCSodium
+    - MCSugar
+    - MCSulfur
+    - MCSulphuricAcid
+    - MCWater
   - type: ApcPowerReceiver
     needsPower: false # TODO RMC14
     powerLoad: 0
@@ -53,32 +78,21 @@
   parent: MCDispenserBase
   id: MCChemDispenserBase
   name: chemical dispenser
-  description: A complex machine for mixing elements into chemicals. A We-Ya product.
+  description: Creates and dispenses chemicals.
   placement:
     mode: SnapgridCenter
   components:
   - type: Sprite
-    sprite: _RMC14/Structures/Machines/Science/dispenser.rsi
+    sprite: _MC/Structures/Machines/dispenser.rsi
     layers:
     - state: base
-    - state: onlight
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
     snapCardinals: true
   - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.PowerDeviceVisuals.Powered:
-        enum.PowerDeviceVisualLayers.Powered:
-          True: { visible: true }
-          False: { visible: false }
-  - type: RMCChemicalDispenser
-    network: MCChemDispenserGround
   - type: Machine
     board: CMCircuitboardDispenserChem
   - type: RequiresSkill
     skills:
-      RMCSkillMedical: 3
+      RMCSkillMedical: 1
   - type: ItemSlots
     slots:
       chemical_dispenser_slot:
@@ -140,6 +154,13 @@
     state: chemstorage
     offset: 0.5,0
   - type: RMCChemicalStorage
+    rechargeEvery: 5 # хз нахуй
+    energy: 2995
+    maxEnergy: 3000
+    baseMax: 2995 #Я ЕБАЛ ПРОСТО ЭТОТ КОД ХУЙНИ ОФФОВ, Я ГОВОРИЛ ЛУЧШЕ ВЗЯТЬ И ПЕРЕПИСАТЬ ВСЁ ТАМ
+    maxPer: 5
+    baseRecharge: 10
+    rechargePer: 5 # хз нахуй
 
 - type: entity
   parent: MCChemStorageBase
@@ -164,53 +185,3 @@
   components:
   - type: RMCChemicalStorage
     network: MCChemStorageResearch
-
-- type: entity
-  parent: MCChemDispenserBase
-  id: MCChemDispenserCorpsmanBase
-  name: pressurized chemical dispenser
-  description: A more basic chemical dispenser, designed for use with pressurized reagent canisters. A We-Ya product.
-  abstract: true
-  components:
-  - type: RequiresSkill
-    skills:
-      RMCSkillMedical: 2
-  - type: ItemSlots
-    slots:
-      chemical_dispenser_slot:
-        name: Chemical Dispenser
-        whitelist:
-          tags:
-          - PressurizedCanister
-  - type: Sprite
-    sprite: _RMC14/Structures/Machines/Science/chem_master.rsi
-    layers:
-    - state: mixer_empty
-    - state: mixer_screen
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    snapCardinals: true
-  - type: GenericVisualizer
-    visuals:
-      enum.PowerDeviceVisuals.Powered:
-        enum.PowerDeviceVisualLayers.Powered:
-          True: { visible: true }
-  - type: RMCChemicalDispenser
-    network: MCChemStorageGround
-    reagents:
-      - CMBicaridine
-      - CMKelotane
-      - CMDylovene
-      - CMDexalin
-      - CMDexalinPlus
-      - CMInaprovaline
-      - CMEpinephrine
-      - CMTricordrazine
-
-- type: entity
-  parent: MCChemDispenserCorpsmanBase
-  id: MCChemDispenserCorpsmanMedbay
-  suffix: MC, Medbay
-  components:
-  - type: RMCChemicalDispenser
-    network: MCChemStorageGround
