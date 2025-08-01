@@ -37,15 +37,19 @@
     - MCActionXenoRest
     - MCActionXenoPsydrain
     - MCActionXenoDevolve
+    # Construction
+    - MCActionXenoChooseStructure
+    - MCActionXenoSecreteStructure
+    - MCActionXenoLayEgg
+    - MCActionXenoBlessings
+    # Weeds
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
-    - MCActionXenoLayEgg
-    - MCActionXenoPheromones
-    - ActionXenoTransferPlasma
+    # Main
     - MCActionXenoAcidicSalve
     - MCActionXenoPsychicFling
     - MCActionXenoUnrelentingForce
-    - MCActionXenoBlessings
+    - MCActionXenoPheromones
     - MCActionXenoAcidMedium
     hudOffset: -0.1,0.1
   - type: XenoEvolution
@@ -94,3 +98,11 @@
   - type: DropshipHijacker
   - type: TacticalMapUser
     canDraw: true
+  - type: XenoConstruction
+    buildDelay: 2
+    canBuild:
+    - MCWallXenoResinThick
+    - MCWallXenoResinThickBulletproof
+    - MCWallXenoResinThickFireproof
+    - MCWallXenoResinThickHardy
+    - MCDoorXenoResinThick

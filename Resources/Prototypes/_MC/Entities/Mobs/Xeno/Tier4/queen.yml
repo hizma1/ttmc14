@@ -39,16 +39,20 @@
     actionIds:
     - MCActionXenoRest
     - MCActionXenoPsydrain
-    - MCActionXenoPheromones
+    # Construction
+    - MCActionXenoChooseStructure
+    - MCActionXenoSecreteStructure
+    - MCActionXenoLayEgg
+    - MCActionXenoBlessings
+    # Weeds
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
-    - MCActionXenoLayEgg
-    - MCActionXenoToggleXenoSpitStickyResin
-    - MCActionXenoBlessings
-    - MCActionXenoAcidStrong
     # Main
     - MCActionXenoZoom
     - MCActionXenoAcidicSalve # TODO: remove
+    - MCActionXenoPheromones
+    - MCActionXenoToggleXenoSpitStickyResin
+    - MCActionXenoAcidStrong
     # Primo
     - MCActionXenoToggleChargingQueen
     hudOffset: -0.1,0.1
@@ -94,3 +98,11 @@
   - type: MCXenoZoom
     zoom: 1.5,1.5
     doAfter: 1
+  - type: XenoConstruction
+    buildDelay: 2
+    canBuild:
+    - MCWallXenoResinThick
+    - MCWallXenoResinThickBulletproof
+    - MCWallXenoResinThickFireproof
+    - MCWallXenoResinThickHardy
+    - MCDoorXenoResinThick
