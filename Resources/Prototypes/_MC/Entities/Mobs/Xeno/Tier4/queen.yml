@@ -46,6 +46,9 @@
     - MCActionXenoToggleXenoSpitStickyResin
     - MCActionXenoBlessings
     - MCActionXenoAcidStrong
+    # Main
+    - MCActionXenoZoom
+    - MCActionXenoAcidicSalve # TODO: remove
     # Primo
     - MCActionXenoToggleChargingQueen
     hudOffset: -0.1,0.1
@@ -86,3 +89,8 @@
   - type: DropshipHijacker
   - type: TacticalMapUser
     canDraw: true
+  # Abilities
+  - type: MCXenoAcidicSalve
+  - type: MCXenoZoom
+    zoom: 1.5,1.5
+    doAfter: 1

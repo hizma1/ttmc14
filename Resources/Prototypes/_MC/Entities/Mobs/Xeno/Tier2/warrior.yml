@@ -35,7 +35,7 @@
     - MCActionXenoRest
     - MCActionXenoPsydrain
     - MCActionXenoDevolve
-    # Main abilities
+    # Main
     - MCActionXenoAgility
     - MCActionXenoLunge
     - MCActionXenoGrappleToss
