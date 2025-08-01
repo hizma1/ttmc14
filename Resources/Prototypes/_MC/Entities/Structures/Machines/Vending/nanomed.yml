@@ -22,12 +22,14 @@
         amount: 1
       - id: MCAutoInjectorKelotane
         amount: 1
-      # tramadol
+      - id: MCPillCanisterTramadol
+        amount: 1
       - id: MCAutoInjectorTricordrazine
         amount: 1
       - id: MCAutoInjectorDylovene
         amount: 1
-      # combat
+      - id: MCAutoInjectorCombat
+        amount: 1
       - id: MCAutoInjectorHypervene
         amount: 1
     - name: Heal Pack
@@ -36,7 +38,7 @@
         amount: 2
       - id: MCOintment
         amount: 2
-      # splint
+      # splint (ждём лимб)
     - name: Misc
       entries:
       - id: MCHealthAnalyzer
