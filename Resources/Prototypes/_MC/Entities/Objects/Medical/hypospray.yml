@@ -12,31 +12,12 @@
   id: MCHyposprayAdvanced
   components:
   - type: Sprite
-    sprite: _MC/Objects/Medical/hypospray_advanced.rsi
+    sprite: _MC/Objects/Medical/hypospray_advanced.rsi # хуйня не работает, мне лень разбираться, нету похожих состояний.
     layers:
       - state: base
         map: ["enum.SolutionContainerLayers.Base"]
-      - state: hypo_0
+      - state: hypo_fill1
         map: ["enum.SolutionContainerLayers.Fill"]
-        visible: false
-  - type: GenericVisualizer
-    visuals:
-      enum.EvacuationPumpLayers.Layer:
-        enum.EvacuationPumpLayers.Layer:
-          Empty: { state: reagent_0 }
-          Ten: { state: reagent_10 }
-          TwentyFive: { state: reagent_25 }
-          Fifty: { state: reagent_50 }
-          SixtyFive: { state: reagent_65 }
-          Eighty: { state: reagent_80 }
-          Full: { state: reagent_100 }
-      enum.PowerDeviceVisuals.Powered:
-        enum.EvacuationPumpLayers.Layer:
-          True: { visible: true }
-          False: { visible: false }
-        unpowered:
-          True: { visible: false }
-          False: { visible: true }
   - type: Item
     sprite: _MC/Objects/Medical/hypospray_advanced.rsi
   - type: SolutionContainerManager
@@ -60,7 +41,7 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: hypo_fill
-    solutionName: reagent
+    solutionName: reagent_
   - type: MedicallyUnskilledDoAfter
     min: 1
     doAfter: 3
