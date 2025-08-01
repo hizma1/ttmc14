@@ -8,10 +8,13 @@
   },
   "states": [
     {
-      "name": "hypospray"
+      "name": "hypo_fill4"
     },
     {
-      "name": "empty"
+      "name": "hypo_fill5"
+    },
+    {
+      "name": "hypo_fill6"
     },
     {
       "name": "inhand-left",
@@ -22,22 +25,40 @@
       "directions": 4
     },
     {
-      "name": "hypospray6"
+      "name": "reagent_0"
     },
     {
-      "name": "hypospray1"
+      "name": "reagent_10"
     },
     {
-      "name": "hypospray2"
+      "name": "reagent_25"
     },
     {
-      "name": "hypospray3"
+      "name": "reagent_50"
     },
     {
-      "name": "hypospray4"
+      "name": "reagent_65"
     },
     {
-      "name": "hypospray5"
+      "name": "reagent_80"
+    },
+    {
+      "name": "reagent_100"
+    },
+    {
+      "name": "base"
+    },
+    {
+      "name": "hypo_fill0"
+    },
+    {
+      "name": "hypo_fill1"
+    },
+    {
+      "name": "hypo_fill2"
+    },
+    {
+      "name": "hypo_fill3"
     }
   ]
 }

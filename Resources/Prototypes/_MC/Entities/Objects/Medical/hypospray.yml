@@ -1,7 +1,66 @@
 # tags
 - type: Tag
-  id: MCHypospray
+  id: MCHypospray # Вы ебнулись? Нету обычного гипо.
 
 - type: Tag
   id: MCHyposprayAdvanced
 
+- type: entity
+  name: advanced hypospray
+  parent: BaseItem
+  description: A sterile injector for rapid administration of drugs to patients.
+  id: MCHyposprayAdvanced
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Medical/hypospray_advanced.rsi
+    layers:
+      - state: base
+        map: ["enum.SolutionContainerLayers.Base"]
+      - state: hypo_0
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.EvacuationPumpLayers.Layer:
+        enum.EvacuationPumpLayers.Layer:
+          Empty: { state: reagent_0 }
+          Ten: { state: reagent_10 }
+          TwentyFive: { state: reagent_25 }
+          Fifty: { state: reagent_50 }
+          SixtyFive: { state: reagent_65 }
+          Eighty: { state: reagent_80 }
+          Full: { state: reagent_100 }
+      enum.PowerDeviceVisuals.Powered:
+        enum.EvacuationPumpLayers.Layer:
+          True: { visible: true }
+          False: { visible: false }
+        unpowered:
+          True: { visible: false }
+          False: { visible: true }
+  - type: Item
+    sprite: _MC/Objects/Medical/hypospray_advanced.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 100
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: StaticPrice
+    price: 750
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: Hypospray
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: hypo_fill
+    solutionName: reagent
+  - type: MedicallyUnskilledDoAfter
+    min: 1
+    doAfter: 3
