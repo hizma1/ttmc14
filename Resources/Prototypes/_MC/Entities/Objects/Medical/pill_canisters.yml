@@ -276,3 +276,126 @@
       amount: 16
   - type: IconLabel
     labelTextLocId: mc-hypervene-container-label-text
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterTramadol
+  name: tramadol pill bottle
+  description: Contains pills that numb pain. Take two for a stronger effect at the cost of a toxic effect.
+  suffix: Tramadol, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 4
+  - type: Sprite
+    layers:
+    - state: pill_canister4
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillTramadol
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-tramadol-container-label-text
+
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterParacetamol
+  name: paracetamol pill bottle
+  description: Contains pills that mildly numb pain. Take two for a slightly stronger effect.
+  suffix: Paracetamol, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 5
+  - type: Sprite
+    layers:
+    - state: pill_canister5
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillParacetamol
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-paracetamol-container-label-text
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterMeralyne
+  name: meralyne pill bottle
+  description: Contains pills that heal cuts and bruises, but cause slight pain. Take two to heal faster, but have slightly more pain.
+  suffix: Meralyne, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 8
+  - type: Sprite
+    layers:
+    - state: pill_canister8
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillMeralyne
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-meralyne-container-label-text
+
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterDermaline
+  name: dermaline pill bottle
+  description: Contains pills that heal burns, but cause slight pain. Take two to heal faster, but have slightly more pain.
+  suffix: Dermaline, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 2
+  - type: Sprite
+    layers:
+    - state: pill_canister2
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillDermaline
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-dermaline-container-label-text
+
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterSalineGlucose
+  name: isotonic pill bottle
+  description: Contains pills that stimulate the regeneration of lost blood.
+  suffix: Isotonic, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 10
+  - type: Sprite
+    layers:
+    - state: pill_canister10
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillSalineGlucose
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-isotonic-container-label-text

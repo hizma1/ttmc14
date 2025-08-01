@@ -17,21 +17,21 @@
       entries:
       - id: MCPillCanisterBicaridine
       - id: MCPillCanisterKelotane
-      # tramadol
+      - id: MCPillCanisterTramadol
       - id: MCPillCanisterTricordrazine
       - id: MCPillCanisterDylovene
-      # paracetamol
-      # isotonic
+      - id: MCPillCanisterParacetamol
+      - id: MCPillCanisterSalineGlucose
       - id: MCPillCanister
     - name: Auto Injector
       entries:
       - id: MCAutoInjectorBicaridine
       - id: MCAutoInjectorKelotane
-      # tramadol
+      - id: MCAutoInjectorTramadol
       - id: MCAutoInjectorTricordrazine
       - id: MCAutoInjectorDylovene
-      # combat
-      # isotonic
+      - id: MCAutoInjectorCombat
+      - id: MCAutoInjectorSalineGlucose
       - id: MCAutoInjectorInaprovaline
       # oxycodone = 30
       # spaceacillin = 20

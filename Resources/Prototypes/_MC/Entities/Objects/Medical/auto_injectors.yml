@@ -195,6 +195,8 @@
   name: hypervene autoinjector
   description: An auto-injector loaded with 3 uses of hypervene, an emergency medicine that rapidly purges chems. Causes pain and vomiting.
   components:
+  - type: Hypospray
+    transferAmount: 3
   - type: SolutionContainerManager
     solutions:
       pen:
@@ -205,7 +207,118 @@
   - type: CMRefillableSolution
     reagents:
       MCHypervene: 9
-  - type: Hypospray
-    transferAmount: 3
   - type: IconLabel
     labelTextLocId: mc-hypervene-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorTramadol
+  name: tramadol autoinjector
+  description: An auto-injector loaded with 3 doses of tramadol, an effective painkiller for normal wounds.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCTramadol
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCTramadol: 30
+  - type: IconLabel
+    labelTextLocId: mc-tramadol-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorParacetamol
+  name: paracetamol autoinjector
+  description: An auto-injector loaded with 2 doses of paracetamol, this chemical is a mild, simple painkiller.
+  components:
+  - type: Hypospray
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCParacetamol
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCParacetamol: 30
+  - type: IconLabel
+    labelTextLocId: mc-paracetamol-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorDexalinPlus
+  name: dexalin plus autoinjector
+  description: An autoinjector loaded with 3 uses of dexalin plus, designed to immediately oxygenate the entire body.
+  components:
+  - type: Hypospray
+    transferAmount: 1
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 3
+        reagents:
+        - ReagentId: MCDexalinPlus
+          Quantity: 3
+  - type: CMRefillableSolution
+    reagents:
+      MCDexalinPlus: 3
+  - type: IconLabel
+    labelTextLocId: mc-dexalinplus-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorSalineGlucose
+  name: isotonic solution autoinjector
+  description: An auto-injector loaded with 2 doses of isotonic solution, formulated to quickly recover fluid volume after blood loss or trauma.
+  components:
+  - type: Hypospray
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCSalineGlucose
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCSalineGlucose: 30
+  - type: IconLabel
+    labelTextLocId: mc-isotonic-container-label-text
+
+# MISC
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorCombat
+  name: combat autoinjector
+  description: An autoinjector loaded with 2 doses of healing and painkilling chemicals. Intended for use in active combat.
+  components:
+  - type: Hypospray
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCBicaridine
+          Quantity: 10
+        - ReagentId: MCKelotane
+          Quantity: 10
+        - ReagentId: MCTricordrazine
+          Quantity: 5
+        - ReagentId: MCTramadol
+          Quantity: 5
+  - type: CMRefillableSolution
+    reagents:
+      MCBicaridine: 10
+      MCKelotane: 10
+      MCTricordrazine: 5
+      MCTramadol: 5
+  - type: IconLabel
+    labelTextLocId: mc-combat-container-label-text

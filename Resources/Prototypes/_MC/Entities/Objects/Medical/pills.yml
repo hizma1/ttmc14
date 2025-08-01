@@ -172,3 +172,82 @@
     - state: pill14
       map: [ "enum.DamageStateVisualLayers.Base" ]
 
+- type: entity
+  parent: MCPill
+  id: MCPillTramadol
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: MCTramadol
+          Quantity: 15
+  - type: Sprite
+    layers:
+    - state: pill7
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillParacetamol
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: MCParacetamol
+          Quantity: 15
+  - type: Sprite
+    layers:
+    - state: pill6
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillMeralyne
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7.5
+        reagents:
+        - ReagentId: MCMeralyne
+          Quantity: 7.5
+  - type: Sprite
+    layers:
+    - state: pill19
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillDermaline
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7.5
+        reagents:
+        - ReagentId: MCDermaline
+          Quantity: 7.5
+  - type: Sprite
+    layers:
+    - state: pill5
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillSalineGlucose
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: MCSalineGlucose
+          Quantity: 15
+  - type: Sprite
+    layers:
+    - state: pill4
+      map: [ "enum.DamageStateVisualLayers.Base" ]

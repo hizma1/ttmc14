@@ -17,12 +17,12 @@
       entries:
       - id: MCPillCanisterBicaridine
       - id: MCPillCanisterKelotane
-      # tramadol
+      - id: MCPillCanisterTramadol
       - id: MCPillCanisterTricordrazine
       - id: MCPillCanisterDylovene
       - id: MCPillCanisterInaprovaline
-      # isotonic
-      # paracetamol
+      - id: MCPillCanisterSalineGlucose
+      - id: MCPillCanisterParacetamol
       - id: MCPillCanisterDexalin
         amount: 6
       # spaceacillin = 6
@@ -32,21 +32,23 @@
       # quickclot = 6
       - id: MCPillCanisterHypervene
         amount: 6
-    # - name: Hypospray
-      #	/obj/item/reagent_containers/hypospray/autoinjector/dexalinplus = 10
+    - name: Hypospray
+      entries:
+      - id: MCAutoInjectorDexalinPlus
+        amount: 10
       #	/obj/item/reagent_containers/hypospray/autoinjector/sleeptoxin = 10
       #	/obj/item/reagent_containers/hypospray/advanced = 30
     - name: Reagent Bottle
       entries:
       - id: MCBottleBicaridine
       - id: MCBottleKelotane
-      # tramadol
+      - id: MCBottletramadol
       - id: MCBottleTricordrazine
       - id: MCBottleDylovene
       - id: MCBottleInaprovaline
-      # paracetamol
-      # isotonic
-      # leporazine
+      - id: MCBottleParacetamol
+      - id: MCSalineGlucose
+      - id: MCBottleLeporazine
       - id: MCBottleDexalin
         amount: 6
       - id: MCBottleImidazoline #не парити но мне похуй, я не просто так это делал

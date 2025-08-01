@@ -30,6 +30,9 @@
       path: "/Audio/_RMC14/Medical/healthanalyzer.ogg"
   - type: UseDelay
     delay: 0
+  - type: MedicallyUnskilledDoAfter # Parity
+    min: 1
+    doAfter: 5
   - type: Tag
     tags:
     - MCHealthAnalyzer

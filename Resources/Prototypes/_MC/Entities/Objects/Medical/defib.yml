@@ -41,6 +41,10 @@
       path: /Audio/_RMC14/Medical/defib_SafetyOn.ogg
     soundDeactivate:
       path: /Audio/_RMC14/Medical/defib_safetyOff.ogg
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - belt
   - type: Defibrillator
     zapDelay: 0
     doAfterDuration: 7.5
