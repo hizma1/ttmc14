@@ -1,9 +1,27 @@
 # Marine, Corpsman, Engineer, Smartgunner
 - type: rank
+  id: MCPrivate
+  name: mc-rank-MCPrivate-name 
+  prefix: mc-rank-MCPrivate-prefix 
+  paygrade: mc-rank-MCPrivate-paygrade 
+
+- type: rank
+  id: MCPrivateFirstClass
+  name: mc-rank-MCPrivateFirstClass-name
+  prefix: mc-rank-MCPrivateFirstClass-prefix
+  paygrade: mc-rank-MCPrivateFirstClass-paygrade
+
+- type: rank
   id: MCLanceCorporal
   name: mc-rank-MCLanceCorporal-name
   prefix: mc-rank-MCLanceCorporal-prefix
   paygrade: mc-rank-MCLanceCorporal-paygrade
+
+- type: rank
+  id: MCSectionCorporal
+  name: mc-rank-MCSectionCorporal-name
+  prefix: mc-rank-MCSectionCorporal-prefix
+  paygrade: mc-rank-MCSectionCorporal-paygrade
 
 - type: rank
   id: MCCorporal
@@ -22,6 +40,12 @@
   name: mc-rank-MCStaffSergeant-name
   prefix: mc-rank-MCStaffSergeant-prefix
   paygrade: mc-rank-MCStaffSergeant-paygrade
+
+- type: rank
+  id: MCMasterSergeant
+  name: mc-rank-MCMasterSergeant-name
+  prefix: mc-rank-MCMasterSergeant-prefix
+  paygrade: mc-rank-MCMasterSergeant-paygrade
 
 - type: rank
   id: MCSergeantMajor
