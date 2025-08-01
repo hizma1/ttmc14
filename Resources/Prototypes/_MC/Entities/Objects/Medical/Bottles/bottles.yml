@@ -220,6 +220,23 @@
     reagents:
       MCLeporazine: 60
 
+- type: entity
+  parent: MCBottleFilled
+  id: MCSalineGlucose
+  name: saline-glucose bottle
+  description: A small bottle. Contains saline-glucose, also known as isotonic - used to aid the body in blood restoration.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCSalineGlucose
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCSalineGlucose: 60
+
 # CHEMICAL BOTTLES
 - type: entity
   parent: MCBottleFilled

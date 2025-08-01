@@ -235,3 +235,19 @@
     layers:
     - state: pill5
       map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  parent: MCPill
+  id: MCPillSalineGlucose
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: MCSalineGlucose
+          Quantity: 15
+  - type: Sprite
+    layers:
+    - state: pill4
+      map: [ "enum.DamageStateVisualLayers.Base" ]

@@ -55,3 +55,34 @@
       effects:
       - !type:SatiateHunger #Тут нужно будет накинуть taste_multi = 1.5 который блокирует вкусы других веществ.
         factor: 5
+
+- type: reagent
+  id: MCSodiumChloride
+  name: mc-reagent-name-table-salt
+  group: Foods
+  desc: mc-reagent-desc-table-salt
+  physicalDesc: mc-reagent-physical-desc-grainy
+  flavor: salty
+  color: "#ffffff"
+  recognizable: true
+  boilingPoint: 1465.0
+  meltingPoint: 800.7
+  plantMetabolism:
+  - !type:PlantAdjustWater
+    amount: -3
+  - !type:PlantAdjustNutrition
+    amount: -0.3
+  - !type:PlantAdjustToxins
+    amount: 8
+  - !type:PlantAdjustWeeds
+    amount: -2
+  - !type:PlantAdjustPests
+    amount: -1
+  - !type:PlantAdjustHealth
+    amount: -2
+  metabolisms:
+    Food:
+      metabolismRate: 0.4
+      effects:
+      - !type:SatiateThirst
+        factor: -0.5

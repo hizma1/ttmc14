@@ -21,7 +21,7 @@
       - id: MCPillCanisterTricordrazine
       - id: MCPillCanisterDylovene
       - id: MCPillCanisterParacetamol
-      # isotonic
+      - id: MCPillCanisterSalineGlucose
       - id: MCPillCanister
     - name: Auto Injector
       entries:
@@ -31,7 +31,7 @@
       - id: MCAutoInjectorTricordrazine
       - id: MCAutoInjectorDylovene
       - id: MCAutoInjectorCombat
-      # isotonic
+      - id: MCAutoInjectorSalineGlucose
       - id: MCAutoInjectorInaprovaline
       # oxycodone = 30
       # spaceacillin = 20

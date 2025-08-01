@@ -13,5 +13,6 @@ mc-dexalinplus-container-label-text = Dx+
 mc-combat-container-label-text = Cb
 mc-meralyne-container-label-text = Me
 mc-dermaline-container-label-text = De
+mc-isotonic-container-label-text = Is
 
 mc-custom-container-label-text = {$customLabel}

@@ -271,6 +271,26 @@
   - type: IconLabel
     labelTextLocId: mc-dexalinplus-container-label-text
 
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorSalineGlucose
+  name: isotonic solution autoinjector
+  description: An auto-injector loaded with 2 doses of isotonic solution, formulated to quickly recover fluid volume after blood loss or trauma.
+  components:
+  - type: Hypospray
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCSalineGlucose
+          Quantity: 30
+  - type: CMRefillableSolution
+    reagents:
+      MCSalineGlucose: 30
+  - type: IconLabel
+    labelTextLocId: mc-isotonic-container-label-text
 
 # MISC
 - type: entity

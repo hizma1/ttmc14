@@ -21,7 +21,7 @@
       - id: MCPillCanisterTricordrazine
       - id: MCPillCanisterDylovene
       - id: MCPillCanisterInaprovaline
-      # isotonic
+      - id: MCPillCanisterSalineGlucose
       - id: MCPillCanisterParacetamol
       - id: MCPillCanisterDexalin
         amount: 6
@@ -47,7 +47,7 @@
       - id: MCBottleDylovene
       - id: MCBottleInaprovaline
       - id: MCBottleParacetamol
-      # isotonic
+      - id: MCSalineGlucose
       - id: MCBottleLeporazine
       - id: MCBottleDexalin
         amount: 6

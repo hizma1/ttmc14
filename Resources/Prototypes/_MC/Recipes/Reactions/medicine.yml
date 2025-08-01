@@ -201,3 +201,15 @@
   products:
     MCLeporazine: 2
     MCPhoron: 5
+
+- type: reaction
+  id: MCSalineGlucose
+  reactants:
+    MCWater:
+      amount: 1
+    MCSodiumChloride:
+      amount: 1
+    MCSugar:
+      amount: 1
+  products:
+    MCSalineGlucose: 3

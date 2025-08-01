@@ -374,3 +374,28 @@
       amount: 16
   - type: IconLabel
     labelTextLocId: mc-dermaline-container-label-text
+
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterSalineGlucose
+  name: isotonic pill bottle
+  description: Contains pills that stimulate the regeneration of lost blood.
+  suffix: Isotonic, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 10
+  - type: Sprite
+    layers:
+    - state: pill_canister10
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillSalineGlucose
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-isotonic-container-label-text
