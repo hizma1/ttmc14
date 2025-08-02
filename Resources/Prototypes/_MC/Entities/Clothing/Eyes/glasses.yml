@@ -52,3 +52,34 @@
 
 - type: Tag
   id: MCGlassesHudHealth
+
+- type: entity
+  parent: ClothingEyesGlassesCheapSunglasses
+  id: MCSunGlassesSpatialAgent
+  suffix: MC, Admin
+  name: spatial agent's sunglasses
+  description: Glasses worn by a spatial agent.
+  components:
+  - type: HolocardScanner
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: ComponentToggler
+    components:
+    - type: SolutionScanner
+  - type: ToggleClothing
+    action: RMCActionToggleMedhud
+  - type: NightVisionItem
+  - type: ShowMindShieldIcons
+  - type: ShowCriminalRecordIcons
+  - type: FlashImmunity
+  - type: Unremoveable
+  - type: Item
+    storedRotation: 0
+  - type: Sprite
+    sprite: _MC/Clothing/Eyes/Glasses/sunglasses.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Eyes/Glasses/sunglasses.rsi
+    slots:
+    - MASK
+    - EYES
