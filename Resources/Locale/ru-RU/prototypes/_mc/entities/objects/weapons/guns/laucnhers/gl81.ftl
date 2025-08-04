@@ -1,2 +1,2 @@
 ent-MCWeaponLauncherGl81 = гранатомёт GL-81
-    .desc = A lightweight, single-shot grenade launcher used by the TerraGov Marine Corps for area denial and big explosions.
+    .desc = Лёгкий однозарядный гранатомёт, используемый Корпусом морской пехоты ТерраGov для создания блокировки территории и масштабных взрывов.

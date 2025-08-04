@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._MC.Xeno.Evolution;
 using Content.Shared._MC.Xeno.Hive.Components;
 using Content.Shared._RMC14.CCVar;
 using Content.Shared._RMC14.Xenonids.Announce;
@@ -353,6 +354,20 @@ public sealed class XenoEvolutionSystem : EntitySystem
                 _popup.PopupEntity(Loc.GetString("cm-xeno-evolution-failed-already-have", ("prototype", prototype.Name)), xeno, xeno, PopupType.MediumCaution);
 
             return false;
+        }
+
+        if (prototype.TryGetComponent<MCXenoEvolutionRequiredQuantityComponent>(
+                out var evolutionRequiredQuantityComponent,
+                _compFactory))
+        {
+            var living = GetLiving<XenoComponent>();
+            if (living < evolutionRequiredQuantityComponent.Count)
+            {
+                if (doPopup)
+                    _popup.PopupEntity(Loc.GetString("mc-xeno-evolution-not-enough-quantity", ("prototype", prototype.Name), ("count", evolutionRequiredQuantityComponent.Count - living)), xeno, xeno, PopupType.MediumCaution);
+
+                return false;
+            }
         }
 
         // TODO RMC14 only allow evolving towards Queen if none is alive

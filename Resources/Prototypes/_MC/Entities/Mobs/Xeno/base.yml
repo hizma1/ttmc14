@@ -17,8 +17,6 @@
     overlay: false
     drawFov: false
   - type: MCXenoSunder
-  - type: CombatMode
-    canDisarm: false
   - type: UserInterface
     interfaces:
       # MC
@@ -54,6 +52,12 @@
         requireInputValidation: false
       enum.DialogUiKey.Key:
         type: DialogBui
+  - type: TacticalMapUser
+    actionId: RMCActionOpenTacticalMapXeno
+    xenos: true
+    liveUpdate: true
+  - type: TacticalMapLiveUpdateOnOvi
+    enabled: false
 
 - type: entity
   parent: MCXenoNoMeleeBase
@@ -67,6 +71,8 @@
     altDisarm: false
     altHeavy: false
   - type: MCXenoDamageVisuals
+  - type: CombatMode
+    canDisarm: false
 
 - type: entity
   id: MCXenoPlantingWeeds
@@ -131,26 +137,6 @@
   abstract: true
   components:
   - type: MCXenoLayEgg
-
-- type: entity
-  id: MCXenoCrestToss
-  abstract: true
-  components:
-  - type: MCXenoCrestToss
-    damage:
-      groups:
-        Brute: 36 # distance * 6 (36)
-    speed: 10
-
-- type: entity
-  id: MCXenoStomp
-  abstract: true
-  components:
-  - type: MCXenoStomp
-    throwSpeed: 2
-    damage:
-      groups:
-        Brute: 60
 
 - type: entity
   id: MCXenoCharge

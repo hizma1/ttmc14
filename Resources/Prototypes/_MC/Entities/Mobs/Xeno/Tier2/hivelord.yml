@@ -40,16 +40,21 @@
     - MCActionXenoRest
     - MCActionXenoPsydrain
     - MCActionXenoDevolve
-    - MCActionXenoPheromones
+    # Construction
+    - MCActionXenoChooseStructure
+    - MCActionXenoSecreteStructure
+    - MCActionXenoBlessings
+    - MCActionXenoDigTunnel
+    # Weeds
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
-    - MCActionXenoCreateResinJellyHivelord
-    - MCActionXenoToggleXenoSpitStickyResin
-    - MCActionXenoRecycle
-    - MCActionXenoBlessings
-    - MCActionXenoResinWalker
-    - MCActionXenoDigTunnel
+    # Main
+    - MCActionXenoPheromones
     - MCActionXenoAcidMedium
+    - MCActionXenoToggleXenoSpitStickyResin
+    - MCActionXenoCreateResinJellyHivelord
+    - MCActionXenoRecycle
+    - MCActionXenoResinWalker
     hudOffset: -0.1,0.1
   - type: XenoEvolution
     actionId: MCActionXenoEvolve
@@ -92,11 +97,11 @@
   - type: XenoConstruction
     buildDelay: 1
     canBuild:
-    - WallXenoResinThick
-    - WallXenoMembraneThick
-    - DoorXenoResinThick
-    - XenoStickyResin
-    canUpgrade: true
+    - MCWallXenoResinThick
+    - MCWallXenoResinThickBulletproof
+    - MCWallXenoResinThickFireproof
+    - MCWallXenoResinThickHardy
+    - MCDoorXenoResinThick
   - type: AcidTrap
   - type: MCXenoBlessings
     entries:
