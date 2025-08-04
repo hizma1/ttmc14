@@ -38,7 +38,7 @@
         RMCSkillSurgery: 5
         RMCSkillPolice: 2
         RMCSkillLeadership: 2
-        RMCSkillCQC: -1
+        RMCSkillCqc: -1
         RMCSkillSmartGun: -4
         # RMCSkillMelee: -1
         RMCSkillFirearms: 0
