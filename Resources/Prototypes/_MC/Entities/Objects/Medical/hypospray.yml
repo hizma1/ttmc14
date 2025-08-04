@@ -1,22 +1,15 @@
-# tags
-- type: Tag
-  id: MCHypospray # Вы ебнулись? Нету обычного гипо.
-
-- type: Tag
-  id: MCHyposprayAdvanced
-
 - type: entity
-  name: advanced hypospray
+  name: hypospray
   parent: BaseItem
   description: A sterile injector for rapid administration of drugs to patients.
-  id: MCHyposprayAdvanced
+  id: MCHypospray
   components:
   - type: Sprite
-    sprite: _MC/Objects/Medical/hypospray_advanced.rsi # хуйня не работает, мне лень разбираться, нету похожих состояний.
+    sprite: _MC/Objects/Medical/hypospray.rsi # хуйня не работает, мне лень разбираться, нету похожих состояний.
     layers:
       - state: base
         map: ["enum.SolutionContainerLayers.Base"]
-      - state: hypo_fill1
+      - state: hypo_100
         map: ["enum.SolutionContainerLayers.Fill"]
   - type: Item
     sprite: _MC/Objects/Medical/hypospray_advanced.rsi
@@ -31,7 +24,7 @@
   - type: Hypospray
     onlyAffectsMobs: false
   - type: StaticPrice
-    price: 750
+    price: 0
   - type: Tag
     tags:
     - HighRiskItem
@@ -40,8 +33,15 @@
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 6
-    fillBaseName: hypo_fill
-    solutionName: reagent_
+    fillBaseName: hypo_0
+    solutionName: reagent_0
   - type: MedicallyUnskilledDoAfter
     min: 1
     doAfter: 3
+
+# tags
+- type: Tag
+  id: MCHypospray
+
+- type: Tag
+  id: MCHyposprayAdvanced

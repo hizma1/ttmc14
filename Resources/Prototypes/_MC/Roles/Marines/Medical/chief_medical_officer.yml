@@ -57,6 +57,8 @@
   id: MCCMO
   equipment:
     id: MCIdCardCMO
+  inhand:
+    - MCBottleLemolineDoctor
 
 - type: entity
   parent: MCSpawnPointJob

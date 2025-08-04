@@ -1,10 +1,9 @@
-ent-MССlaymore = клеймор
+ent-MCClaymore = клеймор
     .desc = А ты чего уставился? Вперёд, убивать!
 ent-MCMercsword = боевой меч
-    .desc = A dusty sword commonly seen in historical museums. Where you got this is a mystery, for sure. Only a mercenary would be nuts enough to carry one of these. Sharpened to deal massive damage.
+    .desc = Пыльный меч, часто встречающийся в исторических музеях. Откуда он у тебя остаётся загадкой. Только наёмник был бы безумен, чтобы носить такое. Наточен для нанесения сокрушительного урона.
 ent-MCCeremonialSword = церемониальный меч
-    .desc = A fancy ceremonial sword passed down from generation to generation. Despite this, it has been very well cared for, and is in top condition.
-ent-MCOfficersSword = офицерская сабля
+    .desc = Парадный церемониальный меч, передаваемый из поколения в поколение. Несмотря на возраст, за ним хорошо ухаживали, и он находится в отличном состоянии.
     .desc = Судя по всему, это довольно старая, но хорошо сохранившаяся сабля. Вероятно, фамильная реликвия. Странно, но несмотря на небоевое предназначение, клинок острый, а не тупой.
 ent-MCComSword = меч комиссара
     .desc = Гордость имперского комиссара, высоко поднятая в боевом броске.
