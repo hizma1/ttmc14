@@ -356,7 +356,7 @@
       - !type:HealthChange
         damage:
           groups:
-            Brute: 3.5 # даёт ещё и боль
+            Brute: -3.5 # даёт ещё и боль
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -390,7 +390,7 @@
       - !type:HealthChange
         damage:
           groups:
-            Burn: 3.5 # даёт ещё и боль
+            Burn: -3.5 # даёт ещё и боль
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -460,7 +460,7 @@
       - !type:HealthChange
         damage:
           groups:
-            Toxin: 0.5
+            Toxin: -0.5
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
