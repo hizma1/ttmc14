@@ -1,16 +1,17 @@
 ﻿- type: reagent
-  abstract: true
   id: MCReagent
+  abstract: true
+  isCM: true
 
 - type: reagent
-  abstract: true
   parent: MCReagent
+  abstract: true
   id: MCReagentMedicine
-  group: Medicine #Я заебался группы ставить каждый раз, поэтому сделаю абстрактный класс
-  flavor: medicine #Это вкусы, их можно менять но в частном случае в медицине все медицинские.
+  group: Medicine # Я заебался группы ставить каждый раз, поэтому сделаю абстрактный класс
+  flavor: medicine # Это вкусы, их можно менять но в частном случае в медицине все медицинские.
 
 - type: reagent
-  abstract: true
   parent: MCReagent
   id: MCReagentElement
+  abstract: true
   group: Elements

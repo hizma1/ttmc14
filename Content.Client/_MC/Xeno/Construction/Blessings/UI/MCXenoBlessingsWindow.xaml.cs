@@ -2,7 +2,7 @@
 using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.XAML;
 
-namespace Content.Client._MC.Xeno.Abilities.Blessings;
+namespace Content.Client._MC.Xeno.Construction.Blessings.UI;
 
 [GenerateTypedNameReferences]
 public sealed partial class MCXenoBlessingsWindow : DefaultWindow
