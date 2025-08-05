@@ -8,13 +8,13 @@
   },
   "states": [
     {
-      "name": "hypo_fill4"
+      "name": "hypo_0"
     },
     {
-      "name": "hypo_fill5"
+      "name": "hypo_10"
     },
     {
-      "name": "hypo_fill6"
+      "name": "hypo_25"
     },
     {
       "name": "inhand-left",
@@ -49,16 +49,16 @@
       "name": "base"
     },
     {
-      "name": "hypo_fill0"
+      "name": "hypo_50"
     },
     {
-      "name": "hypo_fill1"
+      "name": "hypo_65"
     },
     {
-      "name": "hypo_fill2"
+      "name": "hypo_80"
     },
     {
-      "name": "hypo_fill3"
+      "name": "hypo_100"
     }
   ]
 }

@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseSword
-  id: MССlaymore
+  id: MCClaymore
   name: Claymore
   description: What are you standing around staring at this for? Get to killing!
   components:

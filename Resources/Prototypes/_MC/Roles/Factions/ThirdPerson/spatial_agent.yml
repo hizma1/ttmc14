@@ -39,7 +39,7 @@
 
 - type: playTimeTracker
   id: MCSpatialAgent
-  isHumanoid: false
+  isHumanoid: true
 
 - type: startingGear
   id: MCGearSpatialAgentEquipped

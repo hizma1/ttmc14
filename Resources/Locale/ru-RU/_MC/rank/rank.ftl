@@ -151,7 +151,7 @@ mc-rank-MCSeniorResident-prefix = E3
 mc-rank-MCSeniorResident-paygrade = SR
 
 mc-rank-MCGeneralPractitioner-name = Терапевт
-mc-rank-MCGeneralPractitioner-prefix = E4 
+mc-rank-MCGeneralPractitioner-prefix = E4
 mc-rank-MCGeneralPractitioner-paygrade = GP
 
 mc-rank-MCAttendingPhysician-name = Лечащий врач
@@ -172,7 +172,7 @@ mc-rank-MCMedicalSupervisor-paygrade = MSPVR
 
 mc-rank-MCMedicalDirector-name = Медецинский директор
 mc-rank-MCMedicalDirector-prefix = E9
-mc-rank-MCMedicalDirector-paygrade = MDR 
+mc-rank-MCMedicalDirector-paygrade = MDR
 
 mc-rank-MCChiefMedicalOfficer-name = Старший медецинский офицер
 mc-rank-MCChiefMedicalOfficer-prefix = O1
@@ -233,12 +233,12 @@ mc-rank-MCMarkII-prefix = E2
 mc-rank-MCMarkII-paygrad = Mk.II
 
 mc-rank-MCMarkIII-name = Mark III
-mc-rank-MCMarkIII- prefix = E3
+mc-rank-MCMarkIII-prefix = E3
 mc-rank-MCMarkIII-paygrad = Mk.III
 
 mc-rank-MCMarkIV-name = Mark IV
 mc-rank-MCMarkIV-prefix = E4
-mc-rank-MCMarkI-paygrad = Mk.IV
+mc-rank-MCMarkIV-paygrad = Mk.IV
 
 mc-rank-MCMarkV-name = Mark V
 mc-rank-MCMarkV-prefix = E5

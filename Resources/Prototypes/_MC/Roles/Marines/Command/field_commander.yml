@@ -41,7 +41,7 @@
         RMCSkillPolice: 2
         RMCSkillPowerLoader: 2
         RMCSkillLeadership: 4
-        RMCSkillCQC: 1
+        RMCSkillCqc: 1
         RMCSkillSmartGun: -4
         # RMCSkillMelee: 0
         RMCSkillFirearms: 1
