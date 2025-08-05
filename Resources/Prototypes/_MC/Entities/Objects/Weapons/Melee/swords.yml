@@ -22,7 +22,7 @@
       groups:
         Brute: 40
     soundHit:
-        path: /Audio/Weapons/bladeslice.ogg
+      path: /Audio/Weapons/bladeslice.ogg
   - type: DamageOtherOnHit
     damage:
       groups:
@@ -33,7 +33,7 @@
   - type: DeleteOnExplosion
 
 - type: entity
-  parent: MССlaymore
+  parent: MCClaymore
   id: MCMercsword
   name: combat sword
   description: A dusty sword commonly seen in historical museums. Where you got this is a mystery, for sure. Only a mercenary would be nuts enough to carry one of these. Sharpened to deal massive damage.
@@ -51,7 +51,7 @@
         Brute: 39
 
 - type: entity
-  parent: MССlaymore
+  parent: MCClaymore
   id: MCCeremonialSword
   name: Ceremonial Sword
   description: A fancy ceremonial sword passed down from generation to generation. Despite this, it has been very well cared for, and is in top condition.
@@ -63,7 +63,7 @@
         Brute: 55
 
 - type: entity
-  parent: MССlaymore
+  parent: MCClaymore
   id: MCOfficersSword
   name: officers sword
   description: This appears to be a rather old blade that has been well taken care of, it is probably a family heirloom. Oddly despite its probable non-combat purpose it is sharpened and not blunt.
@@ -82,7 +82,7 @@
 #No parity, there should be penetration 15
 
 - type: entity
-  parent: MССlaymore
+  parent: MCClaymore
   id: MCComSword
   name: commissars sword
   description: The pride of an imperial commissar, held high as they charge into battle.
@@ -100,7 +100,7 @@
         Brute: 80
 
 - type: entity
-  parent: MССlaymore
+  parent: MCClaymore
   id: MCKatana
   name: katana
   suffix: MC
@@ -159,7 +159,7 @@
         Brute: 5
 
 - type: entity
-  parent: MССlaymore
+  parent: MCClaymore
   id: MCKatanaSamurai
   name: tachi
   description: A genuine replica of an ancient blade. This one is in remarkably good condition. It could do some damage to everyone, including yourself.
@@ -185,7 +185,7 @@
         Brute: 10
 
 - type: entity
-  parent: MССlaymore
+  parent: MCClaymore
   id: MCMachete
   name: M2132 machete
   suffix: MC
