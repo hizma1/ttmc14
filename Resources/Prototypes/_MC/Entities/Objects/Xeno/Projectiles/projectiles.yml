@@ -1,9 +1,8 @@
 - type: entity
-  parent: XenoBaseProjectile
+  parent: MCXenoProjectile
   id: MCXenoProjectileHeavyScatter
   components:
   - type: Sprite
-    sprite: _MC/Objects/Xeno/projectiles.rsi
     layers:
     - state: xeno_acid
       shader: unshaded
@@ -21,13 +20,11 @@
   - type: MCXenoProjectileTargetingTurf
 
 - type: entity
-  parent: [ XenoBaseProjectile ]
+  parent: MCXenoProjectile
   id: MCXenoProjectileMedium
   name: acid spatter
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _MC/Objects/Xeno/projectiles.rsi
     layers:
     - state: xeno_acid
       shader: unshaded
@@ -42,13 +39,11 @@
     max: 8
 
 - type: entity
-  parent: [ XenoBaseProjectile ]
+  parent: MCXenoProjectile
   id: MCXenoProjectileToxinHeavy
   name: neurotoxic splash
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _MC/Objects/Xeno/projectiles.rsi
     layers:
     - state: neurotoxin
       shader: unshaded
@@ -66,13 +61,11 @@
   - type: MCXenoProjectileTargetingTurf
 
 - type: entity
-  parent: [ XenoBaseProjectile ]
+  parent: MCXenoProjectile
   id: MCXenoProjectileStickyResin
   name: sticky resin spit
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _MC/Objects/Xeno/projectiles.rsi
     layers:
     - state: sticky
       shader: unshaded
