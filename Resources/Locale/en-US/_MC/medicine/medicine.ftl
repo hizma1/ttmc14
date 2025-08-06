@@ -14,5 +14,6 @@ mc-combat-container-label-text = Cb
 mc-meralyne-container-label-text = Me
 mc-dermaline-container-label-text = De
 mc-isotonic-container-label-text = Is
-
+mc-meraderm-container-label-text = Mr
+mc-nanoblood-container-label-text = Na
 mc-custom-container-label-text = {$customLabel}

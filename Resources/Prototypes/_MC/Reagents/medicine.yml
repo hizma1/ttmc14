@@ -12,8 +12,10 @@
     Medicine:
       metabolismRate: 0.2
       effects:
-        - !type:Neogenetic
-          potency: 4
+        - !type:HealthChange
+          damage:
+            groups:
+              Brute: -1.5
         - !type:HealthChange
           conditions:
             - !type:ReagentThreshold
@@ -47,7 +49,7 @@
         - !type:HealthChange
           damage:
             groups:
-              Airloss: -4.5 #225 при дозе 15, если нет - я просчитался.
+              Airloss: -3
         - !type:HealthChange
           conditions:
             - !type:ReagentThreshold
@@ -77,8 +79,10 @@
     Medicine:
       metabolismRate: 0.2
       effects:
-        - !type:Anticorrosive
-          potency: 4
+        - !type:HealthChange
+          damage:
+            groups:
+              Burn: -1.5
         - !type:HealthChange
           conditions:
             - !type:ReagentThreshold
@@ -109,8 +113,10 @@
     Medicine:
       metabolismRate: 0.2 # дать потом диловену урон по стамине.
       effects:
-      - !type:Antitoxic
-        potency: 4
+      - !type:HealthChange
+        damage:
+          groups:
+            Toxin: -1.5
       - !type:ChemHealEyeDamage
         amount: 0.08 # Вычеслил хорошее число для ослепления, чтобы не было слишком сильного эффекта.
         conditions:
@@ -192,14 +198,13 @@
     Medicine:
       metabolismRate: 0.2
       effects:
-        - !type:Neogenetic
-          potency: 3.2
-        - !type:Anticorrosive
-          potency: 3.2
-        - !type:Antitoxic
-          potency: 0.8
-        - !type:Oxygenating
-          potency: 1.2 # примерно 40 снимет
+        - !type:HealthChange
+          damage:
+            groups:
+              Brute: -0.8
+              Burn: -0.8
+              Toxin: -0.4
+              Airloss: -0.5
         - !type:GenericStatusEffect # Типо урон по мозгу, но не совсем
           key: Stutter
           component: ScrambledAccent
@@ -308,15 +313,14 @@
     Medicine:
       metabolismRate: 0.025
       effects:
-      - !type:Neogenetic
-        potency: 0.2
-      - !type:Antitoxic
-        potency: 0.2
-      - !type:Anticorrosive
-        potency: 0.2
-      - !type:Oxygenating
-        potency: 0.2
-      - !type:ModifyStatusEffect
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -0.2
+            Burn: -0.2
+            Toxin: -0.2
+            Airloss: -0.2
+      - !type:ModifyStatusEffect # Сделаю прикольную штучку по пуржу и
         effectProto: StatusEffectSeeingRainbow
         conditions:
         - !type:ReagentThreshold
@@ -421,8 +425,10 @@
     Medicine:
       metabolismRate: 0.2
       effects:
-      - !type:Antitoxic
-        potency: 4
+      - !type:HealthChange
+        damage:
+          groups:
+            Toxin: -1.5
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -575,23 +581,9 @@
     Medicine:
       metabolismRate: 0.2
       effects:
-      - !type:Oxygenating # пуржит лексорин
+      - !type:Oxygenating # пуржит лексорин, тут передоз уже есть из говнокода оффов
         potency: 6
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          min: 15
-        damage:
-          groups:
-            Toxin: 1
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentThreshold
-          min: 25
-        damage:
-          groups:
-            Brute: 2
-            Toxin: 3
+
 
 - type: reagent
   parent: MCReagentMedicine

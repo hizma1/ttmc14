@@ -1,2 +1,168 @@
 - type: Tag
   id: MCBodyBag
+
+- type: entity
+  parent: BaseDeployFoldable
+  id: MCBodyBag
+  name: body bag
+  suffix: MC
+  description: A folded bag designed for the storage and transportation of cadavers.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _MC/Objects/Medical/bodybag.rsi
+    drawdepth: Mobs
+    layers:
+    - state: bodybag_closed
+      map: ["unfoldedLayer", "enum.StorageVisualLayers.Base"]
+    - state: bodybag_folded
+      map: ["foldedLayer"]
+      visible: false
+    - state: bodybag_open
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: bodybag_label
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: _MC/Objects/Medical/bodybag.rsi
+    state: bodybag_closed
+  - type: EntityStorageVisuals
+    stateDoorOpen: bodybag_open
+  - type: InsertBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: HealthScannableContainer
+  - type: Tag
+    tags:
+    - MCBodyBag
+    - BodyBag
+  - type: Clickable
+  - type: InteractionOutline
+  - type: MovedByPressure
+  - type: Physics
+    bodyType: Dynamic
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.4,0.25,0.1"
+        density: 20
+        mask:
+        - ItemMask
+  - type: EntityStorage
+    capacity: 1
+    isCollidableWhenOpen: true
+    closeSound:
+      path: /Audio/Misc/zip.ogg
+    openSound:
+      path: /Audio/Misc/zip.ogg
+  - type: EntityStorageLayingDownOverride
+  - type: PaperLabel
+    labelSlot:
+      insertVerbText: Attach Label
+      ejectVerbText: Remove Label
+      whitelist:
+        components:
+        - Paper
+      blacklist:
+        tags:
+        - Book
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PaperLabelVisuals.HasLabel:
+        enum.PaperLabelVisuals.Layer:
+          True: {visible: true}
+          False: {visible: false}
+      enum.PaperLabelVisuals.LabelType:
+        enum.PaperLabelVisuals.Layer:
+          Paper: { state: paper }
+          Bounty: { state: bounty }
+          CaptainsPaper: { state: captains_paper }
+          Invoice: { state: invoice }
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedLayer:
+          True: {visible: false}
+          False: {visible: true}
+  - type: Pullable
+  - type: ItemSlots
+  - type: DownOnEnter
+  - type: ContainerContainer
+    containers:
+      entity_storage: !type:Container
+      paper_label: !type:ContainerSlot
+  - type: Buckle
+    buckleDelay: 0
+    clickUnbuckle: false
+  - type: BuckleWhitelist
+    whitelist:
+      components:
+      - MedevacStretcher
+      tags:
+      - CMRollerItem
+      - MCRollerItem
+  - type: Foldable
+    fitIntoEntityStorage: true
+  - type: CrashLandable
+  - type: AnimationPlayer
+
+- type: entity
+  parent: MCBodyBag
+  id: MCBodyBagFolded
+  suffix: folded
+  components:
+  - type: Foldable
+    folded: true
+
+- type: entity
+  parent: MCBodyBag
+  id: MCStasisBag
+  name: stasis bag
+  suffix: MC
+  description: A folded, reusable bag designed to prevent additional damage to an occupant.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Medical/stasisbag.rsi
+    drawdepth: Mobs
+    layers:
+    - state: bodybag_closed
+      map: ["unfoldedLayer", "enum.StorageVisualLayers.Base"]
+    - state: bodybag_folded
+      map: ["foldedLayer"]
+      visible: false
+    - state: bodybag_open
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: paper
+      sprite: _RMC14/Objects/Medical/bodybags.rsi
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: _RMC14/Objects/Medical/stasisbag.rsi
+  - type: EntityStorageVisuals
+    stateDoorOpen: bodybag_open
+  - type: EntityStorageLayingDownOverride
+    enabled: false
+  - type: CMStasisBag
+  - type: Buckle
+    buckleDelay: 0
+    clickUnbuckle: false
+  - type: BuckleWhitelist
+    whitelist:
+      components:
+      - MedevacStretcher
+      tags:
+      - CMRollerItem
+
+- type: entity
+  parent: MCStasisBag
+  id: MCStasisBagFolded
+  suffix: MC, folded
+  components:
+  - type: Foldable
+    folded: true
