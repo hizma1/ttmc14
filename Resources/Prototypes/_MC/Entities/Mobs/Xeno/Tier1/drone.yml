@@ -138,6 +138,7 @@
     evolvesTo:
     - MCXenoHivelord
     - MCXenoCarrier
+    evolvesToWithoutPoints:
     - MCXenoShrike
     - MCXenoQueen
   - type: XenoPlasma
