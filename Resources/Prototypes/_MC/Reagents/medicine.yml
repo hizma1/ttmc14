@@ -660,3 +660,37 @@
           groups:
             Brute: 1
             Toxin: 1
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCNanoblood
+  name: reagent-name-mc-saline-nanoblood
+  desc: reagent-desc-mc-saline-nanoblood
+  physicalDesc: mc-reagent-physical-desc-liquid
+  color: "#9b0100"
+  overdose: 6
+  criticalOverdose: 9
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:ModifyBloodLevel
+        amount: 2.4
+      - !type:HealthChange
+        damage:
+          groups:
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 6
+        damage:
+          groups:
+            Toxin: 1.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        damage:
+          groups:
+            Toxin: 3

@@ -54,8 +54,15 @@
   id: MCDoctor
   equipment:
     id: MCIdCardDoctor
+    ears: MCHeadsetMedical
+    gloves: CMHandsLatex
+    back: MCSatchelMarineStandard
+    eyes: MCGlassesHudHealth
+    jumpsuit: CMScrubsPurple
+    shoes: RMCShoesWhite
+    pocket1: MCPouchMedkitFill
   inhand:
-    - MCBottleLemolineDoctor
+  - MCBottleLemolineDoctor
 
 - type: entity
   parent: MCSpawnPointJob

@@ -18,12 +18,27 @@
       - Dropper # /obj/item/reagent_containers/dropper
       - MCPill # /obj/item/reagent_containers/pill
       - MCBottleFilled # /obj/item/reagent_containers/glass/bottle
-      - Syringe # /obj/item/reagent_containers/syringe
+      - MCSyringe # /obj/item/reagent_containers/syringe
       - MCPillCanister # /obj/item/storage/pill_bottle
       - MCHealingItem # /obj/item/stack/medical
       # /obj/item/storage/pill_bottle/packet
       - MCHypospray # /obj/item/reagent_containers/hypospray
   - type: FixedItemSizeStorage
+
+- type: entity
+  parent: MCPouchMedkit
+  id: MCPouchMedkitFill
+  suffix: Fill
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCTraumaKit
+    - id: MCTraumaKit
+    - id: MCTraumaKit
+    - id: MCBurnKit
+    - id: MCBurnKit
+    - id: MCBurnKit
+    - id: MCHyposprayFillMeraderm
 
 - type: entity
   parent: MCPouchStorage
@@ -43,7 +58,7 @@
       - Dropper # /obj/item/reagent_containers/dropper
       - MCPill # /obj/item/reagent_containers/pill
       - MCBottleFilled # /obj/item/reagent_containers/glass/bottle
-      - Syringe # /obj/item/reagent_containers/syringe
+      - MCSyringe # /obj/item/reagent_containers/syringe
       - MCPillCanister # /obj/item/storage/pill_bottle
       - MCHealingItem # /obj/item/stack/medical
       # /obj/item/storage/pill_bottle/packet

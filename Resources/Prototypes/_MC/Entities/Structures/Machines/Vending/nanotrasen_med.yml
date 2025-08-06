@@ -47,7 +47,7 @@
       - id: MCBottleDylovene
       - id: MCBottleInaprovaline
       - id: MCBottleParacetamol
-      - id: MCSalineGlucose
+      - id: MCBottleSalineGlucose
       - id: MCBottleLeporazine
       - id: MCBottleDexalin
         amount: 6

@@ -350,7 +350,6 @@
   - type: IconLabel
     labelTextLocId: mc-meralyne-container-label-text
 
-
 - type: entity
   parent: MCPillCanister
   id: MCPillCanisterDermaline
@@ -375,6 +374,29 @@
   - type: IconLabel
     labelTextLocId: mc-dermaline-container-label-text
 
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterMeraderm
+  name: meraderm pill bottle
+  description: Contains pills that used as a potent treatment against physical injuries.
+  suffix: Meraderm, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 2
+  - type: Sprite
+    layers:
+    - state: pill_canister0
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillMeraderm
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-meraderm-container-label-text
 
 - type: entity
   parent: MCPillCanister

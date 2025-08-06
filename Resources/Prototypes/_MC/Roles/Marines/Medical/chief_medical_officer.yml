@@ -32,6 +32,7 @@
   special:
   - !type:AddComponentSpecial
     components:
+    - type: MarineOrders
     - type: Skills
       skills:
         RMCSkillMedical: 5
@@ -57,8 +58,14 @@
   id: MCCMO
   equipment:
     id: MCIdCardCMO
+    gloves: CMHandsLatex
+    ears: MCHeadsetCommand
+    back: MCSatchelMarineStandard
+    eyes: MCGlassesHudHealth
+    shoes: RMCShoesWhite
+    pocket1: MCPouchMedkitFill
   inhand:
-    - MCBottleLemolineDoctor
+  - MCBottleLemolineDoctor
 
 - type: entity
   parent: MCSpawnPointJob
