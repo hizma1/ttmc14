@@ -38,7 +38,13 @@ public sealed partial class CMDistressSignalRuleComponent : Component
     public ProtoId<JobPrototype> QueenJob = "MCXenoQueen";
 
     [DataField]
+    public ProtoId<JobPrototype> ShrikeJob = "MCXenoShrike";
+
+    [DataField]
     public EntProtoId QueenEnt = "MCXenoQueen";
+
+    [DataField]
+    public EntProtoId ShrikeEnt = "MCXenoShrike";
 
     [DataField]
     public ProtoId<JobPrototype> XenoSelectableJob = "MCXenoSelectableXeno";

@@ -621,8 +621,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
                 if (!IsAllowed(id, comp.QueenJob))
                     continue;
 
-                if (profile.JobPriorities.TryGetValue(comp.QueenJob, out var priority) &&
-                    priority > JobPriority.Never)
+                if (profile.JobPriorities.TryGetValue(comp.QueenJob, out var priority) && priority > JobPriority.Never)
                 {
                     xenoCandidates[(int) priority].Add(id);
                 }
@@ -631,17 +630,58 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
             if (comp.SpawnXenos)
             {
                 NetUserId? queenSelected = null;
+                NetUserId? shrikeSelected = null;
+
+                if (totalXenos > 8)
+                {
+                    for (var i = xenoCandidates.Length - 1; i >= 0; i--)
+                    {
+                        var list = xenoCandidates[i];
+                        while (list.Count > 0)
+                        {
+                            queenSelected = SpawnXeno(list, comp.QueenEnt);
+                            if (queenSelected != null)
+                                break;
+                        }
+
+                        if (queenSelected != null)
+                        {
+                            totalXenos--;
+                            break;
+                        }
+                    }
+                }
+
+                foreach (var list in xenoCandidates)
+                {
+                    list.Clear();
+                }
+
+                foreach (var (id, profile) in ev.Profiles)
+                {
+                    if (id == queenSelected)
+                        continue;
+
+                    if (!IsAllowed(id, comp.ShrikeJob))
+                        continue;
+
+                    if (profile.JobPriorities.TryGetValue(comp.ShrikeJob, out var priority) && priority > JobPriority.Never)
+                    {
+                        xenoCandidates[(int) priority].Add(id);
+                    }
+                }
+
                 for (var i = xenoCandidates.Length - 1; i >= 0; i--)
                 {
                     var list = xenoCandidates[i];
                     while (list.Count > 0)
                     {
-                        queenSelected = SpawnXeno(list, comp.QueenEnt);
-                        if (queenSelected != null)
+                        shrikeSelected = SpawnXeno(list, comp.ShrikeEnt);
+                        if (shrikeSelected != null)
                             break;
                     }
 
-                    if (queenSelected != null)
+                    if (shrikeSelected != null)
                     {
                         totalXenos--;
                         break;
@@ -655,7 +695,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
 
                 foreach (var (id, profile) in ev.Profiles)
                 {
-                    if (id == queenSelected)
+                    if (id == queenSelected || id == shrikeSelected)
                         continue;
 
                     if (!IsAllowed(id, comp.XenoSelectableJob))
