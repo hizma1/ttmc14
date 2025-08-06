@@ -14,7 +14,7 @@ public sealed partial class MCXenoScatterSpitComponent : Component
     public float Speed = 15;
 
     [DataField, AutoNetworkedField]
-    public int Count = 6;
+    public int Count = 3;
 
     [DataField, AutoNetworkedField]
     public TimeSpan Delay = TimeSpan.FromSeconds(0.5);
