@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/01/2025 05:01:31
-  entityCount: 5029
+  time: 08/06/2025 08:27:26
+  entityCount: 5031
 maps:
 - 1
 grids:
@@ -9513,6 +9513,41 @@ entities:
         -4,-16: MCAreaShipHallwayPort
         -4,-15: MCAreaShipHallwayPort
         -4,-14: MCAreaShipHallwayPort
+        23,16: MCAreaShipExecutiveOfficerBunk
+        23,15: MCAreaShipExecutiveOfficerBunk
+        23,14: MCAreaShipExecutiveOfficerBunk
+        23,13: MCAreaShipExecutiveOfficerBunk
+        23,12: MCAreaShipExecutiveOfficerBunk
+        23,11: MCAreaShipExecutiveOfficerBunk
+        23,10: MCAreaShipExecutiveOfficerBunk
+        24,16: MCAreaShipExecutiveOfficerBunk
+        24,15: MCAreaShipExecutiveOfficerBunk
+        24,14: MCAreaShipExecutiveOfficerBunk
+        24,13: MCAreaShipExecutiveOfficerBunk
+        24,12: MCAreaShipExecutiveOfficerBunk
+        24,10: MCAreaShipExecutiveOfficerBunk
+        25,16: MCAreaShipExecutiveOfficerBunk
+        24,11: MCAreaShipExecutiveOfficerBunk
+        25,14: MCAreaShipExecutiveOfficerBunk
+        26,15: MCAreaShipExecutiveOfficerBunk
+        26,14: MCAreaShipExecutiveOfficerBunk
+        26,12: MCAreaShipExecutiveOfficerBunk
+        26,11: MCAreaShipExecutiveOfficerBunk
+        26,10: MCAreaShipExecutiveOfficerBunk
+        27,16: MCAreaShipExecutiveOfficerBunk
+        27,15: MCAreaShipExecutiveOfficerBunk
+        27,14: MCAreaShipExecutiveOfficerBunk
+        27,13: MCAreaShipExecutiveOfficerBunk
+        27,12: MCAreaShipExecutiveOfficerBunk
+        27,11: MCAreaShipExecutiveOfficerBunk
+        27,10: MCAreaShipExecutiveOfficerBunk
+        26,16: MCAreaShipExecutiveOfficerBunk
+        26,13: MCAreaShipExecutiveOfficerBunk
+        25,15: MCAreaShipExecutiveOfficerBunk
+        25,13: MCAreaShipExecutiveOfficerBunk
+        25,12: MCAreaShipExecutiveOfficerBunk
+        25,11: MCAreaShipExecutiveOfficerBunk
+        25,10: MCAreaShipExecutiveOfficerBunk
 - proto: BlockGameArcade
   entities:
   - uid: 2
@@ -14834,46 +14869,6 @@ entities:
       parent: 1
 - proto: CMSheetPhoron1
   entities:
-  - uid: 919
-    components:
-    - type: Transform
-      pos: -7.5,14.5
-      parent: 1
-  - uid: 920
-    components:
-    - type: Transform
-      pos: -7.5,14.5
-      parent: 1
-  - uid: 921
-    components:
-    - type: Transform
-      pos: -7.5,14.5
-      parent: 1
-  - uid: 922
-    components:
-    - type: Transform
-      pos: -7.5,14.5
-      parent: 1
-  - uid: 923
-    components:
-    - type: Transform
-      pos: -3.5,14.5
-      parent: 1
-  - uid: 924
-    components:
-    - type: Transform
-      pos: -3.5,14.5
-      parent: 1
-  - uid: 925
-    components:
-    - type: Transform
-      pos: -3.5,14.5
-      parent: 1
-  - uid: 926
-    components:
-    - type: Transform
-      pos: -3.5,14.5
-      parent: 1
   - uid: 927
     components:
     - type: Transform
@@ -31025,15 +31020,15 @@ entities:
       parent: 1
 - proto: Dropper
   entities:
+  - uid: 923
+    components:
+    - type: Transform
+      pos: -3.5,14.5
+      parent: 1
   - uid: 3774
     components:
     - type: Transform
       pos: -7.5,14.5
-      parent: 1
-  - uid: 3775
-    components:
-    - type: Transform
-      pos: -3.5,14.5
       parent: 1
   - uid: 3776
     components:
@@ -31812,6 +31807,39 @@ entities:
     - type: Transform
       pos: -18.5,-12.5
       parent: 1
+- proto: MCChemDispenserMedbay
+  entities:
+  - uid: 4530
+    components:
+    - type: Transform
+      pos: -3.5,13.5
+      parent: 1
+  - uid: 4531
+    components:
+    - type: Transform
+      pos: -7.5,13.5
+      parent: 1
+- proto: MCChemDispenserResearch
+  entities:
+  - uid: 4532
+    components:
+    - type: Transform
+      pos: -32.5,18.5
+      parent: 1
+- proto: MCChemStorageMedbay
+  entities:
+  - uid: 5031
+    components:
+    - type: Transform
+      pos: -20.5,20.5
+      parent: 1
+- proto: MCChemStorageResearch
+  entities:
+  - uid: 5030
+    components:
+    - type: Transform
+      pos: -35.5,9.5
+      parent: 1
 - proto: MCDoubleDoorBridgeGlassLocked
   entities:
   - uid: 3904
@@ -32409,8 +32437,14 @@ entities:
   - uid: 4016
     components:
     - type: Transform
-      pos: 25.5,15.5
+      anchored: True
+      pos: 25.5,14.5
       parent: 1
+    - type: Physics
+      canCollide: False
+      bodyType: Static
+    - type: SpriteSetRenderOrder
+      offset: 0,0.5
 - proto: MCHolopad
   entities:
   - uid: 4017
@@ -33674,6 +33708,48 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 21.5,21.5
       parent: 1
+- proto: MCSheetPhoron1
+  entities:
+  - uid: 919
+    components:
+    - type: Transform
+      pos: -7.5,14.5
+      parent: 1
+  - uid: 920
+    components:
+    - type: Transform
+      pos: -7.5,14.5
+      parent: 1
+  - uid: 921
+    components:
+    - type: Transform
+      pos: -7.5,14.5
+      parent: 1
+  - uid: 922
+    components:
+    - type: Transform
+      pos: -7.5,14.5
+      parent: 1
+  - uid: 924
+    components:
+    - type: Transform
+      pos: -3.5,14.5
+      parent: 1
+  - uid: 925
+    components:
+    - type: Transform
+      pos: -3.5,14.5
+      parent: 1
+  - uid: 926
+    components:
+    - type: Transform
+      pos: -3.5,14.5
+      parent: 1
+  - uid: 3775
+    components:
+    - type: Transform
+      pos: -3.5,14.5
+      parent: 1
 - proto: MCShutterShipCICArmory
   entities:
   - uid: 4251
@@ -34328,7 +34404,7 @@ entities:
       pos: -4.5,24.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -24192.9
+      secondsUntilStateChange: -24710.72
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -35345,27 +35421,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -3.5,12.5
-      parent: 1
-- proto: RMCChemDispenserMedbay
-  entities:
-  - uid: 4530
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -7.5,13.5
-      parent: 1
-  - uid: 4531
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -3.5,13.5
-      parent: 1
-- proto: RMCChemDispenserResearch
-  entities:
-  - uid: 4532
-    components:
-    - type: Transform
-      pos: -32.5,18.5
       parent: 1
 - proto: RMCCigarCase
   entities:
