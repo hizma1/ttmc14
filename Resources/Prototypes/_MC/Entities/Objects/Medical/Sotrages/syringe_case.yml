@@ -1,6 +1,7 @@
 - type: entity
   parent: MCCase
   id: MCCaseSyringe
+  suffix: MC
   name: syringe case
   description: It's a medical case for storing syringes and bottles.
   components:
@@ -27,7 +28,7 @@
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillMeralyne
-  suffix: Fill, Meralyne
+  suffix: Fill, Meralyne, MC
   components:
   - type: StorageFill
     contents:
@@ -38,7 +39,7 @@
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillDermaline
-  suffix: Fill, Dermaline
+  suffix: Fill, Dermaline, MC
   components:
   - type: StorageFill
     contents:
@@ -49,7 +50,7 @@
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillMeraderm
-  suffix: Fill, Meraderm
+  suffix: Fill, Meraderm, MC
   components:
   - type: StorageFill
     contents:
@@ -60,7 +61,7 @@
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillNanoblood
-  suffix: Fill, Nanoblood
+  suffix: Fill, Nanoblood, MC
   components:
   - type: StorageFill
     contents:

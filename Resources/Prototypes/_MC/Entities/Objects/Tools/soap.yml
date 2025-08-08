@@ -1,0 +1,45 @@
+- type: entity
+  parent: BaseItem
+  id: MCSoap
+  suffix: MC
+  name: soap
+  description: A cheap bar of soap. Doesn't smell.
+  components:
+  - type: Tag
+    tags:
+    - Soap
+  - type: Sprite
+    sprite: _RMC14/Objects/Misc/Janitorial/soap.rsi
+    state: soap
+  - type: Item
+    sprite: Objects/Specific/Janitorial/soap.rsi
+    size: Tiny
+  - type: Physics
+    bodyType: Dynamic
+  - type: DrainableSolution
+    solution: soap
+  - type: DeleteOnSolutionEmpty
+    solution: soap
+  - type: FlavorProfile
+    flavors:
+      - clean
+  - type: CleansForensics
+  - type: Residue
+    residueAdjective: residue-slippery
+    residueColor: residue-green
+
+- type: entity
+  name: soap
+  id: MCSoapNT
+  parent: MCSoap
+  description: A NanoTrasen bar of soap. It smells like phoron.
+  components:
+  - type: Sprite
+    state: soap_nt
+  - type: SolutionContainerVisuals
+    fillBaseName: weya-
+  - type: Item
+    heldPrefix: weya
+  - type: Residue
+    residueAdjective: residue-slippery
+    residueColor: residue-grey
