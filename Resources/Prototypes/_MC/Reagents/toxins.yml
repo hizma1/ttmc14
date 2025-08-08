@@ -1,14 +1,13 @@
 - type: reagent
-  parent: CMReagentMedicine
+  parent: MCReagentToxins
   id: MCOzelomelyn
   name: reagent-name-ozelomelyn
-  group: Toxin
   desc: reagent-desc-ozelomelyn
   physicalDesc: reagent-physical-desc-opaque
   flavor: acid
   color: "#f1ddcf"
   overdose: 10000
-  criticalOverdose: 10000
+  criticalOverdose: 10000 # бля мог бы просто это убрать
   metabolisms:
     Medicine:
       metabolismRate: 1.5
@@ -20,3 +19,47 @@
           damage:
             groups:
               Toxin: 0.75
+
+- type: reagent
+  parent: MCReagentToxins
+  id: MCSleepToxin
+  name: reagent-name-mc-sleeptoxin
+  desc: reagent-desc-mc-sleeptoxin
+  flavor: bitter
+  color: "#E895CC"
+  overdose: 30
+  criticalOverdose: 50
+  physicalDesc: reagent-physical-desc-nondescript
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectDrowsiness
+        time: 2
+        type: Add
+        refresh: false
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectForcedSleeping
+        time: 1
+        type: Add
+      - !type:Emote
+        emote: Yawn
+        showInChat: false
+        probability: 0.05
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 1
+            Brute: 2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Toxin: 1
+            Brute: 1

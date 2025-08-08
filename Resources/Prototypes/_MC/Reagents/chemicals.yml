@@ -106,7 +106,7 @@
   id: MCSterilizine
   name: reagent-name-mc-sterilizine
   desc: reagent-desc-mc-sterilizine
-  physicalDesc: mc-reagent-physical-desc-strong-smelling # Эта хуйня по факту должна инфекции уничтожать.
+  physicalDesc: mc-reagent-physical-desc-strong-smelling
   flavor: bitter
   color: "#C8A5DC"
   boilingPoint: 147.0
@@ -120,7 +120,7 @@
       effects:
         - !type:ChemVomit
           probability: 0.2
-        - !type:HealthChange
+        - !type:HealthChange # Эта хуйня по факту должна инфекции уничтожать.
           damage:
             groups:
               Toxin: 3
