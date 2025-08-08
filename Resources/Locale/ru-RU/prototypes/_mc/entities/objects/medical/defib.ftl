@@ -1,5 +1,5 @@
-ent-MCBaseDefibrillator = emergency defibrillator
-    .desc = A handheld emergency defibrillator, used to restore fibrillating patients. Can optionally bring people back from the dead.
+ent-MCBaseDefibrillator = экстреный дефибрилятор
+    .desc = Портативный дефибриллятор для экстренных случаев, используемый для восстановления фибриллирующих пациентов. При необходимости может возвращать людей к жизни.
 ent-MCDefibrillator = { ent-MCBaseDefibrillator }
     .suffix = MC
     .desc = { ent-MCBaseDefibrillator.desc }
