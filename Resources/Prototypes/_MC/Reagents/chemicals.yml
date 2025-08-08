@@ -78,3 +78,50 @@
   components:
   - type: Stack
     count: 1
+
+- type: reagent
+  id: MCSpaceCleaner
+  name: reagent-name-mc-space-cleaner
+  desc: reagent-desc-mc-space-cleaner
+  physicalDesc: mc-reagent-physical-desc-refreshing
+  flavor: bitter
+  color: "#A5F0EE"
+  boilingPoint: 147.0
+  meltingPoint: -11.0
+  tileReactions:
+    - !type:CleanTileReaction {}
+    - !type:CleanDecalsReaction {}
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.1
+      effects:
+        - !type:ChemVomit
+          probability: 0.2
+        - !type:HealthChange
+          damage:
+            groups:
+              Toxin: 1.5
+
+- type: reagent
+  id: MCSterilizine
+  name: reagent-name-mc-sterilizine
+  desc: reagent-desc-mc-sterilizine
+  physicalDesc: mc-reagent-physical-desc-strong-smelling # Эта хуйня по факту должна инфекции уничтожать.
+  flavor: bitter
+  color: "#C8A5DC"
+  boilingPoint: 147.0
+  meltingPoint: -11.0
+  tileReactions:
+    - !type:CleanTileReaction {}
+    - !type:CleanDecalsReaction {}
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.1
+      effects:
+        - !type:ChemVomit
+          probability: 0.2
+        - !type:HealthChange
+          damage:
+            groups:
+              Toxin: 3
+              Burn: 2

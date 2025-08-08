@@ -656,8 +656,8 @@
 - type: reagent
   parent: MCReagentMedicine
   id: MCNanoblood
-  name: reagent-name-mc-saline-nanoblood
-  desc: reagent-desc-mc-saline-nanoblood
+  name: reagent-name-mc-nanoblood
+  desc: reagent-desc-mc-nanoblood
   physicalDesc: mc-reagent-physical-desc-liquid
   color: "#9b0100"
   overdose: 6
