@@ -1,0 +1,70 @@
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: MCBeltMedicBag
+  name: M276 pattern lifesaver bag
+  description: The M276 is the standard load-bearing equipment of the TGMC. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies and is common among medics.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Belt/medic_bag.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Belt/medic_bag.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,13,5
+    whitelist:
+      tags:
+      - MCHealthAnalyzer
+      - MCBottle
+      - MCPillCanister
+      - MCSyringe
+      - MCCaseSyringe
+      - MCAutoInjector
+      - MCGauze
+      - MCSplint
+      - Ointments
+      - MCOintment
+      - MCTraumaKit
+      - MCBurnKit
+      components:
+      - Pill
+  - type: FixedItemSizeStorage
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - PillCanister
+      - MCCaseSyringe
+  - type: Tag
+    tags:
+    - RMCBeltMedical
+    - MCBeltMedical
+
+- type: Tag
+  id: MCBeltMedical
+
+- type: entity
+  parent: MCBeltMedicBag
+  id: MCBeltMedicBagFull
+  suffix: Full
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCPillCanisterBicaridine
+    - id: MCPillCanisterKelotane
+    - id: MCPillCanisterTricordrazine
+    - id: MCPillCanisterDylovene
+    - id: MCPillCanisterInaprovaline
+    - id: MCPillCanisterImidazoline
+    - id: MCPillCanisterHypervene
+    - id: MCPillCanisterTramadol
+    - id: MCPillCanisterSalineGlucose
+    # quick-clot pill bottle
+    # alkysine pill bottle
+    # spaceacillin pill bottle
+    - id: MCTraumaKit
+      amount: 3
+    - id: MCBurnKit
+      amount: 3
+    - id: MCSplint
+      amount: 2
+    - id: MCHealthAnalyzer

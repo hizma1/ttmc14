@@ -15,6 +15,9 @@
     state: syringe_case
   - type: Item
     size: Small
+  - type: Tag
+    tags:
+    - MCCaseSyringe
   - type: Storage
     maxItemSize: Small
     grid:
@@ -24,6 +27,9 @@
       - MCBottle
       - MCSyringe
   - type: FixedItemSizeStorage
+
+- type: Tag
+  id: MCCaseSyringe
 
 - type: entity
   parent: MCCaseSyringe

@@ -48,7 +48,7 @@
   suffix: Fill, Meralyne
   components:
   - type: IconLabel
-    labelTextLocId: mc-meralyne-container-label-text
+    labelTextLocId: mc-meralyne-hypo-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:
@@ -65,7 +65,7 @@
   suffix: Fill, Dermaline
   components:
   - type: IconLabel
-    labelTextLocId: mc-dermaline-container-label-text
+    labelTextLocId: mc-dermaline-hypo-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:
@@ -82,7 +82,7 @@
   suffix: Fill, Meraderm
   components:
   - type: IconLabel
-    labelTextLocId: mc-meraderm-container-label-text
+    labelTextLocId: mc-meraderm-hypo-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:
@@ -101,7 +101,7 @@
   suffix: Fill, Nanoblood
   components:
   - type: IconLabel
-    labelTextLocId: mc-nanoblood-container-label-text # PARITY
+    labelTextLocId: mc-nanoblood-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:

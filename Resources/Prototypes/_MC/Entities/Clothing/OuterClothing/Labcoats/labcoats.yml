@@ -1,13 +1,14 @@
 - type: entity
   parent: RMCLabcoat
   id: MCLabcoatBase
+  suffix: MC
   name: labcoat
   description: A suit that protects against minor chemical spills.
   components:
   - type: Storage
     maxItemSize: Small
     grid:
-    - 0,0,6,1
+    - 0,0,7,1
   - type: Sprite
     sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat.rsi
   - type: Clothing
@@ -17,8 +18,15 @@
     acid: 25
 
 - type: entity
+  parent: [RMCBaseJacketButtonableOpened, MCLabcoatBase]
+  id: MCLabcoatBaseOpened
+  suffix: MC, Opened
+  name: labcoat
+
+- type: entity
   parent: MCLabcoatBase
   id: MCLabcoatResearcher
+  suffix: MC
   name: researcher's labcoat
   description: A high quality labcoat, seemingly worn by scholars and researchers alike. It has a distinct rough feel to it, and goads you towards adventure.
   components:
@@ -28,8 +36,15 @@
     sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat_researcher.rsi
 
 - type: entity
+  parent: [RMCBaseJacketButtonableOpened, MCLabcoatResearcher]
+  id: MCLabcoatResearcherOpened
+  suffix: MC, Opened
+  name: researcher's labcoat
+
+- type: entity
   parent: MCLabcoatBase
   id: MCLabcoatCMO
+  suffix: MC
   name: chief medical officer's labcoat
   description: Bluer than the standard model.
   components:
@@ -37,3 +52,9 @@
     sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat_cmo.rsi
   - type: Clothing
     sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat_cmo.rsi
+
+- type: entity
+  parent: [RMCBaseJacketButtonableOpened, MCLabcoatCMO]
+  id: MCLabcoatCMOOpened
+  suffix: MC, Opened
+  name: chief medical officer's labcoat

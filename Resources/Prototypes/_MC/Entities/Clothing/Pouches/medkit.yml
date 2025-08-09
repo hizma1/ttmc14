@@ -17,6 +17,7 @@
       - MCHealthAnalyzer # /obj/item/healthanalyzer
       - Dropper # /obj/item/reagent_containers/dropper
       - MCPill # /obj/item/reagent_containers/pill
+      - MCBottle
       - MCBottleFilled # /obj/item/reagent_containers/glass/bottle
       - MCSyringe # /obj/item/reagent_containers/syringe
       - MCPillCanister # /obj/item/storage/pill_bottle
@@ -57,7 +58,7 @@
       - MCHealthAnalyzer # /obj/item/healthanalyzer
       - Dropper # /obj/item/reagent_containers/dropper
       - MCPill # /obj/item/reagent_containers/pill
-      - MCBottleFilled # /obj/item/reagent_containers/glass/bottle
+      - MCBottle # /obj/item/reagent_containers/glass/bottle
       - MCSyringe # /obj/item/reagent_containers/syringe
       - MCPillCanister # /obj/item/storage/pill_bottle
       - MCHealingItem # /obj/item/stack/medical

@@ -11,11 +11,11 @@
       "name": "icon"
     },
     {
-      "name": "sleeves-equipped-INNERCLOTHING",
+      "name": "jacket-equipped-INNERCLOTHING",
       "directions": 4
     },
     {
-      "name": "jacket-equipped-INNERCLOTHING",
+      "name": "equipped-INNERCLOTHING",
       "directions": 4
     },
     {

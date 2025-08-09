@@ -352,6 +352,12 @@
   - type: Sprite
     sprite: _MC/Objects/Medical/Surgery/healing.rsi
     state: tweezers
+  - type: Tag
+    tags:
+    - MCTweezers
+
+- type: Tag
+  id: MCTweezers
 
 # Nanopaste
 - type: entity

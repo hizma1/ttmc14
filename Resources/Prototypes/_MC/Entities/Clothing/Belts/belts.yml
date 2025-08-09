@@ -187,3 +187,70 @@
     - id: CMCrowbar
     - id: RMCCableCoil30
     - id: CMMultitool
+
+# med
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: MCBeltMedical
+  name: M276 pattern medical storage rig
+  description: The M276 is the standard load-bearing equipment of the TGMC. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies and heavier medical tools.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Belt/medical.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Belt/medical.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,15,3
+    whitelist:
+      tags:
+      - MCHealthAnalyzer
+      - Dropper
+      - GlassBeaker
+      - MCBottle
+      - PillCanister
+      - MCPillCanister
+      - MCSyringe
+      - MCCaseSyringe
+      - CMBloodPack
+      - MCGauze
+      - MCSplint
+      - MCOintment
+      - MCTraumaKit
+      - MCBurnKit
+      - MCAutoInjector
+      - CMRollerItem
+      - BodyBag
+      - Hypospray
+      - MCTweezers
+      components:
+      - Hypospray
+      - Defibrillator
+      - Pill
+  - type: FixedItemSizeStorage
+  - type: Tag
+    tags:
+    - RMCBeltMedical
+    - MCBeltMedical
+
+- type: entity
+  parent: MCBeltMedical
+  id: MCBeltMedicalMedFull
+  suffix: Med, Full
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCPillCanisterBicaridine
+    - id: MCPillCanisterKelotane
+    - id: MCPillCanisterTricordrazine
+    - id: MCPillCanisterDylovene
+    - id: MCPillCanisterInaprovaline
+    - id: MCPillCanisterImidazoline
+    - id: MCPillCanisterHypervene
+    - id: MCPillCanisterTramadol
+    - id: MCPillCanisterSalineGlucose
+    - id: MCStasisBagFolded
+    - id: MCRollerBedSpawnFolded
+    - id: MCDefibrillator
+    - id: MCHealthAnalyzer
