@@ -10,9 +10,9 @@
   - type: Item
     storedRotation: 0
   - type: Sprite
-    sprite: _RMC14/Objects/Clothing/Eyes/Glasses/medicalhud.rsi
+    sprite: _MC/Clothing/Eyes/Glasses/medicalhud.rsi
   - type: Clothing
-    sprite: _RMC14/Objects/Clothing/Eyes/Glasses/medicalhud.rsi
+    sprite: _MC/Clothing/Eyes/Glasses/medicalhud.rsi
   - type: ItemToggle
     activated: true
     soundActivate:

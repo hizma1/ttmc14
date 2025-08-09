@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/surgery_tools.dmi, https://github.com/tgstation/TerraGov-Marine-Corps/blob/58e367eb1b01ee0a36990049da9c088857bbe434/icons/mob/inhands/equipment/surgery_right.dmi, https://github.com/tgstation/TerraGov-Marine-Corps/blob/58e367eb1b01ee0a36990049da9c088857bbe434/icons/mob/inhands/equipment/surgery_left.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "saw"
+    },
+    {
+      "name": "alien_saw"
+    },
+    {
+      "name": "predator_bonesaw"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    }
+  ]
+}
