@@ -56,4 +56,6 @@ reagent-desc-mc-leporazine = Лепоразин используется для 
 reagent-name-mc-saline-glucose = Физраствор
 reagent-desc-mc-saline-glucose = Физраствор может быть использована для экстренного восстановления крови.
 
+reagent-name-mc-nanoblood = Нанокровь
+reagent-desc-mc-nanoblood = Химическое вещество, созданное для значительного ускорения естественного процесса восстановления крови в организме.
 # T3
