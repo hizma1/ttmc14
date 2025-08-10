@@ -1,4 +1,4 @@
-ent-MCPill = pill
+ent-MCPill = таблетка
     .suffix = MC
     .desc = { ent-BaseItem.desc }
 ent-MCPillBicaridine = { ent-MCPill }

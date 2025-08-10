@@ -1,3 +1,3 @@
-ent-MCHealthAnalyzer = HF2 health analyzer
-    .desc = A high-tech hand-held body scanner able to distinguish vital signs of subjects. The front panel is able to provide the readout of a subject's status.
+ent-MCHealthAnalyzer = анализатор здоровья HF2
+    .desc = Высокотехнологичный портативный сканер тела, способный определять жизненные показатели пациентов. Передняя панель может отображать состояние пациента.
     .suffix = MC
