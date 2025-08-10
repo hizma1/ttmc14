@@ -273,6 +273,40 @@
     reagents:
       MCNanoblood: 60
 
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleSleepToxin
+  name: soporific bottle
+  description: A small bottle of soporific. Just the fumes make you sleepy.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCSleepToxin
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCSleepToxin: 60
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleSteralizine
+  name: Polyhexanide bottle
+  description: A small bottle. Contains polyhexanide - Used as a powerful sterilizer for internal surgical use.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCSterilizine
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCSterilizine: 60
+
 # CHEMICAL BOTTLES
 - type: entity
   parent: MCBottleFilled

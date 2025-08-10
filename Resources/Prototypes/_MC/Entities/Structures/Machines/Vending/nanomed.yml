@@ -24,7 +24,7 @@
         amount: 1
       - id: MCAutoInjectorKelotane
         amount: 1
-      - id: MCPillCanisterTramadol
+      - id: MCAutoInjectorTramadol
         amount: 1
       - id: MCAutoInjectorTricordrazine
         amount: 1
@@ -40,7 +40,8 @@
         amount: 2
       - id: MCOintment
         amount: 2
-      # splint (ждём лимб)
+      - id: MCSplint
+        amount: 1
     - name: Misc
       entries:
       - id: MCHealthAnalyzer

@@ -1,2 +1,121 @@
 - type: Tag
   id: MCRollerBed
+
+- type: Tag
+  id: MCRollerItem
+
+- type: entity
+  id: MCRollerBedDestruction
+  abstract: true
+  components:
+  - type: Damageable
+    damageContainer: StructuralMarine
+    damageModifierSet: StructuralMarine
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: ReceiverXenoClaws
+    minimumClawStrength: Normal
+    hitsToDestroy: 1
+  - type: Construction
+    graph: MCRollerBed
+    node: Metal
+
+- type: entity
+  parent: [ MCRollerBedDestruction, RollerBed ]
+  id: MCRollerBed
+  name: roller bed
+  suffix: MC
+  description: A collapsed roller bed that can be carried around.
+  components:
+  - type: Tag
+    tags:
+    - CMRollerItem
+    - MCRollerItem
+    - CMRollerBed
+    - MCRollerBed
+  - type: Sprite
+    sprite: _MC/Structures/Furniture/rollerbeds.rsi
+    noRot: true
+    layers:
+    - state: roller_down
+      map: [ "unfoldedLayer" ]
+    - state: folded
+      map: [ "foldedLayer" ]
+      visible: false
+    - state: roller_up
+      map: [ "buckledLayer" ]
+      visible: false
+  - type: Item
+    size: Small
+  - type: GenericVisualizer
+    visuals:
+      enum.StrapVisuals.State:
+        buckledLayer:
+          True: { visible: true }
+          False: { visible: false }
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: { visible: true }
+          False: { visible: false }
+        unfoldedLayer:
+          True: { visible: false }
+          False: { visible: true }
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - suitstorage
+  - type: Foldable
+    fitIntoEntityStorage: true
+  - type: RMCStrapNoDrawDepthChange
+
+- type: entity
+  parent: MCRollerBed
+  id: MCRollerBedSpawnFolded
+  suffix: MC, folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Strap
+    enabled: false
+
+- type: entity
+  parent: MCRollerBed
+  id: MCPortableSurgicalBed
+  name: portable surgical bed
+  description: A collapsible surgical bed. It's not perfect, but it's the best you'll get short of an actual surgical table.
+  components:
+  - type: Item
+    heldPrefix: surgical
+  - type: Sprite
+    layers:
+    - state: surgical_down
+      map: [ "unfoldedLayer" ]
+    - state: surgical_folded
+      map: [ "foldedLayer" ]
+      visible: false
+    - state: surgical_up
+      map: [ "buckledLayer" ]
+      visible: false
+  - type: Appearance
+  - type: ReceiverXenoClaws
+    minimumClawStrength: ImpossiblySharp
+
+- type: entity
+  parent: MCPortableSurgicalBed
+  id: MCPortableSurgicalBedSpawnFolded
+  suffix: folded
+  components:
+  - type: Foldable
+    folded: true
+  - type: Strap
+    enabled: false

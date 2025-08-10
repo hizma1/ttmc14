@@ -36,7 +36,7 @@
       skills:
         RMCSkillMedical: 4
         RMCSkillSurgery: 3
-        RMCSkillCqc: -1
+        RMCSkillCqc: 1
         RMCSkillSmartGun: -4
         # RMCSkillMelee: -1
     - type: JobPrefix
@@ -54,13 +54,20 @@
   id: MCResearcher
   equipment:
     id: MCIdCardResearcher
-    ears: MCHeadsetMedical
-    gloves: CMHandsLatex
+    gloves: MCClothingHandsLatex
+    ears: MCHeadsetResearch
     back: MCSatchelMarineStandard
     eyes: MCGlassesHudHealth
-    shoes: RMCShoesWhite
+    shoes: MCLaceup
+    mask: MCMaskSterile
+    jumpsuit: MCJumpsuitMarineResearcher
+    outerClothing: MCLabcoatResearcherOpened
+    suitstorage: MCPaperNoteChem
+    belt: MCBeltMedicalMedFull
     pocket1: MCPouchMedkitFill
+    pocket2: MCPouchSurgeryFill
   inhand:
+  - MCMedicalTweezers
   - MCBottleLemolineDoctor
 
 - type: entity

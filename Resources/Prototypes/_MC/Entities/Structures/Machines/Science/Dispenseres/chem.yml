@@ -22,8 +22,8 @@
   - type: InteractionOutline
   - type: RMCChemicalDispenser
     costPerUnit: 1
-    energy: 0
     maxEnergy: 3000
+    settings: [1, 5, 10, 15, 20, 30, 40, 60, 120]
     reagents:
     - MCAluminum
     - MCCarbon
@@ -154,13 +154,13 @@
     state: chemstorage
     offset: 0.5,0
   - type: RMCChemicalStorage
-    rechargeEvery: 5 # хз нахуй
-    energy: 2995
+    rechargeEvery: 20
+    energy: 3000
     maxEnergy: 3000
-    baseMax: 2995 #Я ЕБАЛ ПРОСТО ЭТОТ КОД ХУЙНИ ОФФОВ, Я ГОВОРИЛ ЛУЧШЕ ВЗЯТЬ И ПЕРЕПИСАТЬ ВСЁ ТАМ
-    maxPer: 5
-    baseRecharge: 10
-    rechargePer: 5 # хз нахуй
+    baseMax: 3000
+    maxPer: 0
+    baseRecharge: 5
+    rechargePer: 5
 
 - type: entity
   parent: MCChemStorageBase

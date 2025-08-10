@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/chemistry.dmi, https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/mob/inhands/equipment/medical_right.dmi, https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/mob/inhands/equipment/medical_left.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "packet_canister1"
+    },
+    {
+      "name": "packet_canister2"
+    },
+    {
+      "name": "packet_canister3"
+    },
+    {
+      "name": "packet_canister4"
+    },
+    {
+      "name": "packet_canister5"
+    },
+    {
+      "name": "packet_canister6"
+    },
+    {
+      "name": "packet_canister7"
+    },
+    {
+      "name": "packet_canister8"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "packet_canister"
+    }
+  ]
+}

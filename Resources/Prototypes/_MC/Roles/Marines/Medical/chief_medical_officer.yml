@@ -39,7 +39,7 @@
         RMCSkillSurgery: 5
         RMCSkillPolice: 2
         RMCSkillLeadership: 2
-        RMCSkillCqc: -1
+        RMCSkillCqc: 1
         RMCSkillSmartGun: -4
         # RMCSkillMelee: -1
         RMCSkillFirearms: 0
@@ -58,13 +58,20 @@
   id: MCCMO
   equipment:
     id: MCIdCardCMO
-    gloves: CMHandsLatex
+    head: CMHeadCapCMO
+    gloves: MCClothingHandsLatex
     ears: MCHeadsetCommand
     back: MCSatchelMarineStandard
     eyes: MCGlassesHudHealth
-    shoes: RMCShoesWhite
+    shoes: MCShoesWhite
+    mask: MCMaskSterile
+    jumpsuit: MCJumpsuitMedicalScrubsBlue
+    outerClothing: MCLabcoatCMOOpened
+    belt: MCBeltMedicalMedFull
     pocket1: MCPouchMedkitFill
+    pocket2: MCPouchSurgeryFill
   inhand:
+  - MCMedicalTweezers
   - MCBottleLemolineDoctor
 
 - type: entity

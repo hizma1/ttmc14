@@ -1,0 +1,65 @@
+- type: entity
+  name: note on chemistry
+  parent: Paper
+  id: MCPaperNoteChem
+  description: Note used by chemists.
+  components:
+  - type: Sprite
+    layers:
+    - state: paper_dotmatrix
+    - state: paper_dotmatrix_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      visible: false
+    - state: paper_stamp-generic
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: PaperVisuals
+    headerImagePath: "/Textures/Interface/Paper/paper_heading_artifact_analyzer.svg.96dpi.png"
+    headerMargin: 0.0, 0.0, 0.0, 16.0
+    backgroundImagePath: "/Textures/Interface/Paper/paper_background_dotmatrix.svg.96dpi.png"
+    backgroundImageTile: true
+    backgroundPatchMargin: 37.0, 0.0, 37.0, 0.0
+    contentImagePath: "/Textures/Interface/Paper/paper_content_dotmatrix.svg.96dpi.png"
+    contentImageNumLines: 2
+    contentMargin: 16.0, 16.0, 16.0, 0.0
+    maxWritableArea: 400.0, 0.0
+  - type: Paper
+    content: |
+      [head=2][color=goldenrod]Химические элементы
+      Справочный лист по химии[/color][/head]
+
+      [italic]Старший медицинский офицер, TGMC[/italic]
+      Периодическая таблица химика №69
+      [color=#134975]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      Ниже приведён краткий реестр химических элементов и соединений, встречающихся в текущих полевых операциях. Используйте указанные данные при обращении, синтезе или нейтрализации веществ.
+
+      [color=##521610][bullet][color=#000b4f]H[/color] — Водород: Атом №1. Лёгкий газ, высоко воспламеняемый. Формула: [color=#00FFFF]H2[/color].
+      [bullet][color=#000b4f]O[/color] — Кислород: Атом №8. Жизненно важный окислитель. Формула: [color=#00FFFF]O2[/color].
+      [bullet][color=#000b4f]N[/color] — Азот: Атом №7. В инертной форме разбавляет O2. Формула: [color=#00FFFF]N2[/color].
+      [bullet][color=#000b4f]C[/color] — Углерод: Атом №6. Основной строительный элемент органики.
+      [bullet][color=#000b4f]Na[/color] — Натрий: Атом №11. Реактивен с H2O, образует NaOH.
+      [bullet][color=#000b4f]K[/color] — Калий: Атом №19. Щелочной металл, крайне реактивен.
+      [bullet][color=#000b4f]Li[/color] — Литий: Атом №3. Лёгкий металл, батареи и мед. применения.
+      [bullet][color=#000b4f]Fe[/color] — Железо: Атом №26. Структурный металл, магнитный.
+      [bullet][color=#000b4f]Cu[/color] — Медь: Атом №29. Проводящий металл.
+      [bullet][color=#000b4f]Al[/color] — Алюминий: Атом №13. Лёгкий, устойчивый к коррозии.
+      [bullet][color=#000b4f]Si[/color] — Кремний: Атом №14. Металлоид, полупроводниковые применения.
+      [bullet][color=#000b4f]S[/color] — Сера: Атом №16. Резкий запах, важное промышленное вещество.
+      [bullet][color=#000b4f]P[/color] — Фосфор: Атом №15. Биологически важен, перенос энергии.
+      [bullet][color=#000b4f]Cl[/color] — Хлор: Атом №17. Токсичный, реактивный галоген. Формула: [color=#00FFFF]Cl2[/color].
+      [bullet][color=#000b4f]F[/color] — Фтор: Атом №9. Чрезвычайно реактивный галоген. Формула: [color=#00FFFF]F2[/color].
+      [bullet][color=#000b4f]Hg[/color] — Ртуть: Атом №80. Жидкий металл, токсичен.
+      [bullet][color=#000b4f]Ag[/color] — Серебро: Атом №47. Высокая проводимость, антимикробные свойства.
+      [bullet][color=#000b4f]Au[/color] — Золото: Атом №79. Плотный, инертный, ценнейший металл.
+      [bullet][color=#000b4f]Ra[/color] — Радий: Атом №88. Радиоактивный, люминесцентный.
+      [bullet][color=#000b4f]H2O[/color] — Вода: Универсальный растворитель, среда для жизни. Формула: [color=#00FFFF]H2O[/color].
+      [bullet][color=#000b4f]NaCl[/color] — Поваренная соль: Консервант, источник электролитов. Формула: [color=#00FFFF]NaCl[/color].
+      [bullet][color=#000b4f]C2H5OH[/color] — Этанол: Растворитель, топливо, рекреационное употребление. Формула: [color=#00FFFF]C2H5OH[/color].
+      [bullet][color=#000b4f]C12H22O11[/color] — Сахароза: Источник энергии, пищевой продукт. Формула: [color=#00FFFF]C12H22O11[/color].
+      [bullet][color=#000b4f]H2SO4[/color] — Серная кислота: Сильная едкая кислота. Формула: [color=#00FFFF]H2SO4[/color].[/color]
+
+      [color=#134975]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [color=#AAAAAA][italic][bullet]Этот реестр составлен для медицинских подразделений TGMC.
+      [bullet]Все работы с указанными веществами должны проводиться согласно Протоколу химической безопасности 12-B.
+      [bullet]Несанкционированный синтез, утилизация или использование в качестве оружия влекут трибунал.
+      [color=#E41B1B]Уничтожьте этот лист по завершении операции или в случае компрометации.[/color][/italic]

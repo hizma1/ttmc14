@@ -1,0 +1,80 @@
+- type: entity
+  parent: RMCLabcoat
+  id: MCLabcoatBase
+  suffix: MC
+  name: labcoat
+  description: A suit that protects against minor chemical spills.
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,9,1
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - MCPillCanister
+      - MCPacketPills
+  - type: Sprite
+    sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat.rsi
+  - type: MCArmor
+    bio: 50
+    acid: 25
+
+- type: entity
+  parent: [RMCBaseJacketButtonableOpened, MCLabcoatBase]
+  id: MCLabcoatBaseOpened
+  suffix: MC, Opened
+  name: labcoat
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,9,1
+
+- type: entity
+  parent: MCLabcoatBase
+  id: MCLabcoatResearcher
+  suffix: MC
+  name: researcher's labcoat
+  description: A high quality labcoat, seemingly worn by scholars and researchers alike. It has a distinct rough feel to it, and goads you towards adventure.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat_researcher.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat_researcher.rsi
+
+- type: entity
+  parent: [RMCBaseJacketButtonableOpened, MCLabcoatResearcher]
+  id: MCLabcoatResearcherOpened
+  suffix: MC, Opened
+  name: researcher's labcoat
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,9,1
+
+- type: entity
+  parent: MCLabcoatBase
+  id: MCLabcoatCMO
+  suffix: MC
+  name: chief medical officer's labcoat
+  description: Bluer than the standard model.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat_cmo.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/OuterClothing/Labcoats/labcoat_cmo.rsi
+
+- type: entity
+  parent: [RMCBaseJacketButtonableOpened, MCLabcoatCMO]
+  id: MCLabcoatCMOOpened
+  suffix: MC, Opened
+  name: chief medical officer's labcoat
+  components:
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,9,1

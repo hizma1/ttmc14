@@ -239,3 +239,34 @@
     sprite: _MC/Clothing/Uniforms/Marine/squad_medic.rsi
   - type: Clothing
     sprite: _MC/Clothing/Uniforms/Marine/squad_medic.rsi
+
+- type: entity
+  parent: [RMCMarineUniformBase, RMCFoldableUniformBase]
+  id: MCJumpsuitMedicalScrubsPurple
+  name: purple medical scrubs
+  description: It's made of a special fiber that provides minor protection against biohazards. This one is in deep purple.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Uniforms/Marine/Scrub/scrubspurple.rsi
+  - type: Appearance
+  - type: Foldable
+    unfoldVerbText: rmc-sleeves-verb-unfold
+    foldVerbText: rmc-sleeves-verb-fold
+
+- type: entity
+  parent: MCJumpsuitMedicalScrubsPurple
+  id: MCJumpsuitMedicalScrubsGreen
+  name: green medical scrubs
+  description: It's made of a special fiber that provides minor protection against biohazards. This one is in dark green.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Uniforms/Marine/Scrub/scrubsgreen.rsi
+
+- type: entity
+  parent: MCJumpsuitMedicalScrubsPurple
+  id: MCJumpsuitMedicalScrubsBlue
+  name: blue medical scrubs
+  description: It's made of a special fiber that provides minor protection against biohazards. This one is in baby blue.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Uniforms/Marine/Scrub/scrubsblue.rsi

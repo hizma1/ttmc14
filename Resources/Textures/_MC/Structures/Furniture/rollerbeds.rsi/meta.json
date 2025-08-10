@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/rollerbed.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "roller_down"
+    },
+    {
+      "name": "roller_up"
+    },
+    {
+      "name": "folded"
+    },
+    {
+      "name": "beacon_active_down",
+      "delays": [
+        [
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "beacon_active_up",
+      "delays": [
+        [
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "stretcher_up"
+    },
+    {
+      "name": "stretcher_down"
+    },
+    {
+      "name": "stretcher_box"
+    },
+    {
+      "name": "stretcher_folded"
+    },
+    {
+      "name": "surgical_down"
+    },
+    {
+      "name": "surgical_up"
+    },
+    {
+      "name": "surgical_folded"
+    },
+    {
+      "name": "bigrollerbody_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbody_down",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbloodbody_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbloodbody_down",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbodyalt_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbodyalt_down",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbodybloodalt_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbodybloodalt_down",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerempty_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerempty_down",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbloodempty_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerbloodempty_down",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerempty2_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerempty2_down",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerempty3_up",
+      "directions": 4
+    },
+    {
+      "name": "bigrollerempty3_down",
+      "directions": 4
+    },
+    {
+      "name": "bedroll"
+    },
+    {
+      "name": "bedroll_o",
+      "directions": 8
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "stretcher-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "stretcher-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "surgical-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "surgical-inhand-right",
+      "directions": 4
+    }
+  ]
+}

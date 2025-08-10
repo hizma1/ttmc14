@@ -1,0 +1,11 @@
+# White Shoes
+- type: entity
+  parent: RMCShoesLaceup
+  id: MCShoesWhite
+  name: white shoes
+  description: Comfortable-looking shoes.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Shoes/white_old.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Shoes/white_old.rsi

@@ -1,0 +1,239 @@
+- type: entity
+  parent: BaseStorageItem
+  id: MCAidKitFirst
+  suffix: MC
+  name: first-aid kit
+  description: It's an emergency medical kit for those serious boo-boos.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Medical/firstaids.rsi
+    layers:
+    - state: firstaid
+    - state: firstaid_empty
+      map: [ "openLayer" ]
+      visible: false
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: Appearance
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,13,1
+    whitelist:
+      tags:
+      - MCBodyBag
+      - MCPill
+      - MCRollerItem
+      - MCHypospray
+      - MCHealthAnalyzer
+      - MCBottle
+      - MCPillCanister
+      - MCSyringe
+      - MCCaseSyringe
+      - MCAutoInjector
+      - MCGauze
+      - MCSplint
+      - MCOintment
+      - MCTraumaKit
+      - MCBurnKit
+      - MCDropper
+      - MCSpray
+      - MCPacketPills
+      - CMSurgeryTool
+      - Bloodpack
+      - CMBloodPack
+      components:
+      - MCHypospray
+      - MCCaseSyringe
+      - CMSurgeryTool
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - MCPillCanister
+      - MCCaseSyringe
+      - MCPacketPills
+      - CMSurgeryTool
+  - type: FixedItemSizeStorage
+  - type: Item
+    size: Large
+    sprite: _MC/Objects/Medical/firstaids.rsi
+    heldPrefix: firstaid
+  - type: Tag
+    tags:
+    - MCAidKitFirst
+  - type: GenericVisualizer
+    visuals:
+      enum.SharedBagOpenVisuals.BagState:
+        openLayer:
+          Open: { visible: true }
+          Closed: { visible: false }
+
+- type: Tag
+  id: MCAidKitFirst
+
+- type: entity
+  parent: MCAidKitFirst
+  id: MCAidKitFirstFilled
+  description: It's an emergency medical kit containing basic medication and equipment. No training required to use. With medical training you can fit this in a backpack.
+  suffix: Filled, MC
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCHealthAnalyzer
+    - id: MCGauze
+    - id: MCOintment
+    - id: MCAutoInjectorCombat
+    - id: MCAutoInjectorTricordrazine
+    - id: MCAutoInjectorTramadol
+    - id: MCSplint
+
+- type: entity
+  parent: MCAidKitFirst
+  id: MCAidKitBurn
+  name: fire first-aid kit
+  description: It's an emergency medical kit for when the dropship ammo storage spontaneously burns down. With medical training you can fit this in a backpack.
+  components:
+  - type: Sprite
+    layers:
+    - state: firefirstaid
+    - state: firstaid_empty
+      map: [ "openLayer" ]
+      visible: false
+  - type: Item
+    heldPrefix: firefirstaid
+
+- type: entity
+  parent: MCAidKitBurn
+  id: MCAidKitBurnFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCHealthAnalyzer
+    - id: MCPillCanisterKelotane
+    - id: MCPillCanisterTramadol
+    - id: MCBurnKit
+      amount: 2
+    - id: MCPacketPillsLeporazine
+    - id: MCCaseSyringeFillBurn
+
+- type: entity
+  parent: MCAidKitFirst
+  id: MCAidKitAntiTox
+  name: toxin first-aid kit
+  description: Used to treat when you have a high amount of toxins in your body.
+  components:
+  - type: Sprite
+    layers:
+    - state: antitoxfirstaid
+    - state: antitoxfirstaid_empty
+      map: [ "openLayer" ]
+      visible: false
+  - type: Item
+    heldPrefix: antitoxfirstaid
+
+- type: entity
+  parent: MCAidKitAntiTox
+  id: MCAidKitAntiToxFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCHealthAnalyzer
+    - id: MCPillCanisterDylovene
+    - id: MCAutoInjectorHypervene
+      amount: 2
+    - id: MCPacketPillsRyetalyn
+    - id: MCCaseSyringeFillAntiTox
+
+- type: entity
+  parent: MCAidKitFirst
+  id: MCAidKitOxygen
+  name: oxygen deprivation first-aid kit
+  description: A box full of oxygen goodies.
+  components:
+  - type: Sprite
+    layers:
+    - state: o2firstaid
+    - state: o2firstaid_empty
+      map: [ "openLayer" ]
+      visible: false
+  - type: Item
+    heldPrefix: o2firstaid
+
+- type: entity
+  parent: MCAidKitOxygen
+  id: MCAidKitOxygenFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCHealthAnalyzer
+    - id: MCPillCanisterDexalin
+    - id: MCPillCanisterInaprovaline
+    - id: MCAutoInjectorDexalinPlus
+      amount: 3
+    - id: MCCaseSyringeFillOxygen
+
+- type: entity
+  parent: MCAidKitFirst
+  id: MCAidKitRadiation
+  name: radiation first-aid kit
+  description: Contains treatment for radiation exposure
+  components:
+  - type: Sprite
+    layers:
+    - state: purplefirstaid
+    - state: purplefirstaid_empty
+      map: [ "openLayer" ]
+      visible: false
+  - type: Item
+    heldPrefix: purplefirstaid
+
+- type: entity
+  parent: MCAidKitRadiation
+  id: MCAidKitRadiationFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCHealthAnalyzer
+    - id: MCPillCanisterDylovene
+    - id: MCAutoInjectorCombat
+    - id: MCAutoInjectorTricordrazine
+      amount: 2
+    - id: MCAutoInjectorBicaridine
+      amount: 2
+
+- type: entity
+  parent: MCAidKitFirst
+  id: MCAidKitAdvanced
+  name: advanced first-aid kit
+  description: Contains advanced medical treatments.
+  components:
+  - type: Sprite
+    layers:
+    - state: advfirstaid
+    - state: advfirstaid_empty
+      map: [ "openLayer" ]
+      visible: false
+  - type: Item
+    heldPrefix: advfirstaid
+
+- type: entity
+  parent: MCAidKitAdvanced
+  id: MCAidKitAdvancedFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCHealthAnalyzer
+    - id: MCTraumaKit
+    - id: MCBurnKit
+    - id: MCAutoInjectorCombat
+    - id: MCPillCanisterBicaridine
+    - id: MCPillCanisterKelotane
+    - id: MCPillCanisterTramadol
+    - id: MCSplint

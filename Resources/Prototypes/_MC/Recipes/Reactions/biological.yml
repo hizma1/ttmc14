@@ -7,3 +7,23 @@
       amount: 1
   products:
     MCSodiumChloride: 2
+
+- type: reaction
+  id: MCAmmonia
+  reactants:
+    MCHydrogen:
+      amount: 3
+    MCNitrogen:
+      amount: 1
+  products:
+    MCAmmonia: 3
+
+- type: reaction
+  id: MCSpaceCleaner
+  reactants:
+    MCAmmonia:
+      amount: 1
+    MCWater:
+      amount: 1
+  products:
+    MCSpaceCleaner: 2

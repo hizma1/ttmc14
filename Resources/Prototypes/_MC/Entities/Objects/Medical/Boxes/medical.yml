@@ -1,0 +1,91 @@
+- type: entity
+  name: sterile mask box
+  parent: RMCBoxCardboard
+  id: MCMedBoxSterileMask
+  suffix: MC
+  description: This box contains masks of sterility.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MCMaskSterile
+        amount: 7
+  - type: Sprite
+    state: sterile
+
+- type: entity
+  name: latex gloves box
+  parent: RMCBoxCardboard
+  id: MCMedBoxLatexGloves
+  suffix: MC
+  description: Contains sterile latex gloves.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MCClothingHandsLatex
+        amount: 7
+  - type: Sprite
+    state: latex
+
+- type: entity
+  name: body bag box
+  parent: RMCBoxCardboard
+  id: MCMedBoxBodyBag
+  suffix: MC
+  description: This box contains body bags.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MCBodyBagFolded
+        amount: 7
+  - type: Sprite
+    state: bodybags
+    whitelist:
+      tags:
+        - BodyBag
+
+- type: entity
+  name: box of pill bottles
+  parent: RMCBoxCardboard
+  id: MCMedBoxPillCanister
+  suffix: MC
+  description: It has pictures of pill bottles on its front.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MCPillCanister
+        amount: 7
+  - type: Sprite
+    state: pillbox
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - PillCanister
+      - MCPillCanister
+
+- type: entity
+  name: box of syringes
+  parent: RMCBoxCardboard
+  id: MCMedBoxSyringe
+  suffix: MC
+  description: A biohazard alert warning is printed on the box.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MCSyringe
+        amount: 7
+  - type: Sprite
+    state: syringe
+
+- type: entity
+  name: box of beakers
+  parent: RMCBoxCardboard
+  id: MCMedBoxBeaker
+  suffix: MC
+  description: It's just an ordinary box.
+  components:
+  - type: StorageFill
+    contents:
+      - id: MCBeaker
+        amount: 7
+  - type: Sprite
+    state: beaker

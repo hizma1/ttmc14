@@ -1,0 +1,27 @@
+﻿- type: entity
+  parent: Dropper
+  description: A dropper. Transfers 5 units.
+  id: MCDropper
+  suffix: MC
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Chemistry/dropper.rsi
+    layers:
+    - state: dropper
+    - state: dropper1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    sprite: Objects/Specific/Chemistry/dropper.rsi
+    size: Tiny
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - suitstorage
+  - type: Tag
+    tags:
+    - Dropper
+    - MCDropper
+
+- type: Tag
+  id: MCDropper

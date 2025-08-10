@@ -61,6 +61,7 @@
   - type: Tag
     tags:
     - MCPillCanister
+    - PillCanister
   - type: IconLabel
     textColor: White
     storedOffset: 3, 12
@@ -421,3 +422,27 @@
       amount: 16
   - type: IconLabel
     labelTextLocId: mc-isotonic-container-label-text
+
+- type: entity
+  parent: MCPillCanister
+  id: MCPillCanisterQuickClot
+  name: quick-clot pill bottle
+  description: Contains pills that suppress internal bleeding while waiting for full treatment.
+  suffix: Quick-Clot, 16, MC
+  components:
+  - type: Item
+    heldPrefix: 3
+  - type: Sprite
+    layers:
+    - state: pill_canister3
+      map: [ "bottleSurfaceLayer" ]
+    - state: open
+      map: [ "openLayer" ]
+    - state: closed
+      map: [ "closedLayer" ]
+  - type: StorageFill
+    contents:
+    - id: MCPillQuickClot
+      amount: 16
+  - type: IconLabel
+    labelTextLocId: mc-quickclot-container-label-text

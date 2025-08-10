@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/cmss13-devs/cmss13/blob/8d3eabd2575fcb859ab4320a298cdbc185910f6f/icons/mob/humans/onmob/inhands/items/bottles_righthand.dmi Modifed by F8ctor (Github), https://github.com/cmss13-devs/cmss13/blob/8d3eabd2575fcb859ab4320a298cdbc185910f6f/icons/mob/humans/onmob/inhands/items/bottles_lefthand.dmi Modifed by F8ctor (Github), https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/chemistry.dmi, https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/reagents/reagent_fillings.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "beakerlarge"
+    },
+    {
+      "name": "lid_beakerlarge"
+    },
+    {
+      "name": "beakerlarge1"
+    },
+    {
+      "name": "beakerlarge2"
+    },
+    {
+      "name": "beakerlarge3"
+    },
+    {
+      "name": "beakerlarge4"
+    },
+    {
+      "name": "beakerlarge5"
+    },
+    {
+      "name": "beakerlarge6"
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    }
+  ]
+}

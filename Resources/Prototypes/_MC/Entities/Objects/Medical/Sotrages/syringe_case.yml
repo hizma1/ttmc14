@@ -1,6 +1,7 @@
 - type: entity
   parent: MCCase
   id: MCCaseSyringe
+  suffix: MC
   name: syringe case
   description: It's a medical case for storing syringes and bottles.
   components:
@@ -14,6 +15,9 @@
     state: syringe_case
   - type: Item
     size: Small
+  - type: Tag
+    tags:
+    - MCCaseSyringe
   - type: Storage
     maxItemSize: Small
     grid:
@@ -24,10 +28,65 @@
       - MCSyringe
   - type: FixedItemSizeStorage
 
+- type: Tag
+  id: MCCaseSyringe
+
+- type: entity
+  parent: MCCaseSyringe
+  id: MCCaseSyringeFillBasic
+  name: basic syringe case
+  description: It's a medical case for storing syringes and bottles. This one contains basic meds.
+  suffix: Fill, Basic, MC
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCSyringe
+    - id: MCBottleInaprovaline
+    - id: MCBottleTricordrazine
+
+- type: entity
+  parent: MCCaseSyringe
+  id: MCCaseSyringeFillBurn
+  name: burn syringe case
+  description: It's a medical case for storing syringes and bottles. This one contains meds designed to treat burns.
+  suffix: Fill, Burn, MC
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCSyringe
+    - id: MCBottleKelotane
+      amount: 2
+
+- type: entity
+  parent: MCCaseSyringe
+  id: MCCaseSyringeFillAntiTox
+  name: toxins syringe case
+  description: It's a medical case for storing syringes and bottles. This one contains meds designed to treat toxins.
+  suffix: Fill, AntiTox, MC
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCBottleDylovene
+    - id: MCBottleHypervene
+    - id: MCSyringe
+
+- type: entity
+  parent: MCCaseSyringe
+  id: MCCaseSyringeFillOxygen
+  name: oxyloss syringe case
+  description: It's a medical case for storing syringes and bottles. This one contains meds designed to treat oxygen deprivation.
+  suffix: Fill, Oxygen, MC
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCBottleInaprovaline
+    - id: MCBottleDexalin
+    - id: MCSyringe
+
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillMeralyne
-  suffix: Fill, Meralyne
+  suffix: Fill, Meralyne, MC
   components:
   - type: StorageFill
     contents:
@@ -38,7 +97,7 @@
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillDermaline
-  suffix: Fill, Dermaline
+  suffix: Fill, Dermaline, MC
   components:
   - type: StorageFill
     contents:
@@ -49,7 +108,7 @@
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillMeraderm
-  suffix: Fill, Meraderm
+  suffix: Fill, Meraderm, MC
   components:
   - type: StorageFill
     contents:
@@ -60,7 +119,7 @@
 - type: entity
   parent: MCCaseSyringe
   id: MCCaseSyringeFillNanoblood
-  suffix: Fill, Nanoblood
+  suffix: Fill, Nanoblood, MC
   components:
   - type: StorageFill
     contents:
