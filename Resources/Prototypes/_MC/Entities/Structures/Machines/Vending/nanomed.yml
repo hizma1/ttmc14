@@ -41,6 +41,7 @@
       - id: MCOintment
         amount: 2
       - id: MCSplint
+        amount: 1
     - name: Misc
       entries:
       - id: MCHealthAnalyzer
