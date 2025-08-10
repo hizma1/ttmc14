@@ -1,0 +1,35 @@
+- type: entity
+  parent: CMHeadCap
+  id: MCHeadCapSurgBlue
+  suffix: MC
+  name: surgical cap
+  description: A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is baby blue.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Head/Hats/Surgery/surgсap_blue.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Head/Hats/Surgery/surgсap_blue.rsi
+
+- type: entity
+  parent: MCHeadCapSurgBlue
+  id: MCHeadCapSurgGreen
+  suffix: MC
+  name: surgical cap
+  description: A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is dark green.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Head/Hats/Surgery/surgсap_green.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Head/Hats/Surgery/surgсap_green.rsi
+
+- type: entity
+  parent: MCHeadCapSurgBlue
+  id: MCHeadCapSurgPurple
+  suffix: MC
+  name: surgical cap
+  description: A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is deep purple.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Head/Hats/Surgery/surgсap_purple.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Head/Hats/Surgery/surgсap_purple.rsi

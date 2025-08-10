@@ -188,7 +188,7 @@ public abstract class SharedWoundsSystem : EntitySystem
         if (treater.Comp.Consumable)
         {
             if (TryComp(treater, out StackComponent? stack))
-                _stacks.Use(treater, 2, stack);
+                _stacks.Use(treater, 1, stack);
             else if (_net.IsServer)
                 QueueDel(treater);
         }
@@ -320,7 +320,7 @@ public abstract class SharedWoundsSystem : EntitySystem
         {
             if (treater.Comp.Consumable &&
                 TryComp(treater, out StackComponent? stack) &&
-                _stacks.GetCount(treater, stack) < 2)
+                _stacks.GetCount(treater, stack) < 1)
             {
                 _popup.PopupClient(Loc.GetString("cm-wounds-failed-not-enough", ("treater", treater.Owner)), target, user, PopupType.SmallCaution);
                 return false;

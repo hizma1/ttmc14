@@ -445,3 +445,18 @@
       effects:
       - !type:ChemVomit
         probability: 0
+
+- type: reagent
+  parent: MCReagentElement
+  id: MCAmmonia #*счастливые звуки нихуянеделания*
+  name: mc-reagent-name-ammonia
+  desc: mc-reagent-desc-ammonia
+  physicalDesc: mc-reagent-physical-desc-vinegary
+  flavor: bitter
+  color: "#444122"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.05
+      effects:
+      - !type:ChemVomit
+        probability: 0

@@ -54,14 +54,21 @@
   id: MCDoctor
   equipment:
     id: MCIdCardDoctor
+    head: MCHeadCapSurgPurple
+    gloves: MCClothingHandsLatex
     ears: MCHeadsetMedical
-    gloves: CMHandsLatex
     back: MCSatchelMarineStandard
     eyes: MCGlassesHudHealth
-    jumpsuit: CMScrubsPurple
-    shoes: RMCShoesWhite
+    shoes: MCShoesWhite
+    mask: MCMaskSterile
+    jumpsuit: MCJumpsuitMedicalScrubsPurple
+    outerClothing: MCLabcoatBaseOpened
+    suitstorage: MCPaperNoteChem
+    belt: MCBeltMedicalMedFull
     pocket1: MCPouchMedkitFill
+    pocket2: MCPouchSurgeryFill
   inhand:
+  - MCMedicalTweezers
   - MCBottleLemolineDoctor
 
 - type: entity

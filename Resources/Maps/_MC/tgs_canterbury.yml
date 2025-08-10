@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/10/2025 09:04:33
-  entityCount: 380
+  time: 08/10/2025 10:51:10
+  entityCount: 388
 maps: []
 grids:
 - 1
@@ -678,6 +678,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -3.5,4.5
       parent: 1
+- proto: CMAnestheticTankFilled
+  entities:
+  - uid: 387
+    components:
+    - type: Transform
+      pos: -5.5,-2.5
+      parent: 1
 - proto: CMBarricadePlasteelDoor
   entities:
   - uid: 187
@@ -730,13 +737,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -4.5,7.5
-      parent: 1
-- proto: CMBeaker
-  entities:
-  - uid: 17
-    components:
-    - type: Transform
-      pos: -2.5,1.5
       parent: 1
 - proto: CMChairOfficeDark
   entities:
@@ -903,6 +903,13 @@ entities:
     - type: Transform
       pos: -1.5,3.5
       parent: 1
+- proto: CMMaskGasMedical
+  entities:
+  - uid: 386
+    components:
+    - type: Transform
+      pos: -5.5,-2.5
+      parent: 1
 - proto: CMMorgue
   entities:
   - uid: 50
@@ -929,18 +936,6 @@ entities:
     components:
     - type: Transform
       pos: -5.5,4.5
-      parent: 1
-- proto: CMRollerBedSpawnFolded
-  entities:
-  - uid: 24
-    components:
-    - type: Transform
-      pos: -2.5,1.5
-      parent: 1
-  - uid: 31
-    components:
-    - type: Transform
-      pos: -2.5,1.5
       parent: 1
 - proto: CMScrewdriver
   entities:
@@ -992,13 +987,6 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: CMSink
-  entities:
-  - uid: 341
-    components:
-    - type: Transform
-      pos: -2.5,-0.75
-      parent: 1
 - proto: CMSMESEmpty
   entities:
   - uid: 27
@@ -1637,6 +1625,39 @@ entities:
       parent: 1
     - type: ItemToggle
       activated: True
+- proto: MCAidKitAdvancedFilled
+  entities:
+  - uid: 24
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
+  - uid: 388
+    components:
+    - type: Transform
+      pos: -4.5,-3.5
+      parent: 1
+- proto: MCAidKitBurnFilled
+  entities:
+  - uid: 382
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
+- proto: MCAidKitFirstFilled
+  entities:
+  - uid: 383
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
+- proto: MCAidKitOxygenFilled
+  entities:
+  - uid: 384
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
 - proto: MCApcAlmayer
   entities:
   - uid: 280
@@ -1654,6 +1675,25 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -5.5,5.5
+      parent: 1
+- proto: MCBeaker
+  entities:
+  - uid: 17
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
+- proto: MCBeakerBluespace
+  entities:
+  - uid: 42
+    components:
+    - type: Transform
+      pos: -2.5,-4.5
+      parent: 1
+  - uid: 55
+    components:
+    - type: Transform
+      pos: -2.5,-4.5
       parent: 1
 - proto: MCButtonShipCanterburyOuterDoorDown
   entities:
@@ -1914,6 +1954,13 @@ entities:
     - type: Transform
       pos: -1.5,5.5
       parent: 1
+- proto: MCMedBoxBodyBag
+  entities:
+  - uid: 341
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
 - proto: MCPodlockShipCanterburyOuterDoorDown
   entities:
   - uid: 128
@@ -2138,6 +2185,18 @@ entities:
       rot: 3.141592653589793 rad
       pos: 6.5,-7.5
       parent: 1
+- proto: MCRollerBedSpawnFolded
+  entities:
+  - uid: 18
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
+  - uid: 381
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
 - proto: MCShutterShipCanterburyOuterDoorDown
   entities:
   - uid: 117
@@ -2221,6 +2280,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 4.5,3.5
+      parent: 1
+- proto: MCSinkFull
+  entities:
+  - uid: 31
+    components:
+    - type: Transform
+      pos: -2.4670863,-0.7341242
       parent: 1
 - proto: MCSpawnPointCMO
   entities:
@@ -2418,6 +2484,20 @@ entities:
     - type: Transform
       pos: 4.5,9.5
       parent: 1
+- proto: MCSprayBottleSpaceCleaner
+  entities:
+  - uid: 385
+    components:
+    - type: Transform
+      pos: -2.5,1.5
+      parent: 1
+- proto: MCSurgicalTray
+  entities:
+  - uid: 358
+    components:
+    - type: Transform
+      pos: -4.5,-3.5
+      parent: 1
 - proto: MCWindowDirectionalReinforced
   entities:
   - uid: 177
@@ -2550,25 +2630,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,-0.5
-      parent: 1
-- proto: RMCBeakerHighCapacity
-  entities:
-  - uid: 42
-    components:
-    - type: Transform
-      pos: -2.56,-4.4
-      parent: 1
-  - uid: 55
-    components:
-    - type: Transform
-      pos: -2.4,-4.4
-      parent: 1
-- proto: RMCBoxBodyBag
-  entities:
-  - uid: 18
-    components:
-    - type: Transform
-      pos: -2.5,1.5
       parent: 1
 - proto: RMCComputerFrameUnfinished
   entities:
@@ -2772,13 +2833,6 @@ entities:
     components:
     - type: Transform
       pos: -4.5,10.5
-      parent: 1
-- proto: RMCSurgicalTray
-  entities:
-  - uid: 358
-    components:
-    - type: Transform
-      pos: -4.5,-3.5
       parent: 1
 - proto: RMCTankReagentFuel
   entities:

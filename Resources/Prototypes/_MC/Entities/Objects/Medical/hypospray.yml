@@ -25,6 +25,9 @@
     onlyAffectsMobs: false
   - type: StaticPrice
     price: 0
+  - type: IconLabel
+    textColor: White
+    storedOffset: -3, 12
   - type: Tag
     tags:
     - MCHypospray
@@ -44,6 +47,8 @@
   description: A sterile injector for rapid administration of drugs to patients.
   suffix: Fill, Meralyne
   components:
+  - type: IconLabel
+    labelTextLocId: mc-meralyne-hypo-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:
@@ -59,6 +64,8 @@
   description: A sterile injector for rapid administration of drugs to patients.
   suffix: Fill, Dermaline
   components:
+  - type: IconLabel
+    labelTextLocId: mc-dermaline-hypo-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:
@@ -74,6 +81,8 @@
   description: A sterile injector for rapid administration of drugs to patients.
   suffix: Fill, Meraderm
   components:
+  - type: IconLabel
+    labelTextLocId: mc-meraderm-hypo-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:
@@ -91,6 +100,8 @@
   description: A sterile injector for rapid administration of drugs to patients.
   suffix: Fill, Nanoblood
   components:
+  - type: IconLabel
+    labelTextLocId: mc-nanoblood-container-label-text
   - type: SolutionContainerManager
     solutions:
       hypospray:

@@ -19,3 +19,24 @@
     bio: 5
     fire: 15
     acid: 15
+
+- type: entity
+  parent: ClothingHandsBase
+  id: MCClothingHandsLatex
+  name: latex gloves
+  description: Sterile latex gloves.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Hands/Gloves/Misc/latex.rsi
+  - type: Clothing
+    sprite: _MC/Clothing/Hands/Gloves/Misc/latex.rsi
+  - type: Fiber
+    fiberMaterial: fibers-latex
+    fiberColor: fibers-white
+  - type: Tag
+    tags:
+    - RMCGlovesLatex
+    - MCGlovesLatex
+
+- type: Tag
+  id: MCGlovesLatex

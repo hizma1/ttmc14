@@ -101,6 +101,18 @@
   products:
     MCParacetamol: 3
 
+- type: reaction
+  id: MCCryoxadone
+  reactants:
+    MCDexalin:
+      amount: 1
+    MCWater:
+      amount: 1
+    MCOxygen:
+      amount: 1
+  products:
+    MCCryoxadone: 3
+
 # T2
 
 - type: reaction
@@ -142,6 +154,18 @@
       amount: 1
   products:
     MCHyronalin: 3
+
+- type: reaction
+  id: MCRyetalyn
+  reactants:
+    MCCarbon:
+      amount: 1
+    MCArithrazine:
+      amount: 1
+    MCLemoline:
+      amount: 1
+  products:
+    MCRyetalyn: 3
 
 - type: reaction
   id: MCArithrazine
@@ -203,6 +227,16 @@
     MCPhoron: 5
 
 - type: reaction
+  id: MCSleepToxin
+  reactants:
+    MCParacetamol:
+      amount: 1
+    MCTramadol:
+      amount: 1
+  products:
+    MCSleepToxin: 2
+
+- type: reaction
   id: MCSalineGlucose
   reactants:
     MCWater:
@@ -213,3 +247,65 @@
       amount: 1
   products:
     MCSalineGlucose: 3
+
+- type: reaction
+  id: MCClonexadone
+  reactants:
+    MCCryoxadone:
+      amount: 1
+    MCSodium:
+      amount: 1
+    MCPhoron:
+      amount: 5.1
+  products:
+    MCClonexadone: 2
+    MCPhoron: 5
+
+- type: reaction
+  id: MCQuickClot
+  reactants:
+    MCClonexadone:
+      amount: 2
+    MCKelotane:
+      amount: 2
+    MCPhoron:
+      amount: 5
+  products:
+    MCQuickClot: 1
+    MCPhoron: 5
+
+# T3
+
+- type: reaction
+  id: MCDremin # No parity
+  reactants:
+    MCDexalinPlus:
+      amount: 1
+    MCWater:
+      amount: 2
+    MCMercury:
+      amount: 5
+    MCPhoron:
+      amount: 2
+    MCLemoline:
+      amount: 0.5
+  products:
+    MCDremin: 1
+
+- type: reaction
+  id: MCTimeroll # No parity
+  reactants:
+    MCDexalin:
+      amount: 5
+    MCArithrazine:
+      amount: 2
+    MCInaprovaline:
+      amount: 3
+    MCPhoron:
+      amount: 5.1
+    MCHydrogen:
+      amount: 1.1
+  products:
+    MCTimeroll: 2
+    MCPhoron: 5
+    MCHydrogen: 1

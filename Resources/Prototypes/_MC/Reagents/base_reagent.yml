@@ -15,3 +15,9 @@
   id: MCReagentElement
   abstract: true
   group: Elements
+
+- type: reagent
+  parent: MCReagent
+  id: MCReagentToxins
+  abstract: true
+  group: Toxins

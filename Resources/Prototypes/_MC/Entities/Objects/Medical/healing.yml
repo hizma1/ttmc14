@@ -2,6 +2,21 @@
 - type: Tag
   id: MCHealingItem
 
+- type: Tag
+  id: MCOintment
+
+- type: Tag
+  id: MCGauze
+
+- type: Tag
+  id: MCSplint
+
+- type: Tag
+  id: MCTraumaKit
+
+- type: Tag
+  id: MCBurnKit
+
 # base
 - type: entity
   parent: BaseItem
@@ -62,14 +77,11 @@
     stackType: MCOintment
     count: 40
 
-- type: Tag
-  id: MCOintment
-
 - type: stack
   id: MCOintment
   name: ointment
   icon:
-    sprite: "/Textures/_RMC14/Objects/Medical/medical.rsi"
+    sprite: "/Textures/_MC/Objects/Medical/medical.rsi"
     state: ointment
   spawn: MCOintment
   maxCount: 40
@@ -133,14 +145,11 @@
     stackType: MCGauze
     count: 40
 
-- type: Tag
-  id: MCGauze
-
 - type: stack
   id: MCGauze
   name: gauze
   icon:
-    sprite: "/Textures/_MC14/Objects/Medical/medical.rsi"
+    sprite: "/Textures/_MC/Objects/Medical/medical.rsi"
     state: brutepack
   spawn: MCGauze
   maxCount: 40
@@ -184,9 +193,6 @@
     state: traumakit
   - type: Item
     heldPrefix: traumakit
-
-- type: Tag
-  id: MCTraumaKit
 
 - type: stack
   id: MCTraumaKit
@@ -237,14 +243,71 @@
     min: 1
     doAfter: 8 # Parity НЕ РАБОТАЕТ НАХУЙ
 
-- type: Tag
-  id: MCBurnKit
 
 - type: stack
   id: MCBurnKit
   name: advanced burn kit
   icon:
-    sprite: "/Textures/_MC14/Objects/Medical/medical.rsi"
+    sprite: "/Textures/_MC/Objects/Medical/medical.rsi"
     state: burnkit
   spawn: MCBurnKit
   maxCount: 40
+
+- type: entity
+  parent: MCBaseHealingItem
+  id: MCSplint
+  name: medical splints
+  description: Used to stabilize broken bones.
+  suffix: MC
+  components:
+  - type: Stack
+    stackType: MCSplint
+    count: 5
+  - type: Tag
+    tags:
+    - MCHealingItem
+    - MCSplint
+  - type: Sprite
+    state: splint
+  - type: Item
+    heldPrefix: splint
+  - type: WoundTreater
+    wound: Brute
+    treats: true
+    group: Brute
+    consumable: true
+    damage: -40
+    unskilledDamage: -30 # хуйня используется лишь 1 раз
+    canUseUnskilled: true
+    skills:
+      RMCSkillMedical: 6 # ни у кого не должно быть выше 5 навыка.
+    treatBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    treatEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    userPopup: cm-trauma-kit-user-popup
+    targetPopup: cm-trauma-kit-target-popup
+    othersPopup: cm-trauma-kit-others-popup
+    noneSelfPopup: cm-trauma-kit-none-self-popup
+    noneOtherPopup: cm-trauma-kit-none-other-popup
+    noWoundsOnUserPopup: cm-wounds-already-treated-self-popup
+    noWoundsOnTargetPopup: cm-wounds-already-treated-target-popup
+  - type: MedicallyUnskilledDoAfter
+    min: 6
+    doAfter: 5
+
+- type: stack
+  id: MCSplint
+  name: splint
+  icon:
+    sprite: "/Textures/_MC/Objects/Medical/medical.rsi"
+    state: splint
+  spawn: MCSplint
+  maxCount: 5
+
