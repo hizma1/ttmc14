@@ -75,4 +75,4 @@
   - type: SpawnPoint
     job_id: MCCaptain
   - type: Sprite
-    state: medic_spawn
+    state: cap

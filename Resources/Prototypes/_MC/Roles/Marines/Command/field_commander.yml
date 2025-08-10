@@ -74,4 +74,4 @@
   - type: SpawnPoint
     job_id: MCFC
   - type: Sprite
-    state: medic_spawn
+    state: fc

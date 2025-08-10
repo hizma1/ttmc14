@@ -72,4 +72,4 @@
   - type: SpawnPoint
     job_id: MCDoctor
   - type: Sprite
-    state: medic_spawn
+    state: md
