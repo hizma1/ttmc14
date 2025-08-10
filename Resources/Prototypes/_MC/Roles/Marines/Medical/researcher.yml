@@ -78,4 +78,4 @@
   - type: SpawnPoint
     job_id: MCResearcher
   - type: Sprite
-    state: medic_spawn
+    state: research
