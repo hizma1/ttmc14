@@ -40,7 +40,7 @@
     - CMRollerBed
     - MCRollerBed
   - type: Sprite
-    sprite: \_MC\Structures\Furniture\rollerbeds.rsi
+    sprite: _MC/Structures/Furniture/rollerbeds.rsi
     noRot: true
     layers:
     - state: roller_down

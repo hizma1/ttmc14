@@ -36,7 +36,7 @@
       skills:
         RMCSkillMedical: 4
         RMCSkillSurgery: 4
-        RMCSkillCqc: -1
+        RMCSkillCqc: 1
         RMCSkillSmartGun: -4
         # RMCSkillMelee: -1
     - type: JobPrefix
