@@ -40,13 +40,14 @@
       # alkysine = 20
       - id: MCAutoInjectorImidazoline
         amount: 20
-      # quickclot = 10
+      - id: MCAutoInjectorQuickClot
+        amount: 10
       # medicalnanites = 20
     - name: Heal Pack
       entries:
       - id: MCGauze
       - id: MCOintment
-      # splint (ждём лимбдамадже)
+      - id: MCSplint
       - id: MCTraumaKit
         amount: 50
       - id: MCBurnKit
