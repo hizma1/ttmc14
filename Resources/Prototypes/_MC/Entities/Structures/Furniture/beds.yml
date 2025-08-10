@@ -1,7 +1,34 @@
 - type: entity
   parent: CMBed
+  id: MCBed
+  name: bed
+  description: A mattress seated on a rectangular metallic frame. This is used to support a lying person in a comfortable manner, notably for regular sleep. Ancient technology, but still useful.
+  components:
+  - type: HealOnBuckle # 2x если спит
+    damage:
+      groups:
+        Genetic: -0.05
+        Airloss: -0.05
+
+- type: entity
+  parent: MCBed
   id: MCBedBunk
   components:
   - type: Sprite
     sprite: _MC/Structures/Furniture/bed.rsi
     state: bunk
+
+- type: entity
+  parent: MCBed
+  id: MCMedBed
+  name: medical bed
+  description: A mattress seated on a rectangular metallic frame. It is used for stable support of an injured or ill person, especially during regular sleep. Despite its simple design, it remains useful and relevant.
+  components:
+  - type: HealOnBuckle
+    damage:
+      groups:
+        Toxin: -0.05
+        Burn: -0.05
+        Brute: -0.05
+        Airloss: -0.15
+        Genetic: -0.15

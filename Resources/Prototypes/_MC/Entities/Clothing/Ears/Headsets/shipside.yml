@@ -16,6 +16,22 @@
 
 - type: entity
   parent: RMCHeadsetShip
+  id: MCHeadsetResearch
+  name: research radio headset
+  description: A standard military radio headset.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/radio.rsi
+    state: med
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - MCEncryptionKeyMedical
+  - type: EncryptionKeyHolder
+    keySlots: 2
+
+- type: entity
+  parent: RMCHeadsetShip
   id: MCHeadsetMedical
   name: medical radio headset
   description: A standard military radio headset.

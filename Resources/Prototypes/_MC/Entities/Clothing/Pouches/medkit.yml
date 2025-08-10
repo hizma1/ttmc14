@@ -15,14 +15,14 @@
     whitelist:
       tags:
       - MCHealthAnalyzer # /obj/item/healthanalyzer
-      - Dropper # /obj/item/reagent_containers/dropper
+      - MCDropper # /obj/item/reagent_containers/dropper
       - MCPill # /obj/item/reagent_containers/pill
+      - MCPacketPills
       - MCBottle
       - MCBottleFilled # /obj/item/reagent_containers/glass/bottle
       - MCSyringe # /obj/item/reagent_containers/syringe
       - MCPillCanister # /obj/item/storage/pill_bottle
       - MCHealingItem # /obj/item/stack/medical
-      # /obj/item/storage/pill_bottle/packet
       - MCHypospray # /obj/item/reagent_containers/hypospray
   - type: FixedItemSizeStorage
 
@@ -56,12 +56,12 @@
     whitelist:
       tags:
       - MCHealthAnalyzer # /obj/item/healthanalyzer
-      - Dropper # /obj/item/reagent_containers/dropper
+      - MCDropper # /obj/item/reagent_containers/dropper
       - MCPill # /obj/item/reagent_containers/pill
       - MCBottle # /obj/item/reagent_containers/glass/bottle
       - MCSyringe # /obj/item/reagent_containers/syringe
       - MCPillCanister # /obj/item/storage/pill_bottle
       - MCHealingItem # /obj/item/stack/medical
-      # /obj/item/storage/pill_bottle/packet
+      - MCPacketPills # /obj/item/storage/pill_bottle/packet
       - MCHypospray # /obj/item/reagent_containers/hypospray
   - type: FixedItemSizeStorage

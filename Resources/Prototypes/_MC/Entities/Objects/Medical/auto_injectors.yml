@@ -252,6 +252,25 @@
   - type: IconLabel
     labelTextLocId: mc-isotonic-container-label-text
 
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorQuickClot
+  name: quick-clot autoinjector
+  description: An autoinjector loaded with 3 doses of quick-clot, a chemical designed to pause all bleeding. Renew doses as needed.
+  components:
+  - type: Hypospray
+    transferAmount: 10
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCQuickClot
+          Quantity: 30
+  - type: IconLabel
+    labelTextLocId: mc-quickclot-container-label-text
+
 # MISC
 - type: entity
   parent: MCAutoInjector

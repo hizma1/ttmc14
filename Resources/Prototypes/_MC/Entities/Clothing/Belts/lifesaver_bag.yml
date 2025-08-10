@@ -26,13 +26,15 @@
       - MCOintment
       - MCTraumaKit
       - MCBurnKit
+      - MCPill
+      - MCPacketPills
       components:
-      - Pill
+      - MCPill
   - type: FixedItemSizeStorage
   - type: IgnoreContentsSize
     items:
       tags:
-      - PillCanister
+      - MCPillCanister
       - MCCaseSyringe
   - type: Tag
     tags:

@@ -206,10 +206,11 @@
     whitelist:
       tags:
       - MCHealthAnalyzer
-      - Dropper
+      - MCDropper
       - GlassBeaker
       - MCBottle
-      - PillCanister
+      - MCPill
+      - MCPacketPills
       - MCPillCanister
       - MCSyringe
       - MCCaseSyringe
@@ -220,14 +221,14 @@
       - MCTraumaKit
       - MCBurnKit
       - MCAutoInjector
-      - CMRollerItem
-      - BodyBag
-      - Hypospray
+      - MCRollerItem
+      - MCBodyBag
+      - MCHypospray
       - MCTweezers
       components:
-      - Hypospray
-      - Defibrillator
-      - Pill
+      - MCHypospray
+      - MCDefibrillator
+      - MCPill
   - type: FixedItemSizeStorage
   - type: Tag
     tags:

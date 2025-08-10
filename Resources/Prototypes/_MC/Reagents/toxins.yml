@@ -4,6 +4,7 @@
   name: reagent-name-ozelomelyn
   desc: reagent-desc-ozelomelyn
   physicalDesc: reagent-physical-desc-opaque
+  group: Toxins
   flavor: acid
   color: "#f1ddcf"
   overdose: 10000
@@ -25,6 +26,7 @@
   id: MCSleepToxin
   name: reagent-name-mc-sleeptoxin
   desc: reagent-desc-mc-sleeptoxin
+  group: Toxins
   flavor: bitter
   color: "#E895CC"
   overdose: 30
