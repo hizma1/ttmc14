@@ -7,7 +7,7 @@
     mode: SnapgridCenter
   components:
   - type: Sprite
-    sprite: Structures/Machines/mixer.rsi #похуй, шо там в тгмс13 хуйня шо и тут.
+    sprite: Structures/Machines/mixer.rsi
     snapCardinals: true
     layers:
     - state: mixer_empty
@@ -91,8 +91,12 @@
   - type: SolutionContainerManager
     solutions:
       buffer:
-        maxVol: 500
+        maxVol: 240
   - type: RMCChemMaster
+    transferSettings: [ 1, 5, 10 ]
+    maxPillAmount: 20
+    pillAmount: 15
     pillBottleWhitelist:
       tags:
       - PillCanister
+      - MCPillCanister

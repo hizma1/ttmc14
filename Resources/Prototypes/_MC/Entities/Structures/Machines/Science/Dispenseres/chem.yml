@@ -23,6 +23,7 @@
   - type: RMCChemicalDispenser
     costPerUnit: 1
     maxEnergy: 3000
+    settings: [1, 5, 10, 15, 20, 30, 40, 60, 120]
     reagents:
     - MCAluminum
     - MCCarbon
@@ -153,12 +154,12 @@
     state: chemstorage
     offset: 0.5,0
   - type: RMCChemicalStorage
-    rechargeEvery: 5
+    rechargeEvery: 20
     energy: 3000
     maxEnergy: 3000
     baseMax: 3000
     maxPer: 0
-    baseRecharge: 10
+    baseRecharge: 5
     rechargePer: 5
 
 - type: entity

@@ -63,6 +63,7 @@
     mask: MCMaskSterile
     jumpsuit: MCJumpsuitMedicalScrubsPurple
     outerClothing: MCLabcoatBaseOpened
+    suitstorage: MCPaperNoteChem
     belt: MCBeltMedicalMedFull
     pocket1: MCPouchMedkitFill
     pocket2: MCPouchSurgeryFill

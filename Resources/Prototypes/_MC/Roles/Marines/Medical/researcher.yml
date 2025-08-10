@@ -62,6 +62,7 @@
     mask: MCMaskSterile
     jumpsuit: MCJumpsuitMarineResearcher
     outerClothing: MCLabcoatResearcherOpened
+    suitstorage: MCPaperNoteChem
     belt: MCBeltMedicalMedFull
     pocket1: MCPouchMedkitFill
     pocket2: MCPouchSurgeryFill
