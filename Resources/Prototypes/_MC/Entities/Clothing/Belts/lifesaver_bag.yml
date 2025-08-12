@@ -29,13 +29,15 @@
       - MCPill
       - MCPacketPills
       components:
-      - MCPill
+      - Pill
   - type: FixedItemSizeStorage
   - type: IgnoreContentsSize
     items:
       tags:
       - MCPillCanister
       - MCCaseSyringe
+      - MCPacketPills
+      - MCPill
   - type: Tag
     tags:
     - RMCBeltMedical

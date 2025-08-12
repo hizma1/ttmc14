@@ -226,6 +226,15 @@
       - MCHypospray
       - MCTweezers
       components:
+      - Hypospray
+      - Defibrillator
+      - Pill
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - MCPillCanister
+      - MCPacketPills
+      - MCCaseSyringe
       - MCHypospray
       - MCDefibrillator
       - MCPill
