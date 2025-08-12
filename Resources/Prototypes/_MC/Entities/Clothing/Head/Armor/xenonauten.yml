@@ -1,0 +1,34 @@
+- type: entity
+  parent: RMCMarineHelmetBase
+  id: MCArmorHelmetModularXenonauten
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Clothing
+  - type: MCArmor
+    melee: 50
+    bullet: 70
+    laser: 70
+    energy: 60
+    bomb: 55
+    bio: 55
+    fire: 55
+    acid: 60
+
+- type: entity
+  parent: MCArmorHelmetModularXenonauten
+  id: MCArmorHelmetModularXenonautenM10X
+  name: M10X pattern marine helmet
+  description: A standard M10 Pattern Helmet with attach points. It reads on the label, 'The difference between an open-casket and closed-casket funeral. Wear on head for best results.'.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Head/Armor/Modular/Xenonauten/Light/drab.rsi
+
+- type: entity
+  parent: MCArmorHelmetModularXenonauten
+  id: MCArmorHelmetModularXenonautenM10XE
+  name: M10XE pattern marine helmet
+  description: A standard M10XE Pattern Helmet. This is a modified version of the M10X helmet, offering an enclosed visor apparatus.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Head/Armor/Modular/Xenonauten/Heavy/drab.rsi
