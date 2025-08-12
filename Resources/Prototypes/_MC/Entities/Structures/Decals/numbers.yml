@@ -1,0 +1,23 @@
+- type: entity
+  parent: MCDecal
+  id: MCDecalDropshipNumber1
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/mainship_96.rsi
+    state: dropship1
+
+- type: entity
+  parent: MCDecal
+  id: MCDecalDropshipNumber2
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/mainship_96.rsi
+    state: dropship2
+
+- type: entity
+  parent: MCDecal
+  id: MCDecalDropshipNumber3
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/mainship_96.rsi
+    state: dropship3

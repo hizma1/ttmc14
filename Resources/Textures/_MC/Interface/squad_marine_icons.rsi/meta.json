@@ -1,29 +1,29 @@
 {
-    "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/7e8aea5e32b79c2213a0702c45f711d22150c01d",
-    "size": {
-        "x": 16,
-        "y": 16
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/commit/7e8aea5e32b79c2213a0702c45f711d22150c01d",
+  "size": {
+    "x": 16,
+    "y": 16
+  },
+  "states": [
+    {
+      "name": "background"
     },
-    "states": [
-        {
-            "name": "background"
-        },
-        {
-            "name": "corpsman"
-        },
-        {
-            "name": "engineer"
-        },
-        {
-            "name": "leader"
-        },
-        {
-            "name": "marine"
-        },
-        {
-            "name": "smartgunner"
-        }
-    ]
+    {
+      "name": "corpsman"
+    },
+    {
+      "name": "engineer"
+    },
+    {
+      "name": "leader"
+    },
+    {
+      "name": "marine"
+    },
+    {
+      "name": "smartgunner"
+    }
+  ]
 }

@@ -1,0 +1,16 @@
+- type: entity
+  id: MCDecal
+  suffix: Floor
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Physics
+    bodyType: Static
+    canCollide: False
+  - type: Transform
+    anchored: true
+  - type: Sprite
+    sprite: _MC/Structures/mainship_96.rsi
+    drawdepth: FloorTiles
+    noRot: false

@@ -225,8 +225,6 @@
       - MCBodyBag
       - MCHypospray
       - MCTweezers
-      components:
-      - MCHypospray
       - MCDefibrillator
       - MCPill
   - type: FixedItemSizeStorage

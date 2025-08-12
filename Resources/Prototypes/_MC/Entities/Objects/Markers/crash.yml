@@ -19,6 +19,11 @@
   - type: Sprite
     sprite: _MC/Markers/landmarks.rsi
     state: fog_spawn
+  - type: ConditionalSpawner
+    gameRules:
+    - MCCrash
+    prototypes:
+    - MCXenoFog
 
 - type: entity
   parent: MarkerBase
@@ -31,3 +36,8 @@
       state: larvasilo
     - sprite: _MC/Markers/landmarks.rsi
       state: x4
+  - type: ConditionalSpawner
+    gameRules:
+    - MCCrash
+    prototypes:
+    - MCXenoStructureSilo

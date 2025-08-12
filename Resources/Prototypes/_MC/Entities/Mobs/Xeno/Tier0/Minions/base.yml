@@ -1,0 +1,11 @@
+- type: entity
+  parent:
+  - MCXenoUnactiveBase
+  - MCXenoAI
+  - CMXenoDeveloped
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: MCXenoMinion
+  abstract: true

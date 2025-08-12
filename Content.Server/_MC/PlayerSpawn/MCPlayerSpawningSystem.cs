@@ -16,7 +16,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server._MC.Spawn;
+namespace Content.Server._MC.PlayerSpawn;
 
 public sealed class MCPlayerSpawningSystem : EntitySystem
 {

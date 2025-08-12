@@ -1,0 +1,48 @@
+- type: entity
+  parent: MCXenoMinion
+  id: MCXenoMinionBeetle
+  name: beetle
+  description: An alien.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/beetle.rsi
+    offset: 0,0.5
+  - type: GhostRole
+    name: mc-job-name-xeno-beetle
+  - type: FixedIdentity
+    name: mc-job-name-xeno-beetle
+  - type: Xeno
+    tier: 0
+    role: MCXenoMinionBeetle
+    actionIds:
+    - MCActionXenoRest
+    hudOffset: -0.2,0.3
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      250: Critical
+      350: Dead
+  - type: XenoPlasma
+    plasma: 320
+    maxPlasma: 320
+    plasmaRegenOnWeeds: 10
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 17
+  - type: MCArmor
+    melee: 25
+    bullet: 25
+    laser: 25
+    energy: 25
+    bomb: 25
+    bio: 25
+    fire: 25
+    acid: 25
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 3.333
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: minion

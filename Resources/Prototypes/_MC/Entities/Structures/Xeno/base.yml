@@ -1,6 +1,10 @@
 - type: entity
   id: MCXenoStructure
   abstract: true
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
   components:
   - type: Appearance
   # - type: GuideHelp
@@ -26,6 +30,7 @@
     priority: -1
     transparency: 0.2
   - type: XenoConstruct
+  - type: XenoFriendly
   - type: XenoAnnounceStructureDestruction
   - type: RequireProjectileTarget
   - type: Flammable
@@ -60,11 +65,21 @@
   - type: CollisionWake
     enabled: false
   - type: XenoStructureMapTracked
+  - type: MCXenoStructureSpawner
+    mobsPerPlayer: 0.075
+    respawnMultiplier: 2
   - type: TacticalMapTracked
   - type: TacticalMapIcon
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: silo_passive
+  - type: XenoWeedsSpreading
+  - type: XenoWeeds
+    range: 3
+    spawns: MCXenoWeeds
+    healOnStopSpreading:
+      groups:
+        Brute: -6
 
 - type: entity
   parent: MCXenoStructure

@@ -1,0 +1,48 @@
+- type: entity
+  parent: MCXenoMinion
+  id: MCXenoMinionNymph
+  name: nymph
+  description: An alien.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/nymph.rsi
+    offset: 0,0.5
+  - type: GhostRole
+    name: mc-job-name-xeno-nymph
+  - type: FixedIdentity
+    name: mc-job-name-xeno-nymph
+  - type: Xeno
+    tier: 0
+    role: MCXenoMinionNymph
+    actionIds:
+    - MCActionXenoRest
+    hudOffset: -0.2,0.3
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      220: Dead
+  - type: XenoPlasma
+    plasma: 500
+    maxPlasma: 500
+    plasmaRegenOnWeeds: 20
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 8
+  - type: MCArmor
+    melee: 10
+    bullet: 10
+    laser: 10
+    energy: 10
+    bomb: 0
+    bio: 10
+    fire: 10
+    acid: 10
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.941
+    baseSprintSpeed: 4.166
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: minion

@@ -1,0 +1,47 @@
+- type: entity
+  parent: MCXenoMinion
+  id: MCXenoMinionScorpion
+  name: scorpion
+  description: An alien.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/scorpion.rsi
+  - type: GhostRole
+    name: mc-job-name-xeno-scorpion
+  - type: FixedIdentity
+    name: mc-job-name-xeno-scorpion
+  - type: Xeno
+    tier: 0
+    role: MCXenoMinionScorpion
+    actionIds:
+    - MCActionXenoRest
+    hudOffset: -0.2,0.3
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      130: Critical
+      230: Dead
+  - type: XenoPlasma
+    plasma: 1500
+    maxPlasma: 1500
+    plasmaRegenOnWeeds: 10
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 12
+  - type: MCArmor
+    melee: 15
+    bullet: 15
+    laser: 15
+    energy: 15
+    bomb: 0
+    bio: 15
+    fire: 5
+    acid: 15
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.777
+    baseSprintSpeed: 3.846
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: minion
