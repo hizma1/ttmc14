@@ -1,4 +1,5 @@
 ﻿using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared._MC.Xeno.Abilities.AcidicSalve;
 
@@ -10,4 +11,7 @@ public sealed partial class MCXenoAcidicSalveComponent : Component
 
     [DataField]
     public float Range = 1.5f;
+
+    [DataField]
+    public EntProtoId EffectProtoId = "RMCEffectHealHealer";
 }

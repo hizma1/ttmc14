@@ -61,7 +61,7 @@
 
 - type: entity
   parent: MCXenoNoMeleeBase
-  id: MCXenoBase
+  id: MCXenoUnactiveBase
   abstract: true
   components:
   - type: MeleeWeapon
@@ -70,9 +70,26 @@
     widePrimary: true
     altDisarm: false
     altHeavy: false
-  - type: MCXenoDamageVisuals
   - type: CombatMode
     canDisarm: false
+
+- type: entity
+  parent: MCXenoUnactiveBase
+  id: MCXenoBase
+  abstract: true
+  components:
+  - type: ActiveInputMover
+  - type: MCXenoDamageVisuals
+
+- type: entity
+  id: MCXenoAI
+  abstract: true
+  components:
+  - type: HTN
+    rootTask:
+      task: CMXenoCompound
+  - type: InputMover
+  - type: MobMover
 
 - type: entity
   id: MCXenoPlantingWeeds

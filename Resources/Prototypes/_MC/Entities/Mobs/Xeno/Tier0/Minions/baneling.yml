@@ -1,0 +1,48 @@
+- type: entity
+  parent: MCXenoMinion
+  id: MCXenoMinionBaneling
+  name: baneling
+  description: An alien.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/baneling.rsi
+    offset: 0,0.5
+  - type: GhostRole
+    name: mc-job-name-xeno-baneling
+  - type: FixedIdentity
+    name: mc-job-name-xeno-baneling
+  - type: Xeno
+    tier: 0
+    role: MCXenoMinionBaneling
+    actionIds:
+    - MCActionXenoRest
+    hudOffset: -0.2,0.3
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  - type: XenoPlasma
+    plasma: 275
+    maxPlasma: 275
+    plasmaRegenOnWeeds: 11
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 16
+  - type: MCArmor
+    melee: 25
+    bullet: 20
+    laser: 20
+    energy: 20
+    bomb: 20
+    bio: 20
+    fire: 15
+    acid: 100
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.076
+    baseSprintSpeed: 4.444
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: minion

@@ -46,6 +46,8 @@
       - CMBloodPack
       components:
       - Hypospray
+      - MCCaseSyringe
+      components:
       - CMSurgeryTool
   - type: IgnoreContentsSize
     items:

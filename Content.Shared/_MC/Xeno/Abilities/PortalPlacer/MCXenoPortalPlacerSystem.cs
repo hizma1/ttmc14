@@ -3,6 +3,7 @@ using Content.Shared._MC.Xeno.Portal;
 using Content.Shared._RMC14.Actions;
 using Content.Shared._RMC14.Xenonids.Hive;
 using Content.Shared.Actions;
+using Content.Shared.Mobs;
 using Robust.Shared.Network;
 
 namespace Content.Shared._MC.Xeno.Abilities.PortalPlacer;
@@ -21,6 +22,8 @@ public sealed class MCXenoPortalPlacerSystem : EntitySystem
 
         SubscribeLocalEvent<MCXenoPortalPlacerComponent, MCXenoPortalPlacerActionEvent>(OnAction);
         SubscribeLocalEvent<MCXenoPortalPlacerComponent, MCXenoChoosePortalBuiMsg>(OnChoose);
+        SubscribeLocalEvent<MCXenoPortalPlacerComponent, MobStateChangedEvent>(OnMobStateChanged);
+        SubscribeLocalEvent<MCXenoPortalPlacerComponent, ComponentShutdown>(OnShutdown);
     }
 
     private void OnAction(Entity<MCXenoPortalPlacerComponent> entity, ref MCXenoPortalPlacerActionEvent args)
@@ -84,5 +87,28 @@ public sealed class MCXenoPortalPlacerSystem : EntitySystem
         otherPortal.LinkedEntity = instance;
 
         Dirty(other.Value, otherPortal);
+    }
+
+    private void OnMobStateChanged(Entity<MCXenoPortalPlacerComponent> entity, ref MobStateChangedEvent args)
+    {
+        if (args.NewMobState != MobState.Dead)
+            return;
+
+        DeletePortals(entity);
+    }
+
+    private void OnShutdown(Entity<MCXenoPortalPlacerComponent> entity, ref ComponentShutdown args)
+    {
+        DeletePortals(entity);
+    }
+
+    private void DeletePortals(Entity<MCXenoPortalPlacerComponent> entity)
+    {
+        QueueDel(entity.Comp.PortalFirstEntityUid);
+        QueueDel(entity.Comp.PortalSecondEntityUid);
+
+        entity.Comp.PortalFirstEntityUid = null;
+        entity.Comp.PortalSecondEntityUid = null;
+        Dirty(entity);
     }
 }

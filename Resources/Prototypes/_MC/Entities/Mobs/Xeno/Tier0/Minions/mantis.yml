@@ -1,0 +1,48 @@
+- type: entity
+  parent: MCXenoMinion
+  id: MCXenoMinionMantis
+  name: mantis
+  description: An alien.
+  components:
+  - type: Sprite
+    sprite: _MC/Mobs/Xenos/mantis.rsi
+    offset: 0,0.5
+  - type: GhostRole
+    name: mc-job-name-xeno-mantis
+  - type: FixedIdentity
+    name: mc-job-name-xeno-mantis
+  - type: Xeno
+    tier: 0
+    role: MCXenoMinionMantis
+    actionIds:
+    - MCActionXenoRest
+    hudOffset: -0.2,0.3
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      250: Dead
+  - type: XenoPlasma
+    plasma: 500
+    maxPlasma: 500
+    plasmaRegenOnWeeds: 20
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 20
+  - type: MCArmor
+    melee: 15
+    bullet: 5
+    laser: 5
+    energy: 0
+    bomb: 0
+    bio: 0
+    fire: 5
+    acid: 0
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.941
+    baseSprintSpeed: 4.166
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: minion

@@ -99,8 +99,8 @@
       types:
         Slash: 30
   - type: MovementSpeedModifier
-    baseWalkSpeed: 2.857
-    baseSprintSpeed: 4
+    baseWalkSpeed: 2.941
+    baseSprintSpeed: 4.166
   - type: MCXenoRegenerateSkin
     heal:
       groups:

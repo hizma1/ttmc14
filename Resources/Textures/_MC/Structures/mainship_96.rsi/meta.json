@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "missiletubesouth"
+    },
+    {
+      "name": "missiletubenorth"
+    },
+    {
+      "name": "dropship1"
+    },
+    {
+      "name": "dropship2"
+    },
+    {
+      "name": "thumper"
+    },
+    {
+      "name": "biomass_turbine"
+    },
+    {
+      "name": "biomass_turbine-on",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "biomass_turbine_border"
+    },
+    {
+      "name": "support_struts_r"
+    },
+    {
+      "name": "support_struts_l"
+    },
+    {
+      "name": "maptable"
+    },
+    {
+      "name": "maptable_screen"
+    },
+    {
+      "name": "som_maptable_screen"
+    },
+    {
+      "name": "launcher",
+      "directions": 4
+    },
+    {
+      "name": "fighter",
+      "directions": 4
+    },
+    {
+      "name": "fighter_loaded",
+      "directions": 4
+    },
+    {
+      "name": "SOM_fighter_empty",
+      "directions": 4
+    },
+    {
+      "name": "SOM_fighter",
+      "directions": 4
+    },
+    {
+      "name": "shadow",
+      "directions": 4
+    },
+    {
+      "name": "dropship3"
+    }
+  ]
+}

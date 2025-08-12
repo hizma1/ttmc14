@@ -5,17 +5,21 @@ using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Heal;
 using Content.Shared._RMC14.Xenonids.Hive;
 using Content.Shared._RMC14.Xenonids.Pheromones;
+using Content.Shared.Coordinates;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
+using Robust.Shared.Network;
 
 namespace Content.Shared._MC.Xeno.Abilities.AcidicSalve;
 
 public sealed class MCXenoAcidicSlaveSystem : EntitySystem
 {
+    [Dependency] private readonly INetManager _net = default!;
+
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly RMCActionsSystem _rmcActions = default!;
 
@@ -64,7 +68,6 @@ public sealed class MCXenoAcidicSlaveSystem : EntitySystem
         var ev = new MCXenoAcidicSlaveDoAfterEvent();
         var doAfter = new DoAfterArgs(EntityManager, entity, entity.Comp.Delay, ev, entity, args.Target)
         {
-            NeedHand = true,
             BreakOnMove = true,
             RequireCanInteract = true,
         };
@@ -84,5 +87,8 @@ public sealed class MCXenoAcidicSlaveSystem : EntitySystem
 
         var value = 50 + pheromones * health * 0.01f;
         _xenoHeal.Heal(args.Target.Value, value);
+
+        if(_net.IsServer)
+            SpawnAttachedTo(entity.Comp.EffectProtoId, args.Target.Value.ToCoordinates());
     }
 }

@@ -1,6 +1,10 @@
 - type: entity
   id: MCProp
   abstract: true
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
   components:
   - type: Transform
     noRot: false
@@ -103,3 +107,12 @@
   - type: Sprite
     sprite: _MC/Structures/Machines/cryogenics.rsi
     state: body_scannerconsole
+
+- type: entity
+  parent: MCProp
+  id: MCPropMiningDrill
+  name: mining drill
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/mining_drill.rsi
+    state: mining_drill_error
