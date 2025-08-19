@@ -86,8 +86,8 @@
         Brute: 20
   - type: TunnelRenamer
   - type: MovementSpeedModifier
-    baseWalkSpeed: 1.66
-    baseSprintSpeed: 3.225
+    baseWalkSpeed: 3.125
+    baseSprintSpeed: 4.545
   - type: TacticalMapIcon
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi

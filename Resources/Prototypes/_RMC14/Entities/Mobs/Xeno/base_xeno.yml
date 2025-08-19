@@ -361,7 +361,7 @@
   - type: RMCCanBeFultoned
   # - type: CMArmor
   - type: CriticalGraceTime
-  - type: RMCObstacleSlamming
+  # - type: RMCObstacleSlamming
   - type: Buckle
     buckleDelay: 0
     clickUnbuckle: false

@@ -62,10 +62,8 @@ public sealed class MCXenoStructureSpawnerSystem : EntitySystem
 
     private TimeSpan GetIncrement(MCXenoStructureSpawnerComponent component)
     {
-        var newIncrement = TimeSpan.FromMinutes(3) -
-                           TimeSpan.FromSeconds(_mcStatus.ActivePlayerCount * component.RespawnPerPlayer.TotalSeconds);
-        return component.RespawnMultiplier *
-               (newIncrement > component.MinRespawn ? newIncrement : component.MinRespawn);
+        var newIncrement = TimeSpan.FromMinutes(3) - TimeSpan.FromSeconds(_mcStatus.ActivePlayerCount * component.RespawnPerPlayer.TotalSeconds);
+        return component.RespawnMultiplier * (newIncrement > component.MinRespawn ? newIncrement : component.MinRespawn);
     }
 
     private int GetMobs(MCXenoStructureSpawnerComponent component)

@@ -29,3 +29,17 @@
     chainDamage:
       types:
         Heat: 45
+
+- type: entity
+  parent: MCXenoAcidSpray
+  id: MCXenoAcidSprayBull
+  components:
+  - type: TimedDespawn
+    lifetime: 5
+  - type: DamageOnCollide
+    damage:
+      types:
+        Heat: 30
+    chainDamage:
+      types:
+        Heat: 30

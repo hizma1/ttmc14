@@ -1,5 +1,6 @@
 using Content.Client._RMC14.Sprite;
 using Content.Shared._MC.Xeno.Abilities.Charge;
+using Content.Shared._MC.Xeno.Abilities.HeadbuttCharge;
 using Content.Shared._MC.Xeno.Visuals;
 using Content.Shared._RMC14.Sprite;
 using Content.Shared._RMC14.Xenonids;
@@ -190,7 +191,8 @@ public sealed class XenoVisualizerSystem : VisualizerSystem<XenoComponent>
     {
         return xeno.Comp1 != null ||
                xeno.Comp2 != null ||
-               Resolve(xeno, ref xeno.Comp3, false) && xeno.Comp3.Stage > 0;
+               Resolve(xeno, ref xeno.Comp3, false) && xeno.Comp3.Stage > 0 ||
+               HasComp<MCXenoHeadbuttChargeActiveComponent>(xeno);
     }
 
     public override void Update(float frameTime)

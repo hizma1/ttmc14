@@ -23,12 +23,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      450: Critical
-      550: Dead
+      325: Critical
+      425: Dead
   - type: XenoPlasma
-    plasma: 340
-    maxPlasma: 340
-    plasmaRegenOnWeeds: 24
+    plasma: 270
+    maxPlasma: 270
+    plasmaRegenOnWeeds: 18
   - type: Xeno
     tier: 2
     role: MCXenoBull
@@ -36,7 +36,10 @@
     - MCActionXenoRest
     - MCActionXenoPsydrain
     - MCActionXenoDevolve
-    - MCActionXenoToggleChargingBull
+    # Main
+    - MCActionXenoGoreCharge
+    - MCActionXenoHeadbuttCharge
+    - MCActionXenoAcidCharge
     hudOffset: -0.15,0.25
   - type: XenoEvolution
     actionId: MCActionXenoEvolve
@@ -47,18 +50,18 @@
     devolvesTo:
     - MCXenoRunner
   - type: MCArmor
-    melee: 50
-    bullet: 55
-    laser: 55
-    energy: 55
+    melee: 40
+    bullet: 50
+    laser: 40
+    energy: 40
     bomb: 20
     bio: 35
-    fire: 50
+    fire: 20
     acid: 35
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 24
+        Brute: 21
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.125
     baseSprintSpeed: 4.545
@@ -66,3 +69,8 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: bull
+  # Passive abilities
+  - type: MCXenoSunder
+    multiplier: 0.8
+  # Abilities
+  - type: MCXenoHeadbuttCharge

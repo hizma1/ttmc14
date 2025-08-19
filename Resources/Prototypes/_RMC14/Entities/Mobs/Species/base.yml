@@ -332,7 +332,7 @@
     superSlowModifier: 4
   - type: RMCHandEmotes
   - type: RMCBuckleDrawDepth
-  - type: RMCObstacleSlamming
+  # - type: RMCObstacleSlamming
   - type: AllowPullWhileDeadAndInfected
   - type: DamageOnPulledWhileCrit
     damage:
