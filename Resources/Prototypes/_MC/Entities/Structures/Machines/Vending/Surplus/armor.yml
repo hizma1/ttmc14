@@ -13,6 +13,13 @@
       map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
   - type: CMAutomatedVendor
     sections:
+    - name: Xenonauten
+      entries:
+      - id: MCArmorModularXenonautenL
+      - id: MCArmorModularXenonautenM
+      - id: MCArmorModularXenonautenH
+      - id: MCArmorHelmetModularXenonautenM10X
+      - id: MCArmorHelmetModularXenonautenM10XE
     - name: Jaeger
       entries:
       - id: MCArmorModularJaegerScout

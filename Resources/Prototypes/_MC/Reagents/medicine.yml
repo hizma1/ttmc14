@@ -848,15 +848,15 @@
           min: 16
         damage:
           groups:
-            Toxin: 10 # при большом количестве вызывает отмирание нейронной системы
-            Airloss: 10
+            Toxin: 1
+            Airloss: 2
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           min: 20
         damage:
           groups:
-            Genetic: 35
+            Genetic: 5
 
 - type: reagent
   parent: MCReagentMedicine

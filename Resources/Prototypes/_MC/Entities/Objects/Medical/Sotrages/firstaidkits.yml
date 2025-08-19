@@ -25,6 +25,7 @@
       tags:
       - MCBodyBag
       - MCPill
+      - MCPacketPills
       - MCRollerItem
       - MCHypospray
       - MCHealthAnalyzer
@@ -40,10 +41,11 @@
       - MCBurnKit
       - MCDropper
       - MCSpray
-      - MCPacketPills
       - CMSurgeryTool
       - Bloodpack
       - CMBloodPack
+      components:
+      - Hypospray
       - MCCaseSyringe
       components:
       - CMSurgeryTool
@@ -51,8 +53,8 @@
     items:
       tags:
       - MCPillCanister
-      - MCCaseSyringe
       - MCPacketPills
+      - MCCaseSyringe
       - CMSurgeryTool
   - type: FixedItemSizeStorage
   - type: Item
