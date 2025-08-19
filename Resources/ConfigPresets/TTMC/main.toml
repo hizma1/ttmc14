@@ -59,7 +59,6 @@ role_time = 0
 show_editor_species_button = false
 
 [hub]
-advertise = false
 tags = "lang:ru,rp:low,region:eu_e"
 
 [ic]
