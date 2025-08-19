@@ -496,13 +496,18 @@ public sealed partial class XenoSystem : EntitySystem
                 if (Transform(uid).Anchored)
                     _weeds.UpdateQueued(uid);
 
-                var onWeeds = affectable != null && affectable.OnXenoWeeds && affectable.OnFriendlyWeeds;
-
-                if (affectable == null || !onWeeds)
+                var onWeeds = affectable is { OnXenoWeeds: true, OnFriendlyWeeds: true };
+                if (affectable is null || !onWeeds)
                 {
                     if (_xenoPlasmaQuery.TryComp(uid, out var plasmaComp))
                     {
+                        if (plasmaComp.PlasmaRegenLimit != -1 && plasmaComp.Plasma >= plasmaComp.PlasmaRegenLimit)
+                            continue;
+
                         var amount = FixedPoint2.Max(plasmaComp.PlasmaRegenOffWeeds * plasmaComp.MaxPlasma / 100 / 2, 0.01);
+                        if (amount + plasmaComp.Plasma > plasmaComp.PlasmaRegenLimit)
+                            amount = plasmaComp.PlasmaRegenLimit - plasmaComp.Plasma;
+
                         _xenoPlasma.RegenPlasma((uid, plasmaComp), amount);
                     }
 
@@ -523,6 +528,9 @@ public sealed partial class XenoSystem : EntitySystem
             if (!_xenoPlasmaQuery.TryComp(uid, out var plasma))
                 continue;
 
+            if (plasma.PlasmaRegenLimit != -1 && plasma.Plasma >= plasma.PlasmaRegenLimit)
+                continue;
+
             var plasmaRestored = plasma.PlasmaRegenOnWeeds;
 
             if (resting)
@@ -530,6 +538,9 @@ public sealed partial class XenoSystem : EntitySystem
                 plasmaRestored *= 2;
                 plasmaRestored *= GetWeedsPlasmaModifier((uid, xeno), affectable);
             }
+
+            if (plasmaRestored + plasma.Plasma > plasma.PlasmaRegenLimit)
+                plasmaRestored = plasma.PlasmaRegenLimit - plasma.Plasma;
 
             _xenoPlasma.RegenPlasma((uid, plasma), plasmaRestored);
         }

@@ -26,11 +26,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      410: Critical
-      510: Dead
+      350: Critical
+      450: Dead
   - type: XenoPlasma
     plasma: 2400
     maxPlasma: 2400
+    plasmaRegenLimit: 1200
     plasmaRegenOnWeeds: 80
     plasmaTransferDelay: 0.5
   - type: Xeno
@@ -95,6 +96,7 @@
   - type: XenoInhands
     prefix: hivelord
   - type: XenoConstruction
+    buildRange: 2.75
     buildDelay: 1
     canBuild:
     - MCWallXenoResinThick

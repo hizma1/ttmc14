@@ -13,6 +13,9 @@ public sealed partial class XenoPlasmaComponent : Component
     [DataField, AutoNetworkedField]
     public FixedPoint2 Plasma;
 
+    [DataField, AutoNetworkedField]
+    public int PlasmaRegenLimit = -1;
+
     [DataField(required: true), AutoNetworkedField]
     public int MaxPlasma = 300;
 

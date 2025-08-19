@@ -86,6 +86,22 @@
   - type: XenoInhands
     prefix: queen
   - type: MCXenoBlessings
+    entries:
+    - LarvaSilo
+    - EvolutionTower
+    - PsychicRelay
+    - PheromoneTower
+    - Spawner
+    - AcidPool
+    - AcidJaws
+    - AcidMaw
+    - AcidTurret
+    - StickyResinTurret
+    - Gargoyle
+    - PrimordialTierOne
+    - PrimordialTierTwo
+    - PrimordialTierThree
+    - PrimordialTierFour
   - type: MCXenoHiveLeader
   - type: RMCSize
     size: Big
