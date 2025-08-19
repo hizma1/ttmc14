@@ -95,6 +95,36 @@
     },
     {
       "name": "xeno_toxic"
+    },
+    {
+      "name": "xeno_acid_strong",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "xeno_acid_normal",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "xeno_acid_weak",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
     }
   ]
 }

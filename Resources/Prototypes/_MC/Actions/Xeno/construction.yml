@@ -100,3 +100,17 @@
   - type: InstantAction
     event: !type:XenoChooseStructureActionEvent
   - type: XenoChooseConstructionAction
+
+- type: entity
+  parent: ActionXenoBase
+  id: MCActionXenoPlaceTrap
+  name: Place trap (200)
+  description: Place a hole on weeds that can be filled with a hugger, liquid acid or acid gas. Activates when a marine steps on it.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _MC/Interface/Actions/Xeno/construction.rsi
+      state: place_trap
+  - type: InstantAction
+    event: !type:XenoPlaceResinHoleActionEvent

@@ -505,7 +505,7 @@ public sealed partial class XenoSystem : EntitySystem
                             continue;
 
                         var amount = FixedPoint2.Max(plasmaComp.PlasmaRegenOffWeeds * plasmaComp.MaxPlasma / 100 / 2, 0.01);
-                        if (amount + plasmaComp.Plasma > plasmaComp.PlasmaRegenLimit)
+                        if (plasmaComp.PlasmaRegenLimit != -1 && amount + plasmaComp.Plasma > plasmaComp.PlasmaRegenLimit)
                             amount = plasmaComp.PlasmaRegenLimit - plasmaComp.Plasma;
 
                         _xenoPlasma.RegenPlasma((uid, plasmaComp), amount);
@@ -539,7 +539,7 @@ public sealed partial class XenoSystem : EntitySystem
                 plasmaRestored *= GetWeedsPlasmaModifier((uid, xeno), affectable);
             }
 
-            if (plasmaRestored + plasma.Plasma > plasma.PlasmaRegenLimit)
+            if (plasma.PlasmaRegenLimit != -1 && plasmaRestored + plasma.Plasma > plasma.PlasmaRegenLimit)
                 plasmaRestored = plasma.PlasmaRegenLimit - plasma.Plasma;
 
             _xenoPlasma.RegenPlasma((uid, plasma), plasmaRestored);

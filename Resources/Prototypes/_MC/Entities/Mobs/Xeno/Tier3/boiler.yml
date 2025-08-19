@@ -37,6 +37,7 @@
     - MCActionXenoDevolve
     - MCActionXenoSprayAcidBoiler
     - MCActionXenoAcidStrong
+    - MCActionXenoPlaceTrap
     hudOffset: -0.15,0.25
   - type: XenoDevolve
     devolvesTo:

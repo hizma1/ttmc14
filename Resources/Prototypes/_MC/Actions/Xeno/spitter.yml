@@ -21,7 +21,7 @@
 - type: entity
   parent: ActionXenoBase
   id: MCActionXenoScatterSpit
-  name: Scatter Spit (200)
+  name: Scatter Spit (280)
   description: Spits a spread of acid projectiles that splatter on the ground.
   components:
   - type: Action
@@ -37,5 +37,5 @@
   - type: WorldTargetAction
     event: !type:MCXenoScatterSpitActionEvent
   - type: XenoActionPlasma
-    cost: 200
+    cost: 280
   - type: ActionBlockIfResting

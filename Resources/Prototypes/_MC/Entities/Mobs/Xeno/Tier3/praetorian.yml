@@ -23,12 +23,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      390: Critical
-      490: Dead
+      570: Critical
+      670: Dead
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000
-    plasmaRegenOnWeeds: 100
+    plasmaRegenOnWeeds: 80
   - type: Xeno
     tier: 3
     role: MCXenoPraetorian
@@ -37,20 +37,25 @@
     - MCActionXenoPsydrain
     - MCActionXenoDevolve
     - MCActionXenoPheromones
-    - MCActionXenoToggleXenoSpitPraetorian
-    - MCActionXenoAcidMedium
+    - MCActionXenoAcidStrong
+    # Main
+    - MCActionXenoScatterSpitPraetorian
+    - MCActionXenoSprayAcidPraetorian
+    - MCActionXenoToggleXenoSpitPassthroughPraetorian
+    - MCActionXenoToggleXenoSpitToxLossPraetorian
+    - MCActionXenoPlaceTrap
     hudOffset: -0.15,0.25
   - type: XenoDevolve
     devolvesTo:
     - MCXenoSpitter
   - type: MCArmor
     melee: 45
-    bullet: 50
-    laser: 50
+    bullet: 25
+    laser: 15
     energy: 50
     bomb: 10
     bio: 40
-    fire: 50
+    fire: 20
     acid: 40
   - type: MeleeWeapon
     damage:
@@ -69,3 +74,16 @@
   - type: RMCSize
     size: Big
   - type: XenoAcid
+  # Abilities
+  - type: XenoSprayAcid
+    acid: MCXenoAcidSprayPraetorian
+    range: 5
+    barricadeDamage:
+      types:
+        Heat: 5
+  - type: MCXenoScatterSpit
+    count: 3
+    projectileId: MCXenoProjectileHeavyScatterPraetorian
+  - type: AcidTrap
+    trapLevel: 3
+    spray: XenoAcidSprayTrapStrong

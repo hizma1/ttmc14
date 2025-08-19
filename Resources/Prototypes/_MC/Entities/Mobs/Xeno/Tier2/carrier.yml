@@ -124,6 +124,7 @@
     - MCActionXenoSelectWeeds
     - MCActionXenoPlantWeeds
     - MCActionXenoLayEgg
+    - MCActionXenoPlaceTrap
   - type: XenoParasiteThrower
   - type: XenoEvolution
     actionId: MCActionXenoEvolve

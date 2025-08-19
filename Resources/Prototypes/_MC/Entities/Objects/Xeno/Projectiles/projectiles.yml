@@ -4,7 +4,7 @@
   components:
   - type: Sprite
     layers:
-    - state: xeno_acid
+    - state: xeno_acid_normal
       shader: unshaded
   - type: Projectile
     impactEffect: null
@@ -16,7 +16,7 @@
   - type: ProjectileMaxRange
     max: 8
   - type: MCXenoSpawnAcidSprayOnTerminating
-    spawn: MCXenoAcidSprayHeavyScatter
+    spawn: MCXenoAcidSpraySpit
   - type: MCXenoProjectileTargetingTurf
 
 - type: entity
@@ -37,28 +37,6 @@
     deleteOnFriendlyXeno: true
   - type: ProjectileMaxRange
     max: 8
-
-- type: entity
-  parent: MCXenoProjectile
-  id: MCXenoProjectileToxinHeavy
-  name: neurotoxic splash
-  components:
-  - type: Sprite
-    layers:
-    - state: neurotoxin
-      shader: unshaded
-  - type: Projectile
-    impactEffect: null
-    damage:
-      types:
-        Heat: 40
-  - type: XenoProjectile
-    deleteOnFriendlyXeno: false
-  - type: ProjectileMaxRange
-    max: 8
-  - type: SpawnOnTerminate
-    spawn: MCSmokeNeurotoxinSmall
-  - type: MCXenoProjectileTargetingTurf
 
 - type: entity
   parent: MCXenoProjectile
