@@ -20,7 +20,7 @@
   - type: Storage
     maxItemSize: Small
     grid:
-    - 0,0,13,1
+    - 0,0,11,1 # 6 slots
     whitelist:
       tags:
       - MCBodyBag
@@ -34,19 +34,12 @@
       - MCSyringe
       - MCCaseSyringe
       - MCAutoInjector
-      - MCGauze
-      - MCSplint
-      - MCOintment
-      - MCTraumaKit
-      - MCBurnKit
+      - MCHealingItem
       - MCDropper
       - MCSpray
       - CMSurgeryTool
       - Bloodpack
       - CMBloodPack
-      components:
-      - Hypospray
-      - MCCaseSyringe
       components:
       - CMSurgeryTool
   - type: IgnoreContentsSize
@@ -82,7 +75,6 @@
   components:
   - type: StorageFill
     contents:
-    - id: MCHealthAnalyzer
     - id: MCGauze
     - id: MCOintment
     - id: MCAutoInjectorCombat
@@ -112,7 +104,6 @@
   components:
   - type: StorageFill
     contents:
-    - id: MCHealthAnalyzer
     - id: MCPillCanisterKelotane
     - id: MCPillCanisterTramadol
     - id: MCBurnKit
@@ -142,11 +133,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: MCHealthAnalyzer
     - id: MCPillCanisterDylovene
+      amount: 3
     - id: MCAutoInjectorHypervene
       amount: 2
-    - id: MCPacketPillsRyetalyn
     - id: MCCaseSyringeFillAntiTox
 
 - type: entity
@@ -171,7 +161,6 @@
   components:
   - type: StorageFill
     contents:
-    - id: MCHealthAnalyzer
     - id: MCPillCanisterDexalin
     - id: MCPillCanisterInaprovaline
     - id: MCAutoInjectorDexalinPlus
@@ -200,7 +189,6 @@
   components:
   - type: StorageFill
     contents:
-    - id: MCHealthAnalyzer
     - id: MCPillCanisterDylovene
     - id: MCAutoInjectorCombat
     - id: MCAutoInjectorTricordrazine
@@ -230,10 +218,8 @@
   components:
   - type: StorageFill
     contents:
-    - id: MCHealthAnalyzer
     - id: MCTraumaKit
     - id: MCBurnKit
-    - id: MCAutoInjectorCombat
     - id: MCPillCanisterBicaridine
     - id: MCPillCanisterKelotane
     - id: MCPillCanisterTramadol

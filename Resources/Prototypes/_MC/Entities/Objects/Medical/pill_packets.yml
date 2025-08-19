@@ -48,11 +48,9 @@
     hideStackVisualsWhenClosed: false
     maxItemSize: Small
     grid:
-    - 0,0,11,1
+    - 0,0,15,1 # 8 slots
     whitelist:
       tags:
-      - MCPill
-      components:
       - MCPill
   - type: RemoveOnlyStorage
   - type: FixedItemSizeStorage
@@ -66,8 +64,6 @@
   - type: ItemCounter
     count:
       tags:
-      - MCPill
-      components:
       - MCPill
     composite: true
     layerStates:
