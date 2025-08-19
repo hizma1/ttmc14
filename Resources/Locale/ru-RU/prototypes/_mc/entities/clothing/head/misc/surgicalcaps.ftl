@@ -1,0 +1,9 @@
+ent-MCHeadCapSurgBlue = surgical cap
+    .desc = A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is baby blue.
+    .suffix = MC
+ent-MCHeadCapSurgGreen = surgical cap
+    .desc = A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is dark green.
+    .suffix = MC
+ent-MCHeadCapSurgPurple = surgical cap
+    .desc = A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is deep purple.
+    .suffix = MC

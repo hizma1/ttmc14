@@ -1,0 +1,2 @@
+ent-MCXenoProjectile = projectile
+    .desc = { "" }

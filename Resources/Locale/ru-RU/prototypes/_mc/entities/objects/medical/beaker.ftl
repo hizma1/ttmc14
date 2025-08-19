@@ -1,0 +1,14 @@
+ent-MCBeakerBase = { ent-BaseBeaker }
+    .suffix = MC
+    .desc = { ent-BaseBeaker.desc }
+ent-MCBeakerBaseMetallic = { ent-BaseBeakerMetallic }
+    .suffix = MC
+    .desc = { ent-BaseBeakerMetallic.desc }
+ent-MCBeaker = beaker
+    .desc = A beaker. Can hold up to 60 units.
+ent-MCBeakerLarge = large beaker
+    .desc = A large beaker. Can hold up to 120 units.
+ent-MCBeakerBluespace = bluespace beaker
+    .desc = A bluespace beaker, powered by experimental bluespace technology. Can hold up to 300 units.
+ent-MCVial = vial
+    .desc = A small glass vial. Can hold up to 30 units.

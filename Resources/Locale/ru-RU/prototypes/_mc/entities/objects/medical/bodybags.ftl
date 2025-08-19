@@ -1,0 +1,12 @@
+ent-MCBodyBag = body bag
+    .desc = A folded bag designed for the storage and transportation of cadavers.
+    .suffix = MC
+ent-MCBodyBagFolded = { ent-MCBodyBag }
+    .suffix = folded
+    .desc = { ent-MCBodyBag.desc }
+ent-MCStasisBag = stasis bag
+    .desc = A folded, reusable bag designed to prevent additional damage to an occupant.
+    .suffix = MC
+ent-MCStasisBagFolded = { ent-MCStasisBag }
+    .suffix = MC, folded
+    .desc = { ent-MCStasisBag.desc }

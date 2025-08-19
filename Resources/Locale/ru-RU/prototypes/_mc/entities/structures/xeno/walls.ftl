@@ -1,0 +1,10 @@
+ent-MCWallXenoResinRegenerating = thick resin wall
+    .desc = Weird slime solidified into a thick wall.
+ent-MCWallXenoResinThick = thick resin wall
+    .desc = Weird slime solidified into a thick wall.
+ent-MCWallXenoResinThickBulletproof = bulletproof resin wall
+    .desc = Weird slime solidified into a wall. Looks shiny.
+ent-MCWallXenoResinThickFireproof = fireproof resin wall
+    .desc = Weird slime solidified into a wall. Very red.
+ent-MCWallXenoResinThickHardy = hardy resin wall
+    .desc = Weird slime soldified into a wall. Looks sturdy.

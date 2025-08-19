@@ -1,0 +1,13 @@
+ent-MCRollerBedDestruction = { "" }
+    .desc = { "" }
+ent-MCRollerBed = roller bed
+    .desc = A collapsed roller bed that can be carried around.
+    .suffix = MC
+ent-MCRollerBedSpawnFolded = { ent-MCRollerBed }
+    .suffix = MC, folded
+    .desc = { ent-MCRollerBed.desc }
+ent-MCPortableSurgicalBed = portable surgical bed
+    .desc = A collapsible surgical bed. It's not perfect, but it's the best you'll get short of an actual surgical table.
+ent-MCPortableSurgicalBedSpawnFolded = { ent-MCPortableSurgicalBed }
+    .suffix = folded
+    .desc = { ent-MCPortableSurgicalBed.desc }

@@ -1,0 +1,15 @@
+ent-MCSheetPhoron = phoron
+    .suffix = Full, MC
+    .desc = { ent-SheetOtherBase.desc }
+ent-MCSheetPhoron15 = { ent-MCSheetPhoron }
+    .suffix = 15, MC
+    .desc = { ent-MCSheetPhoron.desc }
+ent-MCSheetPhoron25 = { ent-MCSheetPhoron }
+    .suffix = 25, MC
+    .desc = { ent-MCSheetPhoron.desc }
+ent-MCSheetPhoron30 = { ent-MCSheetPhoron }
+    .suffix = 30, MC
+    .desc = { ent-MCSheetPhoron.desc }
+ent-MCSheetPhoron1 = { ent-MCSheetPhoron }
+    .suffix = Single, MC
+    .desc = { ent-MCSheetPhoron.desc }

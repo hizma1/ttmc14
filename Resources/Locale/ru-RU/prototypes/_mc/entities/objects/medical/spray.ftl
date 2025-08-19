@@ -1,0 +1,12 @@
+ent-MCSprayBottleSterilizing = sterilizing spray
+    .desc = Infection and necrosis are a thing of the past!
+    .suffix = MC, Empty
+ent-MCSprayBottleSterilizingFill = sterilizing spray
+    .suffix = MC, Filled
+    .desc = { ent-MCSprayBottleSterilizing.desc }
+ent-MCSprayBottleSpaceCleaner = space cleaner
+    .desc = BLAM!-brand non-foaming space cleaner!
+    .suffix = MC, Filled
+ent-MCSprayBottleSurgeryCleaner = surgery cleaner
+    .desc = Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back
+    .suffix = MC, Filled
