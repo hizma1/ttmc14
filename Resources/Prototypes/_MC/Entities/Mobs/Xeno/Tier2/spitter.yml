@@ -28,7 +28,7 @@
   - type: XenoPlasma
     plasma: 925
     maxPlasma: 925
-    plasmaRegenOnWeeds: 40
+    plasmaRegenOnWeeds: 50
   - type: Xeno
     tier: 2
     role: MCXenoSpitter

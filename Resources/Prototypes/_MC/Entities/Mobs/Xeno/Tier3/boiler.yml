@@ -22,8 +22,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      380: Critical
-      480: Dead
+      325: Critical
+      425: Dead
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000

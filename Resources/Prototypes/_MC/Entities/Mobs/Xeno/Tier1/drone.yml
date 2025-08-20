@@ -32,7 +32,7 @@
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 22.5
+        Brute: 18
   - type: Xeno
     role: MCXenoDrone
     hudOffset: 0,0.15
@@ -46,12 +46,12 @@
     canBeDevolvedByOther: false
   - type: MCArmor
     melee: 30
-    bullet: 30
-    laser: 30
+    bullet: 25
+    laser: 25
     energy: 30
     bomb: 0
     bio: 15
-    fire: 30
+    fire: 10
     acid: 15
   - type: XenoPheromones
     pheromonesMultiplier: 2
@@ -60,10 +60,6 @@
     plasma: 1000
     maxPlasma: 1000
     plasmaRegenOnWeeds: 5
-  - type: Tackle
-    max: 4
-    stunMin: 3
-    stunMax: 4
   - type: WhitelistPickup
     whitelist:
       components:
@@ -95,8 +91,6 @@
   - type: XenoEvolution
     canEvolveWithoutGranter: true
     max: 200
-  - type: Evasion
-    evasion: 20
   - type: XenoInhands
     prefix: drone
   - type: IntelRecoverCorpseObjectiveOnDeath
@@ -144,7 +138,7 @@
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000
-    plasmaRegenOnWeeds: 50
+    plasmaRegenOnWeeds: 75
   - type: XenoAcid
   - type: MCXenoRecycle
   - type: AcidTrap

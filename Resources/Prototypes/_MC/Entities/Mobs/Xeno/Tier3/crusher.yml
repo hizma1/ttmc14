@@ -23,12 +23,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      445: Critical
-      545: Dead
+      500: Critical
+      600: Dead
   - type: XenoPlasma
-    plasma: 520
-    maxPlasma: 520
-    plasmaRegenOnWeeds: 40
+    plasma: 400
+    maxPlasma: 400
+    plasmaRegenOnWeeds: 30
   - type: Xeno
     tier: 3
     role: MCXenoCrusher
@@ -47,18 +47,18 @@
     - MCXenoBull
     - MCXenoWarrior
   - type: MCArmor
-    melee: 90
-    bullet: 75
-    laser: 75
+    melee: 50
+    bullet: 80
+    laser: 65
     energy: 75
     bomb: 130
     bio: 100
-    fire: 50
+    fire: 10
     acid: 100
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 25
+        Brute: 24
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.564
     baseSprintSpeed: 3.448
@@ -67,7 +67,7 @@
       sprite: _MC/Interface/Xeno/icons.rsi
       state: crusher
   - type: MCXenoSunder
-    multiplier: 0.85
+    multiplier: 0.5
   - type: RMCSize
     size: Big
   # Abilities
