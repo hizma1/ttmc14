@@ -88,8 +88,6 @@
   - type: HTN
     rootTask:
       task: CMXenoCompound
-  - type: InputMover
-  - type: MobMover
 
 - type: entity
   id: MCXenoPlantingWeeds

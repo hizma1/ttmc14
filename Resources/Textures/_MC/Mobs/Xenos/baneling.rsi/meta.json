@@ -75,7 +75,10 @@
       ]
     },
     {
-      "name": "dead",
+      "name": "dead"
+    },
+    {
+      "name": "gib",
       "delays": [
         [
           0.04,
