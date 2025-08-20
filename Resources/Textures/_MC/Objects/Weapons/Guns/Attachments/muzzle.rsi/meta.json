@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": ""
+    },
+    {
+      "name": "bayonetknife"
+    },
+    {
+      "name": "bayonetknife_a"
+    },
+    {
+      "name": "bayonetknife_t35_a"
+    },
+    {
+      "name": "bayonetknife_som"
+    },
+    {
+      "name": "bayonetknife_som_a"
+    },
+    {
+      "name": "bayonet"
+    },
+    {
+      "name": "bayonet_a"
+    },
+    {
+      "name": "bayonet_t35_a"
+    },
+    {
+      "name": "suppressor"
+    },
+    {
+      "name": "suppressor_a"
+    },
+    {
+      "name": "ebarrel"
+    },
+    {
+      "name": "ebarrel_a"
+    },
+    {
+      "name": "ebarrel_big_a"
+    },
+    {
+      "name": "hbarrel",
+      "delays": [
+        [
+          0.2,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "hbarrel_a",
+      "delays": [
+        [
+          0.2,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "comp"
+    },
+    {
+      "name": "comp_a"
+    },
+    {
+      "name": "comp_big_a"
+    },
+    {
+      "name": "t76comp_a"
+    },
+    {
+      "name": "lace"
+    },
+    {
+      "name": "lace-on"
+    },
+    {
+      "name": "lace_a"
+    },
+    {
+      "name": "lace-on_a"
+    },
+    {
+      "name": "wide"
+    },
+    {
+      "name": "wide_a"
+    },
+    {
+      "name": "focus"
+    },
+    {
+      "name": "focus_a"
+    },
+    {
+      "name": "pulse"
+    },
+    {
+      "name": "pulse_a"
+    },
+    {
+      "name": "efficient"
+    },
+    {
+      "name": "efficient_a"
+    },
+    {
+      "name": "heat"
+    },
+    {
+      "name": "heat_a"
+    },
+    {
+      "name": "sg29barrel_a"
+    },
+    {
+      "name": "at45barrel_a"
+    }
+  ]
+}

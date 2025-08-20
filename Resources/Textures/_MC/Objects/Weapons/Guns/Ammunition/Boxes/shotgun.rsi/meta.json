@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "buckshot"
+    },
+    {
+      "name": "buckshot_e"
+    },
+    {
+      "name": "slugs"
+    },
+    {
+      "name": "slugs_e"
+    },
+    {
+      "name": "incendiary"
+    },
+    {
+      "name": "incendiary_e"
+    },
+    {
+      "name": "beanbag"
+    },
+    {
+      "name": "beanbag_e"
+    },
+    {
+      "name": "tracking"
+    },
+    {
+      "name": "tracking_e"
+    },
+    {
+      "name": "flechette"
+    },
+    {
+      "name": "flechette_e"
+    },
+    {
+      "name": "mbx900_sabot"
+    },
+    {
+      "name": "mbx900_sabot_e"
+    },
+    {
+      "name": "mbx900_tracker"
+    },
+    {
+      "name": "mbx900_tracker_e"
+    },
+    {
+      "name": "mbx900_buckshot"
+    },
+    {
+      "name": "mbx900_buckshot_e"
+    },
+    {
+      "name": "blank"
+    },
+    {
+      "name": "blank_e"
+    },
+    {
+      "name": "heavy_shotgun_buckshot"
+    },
+    {
+      "name": "heavy_shotgun_buckshot_e"
+    },
+    {
+      "name": "heavy_shotgun_barrikada"
+    },
+    {
+      "name": "heavy_shotgun_barrikada_e"
+    }
+  ]
+}

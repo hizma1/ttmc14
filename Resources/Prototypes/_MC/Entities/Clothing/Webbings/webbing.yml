@@ -17,6 +17,12 @@
     # /obj/item/ammo_magazine/sniper,
     # /obj/item/cell/lasgun,
     # )
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - MCMagazineRifle
+      - MCMagazineSmg
+      - MCBatteryTerra
   - type: FixedItemSizeStorage
   - type: Webbing
     playerSprite:
@@ -27,6 +33,12 @@
       maxItemSize: Small
       grid:
       - 0,0,5,1 # 3 slots
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - MCMagazineRifle
+      - MCMagazineSmg
+      - MCBatteryTerra
     - type: FixedItemSizeStorage
     - type: RMCStorageEjectHand
       state: Open

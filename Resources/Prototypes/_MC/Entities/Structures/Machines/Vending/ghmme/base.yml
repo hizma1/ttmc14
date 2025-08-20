@@ -113,8 +113,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Clothing/headsets.rsi
-    state: generic_headset
+    sprite: _MC/Clothing/Shoes/Boots/black.rsi
+    state: icon
   - type: CMVendorBundle
     bundle:
     - MCVendorHeadsetSquad

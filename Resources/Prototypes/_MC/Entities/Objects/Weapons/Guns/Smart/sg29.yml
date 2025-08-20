@@ -1,0 +1,216 @@
+- type: entity
+  parent: MCWeaponSmartGun
+  id: MCWeaponSmartGunSG29
+  name: SG-29 Raummetall-KT smart machine gun
+  description: The Raummetall-KT SG-29 is the TGMC's current standard IFF-capable medium machine gun. It's known for its ability to lay down heavy fire support very well. It is generally used when someone wants to hold a position or provide fire support. Requires special training and it cannot turn off IFF. It uses 10x26mm ammunition.
+  components:
+  - type: Item
+    size: Huge
+  - type: AmmoCounter
+  - type: MagazineAmmoProvider
+    autoEject: true
+  - type: RMCAmmoEject
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Smartguns/sg29.rsi
+    layers:
+    - state: base
+      sprite: _MC/Objects/Weapons/Guns/Smartguns/sg29.rsi
+    - state: mag-0
+      sprite: _MC/Objects/Weapons/Guns/Smartguns/sg29.rsi
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Smartguns/sg29.rsi
+    slots:
+    - suitStorage
+    - Back
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 20
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MCMagazineSmartGunSG29
+        insertSound: /Audio/_MC/Weapons/Guns/Reload/t42_reload.ogg
+        ejectSound: /Audio/_MC/Weapons/Guns/Reload/t42_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCMagazineSmartGunSG29
+  # Stats
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: !type:SoundCollectionSpecifier
+      collection: MCWeaponSmartGunSG29Gunshot
+      params:
+        volume: -2
+    soundEmpty:
+      path: /Audio/_MC/Weapons/Guns/Fire/m41a_empty.ogg
+  - type: GunIFF
+    enabled: true
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    baseFireRate: 5 # fire delay 0.2
+    scatterWielded: -5
+    scatterUnwielded: 40
+    modifiers:
+      FullAuto:
+        shotsToMaxScatter: null
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.1
+    accuracyMultiplierUnwielded: 0.5
+  # Wield
+  - type: GunRequiresWield
+  - type: Wieldable
+  - type: WieldDelay
+    baseDelay: 1.5
+  # Skills
+  - type: MCGunSkilled
+    skill: RMCSkillSmartGun
+  # Crosshair
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/smartgun_mouse.rsi
+      state: all
+  # Attachments
+  - type: AttachableHolder
+    slots:
+      mc-slot-muzzle:
+        locked: true
+        startingAttachable: MCAttachmentMuzzleSG29
+        whitelist:
+          tags:
+          - MCAttachmentMuzzleSG29
+      mc-slot-stock:
+        locked: true
+        startingAttachable: MCAttachmentStockSG29
+        whitelist:
+          tags:
+          - MCAttachmentStockSG29
+  - type: AttachableHolderVisuals
+    offsets:
+      mc-slot-muzzle: 0.875, 0.03125
+      mc-slot-stock: -0.625, 0
+
+# Attachments
+- type: entity
+  parent: MCAttachmentMuzzle
+  id: MCAttachmentMuzzleSG29
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: sg29barrel_a
+  - type: Tag
+    tags:
+    - MCAttachmentMuzzle
+    - MCAttachmentMuzzleSG29
+  - type: AttachableVisuals
+    suffix: ""
+
+- type: Tag
+  id: MCAttachmentMuzzleSG29
+
+- type: entity
+  parent: MCAttachmentStock
+  id: MCAttachmentStockSG29
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: sg29_a
+  - type: Tag
+    tags:
+    - MCAttachmentStock
+    - MCAttachmentStockSG29
+  - type: AttachableVisuals
+    suffix: ""
+
+- type: Tag
+  id: MCAttachmentStockSG29
+
+# Magazine
+- type: entity
+  parent: CMMagazineRifleBase
+  id: MCMagazineSmartGunSG29
+  name: SG-29 drum magazine
+  description: A wide drum magazine carefully filled to capacity with 10x26mm specialized smart rounds.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/sg29.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-1
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Tag
+    tags:
+    - MCMagazineSmartGunSG29
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - MCCartridgeSmartGunSG29
+    proto: MCCartridgeSmartGunSG29
+    capacity: 250
+
+- type: Tag
+  id: MCMagazineSmartGunSG29
+
+# Cartridges
+- type: entity
+  parent: CMBaseCartridgeRifle
+  id: MCCartridgeSmartGunSG29
+  name: smartmachinegun bullet (10x26mm caseless)
+  description: A handful of rounds to reload on the go.
+  components:
+  - type: Tag
+    tags:
+    - MCCartridgeSmartGunSG29
+  - type: CartridgeAmmo
+    proto: MCBulletSmartGunSG29
+
+- type: Tag
+  id: MCCartridgeSmartGunSG29
+
+# Bullets
+- type: entity
+  parent: RMCBaseBullet
+  id: MCBulletSmartGunSG29
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Projectiles/bullet.rsi
+    layers:
+    - state: red
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+  - type: CMArmorPiercing
+    amount: 16
+  - type: MCXenoSunderDamageOnHit
+    amount: 2
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 12
+      falloff: 9999
+      ignoreModifiers: true
+  - type: RMCProjectileAccuracy
+    minAccuracy: 100
+
+- type: soundCollection
+  id: MCWeaponSmartGunSG29Gunshot
+  files:
+  - /Audio/_MC/Weapons/Guns/Fire/smartgun1.ogg
+  - /Audio/_MC/Weapons/Guns/Fire/smartgun2.ogg
+  - /Audio/_MC/Weapons/Guns/Fire/smartgun3.ogg

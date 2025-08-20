@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: MCGlassesM56Goggles
+  name: KTLD head mounted sight
+  description: A headset and goggles system made to pair with any KTLD weapon, such as the SG type weapons. Has a low-res short range imager, allowing for view of terrain.
+  components:
+  - type: Item
+    storedRotation: 0
+  - type: Sprite
+    sprite: _MC/Clothing/Eyes/Glasses/m56_goggles.rsi
+    layers:
+    - state: icon
+      map: [ "icon" ]
+  - type: Clothing
+    sprite: _MC/Clothing/Eyes/Glasses/m56_goggles.rsi
+  - type: NightVisionItem

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "large"
+    },
+    {
+      "name": "red"
+    },
+    {
+      "name": "green"
+    },
+    {
+      "name": "large_red"
+    },
+    {
+      "name": "large_green"
+    },
+    {
+      "name": "autocannon"
+    },
+    {
+      "name": "blue"
+    }
+  ]
+}

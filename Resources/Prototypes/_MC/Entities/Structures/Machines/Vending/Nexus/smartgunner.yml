@@ -13,4 +13,27 @@
       map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
   - type: CMAutomatedVendor
     jobs: [ MCSquadSmartgunner ]
-    sections: []
+    sections:
+    - name: Essentials
+      choices:
+        MCEssentials: 1
+      entries:
+      - id: MCVendorBundleEssentialSmartgunner
+    - name: Machinegun
+      entries:
+      - id: MCWeaponSmartGunSG29
+        points: 29
+      - id: MCMagazineSmartGunSG29
+        points: 4
+
+- type: entity
+  id: MCVendorBundleEssentialSmartgunner
+  name: KLTD Smart Goggles
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Eyes/Glasses/m56_goggles.rsi
+    state: icon
+  - type: CMVendorBundle
+    bundle:
+    - MCGlassesM56Goggles

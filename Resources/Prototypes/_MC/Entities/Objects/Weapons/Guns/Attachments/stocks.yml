@@ -1,3 +1,14 @@
+- type: entity
+  parent: RMCAttachableBase
+  id: MCAttachmentStock
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
+  - type: Tag
+    tags:
+    - MCAttachmentStock
+
 - type: Tag
   id: MCAttachmentStock
 
