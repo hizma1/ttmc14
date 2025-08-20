@@ -4,7 +4,6 @@
   - MCXenoBase
   - MCXenoPlantingWeeds
   - MCXenoPickupOne
-  - MCXenoLayEgg
   - MCXenoCharge
   - MCXenoSpiting
   # RMC
@@ -106,6 +105,7 @@
   - type: RMCSize
     size: Big
   - type: XenoAcid
+  # - type: MCXenoLayEgg
   - type: DropshipHijacker
   - type: TacticalMapUser
     canDraw: true

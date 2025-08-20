@@ -4,7 +4,6 @@
   - MCXenoBase
   - MCXenoPlantingWeeds
   - MCXenoPickupOne
-  - MCXenoLayEgg
   # RMC
   - CMXenoDeveloped
   - CMXenoFlammable
@@ -50,6 +49,7 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.333
     baseSprintSpeed: 5
+  # - type: MCXenoLayEgg
   - type: MCArmor
     melee: 50
     bullet: 50

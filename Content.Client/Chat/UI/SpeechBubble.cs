@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Client.Chat.Managers;
+using Content.Shared._MC.Xeno.Hive.Components;
 using Content.Shared._RMC14.Marines.Squads;
 using Content.Shared._RMC14.Xenonids.HiveLeader;
 using Content.Shared._RMC14.Chat;
@@ -249,7 +250,7 @@ namespace Content.Client.Chat.UI
             {
                 if (message.SpeechStyleClass != null)
                     speechStyleClass = message.SpeechStyleClass;
-                else if (entityManager.HasComponent<SquadLeaderComponent>(senderUid) || entityManager.HasComponent<HiveLeaderComponent>(senderUid))
+                else if (entityManager.HasComponent<SquadLeaderComponent>(senderUid) || entityManager.HasComponent<HiveLeaderComponent>(senderUid) || entityManager.HasComponent<MCXenoHiveLeaderComponent>(senderUid))
                     speechStyleClass = "commanderSpeech";
             }
 

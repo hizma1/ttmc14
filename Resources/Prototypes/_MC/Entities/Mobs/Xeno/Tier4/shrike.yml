@@ -90,7 +90,7 @@
   - type: XenoInhands
     prefix: shrike
   - type: MCXenoAcidicSalve
-  - type: MCXenoLayEgg
+  # - type: MCXenoLayEgg
   - type: MCXenoPsychicFling
   - type: MCXenoUnrelentingForce
   - type: MCXenoBlessings
@@ -122,3 +122,4 @@
     - MCWallXenoResinThickFireproof
     - MCWallXenoResinThickHardy
     - MCDoorXenoResinThick
+  - type: XenoAcid

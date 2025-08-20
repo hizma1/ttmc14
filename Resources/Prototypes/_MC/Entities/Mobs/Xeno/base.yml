@@ -148,12 +148,6 @@
         - XenoEgg
 
 - type: entity
-  id: MCXenoLayEgg
-  abstract: true
-  components:
-  - type: MCXenoLayEgg
-
-- type: entity
   id: MCXenoCharge
   abstract: true
   components:
