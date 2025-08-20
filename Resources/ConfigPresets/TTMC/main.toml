@@ -27,7 +27,7 @@ enabled = false
 can_create_vacuum = false
 
 [game]
-hostname = "TTMC"
+hostname = "[RU][LRP] 🌪️ TornadoTech's Marine Corps — Main"
 desc = "Сборка сервера основана на https://github.com/ttmc14/ttmc14"
 defaultpreset = "CMDistressSignal"
 fallbackenabled = false
