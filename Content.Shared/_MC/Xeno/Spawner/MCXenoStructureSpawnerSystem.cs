@@ -14,6 +14,7 @@ public sealed class MCXenoStructureSpawnerSystem : EntitySystem
     [Dependency] private readonly MCStatusSystem _mcStatus = default!;
     [Dependency] private readonly SharedXenoHiveSystem _rmcHive = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     public override void Initialize()
     {
@@ -73,7 +74,7 @@ public sealed class MCXenoStructureSpawnerSystem : EntitySystem
 
     private void Spawn(Entity<MCXenoStructureSpawnerComponent> entity)
     {
-        var instance = Spawn(_random.Pick(entity.Comp.Entry), entity.Owner.ToCoordinates());
+        var instance = Spawn(_random.Pick(entity.Comp.Entry), _transform.GetMapCoordinates(entity));
 
         _rmcHive.SetSameHive(entity.Owner, instance);
 
