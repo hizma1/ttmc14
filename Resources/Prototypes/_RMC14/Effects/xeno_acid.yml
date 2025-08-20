@@ -71,6 +71,10 @@
       components:
       - Marine
       - Xeno
+  - type: Tag
+    tags:
+    - MCAcidSpray
+    - MCDamageAcid
   - type: UncloakOnHit
   - type: ExtinguishFire
   - type: IgnorePredictionHit
