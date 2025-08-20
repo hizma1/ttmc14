@@ -140,6 +140,7 @@
       - XenoParasite
       - XenoEgg
       - XenoFruit
+      - MCXenoResinJelly
   - type: MultiHandedHolder
     items:
     - hands: 2

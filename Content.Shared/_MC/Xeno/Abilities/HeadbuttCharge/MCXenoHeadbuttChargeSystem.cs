@@ -83,6 +83,9 @@ public sealed class MCXenoHeadbuttChargeSystem : MCXenoAbilitySystem<MCXenoHeadb
         if (!HasComp<MobStateComponent>(args.OtherEntity) || _mobState.IsDead(args.OtherEntity))
             return;
 
+        if (_hive.FromSameHive(entity.Owner, args.OtherEntity))
+            return;
+
         if (entity.Comp.DamageMultiplier != 0)
         {
             _damageable.TryChangeDamage(args.OtherEntity, GetDamage(entity) * entity.Comp.DamageMultiplier, tool: entity);
