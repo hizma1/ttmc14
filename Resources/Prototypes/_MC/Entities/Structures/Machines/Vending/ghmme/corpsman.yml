@@ -62,16 +62,18 @@
     - name: Belt
       choices:
         MCBelt: 1
-      entries: []
-      # Lifesaver belt
-      # Rig belt
-      # Hypospray belt
+      entries:
+      - id: MCBeltMedicBagFull
+      - id: MCBeltMedicalMedFull
+      - id: MCBeltMedicalHyposprayCorpsmanFull
     - name: Pouches
       choices:
         MCPouch: 2
       entries:
-      # Advanced Autoinjector pouch
-      # Medkit pouch
+      - id: MCPouchMedicalInjectorCorpsmanFull
+      - id: MCPouchMedkitFill
+        name: Medkit pouch
+        recommended: true
       - id: MCPouchConstructionFill
         name: Construction pouch (materials included)
         recommended: true

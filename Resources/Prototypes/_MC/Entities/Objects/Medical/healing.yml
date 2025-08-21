@@ -37,6 +37,7 @@
     slots:
     - suitstorage
 
+# T1
 # ointment
 - type: entity
   parent: MCBaseHealingItem
@@ -174,7 +175,9 @@
     - Biological
     damage:
       groups:
-        Brute: -16 # похуй мне сколько там хилить должно в тгмс, мне важен баланс сс14 ебаной
+        Brute: -12 # похуй мне сколько там хилить должно в тгмс, мне важен баланс сс14 ебаной
+      types:
+      Piercing: -3
     delay: 1.5 # ИЗ-ЗА ЭТОГО, НО ЭТО ПРОСТО ТАК НЕ УБРАТЬ
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
@@ -220,7 +223,9 @@
     - Biological
     damage:
       groups:
-        Burn: -18 # тут можно проставить чтобы по 6 урона хилило, и так все 4 типа урона.
+        Burn: -13 # тут можно проставить чтобы по 6 урона хилило, и так все 4 типа урона.
+      types:
+        Heat: -3.5
     delay: 1.5 # ИЗ-ЗА ЭТОГО, НО ЭТО ПРОСТО ТАК НЕ УБРАТЬ
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
@@ -311,3 +316,107 @@
   spawn: MCSplint
   maxCount: 5
 
+# T2
+# combat trauma kit
+- type: entity
+  parent: MCBaseHealingItem
+  id: MCTraumaKitCombat
+  name: combat trauma kit
+  description: An expensive huge kit for prolonged combat conditions. Has more space and better medicine compared to a regular one.
+  suffix: MC
+  components:
+  - type: Tag
+    tags:
+    - MCHealingItem
+    - MCTraumaKit
+  - type: Stack
+    stackType: MCTraumaKitCombat
+    count: 140
+  - type: Healing
+    damageContainers:
+    - Biological
+    damage:
+      groups:
+        Brute: -16 # Торнадотех, исправь систему кровотека
+      types:
+        Piercing: -6
+    delay: 1.5
+    healingBeginSound:
+      path: "/Audio/_RMC14/Medical/bandage.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: MedicallyUnskilledDoAfter
+    min: 2
+    doAfter: 8
+  - type: Sprite
+    state: combat_traumakit
+  - type: Item
+    size: Normal
+    heldPrefix: combat_traumakit
+
+- type: stack
+  id: MCTraumaKitCombat
+  name: combat trauma kit
+  icon:
+    sprite: "/Textures/_MC14/Objects/Medical/medical.rsi"
+    state: combat_traumakit
+  spawn: MCTraumaKitCombat
+  maxCount: 140
+
+# combat burn kit
+- type: entity
+  parent: MCBaseHealingItem
+  id: MCBurnKitCombat
+  name: combat burn kit
+  description: An expensive huge kit for prolonged combat conditions. Has more space and better medicine compared to a regular one.
+  suffix: MC
+  components:
+  - type: Tag
+    tags:
+    - MCHealingItem
+    - MCBurnKit
+  - type: Healing
+    damageContainers:
+    - Biological
+    damage:
+      groups:
+        Burn: -18
+      types:
+        Heat: -6
+    delay: 1.5
+    healingBeginSound:
+      path: "/Audio/_RMC14/Medical/bandage.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: MCBurnKitCombat
+    count: 140
+  - type: Sprite
+    state: combat_burnkit
+  - type: Item
+    size: Normal
+    heldPrefix: combat_burnkit
+  - type: MedicallyUnskilledDoAfter
+    min: 1
+    doAfter: 8
+
+- type: stack
+  id: MCBurnKitCombat
+  name: combat burn kit
+  icon:
+    sprite: "/Textures/_MC/Objects/Medical/medical.rsi"
+    state: combat_burnkit
+  spawn: MCBurnKitCombat
+  maxCount: 140

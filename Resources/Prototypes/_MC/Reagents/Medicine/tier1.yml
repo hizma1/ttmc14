@@ -182,25 +182,13 @@
         conditions:
         - !type:ReagentThreshold
           min: 60
-      - !type:GenericStatusEffect
+      - !type:ModifyStatusEffect
         conditions:
         - !type:ReagentThreshold
           min: 60
-        key: Unconscious
-        component: RMCUnconscious
-        time: 20
+        effectProto: StatusEffectForcedSleeping
+        time: 2
         type: Add
-        refresh: false
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentThreshold
-          min: 100
-        key: Unconscious
-        component: RMCUnconscious
-        probability: 0.05
-        time: 10
-        type: Add
-        refresh: false
 
 - type: reagent
   parent: MCReagentMedicine

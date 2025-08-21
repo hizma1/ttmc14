@@ -33,7 +33,7 @@
       - id: MCAutoInjectorCombat
       - id: MCAutoInjectorSalineGlucose
       - id: MCAutoInjectorInaprovaline
-      # oxycodone = 30
+      - id: MCAutoInjectorOxycodone
       # spaceacillin = 20
       - id: MCAutoInjectorHypervene
         amount: 20

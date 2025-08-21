@@ -271,6 +271,24 @@
   - type: IconLabel
     labelTextLocId: mc-quickclot-container-label-text
 
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorOxycodone
+  name: oxycodone autoinjector
+  description: An auto-injector loaded with 2 doses of oxycodone, a powerful pankiller intended for life-threatening situations.
+  components:
+  - type: Hypospray
+    transferAmount: 10
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCOxycodone
+          Quantity: 30
+  - type: IconLabel
+    labelTextLocId: mc-oxycodone-container-label-text
+
 # MISC
 - type: entity
   parent: MCAutoInjector
@@ -295,6 +313,28 @@
           Quantity: 5
   - type: IconLabel
     labelTextLocId: mc-combat-container-label-text
+
+- type: entity
+  parent: MCAutoInjector
+  id: MCAutoInjectorCombatAdv
+  name: advanced combat autoinjector
+  description: An autoinjector loaded with 2 doses of advanced healing and painkilling chemicals. Intended for use in active combat.
+  components:
+  - type: Hypospray
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: MCMeralyne
+          Quantity: 10
+        - ReagentId: MCDermaline
+          Quantity: 10
+        - ReagentId: MCOxycodone
+          Quantity: 10
+  - type: IconLabel
+    labelTextLocId: mc-combatadv-container-label-text
 
 - type: entity
   parent: MCAutoInjector

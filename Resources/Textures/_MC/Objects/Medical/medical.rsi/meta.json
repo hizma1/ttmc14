@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/stack_objects.dmi",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/stack_objects.dmi, added combat_traumakit combat_burnkit by F8ctor (github)",
   "size": {
     "x": 32,
     "y": 32
@@ -21,6 +21,12 @@
     },
     {
       "name": "burnkit"
+    },
+    {
+      "name": "combat_traumakit"
+    },
+    {
+      "name": "combat_burnkit"
     }
   ]
 }

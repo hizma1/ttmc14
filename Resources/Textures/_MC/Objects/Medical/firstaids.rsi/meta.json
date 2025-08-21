@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "license": null,
-  "copyright": null,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/storage/firstaid.dmi, combat combat_empty added by F8ctor (github)",
   "size": {
     "x": 32,
     "y": 32
@@ -51,6 +51,12 @@
     },
     {
       "name": "syringe_case"
+    },
+    {
+      "name": "combat"
+    },
+    {
+      "name": "combat_empty"
     }
   ]
 }

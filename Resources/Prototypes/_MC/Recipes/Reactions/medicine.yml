@@ -274,6 +274,19 @@
     MCQuickClot: 1
     MCPhoron: 5
 
+- type: reaction
+  id: MCOxycodone
+  reactants:
+    MCTramadol:
+      amount: 1
+    MCEthanol:
+      amount: 1
+    MCPhoron:
+      amount: 1
+  products:
+    MCOxycodone: 1
+    MCPhoron: 1
+
 # T3
 
 - type: reaction

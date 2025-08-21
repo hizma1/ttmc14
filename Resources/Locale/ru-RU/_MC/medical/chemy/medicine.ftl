@@ -71,6 +71,10 @@ reagent-desc-mc-clonexadone = Жидкое соединение, похожее 
 reagent-name-mc-quickclot = Гемостатик
 reagent-desc-mc-quickclot = Химическое средство, предназначенное для быстрого прекращения всевозможных кровотечений за счёт стимуляции свёртывания крови.
 
+reagent-name-mc-oxycodone = Оксикодон
+reagent-desc-mc-oxycodone = Эффективное и очень вызывающее привыкание обезболивающее средство.
+
+
 # T3
 
 reagent-name-mc-dremin = Дремин

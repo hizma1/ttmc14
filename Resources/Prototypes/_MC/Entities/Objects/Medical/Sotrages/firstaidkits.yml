@@ -46,6 +46,8 @@
     items:
       tags:
       - MCPillCanister
+      - MCBurnKit
+      - MCTraumaKit
       - MCPacketPills
       - MCCaseSyringe
       - CMSurgeryTool
@@ -224,3 +226,33 @@
     - id: MCPillCanisterKelotane
     - id: MCPillCanisterTramadol
     - id: MCSplint
+
+
+- type: entity
+  parent: MCAidKitFirst
+  id: MCAidKitCombat
+  name: combat first-aid kit
+  description: Contains combat medical treatments.
+  components:
+  - type: Sprite
+    layers:
+    - state: combat
+    - state: combat_empty
+      map: [ "openLayer" ]
+      visible: false
+  - type: Item
+    heldPrefix: combat
+
+- type: entity
+  parent: MCAidKitCombat
+  id: MCAidKitCombatFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCTraumaKitCombat
+    - id: MCBurnKitCombat
+    - id: MCHealthAnalyzerCombat
+    - id: MCHyposprayBigFillCombatAdv
+    - id: MCAutoInjectorCombatAdv
+      amount: 2

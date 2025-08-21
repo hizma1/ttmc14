@@ -62,7 +62,7 @@
     - id: MCPillCanisterHypervene
     - id: MCPillCanisterTramadol
     - id: MCPillCanisterSalineGlucose
-    # quick-clot pill bottle
+    - id: MCPillCanisterQuickClot
     # alkysine pill bottle
     # spaceacillin pill bottle
     - id: MCTraumaKit
