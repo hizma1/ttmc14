@@ -2,7 +2,6 @@
   parent:
   - MCXenoNoMeleeBase
   - CMXenoUndeveloped
-  - CMXenoFlammable
   id: MCXenoLarva
   name: Larva
   components:

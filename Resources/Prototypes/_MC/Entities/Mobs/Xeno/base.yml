@@ -2,6 +2,14 @@
   id: MCXenoNoMeleeBase
   abstract: true
   components:
+  - type: Flammable
+    fireSpread: false
+    canResistFire: true
+    resistDuration: 1
+    # per second, scales with number of fire 'stacks'
+    damage:
+      types:
+        Heat: 1
   - type: RMCSize
     size: Xeno
   - type: Tag
