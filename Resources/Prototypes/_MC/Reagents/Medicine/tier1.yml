@@ -1,0 +1,374 @@
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCBicaridine
+  name: reagent-name-mc-bicaridine
+  desc: reagent-desc-mc-bicaridine
+  physicalDesc: mc-reagent-physical-desc-opaque
+  color: "#ed4847"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:MCPurge
+        amount: 1
+        reagents:
+        - MCRyetalyn
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -1.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Burn: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Burn: 3
+            Brute: 1
+            Toxin: 2
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCDexalin
+  name: reagent-name-mc-dexalin
+  desc: reagent-desc-mc-dexalin
+  physicalDesc: mc-reagent-physical-desc-opaque
+  color: "#5972FD"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Airloss: -3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Brute: 2
+            Toxin: 2
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCKelotane
+  name: reagent-name-mc-kelotane
+  desc: reagent-desc-mc-kelotane
+  physicalDesc: mc-reagent-physical-desc-strong-smelling
+  color: "#f5e123"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:MCPurge
+        amount: 1
+        reagents:
+        - MCRyetalyn
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -1.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Brute: 1
+            Toxin: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Brute: 2
+            Toxin: 2
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCDylovene
+  name: reagent-name-mc-dylovene
+  desc: reagent-desc-mc-dylovene
+  physicalDesc: mc-reagent-physical-desc-translucent
+  color: "#3fc92a"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      # TODO: stamina damage
+      effects:
+      - !type:MCPurge
+        amount: 1
+        reagents:
+        - MCParacetamol
+      - !type:MCPurgeGroups
+        amount: 1
+        groups:
+        - Toxins
+      - !type:HealthChange
+        damage:
+          groups:
+            Toxin: -1.5
+      - !type:ChemHealEyeDamage
+        # Calculated a good number for blinding so that the effect would not be too strong
+        amount: 0.08
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+      - !type:ChemHealEyeDamage
+        amount: 0.2
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Brute: 2
+            Burn: 2
+  plantMetabolism:
+  - !type:PlantAdjustToxins
+    amount: -10
+  - !type:PlantAdjustHealth
+    amount: 1
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCInaprovaline
+  name: reagent-name-mc-inaprovaline
+  desc: reagent-desc-mc-inaprovaline
+  physicalDesc: mc-reagent-physical-desc-opaque
+  color: "#fe33cb"
+  overdose: 60
+  criticalOverdose: 100
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:MobStateCondition
+          mobstate: Critical
+        damage:
+          types:
+            Asphyxiation: -1
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        key: Unconscious
+        component: RMCUnconscious
+        time: 20
+        type: Add
+        refresh: false
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          min: 100
+        key: Unconscious
+        component: RMCUnconscious
+        probability: 0.05
+        time: 10
+        type: Add
+        refresh: false
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCTricordrazine
+  name: reagent-name-mc-tricordrazine
+  desc: reagent-desc-mc-tricordrazine
+  physicalDesc: mc-reagent-physical-desc-opaque
+  color: "#d87f2b"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:MCPurge
+        amount: 1
+        reagents:
+        - MCRyetalyn
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -0.8
+            Burn: -0.8
+            Toxin: -0.4
+            Airloss: -0.5
+      # It's like brain damage, but not quite
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: ScrambledAccent
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Brute: 3
+            Burn: 3
+            Toxin: 3
+      - !type:Jitter
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCImidazoline
+  name: reagent-name-mc-imidazoline
+  desc: reagent-desc-mc-imidazoline
+  physicalDesc: mc-reagent-physical-desc-opaque
+  color: "#F7A151"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.2
+      effects:
+      - !type:ChemHealEyeDamage
+        # Let's assume that this is a whole number
+        amount: -0.1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          groups:
+            Toxin: 2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Burn: 1
+            Toxin: 2
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCTramadol
+  name: reagent-name-mc-tramadol
+  desc: reagent-desc-mc-tramadol
+  physicalDesc: mc-reagent-physical-desc-soothing
+  color: "#8a8686"
+  overdose: 30
+  criticalOverdose: 50
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.1
+      effects:
+      # Buff
+      - !type:GenericStatusEffect
+        key: Stun
+        time: 1
+        type: Remove
+      # Buff
+      - !type:GenericStatusEffect
+        key: KnockedDown
+        time: 1
+        type: Remove
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        damage:
+          types:
+            Asphyxiation: 1
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        type: Add
+        time: 15
+        refresh: true
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 50
+        damage:
+          groups:
+            Toxin: 3
+
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCParacetamol
+  name: reagent-name-mc-paracetamol
+  desc: reagent-desc-mc-paracetamol
+  physicalDesc: mc-reagent-physical-desc-soothing
+  color: "#8a8686"
+  overdose: 60
+  criticalOverdose: 100
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.025
+      effects:
+      - !type:MCPurge
+        amount: 1
+        reagents:
+        - MCBicaridine
+        - MCKelotane
+      - !type:HealthChange
+        damage:
+          groups:
+            Brute: -0.2
+            Burn: -0.2
+            Toxin: -0.2
+            Airloss: -0.2
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        type: Add
+        time: 0.5
+        refresh: true
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        damage:
+          groups:
+            Toxin: 0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 100
+        damage:
+          groups:
+            Toxin: 3

@@ -1,0 +1,20 @@
+- type: guideEntry
+  id: MC
+  isCM: true
+  abstract: true
+
+# - type: guideEntry
+#   parent: MC
+#   id: MCMain
+#   name: mc-guide-entry-mc
+#   priority: 1
+#   text: "/ServerInfo/Guidebook/_MC/MC.xml"
+#   children:
+#   - MCMedicine
+
+- type: guideEntry
+  parent: MC
+  id: MCMedicine
+  name: guide-entry-medicine
+  text: "/ServerInfo/Guidebook/_MC/Chemicals/Medicine.xml"
+  filterEnabled: True

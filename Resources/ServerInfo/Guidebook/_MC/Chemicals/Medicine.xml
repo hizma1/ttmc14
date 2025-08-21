@@ -1,0 +1,47 @@
+﻿<Document>
+
+  # Основные лекарственные препараты
+
+  Эти лекарственные препараты почти всегда полезны в той или иной степени.
+
+  <GuideReagentEmbed Reagent="MCBicaridine"/>
+  <GuideReagentEmbed Reagent="MCKelotane"/>
+  <GuideReagentEmbed Reagent="MCTricordrazine"/>
+  <GuideReagentEmbed Reagent="MCTramadol"/>
+  <GuideReagentEmbed Reagent="MCParacetamol"/>
+  <GuideReagentEmbed Reagent="MCDylovene"/>
+  <GuideReagentEmbed Reagent="MCDexalin"/>
+  <GuideReagentEmbed Reagent="MCDexalinPlus"/>
+  <GuideReagentEmbed Reagent="MCMeralyne"/>
+  <GuideReagentEmbed Reagent="MCDermaline"/>
+
+  # Специализированные лекарственные препараты
+
+  Эти лекарственные препараты, как правило, имеют конкретные показания к применению.
+
+  <GuideReagentEmbed Reagent="MCInaprovaline"/>
+  <GuideReagentEmbed Reagent="MCEthylredoxrazine"/>
+  <GuideReagentEmbed Reagent="MCArithrazine"/>
+  <GuideReagentEmbed Reagent="MCLeporazine"/>
+  <GuideReagentEmbed Reagent="MCCryoxadone"/>
+  <GuideReagentEmbed Reagent="MCImidazoline"/>
+
+  # Все лекарственные препараты
+
+  Это список всех доступных лекарственных препаратов, включая ранее перечисленные.
+
+  <GuideReagentGroupEmbed Group="Medicine"/>
+
+  # Все химические элементы
+
+  Это список всех доступных химических элементов.
+
+  <GuideReagentGroupEmbed Group="Elements"/>
+
+  # Все токсины
+
+  Это список всех доступных токсинов.
+
+  <GuideReagentGroupEmbed Group="Toxins"/>
+
+</Document>

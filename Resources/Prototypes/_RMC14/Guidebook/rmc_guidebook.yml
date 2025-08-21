@@ -1,7 +1,7 @@
 - type: guideEntry
   abstract: true
   id: RMC
-  isCM: true
+  isCM: false
 
 - type: guideEntry
   parent: RMC

@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using Content.Shared._RMC14.Chemistry.Reagent;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.EntityEffects;
 using Content.Shared.FixedPoint;
@@ -14,9 +15,22 @@ public sealed partial class MCPurgeGroups : EntityEffect
     [DataField, JsonPropertyName("rate")]
     public FixedPoint2 Amount;
 
+    private RMCReagentSystem? _rmcReagent;
+
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
-        return string.Empty;
+        var reagentSystem = entSys.GetEntitySystem<RMCReagentSystem>();
+
+        var result = $"Выводит {Amount}u группы реагентов: ";
+        foreach (var id in Groups)
+        {
+            result += $"{id}, ";
+        }
+
+        result = result.Remove(result.Length - 2, 2);
+        result += " из крови";
+
+        return result;
     }
 
     public override void Effect(EntityEffectBaseArgs args)
@@ -30,12 +44,14 @@ public sealed partial class MCPurgeGroups : EntityEffect
         if (reagentArgs.Reagent is not { } reagent)
             return;
 
+        _rmcReagent ??= IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<RMCReagentSystem>();
+
         foreach (var quantity in new List<ReagentQuantity>(source.Contents))
         {
             if (reagent.ID == quantity.Reagent.Prototype)
                 continue;
 
-            if (!Groups.Contains(reagent.Group))
+            if (!Groups.Contains(_rmcReagent.Index(quantity.Reagent.Prototype).Group))
                 continue;
 
             source.RemoveReagent(quantity.Reagent, Amount);

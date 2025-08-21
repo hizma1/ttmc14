@@ -11,9 +11,9 @@ public sealed partial class MCPurgeAll : EntityEffect
     [DataField, JsonPropertyName("rate")]
     public FixedPoint2 Amount;
 
-    protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
+    protected override string ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
-        return string.Empty;
+        return $"Выводит {Amount}u каждого реагента из крови";
     }
 
     public override void Effect(EntityEffectBaseArgs args)

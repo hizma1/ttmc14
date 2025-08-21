@@ -1,0 +1,163 @@
+ # NO PARITY!!!
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCDremin
+  name: reagent-name-mc-dremin
+  desc: reagent-desc-mc-dremin
+  physicalDesc: mc-reagent-physical-desc-non-newtonian
+  color: "#03d3fc"
+  overdose: 15
+  criticalOverdose: 20
+  metabolisms:
+    Medicine:
+      metabolismRate: 1 # легкий крафт, попроще
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Genetic: -2.5 # 10 унций = лечит 25 генетик урона
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 16
+        damage:
+          groups:
+            Toxin: 1
+            Airloss: 2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 20
+        damage:
+          groups:
+            Genetic: 5
+
+# NO PARITY!!!
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCTimeroll
+  name: reagent-name-mc-timeroll
+  desc: reagent-desc-mc-timeroll
+  physicalDesc: mc-reagent-physical-desc-unidentifiable # Играемся в гамбу
+  color: "#8403fc"
+  overdose: 5
+  criticalOverdose: 10
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Genetic: -1 # лучшая хилка клон урона (пока-что) и самая сложная по крафту
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        damage:
+          groups:
+            Genetic: -5
+        probability: 0.15
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        damage:
+          groups:
+            Genetic: -20
+        probability: 0.3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 7
+        damage:
+          groups:
+            Genetic: 3
+        probability: 0.25
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 9
+        damage:
+          groups:
+            Genetic: -4
+        probability: 0.2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 12
+        damage:
+          groups:
+            Genetic: 6
+        probability: 0.35
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          groups:
+            Genetic: -8
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 7
+        damage:
+          groups:
+            Genetic: 3
+        probability: 0.25
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 9
+        damage:
+          groups:
+            Genetic: -4
+        probability: 0.2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 12
+        damage:
+          groups:
+            Genetic: 6
+        probability: 0.35
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        damage:
+          groups:
+            Genetic: -50
+        probability: 0.2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        damage:
+          groups:
+            Genetic: 50
+        probability: 0.2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        damage:
+          groups:
+            Genetic: -8
+        probability: 0.1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        damage:
+          groups:
+            Genetic: 20
+        probability: 0.3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 18
+        damage:
+          groups:
+            Genetic: 10
+        probability: 0.4

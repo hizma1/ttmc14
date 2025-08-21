@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using Content.Shared._RMC14.Chemistry.Reagent;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.EntityEffects;
 using Content.Shared.FixedPoint;
@@ -16,7 +17,21 @@ public sealed partial class MCPurge : EntityEffect
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
     {
-        return string.Empty;
+        var reagentSystem = entSys.GetEntitySystem<RMCReagentSystem>();
+
+        var result = $"Выводит {Amount}u реагентов: ";
+        foreach (var id in Reagents)
+        {
+            if (!reagentSystem.TryIndex(id, out var reagent))
+                continue;
+
+            result += $"{Loc.GetString(reagent.LocalizedName)}, ";
+        }
+
+        result = result.Remove(result.Length - 2, 2);
+        result += " из крови";
+
+        return result;
     }
 
     public override void Effect(EntityEffectBaseArgs args)
