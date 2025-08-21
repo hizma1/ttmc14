@@ -36,7 +36,7 @@ public sealed class MCGunSkilledSystem : EntitySystem
         var skill = _rmcSkills.GetSkill((user, user), entity.Comp.Skill);
         args.MinAngle -= skill * 2;
         args.MaxAngle -= skill * 2;
-        args.CameraRecoilScalar -= skill * 2;
+        args.CameraRecoilScalar = Math.Max(0, args.CameraRecoilScalar - skill * 2);
     }
 
     private bool TryGetUserSkills(EntityUid gun, out Entity<SkillsComponent> user)

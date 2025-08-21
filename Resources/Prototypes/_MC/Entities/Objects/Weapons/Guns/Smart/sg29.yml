@@ -62,6 +62,8 @@
     baseFireRate: 5 # fire delay 0.2
     scatterWielded: -5
     scatterUnwielded: 40
+    recoilWielded: 0
+    recoilUnwielded: 0
     modifiers:
       FullAuto:
         shotsToMaxScatter: null
