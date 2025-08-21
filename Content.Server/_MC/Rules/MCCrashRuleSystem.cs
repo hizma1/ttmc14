@@ -253,7 +253,7 @@ public sealed class MCCrashRuleSystem : MCRuleSystem<MCCrashRuleComponent>
         var query = EntityQueryEnumerator<AlmayerComponent, ShuttleComponent>();
         while (query.MoveNext(out var uid, out _, out var shuttle))
         {
-            _shuttle.FTLToCoordinates(uid, shuttle, Transform(point).Coordinates, Angle.Zero, hyperspaceTime: (float) flyTime.TotalSeconds);
+            _shuttle.FTLToCoordinates(uid, shuttle, Transform(point).Coordinates.Offset(Comp<MCCrashPointComponent>(point).Offset), Angle.Zero, hyperspaceTime: (float) flyTime.TotalSeconds);
             return;
         }
     }
