@@ -720,7 +720,7 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
         }
 
         if (!wasOnFire && IsOnFire(flammableEnt) && CanFireBypassImmunity(ent, other) && !HasComp<MCXenoResinJellyFireproofComponent>(ent))
-            _damageable.TryChangeDamage(flammableEnt, flammableEnt.Comp.Damage * ent.Comp.Intensity, true);
+            _damageable.TryChangeDamage(flammableEnt, flammableEnt.Comp.Damage * ent.Comp.Intensity, tool: ent);
     }
 
     private void ApplyTileEffect(Entity<SteppingOnFireComponent> ent, RMCIgniteOnCollideComponent ignite, EntityUid fireEntity)
@@ -749,7 +749,7 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
             {
                 stepping.Distance = 0;
                 if (CanFireBypassImmunity(fireEntity, uid) && !HasComp<MCXenoResinJellyFireproofComponent>(ent))
-                    _damageable.TryChangeDamage(uid, tile * ignite.Intensity);
+                    _damageable.TryChangeDamage(uid, tile * ignite.Intensity, tool: fireEntity);
             }
         }
 

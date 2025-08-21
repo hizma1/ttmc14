@@ -174,7 +174,9 @@
     beepSound: null
   - type: CMVocalizeTrigger
   - type: TileFireOnTrigger
-    spawn: RMCTileFireGreen
+    range: 2
+    diagonalRange: 1
+    spawn: MCFireHidp
     sound:
       path: /Audio/_RMC14/Weapons/Guns/Flamer/gun_flamethrower2.ogg
   - type: Tag

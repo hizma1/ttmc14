@@ -85,25 +85,31 @@ public sealed class MCArmorSystem : EntitySystem
 
         var sunderModifier = _xenoSunder.GetSunder(entityUid);
 
-        if (args.Tool is { } tool)
+        if (args.Tool is not { } tool)
+            return;
+
+        if (_tag.HasTag(tool, TagMelee) || HasComp<MeleeWeaponComponent>(tool))
         {
-            if (_tag.HasTag(tool, TagMelee) || HasComp<MeleeWeaponComponent>(tool))
-            {
-                args.Damage *= ArmorToValue(ev.Melee, args.ArmorPiercing, sunderModifier);
-                return;
-            }
+            args.Damage *= ArmorToValue(ev.Melee, args.ArmorPiercing, sunderModifier);
+            return;
+        }
 
-            if (_tag.HasTag(tool, TagBullet) || HasComp<RMCBulletComponent>(tool))
-            {
-                args.Damage *= ArmorToValue(ev.Bullet, args.ArmorPiercing, sunderModifier);
-                return;
-            }
+        if (_tag.HasTag(tool, TagBullet) || HasComp<RMCBulletComponent>(tool))
+        {
+            args.Damage *= ArmorToValue(ev.Bullet, args.ArmorPiercing, sunderModifier);
+            return;
+        }
 
-            if (_tag.HasTag(tool, TagAcid))
-            {
-                args.Damage *= ArmorToValue(ev.Acid, args.ArmorPiercing, sunderModifier);
-                return;
-            }
+        if (_tag.HasTag(tool, TagAcid))
+        {
+            args.Damage *= ArmorToValue(ev.Acid, args.ArmorPiercing, sunderModifier);
+            return;
+        }
+
+        if (_tag.HasTag(tool, TagFire))
+        {
+            args.Damage *= ArmorToValue(ev.Fire, args.ArmorPiercing, sunderModifier);
+            return;
         }
     }
 
