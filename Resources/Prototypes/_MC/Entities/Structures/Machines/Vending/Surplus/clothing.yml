@@ -13,6 +13,11 @@
       map: [ "enum.VendingMachineVisualLayers.BaseUnshaded" ]
   - type: CMAutomatedVendor
     sections:
+    - name: Standard
+      entries:
+      - id: MCJumpsuitMarineSquad
+      - id: MCClothingHandsMarineCombat
+      - id: MCBootsBlackFilled
     - name: Webbing
       entries:
       - id: MCWebbingBlackVest
@@ -49,3 +54,19 @@
       # TE powerpack
       # medium general pouch
       # protein pack pouch
+    - name: Backpacks
+      entries:
+      - id: MCBackpackMarineStandard
+      - id: MCSatchelMarineStandard
+    - name: Instruments
+      entries:
+      - id: SynthesizerInstrument
+      - id: BanjoInstrument
+      - id: AcousticGuitarInstrument
+      - id: GlockenspielInstrument
+      - id: AccordionInstrument
+      - id: TrumpetInstrument
+      - id: SaxophoneInstrument
+      - id: TromboneInstrument
+      - id: RecorderInstrument
+      - id: HarmonicaInstrument
