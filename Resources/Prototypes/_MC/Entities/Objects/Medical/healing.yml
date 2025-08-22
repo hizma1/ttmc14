@@ -63,7 +63,6 @@
         Cold: -2
         Shock: -1
         Caustic: -1
-    delay: 1.5
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
       params:
@@ -77,6 +76,10 @@
   - type: Stack
     stackType: MCOintment
     count: 40
+  - type: MedicallyUnskilledDoAfter
+    min: 1
+    doAfter: 2
+    skilledDelay: 2
 
 - type: stack
   id: MCOintment
@@ -109,7 +112,8 @@
     damage:
       groups:
         Brute: -5 #примерно будет хилить по 3, но меньше, я ебал разрабов на РМС
-    delay: 1.5
+      types:
+        Piercing: 2 # а чтобы основной урон от пуль быстрее хилило без затупа
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -179,7 +183,6 @@
         Brute: -12 # похуй мне сколько там хилить должно в тгмс, мне важен баланс сс14 ебаной
       types:
       Piercing: -3
-    delay: 1.5 # ИЗ-ЗА ЭТОГО, НО ЭТО ПРОСТО ТАК НЕ УБРАТЬ
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -191,8 +194,8 @@
         volume: 1.0
         variation: 0.125
   - type: MedicallyUnskilledDoAfter
-    min: 2
-    doAfter: 8 # Parity НЕ РАБОТАЕТ НАХУЙ
+    min: 1
+    doAfter: 8
     skilledDelay: 1.5
   - type: Sprite
     state: traumakit
@@ -227,8 +230,7 @@
       groups:
         Burn: -13 # тут можно проставить чтобы по 6 урона хилило, и так все 4 типа урона.
       types:
-        Heat: -3.5
-    delay: 1.5 # ИЗ-ЗА ЭТОГО, НО ЭТО ПРОСТО ТАК НЕ УБРАТЬ
+        Heat: -3
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -248,7 +250,7 @@
     heldPrefix: burnkit
   - type: MedicallyUnskilledDoAfter
     min: 1
-    doAfter: 8 # Parity НЕ РАБОТАЕТ НАХУЙ
+    doAfter: 8
     skilledDelay: 1.5
 
 - type: stack
@@ -340,10 +342,9 @@
     - Biological
     damage:
       groups:
-        Brute: -16 # Торнадотех, исправь систему кровотека
+        Brute: -13 # Торнадотех, исправь систему кровотека
       types:
-        Piercing: -6
-    delay: 1.5
+        Piercing: -5
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -356,7 +357,7 @@
         variation: 0.125
   - type: MedicallyUnskilledDoAfter
     min: 2
-    doAfter: 8
+    doAfter: 10
     skilledDelay: 1.5
   - type: Sprite
     state: combat_traumakit
@@ -390,10 +391,9 @@
     - Biological
     damage:
       groups:
-        Burn: -18
+        Burn: -14
       types:
-        Heat: -6
-    delay: 1.5
+        Heat: -5
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -413,8 +413,8 @@
     size: Normal
     heldPrefix: combat_burnkit
   - type: MedicallyUnskilledDoAfter
-    min: 1
-    doAfter: 8
+    min: 2
+    doAfter: 10
     skilledDelay: 1.5
 
 - type: stack
