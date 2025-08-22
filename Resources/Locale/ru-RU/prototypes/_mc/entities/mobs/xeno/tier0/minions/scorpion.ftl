@@ -1,2 +1,2 @@
-ent-MCXenoMinionScorpion = scorpion
-    .desc = An alien.
+ent-MCXenoMinionScorpion = скорпион
+    .desc = Инопланетное существо.

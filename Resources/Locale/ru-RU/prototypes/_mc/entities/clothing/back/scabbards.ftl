@@ -1,11 +1,11 @@
-ent-MCScabbardKatana = katana scabbard
-    .desc = A large, vibrantly colored katana scabbard used to carry a japanese sword. It can be strapped to the back, waist or armor. Because of the sturdy wood casing of the scabbard, it makes an okay defensive weapon in a pinch.
+ent-MCScabbardKatana = ножны для катаны
+    .desc = Большие, ярко раскрашенные ножны для катаны, используемые для ношения японского меча. Их можно прикрепить к спине, талии или доспехам. Благодаря прочному деревянному корпусу ножен, в крайнем случае они могут служить неплохим оборонительным оружием.
     .suffix = MC
 ent-MCScabbardKatanaFilled = { ent-MCScabbardKatana }
     .suffix = Filled, MC
     .desc = { ent-MCScabbardKatana.desc }
-ent-MCScabbardMachete = H5 pattern M2132 machete scabbard
-    .desc = A large leather scabbard used to carry a M2132 machete. It can be strapped to the back, waist or armor.
+ent-MCScabbardMachete = ножны для мачете M2132 образца H5
+    .desc = Большие кожаные ножны для ношения мачете M2132. Их можно прикрепить к спине, талии или доспехам.
     .suffix = MC
 ent-MCScabbardMacheteFilled = { ent-MCScabbardMachete }
     .suffix = Filled, MC

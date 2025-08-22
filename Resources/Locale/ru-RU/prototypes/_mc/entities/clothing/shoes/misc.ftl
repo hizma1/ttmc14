@@ -1,2 +1,2 @@
-ent-MCShoesWhite = white shoes
-    .desc = Comfortable-looking shoes.
+ent-MCShoesWhite = белые туфли
+    .desc = Удобные на вид туфли.

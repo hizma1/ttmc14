@@ -1,3 +1,3 @@
-ent-MCHeadsetSpatialAgent = spatial agent radio headset
-    .desc = Standard issue headset for spatial agents, providing access to most known channels. Will violently explode if used by anyone other than a spatial agent.
+ent-MCHeadsetSpatialAgent = гарнитура специального агента
+    .desc = Стандартная гарнитура для космических агентов, обеспечивающая доступ к большинству известных каналов связи. Взрывается с разрушительной силой, если используется кем-либо, кроме космического агента.
     .suffix = MC, Admin

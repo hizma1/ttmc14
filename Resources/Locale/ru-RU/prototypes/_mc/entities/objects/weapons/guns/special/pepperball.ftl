@@ -1,7 +1,7 @@
-ent-MCWeaponPepperball = PB-12 pepperball gun
-    .desc = The PB-12 is ostensibly riot control device used by the TGMC in spiffy colors, working through a SAN ball that sends a short acting neutralizing chemical to knock out it's target, or weaken them. Guranteed to work on just about everything. Uses SAN Ball Holders as magazines.
-ent-MCMagazinePepperball = pepperball canister (SAN balls)
-    .desc = A canister holding a projectile to be used inside a pepperball gun.
+ent-MCWeaponPepperball = перцовый пистолет PB-12 
+    .desc = PB-12 — это якобы устройство для контроля массовых беспорядков, которое используется TGMC в эффектных цветах. Работает через SAN-шар, который выпускает быстродействующий нейтрализующий химикат, чтобы обезвредить цель или ослабить её. Гарантированно действует практически на всё. В качестве магазинов используются держатели SAN-шаров.
+ent-MCMagazinePepperball = контейнер с перцовыми шариками (SAN-шары)
+    .desc = контейнер, содержащий снаряды для использования в перцовом пистолете.
 ent-MCCartridgePepperball = { ent-CMBaseCartridgeRifle }
     .desc = { ent-CMBaseCartridgeRifle.desc }
 ent-MCBulletPepperball = { ent-RMCBaseBullet }

@@ -1,2 +1,2 @@
-ent-MCJumpsuitSpatialAgent = spatial agent's jumpsuit
-    .desc = It's a jumpsuit worn by Spatial Agents.
+ent-MCJumpsuitSpatialAgent = кобинезон космического агента
+    .desc = Комбинезон, который носят космические агенты.

@@ -1,2 +1,2 @@
-ent-MCGlassesHudHealth = HealthMate HUD
-    .desc = A heads-up display that scans the humanoids in view and provides accurate data about their health status.
+ent-MCGlassesHudHealth = медецинский HUD
+    .desc = HUD, который сканирует находящихся в поле зрения гуманоидов и предоставляет точные данные об их состоянии здоровья.
