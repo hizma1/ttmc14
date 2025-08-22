@@ -127,7 +127,7 @@
     consumable: true
     canUseUnskilled: true
     skills:
-      RMCSkillMedical: 2 # Эту хуйню не законтрить
+      RMCSkillMedical: 1
     treatBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
     treatEndSound:
@@ -141,7 +141,8 @@
     noWoundsOnTargetPopup: cm-wounds-already-treated-target-popup
   - type: MedicallyUnskilledDoAfter
     doAfter: 2
-    min: 2 # это и так решает итог битвы, поставил побольше.
+    skilledDelay: 2
+    min: 1
   - type: Stack
     stackType: MCGauze
     count: 40
@@ -192,6 +193,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 2
     doAfter: 8 # Parity НЕ РАБОТАЕТ НАХУЙ
+    skilledDelay: 1.5
   - type: Sprite
     state: traumakit
   - type: Item
@@ -247,7 +249,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 1
     doAfter: 8 # Parity НЕ РАБОТАЕТ НАХУЙ
-
+    skilledDelay: 1.5
 
 - type: stack
   id: MCBurnKit
@@ -285,7 +287,7 @@
     unskilledDamage: -30 # хуйня используется лишь 1 раз
     canUseUnskilled: true
     skills:
-      RMCSkillMedical: 6 # ни у кого не должно быть выше 5 навыка.
+      RMCSkillMedical: 1
     treatBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -304,7 +306,8 @@
     noWoundsOnUserPopup: cm-wounds-already-treated-self-popup
     noWoundsOnTargetPopup: cm-wounds-already-treated-target-popup
   - type: MedicallyUnskilledDoAfter
-    min: 6
+    min: 1
+    skilledDelay: 5
     doAfter: 5
 
 - type: stack
@@ -354,6 +357,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 2
     doAfter: 8
+    skilledDelay: 1.5
   - type: Sprite
     state: combat_traumakit
   - type: Item
@@ -411,6 +415,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 1
     doAfter: 8
+    skilledDelay: 1.5
 
 - type: stack
   id: MCBurnKitCombat

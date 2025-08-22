@@ -12,6 +12,15 @@ public sealed partial class MedicallyUnskilledDoAfterComponent : Component
     [DataField, AutoNetworkedField]
     public int Min = 1;
 
+    /// <summary>
+    /// Задержка для пользователя с навыком
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public TimeSpan SkilledDelay = TimeSpan.FromSeconds(0);
+
+    /// <summary>
+    /// Задержка для пользователя без навыка (для совместимости с прототипами)
+    /// </summary>
     [DataField, AutoNetworkedField]
     public TimeSpan DoAfter = TimeSpan.FromSeconds(3);
 

@@ -23,7 +23,6 @@
     solution: hypospray
   - type: Hypospray
     onlyAffectsMobs: false
-    transferAmount: 10
   - type: StaticPrice
     price: 0
   - type: IconLabel
@@ -39,6 +38,7 @@
     solutionName: reagent_0
   - type: MedicallyUnskilledDoAfter
     min: 1
+    skilledDelay: 0
     doAfter: 3
 
 - type: entity
