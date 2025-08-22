@@ -55,6 +55,12 @@
         whitelist:
           tags:
           - MCMagazineShotgunSH15
+  - type: AttachableHolder
+    slots:
+      mc-slot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
 
 - type: entity
   parent: CMMagazineRifleBase

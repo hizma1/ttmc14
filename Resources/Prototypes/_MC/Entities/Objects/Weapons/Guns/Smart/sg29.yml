@@ -86,6 +86,10 @@
   # Attachments
   - type: AttachableHolder
     slots:
+      mc-slot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
       mc-slot-muzzle:
         locked: true
         startingAttachable: MCAttachmentMuzzleSG29

@@ -47,7 +47,11 @@
     closeSound:
       path: /Audio/_RMC14/Weapons/Guns/Breech/pkd_close_chamber.ogg
   - type: AttachableHolder
-    slots: {}
+    slots:
+      mc-slot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
   - type: AttachableHolderVisuals
     offsets: {}
 

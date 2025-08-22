@@ -33,6 +33,10 @@
   - type: PumpAction
   - type: AttachableHolder
     slots:
+      mc-slot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
       mc-slot-stock:
         locked: true
         startingAttachable: MCAttachmentStockSH35
