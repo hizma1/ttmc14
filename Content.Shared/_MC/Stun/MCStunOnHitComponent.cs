@@ -25,7 +25,7 @@ public sealed partial class MCStunOnHitComponent : Component
     public TimeSpan SlowdownTime = TimeSpan.Zero;
 
     [DataField, AutoNetworkedField]
-    public float Knockback = 1;
+    public float Knockback;
 
     [DataField, AutoNetworkedField]
     public float KnockbackSpeed = 10;

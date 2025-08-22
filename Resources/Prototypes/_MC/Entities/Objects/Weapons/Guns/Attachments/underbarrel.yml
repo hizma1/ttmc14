@@ -1,0 +1,13 @@
+- type: entity
+  parent: RMCAttachableBase
+  id: MCAttachmentUnderbarrel
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/underbarrel.rsi
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+
+- type: Tag
+  id: MCAttachmentUnderbarrel
