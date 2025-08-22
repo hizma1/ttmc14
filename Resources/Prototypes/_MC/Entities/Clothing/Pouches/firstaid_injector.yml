@@ -42,3 +42,18 @@
   components:
   - type: Sprite
     sprite: _MC/Clothing/Pouches/firstaid_injector_som.rsi
+
+- type: entity
+  parent: MCPouchMedicalInjector
+  id: MCPouchMedicalInjectorCorpsmanFull
+  suffix: Corpsman, Full
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCAutoInjectorCombatAdv
+      amount: 3
+    - id: MCAutoInjectorDexalinPlus
+    - id: MCAutoInjectorQuickClot # временно вместо Quick Clot Plus
+      amount: 2
+    - id: MCAutoInjectorParacetamol # временно вместо Peridaxon Plus
+      amount: 2

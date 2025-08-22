@@ -37,7 +37,7 @@ public sealed class HypospraySystem : EntitySystem
         SubscribeLocalEvent<HyposprayComponent, AfterInteractEvent>(OnAfterInteract);
         SubscribeLocalEvent<HyposprayComponent, MeleeHitEvent>(OnAttack);
         SubscribeLocalEvent<HyposprayComponent, UseInHandEvent>(OnUseInHand);
-        SubscribeLocalEvent<HyposprayComponent, GetVerbsEvent<AlternativeVerb>>(AddToggleModeVerb);
+        SubscribeLocalEvent<HyposprayComponent, GetVerbsEvent<AlternativeVerb>>(AddAlternativeVerbs);
     }
 
     #region Ref events
@@ -46,6 +46,7 @@ public sealed class HypospraySystem : EntitySystem
         if (args.Handled)
             return;
 
+        // Теперь UseInHand только колет в себя
         args.Handled = TryDoInject(entity, args.User, args.User);
     }
 
@@ -240,26 +241,50 @@ public sealed class HypospraySystem : EntitySystem
 
     #region Verbs
 
-    // <summary>
-    // Uses the OnlyMobs field as a check to implement the ability
-    // to draw from jugs and containers with the hypospray
-    // Toggleable to allow people to inject containers if they prefer it over drawing
-    // </summary>
-    private void AddToggleModeVerb(Entity<HyposprayComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
+    private void AddAlternativeVerbs(Entity<HyposprayComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!args.CanAccess || !args.CanInteract || args.Hands == null || entity.Comp.InjectOnly)
-            return;
-
-        var user = args.User;
-        var verb = new AlternativeVerb
+        if (args.CanAccess && args.CanInteract && args.Hands != null && !entity.Comp.InjectOnly)
         {
-            Text = Loc.GetString("hypospray-verb-mode-label"),
-            Act = () =>
+            var user = args.User;
+            var verb = new AlternativeVerb
             {
-                ToggleMode(entity, user);
+                Text = Loc.GetString("hypospray-verb-mode-label"),
+                Act = () =>
+                {
+                    ToggleMode(entity, user);
+                }
+            };
+            args.Verbs.Add(verb);
+        }
+
+        var transferCategory = VerbCategory.SetTransferAmount;
+        if (args.CanAccess && args.CanInteract && args.Hands != null)
+        {
+            var user = args.User;
+            var comp = entity.Comp;
+            var amounts = comp.TransferAmounts;
+            if (amounts != null && amounts.Length > 0)
+            {
+                int priority = 0;
+                foreach (var amount in amounts)
+                {
+                    AlternativeVerb verb = new()
+                    {
+                        Text = Loc.GetString("comp-solution-transfer-verb-amount", ("amount", amount)),
+                        Category = transferCategory,
+                        Act = amount == comp.TransferAmount ? null : () =>
+                        {
+                            comp.TransferAmount = amount;
+                            _popup.PopupClient(Loc.GetString("comp-solution-transfer-set-amount", ("amount", amount)), entity, user);
+                            Dirty(entity);
+                        },
+                        Priority = priority
+                    };
+                    args.Verbs.Add(verb);
+                    priority--;
+                }
             }
-        };
-        args.Verbs.Add(verb);
+        }
     }
 
     private void ToggleMode(Entity<HyposprayComponent> entity, EntityUid user)

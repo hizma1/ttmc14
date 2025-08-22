@@ -14,6 +14,11 @@
   - type: CMAutomatedVendor
     jobs: [ MCSquadCorpsman ]
     sections:
+    - name: Essentials
+      choices:
+        MCEssentials: 1
+      entries:
+      - id: MCVendorBundleEssentialCorpsman
     - name: Pills
       entries:
       - id: MCPillCanisterMeralyne
@@ -36,6 +41,11 @@
       - id: MCHyposprayFillNanoblood
         name: hypospray (60u Nanoblood)
         points: 3
+    - name: Auto Injector
+      entries:
+      - id: MCAutoInjectorCombatAdv
+        name: Injector (Advanced)
+        points: 5
     - name: Syringe Cases
       entries:
       - id: MCCaseSyringeFillMeralyne
@@ -52,7 +62,32 @@
         points: 5
     - name: Tools
       entries:
+      - id: MCHyposprayBig
+        name: Big hypospray
+        points: 10
       - id: MCHypospray
+        name: Hypospray
         points: 2
       - id: MCGlassesHudHealth
         points: 2
+
+- type: entity
+  id: MCVendorBundleEssentialCorpsman
+  name: Essential Medic Set
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Medical/firstaids.rsi
+    state: advfirstaid
+  - type: CMVendorBundle
+    bundle:
+    - MCGlassesHudHealth
+    - MCDefibrillator
+    - MCStasisBagFolded
+    - MCRollerBedSpawnFolded
+    - MCHyposprayFillOxycodone
+    - MCAidKitAdvancedFilled
+    - MCHealthAnalyzer
+    - MCMedicalTweezers
+    # /obj/item/medevac_beacon
+    # /obj/structure/bed/medevac_stretcher

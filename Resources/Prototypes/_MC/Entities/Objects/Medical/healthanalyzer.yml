@@ -41,5 +41,49 @@
     slots:
     - belt
 
+- type: entity
+  parent: MCHealthAnalyzer
+  id: MCHealthAnalyzerCombat # No Parity
+
+  name: HF2 combat health analyzer
+  suffix: MC
+  description: A high-tech portable combat body scanner capable of quickly distinguishing the vital signs of various objects. Information about the condition of the object is displayed on the front panel.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Medical/combathealthanalyzer.rsi
+    state: icon
+    layers:
+      - state: icon
+      - state: analyzer
+        shader: unshaded
+        visible: true
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+  - type: Item
+    size: Small
+    heldPrefix: analyzer
+    storedRotation: -90
+  - type: ActivatableUI
+    key: enum.HealthScannerUIKey.Key
+    inHandsOnly: false
+  - type: UserInterface
+    interfaces:
+      enum.HealthScannerUIKey.Key:
+        type: MCHealthScannerBui
+  - type: HealthScanner
+    sound:
+      path: "/Audio/_RMC14/Medical/healthanalyzer.ogg"
+  - type: UseDelay
+    delay: 0
+  - type: MedicallyUnskilledDoAfter
+    min: 1
+    doAfter: 1
+  - type: Tag
+    tags:
+    - MCHealthAnalyzer
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - belt
+
 - type: Tag
   id: MCHealthAnalyzer

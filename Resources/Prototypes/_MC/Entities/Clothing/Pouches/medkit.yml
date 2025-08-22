@@ -24,6 +24,7 @@
       - MCPillCanister # /obj/item/storage/pill_bottle
       - MCHealingItem # /obj/item/stack/medical
       - MCHypospray # /obj/item/reagent_containers/hypospray
+      - MCAutoInjector
   - type: FixedItemSizeStorage
 
 - type: entity
@@ -64,4 +65,5 @@
       - MCHealingItem # /obj/item/stack/medical
       - MCPacketPills # /obj/item/storage/pill_bottle/packet
       - MCHypospray # /obj/item/reagent_containers/hypospray
+      - MCAutoInjector
   - type: FixedItemSizeStorage

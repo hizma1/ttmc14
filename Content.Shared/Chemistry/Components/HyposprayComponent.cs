@@ -18,11 +18,28 @@ public sealed partial class HyposprayComponent : Component
     public string SolutionName = "hypospray";
 
     /// <summary>
-    ///     Amount of the units that will be transfered.
+    ///     Возможные объёмы для инъекции.
+    /// </summary>
+    [DataField]
+    public FixedPoint2[] TransferAmounts = new[]
+    {
+        FixedPoint2.New(1),
+        FixedPoint2.New(3),
+        FixedPoint2.New(5),
+        FixedPoint2.New(10),
+        FixedPoint2.New(15),
+        FixedPoint2.New(20),
+        FixedPoint2.New(30),
+        FixedPoint2.New(60),
+        FixedPoint2.New(120)
+    };
+
+    /// <summary>
+    ///     Текущий объём для инъекции.
     /// </summary>
     [AutoNetworkedField]
     [DataField]
-    public FixedPoint2 TransferAmount = FixedPoint2.New(5);
+    public FixedPoint2 TransferAmount = FixedPoint2.New(10);
 
     /// <summary>
     ///     Sound that will be played when injecting.

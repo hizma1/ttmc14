@@ -138,6 +138,10 @@ public sealed class SkillsSystem : EntitySystem
         {
             args.MaxDoAfter(ent.Comp.DoAfter);
         }
+        else
+        {
+            args.MaxDoAfter(ent.Comp.SkilledDelay);
+        }
     }
 
     private void OnRequiresSkillBeforeRangedInteract(Entity<RequiresSkillComponent> ent, ref BeforeRangedInteractEvent args)
@@ -347,10 +351,10 @@ public sealed class SkillsSystem : EntitySystem
             return default;
         }
 
-        if (!HasSkill(user, doAfter.Skill, doAfter.Min))
+        if (HasSkill(user, doAfter.Skill, doAfter.Min))
+            return doAfter.SkilledDelay;
+        else
             return doAfter.DoAfter;
-
-        return default;
     }
 
     public int GetSkill(Entity<SkillsComponent?> ent, EntProtoId<SkillDefinitionComponent> skill)

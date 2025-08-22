@@ -137,7 +137,7 @@
 
 - type: entity
   parent: MCBottleFilled
-  id: MCBottletramadol
+  id: MCBottleTramadol
   name: tramadol bottle
   description: A small bottle. Contains Tramadol - Used as a basic painkiller.
   components:
@@ -293,7 +293,7 @@
 - type: entity
   parent: MCBottleFilled
   id: MCBottleSteralizine
-  name: Polyhexanide bottle
+  name: polyhexanide bottle
   description: A small bottle. Contains polyhexanide - Used as a powerful sterilizer for internal surgical use.
   components:
   - type: SolutionContainerManager
@@ -306,6 +306,23 @@
   - type: CMRefillableSolution
     reagents:
       MCSterilizine: 60
+
+- type: entity
+  parent: MCBottleFilled
+  id: MCBottleOxycodone
+  name: oxycodone bottle
+  description: A very small bottle. Contains Oxycodone - Used as an Extreme Painkiller.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCOxycodone
+          Quantity: 60
+  - type: CMRefillableSolution
+    reagents:
+      MCOxycodone: 60
 
 # CHEMICAL BOTTLES
 - type: entity

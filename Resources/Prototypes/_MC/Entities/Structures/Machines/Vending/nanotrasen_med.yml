@@ -44,7 +44,7 @@
       entries:
       - id: MCBottleBicaridine
       - id: MCBottleKelotane
-      - id: MCBottletramadol
+      - id: MCBottleTramadol
       - id: MCBottleTricordrazine
       - id: MCBottleDylovene
       - id: MCBottleInaprovaline
@@ -56,9 +56,10 @@
       - id: MCBottleImidazoline
         amount: 6
       # spaceacillin = 6
-      # oxycodone = 6
+      - id: MCBottleOxycodone
+        amount: 6
       - id: MCBottleSleepToxin
-        amountL: 6
+        amount: 6
       - id: MCBottleSteralizine
         amount: 6
     - name: Chemistry Equipment
@@ -71,7 +72,7 @@
         name: Beaker (60 units)
       - id: MCBeakerLarge
         name: Beaker, Large (120 units)
-      - id: RMCDropper
+      - id: MCDropper
       #	/obj/item/storage/reagent_tank = 5
       #	/obj/item/storage/reagent_tank/bicaridine = 1
       #	/obj/item/storage/reagent_tank/kelotane = 1
