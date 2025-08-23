@@ -1,6 +1,6 @@
-ent-MCPacketPills = pill packet
-    .desc = Contains pills. Once you take them out, they don't go back in.
-ent-MCPacketPillsLeporazine = leporazine pill packet
-    .desc = This packet contains leporazine pills. Rapidly stablizes the patients internal temperature. Once you take them out they don't go back in..
-ent-MCPacketPillsRyetalyn = ryetalyn pill packet
-    .desc = This packet contains Ryetalyn pills. Used to provide a shield against bloodstream toxins. Once you take them out they don't go back in. No more than 2 pills at once.
+ent-MCPacketPills = упаковка таблеток
+    .desc = Содержит таблетки. Как только вы их достанете, положить обратно уже не получится.
+ent-MCPacketPillsLeporazine = упаковка таблеток лепоразина
+    .desc = Содержит таблетки лепоразина. Быстро стабилизируют внутреннюю температуру пациента. Как только вы их достанете, положить обратно уже не получится.
+ent-MCPacketPillsRyetalyn = упаковка таблеток райталина
+    .desc = Содержит таблетки райталина. Используется для создания защитного барьера против токсинов в кровотоке. Как только вы их достанете, положить обратно уже не получится. Максимально допустимая доза — 2 таблетки за один приём.
