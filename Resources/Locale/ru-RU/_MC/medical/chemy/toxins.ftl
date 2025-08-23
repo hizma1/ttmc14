@@ -3,3 +3,6 @@ reagent-desc-mc-ozelomelyn = Сильнодействующее химическ
 
 reagent-name-mc-sleeptoxin = Снотворное
 reagent-desc-mc-sleeptoxin = Эффективное снотворное средство, применяемое для лечения бессонницы.
+
+reagent-name-mc-toxin = Токсин
+reagent-desc-mc-toxin = Медленно метаболизирующийся стойкий токсин.

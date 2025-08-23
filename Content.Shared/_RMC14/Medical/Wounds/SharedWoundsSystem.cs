@@ -27,6 +27,30 @@ namespace Content.Shared._RMC14.Medical.Wounds;
 
 public abstract class SharedWoundsSystem : EntitySystem
 {
+    /// <summary>
+    /// Постепенно уменьшает кровотечение у всех ран на указанное количество. Если Bloodloss <= 0, кровотечение останавливается.
+    /// </summary>
+    public void ModifyBleedAmount(Entity<WoundedComponent?> wounded, float amount)
+    {
+        if (!Resolve(wounded, ref wounded.Comp, false) || wounded.Comp.Wounds.Count == 0)
+            return;
+
+        var wounds = CollectionsMarshal.AsSpan(wounded.Comp.Wounds);
+        var curTime = _timing.CurTime;
+        for (var i = 0; i < wounds.Length; i++)
+        {
+            ref var wound = ref wounds[i];
+            if (wound.Bloodloss > 0)
+            {
+                wound.Bloodloss -= amount;
+                if (wound.Bloodloss <= 0)
+                {
+                    wound.Bloodloss = 0;
+                    wound.StopBleedAt = curTime;
+                }
+            }
+        }
+    }
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedRMCDamageableSystem _rmcDamageable = default!;
     [Dependency] private readonly IConfigurationManager _config = default!;

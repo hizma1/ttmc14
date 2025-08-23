@@ -438,9 +438,6 @@
     Medicine:
       metabolismRate: 0.05
       effects:
-      # торнадотех чини
-      - !type:ModifyBleedAmount
-        amount: -1
       - !type:ModifyBloodLevel
         amount: 0.2
         conditions:

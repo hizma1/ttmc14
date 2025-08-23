@@ -1,4 +1,51 @@
- # NO PARITY!!!
+- type: reagent
+  parent: MCReagentMedicine
+  id: MCQuickClotPlus
+  name: reagent-name-mc-quickclotplus
+  desc: reagent-desc-mc-quickclotplus
+  physicalDesc: mc-reagent-physical-desc-viscous
+  color: "#f1accf"
+  overdose: 6
+  criticalOverdose: 10
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.5
+      effects:
+      - !type:ModifyBleedAmount
+        amount: -1 # = 1 IB
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 6
+        damage:
+          groups:
+            Toxin: 1.5
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:ReagentThreshold
+          min: 6
+        amount: -0.4
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        amount: -0.8
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          max: 0.1
+        damage:
+          groups:
+            Genetic: 5
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MCQuickClotPlus
+          min: 0.5
+        reagent: MCToxin
+        amount: 5
+
+# NO PARITY!!!
 - type: reagent
   parent: MCReagentMedicine
   id: MCDremin

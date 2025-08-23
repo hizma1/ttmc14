@@ -53,7 +53,7 @@
     - id: MCAutoInjectorCombatAdv
       amount: 3
     - id: MCAutoInjectorDexalinPlus
-    - id: MCAutoInjectorQuickClot # временно вместо Quick Clot Plus
+    - id: MCAutoInjectorQuickClotPlus
       amount: 2
     - id: MCAutoInjectorParacetamol # временно вместо Peridaxon Plus
       amount: 2

@@ -46,6 +46,9 @@
       - id: MCAutoInjectorCombatAdv
         name: Injector (Advanced)
         points: 5
+      - id: MCAutoInjectorQuickClotPlus
+        name: Injector (QuickclotPlus)
+        points: 1
     - name: Syringe Cases
       entries:
       - id: MCCaseSyringeFillMeralyne

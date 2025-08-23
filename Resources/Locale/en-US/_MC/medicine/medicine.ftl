@@ -17,6 +17,7 @@ mc-nanoblood-container-label-text = Na
 mc-sleeptoxin-container-label-text = An
 mc-quickclot-container-label-text = Qk
 mc-oxycodone-container-label-text = Ox
+mc-quickclotplus-container-label-text = Qk+
 
 mc-combat-container-label-text = Cb
 mc-combatadv-container-label-text = Ca

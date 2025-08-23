@@ -161,6 +161,9 @@
   description: A hypospray loaded with hypervene. A chemical that rapdidly flushes the body of all chemicals and toxins.
   suffix: Fill
   components:
+  - type: Hypospray
+    transferAmount: 3
+    onlyAffectsMobs: false
   - type: IconLabel
     labelTextLocId: mc-hypervene-container-label-text
   - type: SolutionContainerManager
@@ -170,6 +173,49 @@
         reagents:
         - ReagentId: MCHypervene
           Quantity: 60
+
+- type: entity
+  parent: MCHypospray
+  id: MCHyposprayFillQuickClotPlus
+  name: quick-clot plus hypospray
+  description: A hypospray loaded with quick-clot plus, a chemical designed to remove internal bleeding. Use with antitoxin. !DO NOT USE IN ACTIVE COMBAT!
+  suffix: Fill
+  components:
+  - type: Hypospray
+    transferAmount: 5
+    onlyAffectsMobs: false
+  - type: IconLabel
+    labelTextLocId: mc-quickclotplus-container-label-text
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCQuickClotPlus
+          Quantity: 60
+
+- type: entity
+  parent: MCHypospray
+  id: MCHyposprayFillBKTT
+  name: combat mix hypospray
+  description: A hypospray loaded with combat mix.
+  suffix: Fill
+  components:
+  - type: IconLabel
+    labelTextLocId: mc-combat-container-label-text
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 60
+        reagents:
+        - ReagentId: MCBicaridine
+          Quantity: 20
+        - ReagentId: MCKelotane
+          Quantity: 20
+        - ReagentId: MCTramadol
+          Quantity: 10
+        - ReagentId: MCTricordrazine
+          Quantity: 10
 
 - type: entity
   parent: MCHyposprayBig
