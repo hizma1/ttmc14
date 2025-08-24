@@ -18,7 +18,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._RMC14.Medical.Scanner;
 
-public sealed class HealthScannerSystem : EntitySystem
+public sealed partial class HealthScannerSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
@@ -41,7 +41,6 @@ public sealed class HealthScannerSystem : EntitySystem
         SubscribeLocalEvent<HealthScannerComponent, DoAfterAttemptEvent<HealthScannerDoAfterEvent>>(OnDoAfterAttempt);
         SubscribeLocalEvent<HealthScannerComponent, HealthScannerDoAfterEvent>(OnDoAfter);
     }
-
     private void OnAfterInteract(Entity<HealthScannerComponent> scanner, ref AfterInteractEvent args)
     {
         if (!args.CanReach ||
@@ -152,7 +151,7 @@ public sealed class HealthScannerSystem : EntitySystem
         return true;
     }
 
-    private void UpdateUI(Entity<HealthScannerComponent> scanner)
+    public void UpdateUI(Entity<HealthScannerComponent> scanner)
     {
         if (scanner.Comp.Target is not { } target)
             return;
@@ -163,6 +162,7 @@ public sealed class HealthScannerSystem : EntitySystem
                 _ui.CloseUi(scanner.Owner, HealthScannerUIKey.Key);
 
             scanner.Comp.Target = null;
+            Dirty(scanner);
             return;
         }
 
