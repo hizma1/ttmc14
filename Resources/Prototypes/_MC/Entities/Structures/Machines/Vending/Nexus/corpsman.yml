@@ -78,6 +78,8 @@
         points: 2
       - id: MCClothingHandsHealthanalyzer
         points: 2
+      - id: MCDefibrillatorAdvanced
+        points: 5
 
 - type: entity
   id: MCVendorBundleEssentialCorpsman
