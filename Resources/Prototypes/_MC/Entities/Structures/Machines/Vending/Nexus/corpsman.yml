@@ -41,6 +41,9 @@
       - id: MCHyposprayFillNanoblood
         name: hypospray (60u Nanoblood)
         points: 3
+      - id: MCHyposprayFillQuickClotPlus
+        name: Hypospray (QuickclotPlus)
+        points: 4
     - name: Auto Injector
       entries:
       - id: MCAutoInjectorCombatAdv
@@ -72,6 +75,8 @@
         name: Hypospray
         points: 2
       - id: MCGlassesHudHealth
+        points: 2
+      - id: MCClothingHandsHealthanalyzer
         points: 2
 
 - type: entity

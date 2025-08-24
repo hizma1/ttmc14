@@ -11,6 +11,7 @@ using Content.Shared.Popups;
 using Content.Shared.Storage.Components;
 using Content.Shared.Storage.EntitySystems;
 using Content.Shared.Timing;
+using Content.Shared.Inventory;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
@@ -32,6 +33,7 @@ public sealed class HealthScannerSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
     [Dependency] private readonly UseDelaySystem _useDelay = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!;
 
     public override void Initialize()
     {
@@ -164,8 +166,12 @@ public sealed class HealthScannerSystem : EntitySystem
             return;
         }
 
-        if (!_rmcHands.TryGetHolder(scanner, out _))
-            return;
+        var isHeld = _rmcHands.TryGetHolder(scanner, out _);
+        if (!isHeld)
+        {
+            if (!_inventory.TryGetContainingSlot(scanner.Owner, out var slot) || slot == null || slot.Name != "gloves")
+                return;
+        }
 
         FixedPoint2 blood = 0;
         FixedPoint2 maxBlood = 0;

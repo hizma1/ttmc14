@@ -113,7 +113,7 @@
       groups:
         Brute: -5 #примерно будет хилить по 3, но меньше, я ебал разрабов на РМС
       types:
-        Piercing: 2 # а чтобы основной урон от пуль быстрее хилило без затупа
+        Piercing: -2 # а чтобы основной урон от пуль быстрее хилило без затупа
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
       params:
@@ -180,9 +180,9 @@
     - Biological
     damage:
       groups:
-        Brute: -12 # похуй мне сколько там хилить должно в тгмс, мне важен баланс сс14 ебаной
+        Brute: -11 # похуй мне сколько там хилить должно в тгмс, мне важен баланс сс14 ебаной
       types:
-      Piercing: -3
+      Piercing: -5
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -228,9 +228,9 @@
     - Biological
     damage:
       groups:
-        Burn: -13 # тут можно проставить чтобы по 6 урона хилило, и так все 4 типа урона.
+        Burn: -11 # тут можно проставить чтобы по 6 урона хилило, и так все 4 типа урона.
       types:
-        Heat: -3
+        Heat: -5
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -344,7 +344,7 @@
       groups:
         Brute: -13 # Торнадотех, исправь систему кровотека
       types:
-        Piercing: -5
+        Piercing: -7
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:
@@ -391,9 +391,9 @@
     - Biological
     damage:
       groups:
-        Burn: -14
+        Burn: -13
       types:
-        Heat: -5
+        Heat: -7
     healingBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
       params:

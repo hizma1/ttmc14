@@ -290,6 +290,18 @@
 # T3
 
 - type: reaction
+  id: MCQuickClotPlus
+  reactants:
+    quickclot:
+      amount: 2
+    MCLemoline:
+      amount: 2
+    MCIron:
+      amount: 2
+  products:
+    MCQuickClotPlus: 1
+
+- type: reaction
   id: MCDremin # No parity
   reactants:
     MCDexalinPlus:
