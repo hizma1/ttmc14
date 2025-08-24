@@ -42,15 +42,15 @@
         name: hypospray (60u Nanoblood)
         points: 3
       - id: MCHyposprayFillQuickClotPlus
-        name: Hypospray (QuickclotPlus)
+        name: Hypospray (60u QuickclotPlus)
         points: 4
     - name: Auto Injector
       entries:
       - id: MCAutoInjectorCombatAdv
-        name: Injector (Advanced)
+        name: Injector (30u Advanced)
         points: 5
       - id: MCAutoInjectorQuickClotPlus
-        name: Injector (QuickclotPlus)
+        name: Injector (15u QuickclotPlus)
         points: 1
     - name: Syringe Cases
       entries:

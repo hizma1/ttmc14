@@ -338,6 +338,26 @@
 
 - type: entity
   parent: MCHyposprayBig
+  id: MCHyposprayBigFillQuickClotPlus
+  name: big quick-clot plus hypospray
+  description: A hypospray loaded with quick-clot plus, a chemical designed to remove internal bleeding. Use with antitoxin. !DO NOT USE IN ACTIVE COMBAT!
+  suffix: Fill
+  components:
+  - type: Hypospray
+    transferAmount: 5
+    onlyAffectsMobs: false
+  - type: IconLabel
+    labelTextLocId: mc-quickclotplus-container-label-text
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 120
+        reagents:
+        - ReagentId: MCQuickClotPlus
+          Quantity: 120
+
+- type: entity
+  parent: MCHyposprayBig
   id: MCHyposprayBigFillBKTT
   name: big combat mix hypospray
   description: A hypospray loaded with combat mix.

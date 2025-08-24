@@ -196,7 +196,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 1
     doAfter: 8
-    skilledDelay: 1.5
+    skilledDelay: 2
   - type: Sprite
     state: traumakit
   - type: Item
@@ -251,7 +251,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 1
     doAfter: 8
-    skilledDelay: 1.5
+    skilledDelay: 2
 
 - type: stack
   id: MCBurnKit
@@ -342,7 +342,7 @@
     - Biological
     damage:
       groups:
-        Brute: -15
+        Brute: -13
       types:
         Piercing: -7
     healingBeginSound:
@@ -358,7 +358,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 2
     doAfter: 10
-    skilledDelay: 1.5
+    skilledDelay: 2
   - type: Sprite
     state: combat_traumakit
   - type: Item
@@ -391,7 +391,7 @@
     - Biological
     damage:
       groups:
-        Burn: -15
+        Burn: -12
       types:
         Heat: -7
     healingBeginSound:
@@ -415,7 +415,7 @@
   - type: MedicallyUnskilledDoAfter
     min: 2
     doAfter: 10
-    skilledDelay: 1.5
+    skilledDelay: 2
 
 - type: stack
   id: MCBurnKitCombat
