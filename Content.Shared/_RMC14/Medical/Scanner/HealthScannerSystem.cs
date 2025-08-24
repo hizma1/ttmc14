@@ -11,6 +11,7 @@ using Content.Shared.Popups;
 using Content.Shared.Storage.Components;
 using Content.Shared.Storage.EntitySystems;
 using Content.Shared.Timing;
+using Content.Shared.Medical.Components;
 using Content.Shared.Inventory;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
@@ -43,6 +44,14 @@ public sealed partial class HealthScannerSystem : EntitySystem
     }
     private void OnAfterInteract(Entity<HealthScannerComponent> scanner, ref AfterInteractEvent args)
     {
+        if (TryComp(scanner, out MCHealthGlovesComponent? _))
+        {
+            if (!_inventory.TryGetSlotEntity(args.User, "gloves", out var equipped) || equipped != scanner.Owner)
+            {
+                return;
+            }
+        }
+
         if (!args.CanReach ||
             args.Target is not { } target ||
             !CanUseHealthScannerPopup(scanner, args.User, ref target))
@@ -109,6 +118,14 @@ public sealed partial class HealthScannerSystem : EntitySystem
     /// <returns></returns>
     private bool CanUseHealthScannerPopup(Entity<HealthScannerComponent> scanner, EntityUid user, ref EntityUid target)
     {
+        if (TryComp(scanner, out MCHealthGlovesComponent? _))
+        {
+            if (!_inventory.TryGetSlotEntity(user, "gloves", out var equipped) || equipped != scanner.Owner)
+            {
+                return false;
+            }
+        }
+
         SharedEntityStorageComponent? entityStorage = null;
         if (HasComp<HealthScannableContainerComponent>(target) && _entityStorage.ResolveStorage(target, ref entityStorage))
         {
@@ -128,7 +145,6 @@ public sealed partial class HealthScannerSystem : EntitySystem
             !HasComp<MobStateComponent>(target) ||
             !HasComp<MobThresholdsComponent>(target))
         {
-            _popup.PopupClient("You can't analyze that!", target, user);
             return false;
         }
 
@@ -166,11 +182,19 @@ public sealed partial class HealthScannerSystem : EntitySystem
             return;
         }
 
-        var isHeld = _rmcHands.TryGetHolder(scanner, out _);
-        if (!isHeld)
+        if (TryComp(scanner, out MCHealthGlovesComponent? _))
         {
             if (!_inventory.TryGetContainingSlot(scanner.Owner, out var slot) || slot == null || slot.Name != "gloves")
                 return;
+        }
+        else
+        {
+            var isHeld = _rmcHands.TryGetHolder(scanner, out _);
+            if (!isHeld)
+            {
+                if (!_inventory.TryGetContainingSlot(scanner.Owner, out var slot) || slot == null || slot.Name != "gloves")
+                    return;
+            }
         }
 
         FixedPoint2 blood = 0;
