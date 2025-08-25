@@ -62,10 +62,10 @@
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentS6ReflexSight
+          - MCAttachmentRailFlashlight
           - MCAttachmentMiniScope
-          - RMCAttachmentRailFlashlight
-          # - TODO: T47 Scope
+          - MCAttachmentRedDotSight
+          - MCAttachmentT47RailScope
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.7, -0.0225

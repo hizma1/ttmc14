@@ -99,6 +99,8 @@
   parent: [ MCAttachmentBaseRail, MCAttachableToggleableBase ]
   id: MCAttachmentBaseScope # Прицел
   components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/scope.rsi
   - type: AttachableToggleable
     needHand: true
     heldOnlyActivate: true
@@ -111,8 +113,8 @@
     useDelay: 0.5
     showTogglePopup: false
     icon:
-      sprite: _MC/Objects/Weapons/Guns/Attachments/rail.rsi
-      state: sniperscope
+      sprite: _MC/Objects/Weapons/Guns/Attachments/scope.rsi
+      state: marine
     actionName: Look through Scope
     actionDesc: Scope in. If you're seeing this, someone forgot to set the description properly.
   - type: AttachableToggleableSimpleActivate

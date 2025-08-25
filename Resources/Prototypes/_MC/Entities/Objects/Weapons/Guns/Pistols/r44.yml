@@ -42,8 +42,8 @@
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS5RedDotSight
+          - MCAttachmentRailFlashlight
+          - MCAttachmentRedDotSight
       rmc-aslot-underbarrel:
         whitelist:
           tags:

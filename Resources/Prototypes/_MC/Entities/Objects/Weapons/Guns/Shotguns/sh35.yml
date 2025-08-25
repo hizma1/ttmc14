@@ -36,7 +36,7 @@
       mc-slot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
+          - MCAttachmentMagneticHarness
       mc-slot-stock:
         locked: true
         startingAttachable: MCAttachmentStockSH35

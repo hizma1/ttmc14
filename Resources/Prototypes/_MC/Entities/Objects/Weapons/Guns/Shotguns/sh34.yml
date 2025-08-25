@@ -51,7 +51,7 @@
       mc-slot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
+          - MCAttachmentMagneticHarness
   - type: AttachableHolderVisuals
     offsets: {}
 

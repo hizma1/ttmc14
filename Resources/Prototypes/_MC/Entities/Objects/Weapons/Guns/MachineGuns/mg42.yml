@@ -82,11 +82,11 @@
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS6ReflexSight
-          - RMCAttachmentS42xTelescopicMiniscope
-          # - TODO: T47 Scope
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
+          - MCAttachmentMiniScope
+          - MCAttachmentRedDotSight
+          - MCAttachmentT47RailScope
       rmc-aslot-underbarrel:
         whitelist:
           tags:

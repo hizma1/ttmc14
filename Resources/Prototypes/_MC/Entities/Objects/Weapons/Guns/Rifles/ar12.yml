@@ -72,12 +72,10 @@
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS42xTelescopicMiniscope
-          - RMCAttachmentS5RedDotSight
-          - RMCAttachmentS6ReflexSight
-          - RMCAttachmentS84xTelescopicScope
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
+          - MCAttachmentMiniScope
+          - MCAttachmentRedDotSight
           # - TODO: BuildSentryKit
           # - TODO: MotionDetector
           # - TODO: ShoulderGun

@@ -63,11 +63,11 @@
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS42xTelescopicMiniscope
-          - RMCAttachmentS6ReflexSight
-          # - TODO: T47 Scope
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
+          - MCAttachmentMiniScope
+          - MCAttachmentRedDotSight
+          - MCAttachmentT47RailScope
           # - TODO: Tactical Sensor
       rmc-aslot-underbarrel:
         whitelist:

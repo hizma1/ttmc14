@@ -60,7 +60,7 @@
       mc-slot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
+          - MCAttachmentMagneticHarness
 
 - type: entity
   parent: CMMagazineRifleBase

@@ -75,10 +75,10 @@
         startingAttachable: MCAttachmentMiniScope
         whitelist:
           tags:
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentS5RedDotSight
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
           - MCAttachmentMiniScope
+          - MCAttachmentRedDotSight
           # - TODO: Tactical sensor
       rmc-aslot-underbarrel:
         whitelist:

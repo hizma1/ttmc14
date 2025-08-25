@@ -70,8 +70,8 @@
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS5RedDotSight
+          - MCAttachmentRailFlashlight
+          - MCAttachmentRedDotSight
       rmc-aslot-underbarrel:
         locked: true
         startingAttachable: RMCAttachmentLaserLightModule

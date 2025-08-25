@@ -89,7 +89,7 @@
       mc-slot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
+          - MCAttachmentMagneticHarness
       mc-slot-muzzle:
         locked: true
         startingAttachable: MCAttachmentMuzzleSG29
