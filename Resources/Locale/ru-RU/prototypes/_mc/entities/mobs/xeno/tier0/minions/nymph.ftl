@@ -1,2 +1,2 @@
-ent-MCXenoMinionNymph = нимфа
+ent-MCXenoMinionNymph = нимф
     .desc = Инопланетное существо.
