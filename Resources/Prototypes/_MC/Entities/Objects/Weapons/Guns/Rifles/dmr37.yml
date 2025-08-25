@@ -62,7 +62,7 @@
           tags:
           - RMCAttachmentExtendedBarrel
           - RMCAttachmentSuppressor
-          - RMCM5Bayonet
+          - MCAttachmentBayonet
           - RMCAttachmentRecoilCompensator
           # - TODO: Heavy barrel
       rmc-aslot-rail:

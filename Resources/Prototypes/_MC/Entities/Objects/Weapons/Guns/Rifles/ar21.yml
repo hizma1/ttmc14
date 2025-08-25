@@ -58,7 +58,7 @@
           tags:
           - RMCAttachmentExtendedBarrel
           - RMCAttachmentSuppressor
-          - RMCM5Bayonet
+          - MCAttachmentBayonet
           - RMCAttachmentRecoilCompensator
       rmc-aslot-rail:
         whitelist:

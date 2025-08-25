@@ -1,5 +1,5 @@
 - type: entity
-  parent: RMCAttachmentScopeBase
+  parent: MCAttachmentBaseScope
   id: MCAttachmentMiniScope
   name: mini rail scope
   description: A small rail mounted zoom sight scope. Allows zoom by activating the attachment.
@@ -9,7 +9,7 @@
     state: mini
   - type: Tag
     tags:
-    - RMCAttachmentRail
+    - MCAttachmentRail
     - MCAttachmentMiniScope
   - type: AttachableVisuals
   - type: AttachableToggleable
@@ -45,7 +45,7 @@
     - conditions:
         wieldedOnly: true
         inactiveOnly: true
-      accuracyAddMult: -0.05 #TODO: Add flare gun modifiers when it's implemented.
+      accuracyAddMult: -0.05
 
 - type: Tag
   id: MCAttachmentMiniScope

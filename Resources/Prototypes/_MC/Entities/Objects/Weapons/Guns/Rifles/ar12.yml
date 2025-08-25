@@ -65,7 +65,7 @@
           tags:
           - RMCAttachmentExtendedBarrel
           - RMCAttachmentSuppressor
-          - RMCM5Bayonet
+          - MCAttachmentBayonet
           - RMCAttachmentRecoilCompensator
           # - TODO: M22
           # - TODO: Heavy Barrel
