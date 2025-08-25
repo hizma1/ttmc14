@@ -9,7 +9,7 @@
     state: mini
   - type: Tag
     tags:
-    - MCAttachmentRail
+    - MCAttachmentBaseRail
     - MCAttachmentMiniScope
   - type: AttachableVisuals
   - type: AttachableToggleable

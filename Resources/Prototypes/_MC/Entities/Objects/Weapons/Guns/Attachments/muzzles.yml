@@ -27,7 +27,7 @@
     tags:
     - Knife
     - MCBayonet
-    - MCAttachmentMuzzle
+    - MCAttachmentBaseMuzzle
     - MCAttachmentBayonet
   - type: Sprite
     sprite: _MC/Objects/Weapons/Guns/Attachments/muzzle.rsi
@@ -78,7 +78,7 @@
     state: comp
   - type: Tag
     tags:
-    - MCAttachmentMuzzle
+    - MCAttachmentBaseMuzzle
     - MCAttachmentRecoilCompensator
   - type: AttachableVisuals
   - type: AttachableWeaponRangedMods
@@ -103,7 +103,7 @@
     state: ebarrel
   - type: Tag
     tags:
-    - MCAttachmentMuzzle
+    - MCAttachmentBaseMuzzle
     - MCAttachmentExtendedMuzzle
   - type: AttachableVisuals
   - type: AttachableWeaponRangedMods
@@ -127,7 +127,7 @@
     state: suppressor
   - type: Tag
     tags:
-    - MCAttachmentMuzzle
+    - MCAttachmentBaseMuzzle
     - MCAttachmentSuppressor
   - type: AttachableVisuals
     prefix: suppressor2
@@ -150,7 +150,7 @@
     state: hbarrel
   - type: Tag
     tags:
-    - MCAttachmentMuzzle
+    - MCAttachmentBaseMuzzle
     - MCAttachmentMuzzleCharger
   - type: AttachableVisuals
   - type: AttachableWeaponRangedMods
