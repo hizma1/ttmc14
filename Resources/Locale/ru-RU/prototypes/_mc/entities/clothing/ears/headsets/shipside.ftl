@@ -1,5 +1,4 @@
-
-ent-MCHeadsetResearch = research radio headset
-    .desc = A standard military radio headset.
-ent-MCHeadsetMedical = medical radio headset
-    .desc = A standard military radio headset.
+ent-MCHeadsetResearch = гарнитура исследователя
+    .desc = Стандартная военная гарнитура.
+ent-MCHeadsetMedical = гарнитура медецинского персонала
+    .desc = Стандартная военная гарнитура.

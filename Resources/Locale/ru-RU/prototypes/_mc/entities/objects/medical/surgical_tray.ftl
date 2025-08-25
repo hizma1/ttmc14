@@ -1,6 +1,6 @@
-ent-MCSurgicalTrayEmpty = surgical tray
-    .desc = A small metallic tray covered in sterile tarp. Intended to store surgical tools in a neat and clean fashion.
+ent-MCSurgicalTrayEmpty = хирургический лоток
+    .desc = Небольшой металлический лоток, накрытый стерильным чехлом. Предназначен для аккуратного и стерильного хранения хирургических инструментов.
     .suffix = MC
-ent-MCSurgicalTray = surgical tray
+ent-MCSurgicalTray = хирургический лоток
     .suffix = Filled, All Tools MC
     .desc = { ent-MCSurgicalTrayEmpty.desc }

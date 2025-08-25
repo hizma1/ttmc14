@@ -1,2 +1,2 @@
-ent-MCXenoMinionBeetle = beetle
-    .desc = An alien.
+ent-MCXenoMinionBeetle = жук
+    .desc = Инопланетное существо.

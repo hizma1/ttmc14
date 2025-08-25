@@ -1,5 +1,5 @@
-ent-MCBeltMedicBag = M276 pattern lifesaver bag
-    .desc = The M276 is the standard load-bearing equipment of the TGMC. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies and is common among medics.
+ent-MCBeltMedicBag = спасательная сумка образца M276
+    .desc = M276 — стандартное снаряжение для переноски медицинского снаряжения TGMC. В этой комплектации используется вещевой мешок, наполненный различными инъекторами и лёгкими медицинскими принадлежностями; такое снаряжение обычно используется медиками.
 ent-MCBeltMedicBagFull = { ent-MCBeltMedicBag }
     .suffix = Full
     .desc = { ent-MCBeltMedicBag.desc }

@@ -1,6 +1,6 @@
-ent-MCLaceup = laceup shoes
-    .desc = The height of fashion, and they're pre-polished!
+ent-MCLaceup = туфли на шнуровке
+    .desc = Последний писк моды, и они уже начищены!
     .suffix = MC
-ent-MCLaceupSpatialAgent = spatial agent's shoes
-    .desc = Shoes worn by a spatial agent.
+ent-MCLaceupSpatialAgent = обувь пространственного агента
+    .desc = Обувь, которую носит пространственный агент.
     .suffix = MC, Admin
