@@ -107,7 +107,7 @@
 
 # Attachments
 - type: entity
-  parent: MCAttachmentStock
+  parent: MCAttachmentBaseMuzzle
   id: MCAttachmentStockSG62
   categories: [ HideSpawnMenu ]
   components:
@@ -115,7 +115,7 @@
     state: sg62_a
   - type: Tag
     tags:
-    - MCAttachmentStock
+    - MCAttachmentBaseMuzzle
     - MCAttachmentStockSG62
   - type: AttachableVisuals
     suffix: ""
@@ -124,14 +124,14 @@
   id: MCAttachmentStockSG62
 
 - type: entity
-  parent: [ MCAttachmentUnderbarrel, RMCAttachableToggleableBase ]
+  parent: [ MCAttachmentBaseUnderbarrel, RMCAttachableToggleableBase ]
   id: MCAttachmentUnderbarrelSG62
   name: SG-153 spotting rifle
   description: An underslung spotting rifle, generally found ontop of another gun.
   components:
   - type: Tag
     tags:
-    - MCAttachmentUnderbarrel
+    - MCAttachmentBaseUnderbarrel
     - MCAttachmentUnderbarrelSG62
   - type: Sprite
     layers:

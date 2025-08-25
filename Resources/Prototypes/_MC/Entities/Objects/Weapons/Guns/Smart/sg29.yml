@@ -109,7 +109,7 @@
 
 # Attachments
 - type: entity
-  parent: MCAttachmentMuzzle
+  parent: MCAttachmentBaseMuzzle
   id: MCAttachmentMuzzleSG29
   categories: [ HideSpawnMenu ]
   components:
@@ -117,7 +117,7 @@
     state: sg29barrel_a
   - type: Tag
     tags:
-    - MCAttachmentMuzzle
+    - MCAttachmentBaseMuzzle
     - MCAttachmentMuzzleSG29
   - type: AttachableVisuals
     suffix: ""
@@ -126,7 +126,7 @@
   id: MCAttachmentMuzzleSG29
 
 - type: entity
-  parent: MCAttachmentStock
+  parent: MCAttachmentBaseStock
   id: MCAttachmentStockSG29
   categories: [ HideSpawnMenu ]
   components:
@@ -134,7 +134,7 @@
     state: sg29_a
   - type: Tag
     tags:
-    - MCAttachmentStock
+    - MCAttachmentBaseStock
     - MCAttachmentStockSG29
   - type: AttachableVisuals
     suffix: ""
