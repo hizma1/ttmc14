@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/guns/attachments/gun.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "masterkey"
+    },
+    {
+      "name": "masterkey-on"
+    },
+    {
+      "name": "masterkey_e"
+    },
+    {
+      "name": "masterkey_a"
+    },
+    {
+      "name": "masterkey_e_a"
+    },
+    {
+      "name": "hydrocannon"
+    },
+    {
+      "name": "hydrocannon_e"
+    },
+    {
+      "name": "hydrocannon_a"
+    },
+    {
+      "name": "hydrocannon_e_a"
+    },
+    {
+      "name": "hydrocannon_pepper"
+    },
+    {
+      "name": "hydrocannon_pepper_e"
+    },
+    {
+      "name": "grenade_a"
+    },
+    {
+      "name": "grenade_e_a"
+    },
+    {
+      "name": "grenade"
+    },
+    {
+      "name": "grenade-on"
+    },
+    {
+      "name": "grenade_e"
+    },
+    {
+      "name": "grenade_mpi_a"
+    },
+    {
+      "name": "grenade_mpi_e_a"
+    },
+    {
+      "name": "grenade_mpi"
+    },
+    {
+      "name": "grenade_mpi_e"
+    },
+    {
+      "name": "t64_grenade"
+    },
+    {
+      "name": "t64_grenade_e"
+    },
+    {
+      "name": "t64_grenade_a"
+    },
+    {
+      "name": "t64_grenade_e_a"
+    },
+    {
+      "name": "tx55gl"
+    },
+    {
+      "name": "tx55gl_e"
+    },
+    {
+      "name": "tx55gl_a"
+    },
+    {
+      "name": "tx55gl_e_a"
+    },
+    {
+      "name": "va61"
+    },
+    {
+      "name": "va61_e"
+    }
+  ]
+}

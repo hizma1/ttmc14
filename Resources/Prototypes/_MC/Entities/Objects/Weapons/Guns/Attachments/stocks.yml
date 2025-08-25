@@ -49,7 +49,7 @@
       scatterFlat: 2
 
 - type: entity
-  parent: RMCStockAttachmentCollapsibleBase
+  parent: MCAttachmentBaseCollapsibleStock
   id: MCAttachmentStockMP19
   name: MP-19 machinepistol stock
   description: A submachinegun stock distributed in small numbers to TGMC forces. Compatible with the MP-19, this stock reduces recoil and improves accuracy, but at a reduction to handling and agility. Seemingly a bit more effective in a brawl.
@@ -88,7 +88,7 @@
     - conditions:
         wieldedOnly: true
         activeOnly: true
-      accuracyAddMult: 0.3
+      accuracyAddMult: 0.30
       recoilFlat: -3
       scatterFlat: -2
     - conditions:

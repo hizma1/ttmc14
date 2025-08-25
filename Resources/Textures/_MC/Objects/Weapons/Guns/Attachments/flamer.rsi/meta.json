@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/guns/attachments/flamer.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "flamethrower",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "flamethrower_e"
+    },
+    {
+      "name": "mag-0"
+    },
+    {
+      "name": "flamethrower_a",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "flamethrower-on",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "flamethrower_e_a"
+    },
+    {
+      "name": "flamethrower_l_a",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "directional"
+    },
+    {
+      "name": "directional_a"
+    },
+    {
+      "name": "wide"
+    },
+    {
+      "name": "wide_a"
+    },
+    {
+      "name": "wide_red"
+    },
+    {
+      "name": "wide_red_a"
+    },
+    {
+      "name": "long"
+    },
+    {
+      "name": "long_a"
+    },
+    {
+      "name": "lit",
+      "delays": [
+        [
+          0.6,
+          0.2,
+          0.5,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "igniter1"
+    },
+    {
+      "name": "igniter0"
+    }
+  ]
+}

@@ -82,17 +82,15 @@
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentAngledGrip
-          - RMCAttachmentBipod
-          - RMCAttachmentFlashlightGrip
-          - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
-          - RMCAttachmentExtinguisher
-          - RMCAttachmentGyroscopicStabilizer
-          - RMCAttachmentBurstFireAssembly
-          - RMCAttachmentFlamer
-          - RMCAttachmentU7UnderbarrelShotgun
-          - RMCAttachmentU1GrenadeLauncher
+          - MCAttachmentUnderbarrelFlashlight
+          - MCAttachmentGrenadeLauncher
+          - MCAttachmentMiniFlamethrower
+          - MCAttachmentLaserSight
+          - MCAttachmentGyroscopicStabilizer
+          - MCAttachmentBipod
+          - MCAttachmentVerticalGrip
+          - MCAttachmentAngledGrip
+          - MCAttachmentBurstFireAssembly
           # - TODO: Attached TX-7
           # - TODO: PepperBall mini
   - type: AttachableHolderVisuals

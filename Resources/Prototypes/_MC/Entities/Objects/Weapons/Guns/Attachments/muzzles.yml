@@ -113,11 +113,11 @@
     - projectileSpeedFlat: 10
     - conditions:
         wieldedOnly: true
-      accuracyAddMult: 1.5
+      accuracyAddMult: 0.15
       scatterFlat: -1
     - conditions:
         unwieldedOnly: true
-      accuracyAddMult: 1
+      accuracyAddMult: 0.10
 
 - type: entity
   parent: MCAttachmentBaseMuzzle
@@ -145,7 +145,7 @@
     - projectileSpeedFlat: -10
     - conditions:
         wieldedOnly: true
-      accuracyAddMult: 1
+      accuracyAddMult: 0.10
       scatterFlat: -2
       recoilFlat: -1
     - conditions:
@@ -172,4 +172,4 @@
     - projectileSpeedFlat: 20
     - conditions:
         wieldedOnly: true
-      accuracyAddMult: -0.5
+      accuracyAddMult: -0.05

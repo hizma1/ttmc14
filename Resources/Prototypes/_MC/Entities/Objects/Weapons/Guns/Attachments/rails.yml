@@ -67,7 +67,7 @@
       sprite: _MC/Objects/Weapons/Guns/Attachments/rail.rsi
       state: flashlight_on
     actionName: Toggle Rail Flashlight
-    actionDesc: Can be toggled on and off. A better light source than standard M3 pattern armor lights.
+    actionDesc: Can be toggled on and off.
   - type: AttachableVisuals
     showActive: true
   - type: AttachableToggleableSimpleActivate
@@ -194,10 +194,10 @@
     modifiers:
     - conditions:
         wieldedOnly: true
-      accuracyAddMult: 1.5
+      accuracyAddMult: 0.15
     - conditions:
         unwieldedOnly: true
-      accuracyAddMult: 1.0
+      accuracyAddMult: 0.10
 
 - type: Tag
   id: MCAttachmentRailFlashlight # Фонарик на рельсу
