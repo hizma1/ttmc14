@@ -57,8 +57,8 @@
           # - TODO: Tactical Sensor
   - type: AttachableHolderVisuals
     offsets:
-      rmc-aslot-barrel: 0.7, -0.0225
-      rmc-aslot-rail: 0.2, 0.09
+      rmc-aslot-barrel: 0.7, 0.2
+      rmc-aslot-rail: -0.3, 0.2
 
 - type: entity
   parent: BulletRifle10x24mm

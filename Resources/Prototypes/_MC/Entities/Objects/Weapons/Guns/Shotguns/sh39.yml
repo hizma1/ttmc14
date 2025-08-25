@@ -18,7 +18,6 @@
   - type: Gun
     shotsPerBurst: 1
   - type: ShootUseDelay
-  - type: GunRequiresWield
   - type: RMCSelectiveFire
     recoilWielded: 2
     recoilUnwielded: 4
@@ -31,16 +30,36 @@
     whitelist:
       tags:
       - MCShellShotgun
+  - type: WieldDelay
+    baseDelay: 1
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.05
     accuracyMultiplierUnwielded: 0.65
   - type: AttachableHolder
     slots:
-      mc-slot-rail:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentRecoilCompensator
+          - RMCAttachmentExtendedBarrel
+          - RMCM5Bayonet
+      rmc-aslot-rail:
         whitelist:
           tags:
           - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentRailFlashlight
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentFlashlightGrip
+          - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentAngledGrip
+          - RMCAttachmentVerticalGrip
   - type: AttachableHolderVisuals
-    offsets: {}
-  - type: WieldDelay
-    baseDelay: 1
+    offsets:
+      rmc-aslot-barrel: 0.80, 0.055
+      rmc-aslot-rail: -0.05, 0.125
+      rmc-aslot-underbarrel: 0.1, -0.325

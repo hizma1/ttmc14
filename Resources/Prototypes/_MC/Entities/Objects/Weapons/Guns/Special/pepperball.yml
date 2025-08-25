@@ -63,7 +63,7 @@
           - RMCAttachmentRailFlashlight
   - type: AttachableHolderVisuals
     offsets:
-      rmc-aslot-rail: 0.2, 0.09
+      rmc-aslot-rail: 0.0, 0.05
 
 - type: entity
   parent: CMMagazineRifleBase
