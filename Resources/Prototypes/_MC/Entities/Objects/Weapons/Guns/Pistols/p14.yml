@@ -74,9 +74,9 @@
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentLaserSight
-          - RMCAttachmentGyroscopicStabilizer
-          - RMCAttachmentBurstFireAssembly
+          - MCAttachmentLaserSight
+          - MCAttachmentGyroscopicStabilizer
+          - MCAttachmentBurstFireAssembly
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.685, 0.125

@@ -72,14 +72,14 @@
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentAngledGrip
-          - RMCAttachmentBipod
-          - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
-          - RMCAttachmentGyroscopicStabilizer
-          - RMCAttachmentFlamer
-          - RMCAttachmentU7UnderbarrelShotgun
-          - RMCAttachmentU1GrenadeLauncher
+          - MCAttachmentAngledGrip
+          - MCAttachmentBipod
+          - MCAttachmentLaserSight
+          - MCAttachmentVerticalGrip
+          - MCAttachmentGyroscopicStabilizer
+          - MCAttachmentMiniFlamethrower
+          - MCAttachmentUnderbarrelShotgun
+          - MCAttachmentGrenadeLauncher
           # - TODO: Mini Pepperball Gun
           # - TODO: PepperBall mini
           # - TODO: PP-7 Plasma Pistol

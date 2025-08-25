@@ -78,9 +78,9 @@
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
-          - RMCAttachmentGyroscopicStabilizer
+          - MCAttachmentLaserSight
+          - MCAttachmentVerticalGrip
+          - MCAttachmentGyroscopicStabilizer
       rmc-aslot-stock:
         startingAttachable: MCAttachmentStockMP19
         whitelist:

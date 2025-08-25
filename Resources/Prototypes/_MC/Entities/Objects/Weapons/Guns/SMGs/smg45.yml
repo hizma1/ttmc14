@@ -85,12 +85,12 @@
         whitelist:
           tags:
           - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
-          - RMCAttachmentGyroscopicStabilizer
-          - RMCAttachmentBurstFireAssembly
-          - RMCAttachmentFlamer
-          - RMCAttachmentU7UnderbarrelShotgun
-          - RMCAttachmentU1GrenadeLauncher
+          - MCAttachmentVerticalGrip
+          - MCAttachmentGyroscopicStabilizer
+          - MCAttachmentBurstFireAssembly
+          - MCAttachmentMiniFlamethrower
+          - MCAttachmentUnderbarrelShotgun
+          - MCAttachmentGrenadeLauncher
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.84, 0.05

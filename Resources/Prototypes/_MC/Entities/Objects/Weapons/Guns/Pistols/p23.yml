@@ -74,10 +74,10 @@
           - MCAttachmentRedDotSight
       rmc-aslot-underbarrel:
         locked: true
-        startingAttachable: RMCAttachmentLaserLightModule
+        startingAttachable: MCAttachmentLaserSight
         whitelist:
           tags:
-          - RMCAttachmentLaserLightModule
+          - MCAttachmentLaserSight
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.685, 0.125
