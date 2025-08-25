@@ -1,2 +1,2 @@
-ent-MCXenoMinionBaneling = банелинг
+ent-MCXenoMinionBaneling = бейлинг
     .desc = Инопланетное существо.
