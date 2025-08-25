@@ -63,8 +63,8 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCAttachmentBarrelCharger
-          - RMCAttachmentSuppressor
+          - MCAttachmentMuzzleCharger
+          - MCAttachmentSuppressor
       rmc-aslot-rail:
         whitelist:
           tags:

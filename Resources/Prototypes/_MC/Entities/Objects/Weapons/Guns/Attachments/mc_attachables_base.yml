@@ -1,15 +1,15 @@
 # Tags for Attachments
 - type: Tag
-  id: MCAttachmentBaseMuzzle # Дуло
+  id: MCAttachmentMuzzle # Дуло
 
 - type: Tag
-  id: MCAttachmentBaseRail # Планка
+  id: MCAttachmentRail # Планка
 
 - type: Tag
-  id: MCAttachmentBaseStock # Приклад
+  id: MCAttachmentStock # Приклад
 
 - type: Tag
-  id: MCAttachmentBaseUnderbarrel # Подствольник
+  id: MCAttachmentUnderbarrel # Подствольник
 
 # Base Attachable
 - type: entity
@@ -41,7 +41,7 @@
     sprite: _MC/Objects/Weapons/Guns/Attachments/muzzle.rsi
   - type: Tag
     tags:
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentMuzzle
 
 - type: entity
   abstract: true
@@ -63,7 +63,7 @@
     sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
   - type: Tag
     tags:
-    - MCAttachmentBaseStock
+    - MCAttachmentStock
 
 - type: entity
   parent: MCAttachableBase
@@ -74,7 +74,7 @@
     sprite: _MC/Objects/Weapons/Guns/Attachments/underbarrel.rsi
   - type: Tag
     tags:
-    - MCAttachmentBaseUnderbarrel
+    - MCAttachmentUnderbarrel
 
 - type: entity
   abstract: true
@@ -85,7 +85,7 @@
     showActive: true
   - type: Tag
     tags:
-    - MCAttachmentBaseStock
+    - MCAttachmentStock
   - type: AttachableToggleable
     activatePopupText: attachable-popup-activate-unfold
     deactivatePopupText: attachable-popup-deactivate-collapse

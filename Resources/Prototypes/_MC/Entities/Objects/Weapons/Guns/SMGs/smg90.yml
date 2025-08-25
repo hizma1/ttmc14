@@ -61,9 +61,9 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCAttachmentExtendedBarrel
-          - RMCAttachmentRecoilCompensator
-          - RMCAttachmentSuppressor
+           - MCAttachmentExtendedMuzzle
+           - MCAttachmentSuppressor
+           - MCAttachmentRecoilCompensator
           # - TODO: Heavy Barrel
       rmc-aslot-rail:
         whitelist:

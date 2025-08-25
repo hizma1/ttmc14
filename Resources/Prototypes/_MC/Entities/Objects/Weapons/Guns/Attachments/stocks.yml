@@ -9,7 +9,7 @@
     state: sh35
   - type: Tag
     tags:
-    - MCAttachmentBaseStock
+    - MCAttachmentStock
     - MCAttachmentStockSH35
   - type: AttachableVisuals
     suffix: ""
@@ -59,7 +59,7 @@
     state: mp19
   - type: Tag
     tags:
-    - MCAttachmentBaseStock
+    - MCAttachmentStock
     - MCAttachmentStockMP19
   - type: AttachableVisuals
     suffix: ""

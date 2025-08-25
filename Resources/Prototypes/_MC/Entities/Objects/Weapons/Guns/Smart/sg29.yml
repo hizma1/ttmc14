@@ -117,7 +117,7 @@
     state: sg29barrel_a
   - type: Tag
     tags:
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentMuzzle
     - MCAttachmentMuzzleSG29
   - type: AttachableVisuals
     suffix: ""
@@ -134,7 +134,7 @@
     state: sg29_a
   - type: Tag
     tags:
-    - MCAttachmentBaseStock
+    - MCAttachmentStock
     - MCAttachmentStockSG29
   - type: AttachableVisuals
     suffix: ""

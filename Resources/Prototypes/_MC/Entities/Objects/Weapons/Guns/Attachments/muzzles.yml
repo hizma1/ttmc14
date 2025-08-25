@@ -27,7 +27,7 @@
     tags:
     - Knife
     - MCBayonet
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentMuzzle
     - MCAttachmentBayonet
   - type: Sprite
     sprite: _MC/Objects/Weapons/Guns/Attachments/muzzle.rsi
@@ -78,59 +78,62 @@
     state: comp
   - type: Tag
     tags:
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentMuzzle
     - MCAttachmentRecoilCompensator
   - type: AttachableVisuals
   - type: AttachableWeaponRangedMods
     modifiers:
-    - accuracyAddMult: 0.2
-      damageFalloffAddMult: 0.1
-      damageAddMult: -0.1
     - conditions:
         wieldedOnly: true
-      recoilFlat: -3
+      scatterFlat: -3
+      recoilFlat: -2
     - conditions:
         unwieldedOnly: true
+      scatterFlat: -3
       recoilFlat: -2
 
 - type: entity
   parent: MCAttachmentBaseMuzzle
   id: MCAttachmentExtendedMuzzle
   name: extended barrel
-  description: The lengthened barrel speeds up and stabilizes the bullet, increasing velocity.
+  description: A lengthened barrel allows for lessened scatter, greater accuracy and muzzle velocity due to increased stabilization and shockwave exposure.
   components:
   - type: Sprite
     state: ebarrel
   - type: Tag
     tags:
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentMuzzle
     - MCAttachmentExtendedMuzzle
   - type: AttachableVisuals
+  - type: AttachableSizeMods
+    modifiers:
+    - size: 1
   - type: AttachableWeaponRangedMods
     modifiers:
+    - projectileSpeedFlat: 10
     - conditions:
         wieldedOnly: true
-      accuracyAddMult: 0.2
-    - projectileSpeedFlat: 10
-  - type: AttachableWieldDelayMods
-    modifiers:
-    - delay: 0.4
+      accuracyAddMult: 1.5
+      scatterFlat: -1
+    - conditions:
+        unwieldedOnly: true
+      accuracyAddMult: 1
 
 - type: entity
   parent: MCAttachmentBaseMuzzle
   id: MCAttachmentSuppressor
   name: suppressor
   description: "A small tube with exhaust ports to expel noise and gas.
-    Does not completely silence a weapon, but does make it much quieter at the cost of slightly reduced damage."
+    Does not completely silence a weapon, but does make it much quieter and a little more accurate and stable at the cost of bullet speed."
   components:
   - type: Sprite
     state: suppressor
   - type: Tag
     tags:
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentMuzzle
     - MCAttachmentSuppressor
   - type: AttachableVisuals
-    prefix: suppressor2
+    prefix: suppressor
   - type: AttachableSilencer
     sound:
       collection: CMSilencedShoot
@@ -138,37 +141,35 @@
         maxDistance: 6
   - type: AttachableWeaponRangedMods
     modifiers:
-    - damageFalloffAddMult: 0.1
+    - damageFalloffAddMult: -0.1
+    - projectileSpeedFlat: -10
+    - conditions:
+        wieldedOnly: true
+      accuracyAddMult: 1
+      scatterFlat: -2
+      recoilFlat: -1
+    - conditions:
+        unwieldedOnly: true
+      scatterFlat: -2
 
 - type: entity
   parent: MCAttachmentBaseMuzzle
   id: MCAttachmentMuzzleCharger
   name: barrel charger
-  description: A hyper threaded barrel extender that fits to the muzzle of most firearms. Greatly increases projectile damage at the cost of firing speed.
+  description: "A fitted barrel extender that goes on the muzzle, with a small shaped charge that propels a bullet much faster.
+    Greatly increases projectile speed and reduces damage falloff."
   components:
   - type: Sprite
     state: hbarrel
   - type: Tag
     tags:
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentMuzzle
     - MCAttachmentMuzzleCharger
   - type: AttachableVisuals
   - type: AttachableWeaponRangedMods
     modifiers:
-    - fireDelayFlat: 0.25
+    - damageFalloffAddMult: -0.2
+    - projectileSpeedFlat: 20
     - conditions:
         wieldedOnly: true
-      accuracyAddMult: -0.15
-    - conditions:
-        unwieldedOnly: true
-      accuracyAddMult: -0.35
-    - conditions:
-        whitelist:
-          tags:
-          - RMCWeaponShotgun
-      damageAddMult: 0.05
-    - conditions:
-        blacklist:
-          tags:
-          - RMCWeaponShotgun
-      damageAddMult: 0.3
+      accuracyAddMult: -0.5

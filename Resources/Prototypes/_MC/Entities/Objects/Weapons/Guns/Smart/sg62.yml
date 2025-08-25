@@ -107,7 +107,7 @@
 
 # Attachments
 - type: entity
-  parent: MCAttachmentBaseMuzzle
+  parent: MCAttachmentBaseStock
   id: MCAttachmentStockSG62
   categories: [ HideSpawnMenu ]
   components:
@@ -115,7 +115,7 @@
     state: sg62_a
   - type: Tag
     tags:
-    - MCAttachmentBaseMuzzle
+    - MCAttachmentStock
     - MCAttachmentStockSG62
   - type: AttachableVisuals
     suffix: ""
@@ -131,7 +131,7 @@
   components:
   - type: Tag
     tags:
-    - MCAttachmentBaseUnderbarrel
+    - MCAttachmentUnderbarrel
     - MCAttachmentUnderbarrelSG62
   - type: Sprite
     layers:
