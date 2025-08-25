@@ -97,11 +97,12 @@
     thresholds:
     - range: 30
       falloff: 10
-  - type: RMCStunOnHit
-    maxRange: 30
-    stunTime: 1.5
-    superSlowTime: 3
-    slowTime: 0
+  - type: MCStunOnHit
+    maxDistance: 12
+    paralyzeTime: 0.5
+    staggerTime: 1
+    knockback: 2
+    slowdownTime: 0.5
 
 - type: entity
   parent: CMShellShotgunBase
