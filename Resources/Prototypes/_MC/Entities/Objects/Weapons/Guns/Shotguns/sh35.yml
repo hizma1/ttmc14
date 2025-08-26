@@ -33,16 +33,39 @@
   - type: PumpAction
   - type: AttachableHolder
     slots:
-      mc-slot-rail:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentRecoilCompensator
+          - RMCAttachmentExtendedBarrel
+          - RMCM5Bayonet
+      rmc-aslot-rail:
         whitelist:
           tags:
           - MCAttachmentMagneticHarness
       mc-slot-stock:
-        locked: true
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentRailFlashlight
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - MCAttachmentUnderbarrelFlashlight
+          - MCAttachmentGyroscopicStabilizer
+          - MCAttachmentAngledGrip
+          - MCAttachmentVerticalGrip
+      rmc-aslot-stock:
         startingAttachable: MCAttachmentStockSH35
         whitelist:
           tags:
           - MCAttachmentStockSH35
   - type: AttachableHolderVisuals
     offsets:
-      mc-slot-stock: -0.1875, 0.03125
+      rmc-aslot-barrel: 0.8, 0.0
+      rmc-aslot-rail: -0.15, 0.085
+      rmc-aslot-underbarrel: 0.3, -0.35
+      rmc-aslot-stock: 0.0, 0.0

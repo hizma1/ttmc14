@@ -13,7 +13,7 @@
       map: [ "enum.GunVisualLayers.Mag" ]
     - sprite: _MC/Objects/Weapons/Guns/Attachments/stock.rsi
       state: mg60
-      offset: -0.6, 0
+      offset: -1.2, 0
   - type: Clothing
     sprite: _MC/Objects/Weapons/Guns/Machine/mg60.rsi
   - type: Tag
@@ -81,9 +81,9 @@
           - MCAttachmentBipod
   - type: AttachableHolderVisuals
     offsets:
-      rmc-aslot-barrel: 0.7, -0.0225
-      rmc-aslot-rail: 0.2, 0.09
-      rmc-aslot-underbarrel: 0.28, -0.31
+      rmc-aslot-barrel: 0.7, 0.11
+      rmc-aslot-rail: -0.7, 0.15
+      rmc-aslot-underbarrel: -0.05, -0.25
   - type: Wieldable
 
 - type: entity

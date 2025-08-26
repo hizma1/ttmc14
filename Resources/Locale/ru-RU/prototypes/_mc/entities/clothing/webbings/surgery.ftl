@@ -1,5 +1,5 @@
-ent-MCWebbingSurgery = surgical webbing
-    .desc = A clean white Nylon webbing composed of many straps and pockets to hold surgical tools.
+ent-MCWebbingSurgery = хирургическая разгрузка
+    .desc = Чистая белая нейлоновая разгрузочная система, состоящая из множества ремней и карманов для хранения хирургических инструментов.
     .suffix = MC
 ent-MCWebbingSurgeryFill = { ent-MCWebbingSurgery }
     .suffix = Fill, MC

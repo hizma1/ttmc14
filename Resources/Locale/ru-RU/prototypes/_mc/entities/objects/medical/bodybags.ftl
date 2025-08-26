@@ -1,11 +1,11 @@
-ent-MCBodyBag = body bag
-    .desc = A folded bag designed for the storage and transportation of cadavers.
+ent-MCBodyBag = мешок для тел
+    .desc = Складной мешок, предназначенный для хранения и транспортировки тел умерших.
     .suffix = MC
 ent-MCBodyBagFolded = { ent-MCBodyBag }
     .suffix = folded
     .desc = { ent-MCBodyBag.desc }
-ent-MCStasisBag = stasis bag
-    .desc = A folded, reusable bag designed to prevent additional damage to an occupant.
+ent-MCStasisBag = стазил мешок
+    .desc = Многоразовый складной мешок, обеспечивающий защиту находящегося внутри от повреждений.
     .suffix = MC
 ent-MCStasisBagFolded = { ent-MCStasisBag }
     .suffix = MC, folded

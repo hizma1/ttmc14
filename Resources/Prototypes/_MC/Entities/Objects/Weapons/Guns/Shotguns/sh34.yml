@@ -48,12 +48,28 @@
       path: /Audio/_RMC14/Weapons/Guns/Breech/pkd_close_chamber.ogg
   - type: AttachableHolder
     slots:
-      mc-slot-rail:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCM5Bayonet
+      rmc-aslot-rail:
         whitelist:
           tags:
           - MCAttachmentMagneticHarness
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS5RedDotSight
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - MCAttachmentUnderbarrelFlashlight
+          - MCAttachmentVerticalGrip
   - type: AttachableHolderVisuals
-    offsets: {}
+    offsets:
+      rmc-aslot-barrel: 0.7, 0.02
+      rmc-aslot-rail: 0.0, 0.05
+      rmc-aslot-underbarrel: 0.3, -0.3
 
 - type: Tag
   id: MCWeaponShotgunSH34

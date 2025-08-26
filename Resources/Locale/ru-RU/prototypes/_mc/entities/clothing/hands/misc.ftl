@@ -1,5 +1,5 @@
-ent-MCClothingHandsSpatialAgent = spatial agent's gloves
-    .desc = Gloves worn by a Spatial Agent.
+ent-MCClothingHandsSpatialAgent = перчатки пространственного агента
+    .desc = Перчатки, которые носит пространственный агент.
     .suffix = MC, Admin
-ent-MCClothingHandsLatex = latex gloves
-    .desc = Sterile latex gloves.
+ent-MCClothingHandsLatex = латексные перчатки
+    .desc = Стерильные латексные перчатки.

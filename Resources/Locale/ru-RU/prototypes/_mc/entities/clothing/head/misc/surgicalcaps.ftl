@@ -1,9 +1,9 @@
-ent-MCHeadCapSurgBlue = surgical cap
-    .desc = A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is baby blue.
+ent-MCHeadCapSurgBlue = хирургическая шапочка
+    .desc = Шапочка, которую хирурги надевают во время операций. Не позволяет их волосам щекотать ваши внутренние органы. Эта — нежно-голубого цвета.
     .suffix = MC
-ent-MCHeadCapSurgGreen = surgical cap
-    .desc = A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is dark green.
+ent-MCHeadCapSurgGreen = хирургическая шапочка
+    .desc = Шапочка, которую хирурги надевают во время операций. Не позволяет их волосам щекотать ваши внутренние органы. Эта — темно-зеленого цвета.
     .suffix = MC
-ent-MCHeadCapSurgPurple = surgical cap
-    .desc = A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is deep purple.
+ent-MCHeadCapSurgPurple = хирургическая шапочка
+    .desc = Шапочка, которую хирурги надевают во время операций. Не позволяет их волосам щекотать ваши внутренние органы. Эта — насыщено-фиолетового цвета.
     .suffix = MC

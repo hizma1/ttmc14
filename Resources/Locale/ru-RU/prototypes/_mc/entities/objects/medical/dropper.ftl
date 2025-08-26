@@ -1,3 +1,3 @@
 ent-MCDropper = { ent-Dropper }
-    .desc = A dropper. Transfers 5 units.
+    .desc = Пипетка. Дозирует 5 единиц.
     .suffix = MC

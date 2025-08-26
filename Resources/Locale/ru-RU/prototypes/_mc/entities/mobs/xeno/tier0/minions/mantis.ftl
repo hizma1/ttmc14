@@ -1,2 +1,2 @@
-ent-MCXenoMinionMantis = mantis
-    .desc = An alien.
+ent-MCXenoMinionMantis = богомол
+    .desc = Инопланетное существо.
