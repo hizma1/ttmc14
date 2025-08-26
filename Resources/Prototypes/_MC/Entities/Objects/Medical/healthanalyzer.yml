@@ -43,8 +43,7 @@
 
 - type: entity
   parent: MCHealthAnalyzer
-  id: MCHealthAnalyzerCombat # No Parity
-
+  id: MCHealthAnalyzerCombat
   name: HF2 combat health analyzer
   suffix: MC
   description: A high-tech portable combat body scanner capable of quickly distinguishing the vital signs of various objects. Information about the condition of the object is displayed on the front panel.

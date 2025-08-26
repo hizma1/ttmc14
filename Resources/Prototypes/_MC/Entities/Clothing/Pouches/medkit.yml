@@ -67,3 +67,18 @@
       - MCHypospray # /obj/item/reagent_containers/hypospray
       - MCAutoInjector
   - type: FixedItemSizeStorage
+
+- type: entity
+  parent: MCPouchMedkit
+  id: MCPouchMedkitCorpsmanFill
+  suffix: Corpsman, Fill
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCTraumaKit
+    - id: MCTraumaKit
+    - id: MCBurnKit
+    - id: MCBurnKit
+    - id: MCHyposprayFillMeraderm
+    - id: MCHyposprayFillQuickClotPlus
+    - id: MCHyposprayFillBKTT

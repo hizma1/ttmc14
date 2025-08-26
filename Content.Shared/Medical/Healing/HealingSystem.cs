@@ -1,3 +1,4 @@
+using Content.Shared._RMC14.Marines.Skills;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
@@ -200,10 +201,24 @@ public sealed class HealingSystem : EntitySystem
             var msg = Loc.GetString("medical-item-popup-target", ("user", Identity.Entity(user, EntityManager)), ("item", healing.Owner));
             _popupSystem.PopupEntity(msg, target, target, PopupType.Medium);
         }
-
-        var delay = isNotSelf
-            ? healing.Comp.Delay
-            : healing.Comp.Delay * GetScaledHealingPenalty(healing);
+        float delay;
+        // Если есть MedicallyUnskilledDoAfter, delay из HealingComponent полностью игнорируется
+        if (EntityManager.TryGetComponent<MedicallyUnskilledDoAfterComponent>(healing, out var doAfter))
+        {
+            var skillsSystem = EntitySystem.Get<SkillsSystem>();
+            bool isSkilled = skillsSystem.HasSkill(user, doAfter.Skill, doAfter.Min);
+            delay = isSkilled
+                ? (float)doAfter.SkilledDelay.TotalSeconds
+                : (float)doAfter.DoAfter.TotalSeconds;
+        }
+        else if (healing.Comp.Delay.HasValue)
+        {
+            delay = isNotSelf ? healing.Comp.Delay.Value : healing.Comp.Delay.Value * GetScaledHealingPenalty(healing);
+        }
+        else
+        {
+            delay = 8f;
+        }
 
         var doAfterEventArgs =
             new DoAfterArgs(EntityManager, user, delay, new HealingDoAfterEvent(), target, target: target, used: healing)
@@ -227,7 +242,7 @@ public sealed class HealingSystem : EntitySystem
     /// <returns></returns>
     public float GetScaledHealingPenalty(Entity<HealingComponent> healing)
     {
-        var output = healing.Comp.Delay;
+    var output = healing.Comp.Delay ?? 0f;
         if (!TryComp<MobThresholdsComponent>(healing, out var mobThreshold) ||
             !TryComp<DamageableComponent>(healing, out var damageable))
             return output;

@@ -40,10 +40,10 @@ public sealed partial class HealingComponent : Component
     public List<ProtoId<DamageContainerPrototype>>? DamageContainers;
 
     /// <summary>
-    /// How long it takes to apply the damage.
+    /// How long it takes to apply the damage. If not specified, no delay is applied unless overridden by another component.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float Delay = 3f;
+    public float? Delay;
 
     /// <summary>
     /// Delay multiplier when healing yourself.

@@ -11,13 +11,15 @@ using Content.Shared.Popups;
 using Content.Shared.Storage.Components;
 using Content.Shared.Storage.EntitySystems;
 using Content.Shared.Timing;
+using Content.Shared.Medical.Components;
+using Content.Shared.Inventory;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._RMC14.Medical.Scanner;
 
-public sealed class HealthScannerSystem : EntitySystem
+public sealed partial class HealthScannerSystem : EntitySystem
 {
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
@@ -32,6 +34,7 @@ public sealed class HealthScannerSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
     [Dependency] private readonly UseDelaySystem _useDelay = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!;
 
     public override void Initialize()
     {
@@ -39,9 +42,16 @@ public sealed class HealthScannerSystem : EntitySystem
         SubscribeLocalEvent<HealthScannerComponent, DoAfterAttemptEvent<HealthScannerDoAfterEvent>>(OnDoAfterAttempt);
         SubscribeLocalEvent<HealthScannerComponent, HealthScannerDoAfterEvent>(OnDoAfter);
     }
-
     private void OnAfterInteract(Entity<HealthScannerComponent> scanner, ref AfterInteractEvent args)
     {
+        if (TryComp(scanner, out MCHealthGlovesComponent? _))
+        {
+            if (!_inventory.TryGetSlotEntity(args.User, "gloves", out var equipped) || equipped != scanner.Owner)
+            {
+                return;
+            }
+        }
+
         if (!args.CanReach ||
             args.Target is not { } target ||
             !CanUseHealthScannerPopup(scanner, args.User, ref target))
@@ -108,6 +118,14 @@ public sealed class HealthScannerSystem : EntitySystem
     /// <returns></returns>
     private bool CanUseHealthScannerPopup(Entity<HealthScannerComponent> scanner, EntityUid user, ref EntityUid target)
     {
+        if (TryComp(scanner, out MCHealthGlovesComponent? _))
+        {
+            if (!_inventory.TryGetSlotEntity(user, "gloves", out var equipped) || equipped != scanner.Owner)
+            {
+                return false;
+            }
+        }
+
         SharedEntityStorageComponent? entityStorage = null;
         if (HasComp<HealthScannableContainerComponent>(target) && _entityStorage.ResolveStorage(target, ref entityStorage))
         {
@@ -127,7 +145,6 @@ public sealed class HealthScannerSystem : EntitySystem
             !HasComp<MobStateComponent>(target) ||
             !HasComp<MobThresholdsComponent>(target))
         {
-            _popup.PopupClient("You can't analyze that!", target, user);
             return false;
         }
 
@@ -150,7 +167,7 @@ public sealed class HealthScannerSystem : EntitySystem
         return true;
     }
 
-    private void UpdateUI(Entity<HealthScannerComponent> scanner)
+    public void UpdateUI(Entity<HealthScannerComponent> scanner)
     {
         if (scanner.Comp.Target is not { } target)
             return;
@@ -161,11 +178,24 @@ public sealed class HealthScannerSystem : EntitySystem
                 _ui.CloseUi(scanner.Owner, HealthScannerUIKey.Key);
 
             scanner.Comp.Target = null;
+            Dirty(scanner);
             return;
         }
 
-        if (!_rmcHands.TryGetHolder(scanner, out _))
-            return;
+        if (TryComp(scanner, out MCHealthGlovesComponent? _))
+        {
+            if (!_inventory.TryGetContainingSlot(scanner.Owner, out var slot) || slot == null || slot.Name != "gloves")
+                return;
+        }
+        else
+        {
+            var isHeld = _rmcHands.TryGetHolder(scanner, out _);
+            if (!isHeld)
+            {
+                if (!_inventory.TryGetContainingSlot(scanner.Owner, out var slot) || slot == null || slot.Name != "gloves")
+                    return;
+            }
+        }
 
         FixedPoint2 blood = 0;
         FixedPoint2 maxBlood = 0;

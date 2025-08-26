@@ -1,3 +1,5 @@
+using Content.Shared._RMC14.Medical.Wounds;
+using Content.Server._RMC14.Medical.Wounds;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Server.Atmos.EntitySystems;
@@ -773,6 +775,19 @@ public sealed class EntityEffectSystem : EntitySystem
 
     private void OnExecuteModifyBleedAmount(ref ExecuteEntityEffectEvent<ModifyBleedAmount> args)
     {
+        // Сначала обработка ран
+        if (TryComp<WoundedComponent>(args.Args.TargetEntity, out var wounded))
+        {
+            var woundsSystem = EntityManager.System<WoundsSystem>();
+            var amt = args.Effect.Amount;
+            if (args.Args is EntityEffectReagentArgs reagentArgs) {
+                if (args.Effect.Scaled)
+                    amt *= reagentArgs.Quantity.Float();
+                amt *= reagentArgs.Scale.Float();
+            }
+            woundsSystem.ModifyBleedAmount(new Entity<WoundedComponent?>(args.Args.TargetEntity, wounded), Math.Abs(amt));
+        }
+        // Затем обработка кровотока
         if (TryComp<BloodstreamComponent>(args.Args.TargetEntity, out var blood))
         {
             var amt = args.Effect.Amount;
@@ -781,7 +796,6 @@ public sealed class EntityEffectSystem : EntitySystem
                     amt *= reagentArgs.Quantity.Float();
                 amt *= reagentArgs.Scale.Float();
             }
-
             _bloodstream.TryModifyBleedAmount((args.Args.TargetEntity, blood), amt);
         }
     }

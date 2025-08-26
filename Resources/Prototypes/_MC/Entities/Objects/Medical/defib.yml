@@ -103,3 +103,43 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+
+- type: entity
+  parent: MCBaseDefibrillator
+  id: MCBaseDefibrillatorAdvanced
+  abstract: true
+  name: advanced emergency defibrillator
+  description: A device that delivers powerful shocks to resuscitate incapacitated patients. Allows to ignore armor, covering the heart, and doesn't damage the heat itself at the cost of increased charge consumption.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Medical/civdefib.rsi
+    layers:
+    - state: defib
+    - state: defib_on
+      map: [ "enum.ToggleableVisuals.Layer" ]
+      visible: false
+  - type: Item
+    size: Normal
+    sprite: _MC/Objects/Medical/civdefib.rsi
+    heldPrefix: defib
+  - type: MCDefibrillatorNoBlock
+
+- type: entity
+  id: MCDefibrillatorAdvanced
+  parent: [MCBaseDefibrillatorAdvanced, RMCPowerCellSlotUnremovable]
+  suffix: MC
+  components:
+  - type: PowerCellDraw
+    enabled: false
+    useRate: 100
+  - type: RMCPowerUsageDisplay
+
+- type: entity
+  id: MCDefibrillatorAdvancedEmpty
+  parent: MCDefibrillatorAdvanced
+  suffix: MC, Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

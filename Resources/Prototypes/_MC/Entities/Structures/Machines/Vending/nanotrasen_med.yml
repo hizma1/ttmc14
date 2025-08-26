@@ -30,6 +30,7 @@
       - id: MCPillCanisterImidazoline
         amount: 6
       - id: MCPillCanisterQuickClot
+        amount: 6
       - id: MCPillCanisterHypervene
         amount: 6
     - name: Hypospray

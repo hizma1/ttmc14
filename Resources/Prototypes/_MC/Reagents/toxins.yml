@@ -66,3 +66,21 @@
           groups:
             Toxin: 1
             Brute: 1
+
+- type: reagent
+  parent: MCReagentToxins
+  id: MCToxin
+  name: reagent-name-mc-toxin
+  desc: reagent-desc-mc-toxin
+  group: Toxins
+  flavor: bitter
+  color: "#CF3600"
+  physicalDesc: reagent-physical-desc-liquid
+  metabolisms:
+    Poison:
+      metabolismRate: 0.1
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Toxin: 0.35
