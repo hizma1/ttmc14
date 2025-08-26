@@ -319,7 +319,7 @@
       collection: RMCFlamerShoot
   - type: RMCFlamerAmmoProvider
     range: 5 # простите, но я не хочу чтобы 1 реагент напалма оставался в канистре
-    spawn: RMCTileFire
+    spawn: MCFlamethrowerFire
   - type: Wieldable
   - type: ShootUseDelay
   - type: ContainerContainer
