@@ -292,7 +292,7 @@
 - type: reaction
   id: MCQuickClotPlus
   reactants:
-    quickclot:
+    MCQuickClot:
       amount: 2
     MCLemoline:
       amount: 2
