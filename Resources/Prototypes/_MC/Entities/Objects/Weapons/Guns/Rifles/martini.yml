@@ -66,8 +66,12 @@
           # - TODO: Tactical sensor
   - type: AttachableHolderVisuals
     offsets:
-      rmc-aslot-barrel: 0.7, -0.0225
-      rmc-aslot-rail: 0.2, 0.09
+      rmc-aslot-barrel: 1.2, 0.22
+      rmc-aslot-rail: 0.22, 0.2
+  - type: GunSkilledRecoil
+    skills:
+      RMCSkillFirearms: 90
+  - type: GunRequiresWield
 
 - type: entity
   parent: BulletRifle10x24mm
@@ -93,6 +97,12 @@
     thresholds:
     - range: 30
       falloff: 10
+  - type: MCStunOnHit
+    maxDistance: 12
+    paralyzeTime: 0.5
+    staggerTime: 1
+    knockback: 2
+    slowdownTime: 0.5
 
 - type: entity
   parent: CMShellShotgunBase
@@ -112,6 +122,7 @@
     baseLayer: base
     layerStates:
     - GOV1
+    - GOV1
     - GOV2
     - GOV3
     - GOV4
@@ -126,7 +137,7 @@
   id: MCCartridgeMartini
   name: handful of crude heavy sniper bullet(.557/440)
   icon: { sprite: _MC/Objects/Weapons/Guns/Ammunition/Magazines/martini.rsi, state: GOV1 }
-  spawn: MCCartridgeMosin
+  spawn: MCCartridgeMartini
   maxCount: 5
 
 - type: Tag

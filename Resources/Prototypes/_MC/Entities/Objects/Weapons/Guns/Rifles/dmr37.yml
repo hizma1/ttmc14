@@ -86,9 +86,9 @@
           - RMCAttachmentLaserSight
   - type: AttachableHolderVisuals
     offsets:
-      rmc-aslot-barrel: 0.44, 0.19
-      rmc-aslot-rail: -0.15, 0.12
-      rmc-aslot-underbarrel: 0.28, -0.33
+      rmc-aslot-barrel: 1.2, 0.1
+      rmc-aslot-rail: 0.25, 0.12
+      rmc-aslot-underbarrel: 0.6, -0.25
 
 - type: entity
   parent: CMMagazineRifleBase
