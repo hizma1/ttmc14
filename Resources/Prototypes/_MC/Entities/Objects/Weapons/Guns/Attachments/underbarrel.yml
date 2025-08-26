@@ -318,10 +318,8 @@
     soundGunshot:
       collection: RMCFlamerShoot
   - type: RMCFlamerAmmoProvider
-    maxIntensity: 31
-    maxDuration: 17
     range: 5 # простите, но я не хочу чтобы 1 реагент напалма оставался в канистре
-    spawn: MCTileFire
+    spawn: RMCTileFire
   - type: Wieldable
   - type: ShootUseDelay
   - type: ContainerContainer
@@ -385,7 +383,7 @@
     popup: rmc-solution-transfer-whitelist-failed-not-reagent-tank
     targetWhitelist:
       tags:
-      - MCFlamerTankMini
+      - MCPyroFlamer
   - type: RefillableSolution
     solution: rmc_flamer_tank
   - type: DetailedExaminableSolution
@@ -492,7 +490,7 @@
     - MCAttachmentUnderbarrelShotgun
   - type: Wieldable
   - type: Item
-    size: Normal
+    size: Large
   - type: Gun
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_shotgun_u7.ogg
@@ -501,9 +499,9 @@
   - type: RMCSelectiveFire
     baseFireRate: 0.476
   - type: GunDamageModifier
-    multiplier: 0.85
+    multiplier: 1
   - type: RMCExtraProjectilesDamageMods
-    damageMultiplier: 0.36
+    damageMultiplier: 1
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -516,7 +514,6 @@
       tags:
       - MCShellShotgun
     capacity: 3
-    # proto: CMShellShotgunBuckshot
     soundInsert:
       path: /Audio/_RMC14/Weapons/Guns/Reload/m42a2.ogg
   - type: GunDamageMultipliers
@@ -547,7 +544,7 @@
       state: masterkey-on
   - type: AttachableVisuals
 
-- tyoe: Tag
+- type: Tag
   id: MCAttachmentUnderbarrelShotgun
 
 - type: Tag
@@ -576,3 +573,8 @@
 
 - type: Tag
   id: MCAttachmentLaserSight
+
+
+
+- type: Tag
+  id: MCPyroFlamer

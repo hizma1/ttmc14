@@ -118,29 +118,29 @@
     #  entries: []
     - name: Attachments
       entries:
-      - id: RMCM5Bayonet
-      - id: RMCAttachmentRecoilCompensator
-      - id: RMCAttachmentExtendedBarrel
-      - id: RMCAttachmentSuppressor
-      - id: RMCAttachmentBarrelCharger
+      - id: MCAttachmentBayonet
+      - id: MCAttachmentRecoilCompensator
+      - id: MCAttachmentExtendedMuzzle
+      - id: MCAttachmentSuppressor
+      - id: MCAttachmentMuzzleCharger
       # pistol lace
-      - id: RMCAttachmentRailFlashlight
-      # underbarreled flashlight
-      - id: RMCAttachmentMagneticHarness
-      - id: RMCAttachmentS5RedDotSight
+      - id: MCAttachmentRailFlashlight
+      - id: MCAttachmentUnderbarrelFlashlight
+      - id: MCAttachmentMagneticHarness
+      - id: MCAttachmentRedDotSight
       # tactical sensor
-      # T-47 rail scope
-      # mini rail scope
-      - id: RMCAttachmentAngledGrip
-      - id: RMCAttachmentVerticalGrip
-      - id: RMCAttachmentBipod
-      - id: RMCAttachmentGyroscopicStabilizer
-      - id: RMCAttachmentLaserSight
-      - id: RMCAttachmentBurstFireAssembly
-      # masterkey shotgun
-      - id: RMCAttachmentMK1GrenadeLauncher
-      - id: RMCAttachmentMiniFlamethrower
-      # mini incinerator tank
+      - id: MCAttachmentT47RailScope
+      - id: MCAttachmentMiniScope
+      - id: MCAttachmentAngledGrip
+      - id: MCAttachmentVerticalGrip
+      - id: MCAttachmentBipod
+      - id: MCAttachmentGyroscopicStabilizer
+      - id: MCAttachmentLaserSight
+      - id: MCAttachmentBurstFireAssembly
+      - id: MCAttachmentUnderbarrelShotgun
+      - id: MCAttachmentGrenadeLauncher
+      - id: MCAttachmentMiniFlamethrower
+      - id: MCMiniTankFlamer
       # mini pepperball gun
       # mall pepperball canister (SAN balls)
       # T-76 magnum stock

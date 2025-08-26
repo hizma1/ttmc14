@@ -1,4 +1,4 @@
-# Flamethrower
+# Flamethrower Я НЕ ПОНИМАЮ БАЛАНС ЭТОЙ ХУЙНИ БЛЯТЬ
 - type: entity
   id: MCTileFire
   name: fire
@@ -124,3 +124,4 @@
           Two: { state: green_2 }
           Three: { state: green_3 }
           Four: { state: green_4 }
+

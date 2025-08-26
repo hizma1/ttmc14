@@ -50,7 +50,7 @@
   - type: Sprite
     layers:
     - state: flashlight
-    - state: flashlight_a
+    - state: flashlight_on
       shader: unshaded
       visible: false
       map: [ "light" ]
