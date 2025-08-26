@@ -44,10 +44,6 @@
         whitelist:
           tags:
           - MCAttachmentMagneticHarness
-      mc-slot-stock:
-        whitelist:
-          tags:
-          - MCAttachmentMagneticHarness
           - MCAttachmentRedDotSight
           - MCAttachmentRailFlashlight
       rmc-aslot-underbarrel:
