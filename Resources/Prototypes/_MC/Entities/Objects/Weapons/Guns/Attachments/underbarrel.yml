@@ -370,7 +370,7 @@
     layers:
     - state: flametank_mini
   - type: Item
-    size: Large
+    size: Small
   - type: SolutionContainerManager
     solutions:
       rmc_flamer_tank:
