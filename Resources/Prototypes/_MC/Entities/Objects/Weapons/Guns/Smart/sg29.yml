@@ -89,7 +89,7 @@
       mc-slot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
+          - MCAttachmentMagneticHarness
       mc-slot-muzzle:
         locked: true
         startingAttachable: MCAttachmentMuzzleSG29
@@ -109,7 +109,7 @@
 
 # Attachments
 - type: entity
-  parent: MCAttachmentMuzzle
+  parent: MCAttachmentBaseMuzzle
   id: MCAttachmentMuzzleSG29
   categories: [ HideSpawnMenu ]
   components:
@@ -126,7 +126,7 @@
   id: MCAttachmentMuzzleSG29
 
 - type: entity
-  parent: MCAttachmentStock
+  parent: MCAttachmentBaseStock
   id: MCAttachmentStockSG29
   categories: [ HideSpawnMenu ]
   components:

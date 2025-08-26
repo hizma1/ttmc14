@@ -67,7 +67,7 @@
         startingAttachable: RMCAttachmentS42xTelescopicMiniscope
         whitelist:
           tags:
-          - RMCAttachmentS42xTelescopicMiniscope
+          - MCAttachmentMiniScope
   - type: GunIFF
     enabled: true
   - type: GunIgnorePrediction

@@ -35,20 +35,20 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCM5Bayonet
-          - RMCAttachmentRecoilCompensator
-          - RMCAttachmentBarrelCharger
-          - RMCAttachmentExtendedBarrel
+          - MCAttachmentBayonet
+          - MCAttachmentRecoilCompensator
+          - MCAttachmentMuzzleCharger
+          - MCAttachmentExtendedMuzzle
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS5RedDotSight
+          - MCAttachmentRailFlashlight
+          - MCAttachmentRedDotSight
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentLaserSight
-          - RMCAttachmentGyroscopicStabilizer
+          - MCAttachmentLaserSight
+          - MCAttachmentGyroscopicStabilizer
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.8, 0.065

@@ -26,3 +26,14 @@
         multiplier: 0.2
       - !type:ChemVomit
           probability: 0.1
+
+- type: reagent
+  parent: [ MCReagentMedicine, BasePyrotechnic ]
+  id: MCNapalm
+  name: mc-reagent-name-mcnapalm
+  desc: mc-reagent-desc-mcnapalm
+  physicalDesc: reagent-physical-desc-shiny
+  flavor: bitter
+  color: "#cc7e93"
+  intensity: 20
+  duration: 5

@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/guns/attachments/scope.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "marine"
+    },
+    {
+      "name": "marine_a"
+    },
+    {
+      "name": "sniper"
+    },
+    {
+      "name": "sniper_invisible"
+    },
+    {
+      "name": "sniper_a"
+    },
+    {
+      "name": "mini"
+    },
+    {
+      "name": "mini_a"
+    },
+    {
+      "name": "t37"
+    },
+    {
+      "name": "t37_a"
+    },
+    {
+      "name": "nv"
+    },
+    {
+      "name": "nv_a"
+    },
+    {
+      "name": "mosin"
+    },
+    {
+      "name": "mosin_a"
+    },
+    {
+      "name": "slavic"
+    },
+    {
+      "name": "slavic_a"
+    },
+    {
+      "name": "pmc"
+    },
+    {
+      "name": "pmc_a"
+    },
+    {
+      "name": "tx11"
+    },
+    {
+      "name": "tx11_a"
+    },
+    {
+      "name": "tes"
+    },
+    {
+      "name": "tes_a"
+    },
+    {
+      "name": "antimat"
+    },
+    {
+      "name": "antimat_a"
+    },
+    {
+      "name": "imager"
+    },
+    {
+      "name": "imager_a"
+    },
+    {
+      "name": "tl127_a"
+    }
+  ]
+}

@@ -59,8 +59,8 @@
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-rail: 0.0, 0.05

@@ -27,3 +27,16 @@
       amount: 1
   products:
     MCSpaceCleaner: 2
+
+- type: reaction
+  id: MCNapalm
+  reactants:
+    MCSulphuricAcid:
+      amount: 1
+    MCAluminum:
+      amount: 1
+    MCPhoron:
+      amount: 2
+  products:
+    MCNapalm: 1
+

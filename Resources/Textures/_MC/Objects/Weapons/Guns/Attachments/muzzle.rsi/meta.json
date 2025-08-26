@@ -1,15 +1,12 @@
 {
   "version": 1,
-  "license": null,
-  "copyright": null,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/guns/attachments/muzzle.dmi",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
-    {
-      "name": ""
-    },
     {
       "name": "bayonetknife"
     },

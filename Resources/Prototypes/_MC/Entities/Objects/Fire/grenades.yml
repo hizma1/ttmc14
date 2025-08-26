@@ -7,10 +7,10 @@
     layers:
     - map: [ "base" ]
       state: dynamic_4
-  # - type: DamageOnCollide
-  #   damage:
-  #     types:
-  #       Heat: 25
+  - type: DamageOnCollide
+    damage:
+      types:
+        Heat: 25
   - type: RMCIgniteOnCollide
     maxStacks: 15
     intensity: 25

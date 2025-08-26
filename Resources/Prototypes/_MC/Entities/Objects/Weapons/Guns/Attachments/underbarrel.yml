@@ -1,13 +1,580 @@
 - type: entity
-  parent: RMCAttachableBase
-  id: MCAttachmentUnderbarrel
-  abstract: true
+  parent: MCAttachmentBaseUnderbarrel
+  id: MCAttachmentAngledGrip
+  name: angled grip
+  description: "A custom-built improved foregrip for less recoil, and faster wielding time.
+    However, it also increases weapon size, and slightly hinders unwielded firing."
   components:
   - type: Sprite
-    sprite: _MC/Objects/Weapons/Guns/Attachments/underbarrel.rsi
+    state: angledgrip
+  - type: AttachableVisuals
   - type: Tag
     tags:
     - MCAttachmentUnderbarrel
+    - MCAttachmentAngledGrip
+  - type: AttachableSizeMods
+    modifiers:
+    - size: 1
+  - type: AttachableWieldDelayMods
+    modifiers:
+    - delay: -0.3
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - conditions:
+        wieldedOnly: true
+      scatterFlat: 2
+      recoilFlat: -1
+    - conditions:
+        unwieldedOnly: true
+      accuracyAddMult: -0.10
+      scatterFlat: 1
+
+- type: entity
+  parent: MCAttachmentBaseUnderbarrel
+  id: MCAttachmentVerticalGrip
+  name: vertical grip
+  description: "A custom-built improved foregrip for better accuracy, moderately faster aimed movement speed, less recoil, and less scatter when wielded especially during burst fire.
+    However, it also increases weapon size, slightly increases wield delay and makes unwielded fire more cumbersome."
+  components:
+  - type: Sprite
+    state: verticalgrip
+  - type: AttachableVisuals
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentVerticalGrip
+  - type: AttachableSizeMods
+    modifiers:
+    - size: 1
+  - type: AttachableWieldDelayMods
+    modifiers:
+    - delay: -0.2
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - burstScatterAddMult: -1
+    - conditions:
+        wieldedOnly: true
+      accuracyAddMult: 0.10
+      recoilFlat: -2
+      scatterFlat: -3
+    - conditions:
+        unwieldedOnly: true
+      accuracyAddMult: -0.05
+      scatterFlat: 1
+
+- type: entity
+  parent: [ MCAttachmentBaseUnderbarrel, MCAttachableToggleableBase ]
+  id: MCAttachmentBipod
+  name: bipod
+  description: "A simple set of telescopic poles to keep a weapon stabilized during firing.
+    Greatly increases accuracy and reduces recoil and scatter when properly placed, but also increases weapon size."
+  components:
+  - type: Sprite
+    state: bipod
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentBipod
+  - type: AttachableToggleable
+    heldOnlyActivate: true
+    userOnly: true
+    doInterrupt: true
+    attachedOnly: true
+    breakOnMove: true
+    breakOnFullRotate: true
+    breakOnDrop: true
+    slowOnBreak: true
+    doAfter: 1.5
+    deactivateDoAfter: 0
+    doAfterNeedHand: false
+    instantToggle: Brace
+    useDelay: 0.5
+    activatePopupText: attachable-popup-activate-deploy-on-ground
+    deactivatePopupText: attachable-popup-deactivate-retract
+    activateSound:
+      path: /Audio/_RMC14/Attachable/bipod_toggle.ogg
+      params:
+        volume: -3
+    deactivateSound:
+      path: /Audio/_RMC14/Attachable/bipod_toggle.ogg
+      params:
+        volume: -3
+    icon:
+      sprite: _RMC14/Objects/Weapons/Guns/Attachments/under.rsi
+      state: bipod
+    iconActive:
+      sprite: _RMC14/Objects/Weapons/Guns/Attachments/under.rsi
+      state: bipod-on
+    actionName: Deploy Bipod
+    actionDesc: Deploy the bipod and get into a firing position.
+  - type: AttachableVisuals
+    showActive: true
+  - type: AttachableTemporarySpeedMods
+    alteration: Interrupted
+  - type: AttachableSizeMods
+    modifiers:
+    - size: 2
+  - type: AttachableWeaponMeleeMods
+    modifiers:
+    - bonusDamage:
+        types:
+          Blunt: -10
+  - type: AttachableWeaponRangedMods
+    fireModeMods:
+    - conditions:
+        activeOnly: true
+        whitelist:
+          tags:
+          - RMCGunBipodFullAuto
+      extraFireModes: FullAuto
+      setFireMode: FullAuto
+    modifiers:
+    - burstScatterAddMult: -3
+    - conditions:
+        wieldedOnly: true
+        activeOnly: true
+      accuracyAddMult: 0.30
+      scatterFlat: -2
+      recoilFlat: -2
+
+- type: entity
+  parent: MCAttachmentBaseUnderbarrel
+  id: MCAttachmentBurstFireAssembly
+  name: burst fire assembly
+  description: "A mechanism re-assembly kit that allows for automatic fire, or more shots per burst if the weapon already has the ability.
+    Increases scatter and decreases accuracy."
+  components:
+  - type: Sprite
+    state: rapidfire
+  - type: AttachableVisuals
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentBurstFireAssembly
+  - type: AttachableWeaponRangedMods
+    fireModeMods:
+    - extraFireModes: Burst
+    modifiers:
+    - burstScatterAddMult: 1
+    - shotsPerBurstFlat: 2
+
+- type: entity
+  parent: MCAttachmentBaseUnderbarrel
+  id: MCAttachmentGyroscopicStabilizer
+  name: gyroscopic stabilizer
+  description: A set of weights and balances to stabilize the weapon when burst firing or moving, especially while shooting one-handed. Greatly reduces movement penalties to accuracy. Significantly reduces burst scatter, recoil and general scatter. By increasing accuracy while moving, it let you move faster when taking aim.
+  components:
+  - type: Sprite
+    state: gyro
+  - type: AttachableVisuals
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentGyroscopicStabilizer
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - conditions:
+        wieldedOnly: true
+      scatterFlat: -1
+      recoilFlat: -2
+    - conditions:
+        unwieldedOnly: true
+      accuracyAddMult: 0.10
+      scatterFlat: -2
+      recoilFlat: -1
+
+- type: entity
+  parent: MCAttachmentBaseUnderbarrel
+  id: MCAttachmentLaserSight
+  name: laser sight
+  description: A laser sight placed under the barrel. Significantly increases one-handed accuracy and significantly reduces unwielded penalties to accuracy.
+  components:
+  - type: Sprite
+    state: lasersight
+  - type: AttachableVisuals
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentLaserSight
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - conditions:
+        wieldedOnly: true
+      accuracyAddMult: 0.10
+    - conditions:
+        unwieldedOnly: true
+      accuracyAddMult: 0.15
+
+- type: entity
+  parent: [ MCAttachmentBaseUnderbarrel, MCAttachableToggleableBase ]
+  id: MCAttachmentUnderbarrelFlashlight
+  name: underbarreled flashlight
+  description: "A simple flashlight used for mounting on a firearm.
+    Has no drawbacks, but isn't particuraly useful outside of providing a light source.
+    It is small and conductive."
+  components:
+  - type: ItemTogglePointLight
+  - type: ToggleableVisuals
+    spriteLayer: light
+  - type: PointLight
+    enabled: false
+    radius: 5
+    softness: 5
+    energy: 1.5
+    autoRot: true
+    netsync: false
+  - type: HandheldLight
+    addPrefix: false
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: NoHandsInteractionBlocked
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      interpolate: Linear
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      property: Radius
+      enabled: false
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+      property: Radius
+      enabled: false
+  - type: Battery
+    maxCharge: 10
+    startingCharge: 10
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 3
+  - type: Sprite
+    layers:
+    - state: uflashlight
+    - state: uflashlight_on
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: _MC/Objects/Weapons/Guns/Attachments/underbarrel.rsi
+  - type: Appearance
+  - type: AttachableToggleable
+    attachedOnly: true
+    useDelay: 1.0
+    icon:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/underbarrel.rsi
+      state: uflashlight
+    iconActive:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/underbarrel.rsi
+      state: uflashlight_on
+    actionName: Toggle the underbarreled flashlight
+    actionDesc: Can be toggled on and off.
+  - type: AttachableVisuals
+    showActive: true
+  - type: AttachableToggleableSimpleActivate
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentUnderbarrelFlashlight
+    - Flashlight
+
+- type: entity
+  parent: MCAttachmentBaseUnderbarrel
+  id: MCAttachmentMiniFlamethrower
+  name: underbarrel flamethrower
+  description: A weapon-mounted refillable flamethrower attachment. It has a secondary setting for a more intense flame with far less propulsion ability and heavy fuel usage.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/flamer.rsi
+    state: flamethrower
+    layers:
+    - state: flamethrower
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentMiniFlamethrower
+  - type: Item
+    size: Large
+  - type: Gun
+    cameraRecoilScalar: 0
+    fireRate: 0.333
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: RMCFlamerShoot
+  - type: RMCFlamerAmmoProvider
+    range: 5 # простите, но я не хочу чтобы 1 реагент напалма оставался в канистре
+    spawn: MCFlamethrowerFire
+  - type: Wieldable
+  - type: ShootUseDelay
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: mini incinerator tank
+        insertSound: /Audio/_RMC14/Weapons/Handling/flamer_reload.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Handling/flamer_unload.ogg
+        priority: 2
+        whitelist:
+          components:
+          - RMCFlamerTank
+  - type: RMCAmmoEject
+  - type: AttachableToggleable
+    userOnly: true
+    attachedOnly: true
+    supercedeHolder: true
+    wieldedUseOnly: true
+    activatePopupText: attachable-popup-switch-to-generic
+    deactivatePopupText: attachable-popup-switch-from-generic
+    activateSound:
+      path: /Audio/_RMC14/Attachable/gun_u7_activate.ogg
+      params:
+        volume: -2
+    actionName: Switch to the mini flamethrower.
+    actionDesc: Switch to using the mini flamethrower.
+    icon:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/flamer.rsi
+      state: flamethrower
+    iconActive:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/flamer.rsi
+      state: flamethrower-on
+  - type: AttachableVisuals
+    offset: -0.125, 0.245
+
+- type: entity
+  parent: BaseItem
+  id: MCMiniTankFlamer
+  name: mini incinerator tank
+  description: A fuel tank of usually ultra thick napthal, a sticky combustable liquid chemical, for use in the underail incinerator unit. Handle with care.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Tanks/flamer.rsi
+    state: flametank_mini
+    layers:
+    - state: flametank_mini
+  - type: Item
+    size: Large
+  - type: SolutionContainerManager
+    solutions:
+      rmc_flamer_tank:
+        maxVol: 25
+        reagents:
+        - ReagentId: MCNapalm
+          Quantity: 25
+  - type: RMCFlamerTank
+  - type: RMCSolutionTransferWhitelist
+    popup: rmc-solution-transfer-whitelist-failed-not-reagent-tank
+    targetWhitelist:
+      tags:
+      - MCPyroFlamer
+  - type: RefillableSolution
+    solution: rmc_flamer_tank
+  - type: DetailedExaminableSolution
+    solution: rmc_flamer_tank
+  - type: NoMixingReagents
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: flametank_custom_strip
+  - type: Appearance
+  - type: SolutionStorageFillable
+    solution: rmc_flamer_tank
+
+- type: entity
+  parent: [ MCAttachmentBaseUnderbarrel, MCAttachableToggleableBase ]
+  id: MCAttachmentGrenadeLauncher
+  name: underslung grenade launcher
+  description: A weapon-mounted, reloadable, two-shot grenade launcher.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/gun.rsi
+    layers:
+    - state: grenade
+      map: [ "enum.BreechVisuals.Open" ]
+  - type: Item
+    size: Large
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Wieldable
+  - type: RMCAmmoEject
+    containerID: ballistic-ammo
+    ejectSound:
+      path: /Audio/_RMC14/Weapons/Guns/Reload/grenade_insert.ogg
+  - type: AmmoCounter
+  - type: Gun
+    projectileSpeed: 20
+    soundGunshot:
+      path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_ugl.ogg
+    resetOnHandSelected: false
+  - type: RMCSelectiveFire
+    baseFireRate: 0.417
+  - type: GunIgnorePrediction
+  - type: GunIFF
+    enabled: true
+  - type: BallisticAmmoProvider
+    cycleable: false
+    whitelist:
+      tags:
+      - MCGrenade
+    capacity: 2
+    soundInsert:
+      path: /Audio/_RMC14/Weapons/Guns/Reload/grenade_insert.ogg
+      params:
+        volume: -2
+  - type: OnShootTriggerAmmoTimer
+    delay: 1.5
+    beepInterval: 2
+    initialBeepDelay: 0
+    beepSound:
+      path: "/Audio/Effects/beep1.ogg"
+      params:
+        volume: 5
+    timerStart: enum.TimerStartMode.OnHitGround
+  - type: ShootAtFixedPoint
+    shootArcProj: true
+    maxFixedRange: 7
+  - type: UniqueAction
+  - type: Appearance
+  - type: AttachableToggleable
+    userOnly: true
+    attachedOnly: true
+    supercedeHolder: true
+    wieldedUseOnly: true
+    activatePopupText: attachable-popup-switch-to-generic
+    deactivatePopupText: attachable-popup-switch-from-generic
+    actionName: Switch to the Grenade Launcher
+    actionDesc: Switch to using the underbarrel grenade launcher.
+    icon:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/gun.rsi
+      state: grenade
+    iconActive:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/gun.rsi
+      state: grenade-on
+  - type: AttachableVisuals
+    redrawOnAppearanceChange: true
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentGrenadeLauncher
+
+- type: entity
+  parent: [ MCAttachmentBaseUnderbarrel, MCAttachableToggleableBase ]
+  id: MCAttachmentUnderbarrelShotgun
+  name: masterkey shotgun
+  description: A weapon-mounted, three-shot shotgun. Reloadable with any normal 12 gauge shell. The short barrel reduces the ammo's effectiveness drastically in exchange for fitting as a attachment..
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/gun.rsi
+    state: masterkey
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentUnderbarrelShotgun
+  - type: Wieldable
+  - type: Item
+    size: Large
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_shotgun_u7.ogg
+      params:
+        volume: -2
+  - type: RMCSelectiveFire
+    baseFireRate: 0.476
+  - type: GunDamageModifier
+    multiplier: 1
+  - type: RMCExtraProjectilesDamageMods
+    damageMultiplier: 1
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: RMCAmmoEject
+    containerID: ballistic-ammo
+    ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/m42a2.ogg
+  - type: BallisticAmmoProvider
+    cycleable: false
+    whitelist:
+      tags:
+      - MCShellShotgun
+    capacity: 3
+    soundInsert:
+      path: /Audio/_RMC14/Weapons/Guns/Reload/m42a2.ogg
+  - type: GunDamageMultipliers
+    multipliers:
+      Turf: 5
+      Breaching: 10.8
+  - type: UseDelay
+  - type: RMCWeaponAccuracy
+  - type: GunPointBlank
+  - type: AttachableToggleable
+    userOnly: true
+    attachedOnly: true
+    supercedeHolder: true
+    wieldedUseOnly: true
+    activatePopupText: attachable-popup-switch-to-generic
+    deactivatePopupText: attachable-popup-switch-from-generic
+    activateSound:
+      path: /Audio/_RMC14/Attachable/gun_u7_activate.ogg
+      params:
+        volume: -2
+    actionName: Switch to the masterkey shotgun
+    actionDesc: Switch to using the masterkey shotgun.
+    icon:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/gun.rsi
+      state: masterkey
+    iconActive:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/gun.rsi
+      state: masterkey-on
+  - type: AttachableVisuals
 
 - type: Tag
-  id: MCAttachmentUnderbarrel
+  id: MCAttachmentUnderbarrelShotgun
+
+- type: Tag
+  id: MCAttachmentUnderbarrelFlashlight
+
+- type: Tag
+  id: MCAttachmentGrenadeLauncher
+
+- type: Tag
+  id: MCAttachmentMiniFlamethrower
+
+- type: Tag
+  id: MCAttachmentAngledGrip
+
+- type: Tag
+  id: MCAttachmentVerticalGrip
+
+- type: Tag
+  id: MCAttachmentBipod
+
+- type: Tag
+  id: MCAttachmentBurstFireAssembly
+
+- type: Tag
+  id: MCAttachmentGyroscopicStabilizer
+
+- type: Tag
+  id: MCAttachmentLaserSight
+
+
+
+- type: Tag
+  id: MCPyroFlamer

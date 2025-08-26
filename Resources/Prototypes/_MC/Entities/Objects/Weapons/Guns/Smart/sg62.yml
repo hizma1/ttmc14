@@ -87,7 +87,7 @@
       mc-slot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
+          - MCAttachmentMagneticHarness
       mc-slot-stock:
         locked: true
         startingAttachable: MCAttachmentStockSG62
@@ -107,7 +107,7 @@
 
 # Attachments
 - type: entity
-  parent: MCAttachmentStock
+  parent: MCAttachmentBaseStock
   id: MCAttachmentStockSG62
   categories: [ HideSpawnMenu ]
   components:
@@ -124,7 +124,7 @@
   id: MCAttachmentStockSG62
 
 - type: entity
-  parent: [ MCAttachmentUnderbarrel, RMCAttachableToggleableBase ]
+  parent: [ MCAttachmentBaseUnderbarrel, RMCAttachableToggleableBase ]
   id: MCAttachmentUnderbarrelSG62
   name: SG-153 spotting rifle
   description: An underslung spotting rifle, generally found ontop of another gun.

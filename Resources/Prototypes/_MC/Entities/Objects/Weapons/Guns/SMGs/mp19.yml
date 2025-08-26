@@ -64,23 +64,23 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCAttachmentExtendedBarrel
-          - RMCAttachmentRecoilCompensator
-          - RMCAttachmentSuppressor
+            - MCAttachmentExtendedMuzzle
+            - MCAttachmentSuppressor
+            - MCAttachmentRecoilCompensator
           # - TODO: Heavy Barrel
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentS6ReflexSight
-          - RMCAttachmentS42xTelescopicMiniscope
-          - RMCAttachmentRailFlashlight
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
+          - MCAttachmentMiniScope
+          - MCAttachmentRedDotSight
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
-          - RMCAttachmentGyroscopicStabilizer
+          - MCAttachmentLaserSight
+          - MCAttachmentVerticalGrip
+          - MCAttachmentGyroscopicStabilizer
       rmc-aslot-stock:
         startingAttachable: MCAttachmentStockMP19
         whitelist:

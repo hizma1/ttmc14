@@ -51,19 +51,18 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCM5Bayonet
+          - MCAttachmentBayonet
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS6ReflexSight
-          - RMCAttachmentS5RedDotSight
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
+          - MCAttachmentRedDotSight
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentFlashlightGrip
-          - RMCAttachmentVerticalGrip
+          - MCAttachmentUnderbarrelFlashlight
+          - MCAttachmentVerticalGrip
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.7, 0.02

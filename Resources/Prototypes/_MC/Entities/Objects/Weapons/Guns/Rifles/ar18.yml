@@ -63,31 +63,32 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCAttachmentExtendedBarrel
-          - RMCAttachmentSuppressor
-          - RMCM5Bayonet
-          - RMCAttachmentBarrelCharger
+          - MCAttachmentExtendedMuzzle
+          - MCAttachmentSuppressor
+          - MCAttachmentBayonet
+          - MCAttachmentRecoilCompensator
+          - MCAttachmentMuzzleCharger
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS42xTelescopicMiniscope
-          - RMCAttachmentS6ReflexSight
-          # - TODO: T47 Scope
+          - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
+          - MCAttachmentMiniScope
+          - MCAttachmentRedDotSight
+          - MCAttachmentT47RailScope
           # - TODO: Tactical Sensor
       rmc-aslot-underbarrel:
         whitelist:
           tags:
-          - RMCAttachmentAngledGrip
-          - RMCAttachmentBipod
-          - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
-          - RMCAttachmentGyroscopicStabilizer
-          - RMCAttachmentBurstFireAssembly
-          - RMCAttachmentFlamer
-          - RMCAttachmentU7UnderbarrelShotgun
-          - RMCAttachmentU1GrenadeLauncher
+          - MCAttachmentUnderbarrelFlashlight
+          - MCAttachmentGrenadeLauncher
+          - MCAttachmentMiniFlamethrower
+          - MCAttachmentLaserSight
+          - MCAttachmentGyroscopicStabilizer
+          - MCAttachmentBipod
+          - MCAttachmentVerticalGrip
+          - MCAttachmentAngledGrip
+          - MCAttachmentBurstFireAssembly
           # - TODO: PP-7 Plasma Pistol
           # - TODO: PepperBall mini
   - type: AttachableHolderVisuals

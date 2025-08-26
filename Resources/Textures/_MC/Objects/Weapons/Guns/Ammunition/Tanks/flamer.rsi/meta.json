@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/obj/items/ammo/flamer.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "flametank"
+    },
+    {
+      "name": "flametank_e"
+    },
+    {
+      "name": "flametank_mini"
+    },
+    {
+      "name": "flametank_mini_e"
+    },
+    {
+      "name": "flametank_large"
+    },
+    {
+      "name": "flametank_large_e"
+    },
+    {
+      "name": "flametank_large_blue"
+    },
+    {
+      "name": "flametank_large_blue_e"
+    },
+    {
+      "name": "flametank_large_green"
+    },
+    {
+      "name": "flametank_large_green_e"
+    },
+    {
+      "name": "watertank"
+    },
+    {
+      "name": "x_flamethrower_tank",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "flamethrower_tank_e"
+    },
+    {
+      "name": "flamethrower_tank"
+    },
+    {
+      "name": "flametank_som"
+    },
+    {
+      "name": "flametank_som_e"
+    },
+    {
+      "name": "flametank_som_x"
+    },
+    {
+      "name": "flametank_som_x_e"
+    },
+    {
+      "name": "flametank_vsd"
+    },
+    {
+      "name": "flametank_vsd_e"
+    }
+  ]
+}

@@ -63,12 +63,12 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCAttachmentBarrelCharger
-          - RMCAttachmentSuppressor
+          - MCAttachmentMuzzleCharger
+          - MCAttachmentSuppressor
       rmc-aslot-rail:
         whitelist:
           tags:
-          - RMCAttachmentRailFlashlight
+          - MCAttachmentRailFlashlight
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.685, 0.07

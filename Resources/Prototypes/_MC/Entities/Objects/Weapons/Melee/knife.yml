@@ -1,0 +1,12 @@
+- type: entity
+  abstract: true
+  id: MCBaseMeleeWeapon
+  components:
+  - type: MeleeDamageMultiplier
+    whitelist:
+      components:
+      - Xeno
+  - type: MeleeWeapon
+    angle: 0
+  - type: CMArmorPiercing
+    amount: 20
