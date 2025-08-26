@@ -108,7 +108,6 @@
     thresholds:
     - range: 4
       falloff: 10
-  - type: RMCStunOnHit
 
 # slug
 - type: entity

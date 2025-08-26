@@ -1,0 +1,6 @@
+- type: entity
+  parent: BaseStructure
+  id: MCStructure
+  abstract: true
+  placement:
+    mode: SnapgridCenter
