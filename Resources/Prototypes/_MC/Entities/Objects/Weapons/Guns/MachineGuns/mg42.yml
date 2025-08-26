@@ -91,7 +91,7 @@
         whitelist:
           tags:
           - MCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
+          - MCAttachmentVerticalGrip
           - MCAttachmentBipod
           - MCAttachmentAngledGrip
           - MCAttachmentMiniFlamethrower

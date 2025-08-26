@@ -60,10 +60,10 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCAttachmentBarrelCharger
-          - RMCAttachmentRecoilCompensator
-          - RMCAttachmentExtendedBarrel
-          - RMCM5Bayonet
+          - MCAttachmentMuzzleCharger
+          - MCAttachmentRecoilCompensator
+          - MCAttachmentExtendedMuzzle
+          - MCAttachmentBayonet
       rmc-aslot-rail:
         whitelist:
           tags:

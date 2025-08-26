@@ -51,15 +51,13 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
-          - RMCM5Bayonet
+          - MCAttachmentBayonet
       rmc-aslot-rail:
         whitelist:
           tags:
           - MCAttachmentMagneticHarness
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS6ReflexSight
-          - RMCAttachmentS5RedDotSight
+          - MCAttachmentRailFlashlight
+          - MCAttachmentRedDotSight
       rmc-aslot-underbarrel:
         whitelist:
           tags:
