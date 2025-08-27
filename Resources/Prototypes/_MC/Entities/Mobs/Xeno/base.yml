@@ -78,6 +78,8 @@
     widePrimary: true
     altDisarm: false
     altHeavy: false
+  - type: XenoClaws
+    clawType: Sharp
   - type: CombatMode
     canDisarm: false
 
