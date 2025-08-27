@@ -1,6 +1,8 @@
-﻿using Content.Shared._MC.Nuke.UI;
+﻿using Content.Shared._MC.Nuke.Components;
+using Content.Shared._MC.Nuke.UI;
 using Content.Shared.FixedPoint;
 using JetBrains.Annotations;
+using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 
 namespace Content.Client._MC.Nuke.UI;
@@ -8,6 +10,8 @@ namespace Content.Client._MC.Nuke.UI;
 [UsedImplicitly]
 public sealed class MCNukeDiskGeneratorBui : BoundUserInterface
 {
+    [Dependency] private readonly IEntityManager _entities = default!;
+
     [ViewVariables]
     private MCNukeDiskGeneratorWindow? _window;
 
@@ -22,15 +26,19 @@ public sealed class MCNukeDiskGeneratorBui : BoundUserInterface
         _window = this.CreateWindow<MCNukeDiskGeneratorWindow>();
         _window.RunButton.OnPressed += _ => SendMessage(new MCNukeDiskGeneratorRunBuiMessage());
 
-        RefreshOverall(0);
+        if (!_entities.TryGetComponent<MCNukeDiskGeneratorComponent>(Owner, out var component))
+            return;
+
+        RefreshOverall(component.OverallProgress, component.Color);
     }
 
-    private void RefreshOverall(FixedPoint2 value)
+    private void RefreshOverall(FixedPoint2 value, Color color)
     {
         if (_window is null)
             return;
 
-        _window.OverallProgressBar.Value = value.Float();
-        _window.OverallProgressLabel.Text = $"{value.Float()}%";
+        _window.OverallProgressBar.Value = value.Float() * 100;
+        _window.OverallProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(color);
+        _window.OverallProgressLabel.Text = $"{(value * 100).Int()}%";
     }
 }

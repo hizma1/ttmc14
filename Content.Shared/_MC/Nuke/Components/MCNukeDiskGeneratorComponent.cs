@@ -8,7 +8,7 @@ namespace Content.Shared._MC.Nuke.Components;
 public sealed partial class MCNukeDiskGeneratorComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public EntProtoId SpawnId;
+    public EntProtoId SpawnId = string.Empty;
 
     [DataField, AutoNetworkedField]
     public Color Color = Color.Red;
