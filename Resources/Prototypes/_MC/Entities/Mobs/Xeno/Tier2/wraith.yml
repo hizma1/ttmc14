@@ -66,6 +66,26 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.448
     baseSprintSpeed: 5.263
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.35
+        density: 85
+        mask:
+        - Impassable
+        - HighImpassable
+        - LowImpassable
+        - BarbedBarricade
+        - BarricadeImpassable
+        layer:
+        - MobLayer
+      fix2:
+        shape: !type:PhysShapeCircle
+          radius: 0.40
+        density: 85
+        layer:
+        - BulletImpassable
   - type: TacticalMapIcon
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
