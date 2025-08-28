@@ -29,16 +29,25 @@ public sealed class MCNukeDiskGeneratorBui : BoundUserInterface
         if (!_entities.TryGetComponent<MCNukeDiskGeneratorComponent>(Owner, out var component))
             return;
 
-        RefreshOverall(component.OverallProgress, component.Color);
+        _window.OverallProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(component.Color);
+
+        Refresh(component.OverallProgress);
     }
 
-    private void RefreshOverall(FixedPoint2 value, Color color)
+    protected override void UpdateState(BoundUserInterfaceState state)
+    {
+        base.UpdateState(state);
+
+        if (state is MCNukeDiskGeneratorOverallProgressBuiState overallProgressBuiState)
+            Refresh(overallProgressBuiState.Value);
+    }
+
+    private void Refresh(FixedPoint2 value)
     {
         if (_window is null)
             return;
 
         _window.OverallProgressBar.Value = value.Float() * 100;
-        _window.OverallProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(color);
         _window.OverallProgressLabel.Text = $"{(value * 100).Int()}%";
     }
 }

@@ -1,0 +1,43 @@
+- type: entity
+  parent: BaseItem
+  id: MCDisk
+  name: disk
+  description: ""
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Items/disk.rsi
+
+- type: entity
+  parent: MCDisk
+  id: MCDiskNuke
+  name: nuclear authentication disk
+  description: Better keep this safe.
+  abstract: true
+  components:
+  - type: Sprite
+    state: nucleardisk
+
+- type: entity
+  parent: MCDiskNuke
+  id: MCDiskNukeRed
+  name: red nuclear authentication disk
+  components:
+  - type: Sprite
+    state: datadisk7
+
+- type: entity
+  parent: MCDiskNuke
+  id: MCDiskNukeGreen
+  name: green nuclear authentication disk
+  components:
+  - type: Sprite
+    state: botanydisk
+
+- type: entity
+  parent: MCDiskNuke
+  id: MCDiskNukeBlue
+  name: blue nuclear authentication disk
+  components:
+  - type: Sprite
+    state: datadisk0

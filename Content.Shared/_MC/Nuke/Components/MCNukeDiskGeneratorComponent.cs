@@ -14,7 +14,7 @@ public sealed partial class MCNukeDiskGeneratorComponent : Component
     public Color Color = Color.Red;
 
     [DataField, AutoNetworkedField]
-    public TimeSpan InteractionTime = TimeSpan.FromSeconds(10);
+    public TimeSpan InteractionTime = TimeSpan.FromSeconds(15);
 
     [DataField, AutoNetworkedField]
     public FixedPoint2 OverallProgress;
