@@ -1,0 +1,224 @@
+﻿- type: entity
+  parent: [ CMBaseWeaponGun, BaseItem, RMCBaseAttachableHolder ]
+  id: MCWeaponFlamer
+  name: FL-84 flamethrower
+  description: M34 incinerator unit has proven to be one of the most effective weapons at clearing out soft-targets. This is a weapon to be feared and respected as it is quite deadly.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Special/fl84.rsi
+    state: base
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: lit
+      map: ["enum.RMCIgniterVisuals.Ignited"]
+  - type: Item
+    sprite: _MC/Objects/Weapons/Guns/Special/fl84.rsi
+    size: Large
+  - type: Clothing
+    sprite: _MC/Objects/Weapons/Guns/Special/fl84.rsi
+    slots:
+    - suitStorage
+    - Back
+  - type: Gun
+    cameraRecoilScalar: 0
+    fireRate: 0.333
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: RMCFlamerShoot
+  - type: ShootUseDelay
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Tank
+        startingItem: MCTankFlamer
+        insertSound: /Audio/_RMC14/Weapons/Handling/flamer_reload.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Handling/flamer_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCFlamerTank
+  - type: Wieldable
+  - type: WieldableSpeedModifiers
+    base: 0.5
+    light: 0.69
+    medium: 0.75
+    heavy: 0.806
+  - type: GunRequiresWield
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: RMCFlamerAmmoProvider
+    range: 5
+    spawn: null
+  - type: AttachableHolder
+    slots:
+      mc-aslot-rail:
+        whitelist:
+          tags:
+          - MCAttachmentRailFlashlight
+          - MCAttachmentMagneticHarness
+      mc-slot-underbarrel:
+        startingAttachable: MCAttachmentUnderslungHydrocannon
+        whitelist:
+          tags:
+          - MCAttachmentUnderslungHydrocannon
+  - type: AttachableHolderVisuals
+    offsets:
+      mc-slot-rail: -0.032, 0.092
+      mc-slot-underbarrel: 0.230, -0.038
+  - type: WieldedCrosshair
+    rsi:
+      sprite: _RMC14/Interface/MousePointer/flamer_mouse.rsi
+      state: all
+  - type: RMCIgniter
+  - type: RMCAmmoEject
+  - type: GenericVisualizer
+    visuals:
+      enum.RMCFlamerVisualLayers.Strip:
+        enum.RMCFlamerVisualLayers.Strip:
+          True: { visible: true }
+          False: { visible: false }
+      enum.RMCIgniterVisuals.Ignited:
+        enum.RMCIgniterVisuals.Ignited:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Tag
+    tags:
+    - MCWeaponIncineratorFL84
+
+- type: entity
+  parent: MCWeaponFlamer
+  id: MCWeaponFlamerUnloaded
+  suffix: Unloaded
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Tank
+        startingItem: null
+        insertSound: /Audio/_RMC14/Weapons/Handling/flamer_reload.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Handling/flamer_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MCFlamerTank
+
+- type: entity
+  parent: BaseItem
+  id: MCTankFlamer
+  name: incinerator tank
+  description: A fuel tank used to store fuel for use in the M34 incinerator unit. Handle with care.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/flamethrower.rsi
+    state: flametank_custom
+    layers:
+    - state: flametank_custom
+    - state: flametank_custom_strip2
+    - state: flametank_custom_strip2
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: Item
+    size: Normal
+  - type: SolutionContainerManager
+    solutions:
+      rmc_flamer_tank:
+        maxVol: 100
+        reagents:
+        - ReagentId: MCNapalm
+          Quantity: 100
+  - type: MCFlamerTankFireType
+    spawn: MCFireGreen
+  - type: RMCFlamerTank
+  - type: RMCSolutionTransferWhitelist
+    popup: rmc-solution-transfer-whitelist-failed-not-reagent-tank
+    targetWhitelist:
+      tags:
+      - MCPyroFlamer
+      - MCBackpackFlamer
+  - type: Tag
+    tags:
+    - MCFlamerTank
+  - type: RefillableSolution
+    solution: rmc_flamer_tank
+  - type: DetailedExaminableSolution
+    solution: rmc_flamer_tank
+  - type: NoMixingReagents
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: flametank_custom_strip
+  - type: Appearance
+  - type: SolutionStorageFillable
+    solution: rmc_flamer_tank
+
+- type: entity
+  parent: BaseItem
+  id: MCMiniTankFlamer
+  name: mini incinerator tank
+  description: A fuel tank of usually ultra thick napthal, a sticky combustable liquid chemical, for use in the underail incinerator unit. Handle with care.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Tanks/flamer.rsi
+    state: flametank_mini
+    layers:
+    - state: flametank_mini
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      rmc_flamer_tank:
+        maxVol: 25
+        reagents:
+        - ReagentId: MCNapalm
+          Quantity: 25
+  - type: RMCFlamerTank
+  - type: Tag
+    tags:
+    - MCFlamerTankMini
+  - type: RMCSolutionTransferWhitelist
+    popup: rmc-solution-transfer-whitelist-failed-not-reagent-tank
+    targetWhitelist:
+      tags:
+      - MCPyroFlamerMini
+  - type: MCFlamerTankFireType
+    spawn: MCFireGreen
+  - type: RefillableSolution
+    solution: rmc_flamer_tank
+  - type: DetailedExaminableSolution
+    solution: rmc_flamer_tank
+  - type: NoMixingReagents
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: flametank_custom_strip
+  - type: Appearance
+  - type: SolutionStorageFillable
+    solution: rmc_flamer_tank
+
+- type: Tag
+  id: MCFlamerTank
+
+- type: Tag
+  id: MCPyroFlamer
+
+- type: Tag
+  id: MCFlamerTankMini
+
+- type: Tag
+  id: MCPyroFlamerMini
+
+- type: Tag
+  id: MCWeaponIncineratorFL84
+
+- type: Tag
+  id: MCBackpackFlamer
+
+- type: Tag
+  id: MCTankWater

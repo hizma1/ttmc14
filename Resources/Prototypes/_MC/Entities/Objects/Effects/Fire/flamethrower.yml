@@ -1,72 +1,8 @@
-- type: entity
-  id: MCFire
-  name: fire
-  placement:
-    mode: SnapgridCenter
-  components:
-  - type: Tag
-    tags:
-    - MCDamageFire
-    - HideContextMenu
-  - type: Transform
-    anchored: true
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape: !type:PhysShapeAabb
-          bounds: "-0.35,-0.35,0.35,0.35"
-        density: 100
-        layer:
-        - MobMask
-        hard: false
-  - type: Sprite
-    sprite: _RMC14/Effects/fire.rsi
-    noRot: true
-    drawdepth: WallTops
-    layers:
-    - map: [ "base" ]
-      state: red_4
-  - type: Clickable
-  - type: InteractionOutline
-  - type: PointLight
-    radius: 5
-    color: "#bf6d02"
-  - type: EffectVisuals
-  - type: RMCIgniteOnCollide
-    maxStacks: 20
-    tileDamage:
-      types:
-        Heat: 0.5
-  - type: DamageOnCollide
-    damageDead: false
-    fire: true
-    damage:
-      types:
-        Heat: 45
-  - type: TileFire
-    id: MCFire
-    extinguishInstantly: false
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.TileFireLayers.Base:
-        base:
-          One: { state: red_1 }
-          Two: { state: red_2 }
-          Three: { state: red_3 }
-          Four: { state: red_4 }
-  - type: IgnorePredictionHit
-  - type: RMCScorchEffectOnSpawn
-    decalTag: burnt
-    tileLimit: 3
-  - type: BlockWeeds
-
 # Flamethrower Я НЕ ПОНИМАЮ БАЛАНС ЭТОЙ ХУЙНИ БЛЯТЬ
 - type: entity
   parent: MCFire
-  id: MCFlamethrowerFire
+  id: MCFireFlamethrower
+  suffix: MC, Flame
   name: fire
   placement:
     mode: SnapgridCenter
@@ -85,14 +21,15 @@
       types:
         Heat: 0.13
   - type: TileFire
-    id: MCFlamethrowerFire
+    id: MCFireFlamethrower
     duration: 17 # burn_time = 17
     extinguishInstantly: false
 
 # Blue Flame
 - type: entity
   parent: MCFire
-  id: MCTileFireBlue
+  id: MCFireBlue
+  suffix: MC, Blue
   components:
   - type: Sprite
     layers:
@@ -104,7 +41,7 @@
     intensity: 46 # burn_level = 46
     duration: 40
   - type: TileFire
-    id: MCTileFireBlue
+    id: MCFireBlue
     duration: 40 # burn_time = 40
     extinguishInstantly: false
     patExtinguishMultiplier: 2
@@ -120,7 +57,8 @@
 # Green Flame
 - type: entity
   parent: MCFire
-  id: MCTileFireGreen
+  id: MCFireGreen
+  suffix: MC, Green
   components:
   - type: Sprite
     layers:
@@ -136,7 +74,7 @@
       types:
         Heat: 1
   - type: TileFire
-    id: MCTileFireGreen
+    id: MCFireGreen
     duration: 12 # burn_time = 12
     extinguishInstantly: false
     patExtinguishMultiplier: 2

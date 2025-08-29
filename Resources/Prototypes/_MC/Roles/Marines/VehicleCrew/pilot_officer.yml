@@ -36,6 +36,7 @@
     - type: Skills
       skills:
         RMCSkillPilot: 1
+        RMCSkillJtac: 2
         RMCSkillPolice: 2
         RMCSkillPowerLoader: 3
         RMCSkillLeadership: 2

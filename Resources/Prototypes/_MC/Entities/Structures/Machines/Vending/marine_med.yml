@@ -34,6 +34,7 @@
       - id: MCAutoInjectorSalineGlucose
       - id: MCAutoInjectorInaprovaline
       - id: MCAutoInjectorOxycodone
+        amount: 30
       # spaceacillin = 20
       - id: MCAutoInjectorHypervene
         amount: 20

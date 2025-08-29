@@ -22,7 +22,7 @@ public sealed partial class RMCFlamerAmmoProviderComponent : Component, IShootab
     public FixedPoint2 CostPer = FixedPoint2.New(1);
 
     [DataField, AutoNetworkedField]
-    public EntProtoId Spawn = "RMCTileFire";
+    public EntProtoId? Spawn = "RMCTileFire";
 
     [DataField, AutoNetworkedField]
     public int MaxIntensity = 20;

@@ -18,5 +18,5 @@ public sealed partial class MortarCameraShellComponent : Component
     public EntProtoId Flare = "RMCMortarFlare";
 
     [DataField, AutoNetworkedField]
-    public EntProtoId Camera = "RMCMortarCamera";
+    public EntProtoId? Camera = null;
 }
