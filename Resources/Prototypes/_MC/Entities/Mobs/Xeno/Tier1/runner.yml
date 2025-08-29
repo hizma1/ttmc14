@@ -55,6 +55,7 @@
         - HighImpassable
         - LowImpassable
         - BarbedBarricade
+        - BarricadeImpassable
         layer:
         - MobLayer
       fix2:

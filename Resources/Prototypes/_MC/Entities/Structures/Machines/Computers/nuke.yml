@@ -1,0 +1,62 @@
+- type: entity
+  parent: MCComputerIndestructible
+  id: MCComputerNukeDiskGenerator
+  name: nuke disk generator
+  description: A secure terminal used to retrieve nuclear authentication codes and print them onto disks.
+  components:
+  - type: Sprite
+    layers:
+    - state: computer
+    - state: nuke_red
+  - type: MCNukeDiskGenerator
+  - type: ActivatableUIRequiresPower
+  - type: ActivatableUI
+    key: enum.MCNukeDiskGeneratorUi.Key
+  - type: UserInterface
+    interfaces:
+      enum.MCNukeDiskGeneratorUi.Key:
+        type: MCNukeDiskGeneratorBui
+  - type: ApcPowerReceiver
+  - type: RMCPowerReceiver
+    idleLoad: 0
+    activeLoad: 300
+    channel: Equipment
+
+- type: entity
+  parent: MCComputerNukeDiskGenerator
+  id: MCComputerNukeDiskGeneratorRed
+  name: red nuke disk generator
+  components:
+  - type: Sprite
+    layers:
+    - state: computer
+    - state: nuke_red
+  - type: MCNukeDiskGenerator
+    spawnId: MCDiskNukeRed
+    color: "#ff0000"
+
+- type: entity
+  parent: MCComputerNukeDiskGenerator
+  id: MCComputerNukeDiskGeneratorGreen
+  name: green nuke disk generator
+  components:
+  - type: Sprite
+    layers:
+    - state: computer
+    - state: nuke_green
+  - type: MCNukeDiskGenerator
+    spawnId: MCDiskNukeGreen
+    color: "#00ff00"
+
+- type: entity
+  parent: MCComputerNukeDiskGenerator
+  id: MCComputerNukeDiskGeneratorBlue
+  name: blue nuke disk generator
+  components:
+  - type: Sprite
+    layers:
+    - state: computer
+    - state: nuke_blue
+  - type: MCNukeDiskGenerator
+    spawnId: MCDiskNukeBlue
+    color: "#0000ff"

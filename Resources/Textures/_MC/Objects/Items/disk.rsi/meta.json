@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "nucleardisk"
+    },
+    {
+      "name": "datadisk0"
+    },
+    {
+      "name": "datadisk1"
+    },
+    {
+      "name": "datadisk2"
+    },
+    {
+      "name": "datadisk3"
+    },
+    {
+      "name": "datadisk4"
+    },
+    {
+      "name": "datadisk5"
+    },
+    {
+      "name": "datadisk6"
+    },
+    {
+      "name": "botanydisk"
+    },
+    {
+      "name": "datadisk7"
+    }
+  ]
+}
