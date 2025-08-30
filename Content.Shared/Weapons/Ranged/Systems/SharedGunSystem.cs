@@ -5,6 +5,7 @@ using Content.Shared._RMC14.Attachable.Systems;
 using Content.Shared._RMC14.CCVar;
 using Content.Shared._RMC14.Random;
 using Content.Shared._RMC14.Weapons.Ranged.Flamer;
+using Content.Shared._MC.Weapon.Range.Flamer;
 using Content.Shared._RMC14.Weapons.Ranged.Prediction;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
@@ -92,6 +93,7 @@ public abstract partial class SharedGunSystem : EntitySystem
     // RMC14
     [Dependency] private readonly AttachableHolderSystem _attachableHolder = default!;
     [Dependency] private readonly SharedRMCFlamerSystem _flamer = default!;
+    [Dependency] private readonly MCSolutionAmmoProviderSystem _mcFlamer = default!;
 
     private const float InteractNextFire = 0.3f;
     private const double SafetyNextFire = 0.5;
@@ -714,6 +716,10 @@ public abstract partial class SharedGunSystem : EntitySystem
                 case RMCFlamerAmmoProviderComponent flamer:
                     if (ent != null)
                         _flamer.ShootFlamer((ent.Value, flamer), (gunUid, gun), user, fromCoordinates, toCoordinates);
+                    break;
+                case MCSolutionAmmoProviderComponent mcFlamer:
+                    if (ent != null)
+                        _mcFlamer.ShootFlamer(ent.Value, gunUid, user, fromCoordinates, toCoordinates);
                     break;
                 case RMCSprayAmmoProviderComponent spray:
                     if (ent != null)
