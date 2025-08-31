@@ -1,3 +1,5 @@
+ghost-gui-respawn-lobby-button = Респавн в лобби ({ $time } сек.)
+ghost-gui-respawn-lobby-wait = Вы сможете респавниться в лобби через { $time } сек.
 ghost-gui-return-to-body-button = Вернуться в тело
 ghost-gui-ghost-warp-button = Телепорт призрака
 ghost-gui-ghost-roles-button = Роли призраков ({ $count })

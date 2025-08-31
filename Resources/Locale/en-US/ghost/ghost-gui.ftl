@@ -1,3 +1,5 @@
+ghost-gui-respawn-lobby-button = Respawn to lobby ({ $time }s)
+ghost-gui-respawn-lobby-wait = You can respawn to lobby in { $time }s.
 ghost-gui-return-to-body-button = Return to body
 ghost-gui-ghost-warp-button = Ghost Warp
 ghost-gui-ghost-roles-button = Ghost Roles ({$count})

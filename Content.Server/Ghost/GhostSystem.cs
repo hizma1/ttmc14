@@ -1,3 +1,5 @@
+using Content.Shared.Ghost;
+using Content.Shared.GameTicking;
 using System.Linq;
 using System.Numerics;
 using Content.Server.Administration.Logs;
@@ -100,6 +102,7 @@ namespace Content.Server.Ghost
             SubscribeNetworkEvent<GhostReturnToBodyRequest>(OnGhostReturnToBodyRequest);
             SubscribeNetworkEvent<GhostWarpToTargetRequestEvent>(OnGhostWarpToTargetRequest);
             SubscribeNetworkEvent<GhostnadoRequestEvent>(OnGhostnadoRequest);
+            SubscribeNetworkEvent<GhostRespawnToLobbyRequestEvent>(OnGhostRespawnToLobbyRequest);
 
             SubscribeLocalEvent<GhostComponent, BooActionEvent>(OnActionPerform);
             SubscribeLocalEvent<GhostComponent, ToggleGhostHearingActionEvent>(OnGhostHearingAction);
@@ -516,99 +519,136 @@ namespace Content.Server.Ghost
             return ghost;
         }
 
-        public bool OnGhostAttempt(EntityUid mindId, bool canReturnGlobal, bool viaCommand = false, bool forced = false, MindComponent? mind = null)
+    public bool OnGhostAttempt(EntityUid mindId, bool canReturnGlobal, bool viaCommand = false, bool forced = false, MindComponent? mind = null)
+    {
+        if (!Resolve(mindId, ref mind))
+            return false;
+
+        var playerEntity = mind.CurrentEntity;
+
+        if (playerEntity != null && viaCommand)
         {
-            if (!Resolve(mindId, ref mind))
-                return false;
+            if (forced)
+                _adminLog.Add(LogType.Mind, $"{ToPrettyString(playerEntity.Value):player} was forced to ghost via command");
+            else
+                _adminLog.Add(LogType.Mind, $"{ToPrettyString(playerEntity.Value):player} is attempting to ghost via command");
+        }
 
-            var playerEntity = mind.CurrentEntity;
+        var handleEv = new GhostAttemptHandleEvent(mind, canReturnGlobal);
+        RaiseLocalEvent(handleEv);
 
-            if (playerEntity != null && viaCommand)
+        // Something else has handled the ghost attempt for us! We return its result.
+        if (handleEv.Handled)
+            return handleEv.Result;
+
+        if (mind.PreventGhosting && !forced)
+        {
+            if (_player.TryGetSessionById(mind.UserId, out var session)) // Logging is suppressed to prevent spam from ghost attempts caused by movement attempts
             {
-                if (forced)
-                    _adminLog.Add(LogType.Mind, $"{ToPrettyString(playerEntity.Value):player} was forced to ghost via command");
-                else
-                    _adminLog.Add(LogType.Mind, $"{ToPrettyString(playerEntity.Value):player} is attempting to ghost via command");
+                _chatManager.DispatchServerMessage(session, Loc.GetString("comp-mind-ghosting-prevented"),
+                    true);
             }
 
-            var handleEv = new GhostAttemptHandleEvent(mind, canReturnGlobal);
-            RaiseLocalEvent(handleEv);
+            return false;
+        }
 
-            // Something else has handled the ghost attempt for us! We return its result.
-            if (handleEv.Handled)
-                return handleEv.Result;
+        if (TryComp<GhostComponent>(playerEntity, out var comp) && !comp.CanGhostInteract)
+            return false;
 
-            if (mind.PreventGhosting && !forced)
+        if (mind.VisitingEntity != default)
+        {
+            _mind.UnVisit(mindId, mind: mind);
+        }
+
+        var position = Exists(playerEntity)
+            ? Transform(playerEntity.Value).Coordinates
+            : _gameTicker.GetObserverSpawnPoint();
+
+        if (position == default)
+            return false;
+
+        // Ok, so, this is the master place for the logic for if ghosting is "too cheaty" to allow returning.
+        // There's no reason at this time to move it to any other place, especially given that the 'side effects required' situations would also have to be moved.
+        // + If CharacterDeadPhysically applies, we're physically dead. Therefore, ghosting OK, and we can return (this is critical for gibbing)
+        //   Note that we could theoretically be ICly dead and still physically alive and vice versa.
+        //   (For example, a zombie could be dead ICly, but may retain memories and is definitely physically active)
+        // + If we're in a mob that is critical, and we're supposed to be able to return if possible,
+        //   we're succumbing - the mob is killed. Therefore, character is dead. Ghosting OK.
+        //   (If the mob survives, that's a bug. Ghosting is kept regardless.)
+        var canReturn = canReturnGlobal && _mind.IsCharacterDeadPhysically(mind);
+
+        if (_configurationManager.GetCVar(CCVars.GhostKillCrit) &&
+            canReturnGlobal &&
+            TryComp(playerEntity, out MobStateComponent? mobState))
+        {
+            if (_mobState.IsCritical(playerEntity.Value, mobState))
             {
-                if (_player.TryGetSessionById(mind.UserId, out var session)) // Logging is suppressed to prevent spam from ghost attempts caused by movement attempts
+                canReturn = true;
+
+                //todo: what if they dont breathe lol
+                //cry deeply
+
+                FixedPoint2 dealtDamage = 200;
+
+                if (TryComp<DamageableComponent>(playerEntity, out var damageable)
+                    && TryComp<MobThresholdsComponent>(playerEntity, out var thresholds))
                 {
-                    _chatManager.DispatchServerMessage(session, Loc.GetString("comp-mind-ghosting-prevented"),
-                        true);
+                    var playerDeadThreshold = _mobThresholdSystem.GetThresholdForState(playerEntity.Value, MobState.Dead, thresholds);
+                    dealtDamage = playerDeadThreshold - damageable.TotalDamage;
                 }
 
-                return false;
+                DamageSpecifier damage = new(_prototypeManager.Index(AsphyxiationDamageType), dealtDamage);
+
+                _damageable.TryChangeDamage(playerEntity, damage, true);
             }
+        }
 
-            if (TryComp<GhostComponent>(playerEntity, out var comp) && !comp.CanGhostInteract)
-                return false;
+        if (playerEntity != null)
+            _adminLog.Add(LogType.Mind, $"{ToPrettyString(playerEntity.Value):player} ghosted{(!canReturn ? " (non-returnable)" : "")}");
 
-            if (mind.VisitingEntity != default)
+        var ghost = SpawnGhost((mindId, mind), position, canReturn);
+
+        if (ghost == null)
+            return false;
+
+        return true;
+    }
+
+        private void OnGhostRespawnToLobbyRequest(GhostRespawnToLobbyRequestEvent msg, EntitySessionEventArgs args)
+        {
+            // Проверяем, привязана ли сессия к сущности
+            if (args.SenderSession.AttachedEntity is not { Valid: true } attached)
             {
-                _mind.UnVisit(mindId, mind: mind);
+                _chatManager.DispatchServerMessage(args.SenderSession, "Вы не привязаны к сущности на сервере — запрос респавна в лобби игнорируется.", false);
+                return;
             }
 
-            var position = Exists(playerEntity)
-                ? Transform(playerEntity.Value).Coordinates
-                : _gameTicker.GetObserverSpawnPoint();
-
-            if (position == default)
-                return false;
-
-            // Ok, so, this is the master place for the logic for if ghosting is "too cheaty" to allow returning.
-            // There's no reason at this time to move it to any other place, especially given that the 'side effects required' situations would also have to be moved.
-            // + If CharacterDeadPhysically applies, we're physically dead. Therefore, ghosting OK, and we can return (this is critical for gibbing)
-            //   Note that we could theoretically be ICly dead and still physically alive and vice versa.
-            //   (For example, a zombie could be dead ICly, but may retain memories and is definitely physically active)
-            // + If we're in a mob that is critical, and we're supposed to be able to return if possible,
-            //   we're succumbing - the mob is killed. Therefore, character is dead. Ghosting OK.
-            //   (If the mob survives, that's a bug. Ghosting is kept regardless.)
-            var canReturn = canReturnGlobal && _mind.IsCharacterDeadPhysically(mind);
-
-            if (_configurationManager.GetCVar(CCVars.GhostKillCrit) &&
-                canReturnGlobal &&
-                TryComp(playerEntity, out MobStateComponent? mobState))
+            // Проверяем, имеет ли сущность компонент призрака
+            if (!_ghostQuery.TryComp(attached, out var ghost))
             {
-                if (_mobState.IsCritical(playerEntity.Value, mobState))
-                {
-                    canReturn = true;
-
-                    //todo: what if they dont breathe lol
-                    //cry deeply
-
-                    FixedPoint2 dealtDamage = 200;
-
-                    if (TryComp<DamageableComponent>(playerEntity, out var damageable)
-                        && TryComp<MobThresholdsComponent>(playerEntity, out var thresholds))
-                    {
-                        var playerDeadThreshold = _mobThresholdSystem.GetThresholdForState(playerEntity.Value, MobState.Dead, thresholds);
-                        dealtDamage = playerDeadThreshold - damageable.TotalDamage;
-                    }
-
-                    DamageSpecifier damage = new(_prototypeManager.Index(AsphyxiationDamageType), dealtDamage);
-
-                    _damageable.TryChangeDamage(playerEntity, damage, true);
-                }
+                _chatManager.DispatchServerMessage(args.SenderSession, "На вашей сущности отсутствует компонент призрака — запрос респавна в лобби игнорируется.", false);
+                return;
             }
 
-            if (playerEntity != null)
-                _adminLog.Add(LogType.Mind, $"{ToPrettyString(playerEntity.Value):player} ghosted{(!canReturn ? " (non-returnable)" : "")}");
+            var timeOfDeath = ghost.TimeOfDeath;
+            var now = _gameTiming.RealTime;
+            var timeSinceDeath = now - timeOfDeath;
+            var cooldown = TimeSpan.FromMinutes(2);
 
-            var ghost = SpawnGhost((mindId, mind), position, canReturn);
+            if (timeSinceDeath < cooldown)
+            {
+                var wait = cooldown - timeSinceDeath;
+                var msgText = Loc.GetString("ghost-gui-respawn-lobby-wait", ("time", wait.Minutes > 0 ? $"{wait.Minutes}м {wait.Seconds}с" : $"{wait.Seconds}с"));
+                _chatManager.DispatchServerMessage(args.SenderSession, msgText, false);
+                return;
+            }
 
-            if (ghost == null)
-                return false;
+            _gameTicker.ReturnPlayerToLobby(args.SenderSession);
 
-            return true;
+            if (_gameTicker.PlayerGameStatuses.TryGetValue(args.SenderSession.UserId, out var status) && status == PlayerGameStatus.NotReadyToPlay)
+            {
+                _chatManager.DispatchServerMessage(args.SenderSession, "Вы возвращены в лобби.", false);
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     [UISystemDependency] private readonly GhostSystem? _system = default;
 
     private GhostGui? Gui => UIManager.GetActiveUIWidgetOrNull<GhostGui>();
+    private DateTime? _localDeathObserved;
 
     public override void Initialize()
     {
@@ -64,7 +65,24 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         }
 
         Gui.Visible = _system?.IsGhost ?? false;
-        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody);
+        DateTime? deathTime = null;
+        var ghost = _system?.Player;
+        if (ghost != null && ghost.TimeOfDeath != TimeSpan.Zero)
+        {
+
+            if (_localDeathObserved == null)
+            {
+                _localDeathObserved = DateTime.UtcNow;
+            }
+
+            deathTime = _localDeathObserved;
+        }
+        else
+        {
+            _localDeathObserved = null;
+        }
+
+        Gui.Update(_system?.AvailableGhostRoleCount, _system?.Player?.CanReturnToBody, deathTime);
     }
 
     private void OnPlayerRemoved(GhostComponent component)
@@ -125,6 +143,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.RequestWarpsPressed += RequestWarps;
         Gui.ReturnToBodyPressed += ReturnToBody;
         Gui.GhostRolesPressed += GhostRolesPressed;
+        Gui.RespawnToLobbyPressed += RespawnToLobbyPressed;
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
         Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
 
@@ -139,9 +158,15 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.RequestWarpsPressed -= RequestWarps;
         Gui.ReturnToBodyPressed -= ReturnToBody;
         Gui.GhostRolesPressed -= GhostRolesPressed;
+        Gui.RespawnToLobbyPressed -= RespawnToLobbyPressed;
         Gui.TargetWindow.WarpClicked -= OnWarpClicked;
 
         Gui.Hide();
+    }
+
+    private void RespawnToLobbyPressed()
+    {
+        _system?.RespawnToLobby();
     }
 
     private void ReturnToBody()
