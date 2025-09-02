@@ -183,22 +183,6 @@ namespace Content.Server.GameTicking
             UpdateInfoText();
         }
 
-        public void ReturnPlayerToLobby(ICommonSession session)
-        {
-            // Ensure the player is present in the tracking dictionary and mark them as not ready (in lobby).
-            _playerGameStatuses[session.UserId] = PlayerGameStatus.NotReadyToPlay;
-            var client = session.Channel;
-
-            // Notify the client that they have joined the lobby (same events as PlayerJoinLobby).
-            RaiseNetworkEvent(new TickerJoinLobbyEvent(), client);
-            RaiseNetworkEvent(GetStatusMsg(session), client);
-            RaiseNetworkEvent(GetInfoMsg(), client);
-            UpdateInfoText();
-
-            // Local event for server systems to react to the player joining the lobby.
-            RaiseLocalEvent(new PlayerJoinedLobbyEvent(session));
-        }
-
         public bool UserHasJoinedGame(ICommonSession session)
             => UserHasJoinedGame(session.UserId);
 

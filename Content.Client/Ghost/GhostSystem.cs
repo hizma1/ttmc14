@@ -1,4 +1,3 @@
-using Content.Shared.Ghost;
 using Content.Client.Movement.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Ghost;
@@ -201,11 +200,6 @@ namespace Content.Client.Ghost
         public void ToggleGhostVisibility(bool? visibility = null)
         {
             GhostVisibility = visibility ?? !GhostVisibility;
-        }
-
-        public void RespawnToLobby()
-        {
-            RaiseNetworkEvent(new GhostRespawnToLobbyRequestEvent());
         }
     }
 }
