@@ -57,7 +57,7 @@
     steps: 1
     zeroVisible: true
   - type: RMCFlamerAmmoProvider
-    range: 6
+    range: 5
     spawn: null
   - type: AttachableHolder
     slots:
@@ -94,14 +94,6 @@
   - type: Tag
     tags:
     - MCWeaponIncineratorFL84
-  - type: Appearance
-  - type: MCClothingSlotAmmoProvider
-  - type: MCSolutionAmmoProvider
-  - type: MCSlotBasedConnectedContainer
-    targetSlot: BACK
-    containerWhitelist:
-      tags:
-      - MCBackpackFlamer
 
 - type: entity
   parent: MCWeaponFlamer
@@ -209,51 +201,6 @@
   - type: Appearance
   - type: SolutionStorageFillable
     solution: rmc_flamer_tank
-
-- type: entity
-  parent: BaseItem
-  id: MCBackpackFlamer
-  name: pyrotechnician fueltank
-  description: A much older-generation back rig that holds fuel in two tanks. A small regulator sits between them. Has a few straps for holding up to three of the actual flamer tanks you'll be refilling.
-  components:
-  - type: Sprite
-    sprite: _RMC14/Objects/Clothing/Back/Satchels/Marines/flamethrower.rsi
-    layers:
-    - state: icon
-  - type: Clothing
-    slots:
-    - back
-  - type: SolutionContainerManager
-    solutions:
-      rmc_flamer_tank:
-        maxVol: 500
-        reagents:
-        - ReagentId: MCNapalm
-          Quantity: 500
-  - type: RMCFlamerTank
-  - type: DetailedExaminableSolution
-    solution: rmc_flamer_tank
-  - type: SolutionTransfer
-    transferAmount: 500
-    maxTransferAmount: 500
-    minTransferAmount: 500
-  - type: RefillableSolution
-    solution: rmc_flamer_tank
-  - type: DrawableSolution
-    solution: rmc_flamer_tank
-  - type: RMCRefillSolutionOnStore
-  - type: RMCSolutionTransferWhitelist
-    popup: rmc-solution-transfer-whitelist-failed-not-welding-tank
-    targetWhitelist:
-      tags:
-      - MCPyroFlamer
-  - type: NoMixingReagents
-  - type: Tag
-    tags:
-    - MCBackpackFlamer
-  - type: RMCFlamerBackpack
-  - type: MCSolutionAmmoProvider
-    solutionId: rmc_flamer_tank
 
 - type: Tag
   id: MCFlamerTank
