@@ -1,0 +1,13 @@
+- type: entity
+  id: RespawnAction
+  name: Respawn
+  description: Click to return to the lobby
+  components:
+  - type: Action
+    checkCanInteract: false
+    icon:
+      sprite: _MC/Actions/actions.rsi
+      state: respawn
+  - type: InstantAction
+    event: !type:RespawnActionEvent
+

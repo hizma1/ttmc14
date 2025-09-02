@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/mob/actions.dmi",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "fire_cannon"
+    },
+    {
+      "name": "template"
+    },
+    {
+      "name": "template2"
+    },
+    {
+      "name": "template_on"
+    },
+    {
+      "name": "selected_frame"
+    },
+    {
+      "name": "active"
+    },
+    {
+      "name": "hide"
+    },
+    {
+      "name": "show"
+    },
+    {
+      "name": "sniper_zoom"
+    },
+    {
+      "name": "hidemob"
+    },
+    {
+      "name": "unhidemob"
+    },
+    {
+      "name": "joinmob"
+    },
+    {
+      "name": "camera_off"
+    },
+    {
+      "name": "camera_jump"
+    },
+    {
+      "name": "vote"
+    },
+    {
+      "name": "fmode_single"
+    },
+    {
+      "name": "fmode_single_auto"
+    },
+    {
+      "name": "fmode_burst"
+    },
+    {
+      "name": "fmode_burst_auto"
+    },
+    {
+      "name": "fmode_autotarget",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "aim_mode"
+    },
+    {
+      "name": "defend"
+    },
+    {
+      "name": "attack"
+    },
+    {
+      "name": "retreat"
+    },
+    {
+      "name": "rclick"
+    },
+    {
+      "name": "cboost_configure"
+    },
+    {
+      "name": "cboost_off"
+    },
+    {
+      "name": "cboost_on"
+    },
+    {
+      "name": "TL_84_Flame",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "TL_84_Water",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "rally"
+    },
+    {
+      "name": "larva_queue"
+    },
+    {
+      "name": "enter_droid"
+    },
+    {
+      "name": "screen_order_marine"
+    },
+    {
+      "name": "55"
+    },
+    {
+      "name": "57"
+    },
+    {
+      "name": "58"
+    },
+    {
+      "name": "59"
+    },
+    {
+      "name": "60"
+    },
+    {
+      "name": "62"
+    },
+    {
+      "name": "66"
+    },
+    {
+      "name": "67"
+    },
+    {
+      "name": "69"
+    },
+    {
+      "name": "70"
+    },
+    {
+      "name": "71"
+    },
+    {
+      "name": "take_ssd"
+    },
+    {
+      "name": "vali_weapon_connect"
+    },
+    {
+      "name": "repeating"
+    },
+    {
+      "name": "selected_reagent"
+    },
+    {
+      "name": "signal_transmit"
+    },
+    {
+      "name": "suit_scan"
+    },
+    {
+      "name": "suit_toggle"
+    },
+    {
+      "name": "suit_configure"
+    },
+    {
+      "name": "hide_order"
+    },
+    {
+      "name": "show_order"
+    },
+    {
+      "name": "end_round"
+    },
+    {
+      "name": "minimap"
+    },
+    {
+      "name": "respawn"
+    },
+    {
+      "name": "campaign_overview"
+    },
+    {
+      "name": "axe_sweep"
+    },
+    {
+      "name": "individual_stats"
+    },
+    {
+      "name": "sword_lunge"
+    },
+    {
+      "name": "eject_plasteel"
+    },
+    {
+      "name": "eject_metal"
+    },
+    {
+      "name": "coilgun_1"
+    },
+    {
+      "name": "coilgun_2"
+    },
+    {
+      "name": "coilgun_3"
+    },
+    {
+      "name": "stim_menu"
+    },
+    {
+      "name": "shield_bash"
+    },
+    {
+      "name": "build_designator"
+    },
+    {
+      "name": "interact_designator"
+    }
+  ]
+}
