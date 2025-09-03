@@ -1,0 +1,11 @@
+- type: entity
+  parent: MarkerBase
+  id: MCSpawnNukeDiskGenerator
+  name: spawn nuke disk generator
+  components:
+  - type: Sprite
+    layers:
+    - sprite: Markers/cross.rsi
+      state: red
+    - sprite: _MC/Structures/Machines/computer.rsi
+      state: nuke_rand

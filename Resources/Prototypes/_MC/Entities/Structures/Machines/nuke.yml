@@ -1,0 +1,12 @@
+- type: entity
+  parent: MCStructure
+  id: MCNuclearBomb
+  name: nuclear fission explosive
+  description: You probably shouldn't stick around to see if this is armed.
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Machines/nuclear_bomb.rsi
+    state: base
+  - type: Corrodible
+    isCorrodible: false
+  - type: InteractionOutline
