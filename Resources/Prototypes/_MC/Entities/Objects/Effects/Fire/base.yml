@@ -23,12 +23,12 @@
         - MobMask
         hard: false
   - type: Sprite
-    sprite: _RMC14/Effects/fire.rsi
+    sprite: _MC/Effects/fire.rsi
     noRot: true
     drawdepth: WallTops
     layers:
     - map: [ "base" ]
-      state: red_4
+      state: oldred_3
   - type: Clickable
   - type: InteractionOutline
   - type: PointLight
@@ -54,10 +54,9 @@
     visuals:
       enum.TileFireLayers.Base:
         base:
-          One: { state: red_1 }
-          Two: { state: red_2 }
-          Three: { state: red_3 }
-          Four: { state: red_4 }
+          One: { state: oldred_1 }
+          Two: { state: oldred_2 }
+          Three: { state: oldred_3 }
   - type: IgnorePredictionHit
   - type: RMCScorchEffectOnSpawn
     decalTag: burnt

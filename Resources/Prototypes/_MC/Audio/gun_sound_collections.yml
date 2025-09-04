@@ -4,3 +4,10 @@
   - /Audio/_MC/Weapons/Guns/Gunshots/gun_ar12_1.ogg
   - /Audio/_MC/Weapons/Guns/Gunshots/gun_ar12_2.ogg
   - /Audio/_MC/Weapons/Guns/Gunshots/gun_ar12_3.ogg
+
+- type: soundCollection
+  id: MCFL84Shoot
+  files:
+  - /Audio/_MC/Weapons/Guns/Fire/flamethrower1.ogg
+  - /Audio/_MC/Weapons/Guns/Fire/flamethrower2.ogg
+  - /Audio/_MC/Weapons/Guns/Fire/flamethrower3.ogg

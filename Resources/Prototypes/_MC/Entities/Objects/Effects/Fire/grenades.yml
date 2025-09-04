@@ -3,11 +3,6 @@
   id: MCFireHidp
   suffix: MC, HIDP
   components:
-  - type: Sprite
-    color: "#EE6515"
-    layers:
-    - map: [ "base" ]
-      state: dynamic_4
   - type: DamageOnCollide
     damage:
       types:
@@ -22,13 +17,3 @@
   - type: TileFire
     id: MCFireHidp
     duration: 25
-  - type: PointLight
-    color: "#EE6515"
-  - type: GenericVisualizer
-    visuals:
-      enum.TileFireLayers.Base:
-        base:
-          One: { state: dynamic_1 }
-          Two: { state: dynamic_2 }
-          Three: { state: dynamic_3 }
-          Four: { state: dynamic_4 }

@@ -1,4 +1,4 @@
-# Flamethrower Я НЕ ПОНИМАЮ БАЛАНС ЭТОЙ ХУЙНИ БЛЯТЬ
+# Flamethrower
 - type: entity
   parent: MCFire
   id: MCFireFlamethrower
@@ -19,7 +19,7 @@
     duration: 10
     tileDamage:
       types:
-        Heat: 0.13
+        Heat: 0.1
   - type: TileFire
     id: MCFireFlamethrower
     duration: 17 # burn_time = 17
@@ -28,7 +28,7 @@
 # Blue Flame
 - type: entity
   parent: MCFire
-  id: MCFireBlue
+  id: MCFireFlamethrowerBlue
   suffix: MC, Blue
   components:
   - type: Sprite
@@ -36,12 +36,17 @@
     - map: [ "base" ]
       state: blue_4
   - type: PointLight
-    color: "#0a0aff"
+    color: "#4d84fa"
   - type: RMCIgniteOnCollide
+    maxStacks: 30
     intensity: 46 # burn_level = 46
-    duration: 40
+    duration: 10
+    tileDamage:
+      types:
+        Heat: 0.2
+        Cold: 0.3
   - type: TileFire
-    id: MCFireBlue
+    id: MCFireFlamethrowerBlue
     duration: 40 # burn_time = 40
     extinguishInstantly: false
     patExtinguishMultiplier: 2
@@ -57,33 +62,34 @@
 # Green Flame
 - type: entity
   parent: MCFire
-  id: MCFireGreen
+  id: MCFireFlamethrowerGreen
   suffix: MC, Green
   components:
   - type: Sprite
     layers:
     - map: [ "base" ]
-      state: green_4
+      state: lime_3
   - type: PointLight
-    color: "#00ff00"
+    color: "#b1ff21"
   - type: RMCIgniteOnCollide
-    maxStacks: 10 # incendiary_strength = 10
+    maxStacks: 15
     intensity: 18 # burn_level = 18
-    duration: 12
+    duration: 10
     tileDamage:
       types:
-        Heat: 1
+        Caustic: 0.4
+        Heat: 0.1
   - type: TileFire
-    id: MCFireGreen
-    duration: 12 # burn_time = 12
+    id: MCFireFlamethrowerGreen
+    duration: 20 # burn_time = 20 хз на унгах проверил там 20
     extinguishInstantly: false
     patExtinguishMultiplier: 2
   - type: GenericVisualizer
     visuals:
       enum.TileFireLayers.Base:
         base:
-          One: { state: green_1 }
-          Two: { state: green_2 }
-          Three: { state: green_3 }
-          Four: { state: green_4 }
+          One: { state: lime_1 }
+          Two: { state: lime_2 }
+          Three: { state: lime_3 }
 
+# No Parity Sector

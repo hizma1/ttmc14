@@ -114,6 +114,15 @@
       - id: MCWeaponPepperball
         amount: 4
       - id: MCMagazinePepperball
+      - id: MCWeaponFlamerUnloadedNoMag
+        amount: 4
+      - id: MCTankFlamer
+        amount: 16
+      - id: MCTankFlamerGreen
+        amount: 8
+      - id: MCBackpackFlamer
+        amount: 4
+      - id: MCAttachmentUnderslungHydrocannon
     #- name: Heavy Weapons
     #  entries: []
     - name: Attachments

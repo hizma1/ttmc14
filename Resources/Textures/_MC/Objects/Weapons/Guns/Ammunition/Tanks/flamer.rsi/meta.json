@@ -41,25 +41,6 @@
       "name": "watertank"
     },
     {
-      "name": "x_flamethrower_tank",
-      "delays": [
-        [
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2,
-          0.2
-        ]
-      ]
-    },
-    {
-      "name": "flamethrower_tank_e"
-    },
-    {
-      "name": "flamethrower_tank"
-    },
-    {
       "name": "flametank_som"
     },
     {

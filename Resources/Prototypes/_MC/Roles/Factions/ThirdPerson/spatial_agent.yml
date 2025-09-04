@@ -7,7 +7,7 @@
   startingGear: MCGearSpatialAgentEquipped
   icon: MCSpatialAgent
   joinNotifyCrew: true
-  supervisors: mc-job-supervisors-sl
+  supervisors: mc-job-supervisors-nanotrasen
   accessGroups: [ MCSpatialAgent ]
   roleWeight: 1
   special:

@@ -560,9 +560,9 @@
   - type: Spray
     transferAmount: 5
     sprayedPrototype: RMCExtinguisherSpray
-    vaporAmount: 3
-    sprayDistance: 5
-    sprayVelocity: 5
+    vaporAmount: 1
+    sprayDistance: 6
+    sprayVelocity: 8
     spraySound:
       path: /Audio/Effects/extinguish.ogg
   - type: RefillableSolution
