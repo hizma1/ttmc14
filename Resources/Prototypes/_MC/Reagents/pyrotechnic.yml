@@ -35,5 +35,5 @@
   physicalDesc: reagent-physical-desc-shiny
   flavor: bitter
   color: "#cc7e93"
-  intensity: 20
-  duration: 5
+  intensity: 30
+  duration: 25
