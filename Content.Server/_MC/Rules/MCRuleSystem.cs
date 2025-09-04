@@ -9,6 +9,7 @@ using Content.Server.GameTicking.Rules;
 using Content.Server.Mind;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Station.Systems;
+using Content.Shared._MC.Nuke.Components;
 using Content.Shared._MC.Rules;
 using Content.Shared._RMC14.Bioscan;
 using Content.Shared._RMC14.CCVar;
@@ -179,6 +180,34 @@ public abstract partial class MCRuleSystem<T> : GameRuleSystem<T> where T : ICom
         while (faxes.MoveNext(out var faxId, out var faxComp))
         {
             _fax.Refresh(faxId, faxComp);
+        }
+    }
+
+    protected void SpawnNukeDiskGenerators()
+    {
+        var protoIds = new EntProtoId[]
+        {
+            "MCComputerNukeDiskGeneratorRed",
+            "MCComputerNukeDiskGeneratorGreen",
+            "MCComputerNukeDiskGeneratorBlue",
+        };
+
+        var coordinates = new List<MapCoordinates>();
+        var query = EntityQueryEnumerator<MCNukeDiskGeneratorSpawnerComponent>();
+        while (query.MoveNext(out var uid, out _))
+        {
+            coordinates.Add(_transform.GetMapCoordinates(uid));
+        }
+
+        foreach (var protoId in protoIds)
+        {
+            if (coordinates.Count == 0)
+            {
+                Log.Error($"Failed to spawn {protoId}, no available coordinates. Ensure that MCNukeDiskGeneratorSpawnerComponent exists on the map.");
+                break;
+            }
+
+            Spawn(protoId, _random.PickAndTake(coordinates));
         }
     }
 }

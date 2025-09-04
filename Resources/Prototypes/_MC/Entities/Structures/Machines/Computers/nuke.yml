@@ -18,9 +18,16 @@
         type: MCNukeDiskGeneratorBui
   - type: ApcPowerReceiver
   - type: RMCPowerReceiver
-    idleLoad: 0
+    idleLoad: 300
     activeLoad: 300
-    channel: Equipment
+    channel: Environment
+  - type: MarineMapTracked
+  - type: XenoMapTracked
+  - type: TacticalMapTracked
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/MapIcons/nuke.rsi
+      state: red_disk_off
 
 - type: entity
   parent: MCComputerNukeDiskGenerator
@@ -34,6 +41,10 @@
   - type: MCNukeDiskGenerator
     spawnId: MCDiskNukeRed
     color: "#ff0000"
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/MapIcons/nuke.rsi
+      state: red_disk_off
 
 - type: entity
   parent: MCComputerNukeDiskGenerator
@@ -47,6 +58,10 @@
   - type: MCNukeDiskGenerator
     spawnId: MCDiskNukeGreen
     color: "#00ff00"
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/MapIcons/nuke.rsi
+      state: green_disk_off
 
 - type: entity
   parent: MCComputerNukeDiskGenerator
@@ -60,3 +75,7 @@
   - type: MCNukeDiskGenerator
     spawnId: MCDiskNukeBlue
     color: "#0000ff"
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/MapIcons/nuke.rsi
+      state: blue_disk_off

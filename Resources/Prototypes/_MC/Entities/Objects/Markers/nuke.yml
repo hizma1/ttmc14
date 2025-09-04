@@ -9,3 +9,4 @@
       state: red
     - sprite: _MC/Structures/Machines/computer.rsi
       state: nuke_rand
+  - type: MCNukeDiskGeneratorSpawner

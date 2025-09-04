@@ -71,6 +71,7 @@ public sealed class MCCrashRuleSystem : MCRuleSystem<MCCrashRuleComponent>
             StartBioscan();
 
             SpawnAdminAreas(comp.Thunderdome);
+            SpawnNukeDiskGenerators();
 
             RefreshIFF(comp.MarineFaction);
             RefreshFaxes();
