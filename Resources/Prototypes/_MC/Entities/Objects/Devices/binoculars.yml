@@ -1,0 +1,52 @@
+﻿- type: entity
+  parent: BaseItem
+  id: MCBinoculars
+  name: binoculars
+  description: A pair of binoculars.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _MC/Objects/Devices/binoculars.rsi
+    state: binoculars
+  - type: Scope
+    useInHand: true
+    zoomLevels:
+      - zoom: 1.8 # зум большой, но менять нельзя ибо в других случаях дальность будет не та или тебя не будет видно, подумаешь на 3 тайла больше по бокам
+        offset: 13
+        allowMovement: false
+        doAfter: 0
+  - type: Tag
+    tags:
+      - Binoculars
+  - type: Clothing
+    quickEquip: false
+    slots:
+      - suitstorage
+  - type: Appearance
+
+- type: entity
+  parent: MCBinoculars
+  id: MCRangefinder
+  name: range-finder
+  description: A pair of binoculars designed to find coordinates, and aim linked artillery pieces.
+  components:
+  - type: Item
+  - type: Sprite
+    sprite: _MC/Objects/Devices/binoculars.rsi
+    layers:
+    - state: range_finders
+    - state: binoculars_range
+  - type: Rangefinder # потом отредачить систему
+    range: 35
+    delay: 0
+    minimumDelay: 0
+    timePerSkillLevel: 0
+    targetSound : null
+    toggleSound: null
+  - type: UseDelay
+    delay: 0
+  - type: UserInterface
+    interfaces:
+      enum.RangefinderUiKey.Key:
+        type: RangefinderBui

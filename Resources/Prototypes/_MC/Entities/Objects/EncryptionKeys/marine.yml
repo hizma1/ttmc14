@@ -31,4 +31,28 @@
     - MarineCommon
     defaultChannel: MarineMedical
   - type: Sprite
-    state: sl_key
+    state: med_key
+
+- type: entity
+  parent: CMEncryptionKey
+  id: MCEncryptionKeyEngineer
+  name: engineering radio encryption Key
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineEngineer
+    defaultChannel: MarineEngineer
+  - type: Sprite
+    state: eng_key
+
+- type: entity
+  parent: CMEncryptionKey
+  id: MCEncryptionKeyFireSupport
+  name: fire support specialist radio encryption key
+  components:
+  - type: EncryptionKey
+    channels:
+    - MarineJTAC
+    defaultChannel: MarineJTAC
+  - type: Sprite
+    state: jtac_key

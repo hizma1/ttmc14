@@ -59,8 +59,10 @@
       # Welderpack
       # Radio Pack
       # Dispenser
-      # Mortar bag
-      # Flamethrower bag
+      - id: MCBackMortarFull
+        name: Mortar bag
+      - id: MCBackFlamethrowerFull
+        name: Flamethrower bag
     - name: Webbing
       choices:
         MCWebbing: 1

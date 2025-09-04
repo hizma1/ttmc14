@@ -1,7 +1,7 @@
 ﻿- type: reagent
   id: MCWater
   name: mc-reagent-name-water
-  parent: BaseDrink # похуй короче
+  parent: BaseDrink
   desc: mc-reagent-desc-water
   evaporationSpeed: 0.3
   absorbent: true

@@ -90,6 +90,8 @@
         whitelist:
           tags:
           - MCAttachmentMagneticHarness
+          - MCAttachmentRedDotSight
+          - MCAttachmentRailFlashlight
       mc-slot-muzzle:
         locked: true
         startingAttachable: MCAttachmentMuzzleSG29
@@ -102,10 +104,17 @@
         whitelist:
           tags:
           - MCAttachmentStockSG29
+      mc-slot-underbarrel:
+        whitelist:
+          tags:
+          - MCAttachmentLaserSight
+          - MCAttachmentVerticalGrip
+          - MCAttachmentBipod
   - type: AttachableHolderVisuals
     offsets:
       mc-slot-muzzle: 0.875, 0.03125
       mc-slot-stock: -0.625, 0
+      mc-slot-underbarrel: 0.24, -0.064 # я на угад
 
 # Attachments
 - type: entity

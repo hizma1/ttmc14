@@ -61,23 +61,23 @@
     zapSound:
       path: /Audio/_RMC14/Medical/defib_release.ogg
       params:
-        volume: -2
+        volume: -1
     chargeSound:
       path: /Audio/_RMC14/Medical/defib_charge.ogg
       params:
-        volume: -3
+        volume: -1
     failureSound:
       path: /Audio/_RMC14/Medical/defib_failed.ogg
       params:
-        volume: -2
+        volume: -1
     successSound:
       path: /Audio/_RMC14/Medical/defib_success.ogg
       params:
-        volume: -2
+        volume: -1
     readySound:
       path: /Audio/_RMC14/Medical/defib_ready.ogg
       params:
-        volume: -2
+        volume: -1
     zapDamage: 0
   - type: DoAfter
   - type: UseDelay

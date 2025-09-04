@@ -1,0 +1,12 @@
+- type: entity
+  parent: MCSmoke
+  id: MCSmokeMortar
+  suffix: MC, Mortar
+  components:
+  - type: TimedDespawn
+    lifetime: 25
+  - type: EdgeSpreader
+    id: MCSmokeAcid
+  - type: EvenSmoke
+    spawn: MCSmokeMortar
+    range: 10

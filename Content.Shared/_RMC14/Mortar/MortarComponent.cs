@@ -14,7 +14,7 @@ public sealed partial class MortarComponent : Component
     public string ContainerId = "rmc_mortar_container";
 
     [DataField, AutoNetworkedField]
-    public SkillWhitelist Skill = new() { All = { ["RMCSkillEngineer"] = 1 } };
+    public SkillWhitelist Skill = new() { All = { ["RMCSkillEngineer"] = 0 } };
 
     [DataField, AutoNetworkedField]
     public TimeSpan DeployDelay = TimeSpan.FromSeconds(4);

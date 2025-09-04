@@ -4,6 +4,7 @@ using Content.Shared._RMC14.Chemistry.Reagent;
 using Content.Shared._RMC14.Fluids;
 using Content.Shared._RMC14.Line;
 using Content.Shared._RMC14.Weapons.Common;
+using Content.Shared._MC.Weapon.Range.Flamer;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
@@ -74,17 +75,14 @@ public abstract class SharedRMCFlamerSystem : EntitySystem
     {
         if (!TryGetTankSolution(ent, out var solutionEnt))
             return;
-
         var solution = solutionEnt.Value.Comp.Solution;
         args.Count = solution.Volume.Int();
         args.Capacity = solution.MaxVolume.Int();
     }
-
     private void OnInsertedIntoContainer(Entity<RMCFlamerAmmoProviderComponent> ent, ref EntInsertedIntoContainerMessage args)
     {
         if (args.Container.ID != ent.Comp.ContainerId)
             return;
-
         UpdateAppearance(ent);
     }
 
@@ -92,7 +90,6 @@ public abstract class SharedRMCFlamerSystem : EntitySystem
     {
         if (args.Container.ID != ent.Comp.ContainerId)
             return;
-
         UpdateAppearance(ent);
     }
 
@@ -103,40 +100,6 @@ public abstract class SharedRMCFlamerSystem : EntitySystem
             RefillTank(tank, ref args);
             return;
         }
-
-        if (args.Target is not { } target)
-            return;
-
-        if (!_solution.TryGetSolution(tank.Owner, tank.Comp.SolutionId, out var tankSolutionEnt, out _))
-            return;
-
-        Entity<SolutionComponent> targetSolutionEnt;
-        if (_solution.TryGetDrainableSolution(target, out var drainable, out _))
-        {
-            targetSolutionEnt = drainable.Value;
-        }
-        else if (TryComp(target, out RMCFlamerTankComponent? targetTank) &&
-                 _solution.TryGetSolution(target, targetTank.SolutionId, out var targetTankSolution))
-        {
-            targetSolutionEnt = targetTankSolution.Value;
-        }
-        else if (TryComp(target, out RMCFlamerBackpackComponent? backpack) &&
-                 _solution.TryGetSolution(target, backpack.SolutionId, out var backpackSolution))
-        {
-            targetSolutionEnt = backpackSolution.Value;
-        }
-        else if (HasComp<ReagentTankComponent>(target) &&
-                 _solution.TryGetDrainableSolution(target, out var reagentTankSolutionEnt, out _))
-        {
-            targetSolutionEnt = reagentTankSolutionEnt.Value;
-        }
-        else
-        {
-            return;
-        }
-
-        args.Handled = true;
-        Transfer(target, targetSolutionEnt, tank, tankSolutionEnt.Value, args.User);
     }
 
     private void OnSprayTakeAmmo(Entity<RMCSprayAmmoProviderComponent> ent, ref TakeAmmoEvent args)
@@ -215,7 +178,7 @@ public abstract class SharedRMCFlamerSystem : EntitySystem
             return;
 
         var volume = solutionEnt.Value.Comp.Solution.Volume;
-        if (volume <= flamer.Comp.CostPer)
+        if (volume < flamer.Comp.CostPer)
             return;
 
         if (!fromCoordinates.TryDelta(EntityManager, _transform, toCoordinates, out var delta))
@@ -249,8 +212,35 @@ public abstract class SharedRMCFlamerSystem : EntitySystem
             return;
 
         var chain = Spawn();
+        EntProtoId? fireType = null;
+        var tankEntity = solutionEnt.Value.Owner;
+        // 1. Пытаемся найти тип огня через бак
+        if (TryComp<MCFlamerTankFireTypeComponent>(tankEntity, out var fireTypeComp))
+        {
+            fireType = fireTypeComp.Spawn;
+        }
+        else if (_container.TryGetContainer(flamer, flamer.Comp.ContainerId, out var container))
+        {
+            foreach (var ent in container.ContainedEntities)
+            {
+                if (TryComp<MCFlamerTankFireTypeComponent>(ent, out var nestedFireTypeComp))
+                {
+                    fireType = nestedFireTypeComp.Spawn;
+                    break;
+                }
+            }
+        }
+        // 2. Если не найдено — используем Spawn из компонента огнемёта
+        if (fireType == null && flamer.Comp.Spawn != null)
+        {
+            fireType = flamer.Comp.Spawn;
+        }
+        // 3. Если всё ещё нет типа — не спавним огонь
+        if (fireType == null)
+            return;
+
         var chainComp = EnsureComp<RMCFlamerChainComponent>(chain);
-        chainComp.Spawn = flamer.Comp.Spawn;
+        chainComp.Spawn = fireType.Value;
         chainComp.Tiles = tiles;
         chainComp.MaxIntensity = flamer.Comp.MaxIntensity;
         chainComp.MaxDuration = flamer.Comp.MaxDuration;

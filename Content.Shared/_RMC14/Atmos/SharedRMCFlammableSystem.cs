@@ -70,6 +70,7 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
 
     private static readonly ProtoId<AlertPrototype> FireAlert = "Fire";
     private static readonly ProtoId<ReagentPrototype> WaterReagent = "Water";
+    private static readonly ProtoId<ReagentPrototype> MCWaterReagent = "MCWater";
     private static readonly ProtoId<TagPrototype> StructureTag = "Structure";
     private static readonly ProtoId<TagPrototype> WallTag = "Wall";
     private static readonly ProtoId<DamageTypePrototype> HeatDamage = "Heat";
@@ -145,7 +146,7 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
             if (!_solutionContainer.TryGetSolution(args.Solution.Owner, container, out _, out var solution))
                 continue;
 
-            if (solution.ContainsPrototype(WaterReagent))
+            if (solution.ContainsPrototype(WaterReagent) || solution.ContainsPrototype(MCWaterReagent))
             {
                 water = true;
                 break;

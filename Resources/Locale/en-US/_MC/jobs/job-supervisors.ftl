@@ -1,0 +1,9 @@
+mc-job-supervisors-nanotrasen = NanoTrasen
+mc-job-supervisors-captain = the Captain
+mc-job-supervisors-fc = the Field Commander
+mc-job-supervisors-co = the Operations Commander
+mc-job-supervisors-cse = the Chief Ship Engineer
+mc-job-supervisors-cmo = the Senior Medical Officer
+mc-job-supervisors-sl = the Squad Leader
+mc-job-supervisors-mercenary = mercenaries
+mc-job-supervisors-everyone = everyone

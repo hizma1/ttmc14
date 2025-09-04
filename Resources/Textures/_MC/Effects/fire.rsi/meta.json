@@ -1,7 +1,7 @@
 ﻿{
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from cmss13 at https://github.com/cmss13-devs/cmss13/blob/ce01adda18ccca3bb0105615391861567c766330/icons/effects/fire.dmi, purple fire recolored by UnicornOnLSD on github from white fire taken from cmss13 at https://github.com/cmss13-devs/cmss13/blob/ce01adda18ccca3bb0105615391861567c766330/icons/effects/fire.dmi",
+  "copyright": "Taken from cmss13 at htevs/cmss13/blob/ce01adda18ccca3bb010561tps://github.com/cmss13-d5391861567c766330/icons/effects/fire.dmi, purple fire recolored by UnicornOnLSD on github from white fire taken from cmss13 at https://github.com/cmss13-devs/cmss13/blob/ce01adda18ccca3bb0105615391861567c766330/icons/effects/fire.dmi, Taken from https://github.com/tgstation/TerraGov-Marine-Corps/blob/master/icons/effects/fire.dmi, other fire recolder by F8ctor (Github)",
   "size": {
     "x": 32,
     "y": 32
@@ -271,6 +271,534 @@
           0.2,
           0.1,
           0.1
+        ]
+      ]
+    },
+    {
+      "name": "ihor_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "ihor_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "ihor_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "ihor_4",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "dark_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "dark_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "dark_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "dark_4",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "altred_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "altred_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "altred_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "cyan_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "cyan_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "cyan_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "cyan_4",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "glitch_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "glitch_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "glitch_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "glitch_4",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "oldgreen_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "oldgreen_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "oldgreen_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "oldgreen_4",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "lime_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "lime_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "lime_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "neon_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "neon_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "neon_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "neoncyan_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "neoncyan_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "neoncyan_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "oldred_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "oldred_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "oldred_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "violet_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "violet_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "violet_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "pink_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "pink_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "pink_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "pink_4",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "yellow_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "yellow_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "yellow_3",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "yellow_4",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "time_1",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "time_2",
+      "delays": [
+        [
+          0.1,
+          0.2,
+          0.1,
+          0.2
         ]
       ]
     }

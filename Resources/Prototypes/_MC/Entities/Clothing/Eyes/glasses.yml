@@ -58,11 +58,10 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
-  - type: ComponentToggler
-    components:
-    - type: SolutionScanner
-  - type: ToggleClothing
-    action: RMCActionToggleMedhud
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: SolutionScanner
   - type: NightVisionItem
   - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons

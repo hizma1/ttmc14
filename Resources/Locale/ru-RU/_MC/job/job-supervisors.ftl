@@ -1,0 +1,9 @@
+mc-job-supervisors-nanotrasen = НаноТрайзен
+mc-job-supervisors-captain = Капитану
+mc-job-supervisors-fc = Полевому Командиру
+mc-job-supervisors-co = Командующему операцией
+mc-job-supervisors-cse = Главному Корабельному Инженеру
+mc-job-supervisors-cmo = Старшему Медицинскому Офицеру
+mc-job-supervisors-sl = Командиру Отряда
+mc-job-supervisors-mercenary = своим нанимателям
+mc-job-supervisors-everyone = вообще всем

@@ -40,6 +40,7 @@
         RMCSkillEngineer: 3
         RMCSkillConstruction: 2
         RMCSkillPolice: 2
+        RMCSkillJtac: 2
         RMCSkillPowerLoader: 2
         RMCSkillLeadership: 3
         RMCSkillSmartGun: -4

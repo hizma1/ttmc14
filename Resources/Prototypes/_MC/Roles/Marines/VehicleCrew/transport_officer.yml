@@ -38,6 +38,7 @@
         RMCSkillEngineer: 3
         RMCSkillConstruction: 3
         RMCSkillPilot: 1
+        RMCSkillJtac: 2
         RMCSkillPowerLoader: 3
         RMCSkillLeadership: 2
         RMCSkillSmartGun: -4

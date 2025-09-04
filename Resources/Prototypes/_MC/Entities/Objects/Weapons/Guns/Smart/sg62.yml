@@ -88,6 +88,9 @@
         whitelist:
           tags:
           - MCAttachmentMagneticHarness
+          - MCAttachmentRailFlashlight
+          - MCAttachmentMiniScope
+          - MCAttachmentT47RailScope
       mc-slot-stock:
         locked: true
         startingAttachable: MCAttachmentStockSG62

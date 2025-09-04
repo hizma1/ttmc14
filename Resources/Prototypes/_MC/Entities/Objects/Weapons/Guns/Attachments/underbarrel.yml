@@ -318,8 +318,8 @@
     soundGunshot:
       collection: RMCFlamerShoot
   - type: RMCFlamerAmmoProvider
-    range: 5 # простите, но я не хочу чтобы 1 реагент напалма оставался в канистре
-    spawn: MCFlamethrowerFire
+    range: 4
+    spawn: null
   - type: Wieldable
   - type: ShootUseDelay
   - type: ContainerContainer
@@ -333,8 +333,8 @@
         ejectSound: /Audio/_RMC14/Weapons/Handling/flamer_unload.ogg
         priority: 2
         whitelist:
-          components:
-          - RMCFlamerTank
+          tags:
+          - MCFlamerTankMini
   - type: RMCAmmoEject
   - type: AttachableToggleable
     userOnly: true
@@ -357,44 +357,6 @@
       state: flamethrower-on
   - type: AttachableVisuals
     offset: -0.125, 0.245
-
-- type: entity
-  parent: BaseItem
-  id: MCMiniTankFlamer
-  name: mini incinerator tank
-  description: A fuel tank of usually ultra thick napthal, a sticky combustable liquid chemical, for use in the underail incinerator unit. Handle with care.
-  components:
-  - type: Sprite
-    sprite: _MC/Objects/Weapons/Guns/Ammunition/Tanks/flamer.rsi
-    state: flametank_mini
-    layers:
-    - state: flametank_mini
-  - type: Item
-    size: Small
-  - type: SolutionContainerManager
-    solutions:
-      rmc_flamer_tank:
-        maxVol: 25
-        reagents:
-        - ReagentId: MCNapalm
-          Quantity: 25
-  - type: RMCFlamerTank
-  - type: RMCSolutionTransferWhitelist
-    popup: rmc-solution-transfer-whitelist-failed-not-reagent-tank
-    targetWhitelist:
-      tags:
-      - MCPyroFlamer
-  - type: RefillableSolution
-    solution: rmc_flamer_tank
-  - type: DetailedExaminableSolution
-    solution: rmc_flamer_tank
-  - type: NoMixingReagents
-  - type: SolutionContainerVisuals
-    maxFillLevels: 2
-    fillBaseName: flametank_custom_strip
-  - type: Appearance
-  - type: SolutionStorageFillable
-    solution: rmc_flamer_tank
 
 - type: entity
   parent: [ MCAttachmentBaseUnderbarrel, MCAttachableToggleableBase ]
@@ -544,6 +506,78 @@
       state: masterkey-on
   - type: AttachableVisuals
 
+- type: entity
+  parent: MCAttachmentBaseUnderbarrel
+  id: MCAttachmentUnderslungHydrocannon
+  name: underslung hydrocannon
+  description: For the quenching of unfortunate mistakes.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Attachments/hydrocannon.rsi
+    state: hydrocannon
+  - type: Tag
+    tags:
+    - MCAttachmentUnderbarrel
+    - MCAttachmentUnderslungHydrocannon
+  - type: Item
+    size: Normal
+  - type: Gun
+    cameraRecoilScalar: 0
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: RMCFlamerShoot
+  - type: Wieldable
+  - type: ShootUseDelay
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: RMCAmmoEject
+  - type: AttachableToggleable
+    userOnly: true
+    attachedOnly: true
+    supercedeHolder: true
+    wieldedUseOnly: false
+    activatePopupText: attachable-popup-switch-to-generic
+    deactivatePopupText: attachable-popup-switch-from-generic
+    activateSound:
+      path: /Audio/_RMC14/Attachable/gun_u7_activate.ogg
+      params:
+        volume: -2
+    actionName: Switch to the underslung hydrocannon.
+    actionDesc: Switch to using the underslung hydrocannon.
+    icon:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/hydrocannon.rsi
+      state: hydrocannon
+    iconActive:
+      sprite: _MC/Objects/Weapons/Guns/Attachments/hydrocannon.rsi
+      state: hydrocannon-on
+  - type: AttachableVisuals
+    offset: 0.061, 0.028
+  - type: RMCSprayAmmoProvider
+  - type: Spray
+    transferAmount: 5
+    sprayedPrototype: RMCExtinguisherSpray
+    vaporAmount: 1
+    sprayDistance: 6
+    sprayVelocity: 8
+    spraySound:
+      path: /Audio/Effects/extinguish.ogg
+  - type: RefillableSolution
+    solution: spray
+  - type: SolutionTransfer
+    maxTransferAmount: 60
+    transferAmount: 60
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 200
+        reagents:
+        - ReagentId: MCWater
+          Quantity: 200
+
 - type: Tag
   id: MCAttachmentUnderbarrelShotgun
 
@@ -574,7 +608,5 @@
 - type: Tag
   id: MCAttachmentLaserSight
 
-
-
 - type: Tag
-  id: MCPyroFlamer
+  id: MCAttachmentUnderslungHydrocannon

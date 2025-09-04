@@ -68,22 +68,28 @@
       # Iguana Unmanned Vehicle
       # Skink Unmanned Vehicle
       # Build-A-Sentry Attachment
-      # Flamethrower tank
+      - id: MCTankFlamerGreen
+        points: 4 # Это оправдывает цену
+      - id: MCTankFlamer
+        points: 2 # КАКИЕ НАХУЙ 4 ПОИНТА НА ЭТУ ХУЙНЮ!?
       # Supply beacon
     - name: Mining
       entries: []
     - name: Artillery
       entries:
-      - id: RMCRangefinder
+      - id: MCCrateMortarKit
+        points: 45
+      - id: MCRangefinder
         points: 10
       # AI remote targeting module
-      - id: RMCMortarShellHE
+      - id: MCMortarShellHE
         points: 2
-      - id: RMCMortarShellIncendiary
+      - id: MCMortarShellIncendiary
         points: 2
       # Tanglefoot Mortar shell
-      # Smoke Mortar shell
-      - id: RMCMortarShellFlare
+      - id: MCMortarShellSmoke
+        points: 1
+      - id: MCMortarShellFlare
         points: 1
 
 # Bundles

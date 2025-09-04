@@ -1,0 +1,319 @@
+# TODO: FUCKING PARITYYYYYYY
+
+- type: entity
+  parent: BaseItem
+  id: MCMortarKit
+  name: TA-50S mortar
+  suffix: MC
+  description: A manual, crew-operated mortar system intended to rain down 80mm goodness on anything it's aimed at. Needs to be set down first to fire.
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Machines/mortar.rsi
+    layers:
+    - map: [ "mortar" ]
+      state: mortar
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+      mortar:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 20
+        layer:
+        - Impassable
+        mask:
+        - Impassable
+        hard: false
+  - type: CollisionWake
+    enabled: false
+  - type: Anchorable
+    flags:
+    - Unanchorable
+  - type: Tag
+    tags:
+    - MCMortarKit
+  - type: Item
+    size: Huge
+  - type: Corrodible
+    isCorrodible: false
+  - type: Mortar
+    drop: MCMortarKit
+    minimumRange: 15
+    maximumRange: 1000
+    maxDial: 15
+    fireDelay: 0.1
+    tilesPerOffset: 15
+    fireRandomOffset: [-2, -1, 1, 2]
+    deployDelay: 1
+    targetDelay: 1
+    dialDelay: 1
+    deployedState: mortar_deployed
+    animationState: mortar_deployed_fire
+  - type: MCArmor
+    melee: 0
+    bullet: 50
+    laser: 50
+    energy: 50
+    bomb: 15
+    bio: 100
+    fire: 0
+    acid: 0
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: UserInterface
+    interfaces:
+      enum.MortarUiKey.Key:
+        type: MortarBui
+      enum.RMCCameraUiKey.Key:
+        type: RMCCameraBui
+  - type: ActivatableUI
+    key: enum.MortarUiKey.Key
+  - type: RMCCameraComputer
+    id: MCMortarKit
+    title: rmc-mortar-camera-title
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.MortarVisualLayers.State:
+        mortar:
+          Item: { state: mortar }
+          Deployed: { state: mortar_deployed }
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: ActivatableUIBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: RequireProjectileTarget
+  - type: ImmuneToMelee
+    whitelist:
+      components:
+      - Marine
+  - type: ReceiverXenoClaws
+    maxHealth: 100
+    hitsToDestroy: 1
+    minimumClawStrength: Normal
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/_RMC14/Structures/metalhit.ogg"
+
+- type: entity
+  parent: MCMortarKit
+  id: MCMortarKitLargeScatter
+  suffix: MC, Large Scatter
+  components:
+  - type: Mortar
+    fireRandomOffset: [-10, -5, 5, 10]
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: MCMortarShellBase
+  name: 80mm mortar shell
+  description: An unlabeled 80mm mortar shell, probably a casing.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Shells/mortar.rsi
+    state: mortar
+  - type: Item
+    size: Huge
+  - type: MortarShell
+
+- type: entity
+  parent: MCMortarShellBase
+  id: MCMortarShellHE
+  name: 80mm high explosive mortar shell
+  description: An 80mm mortar shell, loaded with a high explosive charge.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Shells/mortar.rsi
+    state: mortar_he
+  - type: Explosive
+    explosionType: RMCMortar
+    maxIntensity: 6 # max 60 brute, 60 burn
+    intensitySlope: 5
+    totalIntensity: 250
+    canCreateVacuum: false
+  - type: CMExplosionEffect
+  - type: RMCScorchEffect
+  - type: MortarShell
+
+- type: entity
+  parent: MCMortarShellBase
+  id: MCMortarShellIncendiary
+  name: 80mm incendiary mortar shell
+  description: An 80mm mortar shell, loaded with a napalm charge.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Shells/mortar.rsi
+    state: mortar_inc
+  - type: Explosive
+    explosionType: RMCMortar
+    maxIntensity: 0
+    intensitySlope: 0
+    totalIntensity: 0
+    canCreateVacuum: false
+  - type: RMCScorchEffect
+  - type: MortarShell
+  - type: TileFireOnTrigger
+    spawn: MCFireMortar
+    range: 4
+
+- type: entity
+  parent: MCMortarShellBase
+  id: MCMortarShellFlare
+  name: 80mm flare mortar shell
+  description: An 80mm mortar shell, loaded with an illumination flare, far slimmer than your typical 80mm shell. Can be fired out of larger cannons.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Shells/mortar.rsi
+    state: mortar_flr
+  - type: MortarShell
+  - type: MortarCameraShell
+    flare: MCMortarFlare
+
+- type: entity
+  id: MCMortarFlare
+  name: illumination flare
+  description: It's really bright, and unreachable.
+  components:
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: false
+  - type: PointLight
+    enabled: true
+    color: "#fca503"
+    energy: 5
+    radius: 15
+  - type: RandomTimedDespawn
+    min: 270
+    max: 330
+
+- type: entity
+  parent: MCMortarShellBase
+  id: MCMortarShellSmoke
+  name: 80mm smoke mortar shell
+  description: An 80mm mortar shell, loaded with smoke dispersal agents. Can be fired at marines more-or-less safely. Way slimmer than your typical 80mm.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Shells/mortar.rsi
+    state: mortar_smk
+  - type: MortarShell
+  - type: SpawnOnTerminate
+    spawn: MCSmokeMortar
+    projectileAdjust: false
+
+- type: entity
+  parent: [ MCMPersonalStorage, RMCScabbardBase ]
+  id: MCBackMortar
+  name: TGMC mortar bag
+  description: This backpack can hold 11 80mm mortar shells.
+  components:
+  - type: Sprite
+    sprite: _MC/Clothing/Back/Backpacks/Marines/marinepackt.rsi
+    layers:
+    - state: marinepackt
+  - type: Clothing
+    sprite: _MC/Clothing/Back/Backpacks/Marines/marinepackt.rsi
+    slots:
+    - back
+  - type: Item
+    size: Large
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,21,1
+    whitelist:
+      components:
+      - MortarShell
+  - type: ItemSlots
+    slots:
+      item:
+        name: Mortar
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/_RMC14/Weapons/Guns/gun_rifle_draw.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Guns/gun_rifle_draw.ogg
+        whitelist:
+          tags:
+          - MCMortarKit
+  - type: ItemMapper
+    mapLayers:
+      marinepackt_full:
+        whitelist:
+          tags:
+          - MCMortarKit
+  - type: FixedItemSizeStorage
+  - type: Tag
+    tags:
+    - MCBackMortar
+
+- type: entity
+  parent: MCBackMortar
+  id: MCBackMortarFull
+  suffix: Full
+  components:
+  - type: ItemSlots
+    slots:
+      item:
+        name: Morta
+        startingItem: MCMortarKit
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/_RMC14/Weapons/Guns/gun_rifle_draw.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Guns/gun_rifle_draw.ogg
+        whitelist:
+          tags:
+          - MCMortarKit
+
+- type: Tag
+  id: MCBackMortar
+
+- type: entity
+  parent: RMCCrateMortarAmmo
+  id: MCCrateMortarKit
+  name: TA-50S mortar kit
+  description: A crate containing a basic set of a mortar and some shells, to get an engineer started.
+  components:
+  - type: StorageFill
+    contents:
+    - id: MCMortarKit
+    - id: MCBackMortar
+    - id: MCRangefinder
+    # /obj/item/hud_tablet/artillery
+    - id: MCEncryptionKeyFireSupport
+      amount: 3
+    - id: MCEncryptionKeyEngineer
+      amount: 2
+    - id: MCMortarShellHE
+      amount: 8
+    - id: MCMortarShellIncendiary
+      amount: 8
+    - id: MCMortarShellFlare
+      amount: 4
+    - id: MCMortarShellSmoke
+      amount: 4
+    # /obj/item/mortal_shell/plasmaloss = 2
