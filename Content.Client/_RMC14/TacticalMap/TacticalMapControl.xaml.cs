@@ -492,7 +492,8 @@ public sealed partial class TacticalMapControl : TextureRect
             float scaledBlipSize = GetScaledBlipSize(overlayScale);
             UIBox2 rect = UIBox2.FromDimensions(position, new Vector2(scaledBlipSize, scaledBlipSize));
 
-            handle.DrawTextureRect(blip.Background != null ? system.Frame0(blip.Background) : background, rect, blip.Color);
+            if (blip.Background != null)
+                handle.DrawTextureRect(system.Frame0(blip.Background), rect, blip.Color);
             handle.DrawTextureRect(system.Frame0(blip.Image), rect);
 
             if (blip.HiveLeader)

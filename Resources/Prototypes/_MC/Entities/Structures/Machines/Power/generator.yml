@@ -1,0 +1,70 @@
+﻿- type: entity
+  id: MCGeneratorFusion
+  name: S-52 fusion reactor
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Appearance
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Corrodible
+    isCorrodible: false
+  - type: RMCFusionReactor
+    watts: 50000
+  - type: ActivatableUIBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: GenericVisualizer
+    visuals:
+      enum.RMCFusionReactorLayers.Layer:
+        base:
+          Off: { state: "off" }
+          Weld: { state: "weld" }
+          Wire: { state: "wire" }
+          Wrench: { state: "wrench" }
+          Ten: { state: "on-10" }
+          TwentyFive: { state: "on-25" }
+          Fifty: { state: "on-50" }
+          SeventyFive: { state: "on-75" }
+          Hundred: { state: "on-100" }
+          Overloaded: { state: "overloaded" }
+  - type: BlockXenoConstruction
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+        - LowImpassable
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _RMC14/Structures/Power/fusion_reactor.rsi
+    layers:
+    - state: "off"
+      map: [ "base" ]
+
+- type: entity
+  parent: MCGeneratorFusion
+  id: MCGeneratorFusionColony
+  name: G-11 geothermal generator
+  description: A thermoelectric generator sitting atop a plasma-filled borehole.
+  components:
+  - type: RMCFusionReactor
+    watts: 100000
+    randomizeDamage: true
+  - type: IntelPowerObjective
+  - type: MarineMapTracked
+  - type: XenoMapTracked
+  - type: TacticalMapTracked
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/MapIcons/power.rsi
+      state: generator_off

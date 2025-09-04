@@ -10,7 +10,7 @@ public abstract partial class SharedRMCPowerSystem
         var reactors = EntityQueryEnumerator<RMCFusionReactorComponent, TransformComponent>();
         while (reactors.MoveNext(out var uid,  out var comp, out var xform))
         {
-            if (comp.State == RMCFusionReactorState.Working && _transform.GetGrid((uid, xform)) == gridUid)
+            if (comp.State == RMCFusionReactorState.Working && _transform.GetGrid(uid) is { } reactorGridUid && reactorGridUid == gridUid)
                 return true;
         }
 

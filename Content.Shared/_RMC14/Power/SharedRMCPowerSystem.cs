@@ -29,7 +29,7 @@ using static Content.Shared.Popups.PopupType;
 
 namespace Content.Shared._RMC14.Power;
 
-public abstract class SharedRMCPowerSystem : EntitySystem
+public abstract partial class SharedRMCPowerSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly AreaSystem _area = default!;
@@ -49,8 +49,10 @@ public abstract class SharedRMCPowerSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
 
     protected readonly HashSet<EntityUid> ToUpdate = new();
-    private readonly Dictionary<MapId, List<EntityUid>> _reactorPoweredLights = new();
-    private readonly HashSet<MapId> _reactorsUpdated = new();
+    // mc-changes-start
+    private readonly Dictionary<EntityUid, List<EntityUid>> _reactorPoweredLights = new();
+    private readonly HashSet<EntityUid> _reactorsUpdated = new();
+    // mc-changes-end
     private bool _recalculate;
 
     private EntityQuery<RMCApcComponent> _apcQuery;
@@ -589,11 +591,13 @@ public abstract class SharedRMCPowerSystem : EntitySystem
         }
     }
 
+    // mc-changes-start
     private void OnReactorPoweredLightMapInit(Entity<RMCReactorPoweredLightComponent> ent, ref MapInitEvent args)
     {
-        if (TryComp(ent, out TransformComponent? xform))
-            _reactorPoweredLights.GetOrNew(xform.MapID).Add(ent);
+        if (_transform.GetGrid(ent.Owner) is { } gridUid)
+            _reactorPoweredLights.GetOrNew(gridUid).Add(ent);
     }
+    // mc-changes-end
 
     private void OnApcSetChannelBuiMsg(Entity<RMCApcComponent> ent, ref RMCApcSetChannelBuiMsg args)
     {
@@ -779,11 +783,13 @@ public abstract class SharedRMCPowerSystem : EntitySystem
         return false;
     }
 
+    // mc-changes-start
     private void ReactorUpdated(Entity<RMCFusionReactorComponent> ent)
     {
-        var mapId = _transform.GetMapId(ent.Owner);
-        _reactorsUpdated.Add(mapId);
+        if (_transform.GetGrid(ent.Owner) is { } gridUid)
+            _reactorsUpdated.Add(gridUid);
     }
+    // mc-changes-end
 
     protected void UpdateReceiverPower(EntityUid receiver, ref PowerChangedEvent ev)
     {
@@ -811,7 +817,7 @@ public abstract class SharedRMCPowerSystem : EntitySystem
         _recalculate = true;
     }
 
-    public override void Update(float frameTime)
+      public override void Update(float frameTime)
     {
         if (_recalculate)
         {
@@ -828,17 +834,25 @@ public abstract class SharedRMCPowerSystem : EntitySystem
                 ToUpdate.Add(uid);
             }
 
+            // mc-changes-start
             var reactorQuery = EntityQueryEnumerator<RMCFusionReactorComponent>();
             while (reactorQuery.MoveNext(out var uid, out _))
             {
-                _reactorsUpdated.Add(Transform(uid).MapID);
+                if (_transform.GetGrid(uid) is not { } gridUid)
+                    continue;
+
+                _reactorsUpdated.Add(gridUid);
             }
 
             var lightQuery = EntityQueryEnumerator<RMCReactorPoweredLightComponent>();
-            while (lightQuery.MoveNext(out var uid, out var comp))
+            while (lightQuery.MoveNext(out var uid, out _))
             {
-                _reactorPoweredLights.GetOrNew(Transform(uid).MapID).Add(uid);
+                if (_transform.GetGrid(uid) is not { } gridUid)
+                    continue;
+
+                _reactorPoweredLights.GetOrNew(gridUid).Add(uid);
             }
+            // mc-changes-end
         }
 
         if (_net.IsClient)
@@ -853,14 +867,16 @@ public abstract class SharedRMCPowerSystem : EntitySystem
         {
             try
             {
-                foreach (var (map, lights) in _reactorPoweredLights)
+                // mc-changes-start
+                foreach (var (gridUid, lights) in _reactorPoweredLights)
                 {
-                    var powered = AnyReactorsOn(map);
+                    var powered = AnyReactorsOnGrid(gridUid);
                     foreach (var light in lights)
                     {
                         _pointLight.SetEnabled(light, powered);
                     }
                 }
+                // mc-changes-end
             }
             finally
             {
@@ -870,19 +886,21 @@ public abstract class SharedRMCPowerSystem : EntitySystem
 
         try
         {
-            foreach (var map in _reactorsUpdated)
+            // mc-changes-start
+            foreach (var gridUid in _reactorsUpdated)
             {
-                var powered = AnyReactorsOn(map);
+                var powered = AnyReactorsOnGrid(gridUid);
                 var lights = EntityQueryEnumerator<RMCReactorPoweredLightComponent, TransformComponent>();
                 while (lights.MoveNext(out var uid, out _, out var xform))
                 {
-                    if (xform.MapID == map)
-                    {
-                        _appearance.SetData(uid, ToggleableVisuals.Enabled, powered);
-                        _pointLight.SetEnabled(uid, powered);
-                    }
+                    if (_transform.GetGrid((uid, xform)) != gridUid)
+                        continue;
+
+                    _appearance.SetData(uid, ToggleableVisuals.Enabled, powered);
+                    _pointLight.SetEnabled(uid, powered);
                 }
             }
+            // mc-changes-end
         }
         finally
         {

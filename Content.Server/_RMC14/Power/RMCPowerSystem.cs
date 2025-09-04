@@ -7,6 +7,7 @@ using Content.Shared._RMC14.Power;
 using Content.Shared.Examine;
 using Content.Shared.Power;
 using Content.Shared.PowerCell;
+using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
@@ -23,6 +24,7 @@ public sealed class RMCPowerSystem : SharedRMCPowerSystem
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedPointLightSystem _light = default!;
+    [Dependency] private readonly TransformSystem _transform = default!;
 
     [ViewVariables]
     private TimeSpan _nextUpdate;
@@ -135,19 +137,18 @@ public sealed class RMCPowerSystem : SharedRMCPowerSystem
 
         _toRemove.Clear();
 
+        // mc-changes-start
         var power = new Dictionary<EntityUid, float>();
         var generators = EntityQueryEnumerator<RMCFusionReactorComponent, TransformComponent>();
-        while (generators.MoveNext(out var generator, out var xform))
+        while (generators.MoveNext(out var uid, out var generator, out _))
         {
-            if (generator.State != RMCFusionReactorState.Working ||
-                xform.MapUid is not { } map)
-            {
+            if (generator.State != RMCFusionReactorState.Working || _transform.GetGrid(uid) is not { } grid)
                 continue;
-            }
 
-            ref var mapPower = ref CollectionsMarshal.GetValueRefOrAddDefault(power, map, out _);
-            mapPower += generator.Watts;
+            ref var gridPower = ref CollectionsMarshal.GetValueRefOrAddDefault(power, grid, out _);
+            gridPower += generator.Watts;
         }
+        // mc-changes-end
 
         var areas = EntityQueryEnumerator<RMCAreaPowerComponent>();
         while (areas.MoveNext(out var uid, out var areaPower))
@@ -161,8 +162,10 @@ public sealed class RMCPowerSystem : SharedRMCPowerSystem
                     continue;
                 }
 
-                if (xform.MapUid is not { } map)
+                // mc-changes-start
+                if (_transform.GetGrid(apc) is not { } grid)
                     continue;
+                // mc-changes-end
 
                 if (!_apcQuery.TryComp(apc, out var apcComp))
                     continue;
@@ -175,7 +178,9 @@ public sealed class RMCPowerSystem : SharedRMCPowerSystem
                     cell = (cellId.Value, battery);
                 }
 
-                _apcs.GetOrNew(map).Add(((apc, apcComp, xform), cell));
+                // mc-changes-start
+                _apcs.GetOrNew(grid).Add(((apc, apcComp, xform), cell));
+                // mc-changes-end
             }
 
             foreach (var remove in _toRemove)
@@ -189,11 +194,13 @@ public sealed class RMCPowerSystem : SharedRMCPowerSystem
             _toRemove.Clear();
         }
 
-        foreach (var (map, apcList) in _apcs)
+        // mc-changes-start
+        foreach (var (grid, apcList) in _apcs)
         {
             var wattsPer = 0f;
-            if (power.TryGetValue(map, out var watts))
+            if (power.TryGetValue(grid, out var watts))
                 wattsPer = watts / apcList.Count;
+            // mc-changes-end
 
             var apcs = CollectionsMarshal.AsSpan(apcList);
             foreach (ref var tuple in apcs)
