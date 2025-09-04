@@ -36,7 +36,7 @@
     - map: [ "base" ]
       state: blue_4
   - type: PointLight
-    color: "#4d84fa"
+    color: "#5294ff"
   - type: RMCIgniteOnCollide
     maxStacks: 30
     intensity: 46 # burn_level = 46
@@ -70,7 +70,7 @@
     - map: [ "base" ]
       state: lime_3
   - type: PointLight
-    color: "#b1ff21"
+    color: "#7aff52"
   - type: RMCIgniteOnCollide
     maxStacks: 15
     intensity: 18 # burn_level = 18
