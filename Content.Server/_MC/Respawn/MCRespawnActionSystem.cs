@@ -10,7 +10,7 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._MC.Respawn;
 
-public sealed partial class RespawnActionSystem : EntitySystem
+public sealed partial class MCRespawnActionSystem : EntitySystem
 {
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
@@ -20,11 +20,11 @@ public sealed partial class RespawnActionSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<RespawnActionComponent, RespawnActionEvent>(OnRespawnAction);
-            SubscribeLocalEvent<RespawnActionComponent, MapInitEvent>(OnRespawnMapInit);
+        SubscribeLocalEvent<MCRespawnActionComponent, MCRespawnActionEvent>(OnRespawnAction);
+            SubscribeLocalEvent<MCRespawnActionComponent, MapInitEvent>(OnRespawnMapInit);
     }
 
-    private void OnRespawnAction(Entity<RespawnActionComponent> ent, ref RespawnActionEvent args)
+    private void OnRespawnAction(Entity<MCRespawnActionComponent> ent, ref MCRespawnActionEvent args)
     {
         var player = ent.Owner;
         if (!TryComp<ActorComponent>(player, out var actor) || actor.PlayerSession == null)
@@ -42,7 +42,7 @@ public sealed partial class RespawnActionSystem : EntitySystem
                 return;
 
             var timeSinceDeath = _timing.CurTime - deathTime.Value;
-            var required = TimeSpan.FromMinutes(2);
+            var required = TimeSpan.FromMinutes(10);
             if (timeSinceDeath < required)
             {
                 var left = required - timeSinceDeath;
@@ -54,7 +54,7 @@ public sealed partial class RespawnActionSystem : EntitySystem
             _gameTicker.Respawn(actor.PlayerSession);
     }
 
-        private void OnRespawnMapInit(Entity<RespawnActionComponent> ent, ref MapInitEvent args)
+        private void OnRespawnMapInit(Entity<MCRespawnActionComponent> ent, ref MapInitEvent args)
         {
             var actions = EntitySystem.Get<SharedActionsSystem>();
             actions.AddAction(ent, ref ent.Comp.Action, ent.Comp.ActionId);
