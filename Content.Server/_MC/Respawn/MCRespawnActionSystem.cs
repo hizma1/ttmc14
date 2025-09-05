@@ -4,14 +4,17 @@ using Content.Server.Popups;
 using Content.Shared._MC.Respawn;
 using Content.Shared.Popups;
 using Content.Shared.Mind;
+using Content.Shared._MC;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Robust.Shared.Configuration;
 
 namespace Content.Server._MC.Respawn;
 
 public sealed partial class MCRespawnActionSystem : EntitySystem
 {
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
@@ -42,7 +45,8 @@ public sealed partial class MCRespawnActionSystem : EntitySystem
                 return;
 
             var timeSinceDeath = _timing.CurTime - deathTime.Value;
-            var required = TimeSpan.FromMinutes(10);
+            var minutes = _cfg.GetCVar(MCCVars.MCRespawnActionCooldownMinutes);
+            var required = TimeSpan.FromMinutes(minutes);
             if (timeSinceDeath < required)
             {
                 var left = required - timeSinceDeath;
