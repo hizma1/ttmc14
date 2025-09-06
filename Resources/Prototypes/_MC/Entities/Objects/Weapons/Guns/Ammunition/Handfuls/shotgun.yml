@@ -178,8 +178,8 @@
   - type: CMArmorPiercing
     amount: 20
   - type: MCStunOnHit
-    paralyzeTime: 2
-    staggerTime: 2
+    paralyzeTime: 1
+    staggerTime: 1
     knockback: 1
     slowdownTime: 2
   - type: RMCProjectileDamageFalloff

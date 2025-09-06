@@ -2,6 +2,7 @@
 using Content.Shared._RMC14.Pulling;
 using Content.Shared._RMC14.Slow;
 using Content.Shared._RMC14.Stun;
+using Content.Shared._RMC14.Xenonids;
 using Content.Shared.Projectiles;
 using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
@@ -45,10 +46,10 @@ public sealed class MCStunSystem : EntitySystem
         if (TryComp<RMCSizeComponent>(args.Target, out var sizeComponent) && sizeComponent.Size == RMCSizes.Big)
             return;
 
-        if (!IsStun(args.Target) && !IsParalyzed(args.Target))
+        if (!IsParalyzed(args.Target))
         {
-            _stun.TryStun(args.Target, entity.Comp.StunTime, true);
-            _stun.TryParalyze(args.Target, entity.Comp.ParalyzeTime, true);
+            Stun(args.Target, entity.Comp.StunTime);
+            Paralyze(args.Target, entity.Comp.ParalyzeTime);
         }
 
         if (entity.Comp.Knockback == 0)
@@ -64,8 +65,19 @@ public sealed class MCStunSystem : EntitySystem
         _throwing.TryThrow(args.Target, direction.Normalized() * entity.Comp.Knockback, entity.Comp.KnockbackSpeed, animated: false, playSound: false, compensateFriction: true);
     }
 
+    public void Stun(EntityUid uid, TimeSpan duration)
+    {
+        if (HasComp<XenoComponent>(uid))
+            duration *= 0.5f;
+
+        _stun.TryStun(uid, duration, refresh: true);
+    }
+
     public void Paralyze(EntityUid uid, TimeSpan duration)
     {
+        if (HasComp<XenoComponent>(uid))
+            duration *= 0.2f;
+
         _stun.TryParalyze(uid, duration, refresh: true);
     }
 

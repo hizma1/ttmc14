@@ -35,6 +35,8 @@
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.05
     accuracyMultiplierUnwielded: 0.65
+  - type: RMCExtraProjectilesDamageMods
+    damageMultiplier: 0.7
   - type: AttachableHolder
     slots:
       rmc-aslot-barrel:

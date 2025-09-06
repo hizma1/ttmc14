@@ -20,8 +20,7 @@
     recoilUnwielded: 4
     scatterWielded: 0
     scatterUnwielded: 10
-    baseFireRate: 0.5
-    burstScatterMult: 5
+    baseFireRate: 0.5 # 1 / 2 SECONDS
   - type: BallisticAmmoProvider
     capacity: 8
     whitelist:
