@@ -35,7 +35,6 @@
     - MCActionXenoRest
     - MCActionXenoPsydrain
     - MCActionXenoDevolve
-    - MCActionXenoPheromones
     - MCActionXenoAcidStrong
     # Main
     - MCActionXenoScatterSpitPraetorian
@@ -63,9 +62,6 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.857
     baseSprintSpeed: 4
-  - type: XenoPheromones
-    pheromonesMultiplier: 4.5
-    pheroSuffix: queen
   - type: TacticalMapIcon
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi

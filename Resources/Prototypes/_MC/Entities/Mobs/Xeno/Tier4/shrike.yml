@@ -80,7 +80,7 @@
     baseWalkSpeed: 2.941
     baseSprintSpeed: 4.166
   - type: XenoPheromones
-    pheromonesMultiplier: 3
+    pheromonesMultiplier: 4.5
     pheroSuffix: queen
   - type: TunnelRenamer
   - type: TacticalMapIcon

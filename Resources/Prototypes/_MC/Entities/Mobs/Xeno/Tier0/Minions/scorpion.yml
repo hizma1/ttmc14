@@ -6,6 +6,7 @@
   components:
   - type: Sprite
     sprite: _MC/Mobs/Xenos/scorpion.rsi
+    offset: 0,0.5
   - type: GhostRole
     name: mc-job-name-xeno-scorpion
   - type: FixedIdentity
@@ -15,6 +16,8 @@
     role: MCXenoMinionScorpion
     actionIds:
     - MCActionXenoRest
+    - MCActionXenoAcidWeak
+    - MCActionXenoToggleSpitPassthrough
     hudOffset: -0.2,0.3
   - type: MobThresholds
     thresholds:
@@ -45,3 +48,7 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: minion
+  # Abilities
+  - type: XenoAcid
+  - type: MCXenoSpit
+  - type: MCXenoSpitToggle

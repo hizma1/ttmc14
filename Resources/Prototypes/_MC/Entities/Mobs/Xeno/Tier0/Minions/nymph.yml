@@ -1,5 +1,7 @@
 - type: entity
-  parent: MCXenoMinion
+  parent:
+  - MCXenoPlantingWeeds
+  - MCXenoMinion
   id: MCXenoMinionNymph
   name: nymph
   description: An alien.
@@ -16,6 +18,12 @@
     role: MCXenoMinionNymph
     actionIds:
     - MCActionXenoRest
+    # Construction
+    - MCActionXenoChooseStructure
+    - MCActionXenoSecreteStructure
+    # Weeds
+    - MCActionXenoSelectWeeds
+    - MCActionXenoPlantWeeds
     hudOffset: -0.2,0.3
   - type: MobThresholds
     thresholds:
@@ -46,3 +54,14 @@
     icon:
       sprite: _MC/Interface/Xeno/icons.rsi
       state: minion
+  # Abilities
+  - type: XenoConstruction
+    buildDelay: 2
+    canBuild:
+    - MCWallXenoResinThick
+    - MCWallXenoResinThickBulletproof
+    - MCWallXenoResinThickFireproof
+    - MCWallXenoResinThickHardy
+    - MCDoorXenoResinThick
+  - type: MCXenoPlantingWeeds
+    auto: true
