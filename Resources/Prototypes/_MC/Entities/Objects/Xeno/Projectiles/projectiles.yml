@@ -57,7 +57,7 @@
   - type: ProjectileMaxRange
     max: 40
   - type: MCXenoSpawnConstructionOnTerminating
-    spawn: XenoStickyResin
+    spawn: MCXenoStickyResin
   - type: MCXenoProjectileTargetingTurf
   - type: XenoSlowingSpitProjectile
     superSlow: false
