@@ -1,4 +1,4 @@
 respawn-action-popup = Respawn available in { $minutes }:{ $seconds }
 
-ent-RespawnAction = Respawn
+ent-MCRespawnAction = Respawn
     .desc = Click to return to the lobby

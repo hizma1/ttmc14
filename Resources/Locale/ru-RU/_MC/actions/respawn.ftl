@@ -1,4 +1,4 @@
 respawn-action-popup = До респавна осталось: { $minutes }:{ $seconds }
 
-ent-RespawnAction = Респавн
+ent-MCRespawnAction = Респавн
     .desc = Нажмите чтобы вернутся в Лобби

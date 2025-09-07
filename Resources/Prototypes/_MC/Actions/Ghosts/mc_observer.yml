@@ -1,5 +1,5 @@
 - type: entity
-  id: RespawnAction
+  id: MCRespawnAction
   name: Respawn
   description: Click to return to the lobby
   components:
@@ -9,5 +9,5 @@
       sprite: _MC/Actions/actions.rsi
       state: respawn
   - type: InstantAction
-    event: !type:RespawnActionEvent
+    event: !type:MCRespawnActionEvent
 
