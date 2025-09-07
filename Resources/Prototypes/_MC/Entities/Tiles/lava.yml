@@ -1,0 +1,23 @@
+- type: entity
+  id: MCFloorLavaEntity
+  parent: FloorLavaEntity
+  name: lava
+  suffix: MC
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: DamageOnCollide
+    damageDead: false
+    fire: true
+    damage:
+      types:
+        Heat: 31
+  - type: RMCIgniteOnCollide
+    maxStacks: 20
+    intensity: 31
+    duration: 10
+    tileDamage:
+      types:
+        Heat: 0.1
