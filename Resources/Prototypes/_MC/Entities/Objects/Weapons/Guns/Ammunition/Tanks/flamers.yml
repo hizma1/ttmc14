@@ -104,6 +104,36 @@
     - MCFlamerTankLargeBlue
 
 - type: entity
+  parent: MCTankFlamer
+  id: MCTankFlamerRGB
+  name: large flamethrower tank (RGB)
+  description: A large fuel tank of napthal fuel type RGB, a sticky combustable liquid chemical that burns extremely hot, for use in the FL-84 flamethrower.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Guns/Ammunition/Tanks/flamer.rsi
+    state: flametank_large_RGB
+  - type: Item
+    size: Normal
+  - type: SolutionContainerManager
+    solutions:
+      rmc_flamer_tank:
+        maxVol: 75
+        reagents:
+        - ReagentId: MCNapalm
+          Quantity: 75
+  - type: MCFlamerTankFireType
+    spawn: MCFireFlamethrowerRGB
+  - type: RMCFlamerTank
+  - type: RMCSolutionTransferWhitelist
+    popup: rmc-solution-transfer-whitelist-failed-not-reagent-tank
+    targetWhitelist:
+      tags:
+      - MCPyroFlamerRGB
+  - type: Tag
+    tags:
+    - MCFlamerTank
+
+- type: entity
   parent: BaseItem
   id: MCMiniTankFlamer
   name: mini incinerator tank
@@ -278,6 +308,9 @@
 
 - type: Tag
   id: MCPyroFlamerBlue
+
+- type: Tag
+  id: MCPyroFlamerRGB
 
 - type: Tag
   id: MCFlamerTankLargeBlue
