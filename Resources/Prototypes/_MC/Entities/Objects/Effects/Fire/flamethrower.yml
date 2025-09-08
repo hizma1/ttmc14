@@ -96,4 +96,46 @@
           Two: { state: lime_2 }
           Three: { state: lime_3 }
 
+#RGB Flame
+- type: entity
+  parent: MCFire
+  id: MCFireFlamethrowerRGB
+  suffix: MC, RGB
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "base" ]
+      state: dynamic_4
+  - type: DamageOnCollide
+    damageDead: false
+    fire: true
+    damage:
+      types:
+        Heat: 16
+        Cellular: 15
+  - type: RMCIgniteOnCollide
+    maxStacks: 20
+    intensity: 18
+    duration: 10
+    tileDamage:
+      types:
+        Cellular: 0.4
+        Heat: 0.1
+  - type: TileFire
+    id: MCFireFlamethrowerRGB
+    duration: 25
+    extinguishInstantly: false
+  - type: RgbLightController
+    layers: [ 0 ]
+  - type: GenericVisualizer
+    visuals:
+      enum.TileFireLayers.Base:
+        base:
+          One: { state: dynamic_1 }
+          Two: { state: dynamic_2 }
+          Three: { state: dynamic_3 }
+          Four: { state: dynamic_4 }
+
 # No Parity Sector
