@@ -116,7 +116,7 @@
     duration: 10
     tileDamage:
       types:
-        Caustic: 0.4
+        Cellular: 0.4
         Heat: 0.1
   - type: TileFire
     id: MCFireFlamethrowerRGB
