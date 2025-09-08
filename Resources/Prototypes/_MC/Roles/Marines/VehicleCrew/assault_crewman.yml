@@ -41,6 +41,7 @@
         RMCSkillPowerLoader: 3
         RMCSkillSmartGun: -4
         RMCSkillFirearms: 1
+        RMCSkillFireman: 1
     - type: JobPrefix
       prefix: mc-job-prefix-assault-crewman
     - type: TacticalMapIcon

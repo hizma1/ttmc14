@@ -40,6 +40,7 @@
         RMCSkillLeadership: 3
         RMCSkillSmartGun: -4
         RMCSkillFirearms: 1
+        RMCSkillFireman: 1
     - type: SquadArmorWearer
     - type: JobPrefix
       prefix: mc-job-prefix-st

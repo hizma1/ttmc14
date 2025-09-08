@@ -39,6 +39,7 @@
         RMCSkillCqc: 1
         RMCSkillSmartGun: -4
         # RMCSkillMelee: -1
+        RMCSkillFireman: 1
     - type: JobPrefix
       prefix: mc-job-prefix-doctor
     - type: TacticalMapIcon

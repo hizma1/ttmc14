@@ -43,6 +43,7 @@
         RMCSkillLeadership: 2
         RMCSkillSmartGun: -4
         RMCSkillFirearms: 1
+        RMCSkillFireman: 1
     - type: JobPrefix
       prefix: mc-job-prefix-transport-officer
     - type: TacticalMapIcon

@@ -36,6 +36,7 @@
       skills:
         RMCSkillFirearms: 1
         RMCSkillSmartGun: -4
+        RMCSkillFireman: 1
     - type: SquadArmorWearer
     - type: JobPrefix
       prefix: mc-job-prefix-marine
