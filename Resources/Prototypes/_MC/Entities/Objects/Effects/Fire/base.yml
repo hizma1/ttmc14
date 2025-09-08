@@ -17,11 +17,10 @@
     fixtures:
       fix1:
         shape: !type:PhysShapeAabb
-          bounds: "-0.35,-0.35,0.35,0.35"
-        density: 100
-        layer:
-        - MobMask
-        hard: false
+          bounds: "-0.25,-0.25,0.25,0.40"
+        density: 1
+        mask:
+          - ItemMask
   - type: Sprite
     sprite: _MC/Effects/fire.rsi
     noRot: true
