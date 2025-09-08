@@ -21,3 +21,6 @@
     tileDamage:
       types:
         Heat: 0.1
+  - type: Tag
+    tags:
+    - MCDamageFire
