@@ -43,6 +43,7 @@
         RMCSkillSmartGun: -4
         # RMCSkillMelee: -1
         RMCSkillFirearms: 0
+        RMCSkillFireman: 1
     - type: JobPrefix
       prefix: mc-job-prefix-cmo
     - type: TacticalMapIcon

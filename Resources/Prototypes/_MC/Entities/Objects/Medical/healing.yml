@@ -183,16 +183,25 @@
         Brute: -12
       types:
         Piercing: -5
-    healingBeginSound:
+  - type: WoundTreater
+    wound: Brute
+    treats: true
+    group: Brute
+    consumable: true
+    canUseUnskilled: true
+    skills:
+      RMCSkillMedical: 1
+    treatBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
-      params:
-        volume: 1.0
-        variation: 0.125
-    healingEndSound:
+    treatEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
-      params:
-        volume: 1.0
-        variation: 0.125
+    userPopup: cm-gauze-user-popup
+    targetPopup: cm-gauze-target-popup
+    othersPopup: cm-gauze-others-popup
+    noneSelfPopup: cm-gauze-none-self-popup
+    noneOtherPopup: cm-gauze-none-other-popup
+    noWoundsOnUserPopup: cm-wounds-already-treated-self-popup
+    noWoundsOnTargetPopup: cm-wounds-already-treated-target-popup
   - type: MedicallyUnskilledDoAfter
     min: 1
     doAfter: 8
@@ -345,16 +354,25 @@
         Brute: -13
       types:
         Piercing: -7
-    healingBeginSound:
+  - type: WoundTreater
+    wound: Brute
+    treats: true
+    group: Brute
+    consumable: true
+    canUseUnskilled: true
+    skills:
+      RMCSkillMedical: 1
+    treatBeginSound:
       path: "/Audio/_RMC14/Medical/bandage.ogg"
-      params:
-        volume: 1.0
-        variation: 0.125
-    healingEndSound:
+    treatEndSound:
       path: "/Audio/Items/Medical/brutepack_end.ogg"
-      params:
-        volume: 1.0
-        variation: 0.125
+    userPopup: cm-gauze-user-popup
+    targetPopup: cm-gauze-target-popup
+    othersPopup: cm-gauze-others-popup
+    noneSelfPopup: cm-gauze-none-self-popup
+    noneOtherPopup: cm-gauze-none-other-popup
+    noWoundsOnUserPopup: cm-wounds-already-treated-self-popup
+    noWoundsOnTargetPopup: cm-wounds-already-treated-target-popup
   - type: MedicallyUnskilledDoAfter
     min: 2
     doAfter: 10

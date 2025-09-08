@@ -14,7 +14,7 @@
       types:
         Heat: 31 # damage = 31
   - type: RMCIgniteOnCollide
-    maxStacks: 20 # incendiary_strength = 30, но там учитывается броня так-что 20 будет
+    maxStacks: 20
     intensity: 31 # burn_level = 31
     duration: 10
     tileDamage:
@@ -45,6 +45,7 @@
       types:
         Heat: 0.2
         Cold: 0.3
+    armorMultiplier: 1
   - type: TileFire
     id: MCFireFlamethrowerBlue
     duration: 40 # burn_time = 40
@@ -77,8 +78,11 @@
     duration: 10
     tileDamage:
       types:
-        Caustic: 0.4
-        Heat: 0.1
+        Caustic: 0.5
+    armorMultiplier: 0.5
+    armorWhitelist:
+      components:
+      - Xeno
   - type: TileFire
     id: MCFireFlamethrowerGreen
     duration: 20 # burn_time = 20 хз на унгах проверил там 20
