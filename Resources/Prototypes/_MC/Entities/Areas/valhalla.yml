@@ -1,0 +1,11 @@
+- type: entity
+  parent: RMCAreaAlmayerEngineering
+  id: MCAreaValhalla
+  name: Valhalla
+  components:
+  - type: Sprite
+    state: selfdestruct
+  - type: Area
+    avoidBioscan: false
+    noTunnel: false
+    unweedable: false
