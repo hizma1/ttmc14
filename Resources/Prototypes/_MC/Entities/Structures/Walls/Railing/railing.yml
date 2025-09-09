@@ -1,0 +1,40 @@
+- type: entity
+  parent: CMBaseStructureCorrodible
+  id: MCRailing
+  name: railing
+  suffix: MC
+  components:
+  - type: Sprite
+    sprite: _RMC14/Structures/railing.rsi
+    offset: 0,0.5
+    layers:
+    - state: raised
+    noRot: true
+  - type: Physics
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 125
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,-0.3"
+        layer:
+        - TableLayer
+        mask:
+        - TableMask
+        density: 1000
+  - type: Climbable
+  - type: Barricade
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: CMBarricade
