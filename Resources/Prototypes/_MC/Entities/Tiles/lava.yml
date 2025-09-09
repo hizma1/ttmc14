@@ -1,6 +1,6 @@
 - type: entity
-  id: MCFloorLavaEntity
   parent: FloorLavaEntity
+  id: MCFloorLavaEntity
   name: lava
   suffix: MC
   placement:
@@ -8,6 +8,10 @@
     snap:
     - Wall
   components:
+  - type: Tag
+    tags:
+    - MCDamageFire
+  - type: BlockWeeds
   - type: DamageOnCollide
     damageDead: false
     fire: true
@@ -21,6 +25,3 @@
     tileDamage:
       types:
         Heat: 0.1
-  - type: Tag
-    tags:
-    - MCDamageFire
