@@ -20,6 +20,7 @@
   - type: IgnoreContentsSize
     items:
       tags:
+      - MCMagazineSidearm
       - MCMagazineRifle
       - MCMagazineSmg
       - MCBatteryTerra
@@ -36,6 +37,7 @@
     - type: IgnoreContentsSize
       items:
         tags:
+        - MCMagazineSidearm
         - MCMagazineRifle
         - MCMagazineSmg
         - MCBatteryTerra
@@ -167,11 +169,12 @@
   - type: Storage
     maxItemSize: Large
     grid:
-    - 0,0,7,1 # 4 slots
+    - 0,0,9,1 # 5 slots
     whitelist:
       tags:
       - MCWeaponSidearm # pistols (also energy) & revolvers
       - MCMagazineSidearm
+      - MCBatteryTerra
   - type: FixedItemSizeStorage
   - type: Webbing
     playerSprite:
@@ -181,11 +184,12 @@
     - type: Storage
       maxItemSize: Large
       grid:
-      - 0,0,7,1 # 4 slots
+      - 0,0,9,1 # 5 slots
       whitelist:
         tags:
         - MCWeaponSidearm # pistols (also energy) & revolvers
         - MCMagazineSidearm
+        - MCBatteryTerra
     - type: FixedItemSizeStorage
     - type: RMCStorageEjectHand
       state: Open

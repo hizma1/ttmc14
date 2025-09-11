@@ -15,6 +15,7 @@
     whitelist:
       tags:
       - MCHandful
+      - MCMagazineSidearm
       - MCMagazineRifle
       - MCMagazinePepperball
       - MCMagazineShotgun
