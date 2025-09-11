@@ -45,8 +45,8 @@
 - type: entity
   parent: MCXenoStructure
   id: MCXenoStructureSilo
-  name: silo
-  description: A disgusting biomass generator that reeks of rotting flesh. Capable of producing parasites on its own.
+  name: resin silo
+  description: A slimy, oozy resin bed filled with foul-looking egg-like ...things.
   components:
   - type: Sprite
     sprite: _MC/Structures/Xeno/silo.rsi
@@ -62,6 +62,13 @@
         - ItemMask
         layer:
         - BulletImpassable
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
   - type: CollisionWake
     enabled: false
   - type: XenoStructureMapTracked
@@ -80,6 +87,13 @@
     healOnStopSpreading:
       groups:
         Brute: -6
+  # Pheromones
+  - type: XenoPheromones
+    pheromonesMultiplier: 4
+    pheromonesRange: 30
+  - type: XenoPheromonesObject
+  - type: XenoActivePheromones
+    pheromones: Recovery
 
 - type: entity
   parent: MCXenoStructure
@@ -138,3 +152,42 @@
   #   icon:
   #     sprite: _MC/Interface/Xeno/icons.rsi
   #     state: silo_passive
+
+- type: entity
+  parent: MCXenoStructure
+  id: MCXenoStructureSpawner
+  name: spawner
+  description: A slimy, oozy resin bed filled with foul-looking egg-like ...things.
+  components:
+  - type: Sprite
+    sprite: _MC/Structures/Xeno/spawner.rsi
+    layers:
+    - state: base
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: "-1.49,-1.49,1.49,1.49" # 3x3
+        density: 200
+        mask:
+        - ItemMask
+        layer:
+        - BulletImpassable
+  - type: Destructible
+    thresholds:
+    - trigger: !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: CollisionWake
+    enabled: false
+  - type: XenoStructureMapTracked
+  - type: MCXenoStructureSpawner
+    mobsPerPlayer: 0.15
+    respawnMultiplier: 1
+  - type: TacticalMapTracked
+  - type: TacticalMapIcon
+    icon:
+      sprite: _MC/Interface/Xeno/icons.rsi
+      state: spawner_passive

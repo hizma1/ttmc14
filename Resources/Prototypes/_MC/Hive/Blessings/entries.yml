@@ -61,6 +61,7 @@
   group: Building
   costType: Tactical
   cost: 400
+  entity: MCXenoStructureSpawner
   time: 10
 
 - type: MCXenoBlessingsEntry

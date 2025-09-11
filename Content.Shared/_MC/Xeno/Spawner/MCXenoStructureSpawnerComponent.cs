@@ -32,7 +32,7 @@ public sealed partial class MCXenoStructureSpawnerComponent : Component
     public float RespawnMultiplier = 1;
 
     [DataField, AutoNetworkedField]
-    public TimeSpan RespawnPerPlayer = TimeSpan.FromSeconds(7.2);
+    public TimeSpan RespawnPerPlayer = TimeSpan.FromSeconds(3.6);
 
     [DataField, AutoNetworkedField]
     public TimeSpan MinRespawn = TimeSpan.FromSeconds(45);
