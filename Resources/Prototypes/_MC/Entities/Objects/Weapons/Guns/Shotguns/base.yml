@@ -65,10 +65,8 @@
     tags:
     - MCWeaponShotgun
   - type: RMCFireGroup
-    group: Shotgun
-    delay: 1
-  - type: GunDualWielding
-    weaponGroup: Shotgun
+    group: MCShotgun
+    delay: 2.5
   - type: GunPointBlank
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.15
