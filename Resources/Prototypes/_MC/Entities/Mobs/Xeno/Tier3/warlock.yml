@@ -37,8 +37,13 @@
     hudOffset: -0.1,0.1
   - type: XenoDevolve
     devolvesTo:
-    - MCXenoWraith
     - MCXenoWarrior
+    - MCXenoHivelord
+    - MCXenoCarrier
+    - MCXenoWraith
+    - MCXenoHunter
+    - MCXenoBull
+    - MCXenoSpitter
   - type: MCArmor
     melee: 40
     bullet: 40

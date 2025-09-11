@@ -129,8 +129,13 @@
     actionId: MCActionXenoEvolve
     max: 225
     evolvesTo:
+    - MCXenoWarrior
     - MCXenoHivelord
     - MCXenoCarrier
+    - MCXenoWraith
+    - MCXenoHunter
+    - MCXenoBull
+    - MCXenoSpitter
     evolvesToWithoutPoints:
     - MCXenoShrike
     - MCXenoQueen

@@ -41,15 +41,26 @@
     - MCActionXenoRecall
     hudOffset: -0.1,0.1
   - type: XenoEvolution
+    canEvolveWithoutGranter: true
     actionId: MCActionXenoEvolve
     max: 225
     evolvesTo:
-    - MCXenoRavager
+    - MCXenoCrusher
     - MCXenoDefiler
+    - MCXenoGorger
     - MCXenoWarlock
+    - MCXenoPraetorian
+    - MCXenoBoiler
+    - MCXenoRavager
+    evolvesToWithoutPoints:
+    - MCXenoShrike
+    - MCXenoQueen
   - type: XenoDevolve
     devolvesTo:
+    - MCXenoDefender
+    - MCXenoDrone
     - MCXenoRunner
+    - MCXenoSentinel
   - type: MCArmor
     melee: 40
     bullet: 40

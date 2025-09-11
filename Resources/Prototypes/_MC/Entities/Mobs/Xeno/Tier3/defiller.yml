@@ -43,8 +43,13 @@
     hudOffset: -0.1,0.1
   - type: XenoDevolve
     devolvesTo:
-    - MCXenoCarrier
+    - MCXenoWarrior
     - MCXenoHivelord
+    - MCXenoCarrier
+    - MCXenoWraith
+    - MCXenoHunter
+    - MCXenoBull
+    - MCXenoSpitter
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.333
     baseSprintSpeed: 5
