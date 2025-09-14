@@ -20,11 +20,12 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      400: Critical
+      350: Critical
       500: Dead
   - type: XenoPlasma
     plasma: 800
     maxPlasma: 800
+    plasmaRegenLimit: 400
     plasmaRegenOnWeeds: 15
   - type: Xeno
     tier: 3
@@ -33,6 +34,8 @@
     - MCActionXenoRest
     - MCActionXenoPsydrain
     - MCActionXenoDevolve
+    # Abilities
+    - MCActionXenoRavage
     hudOffset: -0.1,0.1
   - type: XenoDevolve
     devolvesTo:
@@ -44,18 +47,18 @@
     - MCXenoBull
     - MCXenoSpitter
   - type: MCArmor
-    melee: 50
-    bullet: 50
+    melee: 35
+    bullet: 55
     laser: 50
     energy: 50
     bomb: 10
     bio: 40
-    fire: 70
+    fire: 65
     acid: 40
   - type: MeleeWeapon
     damage:
       groups:
-        Brute: 25
+        Brute: 30
   - type: MovementSpeedModifier
     baseWalkSpeed: 3.333
     baseSprintSpeed: 5
@@ -65,3 +68,10 @@
       state: ravager
   - type: RMCSize
     size: Big
+  # Passive
+  - type: MCXenoPlasmaOnAttack
+    multiplier: 1.5
+  - type: MCXenoPlasmaOnAttacked
+    multiplier: 0.5
+  # Abilities
+  - type: MCXenoRavage

@@ -31,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="_MC\Damage\" />
     <Folder Include="_MC\Xeno\Construction\Blessings\Systems\" />
   </ItemGroup>
 </Project>

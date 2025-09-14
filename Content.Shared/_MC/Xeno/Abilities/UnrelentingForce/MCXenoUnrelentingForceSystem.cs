@@ -1,4 +1,5 @@
-﻿using Content.Shared._MC.Flammable;
+﻿using System.Numerics;
+using Content.Shared._MC.Flammable;
 using Content.Shared._MC.Utilities.Math;
 using Content.Shared._RMC14.Actions;
 using Content.Shared._RMC14.CameraShake;
@@ -10,6 +11,7 @@ using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Physics.Systems;
 
 namespace Content.Shared._MC.Xeno.Abilities.UnrelentingForce;
 
@@ -24,6 +26,7 @@ public sealed class MCXenoUnrelentingForceSystem : EntitySystem
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly MCSharedFlammableSystem _mcFlammable = default!;
     [Dependency] private readonly SharedXenoHiveSystem _xenoHive = default!;
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly MobStateSystem _mobState = default!;
 
     public override void Initialize()
@@ -74,26 +77,41 @@ public sealed class MCXenoUnrelentingForceSystem : EntitySystem
 
         foreach (var uid in _entityLookup.GetEntitiesIntersecting(origin.MapId, aabb))
         {
-            _mcFlammable.RemoveStacks(uid, 10);
+            ApplyEffect(uid);
+        }
 
-            if (!HasComp<MobStateComponent>(uid) && !HasComp<ItemComponent>(uid))
-                continue;
-
-            if (Transform(uid).Anchored)
-                continue;
-
-            if (_mobState.IsDead(uid))
-                continue;
-
-            if (_xenoHive.FromSameHive(uid, entity.Owner))
-                continue;
-
-            _stun.TryParalyze(uid, TimeSpan.FromSeconds(2), true);
-            _rmcCameraShake.ShakeCamera(uid, 2, 1);
-            _throwing.TryThrow(uid, cardinalDirection * 6, baseThrowSpeed: entity.Comp.ThrowSpeed);
+        foreach (var uid in _entityLookup.GetEntitiesIntersecting(origin.MapId, new Box2(origin.Position + corner / 2, origin.Position - corner / 2)))
+        {
+            ApplyEffect(uid);
         }
 
         _audio.PlayPredicted(new SoundCollectionSpecifier("XenoRoar"), entity, entity);
         _audio.PlayPredicted(new SoundPathSpecifier("/Audio/_MC/Effects/alien_claw_block.ogg"), entity, entity);
+
+        return;
+        void ApplyEffect(EntityUid uid)
+        {
+            if (entity.Owner == uid)
+                return;
+
+            _mcFlammable.RemoveStacks(uid, 10);
+
+            if (!HasComp<MobStateComponent>(uid) && !HasComp<ItemComponent>(uid))
+                return;
+
+            if (Transform(uid).Anchored)
+                return;
+
+            if (_mobState.IsDead(uid))
+                return;
+
+            if (_xenoHive.FromSameHive(uid, entity.Owner))
+                return;
+
+            _stun.TryParalyze(uid, TimeSpan.FromSeconds(2), true);
+            _rmcCameraShake.ShakeCamera(uid, 2, 1);
+            _physics.SetLinearVelocity(uid, Vector2.Zero);
+            _throwing.TryThrow(uid, cardinalDirection * 6, baseThrowSpeed: entity.Comp.ThrowSpeed);
+        }
     }
 }

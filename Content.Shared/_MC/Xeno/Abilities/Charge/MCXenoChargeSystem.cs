@@ -67,7 +67,7 @@ public sealed class MCXenoChargeSystem : EntitySystem
 
         SubscribeLocalEvent<MCXenoChargeActiveComponent, MoveInputEvent>(OnActiveToggleChargingMoveInput);
         SubscribeLocalEvent<MCXenoChargeActiveComponent, MoveEvent>(OnActiveToggleChargingMove);
-        SubscribeLocalEvent<MCXenoChargeActiveComponent, StartCollideEvent>(OnActiveToggleChargingCollide);
+        SubscribeLocalEvent<MCXenoChargeActiveComponent, PreventCollideEvent>(OnActiveToggleChargingCollide);
         SubscribeLocalEvent<MCXenoChargeActiveComponent, MobStateChangedEvent>(OnActiveToggleChargingMobStateChanged);
 
         SubscribeLocalEvent<DamageableComponent, MCXenoChargeCollideEvent>(OnDamageableHit);
@@ -280,7 +280,7 @@ public sealed class MCXenoChargeSystem : EntitySystem
         _movementSpeed.RefreshMovementSpeedModifiers(ent);
     }
 
-    private void OnActiveToggleChargingCollide(Entity<MCXenoChargeActiveComponent> ent, ref StartCollideEvent args)
+    private void OnActiveToggleChargingCollide(Entity<MCXenoChargeActiveComponent> ent, ref PreventCollideEvent args)
     {
         if (Math.Abs(ent.Comp.Steps - 1) < 0.001)
             return;
@@ -289,6 +289,9 @@ public sealed class MCXenoChargeSystem : EntitySystem
             return;
 
         _hit.Add((ent, args.OtherEntity));
+
+        if (HasComp<MobStateComponent>(args.OtherEntity))
+            args.Cancelled = true;
     }
 
     private void OnActiveToggleChargingMobStateChanged(Entity<MCXenoChargeActiveComponent> ent, ref MobStateChangedEvent args)
