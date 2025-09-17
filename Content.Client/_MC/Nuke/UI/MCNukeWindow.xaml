@@ -1,0 +1,30 @@
+﻿<ui:MCNukeWindow xmlns="https://spacestation14.io"
+                 xmlns:ui="clr-namespace:Content.Client._MC.Nuke.UI"
+                 MinSize="400 120"
+                 Title="Nuke">
+    <BoxContainer Orientation="Vertical">
+
+        <BoxContainer Orientation="Vertical">
+            <Label Text="Nuke disks"/>
+
+            <BoxContainer Orientation="Vertical">
+
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="Red"/>
+                    <Button Text="Inject" Name="DiskRedButton" Access="Public"/>
+                </BoxContainer>
+
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="Blue"/>
+                    <Button Text="Inject" Name="DiskBlueButton" Access="Public"/>
+                </BoxContainer>
+
+                <BoxContainer Orientation="Horizontal">
+                    <Label Text="Green"/>
+                    <Button Text="Inject" Name="DiskGreenButton" Access="Public"/>
+                </BoxContainer>
+
+            </BoxContainer>
+        </BoxContainer>
+    </BoxContainer>
+</ui:MCNukeWindow>

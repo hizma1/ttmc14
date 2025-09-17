@@ -10,3 +10,16 @@
   - type: Corrodible
     isCorrodible: false
   - type: InteractionOutline
+  - type: MCNuke
+  # UI
+  - type: ActivatableUI
+    key: enum.MCNukeUi.Key
+  - type: UserInterface
+    interfaces:
+      enum.MCNukeUi.Key:
+        type: MCNukeBui
+  - type: ContainerContainer
+    containers:
+      disk_red: !type:ContainerSlot
+      disk_blue: !type:ContainerSlot
+      disk_green: !type:ContainerSlot
