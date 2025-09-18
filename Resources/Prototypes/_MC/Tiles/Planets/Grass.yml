@@ -1,0 +1,19 @@
+- type: tile
+  parent: CMPlanetBase
+  id: MCPlanetGrass1
+  name: tiles-mc-grass
+  sprite: /Textures/_RMC14/Tiles/planet/grass1/grass.png
+  edgeSpritePriority: 1
+  edgeSprites:
+    SouthEast: /Textures/_RMC14/Tiles/planet/grass1/single_edge.png
+    NorthEast: /Textures/_RMC14/Tiles/planet/grass1/single_edge.png
+    NorthWest: /Textures/_RMC14/Tiles/planet/grass1/single_edge.png
+    SouthWest: /Textures/_RMC14/Tiles/planet/grass1/single_edge.png
+    South: /Textures/_RMC14/Tiles/planet/grass1/double_edge.png
+    East: /Textures/_RMC14/Tiles/planet/grass1/double_edge.png
+    North: /Textures/_RMC14/Tiles/planet/grass1/double_edge.png
+    West: /Textures/_RMC14/Tiles/planet/grass1/double_edge.png
+  footstepSounds:
+    collection: FootstepAsteroid
+  weedsSpreadable: true
+  semiWeedable: true
