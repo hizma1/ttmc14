@@ -1,0 +1,243 @@
+- type: entity
+  parent: MCArea
+  id: MCAreaTemple
+  abstract: true
+  components:
+  - type: Area
+    CAS: true
+    fulton: true
+    mortarPlacement: true
+    mortarFire: true
+    lasing: true
+    medevac: true
+    OB: true
+    supplyDrop: true
+    buildSpecial: true
+    powerNet: Research
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaJungleTempleGround
+  components:
+  - type: Area
+    CAS: false
+    fulton: false
+    lasing: true
+    mortarPlacement: false
+    mortarFire: false
+    medevac: false
+    OB: true
+    supplyDrop: false
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTemplebeyondborders
+  name: Beyond Borders
+  components:
+  - type: Area
+    CAS: false
+    fulton: false
+    lasing: true
+    mortarPlacement: false
+    mortarFire: false
+    medevac: false
+    OB: true
+    supplyDrop: false
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleLandingZonesLZ2
+  name: Landing Zone
+  components:
+  - type: Area
+    linkedLz: dropship_lz2
+    minimapColor: '#EBE5E5D0'
+  - type: Sprite
+    state: red
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleLandingZonesLZ1
+  name: Landing Zone
+  components:
+  - type: Area
+    linkedLz: dropship_lz1
+    minimapColor: '#EBE5E5D0'
+  - type: Sprite
+    state: red
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleCargo
+  name: Cargo
+  components:
+  - type: Sprite
+    state: maint_cargo
+  - type: Area
+    minimapColor: '#B47714FF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleOffice
+  name: Office
+  components:
+  - type: Sprite
+    state: bluenew
+  - type: Area
+    minimapColor: '#0E219CFF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleMedbay
+  name: Medbay
+  components:
+  - type: Sprite
+    state: medbay
+  - type: Area
+    minimapColor: '#2EB4B6FF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleDorms
+  name: Dorm
+  components:
+  - type: Sprite
+    state: maint_dormitory
+  - type: Area
+    minimapColor: '#207C10FF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTemplePowerPlant
+  name: Power plant
+  components:
+  - type: Sprite
+    state: engine
+  - type: Area
+    minimapColor: '#CFCC0EFF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleSouthStreet
+  name: South Street
+  components:
+  - type: Sprite
+    state: south
+  - type: Area
+    weatherEnabled: true
+    minimapColor: '#704242'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleNorthStreet
+  name: North Street
+  components:
+  - type: Sprite
+    state: north
+  - type: Area
+    weatherEnabled: true
+    minimapColor: '#704242'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleLaboratory
+  name: Laboratory
+  components:
+  - type: Sprite
+    state: xeno_lab
+  - type: Area
+    minimapColor: '#87179BFF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTemplePark
+  name: Park
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    weatherEnabled: true
+    minimapColor: '#0D5410'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleMiner'sOutpost
+  name: Miner's Outpost
+  components:
+  - type: Sprite
+    state: mining
+  - type: Area
+    minimapColor: '#995D0EFF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleBunker
+  name: Bunker
+  components:
+  - type: Sprite
+    state: bunker01_main
+  - type: Area
+    minimapColor: '#BA280F'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleJungle
+  name: Jungle
+  components:
+  - type: Sprite
+    state: dk_yellow
+  - type: Area
+    minimapColor: '#0D5410'
+
+- type: entity
+  parent: MCAreaJungleTempleGround
+  id: MCAreaTampleWesternCave
+  name: Western cave
+  components:
+  - type: Sprite
+    state: cave
+  - type: Area
+    weatherEnabled: false
+    minimapColor: '#F59527'
+
+- type: entity
+  parent: MCAreaJungleTempleGround
+  id: MCAreaTempleEasternCave
+  name: Eastern caves
+  components:
+  - type: Sprite
+    state: cave
+  - type: Area
+    weatherEnabled: false
+    minimapColor: '#F59527'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleVillage
+  name: Village
+  components:
+  - type: Sprite
+    state: blueold
+  - type: Area
+    minimapColor: '#5A340BFF'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleVillageStreet
+  name: Village Street
+  components:
+  - type: Sprite
+    state: blueold
+  - type: Area
+    weatherEnabled: false
+    minimapColor: '#704242'
+
+- type: entity
+  parent: MCAreaTemple
+  id: MCAreaTempleShope
+  name: Shope
+  components:
+  - type: Sprite
+    state: storage
+  - type: Area
+    minimapColor: '#991468FF'
