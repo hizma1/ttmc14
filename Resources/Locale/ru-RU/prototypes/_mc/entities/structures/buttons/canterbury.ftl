@@ -1,12 +1,12 @@
-ent-MCButtonShipCanterbury = outer door
-    .suffix = Canterbury, Left
+ent-MCButtonShipCanterbury = остальные двери
+    .suffix = Кантербери, левый
     .desc = { ent-RMCPodDoorButton.desc }
 ent-MCButtonShipCanterburyOuterDoorLeft = { ent-MCButtonShipCanterbury }
-    .suffix = Canterbury, Left
+    .suffix = Кантербери, левый
     .desc = { ent-MCButtonShipCanterbury.desc }
 ent-MCButtonShipCanterburyOuterDoorRight = { ent-MCButtonShipCanterbury }
-    .suffix = Canterbury, Right
+    .suffix = Кантербери, правый
     .desc = { ent-MCButtonShipCanterbury.desc }
 ent-MCButtonShipCanterburyOuterDoorDown = { ent-MCButtonShipCanterbury }
-    .suffix = Canterbury, Down
+    .suffix = Кантербери, нижний
     .desc = { ent-MCButtonShipCanterbury.desc }
