@@ -1,11 +1,11 @@
 ent-MCPodlockShipDroppodBay = { ent-RMCPodDoorAlmayerIndestructible }
     .suffix = Droppod bay
     .desc = { ent-RMCPodDoorAlmayerIndestructible.desc }
-ent-MCPodlockShipAmmunitionStorage = ammunition storage
+ent-MCPodlockShipAmmunitionStorage = склад боеприпасов
     .desc = { ent-RMCPodDoorAlmayerIndestructible.desc }
-ent-MCPodlockShipMechShutter = mech shutters
+ent-MCPodlockShipMechShutter = ставни меха
     .desc = { ent-RMCPodDoorAlmayerIndestructible.desc }
-ent-MCShutterShipRequisitionWarehouse = requisition warehouse shutters
+ent-MCShutterShipRequisitionWarehouse = ставни склада поставок
     .desc = { ent-RMCShutterAlmayer.desc }
-ent-MCShutterShipCICArmory = cic armory shutters
+ent-MCShutterShipCICArmory = ставни оружейной ЦИК
     .desc = { ent-RMCShutterAlmayer.desc }
