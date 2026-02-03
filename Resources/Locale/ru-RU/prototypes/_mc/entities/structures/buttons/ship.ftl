@@ -1,10 +1,10 @@
-ent-MCButtonDroppodBay = droppod bay
+ent-MCButtonDroppodBay = отсек десантных капсул
     .desc = { ent-RMCPodDoorButton.desc }
-ent-MCButtonAmmunitionStorage = ammunition storage
+ent-MCButtonAmmunitionStorage = склад боеприпасов
     .desc = { ent-RMCPodDoorButton.desc }
-ent-MCButtonMechShutters = mech shutters
+ent-MCButtonMechShutters = ставни меха
     .desc = { ent-RMCPodDoorButton.desc }
-ent-MCButtonMechRequisitionWarehouse = requisition warehouse
+ent-MCButtonMechRequisitionWarehouse = склад поставок
     .desc = { ent-RMCPodDoorButton.desc }
-ent-MCButtonShipCicArmory = cic armory
+ent-MCButtonShipCicArmory = оружейная ЦИК
     .desc = { ent-RMCPodDoorButton.desc }
