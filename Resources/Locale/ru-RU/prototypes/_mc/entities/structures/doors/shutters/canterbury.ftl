@@ -1,4 +1,4 @@
-ent-MCPodlockShipCanterbury = umbillical airlock
+ent-MCPodlockShipCanterbury = аварийный шлюз
     .suffix = Canterbury
     .desc = { ent-RMCPodDoorAlmayerIndestructible.desc }
 ent-MCPodlockShipCanterburyOuterDoorLeft = { ent-MCPodlockShipCanterbury }
@@ -10,7 +10,7 @@ ent-MCPodlockShipCanterburyOuterDoorRight = { ent-MCPodlockShipCanterbury }
 ent-MCPodlockShipCanterburyOuterDoorDown = { ent-MCPodlockShipCanterbury }
     .suffix = Canterbury, Down
     .desc = { ent-MCPodlockShipCanterbury.desc }
-ent-MCShutterShipCanterbury = transit shutters
+ent-MCShutterShipCanterbury = транзитные ставни
     .suffix = Canterbury
     .desc = { ent-RMCShutterAlmayer.desc }
 ent-MCShutterShipCanterburyOuterDoorLeft = { ent-MCShutterShipCanterbury }
