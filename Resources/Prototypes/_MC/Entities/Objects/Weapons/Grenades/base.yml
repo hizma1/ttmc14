@@ -1,0 +1,63 @@
+- type: entity
+  parent: MCItem
+  id: MCGrenade
+  name: grenade
+  description: Duck and cover.
+  abstract: true
+  components:
+  - type: Explosive
+    explosionType: RMC
+  - type: ExplosionResistance
+    damageCoefficient: 0
+  - type: OnUseTimerTrigger
+    delay: 4
+    beepSound:
+      path: /Audio/_RMC14/Explosion/armbomb.ogg
+      params:
+        volume: -5
+    initialBeepDelay: 0
+    beepInterval: 10
+    doPopup: false
+  - type: IgnorePredictionHide
+  - type: Item
+    size: Small
+  - type: ChangeItemSizeOnTimerTrigger
+  - type: CancelUseWithCloak
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/hedp.rsi
+    layers:
+    - state: icon
+      map: [ "enum.TriggerVisualLayers.Base" ]
+  - type: Appearance
+  - type: AnimationPlayer
+  - type: GenericVisualizer
+    visuals:
+      enum.Trigger.TriggerVisuals.VisualState:
+        enum.ConstructionVisuals.Layer:
+          Primed: { state: active }
+          Unprimed: { state: icon }
+  - type: Tag
+    tags:
+    - MCGrenade
+
+- type: Tag
+  id: MCGrenade
+
+- type: entity
+  parent: MCGrenade
+  id: MCGrenadeTraining
+  name: M15 training grenade
+  description: A harmless reusable version of the M15 HEFA, used for training. Capable of being loaded into a grenade launcher, or thrown by hand.
+  components:
+  - type: Sprite
+    sprite: _MC/Objects/Weapons/Grenades/tranining.rsi
+  - type: SoundOnTrigger
+    sound: /Audio/Effects/snap.ogg
+  - type: Tag
+    tags:
+    - MCGrenade
+    - MCGrenadeTraining
+  - type: Ammo
+
+- type: Tag
+  id: MCGrenadeTraining
